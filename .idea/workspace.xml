@@ -5,26 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="233d0cc6-283d-4b88-9097-e2a3f8edbda3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/Launcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,6 +28,65 @@
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.2337415937948184" />
+      <entry key="MS500" value="3.738440091505431" />
+      <entry key="S2" value="7.578534254212103" />
+      <entry key="S5" value="11.56922085371038" />
+      <entry key="S10" value="14.93285159857459" />
+      <entry key="S30" value="18.7536845748307" />
+      <entry key="S60" value="23.260792714640576" />
+      <entry key="M2" value="41.1402807287921" />
+      <entry key="M5" value="92.11113173916249" />
+      <entry key="M10" value="132.66434018733136" />
+      <entry key="M15" value="151.3682133383572" />
+      <entry key="M30" value="173.57027937687963" />
+      <entry key="H1" value="186.20499047818043" />
+      <entry key="H2" value="192.95039500930977" />
+      <entry key="H4" value="196.43624878008788" />
+      <entry key="D1" value="199.4005515398688" />
+      <entry key="W1" value="199.91422899683948" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="7.510217593495926E-155" />
+      <entry key="S2" value="2.943832733088495E-39" />
+      <entry key="S5" value="3.868701776065542E-16" />
+      <entry key="S10" value="1.9669887738108346E-8" />
+      <entry key="S30" value="0.002794900567967999" />
+      <entry key="S60" value="0.06172983365915946" />
+      <entry key="M2" value="0.32680309498545473" />
+      <entry key="M5" value="0.9498057841846609" />
+      <entry key="M10" value="1.3735027117265264" />
+      <entry key="M15" value="1.555585233631303" />
+      <entry key="M30" value="1.7631680598178896" />
+      <entry key="H1" value="1.8776721975930468" />
+      <entry key="H2" value="1.937824153234042" />
+      <entry key="H4" value="1.9686547081350723" />
+      <entry key="D1" value="1.9947396607382115" />
+      <entry key="W1" value="1.9992476333174098" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.1153990185159113" />
+      <entry key="MS500" value="3.668341120722075" />
+      <entry key="S2" value="7.5415193032434065" />
+      <entry key="S5" value="11.545065749189096" />
+      <entry key="S10" value="14.916597255666781" />
+      <entry key="S30" value="18.74924344692351" />
+      <entry key="S60" value="23.315741955982066" />
+      <entry key="M2" value="41.456893278695" />
+      <entry key="M5" value="93.05007063467411" />
+      <entry key="M10" value="134.0299218182125" />
+      <entry key="M15" value="152.9177748892472" />
+      <entry key="M30" value="175.3300009041309" />
+      <entry key="H1" value="188.0808169597942" />
+      <entry key="H2" value="194.8872637758568" />
+      <entry key="H4" value="198.40441740978335" />
+      <entry key="D1" value="201.3952090008141" />
+      <entry key="W1" value="201.91346485797376" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 0,
@@ -48,16 +100,23 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Launcher.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "morsalin",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
