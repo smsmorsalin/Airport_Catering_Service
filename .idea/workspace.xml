@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="233d0cc6-283d-4b88-9097-e2a3f8edbda3" name="Changes" comment="merge change">
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/loginViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/GenerateQAReport_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/QualityTrendAnalysis_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/performInspection_ FoodQualityControlOfficerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/dashboard_ FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/dashboard_ FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/dashboard_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/dashboard_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/createCateringOrder_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/createCateringOrder_AirlineRepresentativeView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/dashboard_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/dashboard_AirlineRepresentativeView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/dashboard_CateringOperationManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/dashboard_CateringOperationManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/layout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/layout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/loginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/loginView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +123,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.HelloApplication.executor": "Run",
     "Application.Launcher.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -115,8 +132,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "sihab",
-    "ignore.preview.features.used": "true",
+    "git-widget-placeholder": "Merging sihab",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -126,7 +142,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
+    "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "to.speed.mode.migration.done": "true",
@@ -149,8 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1784242533467</updated>
       <workItem from="1784299477813" duration="371000" />
-      <workItem from="1784299876051" duration="1402000" />
-      <workItem from="1784301318045" duration="62000" />
+      <workItem from="1784299876051" duration="386000" />
     </task>
     <task id="LOCAL-00001">
       <option name="closed" value="true" />
