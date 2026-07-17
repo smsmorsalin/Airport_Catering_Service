@@ -5,6 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="233d0cc6-283d-4b88-9097-e2a3f8edbda3" name="Changes" comment="merge change">
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/loginViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/createCateringOrder_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/createCateringOrder_AirlineRepresentativeView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/dashboard_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/dashboard_AirlineRepresentativeView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/dashboard_CateringOperationManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/dashboard_CateringOperationManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/layout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/layout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/loginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/loginView.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/GenerateQAReport_FoodQualityControlOfficerView.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/QualityTrendAnalysis_FoodQualityControlOfficerView.fxml" afterDir="false" />
@@ -112,6 +121,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.HelloApplication.executor": "Run",
     "Application.Launcher.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -138,6 +148,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main.airport_catering_service" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
