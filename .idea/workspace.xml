@@ -5,6 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="233d0cc6-283d-4b88-9097-e2a3f8edbda3" name="Changes" comment="merge change">
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaff_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ManageMealPreparation_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTasks_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/GenerateQAReport_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/GenerateQAReport_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/QualityTrendAnalysis_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/QualityTrendAnalysis_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/performInspection_ FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/performInspection_ FoodQualityControlOfficerView.fxml" afterDir="false" />
+=======
       <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/loginViewController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" afterDir="false" />
@@ -24,6 +38,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/layout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/layout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/loginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/loginView.fxml" afterDir="false" />
+>>>>>>> f5f696be3cf5b4039d9a4e38833c439d0213852c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +147,11 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+<<<<<<< HEAD
+    "git-widget-placeholder": "saif",
+=======
     "git-widget-placeholder": "Merging sihab",
+>>>>>>> f5f696be3cf5b4039d9a4e38833c439d0213852c
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
