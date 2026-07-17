@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="614.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.loginViewController">
+<AnchorPane prefHeight="614.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.loginController">
    <children>
       <Label alignment="CENTER" prefHeight="104.0" prefWidth="600.0" style="-fx-background-color: orange;" />
       <Label alignment="CENTER" layoutX="146.0" layoutY="4.0" prefHeight="35.0" prefWidth="277.0" text="Airport Catering Service">
