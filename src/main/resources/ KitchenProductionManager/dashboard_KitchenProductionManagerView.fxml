@@ -55,6 +55,7 @@
                         <Font name="Gabriola" size="18.0" />
                     </font>
                 </Label>
+            <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: pink;" />
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
     </children>
