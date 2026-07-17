@@ -1,6 +1,6 @@
 package main.airport_catering_service;
 
-public class loginViewController
+public class loginController
 {
     @javafx.fxml.FXML
     public void initialize() {
