@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.createCateringOrder_AirlineRepresentativeController">
+    <children>
+        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
+            <children>
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: pink;" text="Create Catering Order" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Modify Order" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Cancel Order" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Flight delay" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Track Order" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Confirm Delivery" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Pay Invoice" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Order History" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+            </children>
+        </VBox>
+        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant>
+                            <color>
+                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
+                            </color>
+                        </Light.Distant>
+                    </light>
+                </Lighting>
+            </effect>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <VBox fillWidth="false" layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
+            <children>
+                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="Create a New Catring Order">
+                    <font>
+                        <Font name="Gabriola" size="21.0" />
+                    </font>
+                </Label>
+                <AnchorPane disable="true" prefHeight="562.0" prefWidth="597.0">
+               <children>
+                  <Line endX="183.5" layoutX="254.0" startX="-100.0" />
+                  <Line endX="-141.0" endY="470.0" layoutX="141.0" layoutY="92.0" startX="-141.0" startY="-75.0" />
+                  <Text layoutX="100.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Flight Number" wrappingWidth="114.13671875" />
+                  <TextField layoutX="215.0" layoutY="14.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: white;" text="flight number" />
+                  <Text layoutX="115.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Flight Date" wrappingWidth="96.13671875" />
+                  <DatePicker layoutX="215.0" layoutY="48.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: white;" />
+                  <Text layoutX="92.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Departure Time" wrappingWidth="114.13671875" />
+                  <HBox layoutX="214.0" layoutY="85.0" prefHeight="25.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox prefHeight="25.0" prefWidth="87.0" promptText="Hour" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":" textAlignment="CENTER" wrappingWidth="14.90234375">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <ComboBox prefHeight="25.0" prefWidth="106.0" promptText="Minute" />
+                     </children>
+                  </HBox>
+                  <Text layoutX="85.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Delivery Location" wrappingWidth="128.13671875" />
+                  <TextField layoutX="215.0" layoutY="118.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: white;" text="Delivery location" />
+                  <Text layoutX="103.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Delivery Time" wrappingWidth="114.13671875" />
+                  <HBox layoutX="215.0" layoutY="153.0" prefHeight="25.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox prefHeight="25.0" prefWidth="87.0" promptText="Hour" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":" textAlignment="CENTER" wrappingWidth="14.90234375">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <ComboBox prefHeight="25.0" prefWidth="106.0" promptText="Minute" />
+                     </children>
+                  </HBox>
+               </children>
+                </AnchorPane>
+            </children></VBox>
+        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
+    </children>
+</AnchorPane>
