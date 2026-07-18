@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="233d0cc6-283d-4b88-9097-e2a3f8edbda3" name="Changes" comment="merge change" />
+    <list default="true" id="233d0cc6-283d-4b88-9097-e2a3f8edbda3" name="Changes" comment="merge change">
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airlineRepresentativeSelfRegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/confirmDelivery_AirlineRepresentativeView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/flightDelay_AirlineRepresentativeView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/orderHistory_AirlineRepresentativeView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/payBill_AirlineRepresentativeView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/truckOrder_AirlineRepresentative.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/cancelOrder_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/cancelOrder_AirlineRepresentativeView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/createCateringOrder_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/createCateringOrder_AirlineRepresentativeView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/dashboard_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/dashboard_AirlineRepresentativeView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/modifyOrder_AirlineRpresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/modifyOrder_AirlineRpresentativeView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/loginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/loginView.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,61 +46,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000710896964398" />
-      <entry key="MS500" value="1.1480339533278978" />
-      <entry key="S2" value="1.647560751643556" />
-      <entry key="S5" value="2.596827472784555" />
-      <entry key="S10" value="4.538761635539311" />
-      <entry key="S30" value="9.854052698652804" />
-      <entry key="S60" value="14.095831940512081" />
-      <entry key="M2" value="20.397539048600514" />
-      <entry key="M5" value="39.665793479771295" />
-      <entry key="M10" value="69.67550000260172" />
-      <entry key="M15" value="92.7680997602664" />
-      <entry key="M30" value="135.650940015864" />
-      <entry key="H1" value="191.99167287308006" />
-      <entry key="H2" value="277.3821286410049" />
-      <entry key="H4" value="368.04639044185706" />
-      <entry key="D1" value="495.1817825648479" />
-      <entry key="W1" value="523.9605496888528" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.00000000622189" />
+      <entry key="S2" value="1.0088813826034064" />
+      <entry key="S5" value="1.151144459480324" />
+      <entry key="S10" value="1.3887740920712484" />
+      <entry key="S30" value="1.7400885890310953" />
+      <entry key="S60" value="1.9555100221916564" />
+      <entry key="M2" value="2.242417005065076" />
+      <entry key="M5" value="2.735841784710397" />
+      <entry key="M10" value="6.0162692034409035" />
+      <entry key="M15" value="12.206024000897294" />
+      <entry key="M30" value="31.33246141711975" />
+      <entry key="H1" value="68.42190010857068" />
+      <entry key="H2" value="151.36759966429142" />
+      <entry key="H4" value="279.2621074862161" />
+      <entry key="D1" value="529.5331013682896" />
+      <entry key="W1" value="597.6408852578248" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="2.07154823775253E-310" />
-      <entry key="S5" value="1.3381907398142006E-124" />
-      <entry key="S10" value="1.1568019449388055E-62" />
-      <entry key="S30" value="2.261620176979095E-21" />
-      <entry key="S60" value="4.7556494631480905E-11" />
-      <entry key="M2" value="6.896343060991625E-6" />
-      <entry key="M5" value="0.008769189076467603" />
-      <entry key="M10" value="0.11079770946702715" />
-      <entry key="M15" value="0.3055861925687659" />
-      <entry key="M30" value="1.0819149166729671" />
-      <entry key="H1" value="2.4598628328107104" />
-      <entry key="H2" value="4.1483970359550355" />
-      <entry key="H4" value="5.646965089768915" />
-      <entry key="D1" value="7.526161160190214" />
-      <entry key="W1" value="7.929922596598509" />
+      <entry key="MS100" value="4.281075603611391E-56" />
+      <entry key="MS500" value="8.439380722887541E-12" />
+      <entry key="S2" value="0.0017044240157088636" />
+      <entry key="S5" value="0.07809640777382522" />
+      <entry key="S10" value="0.2794573451778021" />
+      <entry key="S30" value="0.6537903554036129" />
+      <entry key="S60" value="0.8085730365301658" />
+      <entry key="M2" value="0.8992068930619724" />
+      <entry key="M5" value="0.958393480967002" />
+      <entry key="M10" value="0.9789758547903828" />
+      <entry key="M15" value="0.9859672287850741" />
+      <entry key="M30" value="1.0041829212846252" />
+      <entry key="H1" value="1.2471976502629707" />
+      <entry key="H2" value="2.322665220261675" />
+      <entry key="H4" value="4.189845837435509" />
+      <entry key="D1" value="7.842949366397602" />
+      <entry key="W1" value="8.822846403388805" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.576591662892429E-4" />
-      <entry key="MS500" value="0.2509312346847413" />
-      <entry key="S2" value="1.1637463167247193" />
-      <entry key="S5" value="2.356664560526245" />
-      <entry key="S10" value="4.402938675499435" />
-      <entry key="S30" value="9.793992937515466" />
-      <entry key="S60" value="14.060452256495989" />
-      <entry key="M2" value="20.377308295243346" />
-      <entry key="M5" value="39.66444076335445" />
-      <entry key="M10" value="69.77975753380584" />
-      <entry key="M15" value="93.0684754211232" />
-      <entry key="M30" value="136.72923922270056" />
-      <entry key="H1" value="194.4489312263322" />
-      <entry key="H2" value="281.5286544290817" />
-      <entry key="H4" value="373.6921358371005" />
-      <entry key="D1" value="502.7076765515464" />
-      <entry key="W1" value="531.8904320881541" />
+      <entry key="MS100" value="0.7422617853145246" />
+      <entry key="MS500" value="0.9421312739536293" />
+      <entry key="S2" value="0.9890295948571481" />
+      <entry key="S5" value="1.15476714494456" />
+      <entry key="S10" value="1.5622889660957822" />
+      <entry key="S30" value="2.320887309731216" />
+      <entry key="S60" value="2.720194361624072" />
+      <entry key="M2" value="3.1175276066509916" />
+      <entry key="M5" value="3.684003706265656" />
+      <entry key="M10" value="6.9897449710621045" />
+      <entry key="M15" value="13.187932792173083" />
+      <entry key="M30" value="32.334039260921685" />
+      <entry key="H1" value="69.66726547199639" />
+      <entry key="H2" value="153.68878033265028" />
+      <entry key="H4" value="283.45078911537865" />
+      <entry key="D1" value="537.3757237097075" />
+      <entry key="W1" value="606.4636798637871" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -99,35 +115,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.HelloApplication.executor": "Run",
-    "Application.Launcher.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "morsalin",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;morsalin&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="main.airport_catering_service" />

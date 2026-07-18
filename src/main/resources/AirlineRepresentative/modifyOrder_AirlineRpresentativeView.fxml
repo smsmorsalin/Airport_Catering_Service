@@ -18,11 +18,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.dashboard_AirlineRepresentativeController">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerName">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" onAction="#createCateringOrderButton" prefHeight="42.0" prefWidth="174.0" text="Create Catering Order" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarCreateCateringOrderButton" prefHeight="42.0" prefWidth="174.0" text="Create Catering Order" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" top="10.0" />
                     </VBox.margin></Button>
@@ -30,27 +30,27 @@
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#cancelOrderButton" prefHeight="42.0" prefWidth="174.0" text="Cancel Order" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarCancelOrderButton" prefHeight="42.0" prefWidth="174.0" text="Cancel Order" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#flightDelayButton" prefHeight="42.0" prefWidth="174.0" text="Flight delay" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarFlightDelayButton" prefHeight="42.0" prefWidth="174.0" text="Flight delay" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#trackOrderButton" prefHeight="42.0" prefWidth="174.0" text="Track Order" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarTrackOrderButton" prefHeight="42.0" prefWidth="174.0" text="Track Order" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#confirmDeliveryButton" prefHeight="42.0" prefWidth="174.0" text="Confirm Delivery" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarConfirmDeliveryButton" prefHeight="42.0" prefWidth="174.0" text="Confirm Delivery" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#payInvoiceButton" prefHeight="42.0" prefWidth="174.0" text="Pay Invoice" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarPayInvoiceButton" prefHeight="42.0" prefWidth="174.0" text="Pay Bill" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#orderHistoryButton" prefHeight="42.0" prefWidth="174.0" text="Order History" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarOrderHistoryButton" prefHeight="42.0" prefWidth="174.0" text="Order History" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
@@ -89,7 +89,7 @@
                   </Label>
                   <Line endX="183.5" layoutX="253.0" layoutY="25.0" startX="-100.0" />
                   <Text layoutX="36.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Order" wrappingWidth="87.13671875" />
-                  <TextField fx:id="fxidOrderIdTextField" layoutX="120.0" layoutY="39.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: white;" text="order id" />
+                  <TextField fx:id="fxidOrderIdTextField" layoutX="120.0" layoutY="39.0" prefHeight="25.0" prefWidth="197.0" promptText="order id" style="-fx-background-color: white;" />
                   <Button layoutX="353.0" layoutY="37.0" mnemonicParsing="false" onAction="#loadOrderedDataToTable" prefHeight="25.0" prefWidth="127.0" text="Load Ordered Data">
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -103,7 +103,7 @@
                               <Font name="Arial" size="12.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="fxidSerialNumberFromTable" layoutX="277.0" layoutY="229.0" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: white;" text="Serial number from table" />
+                        <TextField fx:id="fxidSerialNumberFromTable" layoutX="277.0" layoutY="229.0" prefHeight="25.0" prefWidth="148.0" promptText="Serial number from table" style="-fx-background-color: white;" />
                         <Button fx:id="editMealButton" layoutX="447.0" layoutY="229.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="edit meal">
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -119,7 +119,7 @@
                         <AnchorPane fx:id="fxidHiddenSubAnchorpanel" layoutX="-3.0" layoutY="299.0" prefHeight="214.0" prefWidth="613.0">
                            <children>
                               <ComboBox fx:id="selectedMealComboBox" layoutX="95.0" layoutY="11.0" prefHeight="25.0" prefWidth="114.0" style="-fx-background-color: white;" />
-                              <TextField fx:id="fxidQuantity" layoutX="296.0" layoutY="11.0" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: white;" text="quantity" />
+                              <TextField fx:id="fxidQuantity" layoutX="296.0" layoutY="11.0" prefHeight="25.0" prefWidth="102.0" promptText="quantity" style="-fx-background-color: white;" />
                               <Button layoutX="442.0" layoutY="11.0" mnemonicParsing="false" onAction="#SaveIndividualMealChangeButton" prefHeight="25.0" prefWidth="114.0" style="-fx-background-color: yellow;" text="Save changes">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
