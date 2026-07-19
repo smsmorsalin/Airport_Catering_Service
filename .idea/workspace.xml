@@ -21,7 +21,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaFXApplication" />
         <option value="Class" />
         <option value="FxmlFile" />
       </list>
@@ -39,61 +38,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.3731868184078726" />
-      <entry key="MS500" value="2.5000605892993124" />
-      <entry key="S2" value="4.018587210402389" />
-      <entry key="S5" value="4.564733038952132" />
-      <entry key="S10" value="4.774519216683415" />
-      <entry key="S30" value="4.950157147490609" />
-      <entry key="S60" value="5.755862164423124" />
-      <entry key="M2" value="10.933792639028555" />
-      <entry key="M5" value="33.012596872245076" />
-      <entry key="M10" value="62.48736137192168" />
-      <entry key="M15" value="83.30000263548" />
-      <entry key="M30" value="120.36755586668778" />
-      <entry key="H1" value="172.02831796749965" />
-      <entry key="H2" value="254.25548072602365" />
-      <entry key="H4" value="342.002761956696" />
-      <entry key="D1" value="464.52896352510277" />
-      <entry key="W1" value="492.16444608056463" />
+      <entry key="MS100" value="1.5418790618889946" />
+      <entry key="MS500" value="3.0876892404194543" />
+      <entry key="S2" value="5.112710589688421" />
+      <entry key="S5" value="6.315091940327079" />
+      <entry key="S10" value="7.777790319327466" />
+      <entry key="S30" value="12.885382400992883" />
+      <entry key="S60" value="24.57889942218825" />
+      <entry key="M2" value="48.32873912521491" />
+      <entry key="M5" value="82.43337349052972" />
+      <entry key="M10" value="100.30036876240894" />
+      <entry key="M15" value="107.29891840917854" />
+      <entry key="M30" value="116.3839501005545" />
+      <entry key="H1" value="134.12149445892058" />
+      <entry key="H2" value="192.4581121612741" />
+      <entry key="H4" value="313.96157463215974" />
+      <entry key="D1" value="620.3105503516022" />
+      <entry key="W1" value="715.309594145004" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="3.9751805443193496E-257" />
-      <entry key="S5" value="2.7525977039122046E-103" />
-      <entry key="S10" value="5.246520469713434E-52" />
-      <entry key="S30" value="8.065360622329282E-18" />
-      <entry key="S60" value="2.8399578586538555E-9" />
-      <entry key="M2" value="5.329296553369864E-5" />
-      <entry key="M5" value="0.019869175520074844" />
-      <entry key="M10" value="0.1667788551455003" />
-      <entry key="M15" value="0.40136595484133875" />
-      <entry key="M30" value="1.239928123495315" />
-      <entry key="H1" value="2.6333742925824133" />
-      <entry key="H2" value="4.292212013689353" />
-      <entry key="H4" value="5.744014507673883" />
-      <entry key="D1" value="7.547565975085183" />
-      <entry key="W1" value="7.933140552780501" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="1.6222568957636956E-235" />
+      <entry key="S30" value="5.453892117253694E-79" />
+      <entry key="S60" value="7.385047134076865E-40" />
+      <entry key="M2" value="2.717544320535891E-20" />
+      <entry key="M5" value="1.491662783289584E-8" />
+      <entry key="M10" value="1.2213366292548753E-4" />
+      <entry key="M15" value="0.0024617167538775425" />
+      <entry key="M30" value="0.0501765308483412" />
+      <entry key="H1" value="0.27879127898219885" />
+      <entry key="H2" value="1.098142164096682" />
+      <entry key="H4" value="2.8809387079771804" />
+      <entry key="D1" value="7.36832444128589" />
+      <entry key="W1" value="8.74451577802894" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.903834993279623" />
-      <entry key="MS500" value="2.0691707781181563" />
-      <entry key="S2" value="3.8605254746412854" />
-      <entry key="S5" value="4.496135396617113" />
-      <entry key="S10" value="4.739261116121872" />
-      <entry key="S30" value="4.93817048800052" />
-      <entry key="S60" value="5.749616815197437" />
-      <entry key="M2" value="10.929770135420917" />
-      <entry key="M5" value="33.028971392387994" />
-      <entry key="M10" value="62.65096746679321" />
-      <entry key="M15" value="83.69845102534732" />
-      <entry key="M30" value="121.60507355705066" />
-      <entry key="H1" value="174.6597185706268" />
-      <entry key="H2" value="258.54615143701733" />
-      <entry key="H4" value="347.7457301811541" />
-      <entry key="D1" value="472.0762935468844" />
-      <entry key="W1" value="500.09755097821727" />
+      <entry key="MS100" value="1.330883456853705" />
+      <entry key="MS500" value="2.977936117853821" />
+      <entry key="S2" value="5.0658048249224645" />
+      <entry key="S5" value="6.29271152095058" />
+      <entry key="S10" value="7.764884722295755" />
+      <entry key="S30" value="12.879297856409815" />
+      <entry key="S60" value="24.57374932845635" />
+      <entry key="M2" value="48.323855389114776" />
+      <entry key="M5" value="82.43001028113457" />
+      <entry key="M10" value="100.29842617711213" />
+      <entry key="M15" value="107.2998932077881" />
+      <entry key="M30" value="116.43320310592236" />
+      <entry key="H1" value="134.3994648132504" />
+      <entry key="H2" value="193.5553429760095" />
+      <entry key="H4" value="316.8416071362816" />
+      <entry key="D1" value="627.6785498074206" />
+      <entry key="W1" value="724.0540560463216" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -125,13 +124,6 @@
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
     &quot;git-widget-placeholder&quot;: &quot;Merging sihab&quot;,
-=======
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-    &quot;git-widget-placeholder&quot;: &quot;saif&quot;,
-=======
-    &quot;git-widget-placeholder&quot;: &quot;Merging sihab&quot;,
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; f5f696be3cf5b4039d9a4e38833c439d0213852c
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 05a017be2332efd84b39f9ce878d1ce5371e07d2
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -155,8 +147,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784242533467</updated>
-      <workItem from="1784299477813" duration="371000" />
-      <workItem from="1784299876051" duration="386000" />
     </task>
     <task id="LOCAL-00001">
       <option name="closed" value="true" />
@@ -166,10 +156,22 @@
       <option name="project" value="LOCAL" />
       <updated>1784256200411</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="merge change">
+      <option name="closed" value="true" />
+      <created>1784306764578</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1784306764578</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge change" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge change" />
   </component>
 </project>
