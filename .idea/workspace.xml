@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4677097f-20e2-4d5e-b3e0-15ab9190ee4c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/HandleRejectedBatch_KitchenProductionManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/KitchenPerformanceReport_KitchenProductionManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/RequestQualityInspection_KitchenProductionManagerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/dashboard_ FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/dashboard_FoodQualityControlOfficerView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
