@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="233d0cc6-283d-4b88-9097-e2a3f8edbda3" name="Changes" comment="merge change">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruck_DispatchCoordinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/EmergencyDelivery_DispatchCoordinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/GenerateDispatchReport_DispatchCoordinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ManageDeliveryDelays_DispatchCoordinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveries_DispatchCoordinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/PackageOrder_DispatchCoordinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ReceiveDispatchRequest_DispatchCooedinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ScheduleDelivery_DispatchCoordinatorView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/dashboard_dispatchCoordinatorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/dashboard_dispatchCoordinatorView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +163,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784242533467</updated>
-      <workItem from="1784658162055" duration="2400000" />
+      <workItem from="1784658162055" duration="3019000" />
     </task>
     <task id="LOCAL-00001">
       <option name="closed" value="true" />
