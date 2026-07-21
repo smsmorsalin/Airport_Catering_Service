@@ -1,4 +1,4 @@
-package main.airport_catering_service;
+package main.airport_catering_service.controller;
 
 public class loginController
 {

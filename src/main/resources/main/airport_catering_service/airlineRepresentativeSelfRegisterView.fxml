@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="614.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.airlineRepresentativeSelfRegisterView">
+<AnchorPane prefHeight="614.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.airlineRepresentativeSelfRegisterController">
     <children>
         <Label alignment="CENTER" prefHeight="39.0" prefWidth="600.0" style="-fx-background-color: orange;" />
         <Label alignment="CENTER" layoutX="221.0" layoutY="3.0" prefHeight="27.0" prefWidth="127.0" text="Register">

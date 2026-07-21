@@ -14,39 +14,39 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.dashboard_AirlineRepresentativeController">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerName">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" onAction="#createCateringOrderButton" prefHeight="42.0" prefWidth="174.0" text="Create Catering Order" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarCreateCateringOrderButton" prefHeight="42.0" prefWidth="174.0" text="Create Catering Order" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" top="10.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#modifyOrderButton" prefHeight="42.0" prefWidth="174.0" text="Modify Order" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarModifyOrderButton" prefHeight="42.0" prefWidth="174.0" text="Modify Order" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#cancelOrderButton" prefHeight="42.0" prefWidth="174.0" text="Cancel Order" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarCancelOrderButton" prefHeight="42.0" prefWidth="174.0" text="Cancel Order" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#flightDelayButton" prefHeight="42.0" prefWidth="174.0" text="Flight delay" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarFlightDelayButton" prefHeight="42.0" prefWidth="174.0" text="Flight delay" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#trackOrderButton" prefHeight="42.0" prefWidth="174.0" text="Track Order" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarTrackOrderButton" prefHeight="42.0" prefWidth="174.0" text="Track Order" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#confirmDeliveryButton" prefHeight="42.0" prefWidth="174.0" text="Confirm Delivery" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarConfirmDeliveryButton" prefHeight="42.0" prefWidth="174.0" text="Confirm Delivery" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#payInvoiceButton" prefHeight="42.0" prefWidth="174.0" text="Pay Invoice" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarPayInvoiceButton" prefHeight="42.0" prefWidth="174.0" text="Pay Bill" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#orderHistoryButton" prefHeight="42.0" prefWidth="174.0" text="Order History" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarOrderHistoryButton" prefHeight="42.0" prefWidth="174.0" text="Order History" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
