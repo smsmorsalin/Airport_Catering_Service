@@ -4,29 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e80fd9c-7340-475c-992f-4f70ad6cb819" name="Changes" comment="merge change">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/HandleRejectedBatch_KitchenProductionManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/KitchenPerformanceReport_KitchenProductionManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/RequestQualityInspection_KitchenProductionManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/ProductionTaskView.fxml" afterDir="false" />
+    <list default="true" id="4e80fd9c-7340-475c-992f-4f70ad6cb819" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/GenerateQAReport_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/GenerateQAReport_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/QualityTrendAnalysis_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/QualityTrendAnalysis_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/dashboard_ FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/dashboard_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/performInspection_ FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/performInspection_ FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaff_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaff_KitchenProductionManagerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ManageMealPreparation_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ManageMealPreparation_KitchenProductionManagerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/MonitorCookingProgress_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/MonitorCookingProgress_KitchenProductionManagerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/Update ProductionStatus_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/Update ProductionStatus_KitchenProductionManagerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTasks_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTasks_KitchenProductionManagerView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +29,12 @@
     &quot;assignee&quot;: &quot;Saif-kaif&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
-    &quot;accountId&quot;: &quot;09b4b316-9114-4bc1-8e76-96925cab0536&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
+    "accountId": "ef1e225f-e8df-4381-ba31-5fa2f4c0db29"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -65,23 +44,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.00000000001588" />
-      <entry key="S5" value="1.0000479004920018" />
-      <entry key="S10" value="1.006921018133327" />
-      <entry key="S30" value="1.1905709339505435" />
-      <entry key="S60" value="1.436544311973672" />
-      <entry key="M2" value="1.6608796148515417" />
-      <entry key="M5" value="1.969302412029022" />
-      <entry key="M10" value="3.025280350135316" />
-      <entry key="M15" value="4.248719533130806" />
-      <entry key="M30" value="6.771774353451414" />
-      <entry key="H1" value="9.221563018597182" />
-      <entry key="H2" value="19.555710308382487" />
-      <entry key="H4" value="79.95195118475841" />
-      <entry key="D1" value="494.0521435404997" />
-      <entry key="W1" value="702.814817092649" />
+      <entry key="MS100" value="1.000000003404292" />
+      <entry key="MS500" value="1.0233666965107813" />
+      <entry key="S2" value="1.9148559226015482" />
+      <entry key="S5" value="3.1850824600603964" />
+      <entry key="S10" value="3.949767675039126" />
+      <entry key="S30" value="4.631856131924348" />
+      <entry key="S60" value="5.266953272463888" />
+      <entry key="M2" value="7.16330400289808" />
+      <entry key="M5" value="10.82810164469231" />
+      <entry key="M10" value="13.329527821462658" />
+      <entry key="M15" value="14.86876157662478" />
+      <entry key="M30" value="18.133180129513935" />
+      <entry key="H1" value="21.81080025051871" />
+      <entry key="H2" value="31.976784629558026" />
+      <entry key="H4" value="88.76949172802226" />
+      <entry key="D1" value="502.4987482282937" />
+      <entry key="W1" value="717.2711761387133" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -90,36 +69,36 @@
       <entry key="S5" value="0.0" />
       <entry key="S10" value="0.0" />
       <entry key="S30" value="0.0" />
-      <entry key="S60" value="2.274232031145301E-198" />
-      <entry key="M2" value="1.5080557122153358E-99" />
-      <entry key="M5" value="2.9605128768565873E-40" />
-      <entry key="M10" value="1.7206143171569757E-20" />
-      <entry key="M15" value="6.665051580405018E-14" />
-      <entry key="M30" value="2.610858577707697E-7" />
-      <entry key="H1" value="6.359464430468799E-4" />
-      <entry key="H2" value="0.05244803795060988" />
-      <entry key="H4" value="0.6296067252152868" />
-      <entry key="D1" value="5.718620766415023" />
-      <entry key="W1" value="8.433549855669082" />
+      <entry key="S60" value="5.661079052528403E-208" />
+      <entry key="M2" value="2.379302219670382E-104" />
+      <entry key="M5" value="3.55287431140977E-42" />
+      <entry key="M10" value="1.8849072161075357E-21" />
+      <entry key="M15" value="1.5259529550353726E-14" />
+      <entry key="M30" value="1.2492580681807067E-7" />
+      <entry key="H1" value="4.399010008203675E-4" />
+      <entry key="H2" value="0.04362108360969142" />
+      <entry key="H4" value="0.5741864773267473" />
+      <entry key="D1" value="5.631471587772058" />
+      <entry key="W1" value="8.41506830055769" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8293195458144417" />
-      <entry key="MS500" value="0.963261894020148" />
-      <entry key="S2" value="0.9906861581120129" />
-      <entry key="S5" value="0.9963049508459976" />
-      <entry key="S10" value="1.0045294205149131" />
-      <entry key="S30" value="1.1850318671719196" />
-      <entry key="S60" value="1.430565733849364" />
-      <entry key="M2" value="1.656421197328621" />
-      <entry key="M5" value="1.9669854451392235" />
-      <entry key="M10" value="3.0238506423853497" />
-      <entry key="M15" value="4.247601755911302" />
-      <entry key="M30" value="6.771056163611462" />
-      <entry key="H1" value="9.221771484282549" />
-      <entry key="H2" value="19.60787705018812" />
-      <entry key="H4" value="80.58122821787406" />
-      <entry key="D1" value="499.7704856015478" />
-      <entry key="W1" value="711.2483110063122" />
+      <entry key="MS100" value="2.046930420380874E-8" />
+      <entry key="MS500" value="0.048491360365501314" />
+      <entry key="S2" value="1.3072348826578715" />
+      <entry key="S5" value="2.8715356254730158" />
+      <entry key="S10" value="3.777960432898077" />
+      <entry key="S30" value="4.57079530907449" />
+      <entry key="S60" value="5.235183483864092" />
+      <entry key="M2" value="7.145800322685928" />
+      <entry key="M5" value="10.819858038572164" />
+      <entry key="M10" value="13.324899785004293" />
+      <entry key="M15" value="14.865425697807469" />
+      <entry key="M30" value="18.13124157627851" />
+      <entry key="H1" value="21.810132157309923" />
+      <entry key="H2" value="32.0197617546263" />
+      <entry key="H4" value="89.34317154857467" />
+      <entry key="D1" value="508.129910888953" />
+      <entry key="W1" value="725.6861836922965" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -139,7 +118,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "Merging morsalin"
+    "git-widget-placeholder": "morsalin",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="TaskManager">
@@ -166,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784306764578</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="merge change">
+      <option name="closed" value="true" />
+      <created>1784660287324</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1784660287324</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
