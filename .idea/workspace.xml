@@ -4,9 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="233d0cc6-283d-4b88-9097-e2a3f8edbda3" name="Changes" comment="merge change">
+    <list default="true" id="4e80fd9c-7340-475c-992f-4f70ad6cb819" name="Changes" comment="merge change">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/HandleRejectedBatch_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/KitchenPerformanceReport_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/RequestQualityInspection_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/ProductionTaskView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/monitorProduction_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/monitorProduction_CateringOperationsManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/GenerateQAReport_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/GenerateQAReport_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/QualityTrendAnalysis_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/QualityTrendAnalysis_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/dashboard_ FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/dashboard_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/performInspection_ FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/performInspection_ FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaff_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaff_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ManageMealPreparation_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ManageMealPreparation_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/MonitorCookingProgress_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/MonitorCookingProgress_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/Update ProductionStatus_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/Update ProductionStatus_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTasks_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTasks_KitchenProductionManagerView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +44,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Saif-kaif&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
+    &quot;accountId&quot;: &quot;09b4b316-9114-4bc1-8e76-96925cab0536&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -33,62 +65,65 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.652566860817584E-9" />
-      <entry key="MS500" value="0.02214958983011484" />
-      <entry key="S2" value="0.8517814396117561" />
-      <entry key="S5" value="2.102926287615988" />
-      <entry key="S10" value="2.888855339368581" />
-      <entry key="S30" value="3.585701693149016" />
-      <entry key="S60" value="3.7867860862763694" />
-      <entry key="M2" value="3.891889218863687" />
-      <entry key="M5" value="4.207841553496882" />
-      <entry key="M10" value="8.063890838602244" />
-      <entry key="M15" value="14.403242835724996" />
-      <entry key="M30" value="31.171124333368095" />
-      <entry key="H1" value="49.198408552732964" />
-      <entry key="H2" value="68.73665296535708" />
-      <entry key="H4" value="126.45942432179457" />
-      <entry key="D1" value="544.4168898979055" />
-      <entry key="W1" value="768.8384422035931" />
-    </decayedCancelled>
-    <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.0" />
-      <entry key="M2" value="1.0" />
-      <entry key="M5" value="1.0" />
-      <entry key="M10" value="1.0" />
-      <entry key="M15" value="1.0000000000000018" />
-      <entry key="M30" value="1.0000000423515296" />
-      <entry key="H1" value="1.000256131751025" />
-      <entry key="H2" value="1.0332851626970163" />
-      <entry key="H4" value="1.5015682963208397" />
-      <entry key="D1" value="6.5059815297012475" />
-      <entry key="W1" value="9.388020465000203" />
+      <entry key="S2" value="1.00000000001588" />
+      <entry key="S5" value="1.0000479004920018" />
+      <entry key="S10" value="1.006921018133327" />
+      <entry key="S30" value="1.1905709339505435" />
+      <entry key="S60" value="1.436544311973672" />
+      <entry key="M2" value="1.6608796148515417" />
+      <entry key="M5" value="1.969302412029022" />
+      <entry key="M10" value="3.025280350135316" />
+      <entry key="M15" value="4.248719533130806" />
+      <entry key="M30" value="6.771774353451414" />
+      <entry key="H1" value="9.221563018597182" />
+      <entry key="H2" value="19.555710308382487" />
+      <entry key="H4" value="79.95195118475841" />
+      <entry key="D1" value="494.0521435404997" />
+      <entry key="W1" value="702.814817092649" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="2.274232031145301E-198" />
+      <entry key="M2" value="1.5080557122153358E-99" />
+      <entry key="M5" value="2.9605128768565873E-40" />
+      <entry key="M10" value="1.7206143171569757E-20" />
+      <entry key="M15" value="6.665051580405018E-14" />
+      <entry key="M30" value="2.610858577707697E-7" />
+      <entry key="H1" value="6.359464430468799E-4" />
+      <entry key="H2" value="0.05244803795060988" />
+      <entry key="H4" value="0.6296067252152868" />
+      <entry key="D1" value="5.718620766415023" />
+      <entry key="W1" value="8.433549855669082" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.9048012653370272E-5" />
-      <entry key="MS500" value="0.11848456626393547" />
-      <entry key="S2" value="1.2642848030207992" />
-      <entry key="S5" value="2.76286102843744" />
-      <entry key="S10" value="3.692208423680098" />
-      <entry key="S30" value="4.513005846861413" />
-      <entry key="S60" value="4.749454703878215" />
-      <entry key="M2" value="4.872970335602904" />
-      <entry key="M5" value="5.200192727947695" />
-      <entry key="M10" value="9.059905093723495" />
-      <entry key="M15" value="15.400402082655685" />
-      <entry key="M30" value="32.169405068190365" />
-      <entry key="H1" value="50.197595602403865" />
-      <entry key="H2" value="69.76927766264055" />
-      <entry key="H4" value="127.9604790677692" />
-      <entry key="D1" value="550.9225597353806" />
-      <entry key="W1" value="778.2264007960322" />
+      <entry key="MS100" value="0.8293195458144417" />
+      <entry key="MS500" value="0.963261894020148" />
+      <entry key="S2" value="0.9906861581120129" />
+      <entry key="S5" value="0.9963049508459976" />
+      <entry key="S10" value="1.0045294205149131" />
+      <entry key="S30" value="1.1850318671719196" />
+      <entry key="S60" value="1.430565733849364" />
+      <entry key="M2" value="1.656421197328621" />
+      <entry key="M5" value="1.9669854451392235" />
+      <entry key="M10" value="3.0238506423853497" />
+      <entry key="M15" value="4.247601755911302" />
+      <entry key="M30" value="6.771056163611462" />
+      <entry key="H1" value="9.221771484282549" />
+      <entry key="H2" value="19.60787705018812" />
+      <entry key="H4" value="80.58122821787406" />
+      <entry key="D1" value="499.7704856015478" />
+      <entry key="W1" value="711.2483110063122" />
     </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0,
@@ -104,49 +139,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.HelloApplication.executor": "Run",
-    "Application.Launcher.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "morsalin",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true"
+    "git-widget-placeholder": "Merging morsalin"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="main.airport_catering_service" />
-    </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="233d0cc6-283d-4b88-9097-e2a3f8edbda3" name="Changes" comment="" />
+      <changelist id="4677097f-20e2-4d5e-b3e0-15ab9190ee4c" name="Changes" comment="" />
       <created>1784242533467</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -173,6 +171,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="merge change" />

@@ -2,7 +2,11 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
@@ -55,7 +59,33 @@
                         <Font name="Gabriola" size="18.0" />
                     </font>
                 </Label>
-                <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: plum;" />
+                <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: plum;">
+               <children>
+                  <Label layoutX="184.0" layoutY="14.0" text="Manage Meal Preparation">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="69.0" text=" Production Order ID" />
+                  <Label layoutX="17.0" layoutY="99.0" text=" Production Date" />
+                  <Label layoutX="17.0" layoutY="136.0" text=" Target Completion Time" />
+                  <Label layoutX="21.0" layoutY="170.0" text="Special Instructions" />
+                  <TextField fx:id="productionOrderIDTextField" layoutX="143.0" layoutY="65.0" />
+                  <DatePicker fx:id="dateOfProductionDatePicker" layoutX="141.0" layoutY="95.0" />
+                  <Label layoutX="228.0" layoutY="136.0" text=":" />
+                  <ComboBox fx:id="miniutesTargetTimrCOmboBox" layoutX="253.0" layoutY="132.0" prefHeight="25.0" prefWidth="3.0" />
+                  <ComboBox fx:id="hourTargetTimrCOmboBox" layoutX="164.0" layoutY="132.0" prefHeight="25.0" prefWidth="3.0" />
+                  <AnchorPane layoutX="9.0" layoutY="239.0" prefHeight="167.0" prefWidth="581.0" style="-fx-background-color: yellow;">
+                     <children>
+                        <Label layoutX="50.0" layoutY="27.0" text="Production Plan ID :" />
+                        <Label layoutX="50.0" layoutY="63.0" text="Production Date : " />
+                        <Label layoutX="50.0" layoutY="100.0" text="Completion Time    : " />
+                        <Label layoutX="47.0" layoutY="134.0" text="Meal Categories    :" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="432.0" layoutY="65.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search" />
+                  <TextArea fx:id="specialInstructionsTextArea" layoutX="149.0" layoutY="166.0" prefHeight="42.0" prefWidth="200.0" />
+               </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
     </children>
