@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="233d0cc6-283d-4b88-9097-e2a3f8edbda3" name="Changes" comment="merge change">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/monitorProduction_CateringOperationsManagerView.fxml" afterDir="false" />
+    <list default="true" id="4677097f-20e2-4d5e-b3e0-15ab9190ee4c" name="Changes" comment="unknown error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaff_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaff_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/HandleRejectedBatch_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/HandleRejectedBatch_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ManageMealPreparation_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ManageMealPreparation_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/MonitorCookingProgress_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/MonitorCookingProgress_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/RequestQualityInspection_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/RequestQualityInspection_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/Update ProductionStatus_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/Update ProductionStatus_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTasks_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTasks_KitchenProductionManagerView.fxml" afterDir="false" />
     </list>
-    <list default="true" id="4677097f-20e2-4d5e-b3e0-15ab9190ee4c" name="Changes" comment="unknown error" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,6 +182,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="merge change" />

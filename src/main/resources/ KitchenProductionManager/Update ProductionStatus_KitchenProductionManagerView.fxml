@@ -60,15 +60,21 @@
                 <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: plum;">
                <children>
                   <Label layoutX="21.0" layoutY="107.0" text="Production Order ID" />
-                  <Label layoutX="21.0" layoutY="138.0" text="Airline Name" />
-                  <Label layoutX="21.0" layoutY="169.0" text="Flight Number" />
-                  <Label layoutX="21.0" layoutY="207.0" text="Meal Category" />
-                  <Label layoutX="21.0" layoutY="235.0" text="Meal Items " />
-                  <TextField layoutX="149.0" layoutY="103.0" />
-                  <TextField layoutX="149.0" layoutY="134.0" />
-                  <TextField layoutX="149.0" layoutY="165.0" />
-                  <ComboBox layoutX="149.0" layoutY="203.0" prefWidth="150.0" />
-                  <ComboBox layoutX="149.0" layoutY="239.0" prefWidth="150.0" />
+                  <Label layoutX="21.0" layoutY="138.0" text="Staff Requirement" />
+                  <Label layoutX="21.0" layoutY="174.0" text="Equipment Assignment" />
+                  <Label layoutX="21.0" layoutY="206.0" text="Kitchen Section" />
+                  <TextField fx:id="productionOrderIDTextField" layoutX="149.0" layoutY="103.0" />
+                  <TextField fx:id="staffRequirementTextField" layoutX="149.0" layoutY="134.0" />
+                  <ComboBox fx:id="equipmentAssignmentComboBox" layoutX="149.0" layoutY="170.0" prefWidth="150.0" />
+                  <ComboBox fx:id="kitchenSectionComboBox" layoutX="149.0" layoutY="210.0" prefWidth="150.0" />
+                  <Button layoutX="423.0" layoutY="103.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search" />
+                  <AnchorPane layoutX="14.0" layoutY="273.0" prefHeight="200.0" prefWidth="486.0" style="-fx-background-color: yellow;">
+                     <children>
+                        <Label layoutX="41.0" layoutY="23.0" prefHeight="17.0" prefWidth="96.0" text="Allocation ID" />
+                        <Label layoutX="41.0" layoutY="51.0" prefHeight="17.0" prefWidth="123.0" text="Assigned Equipment" />
+                        <Label layoutX="41.0" layoutY="82.0" prefHeight="17.0" prefWidth="149.0" text="Assigned Kitchen Section" />
+                     </children>
+                  </AnchorPane>
                </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
