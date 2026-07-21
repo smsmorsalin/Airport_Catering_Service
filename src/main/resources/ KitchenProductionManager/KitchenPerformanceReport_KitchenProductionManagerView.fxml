@@ -63,7 +63,7 @@
                   <Label layoutX="96.0" layoutY="109.0" text="Start  Date" />
                   <Label layoutX="100.0" layoutY="138.0" text="End  Date" />
                   <ComboBox fx:id="reportTypeComboBox" layoutX="200.0" layoutY="74.0" prefWidth="150.0" />
-                  <Button fx:id="confirmOnAction" layoutX="431.0" layoutY="134.0" mnemonicParsing="false" text="Confirm" />
+                  <Button layoutX="431.0" layoutY="134.0" mnemonicParsing="false" onAction="#confirmOnAction" text="Confirm" />
                   <DatePicker fx:id="startDatePicker" layoutX="188.0" layoutY="105.0" />
                   <DatePicker fx:id="endDatePicker" layoutX="188.0" layoutY="146.0" />
                   <AnchorPane layoutX="6.0" layoutY="189.0" prefHeight="200.0" prefWidth="410.0" style="-fx-background-color: yellow;">
