@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4677097f-20e2-4d5e-b3e0-15ab9190ee4c" name="Changes" comment="unknown error">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/performInspection_ FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/performInspection_ FoodQualityControlOfficerView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="4677097f-20e2-4d5e-b3e0-15ab9190ee4c" name="Changes" comment="unknown error" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
