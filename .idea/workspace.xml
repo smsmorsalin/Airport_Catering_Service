@@ -4,30 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="233d0cc6-283d-4b88-9097-e2a3f8edbda3" name="Changes" comment="merge change">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruck_DispatchCoordinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/EmergencyDelivery_DispatchCoordinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/GenerateDispatchReport_DispatchCoordinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ManageDeliveryDelays_DispatchCoordinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveries_DispatchCoordinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/PackageOrder_DispatchCoordinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ReceiveDispatchRequest_DispatchCooedinatorView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ScheduleDelivery_DispatchCoordinatorView.fxml" afterDir="false" />
+    <list default="true" id="4677097f-20e2-4d5e-b3e0-15ab9190ee4c" name="Changes" comment="unknown error">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModification_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellation_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightDelayRequest_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/GenerateReports_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/RegisterComplaint_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ResolveComplaint_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ServiceUpdates_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/TrackComplaint_CustomerSupportOfficerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/dashboard_dispatchCoordinatorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/dashboard_dispatchCoordinatorView.fxml" afterDir="false" />
-    <list default="true" id="4e80fd9c-7340-475c-992f-4f70ad6cb819" name="Changes" comment="merge change">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/HandleRejectedBatch_KitchenProductionManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/KitchenPerformanceReport_KitchenProductionManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/RequestQualityInspection_KitchenProductionManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/ProductionTaskView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/CalculateCost_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/CalculateCost_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/FinancialReports_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/FinancialReports_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/GenerateInvoice_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/GenerateInvoice_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/OutstandingPayments_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/OutstandingPayments_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/ProcessRefund_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/ProcessRefund_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RecordPayment_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RecordPayment_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/dashboard_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/dashboard_FinanceAndBillingManagerView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
