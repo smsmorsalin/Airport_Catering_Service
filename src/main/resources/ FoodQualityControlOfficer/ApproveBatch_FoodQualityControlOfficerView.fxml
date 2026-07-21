@@ -59,10 +59,19 @@
                 </Label>
                 <AnchorPane prefHeight="521.0" prefWidth="563.0" style="-fx-background-color: plum;">
                <children>
-                  <Label layoutX="29.0" layoutY="110.0" prefHeight="17.0" prefWidth="91.0" text="Batch Number" />
-                  <Label layoutX="29.0" layoutY="149.0" text="Approval Remarks" />
-                  <TextField layoutX="142.0" layoutY="106.0" />
-                  <TextArea layoutX="142.0" layoutY="143.0" prefHeight="59.0" prefWidth="149.0" />
+                  <Label layoutX="19.0" layoutY="70.0" prefHeight="17.0" prefWidth="91.0" text="Batch Number" />
+                  <Label layoutX="19.0" layoutY="109.0" text="Approval Remarks" />
+                  <TextField fx:id="batchNumberTextField" layoutX="132.0" layoutY="66.0" />
+                  <TextArea fx:id="approvalRemarksTextArea" layoutX="132.0" layoutY="103.0" prefHeight="59.0" prefWidth="149.0" />
+                  <Button layoutX="359.0" layoutY="66.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search" />
+                  <AnchorPane layoutX="16.0" layoutY="212.0" prefHeight="200.0" prefWidth="497.0" style="-fx-background-color: yellow;">
+                     <children>
+                        <Label layoutX="33.0" layoutY="26.0" prefHeight="17.0" prefWidth="93.0" text="Approval ID" />
+                        <Label layoutX="33.0" layoutY="54.0" prefHeight="17.0" prefWidth="93.0" text="Batch Number" />
+                        <Label layoutX="33.0" layoutY="82.0" prefHeight="17.0" prefWidth="93.0" text="Approval Date" />
+                        <Label layoutX="33.0" layoutY="113.0" prefHeight="17.0" prefWidth="93.0" text="Approval Status" />
+                     </children>
+                  </AnchorPane>
                </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
