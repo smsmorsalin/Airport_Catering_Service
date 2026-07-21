@@ -21,7 +21,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.createCateringOrder_AirlineRepresentativeController">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerName">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
@@ -29,31 +29,31 @@
                     <VBox.margin>
                         <Insets bottom="5.0" top="10.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#modifyOrderButton" prefHeight="42.0" prefWidth="174.0" text="Modify Order" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarModifyOrderButton" prefHeight="42.0" prefWidth="174.0" text="Modify Order" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#cancelOrderButton" prefHeight="42.0" prefWidth="174.0" text="Cancel Order" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarCancelOrderButton" prefHeight="42.0" prefWidth="174.0" text="Cancel Order" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#flightDelayButton" prefHeight="42.0" prefWidth="174.0" text="Flight delay" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarFlightDelayButton" prefHeight="42.0" prefWidth="174.0" text="Flight delay" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#trackOrderButton" prefHeight="42.0" prefWidth="174.0" text="Track Order" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarTrackOrderButton" prefHeight="42.0" prefWidth="174.0" text="Track Order" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#confirmDeliveryButton" prefHeight="42.0" prefWidth="174.0" text="Confirm Delivery" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarConfirmDeliveryButton" prefHeight="42.0" prefWidth="174.0" text="Confirm Delivery" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#payInvoiceButton" prefHeight="42.0" prefWidth="174.0" text="Pay Invoice" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarPayInvoiceButton" prefHeight="42.0" prefWidth="174.0" text="Pay Bill" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#orderHistoryButton" prefHeight="42.0" prefWidth="174.0" text="Order History" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarOrderHistoryButton" prefHeight="42.0" prefWidth="174.0" text="Order History" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
@@ -93,7 +93,7 @@
                   <Line endX="183.5" layoutX="254.0" startX="-100.0" />
                   <Line endX="-141.0" endY="470.0" layoutX="141.0" layoutY="92.0" startX="-141.0" startY="-75.0" />
                   <Text layoutX="100.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Flight Number" wrappingWidth="114.13671875" />
-                  <TextField fx:id="fxidFlightNumberTextField" layoutX="215.0" layoutY="14.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: white;" text="flight number" />
+                  <TextField fx:id="fxidFlightNumberTextField" layoutX="215.0" layoutY="14.0" prefHeight="25.0" prefWidth="197.0" promptText="flight number" style="-fx-background-color: white;" />
                   <Text layoutX="115.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Flight Date" wrappingWidth="96.13671875" />
                   <DatePicker fx:id="fxidFlightDateDatePicker" layoutX="215.0" layoutY="48.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: white;" />
                   <Text layoutX="92.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Departure Time" wrappingWidth="114.13671875" />
@@ -109,7 +109,7 @@
                      </children>
                   </HBox>
                   <Text layoutX="85.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Delivery Location" wrappingWidth="128.13671875" />
-                  <TextField fx:id="fxidDeliveryLocationTextField" layoutX="215.0" layoutY="118.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: white;" text="Delivery location" />
+                  <TextField fx:id="fxidDeliveryLocationTextField" layoutX="215.0" layoutY="118.0" prefHeight="25.0" prefWidth="197.0" promptText="Delivery location" style="-fx-background-color: white;" />
                   <Text layoutX="103.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Delivery Time" wrappingWidth="114.13671875" />
                   <HBox layoutX="215.0" layoutY="153.0" prefHeight="25.0" prefWidth="200.0">
                      <children>
@@ -131,7 +131,7 @@
                   <Line endX="-24.5" layoutX="115.0" layoutY="219.0" startX="-100.0" />
                   <ComboBox fx:id="mealListComboBox" layoutX="106.0" layoutY="224.0" prefHeight="25.0" prefWidth="114.0" style="-fx-background-color: white;" />
                   <Text layoutX="255.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="quantity" wrappingWidth="68.13671875" />
-                  <TextField fx:id="mealQuantityTextField" layoutX="306.0" layoutY="224.0" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: white;" text="quantity" />
+                  <TextField fx:id="mealQuantityTextField" layoutX="306.0" layoutY="224.0" prefHeight="25.0" prefWidth="102.0" promptText="quantity" style="-fx-background-color: white;" />
                   <Button layoutX="459.0" layoutY="224.0" mnemonicParsing="false" onAction="#addMealButton" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: yellow;" text="add meal">
                      <font>
                         <Font name="System Bold" size="12.0" />

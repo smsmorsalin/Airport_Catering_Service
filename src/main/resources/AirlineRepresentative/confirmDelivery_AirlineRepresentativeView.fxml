@@ -27,7 +27,7 @@
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: pink;" text="Cancel Order" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarCancelOrderButton" prefHeight="42.0" prefWidth="174.0" text="Cancel Order" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
@@ -39,7 +39,7 @@
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#sideBarConfirmDeliveryButton" prefHeight="42.0" prefWidth="174.0" text="Confirm Delivery" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: pink;" text="Confirm Delivery" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
@@ -77,56 +77,56 @@
         </Button>
         <VBox fillWidth="false" layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
             <children>
-                <AnchorPane prefHeight="591.0" prefWidth="610.0">
+                <AnchorPane prefHeight="587.0" prefWidth="596.0">
                <children>
-                  <Label alignment="CENTER" layoutX="1.0" prefHeight="17.0" prefWidth="609.0" text="Create a New Catring Order">
+                  <Label alignment="CENTER" layoutX="2.0" layoutY="-1.0" prefHeight="17.0" prefWidth="609.0" text="Confirm Delivery Order">
                      <font>
                         <Font name="Gabriola" size="21.0" />
                      </font>
                   </Label>
-                  <Line endX="183.5" layoutX="247.0" layoutY="26.0" startX="-100.0" />
-                  <Text layoutX="33.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Order" wrappingWidth="87.13671875" />
-                  <TextField fx:id="fxidOrderIdTextField" layoutX="108.0" layoutY="51.0" prefHeight="25.0" prefWidth="197.0" promptText="order id" style="-fx-background-color: white;" />
-                  <Button layoutX="375.0" layoutY="51.0" mnemonicParsing="false" onAction="#checkOrderButton" prefHeight="25.0" prefWidth="127.0" text="check Order">
+                  <Line endX="183.5" layoutX="260.0" layoutY="23.0" startX="-100.0" />
+                  <Text fill="#07b5ff" layoutX="6.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Delivery Information:" wrappingWidth="166.13671875">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="fxidOrderIdTextField" layoutX="257.0" layoutY="77.0" prefHeight="25.0" prefWidth="197.0" promptText="order id" style="-fx-background-color: white;" />
+                  <Button layoutX="163.0" layoutY="175.0" mnemonicParsing="false" onAction="#ConfirmDeliveryOrderButton" prefHeight="25.0" prefWidth="230.0" text="Confirm">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <AnchorPane fx:id="fxidHiddenAnochorPanel" layoutX="14.0" layoutY="116.0" prefHeight="341.0" prefWidth="583.0" style="-fx-background-color: aqua; -fx-background-radius: 50;">
+                  <TextField fx:id="fxidReceiverNameTextField" layoutX="257.0" layoutY="112.0" prefHeight="25.0" prefWidth="197.0" promptText="receiver name" style="-fx-background-color: white;" />
+                  <Label layoutX="166.0" layoutY="82.0" prefHeight="17.0" prefWidth="90.0" text="Enter Order ID" />
+                  <Label layoutX="135.0" layoutY="117.0" prefHeight="17.0" prefWidth="121.0" text="Enter Receiver Name" />
+                  <AnchorPane layoutX="35.0" layoutY="237.0" prefHeight="220.0" prefWidth="552.0" style="-fx-background-color: yellow; -fx-background-radius: 30;">
                      <children>
-                        <Text fx:id="fxidFlightNumber" layoutX="108.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flight Number" wrappingWidth="412.13671875">
+                        <Label layoutX="192.0" layoutY="11.0" prefHeight="20.0" prefWidth="136.0" text="Confirmation Details">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="fxidFlightDate" layoutX="108.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flight Date" wrappingWidth="429.13671875">
+                        </Label>
+                        <Line endX="100.0" layoutX="244.0" layoutY="28.0" startX="-100.0" />
+                        <Label fx:id="fxidConfirmationReceipIDLabel" layoutX="74.0" layoutY="44.0" prefHeight="20.0" prefWidth="451.0" text="Receipt ID:">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="fxidDepartureTime" layoutX="108.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Departure Time" wrappingWidth="429.1367187499999">
+                        </Label>
+                        <Label fx:id="fxidConfirmationOrderIDLabel" layoutX="84.0" layoutY="65.0" prefHeight="20.0" prefWidth="421.0" text="Order ID:">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="fxidDeliveryLocation" layoutX="108.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Location" wrappingWidth="429.1367187499999">
+                        </Label>
+                        <Label fx:id="fxidConfirmationReceiverNameLabel" layoutX="45.0" layoutY="86.0" prefHeight="17.0" prefWidth="470.0" text="Receiver Name:">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="fxidDeliveryTime" layoutX="108.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Time" wrappingWidth="429.1367187499999">
+                        </Label>
+                        <Label fx:id="fxidConfirmationConfirmationDateLabell" layoutX="25.0" layoutY="107.0" prefHeight="20.0" prefWidth="480.0" text="Confirmation Date: ">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Button layoutX="100.0" layoutY="136.0" mnemonicParsing="false" onAction="#cancleTheOrderButton" prefHeight="25.0" prefWidth="353.0" style="-fx-background-radius: 5;" text="Cancle Order">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
+                        </Label>
                      </children>
                   </AnchorPane>
                </children>

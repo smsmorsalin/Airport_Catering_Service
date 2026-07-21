@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerName">
+    <children>
+        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#sideBarCreateCateringOrderButton" prefHeight="42.0" prefWidth="174.0" text="Create Catering Order" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" onAction="#sideBarModifyOrderButton" prefHeight="42.0" prefWidth="174.0" text="Modify Order" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" onAction="#sideBarCancelOrderButton" prefHeight="42.0" prefWidth="174.0" text="Cancel Order" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" onAction="#sideBarFlightDelayButton" prefHeight="42.0" prefWidth="174.0" text="Flight delay" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" onAction="#sideBarTrackOrderButton" prefHeight="42.0" prefWidth="174.0" text="Track Order" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" onAction="#sideBarConfirmDeliveryButton" prefHeight="42.0" prefWidth="174.0" text="Confirm Delivery" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: pink;" text="Pay Bill" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+                <Button mnemonicParsing="false" onAction="#sideBarOrderHistoryButton" prefHeight="42.0" prefWidth="174.0" text="Order History" textOverrun="CENTER_ELLIPSIS">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin></Button>
+            </children>
+        </VBox>
+        <Button layoutY="3.0" mnemonicParsing="false" onAction="#homeButtonAirportCateringService" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant>
+                            <color>
+                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
+                            </color>
+                        </Light.Distant>
+                    </light>
+                </Lighting>
+            </effect>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <VBox fillWidth="false" layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
+            <children>
+                <AnchorPane prefHeight="587.0" prefWidth="596.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="2.0" layoutY="-1.0" prefHeight="17.0" prefWidth="609.0" text="Pay Bill">
+                            <font>
+                                <Font name="Gabriola" size="21.0" />
+                            </font>
+                        </Label>
+                        <Line endX="183.5" layoutX="260.0" layoutY="23.0" startX="-100.0" />
+                        <TextField fx:id="fxidOrderIdTextField" layoutX="111.0" layoutY="34.0" prefHeight="25.0" prefWidth="197.0" promptText="order id" style="-fx-background-color: white;" />
+                        <Button layoutX="393.0" layoutY="34.0" mnemonicParsing="false" onAction="#checkBillButton" prefHeight="25.0" prefWidth="111.0" text="check Bill">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Label layoutX="17.0" layoutY="38.0" prefHeight="17.0" prefWidth="90.0" text="Enter Order ID" />
+                  <AnchorPane fx:id="fxidHiddenMainAnchorPane" layoutY="77.0" prefHeight="512.0" prefWidth="621.0">
+                     <children>
+                              <AnchorPane layoutX="34.0" layoutY="10.0" prefHeight="274.0" prefWidth="552.0" style="-fx-background-color: yellow; -fx-background-radius: 30;">
+                                  <children>
+                                      <Label layoutX="205.0" layoutY="5.0" prefHeight="20.0" prefWidth="136.0" text="Bill Information">
+                                          <font>
+                                              <Font size="14.0" />
+                                          </font>
+                                      </Label>
+                                      <Line endX="100.0" layoutX="248.0" layoutY="25.0" startX="-100.0" />
+                                      <Label fx:id="fxidInvoiceIdLabel" layoutX="46.0" layoutY="29.0" prefHeight="20.0" prefWidth="451.0" text="Invoice ID:">
+                                          <font>
+                                              <Font size="14.0" />
+                                          </font>
+                                      </Label>
+                              <AnchorPane layoutX="69.0" layoutY="58.0" prefHeight="148.0" prefWidth="400.0" style="-fx-background-color: red; -fx-background-radius: 50;">
+                                 <children>
+                                    <Label layoutX="134.0" layoutY="11.0" prefHeight="17.0" prefWidth="124.0" text="Payable Amount BDT" />
+                                    <Label fx:id="fxidPayableAmountLabel" alignment="CENTER" layoutX="22.0" layoutY="27.0" prefHeight="94.0" prefWidth="356.0" text="0" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Black" size="49.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <Button layoutX="184.0" layoutY="218.0" mnemonicParsing="false" onAction="#goForPaymentButton" prefHeight="25.0" prefWidth="165.0" text="Go for Payment">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                                  </children>
+                              </AnchorPane>
+                        <AnchorPane fx:id="fxidHiddenSubAnchorPane" layoutX="14.0" layoutY="292.0" prefHeight="200.0" prefWidth="589.0" style="-fx-background-color: white; -fx-background-radius: 100;">
+                           <children>
+                              <Label layoutX="95.0" layoutY="35.0" prefHeight="19.0" prefWidth="148.0" text="Select Payment Method: ">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="fxidPaymentMethodComboBox" layoutX="243.0" layoutY="32.0" prefHeight="25.0" prefWidth="201.0" />
+                              <Label layoutX="117.0" layoutY="75.0" prefHeight="19.0" prefWidth="124.0" text="Enter Transaction ID:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="fxidTransactionIdTextField" layoutX="244.0" layoutY="72.0" prefHeight="25.0" prefWidth="201.0" promptText="trxID" />
+                              <Button layoutX="189.0" layoutY="132.0" mnemonicParsing="false" onAction="#payBillButton" prefHeight="25.0" prefWidth="159.0" text="Pay Bill" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </children></VBox>
+        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
+    </children>
+</AnchorPane>
