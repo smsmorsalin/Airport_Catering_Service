@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4677097f-20e2-4d5e-b3e0-15ab9190ee4c" name="Changes" comment="unknown error">
-      <change afterPath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/user/FinanceAndBillingManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/CalculateCost_FinanceAndBillingManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/FinancialReports_FinanceAndBillingManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/GenerateInvoice_FinanceAndBillingManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/OutstandingPayments_FinanceAndBillingManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/ProcessRefund_FinanceAndBillingManagerView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RecordPayment_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModification_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellation_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightDelayRequest_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/GenerateReports_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/RegisterComplaint_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ResolveComplaint_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ServiceUpdates_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/TrackComplaint_CustomerSupportOfficerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/CalculateCost_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/CalculateCost_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/FinancialReports_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/FinancialReports_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/GenerateInvoice_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/GenerateInvoice_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/OutstandingPayments_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/OutstandingPayments_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/ProcessRefund_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/ProcessRefund_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RecordPayment_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RecordPayment_FinanceAndBillingManagerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/dashboard_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/dashboard_FinanceAndBillingManagerView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
