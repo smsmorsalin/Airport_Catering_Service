@@ -21,7 +21,7 @@
             <children>
                 <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Dashboard" textOverrun="CENTER_ELLIPSIS">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Arial" size="15.0" />
                     </font>
                 </Button>
                 <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px; -fx-background-color: #0F6BFF; -fx-background-color: #084FC7;" text="Register Complaint" textOverrun="CENTER_ELLIPSIS">
@@ -54,16 +54,16 @@
                         <Font size="15.0" />
                     </font>
                 </Button>
-                <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Service Updates" textOverrun="CENTER_ELLIPSIS">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Button>
-                <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Generate Reports" textOverrun="CENTER_ELLIPSIS">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Button>
+            <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Service Updates" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Generate Reports" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -95,84 +95,73 @@
                         <Font name="Gabriola" size="18.0" />
                     </font>
                 </Label>
-                <AnchorPane prefHeight="734.0" prefWidth="708.0">
-                    <children>
-                        <AnchorPane layoutX="6.0" prefHeight="721.0" prefWidth="714.0" style="-fx-background-color: white; -fx-background-radius: 25;">
-                            <children>
-                                <Label layoutX="173.0" layoutY="-93.0" />
-                                <Label layoutX="58.0" layoutY="50.0" prefHeight="30.0" prefWidth="230.0" text="Register Complaint">
-                                    <font>
-                                        <Font size="24.0" />
-                                    </font>
-                                </Label>
-                                <Label layoutX="61.0" layoutY="87.0" text="Register a new customer Complaint" />
-                                <Label layoutX="22.0" layoutY="216.0">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                                <AnchorPane layoutX="44.0" layoutY="119.0" prefHeight="579.0" prefWidth="626.0" style="-fx-background-color: yellow; -fx-background-radius: 25;">
-                                    <children>
-                                        <Label layoutX="26.0" layoutY="58.0" text="Airline Name ">
-                                            <font>
-                                                <Font size="15.0" />
-                                            </font>
-                                        </Label>
-                                        <ComboBox layoutX="26.0" layoutY="86.0" prefHeight="35.0" prefWidth="346.0" />
-                                        <Button layoutX="410.0" layoutY="479.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="162.0" style="-fx-background-radius: 10px; -fx-background-color: Navy Blue;" text="Record Payment" textFill="#fcf6f6" textOverrun="CENTER_ELLIPSIS">
-                                            <font>
-                                                <Font size="15.0" />
-                                            </font>
-                                        </Button>
-                                        <Button layoutX="133.0" layoutY="526.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 10px;" text="Reset" textOverrun="CENTER_ELLIPSIS">
-                                            <font>
-                                                <Font size="14.0" />
-                                            </font>
-                                        </Button>
-                                        <Button layoutX="26.0" layoutY="526.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 10px;" text="Cancel" textOverrun="CENTER_ELLIPSIS">
-                                            <font>
-                                                <Font size="14.0" />
-                                            </font>
-                                        </Button>
-                                        <Label layoutX="18.0" layoutY="14.0" prefHeight="30.0" prefWidth="230.0" text="Complaint information">
-                                            <font>
-                                                <Font size="20.0" />
-                                            </font>
-                                        </Label>
-                                        <Label layoutX="26.0" layoutY="134.0" text="Order ID">
-                                            <font>
-                                                <Font size="15.0" />
-                                            </font>
-                                        </Label>
-                                        <TextField layoutX="26.0" layoutY="162.0" prefHeight="35.0" prefWidth="346.0" />
-                                        <Label layoutX="26.0" layoutY="210.0" text="Complaint Catagory">
-                                            <font>
-                                                <Font size="15.0" />
-                                            </font>
-                                        </Label>
-                                        <ComboBox layoutX="26.0" layoutY="232.0" prefHeight="35.0" prefWidth="346.0" />
-                                        <Label layoutX="26.0" layoutY="286.0" text="Complaint Description">
-                                            <font>
-                                                <Font size="15.0" />
-                                            </font>
-                                        </Label>
-                                        <TextField alignment="TOP_LEFT" layoutX="26.0" layoutY="314.0" prefHeight="136.0" prefWidth="346.0" promptText="Enter detailed description of the complaint..." />
-                                        <Label layoutX="379.0" layoutY="315.0" text="Priority Level">
-                                            <font>
-                                                <Font size="15.0" />
-                                            </font>
-                                        </Label>
-                                        <CheckBox layoutX="393.0" layoutY="345.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="98.0" text="LOW" />
-                                        <CheckBox layoutX="502.0" layoutY="391.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="98.0" text="CRITICAL" />
-                                        <CheckBox layoutX="393.0" layoutY="391.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="98.0" text="HIGH" />
-                                        <CheckBox layoutX="502.0" layoutY="345.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="98.0" text="MEDIUM" />
-                                    </children>
-                                </AnchorPane>
-                            </children>
-                        </AnchorPane>
-                    </children></AnchorPane>
+                <AnchorPane prefHeight="734.0" prefWidth="716.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutX="38.0" layoutY="97.0" prefHeight="584.0" prefWidth="634.0" style="-fx-background-color: yellow; -fx-background-radius: 25;">
+                     <children>
+                        <Label layoutX="36.0" layoutY="73.0" text="Airline Name ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ComboBox layoutX="36.0" layoutY="101.0" prefHeight="35.0" prefWidth="346.0" />
+                        <Button layoutX="420.0" layoutY="494.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="162.0" style="-fx-background-radius: 10px; -fx-background-color: Navy Blue;" text="Record Payment" textFill="#fcf6f6" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="143.0" layoutY="541.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 10px;" text="Reset" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="36.0" layoutY="541.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-radius: 10px;" text="Cancel" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="28.0" layoutY="29.0" prefHeight="30.0" prefWidth="230.0" text="Complaint information">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="36.0" layoutY="149.0" text="Order ID">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="36.0" layoutY="177.0" prefHeight="35.0" prefWidth="346.0" />
+                        <Label layoutX="36.0" layoutY="225.0" text="Complaint Catagory">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ComboBox layoutX="36.0" layoutY="247.0" prefHeight="35.0" prefWidth="346.0" />
+                        <Label layoutX="36.0" layoutY="301.0" text="Complaint Description">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField alignment="TOP_LEFT" layoutX="36.0" layoutY="329.0" prefHeight="136.0" prefWidth="346.0" promptText="Enter detailed description of the complaint..." />
+                        <Label layoutX="389.0" layoutY="330.0" text="Priority Level">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <CheckBox layoutX="403.0" layoutY="360.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="98.0" text="LOW" />
+                        <CheckBox layoutX="512.0" layoutY="406.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="98.0" text="CRITICAL" />
+                        <CheckBox layoutX="403.0" layoutY="406.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="98.0" text="HIGH" />
+                        <CheckBox layoutX="512.0" layoutY="360.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="98.0" text="MEDIUM" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="56.0" layoutY="29.0" prefHeight="30.0" prefWidth="230.0" text="Register Complaint">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="56.0" layoutY="70.0" text="Register a new customer Complaint" />
+               </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
     </children>
 </AnchorPane>
-
