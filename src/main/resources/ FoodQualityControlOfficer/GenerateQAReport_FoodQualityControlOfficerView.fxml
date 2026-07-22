@@ -61,10 +61,19 @@
                <children>
                   <Label layoutX="50.0" layoutY="118.0" text="Start Date" />
                   <Label layoutX="50.0" layoutY="158.0" text="End Date" />
-                  <Label layoutX="50.0" layoutY="90.0" text="Report Type" />
+                  <Label fx:id="reportTypeComboBox" layoutX="50.0" layoutY="90.0" text="Report Type" />
                   <ComboBox layoutX="154.0" layoutY="86.0" prefWidth="150.0" />
-                  <TextField layoutX="155.0" layoutY="123.0" />
-                  <TextField layoutX="155.0" layoutY="162.0" />
+                  <TextField fx:id="startDatePicker" layoutX="155.0" layoutY="123.0" />
+                  <TextField fx:id="endDatePicker" layoutX="155.0" layoutY="162.0" />
+                  <AnchorPane layoutX="15.0" layoutY="231.0" prefHeight="200.0" prefWidth="487.0" style="-fx-background-color: yellow;">
+                     <children>
+                        <Label layoutX="45.0" layoutY="27.0" text="Total Batches Inspected" />
+                        <Label layoutX="45.0" layoutY="54.0" text="Total Approved Batches" />
+                        <Label layoutX="45.0" layoutY="82.0" text="Total Rejected Batches" />
+                        <Label layoutX="48.0" layoutY="107.0" text="Inspector Performance Summary" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="388.0" layoutY="86.0" mnemonicParsing="false" onAction="#confirmOnAction" text="Confirm" />
                </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
