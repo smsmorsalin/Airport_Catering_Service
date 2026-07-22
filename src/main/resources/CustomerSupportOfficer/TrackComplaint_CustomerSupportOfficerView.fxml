@@ -1,14 +1,450 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ProgressBar?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+
+<AnchorPane prefHeight="758.0" prefWidth="898.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="CONTROLLER_NAME">
+
+
+    <children>
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+
+        <VBox layoutY="49.0"
+              prefHeight="706.0"
+              prefWidth="175.0"
+              spacing="5.0">
+
+
+            <children>
+
+
+                <Button text="Dashboard"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50px;"/>
+
+
+                <Button text="Register Complaint"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50px;"/>
+
+
+                <Button text="Track Complaint"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50px;
+        -fx-background-color:#0F6BFF;"
+                        textFill="white"/>
+
+
+                <Button text="Resolve Complaint"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50px;"/>
+
+
+                <Button text="Emergency Modify"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50px;"/>
+
+
+                <Button text="Flight Delay Request"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50px;"/>
+
+
+                <Button text="Flight Cancellation"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50px;"/>
+
+
+                <Button text="Service Updates"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50px;"/>
+
+
+                <Button text="Generate Reports"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50px;"/>
+
+
+            </children>
+
+        </VBox>
+
+
+
+        <!-- APPLICATION TITLE -->
+
+
+        <Button layoutY="3"
+                prefWidth="175"
+                prefHeight="29"
+                text="Airport Catering Service"
+                style="-fx-background-color:pink;
+        -fx-background-radius:5;">
+
+
+            <font>
+
+                <Font name="Arial Bold" size="13"/>
+
+            </font>
+
+        </Button>
+
+
+
+
+
+        <!-- ================= MAIN AREA ================= -->
+
+
+        <VBox layoutX="175"
+              prefWidth="723"
+              prefHeight="758"
+              style="-fx-background-color:silver;">
+
+
+
+            <children>
+
+
+                <Label text="welcome Username"
+                       prefWidth="609"
+                       alignment="CENTER">
+
+
+                    <font>
+
+                        <Font name="Gabriola" size="18"/>
+
+                    </font>
+
+
+                </Label>
+
+
+
+
+
+                <AnchorPane prefHeight="734"
+                            prefWidth="716"
+                            style="-fx-background-color:white;">
+
+
+                    <children>
+
+
+
+
+
+                        <!-- PAGE TITLE -->
+
+
+                        <Label layoutX="56"
+                               layoutY="29"
+                               text="Track Complaint">
+
+
+                            <font>
+
+                                <Font size="24"/>
+
+                            </font>
+
+
+                        </Label>
+
+
+
+                        <Label layoutX="56"
+                               layoutY="70"
+                               text="Search and view complaint status"/>
+
+
+
+
+
+                        <!-- SEARCH BOX -->
+
+
+                        <AnchorPane layoutX="38"
+                                    layoutY="110"
+                                    prefWidth="634"
+                                    prefHeight="120"
+                                    style="-fx-background-color:#F8FAFC;
+            -fx-background-radius:20;">
+
+
+                            <children>
+
+
+
+                                <Label layoutX="25"
+                                       layoutY="20"
+                                       text="Search Complaint">
+
+
+                                    <font>
+
+                                        <Font size="20"/>
+
+                                    </font>
+
+
+                                </Label>
+
+
+
+                                <Label layoutX="25"
+                                       layoutY="55"
+                                       text="Complaint ID">
+
+
+                                    <font>
+
+                                        <Font size="15"/>
+
+                                    </font>
+
+
+                                </Label>
+
+
+
+                                <TextField fx:id="complaintIdField"
+                                           layoutX="25"
+                                           layoutY="80"
+                                           prefWidth="350"
+                                           prefHeight="35"
+                                           promptText="Enter Complaint ID"/>
+
+
+
+
+                                <Button fx:id="searchButton"
+                                        layoutX="410"
+                                        layoutY="80"
+                                        prefWidth="150"
+                                        prefHeight="35"
+                                        text="Search Complaint"
+                                        style="-fx-background-color:#0F6BFF;
+        -fx-text-fill:white;
+        -fx-background-radius:10;"/>
+
+
+
+                            </children>
+
+                        </AnchorPane>
+
+
+
+
+
+
+                        <!-- COMPLAINT DETAILS -->
+
+
+                        <AnchorPane layoutX="38"
+                                    layoutY="250"
+                                    prefHeight="330"
+                                    prefWidth="634"
+                                    style="-fx-background-color:#EAF2FF;
+            -fx-background-radius:25;">
+
+
+                            <children>
+
+
+                                <Label layoutX="30"
+                                       layoutY="25"
+                                       text="Complaint Details">
+
+
+                                    <font>
+
+                                        <Font size="20"/>
+
+                                    </font>
+
+
+                                </Label>
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="75"
+                                       text="Complaint ID"/>
+
+                                <Label fx:id="complaintIdLabel"
+                                       layoutX="220"
+                                       layoutY="75"
+                                       text="CMP-2024-0123"/>
+
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="110"
+                                       text="Airline Name"/>
+
+
+                                <Label fx:id="airlineLabel"
+                                       layoutX="220"
+                                       layoutY="110"
+                                       text="SkyHigh Airlines"/>
+
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="145"
+                                       text="Order ID"/>
+
+
+                                <Label fx:id="orderLabel"
+                                       layoutX="220"
+                                       layoutY="145"
+                                       text="ORD-2024-0101"/>
+
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="180"
+                                       text="Complaint Category"/>
+
+
+                                <Label fx:id="categoryLabel"
+                                       layoutX="220"
+                                       layoutY="180"
+                                       text="Food Quality"/>
+
+
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="215"
+                                       text="Assigned Department"/>
+
+
+                                <Label fx:id="departmentLabel"
+                                       layoutX="220"
+                                       layoutY="215"
+                                       text="Quality Assurance"/>
+
+
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="250"
+                                       text="Current Status"/>
+
+
+                                <Label fx:id="statusLabel"
+                                       layoutX="220"
+                                       layoutY="250"
+                                       text="In Progress"
+                                       style="-fx-text-fill:#2563EB;"/>
+
+
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="285"
+                                       text="Resolution Progress"/>
+
+
+                                <ProgressBar fx:id="progressBar"
+                                             layoutX="220"
+                                             layoutY="285"
+                                             prefWidth="250"
+                                             progress="0.6"/>
+
+
+
+
+                            </children>
+
+
+                        </AnchorPane>
+
+
+
+
+
+
+
+                        <!-- BUTTONS -->
+
+
+                        <Button layoutX="38"
+                                layoutY="610"
+                                prefWidth="150"
+                                prefHeight="40"
+                                text="Resolve Complaint"
+                                style="-fx-background-color:#0F6BFF;
+        -fx-text-fill:white;
+        -fx-background-radius:10;"/>
+
+
+
+
+                        <Button layoutX="210"
+                                layoutY="610"
+                                prefWidth="130"
+                                prefHeight="40"
+                                text="Print Status"
+                                style="-fx-background-radius:10;"/>
+
+
+
+                        <Button layoutX="365"
+                                layoutY="610"
+                                prefWidth="130"
+                                prefHeight="40"
+                                text="Back"
+                                style="-fx-background-radius:10;"/>
+
+
+
+
+                    </children>
+
+
+                </AnchorPane>
+
+
+            </children>
+
+
+        </VBox>
+
+
+    </children>
+
 
 </AnchorPane>
