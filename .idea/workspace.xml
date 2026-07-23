@@ -4,6 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/inventoryStatus_CateringOperationsManagerView.fxml" afterDir="false" />
+    <list default="true" id="4677097f-20e2-4d5e-b3e0-15ab9190ee4c" name="Changes" comment="unknown error">
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/Headchef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/DisplayCookingProgress.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/DisplayPreparationProgress.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/DisplayProductionTaskInformation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/DisplayUpdateConfirmation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/HandleRejectedFoodBatches.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/ManageMealPreparation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/ViewKitchenPerformanceReport.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /AcceptDeliveryAssignment.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /CollectPackagedCateringOrders.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /ConfirmAircraftDelivery.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /DisplayDepartureConfirmation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /ReportDeliveryProblems.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /StartDeliveryTrip.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /ViewAssignedDeliveryTasks.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /viewDeliveryHistory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Headchef/ProductionTaskView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Headchef/ProductionTaskView.fxml" afterDir="false" />
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTasks_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTasks_KitchenProductionManagerView.fxml" afterDir="false" />
@@ -12,6 +34,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,8 +58,8 @@
   }
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
+    &quot;associatedIndex&quot;: 7
+    }</component>
   <component name="ProjectId" id="3GpedlUA9Dw7O7qeNlxSVSDPNma" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -53,6 +82,18 @@
       <option name="presentableId" value="Default" />
       <updated>1784673028203</updated>
     </task>
+    <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <option name="closed" value="true" />
+      <created>1784811645917</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1784811645918</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
