@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/inventoryStatus_CateringOperationsManagerView.fxml" afterDir="false" />
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into sihab&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/approveOrRejectOrder_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/approveOrRejectOrder_CateringOperationsManagerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboard_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboard_CateringOperationsManagerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/monitorProduction_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/monitorProduction_CateringOperationsManagerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/reviewOrder_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/reviewOrder_CateringOperationsManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruck_DispatchCoordinatorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruck_DispatchCoordinatorView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/EmergencyDelivery_DispatchCoordinatorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/EmergencyDelivery_DispatchCoordinatorView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/GenerateDispatchReport_DispatchCoordinatorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/GenerateDispatchReport_DispatchCoordinatorView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ManageDeliveryDelays_DispatchCoordinatorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ManageDeliveryDelays_DispatchCoordinatorView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveries_DispatchCoordinatorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveries_DispatchCoordinatorView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/PackageOrder_DispatchCoordinatorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/PackageOrder_DispatchCoordinatorView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ReceiveDispatchRequest_DispatchCooedinatorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ReceiveDispatchRequest_DispatchCooedinatorView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ScheduleDelivery_DispatchCoordinatorView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ScheduleDelivery_DispatchCoordinatorView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,18 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Saif-kaif&quot;
-    }
-    }</component>
-  <component name="GithubPullRequestsUISettings">{
-    &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
-    &quot;accountId&quot;: &quot;09b4b316-9114-4bc1-8e76-96925cab0536&quot;
-    }
-    }</component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Saif-kaif"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
+    "accountId": "ca804a1f-f117-4e10-a38a-3edf62ca5ddc"
+  }
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -119,20 +122,28 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "morsalin",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "sihab",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
       </set>
     </attachedChunks>
   </component>
@@ -143,6 +154,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784673028203</updated>
+      <workItem from="1784823752384" duration="12554000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
       <option name="closed" value="true" />
@@ -157,5 +169,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Sihab" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sihab" />
   </component>
 </project>
