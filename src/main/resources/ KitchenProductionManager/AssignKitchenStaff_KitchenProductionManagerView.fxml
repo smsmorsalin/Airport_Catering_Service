@@ -71,7 +71,7 @@
                         <TableColumn fx:id="costTableView" minWidth="0.0" prefWidth="102.6666259765625" text="Cost" />
                     </columns>
                   </TableView>
-                  <Button fx:id="searchOnAction" layoutX="417.0" layoutY="154.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search" />
+                  <Button layoutX="417.0" layoutY="154.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search" />
                   <Button layoutX="429.0" layoutY="441.0" mnemonicParsing="false" onAction="#confirmOnAction" text="Confirm" />
                   <Label layoutX="189.0" layoutY="14.0" text="Assign Kitchen Stuff ">
                      <font>
