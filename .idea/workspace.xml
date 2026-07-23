@@ -13,6 +13,30 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboard_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboard_CateringOperationsManagerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/monitorProduction_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/monitorProduction_CateringOperationsManagerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/reviewOrder_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/reviewOrder_CateringOperationsManagerView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/inventoryStatus_CateringOperationsManagerView.fxml" afterDir="false" />
+    <list default="true" id="4677097f-20e2-4d5e-b3e0-15ab9190ee4c" name="Changes" comment="unknown error">
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/Headchef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/DisplayCookingProgress.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/DisplayPreparationProgress.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/DisplayProductionTaskInformation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/DisplayUpdateConfirmation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/HandleRejectedFoodBatches.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/ManageMealPreparation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Headchef/ViewKitchenPerformanceReport.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /AcceptDeliveryAssignment.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /CollectPackagedCateringOrders.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /ConfirmAircraftDelivery.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /DisplayDepartureConfirmation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /ReportDeliveryProblems.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /StartDeliveryTrip.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /ViewAssignedDeliveryTasks.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator /viewDeliveryHistory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Headchef/ProductionTaskView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Headchef/ProductionTaskView.fxml" afterDir="false" />
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTasks_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTasks_KitchenProductionManagerView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +134,9 @@
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
+  <component name="ProjectColorInfo">{
+    &quot;associatedIndex&quot;: 7
+    }</component>
   <component name="ProjectId" id="3GpedlUA9Dw7O7qeNlxSVSDPNma" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -138,6 +165,15 @@
       </set>
     </attachedChunks>
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;saif&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="" />

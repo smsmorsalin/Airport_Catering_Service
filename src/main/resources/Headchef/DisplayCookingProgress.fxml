@@ -20,12 +20,13 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Search " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="View details " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Search Task" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="View Progress" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Refresh Progress" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Log out " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -59,23 +60,20 @@
                 </Label>
                 <AnchorPane prefHeight="566.0" prefWidth="596.0">
                <children>
-                  <TextField layoutX="123.0" layoutY="31.0" />
-                  <TextField layoutX="410.0" layoutY="30.0" />
-                  <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production task ID:" />
-                  <Text layoutX="346.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID:" />
-                  <TableView layoutX="-4.0" layoutY="205.0" prefHeight="360.0" prefWidth="596.0">
+                  <Text layoutX="76.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production Task ID" />
+                  <TextField layoutX="193.0" layoutY="17.0" />
+                  <TableView layoutX="-4.0" layoutY="124.0" prefHeight="440.0" prefWidth="596.0">
                     <columns>
-                      <TableColumn prefWidth="68.0" text="Task ID" />
-                      <TableColumn prefWidth="82.0" text="Order ID" />
-                        <TableColumn prefWidth="90.0" text="Airline Name" />
-                        <TableColumn prefWidth="87.0" text="Fliight Number" />
-                        <TableColumn prefWidth="89.0" text="Meal Type" />
-                        <TableColumn prefWidth="73.0" text="Quantity " />
-                        <TableColumn prefWidth="106.0" text="Completion Time" />
+                      <TableColumn prefWidth="141.0" text="Task ID" />
+                      <TableColumn prefWidth="110.0" text="Meal Type" />
+                        <TableColumn prefWidth="104.0" text="Completion %" />
+                        <TableColumn prefWidth="81.0" text="Stage" />
+                        <TableColumn prefWidth="156.0" text="ETA" />
                     </columns>
                   </TableView>
                </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
+      <AnchorPane prefHeight="42.0" prefWidth="176.0" />
     </children>
 </AnchorPane>
