@@ -2,9 +2,11 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
@@ -20,12 +22,12 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Search " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="View details " textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Search Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="View Rejection Details" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Resubmit Batch" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Log out " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -59,19 +61,19 @@
                 </Label>
                 <AnchorPane prefHeight="566.0" prefWidth="596.0">
                <children>
-                  <TextField layoutX="123.0" layoutY="31.0" />
-                  <TextField layoutX="410.0" layoutY="30.0" />
-                  <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production task ID:" />
-                  <Text layoutX="346.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID:" />
-                  <TableView layoutX="-4.0" layoutY="205.0" prefHeight="360.0" prefWidth="596.0">
+                  <TextField layoutX="150.0" layoutY="14.0" />
+                  <Text layoutX="87.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Batch ID" />
+                  <ComboBox layoutX="424.0" layoutY="14.0" prefWidth="150.0" />
+                  <TextArea layoutX="382.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Text layoutX="322.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rejection Reason" />
+                  <Text layoutX="275.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Corrective Action" />
+                  <TableView layoutX="-3.0" layoutY="264.0" prefHeight="302.0" prefWidth="596.0">
                     <columns>
-                      <TableColumn prefWidth="68.0" text="Task ID" />
-                      <TableColumn prefWidth="82.0" text="Order ID" />
-                        <TableColumn prefWidth="90.0" text="Airline Name" />
-                        <TableColumn prefWidth="87.0" text="Fliight Number" />
-                        <TableColumn prefWidth="89.0" text="Meal Type" />
-                        <TableColumn prefWidth="73.0" text="Quantity " />
-                        <TableColumn prefWidth="106.0" text="Completion Time" />
+                      <TableColumn prefWidth="111.0" text="Batch ID" />
+                      <TableColumn prefWidth="96.0" text="Meal Name" />
+                        <TableColumn prefWidth="129.0" text="Rejection Reason" />
+                        <TableColumn prefWidth="102.0" text="Rework Status" />
+                        <TableColumn prefWidth="157.0" text="Assigned Team" />
                     </columns>
                   </TableView>
                </children></AnchorPane>
