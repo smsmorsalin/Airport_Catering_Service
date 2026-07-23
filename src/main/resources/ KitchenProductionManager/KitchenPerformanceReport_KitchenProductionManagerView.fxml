@@ -57,22 +57,68 @@
                         <Font name="Gabriola" size="18.0" />
                     </font>
                 </Label>
-                <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: plum;">
+                <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: darkBlue;">
                <children>
-                  <Label layoutX="96.0" layoutY="78.0" text="Report Type" />
-                  <Label layoutX="96.0" layoutY="109.0" text="Start  Date" />
-                  <Label layoutX="100.0" layoutY="138.0" text="End  Date" />
-                  <ComboBox fx:id="reportTypeComboBox" layoutX="200.0" layoutY="74.0" prefWidth="150.0" />
-                  <Button layoutX="431.0" layoutY="134.0" mnemonicParsing="false" onAction="#confirmOnAction" text="Confirm" />
-                  <DatePicker fx:id="startDatePicker" layoutX="188.0" layoutY="105.0" />
-                  <DatePicker fx:id="endDatePicker" layoutX="188.0" layoutY="146.0" />
-                  <AnchorPane layoutX="6.0" layoutY="189.0" prefHeight="200.0" prefWidth="410.0" style="-fx-background-color: yellow;">
+                  <Label layoutX="16.0" layoutY="58.0" text="Report Type" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="20.0" layoutY="97.0" text="Start  Date" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="18.0" layoutY="138.0" text="End  Date" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Label>
+                  <ComboBox fx:id="reportTypeComboBox" layoutX="104.0" layoutY="54.0" prefWidth="150.0" />
+                  <Button layoutX="19.0" layoutY="181.0" mnemonicParsing="false" onAction="#confirmOnAction" style="-fx-background-color: royalBlue;" text="Generate" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Button>
+                  <DatePicker fx:id="startDatePicker" layoutX="104.0" layoutY="93.0" />
+                  <DatePicker fx:id="endDatePicker" layoutX="104.0" layoutY="134.0" />
+                  <AnchorPane layoutX="298.0" layoutY="67.0" prefHeight="155.0" prefWidth="291.0" style="-fx-background-color: royalBlue;">
                      <children>
-                        <Label layoutX="41.0" layoutY="23.0" prefHeight="17.0" prefWidth="96.0" text="Total Production Orders" />
-                        <Label layoutX="16.0" layoutY="51.0" prefHeight="17.0" prefWidth="175.0" text="Total Meals Produced" />
-                        <Label layoutX="41.0" layoutY="82.0" prefHeight="17.0" prefWidth="149.0" text="Average Production Time" />
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="96.0" text="Total Production Orders" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="14.0" layoutY="42.0" prefHeight="17.0" prefWidth="126.0" text="Total Meals Produced" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="14.0" layoutY="125.0" prefHeight="17.0" prefWidth="149.0" text="Average Production Time" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="14.0" layoutY="68.0" prefHeight="17.0" prefWidth="126.0" text="Completion Rate" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="100.0" prefHeight="17.0" prefWidth="126.0" text="Delayed Productions" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
+                  <Label layoutX="176.0" layoutY="5.0" text="Generate Production Report" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="213.0" layoutY="181.0" mnemonicParsing="false" onAction="#eportPDFOnAction" style="-fx-background-color: limeGreen;" text="Export PDF" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="357.0" layoutY="253.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="69.0" text="Clear">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
                </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />

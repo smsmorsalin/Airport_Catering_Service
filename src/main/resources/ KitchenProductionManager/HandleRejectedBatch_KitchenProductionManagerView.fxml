@@ -57,20 +57,54 @@
                         <Font name="Gabriola" size="18.0" />
                     </font>
                 </Label>
-                <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: plum;">
+                <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: darkBlue;">
                <children>
-                  <Label layoutX="53.0" layoutY="96.0" text=" Production Order ID" />
-                  <Label layoutX="60.0" layoutY="154.0" text="Completion Notes" />
-                  <TextArea fx:id="completionNotesTextArea" layoutX="217.0" layoutY="128.0" prefHeight="70.0" prefWidth="200.0" />
-                  <TextField fx:id="productionOrderIDTextField" layoutX="224.0" layoutY="83.0" />
-                  <Button layoutX="429.0" layoutY="92.0" mnemonicParsing="false" onAction="#confirmOnAction" text="Confirm" />
-                  <AnchorPane layoutX="35.0" layoutY="210.0" prefHeight="200.0" prefWidth="410.0" style="-fx-background-color: yellow;">
+                  <Label layoutX="24.0" layoutY="75.0" text=" Production Order ID" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="31.0" layoutY="139.0" text="Completion Notes" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Label>
+                  <TextArea fx:id="completionNotesTextArea" layoutX="31.0" layoutY="170.0" prefHeight="96.0" prefWidth="320.0" />
+                  <TextField fx:id="productionOrderIDTextField" layoutX="172.0" layoutY="62.0" />
+                  <Button layoutX="380.0" layoutY="62.0" mnemonicParsing="false" onAction="#searchOrderOnAction" style="-fx-background-color: royalBlue;" text="Search Order" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <AnchorPane layoutX="380.0" layoutY="139.0" prefHeight="147.0" prefWidth="213.0" style="-fx-background-color: royalBlue;">
                      <children>
-                        <Label layoutX="41.0" layoutY="23.0" prefHeight="17.0" prefWidth="96.0" text="Allocation ID" />
-                        <Label layoutX="41.0" layoutY="51.0" prefHeight="17.0" prefWidth="123.0" text="Production Order ID" />
-                        <Label layoutX="41.0" layoutY="82.0" prefHeight="17.0" prefWidth="149.0" text="Approval Time" />
+                        <Label layoutX="11.0" layoutY="13.0" prefHeight="17.0" prefWidth="96.0" text="Allocation ID" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="11.0" layoutY="41.0" prefHeight="17.0" prefWidth="123.0" text="Approved By" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="11.0" layoutY="72.0" prefHeight="17.0" prefWidth="149.0" text="Approval Time" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="11.0" layoutY="102.0" prefHeight="17.0" prefWidth="149.0" text="Approval Status" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
+                  <Label layoutX="121.0" layoutY="14.0" text="Monitor Production Activities" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="31.0" layoutY="341.0" mnemonicParsing="false" onAction="#confirmOnAction" style="-fx-background-color: limeGreen;" text="Approve" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="266.0" layoutY="341.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="69.0" text="Clear" />
                </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
