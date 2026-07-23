@@ -65,7 +65,7 @@
                         <Font size="13.0" />
                      </font>
                   </Label>
-                  <Button fx:id="searchOnAction" layoutX="453.0" layoutY="80.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Check Order" />
+                  <Button layoutX="453.0" layoutY="80.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="25.0" prefWidth="119.0" text="Check Order" />
                   <TextField fx:id="inspectionRequestIDTextField" layoutX="164.0" layoutY="90.0" />
                   <Label layoutX="210.0" layoutY="14.0" text="Show Airport Catering Service ">
                      <font>
@@ -81,7 +81,7 @@
                         <TableColumn fx:id="inspectionStatusTableView" prefWidth="115.33331298828125" text="Inspection Status " />
                     </columns>
                   </TableView>
-                  <Button fx:id="confirmOnAction" layoutX="479.0" layoutY="423.0" mnemonicParsing="false" text="Confirm Order" />
+                  <Button layoutX="479.0" layoutY="423.0" mnemonicParsing="false" onAction="#confirmOnAction" text="Confirm Order" />
                   <Line endX="100.0" layoutX="298.0" layoutY="33.0" startX="-100.0" />
                </children></AnchorPane>
             </children></VBox>
