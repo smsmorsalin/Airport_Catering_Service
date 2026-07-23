@@ -2,9 +2,9 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
@@ -20,12 +20,11 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Search " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="View details " textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Submit Report" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Log out " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -59,22 +58,19 @@
                 </Label>
                 <AnchorPane prefHeight="566.0" prefWidth="596.0">
                <children>
-                  <TextField layoutX="123.0" layoutY="31.0" />
-                  <TextField layoutX="410.0" layoutY="30.0" />
-                  <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production task ID:" />
-                  <Text layoutX="346.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID:" />
-                  <TableView layoutX="-4.0" layoutY="205.0" prefHeight="360.0" prefWidth="596.0">
-                    <columns>
-                      <TableColumn prefWidth="68.0" text="Task ID" />
-                      <TableColumn prefWidth="82.0" text="Order ID" />
-                        <TableColumn prefWidth="90.0" text="Airline Name" />
-                        <TableColumn prefWidth="87.0" text="Fliight Number" />
-                        <TableColumn prefWidth="89.0" text="Meal Type" />
-                        <TableColumn prefWidth="73.0" text="Quantity " />
-                        <TableColumn prefWidth="106.0" text="Completion Time" />
-                    </columns>
-                  </TableView>
+                  <TextField layoutX="107.0" layoutY="14.0" />
+                  <Text layoutX="12.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment ID" />
+                  <ComboBox layoutX="404.0" layoutY="15.0" prefWidth="150.0" />
+                  <ComboBox layoutX="112.0" layoutY="75.0" prefWidth="150.0" />
+                  <Text layoutX="40.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Priority" />
+                  <Text layoutX="318.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problem Type" />
+                  <TextArea layoutX="379.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Text layoutX="263.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problem Description" />
+                  <Label layoutX="70.0" layoutY="134.0" text="Incident ID" />
+                  <Label layoutX="70.0" layoutY="167.0" text="Report Status" />
+                  <Label layoutX="70.0" layoutY="201.0" text="Submission Time" />
                </children></AnchorPane>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
     </children>
