@@ -57,23 +57,67 @@
                         <Font name="Gabriola" size="18.0" />
                     </font>
                 </Label>
-            <AnchorPane prefHeight="538.0" prefWidth="582.0" style="-fx-background-color: plum;">
+            <AnchorPane prefHeight="538.0" prefWidth="582.0" style="-fx-background-color: darkBlue;">
                <children>
-                  <Label layoutX="50.0" layoutY="118.0" text="Start Date" />
-                  <Label layoutX="50.0" layoutY="158.0" text="End Date" />
-                  <Label fx:id="reportTypeComboBox" layoutX="50.0" layoutY="90.0" text="Report Type" />
-                  <ComboBox layoutX="154.0" layoutY="86.0" prefWidth="150.0" />
-                  <TextField fx:id="startDatePicker" layoutX="155.0" layoutY="123.0" />
-                  <TextField fx:id="endDatePicker" layoutX="155.0" layoutY="162.0" />
-                  <AnchorPane layoutX="15.0" layoutY="231.0" prefHeight="200.0" prefWidth="487.0" style="-fx-background-color: yellow;">
+                  <Label layoutX="10.0" layoutY="88.0" text="Start Date" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="10.0" layoutY="128.0" text="End Date" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="reportTypeComboBox" layoutX="10.0" layoutY="60.0" text="Report Type" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Label>
+                  <ComboBox layoutX="114.0" layoutY="56.0" prefWidth="150.0" />
+                  <TextField fx:id="startDatePicker" layoutX="115.0" layoutY="93.0" />
+                  <TextField fx:id="endDatePicker" layoutX="115.0" layoutY="132.0" />
+                  <AnchorPane layoutX="291.0" layoutY="103.0" prefHeight="171.0" prefWidth="251.0" style="-fx-background-color: royalBlue;">
                      <children>
-                        <Label layoutX="45.0" layoutY="27.0" text="Total Batches Inspected" />
-                        <Label layoutX="45.0" layoutY="54.0" text="Total Approved Batches" />
-                        <Label layoutX="45.0" layoutY="82.0" text="Total Rejected Batches" />
-                        <Label layoutX="48.0" layoutY="107.0" text="Inspector Performance Summary" />
+                        <Label layoutX="15.0" layoutY="17.0" text="Total Batches Inspected" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="15.0" layoutY="44.0" text="Total Approved Batches" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="15.0" layoutY="72.0" text="Total Rejected Batches" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="18.0" layoutY="130.0" text="Average Quality Score" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="18.0" layoutY="97.0" text="Compliance Percentage" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="388.0" layoutY="86.0" mnemonicParsing="false" onAction="#confirmOnAction" text="Confirm" />
+                  <Button layoutX="291.0" layoutY="56.0" mnemonicParsing="false" onAction="#generateReportOnAction" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: royalBlue;" text="Generate Report " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Label fx:id="reportTypeComboBox1" layoutX="167.0" layoutY="5.0" text="Generate QA Report " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="14.0" layoutY="189.0" mnemonicParsing="false" onAction="#exportPDFOnAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: limeGreen;" text="Export PDF" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="182.0" layoutY="189.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="80.0" text="Clear">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
                </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />

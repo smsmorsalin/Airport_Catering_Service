@@ -2,8 +2,6 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -60,22 +58,64 @@
                         <Font name="Gabriola" size="18.0" />
                     </font>
                 </Label>
-                <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: plum;">
+                <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: darkBlue;">
                <children>
-                  <Label fx:id="productionOrderIDTextField" layoutX="34.0" layoutY="77.0" prefHeight="17.0" prefWidth="129.0" text="Production Order ID" />
-                  <Button layoutX="424.0" layoutY="150.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search " />
+                  <Label fx:id="productionOrderIDTextField" layoutX="34.0" layoutY="77.0" prefHeight="17.0" prefWidth="129.0" text="Production Order ID" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Label>
+                  <Button layoutX="34.0" layoutY="130.0" mnemonicParsing="false" onAction="#searchOnAction" style="-fx-background-color: royalBlue;" text="Search " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Button>
                   <TextField fx:id="productionOrderIDTextField" layoutX="164.0" layoutY="73.0" />
-                  <Label layoutX="34.0" layoutY="115.0" prefHeight="17.0" prefWidth="129.0" text="Production Status" />
-                  <Label fx:id="productionDatePicker" layoutX="34.0" layoutY="146.0" prefHeight="17.0" prefWidth="129.0" text="Production Date" />
-                  <DatePicker layoutX="168.0" layoutY="151.0" />
-                  <ComboBox fx:id="productionStatusComboBox" layoutX="164.0" layoutY="111.0" prefWidth="150.0" />
-                  <TableView fx:id="mainTableView" layoutX="6.0" layoutY="251.0" prefHeight="200.0" prefWidth="522.0">
+                  <TableView fx:id="mainTableView" layoutX="21.0" layoutY="252.0" prefHeight="237.0" prefWidth="447.0">
                     <columns>
-                      <TableColumn fx:id="productionOrderIDTableView" prefWidth="165.33338928222656" text="Production Order ID" />
-                      <TableColumn fx:id="currentStatusTableView" prefWidth="139.33331298828125" text="Current Status" />
-                        <TableColumn fx:id="estimatedCompletionTimeTableView" prefWidth="215.99996948242188" text="Estimated Completion Time" />
+                      <TableColumn fx:id="productionOrderIDTableView" prefWidth="132.6667022705078" text="Production Order ID" />
+                      <TableColumn fx:id="currentStatusTableView" prefWidth="99.33331298828125" text="Current Status" />
+                        <TableColumn fx:id="estimatedCompletionTimeTableView" prefWidth="114.00003051757812" text="Completion Time" />
+                        <TableColumn fx:id="estimatedCompletionTimeTableView1" prefWidth="100.0" text="Delay Alert" />
                     </columns>
                   </TableView>
+                  <Label fx:id="productionOrderIDTextField1" layoutX="155.0" layoutY="14.0" prefHeight="17.0" prefWidth="203.0" text="Monitor Production Activities" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="390.0" layoutY="47.0" prefHeight="189.0" prefWidth="203.0" style="-fx-background-color: royalBlue;">
+                     <children>
+                        <Label layoutX="21.0" layoutY="13.0" prefHeight="17.0" prefWidth="96.0" text="Airline Name" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="41.0" prefHeight="17.0" prefWidth="123.0" text="Assigned Chef" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="72.0" prefHeight="17.0" prefWidth="149.0" text="Total Quantity" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="105.0" prefHeight="17.0" prefWidth="149.0" text="Completed Quantity" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="134.0" prefHeight="17.0" prefWidth="149.0" text="Remaining Quantity" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="257.0" layoutY="130.0" mnemonicParsing="false" onAction="#refreshOnAction" style="-fx-background-color: limeGreen;" text="Refresh" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Button>
                </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
