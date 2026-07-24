@@ -4,25 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue.">
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaff_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaffView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/cancelOrder_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/cancelOrderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/confirmDelivery_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/confirmDeliveryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/createCateringOrder_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/createCateringOrderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/dashboard_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/dashboardView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/flightDelay_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/flightDelayView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/modifyOrder_AirlineRpresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/modifyOrderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/orderHistory_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/orderHistoryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/payBill_AirlineRepresentativeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/payBillView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/truckOrder_AirlineRepresentative.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/truckOrderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/approveOrRejectOrder_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/approveOrRejectOrderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboard_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboardView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/deliveryMonitoring_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/deliveryMonitoringView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/emergencyIssue_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/emergencyIssueView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/inventoryStatus_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/inventoryStatusView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/monitorProduction_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/monitorProductionView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/reviewOrder_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/reviewOrderView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruckView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruckView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveryView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ReceiveDispatchRequestView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ReceiveDispatchRequestView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ScheduleDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ScheduleDeliveryView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/dashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/dashboardView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/GenerateInventoryReportView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/GenerateInventoryReportView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/LowStockAlertView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/LowStockAlertView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/ManageSupplierView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/ManageSupplierView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/UpdateInventoryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/UpdateInventoryView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/dashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/dashboardView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +41,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
-    "accountId": "ef1e225f-e8df-4381-ba31-5fa2f4c0db29"
+    "accountId": "ca804a1f-f117-4e10-a38a-3edf62ca5ddc"
   }
 }]]></component>
   <component name="MavenImportPreferences">
@@ -134,7 +127,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "morsalin",
+    "git-widget-placeholder": "sihab",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -147,14 +140,15 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "to.speed.mode.migration.done": "true"
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
       </set>
     </attachedChunks>
   </component>
@@ -165,6 +159,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784673028203</updated>
+      <workItem from="1784917889209" duration="4182000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
       <option name="closed" value="true" />
