@@ -19,7 +19,7 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-            <Button disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: royalBlue;" text="Receive Inspection Request" textOverrun="CENTER_ELLIPSIS" />
+            <Button disable="true" mnemonicParsing="false" onAction="#homeButtonAirportCateringServiceOnAction" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: royalBlue;" text="Receive Inspection Request" textOverrun="CENTER_ELLIPSIS" />
                 <Button mnemonicParsing="false" onAction="#sideBarPerformInspectionOnAction" prefHeight="42.0" prefWidth="174.0" text=" Perform Inspection" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarFoodSafetyCheckOnAction" prefHeight="42.0" prefWidth="174.0" text="Food Safety Check" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarApproveBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Approve Batch" textOverrun="CENTER_ELLIPSIS" />
