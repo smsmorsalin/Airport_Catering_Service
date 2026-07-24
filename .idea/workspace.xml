@@ -43,7 +43,7 @@
     "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
     "accountId": "ca804a1f-f117-4e10-a38a-3edf62ca5ddc"
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -53,61 +53,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.000000000739536" />
-      <entry key="MS500" value="1.043957493596886" />
-      <entry key="S2" value="2.8715420646141268" />
-      <entry key="S5" value="5.114052819272018" />
-      <entry key="S10" value="6.489125856676564" />
-      <entry key="S30" value="9.24272602684699" />
-      <entry key="S60" value="11.287349778124216" />
-      <entry key="M2" value="13.076178998676875" />
-      <entry key="M5" value="16.74229400491747" />
-      <entry key="M10" value="24.0716460470037" />
-      <entry key="M15" value="32.45510635356907" />
-      <entry key="M30" value="52.605026788796835" />
-      <entry key="H1" value="72.91040961215157" />
-      <entry key="H2" value="88.99384382747736" />
-      <entry key="H4" value="102.40149190097476" />
-      <entry key="D1" value="124.70476374308436" />
-      <entry key="W1" value="130.86916992498166" />
+      <entry key="MS100" value="1.004044948047876" />
+      <entry key="MS500" value="1.492203679819948" />
+      <entry key="S2" value="4.039216364506431" />
+      <entry key="S5" value="6.261646799043885" />
+      <entry key="S10" value="7.45167440669828" />
+      <entry key="S30" value="8.43708186872593" />
+      <entry key="S60" value="8.712184402149209" />
+      <entry key="M2" value="8.85446228049024" />
+      <entry key="M5" value="8.941388544117228" />
+      <entry key="M10" value="8.973000382444479" />
+      <entry key="M15" value="9.049657620687116" />
+      <entry key="M30" value="11.420205060268323" />
+      <entry key="H1" value="24.665492566196075" />
+      <entry key="H2" value="50.255264810685865" />
+      <entry key="H4" value="78.72222869578242" />
+      <entry key="D1" value="125.96638140631376" />
+      <entry key="W1" value="138.67695033154237" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.4316832876365703E-4" />
-      <entry key="MS500" value="0.17028225433006103" />
-      <entry key="S2" value="0.6423804980354935" />
-      <entry key="S5" value="0.8377548275061514" />
-      <entry key="S10" value="0.915289477436593" />
-      <entry key="S30" value="0.9709260569951074" />
-      <entry key="S60" value="0.9853558029123327" />
-      <entry key="M2" value="0.9927036524134052" />
-      <entry key="M5" value="1.0502900369010162" />
-      <entry key="M10" value="1.6294279002510321" />
-      <entry key="M15" value="2.4940970420762802" />
-      <entry key="M30" value="4.624383099393699" />
-      <entry key="H1" value="6.694457351304927" />
-      <entry key="H2" value="8.153622502647002" />
-      <entry key="H4" value="9.022395108819474" />
-      <entry key="D1" value="9.828934773390642" />
-      <entry key="W1" value="9.97535504096214" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="3.8559086356894616E-241" />
+      <entry key="S30" value="7.278506010403416E-81" />
+      <entry key="S60" value="8.531416072629991E-41" />
+      <entry key="M2" value="9.237057389286974E-21" />
+      <entry key="M5" value="1.020457341804998E-8" />
+      <entry key="M10" value="1.606119861833057E-4" />
+      <entry key="M15" value="0.0053220042486503165" />
+      <entry key="M30" value="0.21361647296242034" />
+      <entry key="H1" value="1.4388179476786649" />
+      <entry key="H2" value="3.78003511492346" />
+      <entry key="H4" value="6.143197228616769" />
+      <entry key="D1" value="9.219029878199134" />
+      <entry key="W1" value="9.884481671750226" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.03443483940831614" />
-      <entry key="MS500" value="0.6027237119072809" />
-      <entry key="S2" value="3.181390210319742" />
-      <entry key="S5" value="5.7832235780166785" />
-      <entry key="S10" value="7.312272115745415" />
-      <entry key="S30" value="10.1800125673683" />
-      <entry key="S60" value="12.255104918180242" />
-      <entry key="M2" value="14.059758920219785" />
-      <entry key="M5" value="17.788080317618828" />
-      <entry key="M10" value="25.69574711082814" />
-      <entry key="M15" value="34.942751400615045" />
-      <entry key="M30" value="57.22267404705774" />
-      <entry key="H1" value="79.5997963792965" />
-      <entry key="H2" value="97.14431611613183" />
-      <entry key="H4" value="111.42211098138122" />
-      <entry key="D1" value="134.5333637290887" />
-      <entry key="W1" value="140.84447589722615" />
+      <entry key="MS100" value="0.027036558674532658" />
+      <entry key="MS500" value="0.7529251548109128" />
+      <entry key="S2" value="3.6696946008759688" />
+      <entry key="S5" value="6.082183988029544" />
+      <entry key="S10" value="7.355331303805005" />
+      <entry key="S30" value="8.40333885585583" />
+      <entry key="S60" value="8.695098219547264" />
+      <entry key="M2" value="8.845864640505278" />
+      <entry key="M5" value="8.937936291900577" />
+      <entry key="M10" value="8.971432127466448" />
+      <entry key="M15" value="9.053813137489497" />
+      <entry key="M30" value="11.63293377497274" />
+      <entry key="H1" value="26.102932345067234" />
+      <entry key="H2" value="54.03369528260738" />
+      <entry key="H4" value="84.86414455378457" />
+      <entry key="D1" value="135.1850852536946" />
+      <entry key="W1" value="148.56138166475986" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -143,7 +143,7 @@
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -177,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784840887525</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue.">
+      <option name="closed" value="true" />
+      <created>1784911000640</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1784911000640</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
