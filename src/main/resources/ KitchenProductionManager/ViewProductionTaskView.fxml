@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.kitchen_production_manager.viewProductionTaskController">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
@@ -23,8 +23,8 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Assign Kitchen Staff" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Manage Meal Preparation" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#assignKitchenStaffOnAction" prefHeight="42.0" prefWidth="174.0" text=" Assign Kitchen Staff" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#manageMealPreparationOnAction" prefHeight="42.0" prefWidth="174.0" text=" Manage Meal Preparation" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Monitor Cooking Progress" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Update Production Status" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Request Quality Inspection" textOverrun="CENTER_ELLIPSIS" />
@@ -32,7 +32,7 @@
                 <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Kitchen Performance Report" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+        <Button layoutY="3.0" mnemonicParsing="false" onAction="#sidebarAirporCateringServiceButtonOnClick" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
             <font>
                 <Font name="Arial Bold" size="13.0" />
             </font>
