@@ -11,7 +11,6 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
     <children>
@@ -59,7 +58,6 @@
                   <Label layoutX="23.0" layoutY="440.0" prefHeight="18.0" prefWidth="196.0" text="Current Status" />
                   <Label layoutX="23.0" layoutY="477.0" prefHeight="18.0" prefWidth="196.0" text="Departure Time" />
                   <Label layoutX="23.0" layoutY="520.0" prefHeight="18.0" prefWidth="206.0" text="Estimated Arrival Time" />
-                  <Text layoutX="194.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Dashboard" />
                </children>
             </AnchorPane>
          </children></VBox>
