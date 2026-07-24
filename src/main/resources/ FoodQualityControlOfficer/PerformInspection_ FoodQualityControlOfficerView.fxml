@@ -19,17 +19,17 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-            <Button layoutX="10.0" layoutY="52.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Receive Inspection Request" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: aqua;" text=" Perform Inspection" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Food Safety Check" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Approve Batch" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Reject Batch" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Manage Quality Issue" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Quality Trend Analysis" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Generate QA Report" textOverrun="CENTER_ELLIPSIS" />
+            <Button layoutX="10.0" layoutY="52.0" mnemonicParsing="false" onAction="#sideBarReceiveInspectionRequestOnAction" prefHeight="42.0" prefWidth="174.0" text="Receive Inspection Request" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: royalBlue;" text=" Perform Inspection" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarFoodSafetyCheckOnAction" prefHeight="42.0" prefWidth="174.0" text="Food Safety Check" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarApproveBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Approve Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarRejectBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Reject Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarManageQualityIssueOnAction" prefHeight="42.0" prefWidth="174.0" text=" Manage Quality Issue" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarQualityTrendAnalysisOnAction" prefHeight="42.0" prefWidth="174.0" text=" Quality Trend Analysis" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarGenerateQAReportOnAction" prefHeight="42.0" prefWidth="174.0" text="Generate QA Report" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+        <Button layoutY="-2.0" mnemonicParsing="false" onAction="#homeButtonAirportCateringServiceOnAction" prefHeight="42.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
             <font>
                 <Font name="Arial Bold" size="13.0" />
             </font>
@@ -53,66 +53,61 @@
         </Button>
         <VBox layoutX="175.0" prefHeight="589.0" prefWidth="582.0" style="-fx-background-color: silver;">
             <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
-                    <font>
-                        <Font name="Gabriola" size="18.0" />
-                    </font>
-                </Label>
-                <AnchorPane prefHeight="521.0" prefWidth="563.0" style="-fx-background-color: darkBlue;">
+                <AnchorPane prefHeight="568.0" prefWidth="582.0" style="-fx-background-color: darkBlue;">
                <children>
-                  <Label layoutX="25.0" layoutY="55.0" prefHeight="17.0" prefWidth="93.0" text=" Batch Number" textFill="WHITE">
+                  <Label layoutX="15.0" layoutY="55.0" prefHeight="17.0" prefWidth="93.0" text=" Batch Number" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
-                  <Label layoutX="20.0" layoutY="95.0" text=" Appearance Rating" textFill="WHITE">
+                  <Label layoutX="10.0" layoutY="95.0" text=" Appearance Rating" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
-                  <Label layoutX="21.0" layoutY="127.0" text="Taste Rating" textFill="WHITE">
+                  <Label layoutX="11.0" layoutY="127.0" text="Taste Rating" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
-                  <Label layoutX="23.0" layoutY="161.0" prefHeight="17.0" prefWidth="114.0" text="Texture Ratingbel" textFill="WHITE">
+                  <Label layoutX="13.0" layoutY="161.0" prefHeight="17.0" prefWidth="114.0" text="Texture Rating" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
-                  <Label layoutX="21.0" layoutY="196.0" text=" Temperature Reading" textFill="WHITE">
+                  <Label layoutX="11.0" layoutY="196.0" text=" Temperature Reading" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
-                  <Label layoutX="25.0" layoutY="227.0" text=" Inspection Notes" textFill="WHITE">
+                  <Label layoutX="314.0" layoutY="56.0" text=" Inspection Notes" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
                   <TextField fx:id="batchNumberTextField" layoutX="152.0" layoutY="51.0" />
                   <TextField fx:id="temperatureReadingTextField" layoutX="152.0" layoutY="192.0" />
-                  <TextArea fx:id="inspectionNotesTextArea" layoutX="136.0" layoutY="229.0" prefHeight="73.0" prefWidth="199.0" />
-                  <Button layoutX="351.0" layoutY="51.0" mnemonicParsing="false" onAction="#switchBatchOnAction" style="-fx-background-color: royalBlue;" text="Switch Barch" textFill="WHITE">
+                  <TextArea fx:id="inspectionNotesTextArea" layoutX="326.0" layoutY="78.0" prefHeight="63.0" prefWidth="237.0" />
+                  <Button layoutX="17.0" layoutY="247.0" mnemonicParsing="false" onAction="#searchBatchOnAction" style="-fx-background-color: royalBlue;" text="Search Batch" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Button>
-                  <Button layoutX="271.0" layoutY="330.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="83.0" text="Clear">
+                  <Button layoutX="361.0" layoutY="247.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="83.0" text="Clear">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Button>
                   <ComboBox fx:id="appearanceRatingComboBox" layoutX="152.0" layoutY="91.0" prefWidth="150.0" />
                   <ComboBox fx:id="tasteRatingComboBox" layoutX="152.0" layoutY="123.0" prefWidth="150.0" />
                   <ComboBox fx:id="textureRatingbelComboBox" layoutX="152.0" layoutY="157.0" prefWidth="150.0" />
-                  <AnchorPane layoutX="351.0" layoutY="96.0" prefHeight="140.0" prefWidth="219.0" style="-fx-background-color: royalBlue;">
+                  <AnchorPane layoutX="89.0" layoutY="296.0" prefHeight="126.0" prefWidth="298.0" style="-fx-background-color: royalBlue;" AnchorPane.rightAnchor="195.0">
                      <children>
-                        <Label layoutX="13.0" layoutY="16.0" prefHeight="17.0" prefWidth="93.0" text="Inspection ID" textFill="WHITE">
+                        <Label fx:id="fxidDisplayInspectionIDLabel" layoutX="13.0" layoutY="16.0" prefHeight="17.0" prefWidth="176.0" text="Inspection ID :" textFill="WHITE">
                            <font>
                               <Font name="System Bold Italic" size="12.0" />
                            </font></Label>
-                        <Label layoutX="13.0" layoutY="44.0" prefHeight="17.0" prefWidth="93.0" text="Batch Number" textFill="WHITE">
+                        <Label fx:id="fxidDisplayInspectioStatusLabel" layoutX="13.0" layoutY="44.0" prefHeight="17.0" prefWidth="168.0" text="Inspection Status : " textFill="WHITE">
                            <font>
                               <Font name="System Bold Italic" size="12.0" />
                            </font></Label>
-                        <Label layoutX="13.0" layoutY="72.0" prefHeight="17.0" prefWidth="93.0" text="Inspection Date" textFill="WHITE">
+                        <Label fx:id="fxidDisplayInspectionDateLabel" layoutX="13.0" layoutY="72.0" prefHeight="17.0" prefWidth="150.0" text="Inspection Date :" textFill="WHITE">
                            <font>
                               <Font name="System Bold Italic" size="12.0" />
                            </font></Label>
-                        <Label layoutX="13.0" layoutY="103.0" prefHeight="17.0" prefWidth="93.0" text="Quality Scores" textFill="WHITE">
+                        <Label fx:id="fxidDisplayOverallScoreLabel" layoutX="13.0" layoutY="93.0" prefHeight="17.0" prefWidth="168.0" text="Overall Score : " textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="System Bold Italic" size="12.0" />
                            </font></Label>
@@ -123,7 +118,7 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="23.0" layoutY="330.0" mnemonicParsing="false" onAction="#saveInspectionOnAction" style="-fx-background-color: LimeGreen;" text="Save Inspection" textFill="WHITE">
+                  <Button layoutX="185.0" layoutY="247.0" mnemonicParsing="false" onAction="#saveInspectionOnAction" style="-fx-background-color: LimeGreen;" text="Save Inspection" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
