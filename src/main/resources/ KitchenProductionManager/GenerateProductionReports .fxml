@@ -18,17 +18,17 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" View Production Tasks" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Assign Kitchen Staff" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Manage Meal Preparation" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Monitor Cooking Progress" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Update Production Status" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Request Quality Inspection" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Handle Rejected Batch" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: aqua;" text=" Kitchen Performance Report" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarViewProductionTasksOnAction" prefHeight="42.0" prefWidth="174.0" text=" View Production Tasks" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarassignKitchenStaffOnAction" prefHeight="42.0" prefWidth="174.0" text=" Assign Kitchen Staff" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarmanageMealPreparationOnAction" prefHeight="42.0" prefWidth="174.0" text=" Manage Meal Preparation" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMonitorCookingProgressOnAction" prefHeight="42.0" prefWidth="174.0" text=" Monitor Cooking Progress" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarUpdateProductionStatusOnAction" prefHeight="42.0" prefWidth="174.0" text=" Update Production Status" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarRequestQualityInspectionOnAction" prefHeight="42.0" prefWidth="174.0" text="Request Quality Inspection" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarHandleRejectedBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Handle Rejected Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: blue;" text=" Kitchen Performance Report" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+        <Button layoutY="3.0" mnemonicParsing="false" onAction="#sidebarAirportCateringServiceButtonOnClick" prefHeight="33.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
             <font>
                 <Font name="Arial Bold" size="13.0" />
             </font>
@@ -52,12 +52,7 @@
         </Button>
         <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
             <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
-                    <font>
-                        <Font name="Gabriola" size="18.0" />
-                    </font>
-                </Label>
-                <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: darkBlue;">
+                <AnchorPane prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: darkBlue;">
                <children>
                   <Label layoutX="16.0" layoutY="58.0" text="Report Type" textFill="WHITE">
                      <font>
@@ -72,32 +67,32 @@
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
                   <ComboBox fx:id="reportTypeComboBox" layoutX="104.0" layoutY="54.0" prefWidth="150.0" />
-                  <Button layoutX="19.0" layoutY="181.0" mnemonicParsing="false" onAction="#confirmOnAction" style="-fx-background-color: royalBlue;" text="Generate" textFill="WHITE">
+                  <Button layoutX="35.0" layoutY="191.0" mnemonicParsing="false" onAction="#confirmOnAction" style="-fx-background-color: royalBlue;" text="Generate" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Button>
                   <DatePicker fx:id="startDatePicker" layoutX="104.0" layoutY="93.0" />
                   <DatePicker fx:id="endDatePicker" layoutX="104.0" layoutY="134.0" />
-                  <AnchorPane layoutX="298.0" layoutY="67.0" prefHeight="155.0" prefWidth="291.0" style="-fx-background-color: royalBlue;">
+                  <AnchorPane layoutX="20.0" layoutY="266.0" prefHeight="155.0" prefWidth="445.0" style="-fx-background-color: royalBlue;">
                      <children>
-                        <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="96.0" text="Total Production Orders" textFill="WHITE">
+                        <Label fx:id="fxidDisplayTotalProductionOrdersLabel" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="331.0" text="Total Production Orders" textFill="WHITE">
                            <font>
                               <Font name="System Bold Italic" size="12.0" />
                            </font></Label>
-                        <Label layoutX="14.0" layoutY="42.0" prefHeight="17.0" prefWidth="126.0" text="Total Meals Produced" textFill="WHITE">
+                        <Label fx:id="fxidDisplayTotalMealsProducedLabel" layoutX="14.0" layoutY="42.0" prefHeight="17.0" prefWidth="347.0" text="Total Meals Produced" textFill="WHITE">
                            <font>
                               <Font name="System Bold Italic" size="12.0" />
                            </font></Label>
-                        <Label layoutX="14.0" layoutY="125.0" prefHeight="17.0" prefWidth="149.0" text="Average Production Time" textFill="WHITE">
+                        <Label fx:id="fxidDisplayAverageProductionTimeLabel" layoutX="14.0" layoutY="125.0" prefHeight="17.0" prefWidth="374.0" text="Average Production Time" textFill="WHITE">
                            <font>
                               <Font name="System Bold Italic" size="12.0" />
                            </font></Label>
-                        <Label layoutX="14.0" layoutY="68.0" prefHeight="17.0" prefWidth="126.0" text="Completion Rate" textFill="WHITE">
+                        <Label fx:id="fxidDisplayCompletionRateLabel" layoutX="14.0" layoutY="68.0" prefHeight="17.0" prefWidth="356.0" text="Completion Rate" textFill="WHITE">
                            <font>
                               <Font name="System Bold Italic" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="14.0" layoutY="100.0" prefHeight="17.0" prefWidth="126.0" text="Delayed Productions" textFill="WHITE">
+                        <Label fx:id="fxidDisplayDelayedProductionsLabel" layoutX="14.0" layoutY="100.0" prefHeight="17.0" prefWidth="356.0" text="Delayed Productions" textFill="WHITE">
                            <font>
                               <Font name="System Bold Italic" size="12.0" />
                            </font>
@@ -109,12 +104,12 @@
                         <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Button layoutX="213.0" layoutY="181.0" mnemonicParsing="false" onAction="#eportPDFOnAction" style="-fx-background-color: limeGreen;" text="Export PDF" textFill="WHITE">
+                  <Button layoutX="179.0" layoutY="190.0" mnemonicParsing="false" onAction="#eportPDFOnAction" style="-fx-background-color: limeGreen;" text="Export PDF" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button layoutX="357.0" layoutY="253.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="69.0" text="Clear">
+                  <Button layoutX="329.0" layoutY="190.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="69.0" text="Clear">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
