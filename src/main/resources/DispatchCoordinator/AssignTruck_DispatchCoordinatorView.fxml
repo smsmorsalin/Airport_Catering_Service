@@ -3,6 +3,9 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
@@ -11,6 +14,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
     <children>
@@ -50,11 +54,36 @@
         </Button>
         <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
             <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
-                    <font>
-                        <Font name="Gabriola" size="18.0" />
-                    </font>
-                </Label>
+            <AnchorPane prefHeight="590.0" prefWidth="357.0">
+               <children>
+                  <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="582.0" prefWidth="590.0">
+                     <children>
+                        <Text layoutX="36.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID" />
+                        <TextField layoutX="95.0" layoutY="43.0" />
+                        <Button layoutX="43.0" layoutY="84.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="77.0" text="Search" />
+                        <TableView layoutX="8.0" layoutY="137.0" prefHeight="200.0" prefWidth="583.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Truck ID" />
+                            <TableColumn prefWidth="96.0" text="Truck Number" />
+                              <TableColumn prefWidth="87.20001220703125" text="Capacity" />
+                              <TableColumn prefWidth="73.60006713867188" text="Driver ID" />
+                              <TableColumn prefWidth="95.199951171875" text="Driver Name" />
+                              <TableColumn prefWidth="154.39996337890625" text="Availability Status" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="14.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Truck Selection" />
+                        <TextField layoutX="106.0" layoutY="348.0" text="Enter Truck Id" />
+                        <Text layoutX="268.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Selection" />
+                        <TextField layoutX="359.0" layoutY="347.0" text="Enter Driver Id" />
+                        <Label layoutX="28.0" layoutY="410.0" text="Assignment ID" />
+                        <Label layoutX="29.0" layoutY="444.0" text="Truck ID" />
+                        <Label layoutX="29.0" layoutY="477.0" text="Driver Name" />
+                        <Label layoutX="29.0" layoutY="511.0" text="Flight Number" />
+                        <Label layoutX="29.0" layoutY="538.0" text="Delivery Schedule" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
     </children>
