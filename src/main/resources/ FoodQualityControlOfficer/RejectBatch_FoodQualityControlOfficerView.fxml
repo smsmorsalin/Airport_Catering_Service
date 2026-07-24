@@ -18,17 +18,17 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Receive Inspection Request" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Perform Inspection" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Food Safety Check" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Approve Batch" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: aqua;" text=" Reject Batch" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Manage Quality Issue" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Quality Trend Analysis" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Generate QA Report" textOverrun="CENTER_ELLIPSIS" />
+            <Button mnemonicParsing="false" onAction="#sideBarReceiveInspectionRequestOnAction" prefHeight="42.0" prefWidth="174.0" text="Receive Inspection Request" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarPerformInspectionOnAction" prefHeight="42.0" prefWidth="174.0" text=" Perform Inspection" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarFoodSafetyCheckOnAction" prefHeight="42.0" prefWidth="174.0" text="Food Safety Check" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarApproveBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Approve Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: royalBlue;" text=" Reject Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarManageQualityIssueOnAction" prefHeight="42.0" prefWidth="174.0" text=" Manage Quality Issue" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarQualityTrendAnalysisOnAction" prefHeight="42.0" prefWidth="174.0" text=" Quality Trend Analysis" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarGenerateQAReportOnAction" prefHeight="42.0" prefWidth="174.0" text="Generate QA Report" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+        <Button layoutX="-9.0" mnemonicParsing="false" onAction="#homeButtonAirportCateringServiceOnAction" prefHeight="42.0" prefWidth="184.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
             <font>
                 <Font name="Arial Bold" size="13.0" />
             </font>
@@ -52,43 +52,38 @@
         </Button>
         <VBox layoutX="175.0" prefHeight="589.0" prefWidth="582.0" style="-fx-background-color: silver;">
             <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
-                    <font>
-                        <Font name="Gabriola" size="18.0" />
-                    </font>
-                </Label>
                 <AnchorPane prefHeight="521.0" prefWidth="563.0" style="-fx-background-color: darkBlue;">
                <children>
-                  <Label layoutX="14.0" layoutY="72.0" text=" Batch Number" textFill="WHITE">
+                  <Label layoutX="24.0" layoutY="72.0" text=" Batch Number" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
-                  <Label layoutX="14.0" layoutY="105.0" text="Rejection Reason" textFill="WHITE">
+                  <Label layoutX="24.0" layoutY="105.0" prefHeight="15.0" prefWidth="117.0" text="Rejection Reason" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
-                  <Label layoutX="9.0" layoutY="176.0" text=" Corrective Action Recommendation" textFill="WHITE">
+                  <Label layoutX="19.0" layoutY="176.0" text=" Corrective Action Recommendation" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
-                  <TextField fx:id="batchNumberTextField" layoutX="112.0" layoutY="68.0" />
-                  <TextArea fx:id="rejectionReasonTextArea" layoutX="18.0" layoutY="129.0" prefHeight="17.0" prefWidth="200.0" />
-                  <TextArea fx:id="correctiveActionRecommendationTextArea" layoutX="18.0" layoutY="206.0" prefHeight="51.0" prefWidth="200.0" />
-                  <Button layoutX="316.0" layoutY="68.0" mnemonicParsing="false" onAction="#searchOnAction" style="-fx-background-color: royalBlue;" text="Search Batch " textFill="WHITE">
+                  <TextField fx:id="batchNumberTextField" layoutX="132.0" layoutY="68.0" />
+                  <TextArea fx:id="rejectionReasonTextArea" layoutX="76.0" layoutY="131.0" prefHeight="17.0" prefWidth="200.0" />
+                  <TextArea fx:id="correctiveActionRecommendationTextArea" layoutX="76.0" layoutY="199.0" prefHeight="39.0" prefWidth="200.0" />
+                  <Button layoutX="31.0" layoutY="265.0" mnemonicParsing="false" onAction="#searchOnAction" style="-fx-background-color: royalBlue;" text="Search Batch " textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Button>
-                  <AnchorPane layoutX="291.0" layoutY="129.0" prefHeight="123.0" prefWidth="200.0" style="-fx-background-color: royalBlue;">
+                  <AnchorPane layoutX="37.0" layoutY="339.0" prefHeight="123.0" prefWidth="441.0" style="-fx-background-color: royalBlue;">
                      <children>
-                        <Label layoutX="22.0" layoutY="14.0" prefHeight="17.0" prefWidth="93.0" text="Rejection ID" textFill="WHITE">
+                        <Label fx:id="fxidDisplayRejectionIDLabel" layoutX="22.0" layoutY="14.0" prefHeight="17.0" prefWidth="258.0" text="Rejection ID : " textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font></Label>
-                        <Label layoutX="22.0" layoutY="45.0" prefHeight="17.0" prefWidth="93.0" text="Rejection Date" textFill="WHITE">
+                        <Label fx:id="fxidDisplayRejectionDateLabel" layoutX="22.0" layoutY="45.0" prefHeight="17.0" prefWidth="245.0" text="Rejection Date : " textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font></Label>
-                        <Label layoutX="22.0" layoutY="73.0" prefHeight="17.0" prefWidth="93.0" text="Rejection Reason" textFill="WHITE">
+                        <Label fx:id="fxidDisplayRejectionReasonLabel" layoutX="22.0" layoutY="73.0" prefHeight="17.0" prefWidth="274.0" text="Rejection Status :" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font></Label>
@@ -99,12 +94,12 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="27.0" layoutY="275.0" mnemonicParsing="false" onAction="#rejectionBatchOnAction" style="-fx-background-color: red;" text="Reject Batch " textFill="WHITE">
+                  <Button layoutX="188.0" layoutY="265.0" mnemonicParsing="false" onAction="#rejectionBatchOnAction" style="-fx-background-color: red;" text="Reject Batch " textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button layoutX="291.0" layoutY="275.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="67.0" text="Clear">
+                  <Button layoutX="352.0" layoutY="265.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="67.0" text="Clear">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
