@@ -2,7 +2,6 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -20,10 +19,10 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Receive Dispatch Request" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Receive Dispatch Request" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Package Order" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Assign Truck" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Schedule Delivery" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Schedule Delivery" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Monitor Deliveries" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Manage Delivery Delays" textOverrun="CENTER_ELLIPSIS" />
                 <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="175.0" text="Emergency Delivery" />
@@ -53,31 +52,27 @@
             </cursor>
         </Button>
         <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
-         <children>
-            <AnchorPane prefHeight="590.0" prefWidth="596.0">
+            <children>
+            <AnchorPane prefHeight="589.0" prefWidth="596.0">
                <children>
-                  <Text layoutX="30.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Components" />
-                  <Text layoutX="30.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID" />
-                  <Text layoutX="30.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Date" />
-                  <Text layoutX="30.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Time" />
-                  <Text layoutX="30.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" />
-                  <TextField layoutX="157.0" layoutY="31.0" />
-                  <TextField layoutX="158.0" layoutY="65.0" />
-                  <TextField layoutX="158.0" layoutY="134.0" />
-                  <TextField layoutX="158.0" layoutY="170.0" />
-                  <DatePicker layoutX="158.0" layoutY="99.0" prefHeight="26.0" prefWidth="164.0" />
-                  <TableView layoutX="-2.0" layoutY="254.0" prefHeight="200.0" prefWidth="596.0">
+                  <Text layoutX="35.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID" />
+                  <TextField layoutX="123.0" layoutY="69.0" />
+                  <Button layoutX="37.0" layoutY="169.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="86.0" text="Search" />
+                  <TableView layoutX="-1.0" layoutY="338.0" prefHeight="200.0" prefWidth="596.0">
                     <columns>
-                      <TableColumn prefWidth="104.7999267578125" text="Schedule ID" />
-                      <TableColumn prefWidth="102.4000244140625" text="Order ID" />
-                        <TableColumn prefWidth="110.4000244140625" text="Flight Number" />
-                        <TableColumn prefWidth="145.60006713867188" text="Delivery Date &amp; Time" />
-                        <TableColumn prefWidth="134.39996337890625" text="Assigned Truck" />
+                      <TableColumn prefWidth="126.39996337890625" text="Dispatch Request ID" />
+                      <TableColumn prefWidth="56.0" text="Order ID" />
+                        <TableColumn prefWidth="96.0" text="Flight Number" />
+                        <TableColumn prefWidth="112.80001831054688" text="Delivery Location" />
+                        <TableColumn minWidth="0.0" prefWidth="94.4000244140625" text="Delivery Time" />
+                        <TableColumn minWidth="0.0" prefWidth="111.199951171875" text="Dispatch Status" />
                     </columns>
                   </TableView>
+                  <Text layoutX="35.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dispatch Note" />
+                  <TextField layoutX="124.0" layoutY="110.0" />
                </children>
             </AnchorPane>
-         </children></VBox>
+            </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
     </children>
 </AnchorPane>
