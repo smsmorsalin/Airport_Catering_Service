@@ -2,7 +2,6 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
@@ -20,7 +19,7 @@
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Reserve Ingredients" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Create Purchase Request" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Receive Ingredients" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Update Inventory" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Update Inventory" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Manage Suppliers" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="222.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Low Stock Alerts" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="264.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Generate Inventory Report" textOverrun="CENTER_ELLIPSIS" />
@@ -48,14 +47,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
-            <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
-                    <font>
-                        <Font name="Gabriola" size="18.0" />
-                    </font>
-                </Label>
-            </children></VBox>
+        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;" />
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
     </children>
 </AnchorPane>
