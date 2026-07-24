@@ -16,14 +16,13 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" View Production Tasks" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Assign Kitchen Staff" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Manage Meal Preparation" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Monitor Cooking Progress" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Update Production Status" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Request Quality Inspection" textOverrun="CENTER_ELLIPSIS" />
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Handle Rejected Batch" textOverrun="CENTER_ELLIPSIS" />
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Kitchen Performance Report" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Select Monitor Cooking Progress" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Enter Production Task ID" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Validate Task ID" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Verify Production Task Exists" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Retrieve Cooking Updates" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Calculate Completion Percentage" textOverrun="CENTER_ELLIPSIS" />
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="175.0" text="Display Cooking Progress" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -55,7 +54,7 @@
                         <Font name="Gabriola" size="18.0" />
                     </font>
                 </Label>
-            <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: pink;" />
+                <AnchorPane prefHeight="566.0" prefWidth="596.0" />
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
     </children>

@@ -20,12 +20,12 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Search " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="View details " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Load Task" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Start Preparation" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Update Preparation" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Save Progress" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Log out " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -59,19 +59,18 @@
                 </Label>
                 <AnchorPane prefHeight="566.0" prefWidth="596.0">
                <children>
-                  <TextField layoutX="123.0" layoutY="31.0" />
-                  <TextField layoutX="410.0" layoutY="30.0" />
-                  <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production task ID:" />
-                  <Text layoutX="346.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID:" />
-                  <TableView layoutX="-4.0" layoutY="205.0" prefHeight="360.0" prefWidth="596.0">
+                  <TextField layoutX="126.0" layoutY="22.0" />
+                  <TextField layoutX="427.0" layoutY="23.0" />
+                  <TextField layoutX="138.0" layoutY="87.0" />
+                  <Text layoutX="17.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production Task ID" />
+                  <Text layoutX="286.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preparation Instructions" />
+                  <Text layoutX="9.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Special Requirements" />
+                  <TableView layoutX="-4.0" layoutY="144.0" prefHeight="421.0" prefWidth="605.0">
                     <columns>
-                      <TableColumn prefWidth="68.0" text="Task ID" />
-                      <TableColumn prefWidth="82.0" text="Order ID" />
-                        <TableColumn prefWidth="90.0" text="Airline Name" />
-                        <TableColumn prefWidth="87.0" text="Fliight Number" />
-                        <TableColumn prefWidth="89.0" text="Meal Type" />
-                        <TableColumn prefWidth="73.0" text="Quantity " />
-                        <TableColumn prefWidth="106.0" text="Completion Time" />
+                      <TableColumn prefWidth="141.0" text="Task ID" />
+                      <TableColumn prefWidth="122.0" text="Meal Category" />
+                        <TableColumn prefWidth="173.0" text="Assigned Team" />
+                        <TableColumn prefWidth="168.0" text="Preparation Status" />
                     </columns>
                   </TableView>
                </children></AnchorPane>
