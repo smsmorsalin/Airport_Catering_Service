@@ -21,7 +21,7 @@
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
                 <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" View Production Tasks" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: aqua;" text=" Assign Kitchen Staff" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: Blue;" text=" Assign Kitchen Staff" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Manage Meal Preparation" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Monitor Cooking Progress" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Update Production Status" textOverrun="CENTER_ELLIPSIS" />
@@ -59,30 +59,51 @@
                         <Font name="Gabriola" size="18.0" />
                     </font>
                 </Label>
-                <AnchorPane prefHeight="532.0" prefWidth="596.0" style="-fx-background-color: plum;">
+                <AnchorPane prefHeight="532.0" prefWidth="541.0" style="-fx-background-color: RoyalBlue;">
                <children>
-                  <Label layoutX="29.0" layoutY="97.0" text=" Production Order ID" />
-                  <TextField layoutX="152.0" layoutY="93.0" />
-                  <TableView fx:id="mainTableView" layoutX="8.0" layoutY="217.0" prefHeight="200.0" prefWidth="495.0">
+                  <Label layoutX="79.0" layoutY="75.0" text=" Production Order ID" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <TextField fx:id="productionOrderIDTextField" layoutX="234.0" layoutY="71.0" prefHeight="25.0" prefWidth="184.0" />
+                  <TableView fx:id="mainTableView" layoutX="28.0" layoutY="293.0" prefHeight="200.0" prefWidth="547.0">
                     <columns>
-                      <TableColumn fx:id="ingredientIDTableView" prefWidth="116.00001525878906" text="Ingredient ID" />
-                      <TableColumn fx:id="ingredientNameTableView" minWidth="0.0" prefWidth="130.6666259765625" text="Ingredient Name" />
-                        <TableColumn fx:id="quantityRequiredTableView" minWidth="0.0" prefWidth="145.33334350585938" text="Quantity Required" />
-                        <TableColumn fx:id="costTableView" minWidth="0.0" prefWidth="102.6666259765625" text="Cost" />
+                      <TableColumn fx:id="ingredientNameTableView" minWidth="0.0" prefWidth="147.33334350585938" text="Ingredient Name" />
+                        <TableColumn fx:id="quantityRequiredTableView" minWidth="0.0" prefWidth="123.33331298828125" text="Quantity Required" />
+                        <TableColumn fx:id="unitTableView" minWidth="0.0" prefWidth="95.33331298828125" text="Unit" />
+                        <TableColumn fx:id="estimatedCostTableView1" minWidth="0.0" prefWidth="180.66668701171875" text="Estimated Cost" />
                     </columns>
                   </TableView>
-                  <Button layoutX="417.0" layoutY="154.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search" />
-                  <Button layoutX="429.0" layoutY="441.0" mnemonicParsing="false" onAction="#confirmOnAction" text="Confirm" />
-                  <Label layoutX="189.0" layoutY="14.0" text="Assign Kitchen Stuff ">
+                  <Button layoutX="120.0" layoutY="209.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: DarkBlue;" text="Search" textFill="WHITE">
                      <font>
-                        <Font size="21.0" />
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Button>
+                  <Button layoutX="250.0" layoutY="209.0" mnemonicParsing="false" onAction="#confirmOnAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: LimeGreen;" text="Confirm" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Label layoutX="84.0" layoutY="113.0" text="Meal Recipe " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="84.0" layoutY="158.0" text="Number of Meals" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <TextField fx:id="numOfMealTextField" layoutX="237.0" layoutY="154.0" prefHeight="25.0" prefWidth="177.0" />
+                  <ComboBox fx:id="mealRecipeSelectionComboBox" layoutX="237.0" layoutY="109.0" prefHeight="25.0" prefWidth="177.0" />
+                  <Line endX="157.5" endY="3.814697265625E-6" layoutX="259.0" layoutY="45.0" startX="-117.16668701171875" startY="3.814697265625E-6" />
+                  <Label layoutX="148.0" layoutY="14.0" text="Calculate Ingredient Requirments" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="mealRecipeSelectionComboBox" layoutX="26.0" layoutY="135.0" text="Meal Recipe Selection" />
-                  <Label layoutX="29.0" layoutY="171.0" text="Number of Meals" />
-                  <TextField fx:id="numOfMealTextField" layoutX="152.0" layoutY="167.0" />
-                  <ComboBox layoutX="158.0" layoutY="131.0" prefWidth="150.0" />
-                  <Line endX="134.1666259765625" endY="3.814697265625E-6" layoutX="259.0" layoutY="45.0" startX="-100.0" />
+                  <Button layoutX="368.0" layoutY="209.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="75.0" text="Clear" />
+                  <Label layoutX="28.0" layoutY="253.0" text="Ingredient Requirements" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
                </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />

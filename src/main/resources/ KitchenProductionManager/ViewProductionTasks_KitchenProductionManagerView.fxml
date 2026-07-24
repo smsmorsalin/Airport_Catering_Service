@@ -19,7 +19,10 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: aqua;" text=" View Production Tasks" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: Blue;" text=" View Production Tasks" textFill="#fffafa" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Assign Kitchen Staff" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Manage Meal Preparation" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Monitor Cooking Progress" textOverrun="CENTER_ELLIPSIS" />
@@ -58,31 +61,48 @@
                         <Font name="Gabriola" size="18.0" />
                     </font>
                 </Label>
-                <AnchorPane prefHeight="523.0" prefWidth="596.0" style="-fx-background-color: plum;">
+                <AnchorPane prefHeight="556.0" prefWidth="596.0" style="-fx-background-color: RoyalBlue;">
                <children>
-                  <Label layoutX="27.0" layoutY="93.0" text="Inspection Request ID">
+                  <Label layoutX="51.0" layoutY="95.0" text="Inspection Request ID" textFill="#fffcfc">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="51.0" layoutY="145.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: DarkBlue;" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Button>
+                  <TextField fx:id="inspectionRequestIDTextField" layoutX="221.0" layoutY="90.0" prefHeight="25.0" prefWidth="187.0" />
+                  <Label layoutX="196.0" layoutY="14.0" text="Show Airport Catering Oders Service " textFill="WHITE">
                      <font>
                         <Font size="13.0" />
                      </font>
                   </Label>
-                  <Button layoutX="453.0" layoutY="80.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="25.0" prefWidth="119.0" text="Check Order" />
-                  <TextField fx:id="inspectionRequestIDTextField" layoutX="164.0" layoutY="90.0" />
-                  <Label layoutX="210.0" layoutY="14.0" text="Show Airport Catering Service ">
-                     <font>
-                        <Font size="13.0" />
-                     </font>
-                  </Label>
-                  <TableView fx:id="mainTableView" layoutY="204.0" prefHeight="200.0" prefWidth="596.0">
+                  <TableView fx:id="mainTableView" layoutX="21.0" layoutY="262.0" prefHeight="200.0" prefWidth="543.0">
                     <columns>
-                      <TableColumn fx:id="productionOrderIDTableColumn" prefWidth="136.66664123535156" text="Production Order ID" />
-                        <TableColumn fx:id="batchNumberTableView" prefWidth="104.66665649414062" text="Batch Number" />
-                        <TableColumn fx:id="categoryMealTableView" prefWidth="110.66671752929688" text="Meal Category   " />
-                        <TableColumn fx:id="quantityProducedTableView" prefWidth="131.33331298828125" text="Quantity Produced" />
-                        <TableColumn fx:id="inspectionStatusTableView" prefWidth="115.33331298828125" text="Inspection Status " />
+                      <TableColumn fx:id="productionOrderIDTableColumn" prefWidth="134.6667022705078" text="Production Order ID" />
+                        <TableColumn fx:id="airlineNameTableView" prefWidth="91.33331298828125" text=" Airline Name" />
+                        <TableColumn fx:id="mealTypesTableView" prefWidth="88.6666259765625" text=" Meal Types" />
+                        <TableColumn fx:id="mealQualityTableView" minWidth="6.6666259765625" prefWidth="94.66659545898438" text="Meal Quality" />
+                        <TableColumn fx:id="deliveryDeadlineTableView" minWidth="6.6666259765625" prefWidth="134.66668701171875" text="Delivery Deadline" />
                     </columns>
                   </TableView>
-                  <Button layoutX="479.0" layoutY="423.0" mnemonicParsing="false" onAction="#confirmOnAction" text="Confirm Order" />
-                  <Line endX="100.0" layoutX="298.0" layoutY="33.0" startX="-100.0" />
+                  <Button layoutX="221.0" layoutY="145.0" mnemonicParsing="false" onAction="#confirmOnAction" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: LIMEGREEN;" text="Confirm Order" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Line endX="129.16668701171875" endY="3.814697265625E-6" layoutX="298.0" layoutY="43.0" startX="-126.83331298828125" startY="7.62939453125E-6" />
+                  <Button layoutX="374.0" layoutY="145.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="119.0" text="Clear">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="26.0" layoutY="225.0" prefHeight="17.0" prefWidth="111.0" style="-fx-background-color: RoyalBlue;" text="  Approved Orders" textFill="#fff9f9">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Line endX="16.166656494140625" endY="-1.52587890625E-5" layoutX="123.0" layoutY="242.0" startX="-97.00001525878906" startY="0.3333282470703125" />
                </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
