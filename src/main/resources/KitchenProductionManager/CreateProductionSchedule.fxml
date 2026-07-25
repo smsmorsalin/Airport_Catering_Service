@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.kitchen_production_manager.CreateProductionScheduleController">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
@@ -95,7 +95,7 @@
                            <font>
                               <Font name="Arial Bold" size="12.0" />
                            </font></Label>
-                        <Label fx:id="fxidDisplayScheduledStartTimeLabel" layoutX="10.0" layoutY="139.0" prefHeight="15.0" prefWidth="359.0" text="Scheduled End Time" textFill="WHITE">
+                        <Label fx:id="fxidDisplayScheduledEndTimeLabel" layoutX="10.0" layoutY="139.0" prefHeight="15.0" prefWidth="359.0" text="Scheduled End Time" textFill="WHITE">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
                            </font></Label>
