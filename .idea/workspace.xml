@@ -4,115 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+    <list default="true" id="e101e7ce-b365-4b78-887a-de15ec980c73" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/resources/ KitchenProductionManager/AssignKitchenStaffView.fxml&#10;#&#9;src/main/resources/ KitchenProductionManager/AssignKitchenStaff_KitchenProductionManagerView.fxml&#10;#&#9;src/main/resources/ KitchenProductionManager/CalculateIngredientRequirements.fxml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/ApproveProductionCompletionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/AssignKitchenStaffController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CalculateIngredientRequirementsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateMenuListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateProductionPlanController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateProductionScheduleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/GenerateProductionReportsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/MonitorProductionActivitiesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaff_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CalculateIngredientRequirements.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/HandleRejectedBatch_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ApproveProductionCompletion.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/KitchenPerformanceReport_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/GenerateProductionReports .fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ManageMealPreparation_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CreateProductionPlan.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/MonitorCookingProgress_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CreateProductionSchedule.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/RequestQualityInspection_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/MonitorProductionActivities .fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/Update ProductionStatus_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CreateMenuList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTaskView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ReceiveApprovedCateringOrders.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/viewProductionTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/ReceiveApprovedCateringOrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ApproveProductionCompletion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ApproveProductionCompletion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaffView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaffView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CalculateIngredientRequirements.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CalculateIngredientRequirements.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CreateMenuList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CreateMenuList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CreateProductionPlan.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CreateProductionPlan.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CreateProductionSchedule.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CreateProductionSchedule.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/GenerateProductionReports .fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/GenerateProductionReports .fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/MonitorProductionActivities .fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/MonitorProductionActivities .fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ReceiveApprovedCateringOrders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ReceiveApprovedCateringOrders.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Saif-kaif&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Saif-kaif"
   }
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
-    "accountId": "ca804a1f-f117-4e10-a38a-3edf62ca5ddc"
+    "accountId": "09b4b316-9114-4bc1-8e76-96925cab0536"
   }
-}</component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="NextEditCompletionFeaturesState">
-    <decayedCancelled>
-      <entry key="MS100" value="1.004044948047876" />
-      <entry key="MS500" value="1.492203679819948" />
-      <entry key="S2" value="4.039216364506431" />
-      <entry key="S5" value="6.261646799043885" />
-      <entry key="S10" value="7.45167440669828" />
-      <entry key="S30" value="8.43708186872593" />
-      <entry key="S60" value="8.712184402149209" />
-      <entry key="M2" value="8.85446228049024" />
-      <entry key="M5" value="8.941388544117228" />
-      <entry key="M10" value="8.973000382444479" />
-      <entry key="M15" value="9.049657620687116" />
-      <entry key="M30" value="11.420205060268323" />
-      <entry key="H1" value="24.665492566196075" />
-      <entry key="H2" value="50.255264810685865" />
-      <entry key="H4" value="78.72222869578242" />
-      <entry key="D1" value="125.96638140631376" />
-      <entry key="W1" value="138.67695033154237" />
-    </decayedCancelled>
-    <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="3.8559086356894616E-241" />
-      <entry key="S30" value="7.278506010403416E-81" />
-      <entry key="S60" value="8.531416072629991E-41" />
-      <entry key="M2" value="9.237057389286974E-21" />
-      <entry key="M5" value="1.020457341804998E-8" />
-      <entry key="M10" value="1.606119861833057E-4" />
-      <entry key="M15" value="0.0053220042486503165" />
-      <entry key="M30" value="0.21361647296242034" />
-      <entry key="H1" value="1.4388179476786649" />
-      <entry key="H2" value="3.78003511492346" />
-      <entry key="H4" value="6.143197228616769" />
-      <entry key="D1" value="9.219029878199134" />
-      <entry key="W1" value="9.884481671750226" />
-    </decayedSelected>
-    <decayedShown>
-      <entry key="MS100" value="0.027036558674532658" />
-      <entry key="MS500" value="0.7529251548109128" />
-      <entry key="S2" value="3.6696946008759688" />
-      <entry key="S5" value="6.082183988029544" />
-      <entry key="S10" value="7.355331303805005" />
-      <entry key="S30" value="8.40333885585583" />
-      <entry key="S60" value="8.695098219547264" />
-      <entry key="M2" value="8.845864640505278" />
-      <entry key="M5" value="8.937936291900577" />
-      <entry key="M10" value="8.971432127466448" />
-      <entry key="M15" value="9.053813137489497" />
-      <entry key="M30" value="11.63293377497274" />
-      <entry key="H1" value="26.102932345067234" />
-      <entry key="H2" value="54.03369528260738" />
-      <entry key="H4" value="84.86414455378457" />
-      <entry key="D1" value="135.1850852536946" />
-      <entry key="W1" value="148.56138166475986" />
-    </decayedShown>
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="3GpedlUA9Dw7O7qeNlxSVSDPNma" />
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="3H0BKaK1yu9CHepJmSq7Nvt0QJl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -123,79 +60,19 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "sihab",
+    "git-widget-placeholder": "saif",
     "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-<<<<<<< HEAD
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
-=======
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
->>>>>>> e6c007c3f8b18bba8e0e3cc7e1bf2cd1338d42dc
+    "kotlin-language-version-configured": "true"
   }
-}</component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
-      </set>
-    </attachedChunks>
-  </component>
+}]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="" />
-      <created>1784673028203</created>
+      <changelist id="e101e7ce-b365-4b78-887a-de15ec980c73" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/resources/ KitchenProductionManager/AssignKitchenStaffView.fxml&#10;#&#9;src/main/resources/ KitchenProductionManager/AssignKitchenStaff_KitchenProductionManagerView.fxml&#10;#&#9;src/main/resources/ KitchenProductionManager/CalculateIngredientRequirements.fxml" />
+      <created>1784995048429</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1784673028203</updated>
-      <workItem from="1784917889209" duration="4182000" />
+      <updated>1784995048429</updated>
     </task>
-    <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
-      <option name="closed" value="true" />
-      <created>1784811645917</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1784811645918</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue.">
-      <option name="closed" value="true" />
-      <created>1784840887525</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1784840887525</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue.">
-      <option name="closed" value="true" />
-      <created>1784911000640</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1784911000640</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue." />
   </component>
 </project>
