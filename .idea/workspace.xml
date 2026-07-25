@@ -4,9 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue.">
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="change HelloApplication">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airlineRepresentativeSelfRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airlineRepresentativeSelfRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/viewProductionTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/viewProductionTaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/ApproveBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/FoodSafetyCheck_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/GenerateQAReport_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/GenerateQAReport_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/ManageQualityIssue_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/QualityTrendAnalysis_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/QualityTrendAnalysis_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/RejectBatch_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/dashboard_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/dashboard_FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/performInspection_ FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/performInspection_ FoodQualityControlOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/AssignKitchenStaffView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/AssignKitchenStaffView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/HandleRejectedBatch_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/HandleRejectedBatch_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/KitchenPerformanceReport_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/KitchenPerformanceReport_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ManageMealPreparation_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/ManageMealPreparation_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/MonitorCookingProgress_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/MonitorCookingProgress_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/RequestQualityInspection_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/RequestQualityInspection_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/Update ProductionStatus_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/Update ProductionStatus_KitchenProductionManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTaskView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/ViewProductionTaskView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/dashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/dashboardView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/loginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/loginView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,61 +68,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.004044948047876" />
-      <entry key="MS500" value="1.492203679819948" />
-      <entry key="S2" value="4.039216364506431" />
-      <entry key="S5" value="6.261646799043885" />
-      <entry key="S10" value="7.45167440669828" />
-      <entry key="S30" value="8.43708186872593" />
-      <entry key="S60" value="8.712184402149209" />
-      <entry key="M2" value="8.85446228049024" />
-      <entry key="M5" value="8.941388544117228" />
-      <entry key="M10" value="8.973000382444479" />
-      <entry key="M15" value="9.049657620687116" />
-      <entry key="M30" value="11.420205060268323" />
-      <entry key="H1" value="24.665492566196075" />
-      <entry key="H2" value="50.255264810685865" />
-      <entry key="H4" value="78.72222869578242" />
-      <entry key="D1" value="125.96638140631376" />
-      <entry key="W1" value="138.67695033154237" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.000000003379477" />
+      <entry key="S30" value="1.0025709619307404" />
+      <entry key="S60" value="1.104805157058551" />
+      <entry key="M2" value="1.9029161071755722" />
+      <entry key="M5" value="5.300511660254767" />
+      <entry key="M10" value="10.74575229757636" />
+      <entry key="M15" value="15.498614561458016" />
+      <entry key="M30" value="25.264569120137605" />
+      <entry key="H1" value="38.4800572112653" />
+      <entry key="H2" value="62.68223734487238" />
+      <entry key="H4" value="96.13109884247275" />
+      <entry key="D1" value="161.566947633933" />
+      <entry key="W1" value="180.49451743894673" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="3.8559086356894616E-241" />
-      <entry key="S30" value="7.278506010403416E-81" />
-      <entry key="S60" value="8.531416072629991E-41" />
-      <entry key="M2" value="9.237057389286974E-21" />
-      <entry key="M5" value="1.020457341804998E-8" />
-      <entry key="M10" value="1.606119861833057E-4" />
-      <entry key="M15" value="0.0053220042486503165" />
-      <entry key="M30" value="0.21361647296242034" />
-      <entry key="H1" value="1.4388179476786649" />
-      <entry key="H2" value="3.78003511492346" />
-      <entry key="H4" value="6.143197228616769" />
-      <entry key="D1" value="9.219029878199134" />
-      <entry key="W1" value="9.884481671750226" />
+      <entry key="MS100" value="2.4623976352618374E-166" />
+      <entry key="MS500" value="7.555646610431292E-34" />
+      <entry key="S2" value="5.242855754961799E-9" />
+      <entry key="S5" value="4.8733450686157774E-4" />
+      <entry key="S10" value="0.022075661137731524" />
+      <entry key="S30" value="0.2825582586499686" />
+      <entry key="S60" value="0.5943855919737172" />
+      <entry key="M2" value="1.2269210772673325" />
+      <entry key="M5" value="3.1842697890944724" />
+      <entry key="M10" value="6.110659519842111" />
+      <entry key="M15" value="8.41671481276328" />
+      <entry key="M30" value="12.480848635867684" />
+      <entry key="H1" value="16.00625783537778" />
+      <entry key="H2" value="19.567640757386062" />
+      <entry key="H4" value="23.160380299335767" />
+      <entry key="D1" value="28.505008911588238" />
+      <entry key="W1" value="29.775269039762208" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.027036558674532658" />
-      <entry key="MS500" value="0.7529251548109128" />
-      <entry key="S2" value="3.6696946008759688" />
-      <entry key="S5" value="6.082183988029544" />
-      <entry key="S10" value="7.355331303805005" />
-      <entry key="S30" value="8.40333885585583" />
-      <entry key="S60" value="8.695098219547264" />
-      <entry key="M2" value="8.845864640505278" />
-      <entry key="M5" value="8.937936291900577" />
-      <entry key="M10" value="8.971432127466448" />
-      <entry key="M15" value="9.053813137489497" />
-      <entry key="M30" value="11.63293377497274" />
-      <entry key="H1" value="26.102932345067234" />
-      <entry key="H2" value="54.03369528260738" />
-      <entry key="H4" value="84.86414455378457" />
-      <entry key="D1" value="135.1850852536946" />
-      <entry key="W1" value="148.56138166475986" />
+      <entry key="MS100" value="0.8235910172675731" />
+      <entry key="MS500" value="0.9619274546647747" />
+      <entry key="S2" value="0.9903428745120981" />
+      <entry key="S5" value="0.9964928314658055" />
+      <entry key="S10" value="1.0172165458920446" />
+      <entry key="S30" value="1.2713759096989892" />
+      <entry key="S60" value="1.6840797377147012" />
+      <entry key="M2" value="3.1117441082065374" />
+      <entry key="M5" value="8.461227057507257" />
+      <entry key="M10" value="16.826405270646013" />
+      <entry key="M15" value="23.88355906308922" />
+      <entry key="M30" value="37.7179707389601" />
+      <entry key="H1" value="54.46745397461488" />
+      <entry key="H2" value="82.23823566536859" />
+      <entry key="H4" value="119.28470128885779" />
+      <entry key="D1" value="190.0706031432419" />
+      <entry key="W1" value="210.26958549355913" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -174,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784911000640</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change HelloApplication">
+      <option name="closed" value="true" />
+      <created>1784923484716</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1784923484716</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +214,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue." />
+    <MESSAGE value="change HelloApplication" />
+    <option name="LAST_COMMIT_MESSAGE" value="change HelloApplication" />
   </component>
 </project>
