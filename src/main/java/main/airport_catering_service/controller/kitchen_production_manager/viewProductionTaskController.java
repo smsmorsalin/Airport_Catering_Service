@@ -50,8 +50,11 @@ public class viewProductionTaskController
 
     @javafx.fxml.FXML
     public void sidebarAirporCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlL =  new FXMLLoader(dashboardViewController.class.getResource("dashboardView"));
-        Node node = fxmlL.load();
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/KitchenProductionManager/dashboardView.fxml")
+        );
+
+        Node node = loader.load();
         mainPane.getChildren().setAll(node);
     }
 

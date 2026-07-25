@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ FoodQualityControlOfficer/ReceiveInspectionRequest_FoodQualityControlOfficerView.fxml" afterDir="false" />
@@ -15,6 +16,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/RequestQualityInspection_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/MonitorProductionActivities .fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/Update ProductionStatus_KitchenProductionManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/CreateMenuList.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ViewProductionTaskView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ KitchenProductionManager/ReceiveApprovedCateringOrders.fxml" afterDir="false" />
+=======
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="change HelloApplication">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> morsalin
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,61 +58,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.004044948047876" />
-      <entry key="MS500" value="1.492203679819948" />
-      <entry key="S2" value="4.039216364506431" />
-      <entry key="S5" value="6.261646799043885" />
-      <entry key="S10" value="7.45167440669828" />
-      <entry key="S30" value="8.43708186872593" />
-      <entry key="S60" value="8.712184402149209" />
-      <entry key="M2" value="8.85446228049024" />
-      <entry key="M5" value="8.941388544117228" />
-      <entry key="M10" value="8.973000382444479" />
-      <entry key="M15" value="9.049657620687116" />
-      <entry key="M30" value="11.420205060268323" />
-      <entry key="H1" value="24.665492566196075" />
-      <entry key="H2" value="50.255264810685865" />
-      <entry key="H4" value="78.72222869578242" />
-      <entry key="D1" value="125.96638140631376" />
-      <entry key="W1" value="138.67695033154237" />
+      <entry key="MS100" value="1.0435858062976315" />
+      <entry key="MS500" value="1.6548982686254239" />
+      <entry key="S2" value="4.309011539996596" />
+      <entry key="S5" value="6.529225963586414" />
+      <entry key="S10" value="7.634844819873728" />
+      <entry key="S30" value="8.512474036648232" />
+      <entry key="S60" value="8.752374359365147" />
+      <entry key="M2" value="9.11726962876603" />
+      <entry key="M5" value="20.37049656579058" />
+      <entry key="M10" value="51.820148899359786" />
+      <entry key="M15" value="76.88367087196195" />
+      <entry key="M30" value="119.98292563780073" />
+      <entry key="H1" value="157.60518836741286" />
+      <entry key="H2" value="196.43506372704218" />
+      <entry key="H4" value="238.71124478294507" />
+      <entry key="D1" value="314.61369615663307" />
+      <entry key="W1" value="336.04335527439144" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="3.8559086356894616E-241" />
-      <entry key="S30" value="7.278506010403416E-81" />
-      <entry key="S60" value="8.531416072629991E-41" />
-      <entry key="M2" value="9.237057389286974E-21" />
-      <entry key="M5" value="1.020457341804998E-8" />
-      <entry key="M10" value="1.606119861833057E-4" />
-      <entry key="M15" value="0.0053220042486503165" />
-      <entry key="M30" value="0.21361647296242034" />
-      <entry key="H1" value="1.4388179476786649" />
-      <entry key="H2" value="3.78003511492346" />
-      <entry key="H4" value="6.143197228616769" />
-      <entry key="D1" value="9.219029878199134" />
-      <entry key="W1" value="9.884481671750226" />
+      <entry key="MS100" value="3.047682004154326E-4" />
+      <entry key="MS500" value="0.19805870273124226" />
+      <entry key="S2" value="0.6671115848388844" />
+      <entry key="S5" value="0.8505099388032598" />
+      <entry key="S10" value="0.9222309574088584" />
+      <entry key="S30" value="0.9733743525652134" />
+      <entry key="S60" value="0.9865981434644469" />
+      <entry key="M2" value="0.9948049632603965" />
+      <entry key="M5" value="1.2223221211117177" />
+      <entry key="M10" value="2.6440486812426167" />
+      <entry key="M15" value="4.546606239441464" />
+      <entry key="M30" value="9.271895989882125" />
+      <entry key="H1" value="14.320886762004388" />
+      <entry key="H2" value="19.202864265648103" />
+      <entry key="H4" value="23.728922848771326" />
+      <entry key="D1" value="30.206161814548743" />
+      <entry key="W1" value="31.730543222587492" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.027036558674532658" />
-      <entry key="MS500" value="0.7529251548109128" />
-      <entry key="S2" value="3.6696946008759688" />
-      <entry key="S5" value="6.082183988029544" />
-      <entry key="S10" value="7.355331303805005" />
-      <entry key="S30" value="8.40333885585583" />
-      <entry key="S60" value="8.695098219547264" />
-      <entry key="M2" value="8.845864640505278" />
-      <entry key="M5" value="8.937936291900577" />
-      <entry key="M10" value="8.971432127466448" />
-      <entry key="M15" value="9.053813137489497" />
-      <entry key="M30" value="11.63293377497274" />
-      <entry key="H1" value="26.102932345067234" />
-      <entry key="H2" value="54.03369528260738" />
-      <entry key="H4" value="84.86414455378457" />
-      <entry key="D1" value="135.1850852536946" />
-      <entry key="W1" value="148.56138166475986" />
+      <entry key="MS100" value="0.1513726780896345" />
+      <entry key="MS500" value="1.2935740878892326" />
+      <entry key="S2" value="4.645815417946801" />
+      <entry key="S5" value="7.208656550290927" />
+      <entry key="S10" value="8.463115609352384" />
+      <entry key="S30" value="9.452430813222907" />
+      <entry key="S60" value="9.721985814350214" />
+      <entry key="M2" value="10.103459335110085" />
+      <entry key="M5" value="21.587279289263975" />
+      <entry key="M10" value="54.4539441766933" />
+      <entry key="M15" value="81.4155011571914" />
+      <entry key="M30" value="129.23610159636027" />
+      <entry key="H1" value="171.91019616153145" />
+      <entry key="H2" value="215.62702224426408" />
+      <entry key="H4" value="262.4334769626071" />
+      <entry key="D1" value="344.8184639118493" />
+      <entry key="W1" value="367.7736899879466" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -117,6 +123,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
@@ -145,6 +152,31 @@
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
 >>>>>>> e6c007c3f8b18bba8e0e3cc7e1bf2cd1338d42dc
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;morsalin&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+>>>>>>> morsalin
   }
 }</component>
   <component name="SharedIndexes">
@@ -188,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784911000640</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change HelloApplication">
+      <option name="closed" value="true" />
+      <created>1784923484716</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1784923484716</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +236,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue." />
+    <MESSAGE value="change HelloApplication" />
+    <option name="LAST_COMMIT_MESSAGE" value="change HelloApplication" />
   </component>
 </project>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+    <children>
+        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#sideBarViewProductionTasksOnAction" prefHeight="42.0" prefWidth="174.0" text=" View Production Tasks" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarAssignKitchenStaffOnAction" prefHeight="42.0" prefWidth="174.0" text=" Assign Kitchen Staff" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarManageMealPreparationOnAction" prefHeight="42.0" prefWidth="174.0" text=" Manage Meal Preparation" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: blue;" text=" Monitor Cooking Progress" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sidebarUpdateProductionStatusOnAction" prefHeight="42.0" prefWidth="174.0" text=" Update Production Status" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarRequestQualityInspectionOnAction" prefHeight="42.0" prefWidth="174.0" text="Request Quality Inspection" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarHandleRejectedBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Handle Rejected Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarKitchenPerformanceReportOnAction" prefHeight="42.0" prefWidth="174.0" text=" Kitchen Performance Report" textOverrun="CENTER_ELLIPSIS" />
+            </children>
+        </VBox>
+        <Button layoutY="3.0" mnemonicParsing="false" onAction="#sidebarAirportCateringServiceButtonOnClick" prefHeight="35.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant>
+                            <color>
+                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
+                            </color>
+                        </Light.Distant>
+                    </light>
+                </Lighting>
+            </effect>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
+            <children>
+                <AnchorPane prefHeight="591.0" prefWidth="596.0" style="-fx-background-color: darkBlue;">
+               <children>
+                  <Label layoutX="27.0" layoutY="90.0" prefHeight="17.0" prefWidth="127.0" text=" Production Plan ID" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="28.0" layoutY="134.0" text="Start Time" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="26.0" layoutY="173.0" text=" End Time" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <TextField fx:id="productionPlanIDTextField" layoutX="177.0" layoutY="86.0" />
+                  <Label layoutX="235.0" layoutY="166.0" prefHeight="17.0" prefWidth="3.0" text=":" textFill="WHITE" />
+                  <Label layoutX="233.0" layoutY="130.0" text=":" textFill="WHITE" />
+                  <Button layoutX="35.0" layoutY="257.0" mnemonicParsing="false" onAction="#confirmOnAction" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: royalBlue;" text="Search Plan" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Button>
+                  <AnchorPane layoutX="26.0" layoutY="315.0" prefHeight="167.0" prefWidth="501.0" style="-fx-background-color: royalBlue;">
+                     <children>
+                        <Label fx:id="fxidDisplayScheduleIDLabel" layoutX="10.0" layoutY="4.0" prefHeight="15.0" prefWidth="307.0" text="Schedule ID" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="fxidDisplayProductionPlanIDLabel" layoutX="8.0" layoutY="32.0" prefHeight="15.0" prefWidth="339.0" text="Production Plan ID" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="fxidDisplayWorkShiftLabel" layoutX="10.0" layoutY="57.0" prefHeight="15.0" prefWidth="339.0" text="Work Shift" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="fxidDisplayMealCategoriesLabel" layoutX="7.0" layoutY="84.0" prefHeight="15.0" prefWidth="339.0" text="Meal Categories   " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="fxidDisplayScheduledStartTimeLabel" layoutX="7.0" layoutY="112.0" prefHeight="15.0" prefWidth="390.0" text="Scheduled Start Time" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="fxidDisplayScheduledStartTimeLabel" layoutX="10.0" layoutY="139.0" prefHeight="15.0" prefWidth="359.0" text="Scheduled End Time" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font></Label>
+                     </children>
+                  </AnchorPane>
+                  <ComboBox fx:id="startHoursTimeComboBox" layoutX="173.0" layoutY="126.0" prefHeight="25.0" prefWidth="33.0" />
+                  <ComboBox fx:id="startsHoursTimeComboBox" layoutX="248.0" layoutY="126.0" prefHeight="25.0" prefWidth="33.0" />
+                  <ComboBox fx:id="endsHoursTimeComboBox" layoutX="173.0" layoutY="169.0" prefHeight="25.0" prefWidth="33.0" />
+                  <ComboBox fx:id="endsMinutiesTimeComboBox" layoutX="252.0" layoutY="169.0" prefHeight="25.0" prefWidth="33.0" />
+                  <Label layoutX="120.0" layoutY="14.0" prefHeight="21.0" prefWidth="245.0" text="Create Production Schedule" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="207.0" text=" Work Shift" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="206.0" layoutY="257.0" mnemonicParsing="false" onAction="#createScheduleOnAction" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: LimeGreen;" text="Create Schedule" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="390.0" layoutY="257.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="89.0" text="Clear">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="workShiftComboBox1" layoutX="168.0" layoutY="202.0" prefHeight="25.0" prefWidth="158.0" />
+               </children></AnchorPane>
+            </children></VBox>
+        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
+    </children>
+</AnchorPane>
