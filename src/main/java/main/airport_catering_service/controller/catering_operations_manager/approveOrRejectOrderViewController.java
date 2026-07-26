@@ -1,5 +1,10 @@
 package main.airport_catering_service.controller.catering_operations_manager;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+
 public class approveOrRejectOrderViewController
 {
     @javafx.fxml.FXML
