@@ -50,6 +50,11 @@
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
+            <Button mnemonicParsing="false" onAction="#sideBarLogoutButtonOnClick" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: red;" text="Logout" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+            </Button>
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" onAction="#homeButtonAirportCateringService" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
