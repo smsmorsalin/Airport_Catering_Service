@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Inmpliment generateReportView.fxml">
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModification_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModification_CustomerSupportOfficerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellation_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellation_CustomerSupportOfficerView.fxml" afterDir="false" />
@@ -12,8 +13,6 @@
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="change HelloApplication">
       <change afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/operationalReportView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboardView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/layout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/layout.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,10 +164,23 @@
       <option name="project" value="LOCAL" />
       <updated>1784811645918</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Inmpliment generateReportView.fxml">
+      <option name="closed" value="true" />
+      <created>1785089466557</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1785089466558</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change HelloApplication" />
+    <MESSAGE value="Inmpliment generateReportView.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inmpliment generateReportView.fxml" />
   </component>
 </project>
