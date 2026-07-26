@@ -1,4 +1,4 @@
-package main.airport_catering_service.controller.food_quality_control_officer;
+package main.airport_catering_service.controller.kitchen_production_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
@@ -29,23 +29,27 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void sideBarQAReportOnAction(ActionEvent actionEvent) {
+    public void sideBarMonitorProductionOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void sideBarQualityIssueOnAction(ActionEvent actionEvent) {
+    public void sideBarProductionScheduleOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
+    public void sideBarMenuListOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void sideBarFoodSafetyCheckOnAction(ActionEvent actionEvent) {
+    public void sideBarReceiveOrdersOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void sideBarInspectionRequestOnAction(ActionEvent actionEvent) {
+    public void sideBarApproveProductionOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarCalculateIngredientOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -53,18 +57,14 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void sideBarPerformInspectionOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void updateOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void sideBarApproveBatchOnAction(ActionEvent actionEvent) {
+    public void sideBarProductionReportsOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void sideBarTrendAnalysisOnAction(ActionEvent actionEvent) {
+    public void sideBarProductionPlanOnAction(ActionEvent actionEvent) {
     }
 }
