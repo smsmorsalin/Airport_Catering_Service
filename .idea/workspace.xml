@@ -6,24 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruckView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruckView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/EmergencyDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/EmergencyDeliveryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/GenerateDispatchReportView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/GenerateDispatchReportView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ManageDeliveryDelayView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ManageDeliveryDelayView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/PackageOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/PackageOrderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ReceiveDispatchRequestView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ReceiveDispatchRequestView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ScheduleDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ScheduleDeliveryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/dashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/dashboardView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/CheckIngredientAvailabilityView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/CheckIngredientAvailabilityView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/CreatePurchaseRequestView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/CreatePurchaseRequestView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/GenerateInventoryReportView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/GenerateInventoryReportView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/LowStockAlertView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/LowStockAlertView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/ManageSupplierView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/ManageSupplierView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/ReceiveIngredientView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/ReceiveIngredientView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/ReserveIngredientView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/ReserveIngredientView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/UpdateInventoryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/UpdateInventoryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/InventroyManager/dashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventroyManager/dashboardView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +152,7 @@
       <workItem from="1784917889209" duration="4752000" />
       <workItem from="1784999395800" duration="77000" />
       <workItem from="1785008799382" duration="128000" />
-      <workItem from="1785086783060" duration="8873000" />
+      <workItem from="1785086783060" duration="9637000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
       <option name="closed" value="true" />
