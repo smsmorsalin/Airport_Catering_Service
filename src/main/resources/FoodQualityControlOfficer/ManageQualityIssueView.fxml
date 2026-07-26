@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.food_quality_control_officer.ManageQualityIssueController">
+    <children>
+        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
+            <children>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarReceiveInspectionRequestOnAction" prefHeight="42.0" prefWidth="174.0" text="Receive Inspection Request" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarPerformInspectionOnAction" prefHeight="42.0" prefWidth="174.0" text=" Perform Inspection" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarFoodSafetyCheckOnAction" prefHeight="42.0" prefWidth="174.0" text="Food Safety Check" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarApproveBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Approve Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarRejectBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Reject Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: royalBlue;" text=" Manage Quality Issue" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarQualityTrendAnalysisOnAction" prefHeight="42.0" prefWidth="174.0" text=" Quality Trend Analysis" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarGenerateQAReportOnAction" prefHeight="42.0" prefWidth="174.0" text="Generate QA Report" textOverrun="CENTER_ELLIPSIS" />
+            </children>
+        </VBox>
+        <Button layoutY="-10.0" mnemonicParsing="false" onAction="#homeButtonAirportCateringServiceOnAction" prefHeight="49.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant>
+                            <color>
+                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
+                            </color>
+                        </Light.Distant>
+                    </light>
+                </Lighting>
+            </effect>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="582.0" style="-fx-background-color: silver;">
+            <children>
+                <AnchorPane prefHeight="582.0" prefWidth="582.0" style="-fx-background-color: darkBlue;">
+               <children>
+                  <Label layoutX="27.0" layoutY="57.0" text=" Issue ID" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="26.0" layoutY="83.0" text="Corrective Action" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="27.0" layoutY="159.0" text="Follow Up Notes" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <TextField fx:id="issueIDTextField" layoutX="92.0" layoutY="53.0" prefHeight="25.0" prefWidth="185.0" />
+                  <TextArea fx:id="correctiveActionTextArea" layoutX="92.0" layoutY="109.0" prefHeight="42.0" prefWidth="264.0" />
+                  <TextArea fx:id="followUpNotesTextArea" layoutX="92.0" layoutY="184.0" prefHeight="42.0" prefWidth="264.0" />
+                  <Button layoutX="208.0" layoutY="246.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: limeGreen;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <AnchorPane layoutX="62.0" layoutY="336.0" prefHeight="119.0" prefWidth="393.0" style="-fx-background-color: royalBlue;">
+                     <children>
+                        <Label fx:id="fxidDisplayResponsibleDepartmentLabel" layoutX="13.0" layoutY="16.0" prefHeight="17.0" prefWidth="253.0" text="Responsible Department : " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="13.0" layoutY="44.0" prefHeight="17.0" prefWidth="231.0" text="Resolution Status : " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="fxidDisplayFollowUpdateLabel" layoutX="13.0" layoutY="72.0" prefHeight="17.0" prefWidth="231.0" text="Follow Update : " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font></Label>
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="36.0" layoutY="246.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: royalBlue;" text="Search " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="132.0" layoutY="7.0" text="Manage Food Quality Issue" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="355.0" layoutY="246.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="81.0" text="Clear">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+            </children></VBox>
+        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
+    </children>
+</AnchorPane>

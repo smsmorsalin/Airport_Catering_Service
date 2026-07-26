@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.kitchen_production_manager.dashboardController">
+    <children>
+        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#sideBarReceiveOrdersOnAction" prefHeight="42.0" prefWidth="174.0" text="Receive Orders" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarCalculateIngredientOnAction" prefHeight="42.0" prefWidth="174.0" text="Calculate Ingredient" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionPlanOnAction" prefHeight="42.0" prefWidth="174.0" text="Production Plan" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionScheduleOnAction" prefHeight="42.0" prefWidth="174.0" text="Production Schedule" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMenuListOnAction" prefHeight="42.0" prefWidth="174.0" text="Menu List" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMonitorProductionOnAction" prefHeight="42.0" prefWidth="174.0" text="Monitor Production" textOverrun="CENTER_ELLIPSIS" />
+            <Button mnemonicParsing="false" onAction="#sideBarApproveProductionOnAction" prefHeight="42.0" prefWidth="174.0" text="Approve Production" textOverrun="CENTER_ELLIPSIS" />
+            <Button mnemonicParsing="false" onAction="#sideBarProductionReportsOnAction" prefHeight="42.0" prefWidth="174.0" text="Production Reports" textOverrun="CENTER_ELLIPSIS" />
+            </children>
+        </VBox>
+        <Button layoutY="3.0" mnemonicParsing="false" onAction="#sideBarAirportCateringServiceOnAction" prefHeight="35.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant>
+                            <color>
+                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
+                            </color>
+                        </Light.Distant>
+                    </light>
+                </Lighting>
+            </effect>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
+            <children>
+                <AnchorPane prefHeight="566.0" prefWidth="596.0" style="-fx-background-color: royalBlue;">
+                    <children>
+                        <Label fx:id="emargencyIssueLabel" layoutX="7.0" layoutY="2.0" prefHeight="17.0" prefWidth="215.0" text="Emargency Issue" textFill="#fa0702" />
+                        <TableView fx:id="mainTableView" layoutX="2.0" layoutY="25.0" prefHeight="223.0" prefWidth="590.0">
+                            <columns>
+                                <TableColumn fx:id="ticketIDTableColumn" prefWidth="83.0" text="Ticket ID" />
+                                <TableColumn fx:id="issueTypeTableView" prefWidth="84.0" text="Issue Type" />
+                                <TableColumn fx:id="descriptionTableView" prefWidth="330.0" text="Description" />
+                                <TableColumn fx:id="statusTableView" prefWidth="91.0" text="Status" />
+                            </columns>
+                        </TableView>
+                        <Label fx:id="enterTicketIDTextField" layoutX="4.0" layoutY="304.0" prefHeight="17.0" prefWidth="88.0" text="Enter Ticket ID" />
+                        <TextField fx:id="enterTicketIDtextField" layoutX="85.0" layoutY="300.0" prefHeight="25.0" prefWidth="128.0" />
+                        <Label layoutX="222.0" layoutY="271.0" prefHeight="17.0" prefWidth="165.0" text="Update Issue's Current Status" textFill="#47a432" />
+                        <ComboBox fx:id="statusComboBox" layoutX="286.0" layoutY="300.0" prefWidth="150.0" />
+                        <Label layoutX="246.0" layoutY="304.0" prefHeight="17.0" prefWidth="35.0" text="Status" />
+                        <Button layoutX="468.0" layoutY="300.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="25.0" prefWidth="95.0" text="Update">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Line endX="100.0" layoutX="302.0" layoutY="288.0" startX="-100.0" />
+                    </children></AnchorPane>
+            </children></VBox>
+        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
+    </children>
+</AnchorPane>
