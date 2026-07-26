@@ -5,6 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Inmpliment generateReportView.fxml">
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModification_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModification_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellation_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellation_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightDelayRequest_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightDelayRequest_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ServiceUpdates_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ServiceUpdates_CustomerSupportOfficerView.fxml" afterDir="false" />
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="change HelloApplication">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/operationalReportView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
