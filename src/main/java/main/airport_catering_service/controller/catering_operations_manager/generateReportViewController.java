@@ -1,5 +1,9 @@
 package main.airport_catering_service.controller.catering_operations_manager;
 
+import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.scene.control.ComboBox;
+
 public class generateReportViewController
 {
     @javafx.fxml.FXML
