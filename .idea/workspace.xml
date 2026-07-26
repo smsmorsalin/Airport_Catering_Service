@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/GenerateReports_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/GenerateReports_CustomerSupportOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/RegisterComplaint_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/RegisterComplaint_CustomerSupportOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ResolveComplaint_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ResolveComplaint_CustomerSupportOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/TrackComplaint_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/TrackComplaint_CustomerSupportOfficerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/CalculateCost_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/CalculateCost_FinanceAndBillingManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModification_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModification_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellation_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellation_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightDelayRequest_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightDelayRequest_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ServiceUpdates_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ServiceUpdates_CustomerSupportOfficerView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
