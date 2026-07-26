@@ -31,6 +31,9 @@ public class ReceiveApprovedCateringOrdersController
     @FXML
     private TextField orderIDTextField1;
 
+    @FXML
+    private AnchorPane anchorPan;
+
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -52,6 +55,11 @@ public class ReceiveApprovedCateringOrdersController
 //        FXMLLoader fxmlL =  new FXMLLoader(dashboardViewController.class.getResource("dashboardView"));
 //        Node node = fxmlL.load();
 //        mainPane.getChildren().setAll(node);
+
+        FXMLLoader registerFXML = new FXMLLoader(getClass().getResource("/main/airport_catering_service/dashboardView.fxml"));
+        Node node = registerFXML.load();
+        anchorPan.getChildren().setAll(node);
+
     }
 
     @Deprecated
