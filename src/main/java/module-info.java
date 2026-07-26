@@ -1,6 +1,7 @@
 module main.airport_catering_service {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
     opens main.airport_catering_service to javafx.fxml;

@@ -16,18 +16,18 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.kitchen_production_manager.dashboardController">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.food_quality_control_officer.dashboardController">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" onAction="#sideBarReceiveOrdersOnAction" prefHeight="42.0" prefWidth="174.0" text="Receive Orders" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarCalculateIngredientOnAction" prefHeight="42.0" prefWidth="174.0" text="Calculate Ingredient" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionPlanOnAction" prefHeight="42.0" prefWidth="174.0" text="Production Plan" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionScheduleOnAction" prefHeight="42.0" prefWidth="174.0" text="Production Schedule" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMenuListOnAction" prefHeight="42.0" prefWidth="174.0" text="Menu List" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMonitorProductionOnAction" prefHeight="42.0" prefWidth="174.0" text="Monitor Production" textOverrun="CENTER_ELLIPSIS" />
-            <Button mnemonicParsing="false" onAction="#sideBarApproveProductionOnAction" prefHeight="42.0" prefWidth="174.0" text="Approve Production" textOverrun="CENTER_ELLIPSIS" />
-            <Button mnemonicParsing="false" onAction="#sideBarProductionReportsOnAction" prefHeight="42.0" prefWidth="174.0" text="Production Reports" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarInspectionRequestOnAction" prefHeight="42.0" prefWidth="174.0" text="Inspection Request" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarPerformInspectionOnAction" prefHeight="42.0" prefWidth="174.0" text="Perform Inspection" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarFoodSafetyCheckOnAction" prefHeight="42.0" prefWidth="174.0" text="Food Safety Check" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarApproveBatchOnAction" prefHeight="42.0" prefWidth="174.0" text="Approve Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarRejectBatchOnAction" prefHeight="42.0" prefWidth="174.0" text="Reject Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarQualityIssueOnAction" prefHeight="42.0" prefWidth="174.0" text="Quality Issue" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarTrendAnalysisOnAction" prefHeight="42.0" prefWidth="174.0" text="Trend Analysis" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarQAReportOnAction" prefHeight="42.0" prefWidth="174.0" text="QA Report" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" onAction="#sideBarAirportCateringServiceOnAction" prefHeight="35.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
