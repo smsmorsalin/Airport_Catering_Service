@@ -20,12 +20,12 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Load Task" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Start Preparation" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Update Preparation" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Save Progress" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="loadTaskButton" mnemonicParsing="false" onAction="#onLoadTask" prefHeight="42.0" prefWidth="174.0" text="Load Task" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="startPreparationButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onStartPreparation" prefHeight="42.0" prefWidth="174.0" text="Start Preparation" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="updatePreparationButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onUpdatePreparation" prefHeight="42.0" prefWidth="174.0" text="Update Preparation" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="saveProgressButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onSaveProgress" prefHeight="42.0" prefWidth="174.0" text="Save Progress" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="BackButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="logoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -59,21 +59,22 @@
                 </Label>
                 <AnchorPane prefHeight="566.0" prefWidth="596.0">
                <children>
-                  <TextField layoutX="126.0" layoutY="22.0" />
-                  <TextField layoutX="427.0" layoutY="23.0" />
-                  <TextField layoutX="138.0" layoutY="87.0" />
+                  <TextField fx:id="productionTaskTextField" layoutX="126.0" layoutY="22.0" />
+                  <TextField fx:id="preparationInstructionTextField" layoutX="427.0" layoutY="23.0" />
+                  <TextField fx:id="specialRequirementTextField" layoutX="138.0" layoutY="87.0" />
                   <Text layoutX="17.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production Task ID" />
                   <Text layoutX="286.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preparation Instructions" />
                   <Text layoutX="9.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Special Requirements" />
-                  <TableView layoutX="-4.0" layoutY="144.0" prefHeight="421.0" prefWidth="605.0">
+                  <TableView fx:id="managemealpreparationtableColumn" layoutX="-4.0" layoutY="144.0" prefHeight="421.0" prefWidth="605.0">
                     <columns>
-                      <TableColumn prefWidth="141.0" text="Task ID" />
-                      <TableColumn prefWidth="122.0" text="Meal Category" />
-                        <TableColumn prefWidth="173.0" text="Assigned Team" />
-                        <TableColumn prefWidth="168.0" text="Preparation Status" />
+                      <TableColumn fx:id="taskIdColumn" prefWidth="141.0" text="Task ID" />
+                      <TableColumn fx:id="malecategoryColumn" prefWidth="122.0" text="Meal Category" />
+                        <TableColumn fx:id="assignedteamColumn" prefWidth="173.0" text="Assigned Team" />
+                        <TableColumn fx:id="preparationstatusColumn" prefWidth="168.0" text="Preparation Status" />
                     </columns>
                   </TableView>
-               </children></AnchorPane>
+               </children>
+            </AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
     </children>

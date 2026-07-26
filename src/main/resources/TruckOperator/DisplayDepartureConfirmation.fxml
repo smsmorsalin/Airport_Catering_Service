@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
@@ -20,11 +20,12 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Submit Report" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="updateTransitButton" mnemonicParsing="false" onAction="#onUpdateTransit" prefHeight="42.0" prefWidth="174.0" text="Update Transit" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="saveButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onSave" prefHeight="42.0" prefWidth="174.0" text="Save" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="refreshButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onRefresh" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="clearButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClear" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="logoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -58,19 +59,16 @@
                 </Label>
                 <AnchorPane prefHeight="566.0" prefWidth="596.0">
                <children>
-                  <TextField layoutX="107.0" layoutY="14.0" />
-                  <Text layoutX="12.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment ID" />
-                  <ComboBox layoutX="404.0" layoutY="15.0" prefWidth="150.0" />
-                  <ComboBox layoutX="112.0" layoutY="75.0" prefWidth="150.0" />
-                  <Text layoutX="40.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Priority" />
-                  <Text layoutX="318.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problem Type" />
-                  <TextArea layoutX="379.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0" />
-                  <Text layoutX="263.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problem Description" />
-                  <Label layoutX="70.0" layoutY="134.0" text="Incident ID" />
-                  <Label layoutX="70.0" layoutY="167.0" text="Report Status" />
-                  <Label layoutX="70.0" layoutY="201.0" text="Submission Time" />
+                  <TextField fx:id="assignmentIdTextField" layoutX="112.0" layoutY="14.0" />
+                  <TextField fx:id="currentLocationTextField" layoutX="422.0" layoutY="14.0" />
+                  <ComboBox fx:id="deliveryStatusComboBox" layoutX="117.0" layoutY="68.0" prefWidth="150.0" />
+                  <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment ID" />
+                  <Text layoutX="312.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Location" />
+                  <Text layoutX="13.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Status" />
+                  <Label fx:id="label" layoutX="407.0" layoutY="73.0" text="Label" />
+                  <Label fx:id="label" layoutX="407.0" layoutY="108.0" text="Label" />
+                  <ProgressBar fx:id="completionBar" layoutX="372.0" layoutY="147.0" prefWidth="200.0" progress="0.0" />
                </children></AnchorPane>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
     </children>

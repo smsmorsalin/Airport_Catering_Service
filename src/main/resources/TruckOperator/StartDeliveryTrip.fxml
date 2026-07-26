@@ -19,12 +19,12 @@
 <children>
     <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
         <children>
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Start Delivery" textOverrun="CENTER_ELLIPSIS" />
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Save" textOverrun="CENTER_ELLIPSIS" />
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
+            <Button fx:id="startDeliveryButton" mnemonicParsing="false" onAction="#onStartDelivery" prefHeight="42.0" prefWidth="174.0" text="Start Delivery" textOverrun="CENTER_ELLIPSIS" />
+            <Button fx:id="saveButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onSave" prefHeight="42.0" prefWidth="174.0" text="Save" textOverrun="CENTER_ELLIPSIS" />
+            <Button fx:id="refreshButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onRefresh" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
+            <Button fx:id="clearButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClear" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
+            <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
+            <Button fx:id="logoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
         </children>
     </VBox>
     <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -58,12 +58,12 @@
             </Label>
             <AnchorPane prefHeight="566.0" prefWidth="596.0">
                <children>
-                  <TextField layoutX="113.0" layoutY="14.0" />
+                  <TextField fx:id="assignmentIdTextField" layoutX="113.0" layoutY="14.0" />
                   <Text layoutX="24.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment ID" />
-                  <TextArea layoutX="153.0" layoutY="56.0" prefHeight="200.0" prefWidth="200.0" />
+                  <TextArea fx:id="vehicleConditionNotesTextAea" layoutX="153.0" layoutY="56.0" prefHeight="200.0" prefWidth="200.0" />
                   <Text layoutX="14.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Condition Notes" />
-                  <Label layoutX="460.0" layoutY="32.0" text="Departure Time" />
-                  <Label layoutX="460.0" layoutY="104.0" text="Truck Status" />
+                  <Label fx:id="deprartureTimeLabel" layoutX="460.0" layoutY="32.0" text="Departure Time" />
+                  <Label fx:id="truckStatusLabel" layoutX="460.0" layoutY="104.0" text="Truck Status" />
                </children></AnchorPane>
         </children></VBox>
     <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />

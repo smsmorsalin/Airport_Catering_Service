@@ -21,12 +21,12 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Search" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Filter" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Export Report" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="searchButton" mnemonicParsing="false" onAction="#onSearch" prefHeight="42.0" prefWidth="174.0" text="Search" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="filterButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onFilter" prefHeight="42.0" prefWidth="174.0" text="Filter" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="refreshButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onRefresh" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="exportReportButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onExportReport" prefHeight="42.0" prefWidth="174.0" text="Export Report" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="logoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -60,21 +60,21 @@
                 </Label>
                 <AnchorPane prefHeight="566.0" prefWidth="596.0">
                <children>
-                  <DatePicker layoutX="118.0" layoutY="11.0" />
-                  <DatePicker layoutX="396.0" layoutY="14.0" />
-                  <ComboBox layoutX="124.0" layoutY="67.0" prefWidth="150.0" />
+                  <DatePicker fx:id="startDatePicker" layoutX="118.0" layoutY="11.0" />
+                  <DatePicker fx:id="endDatePicker" layoutX="396.0" layoutY="14.0" />
+                  <ComboBox fx:id="deliveryStatusComboBox" layoutX="124.0" layoutY="67.0" prefWidth="150.0" />
                   <Text layoutX="38.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date" />
                   <Text layoutX="337.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date" />
                   <Text layoutX="38.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Status" />
-                  <TableView layoutX="-2.0" layoutY="138.0" prefHeight="427.0" prefWidth="596.0">
+                  <TableView fx:id="deliveryHistoryTableView" layoutX="-2.0" layoutY="138.0" prefHeight="427.0" prefWidth="596.0">
                     <columns>
-                      <TableColumn prefWidth="103.0" text="Assignment ID" />
-                      <TableColumn prefWidth="68.0" text="Order ID" />
-                        <TableColumn prefWidth="96.0" text="Flight Number" />
-                        <TableColumn prefWidth="84.0" text="Delivery Date" />
-                        <TableColumn prefWidth="69.0" text="Receiver" />
-                        <TableColumn prefWidth="69.0" text="Status" />
-                        <TableColumn prefWidth="106.0" text="Completion Time" />
+                      <TableColumn fx:id="assignmentIdColumn" prefWidth="103.0" text="Assignment ID" />
+                      <TableColumn fx:id="orderIdColumn" prefWidth="68.0" text="Order ID" />
+                        <TableColumn fx:id="flightNumberColumn" prefWidth="96.0" text="Flight Number" />
+                        <TableColumn fx:id="deliveryDateColumn" prefWidth="84.0" text="Delivery Date" />
+                        <TableColumn fx:id="receiverColumn" prefWidth="69.0" text="Receiver" />
+                        <TableColumn fx:id="statusColumn" prefWidth="69.0" text="Status" />
+                        <TableColumn fx:id="completionTimeColumn" prefWidth="106.0" text="Completion Time" />
                     </columns>
                   </TableView>
                </children></AnchorPane>
