@@ -41,26 +41,27 @@ public class loginController
 
     @javafx.fxml.FXML
     public void loginButtonOnClick(ActionEvent event) throws IOException {
+
+        //optimize solution
+//        userObject.viewDashboard();
+
         if (fxidUsernameTextField.getText().equals("1")){
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/AirlineRepresentative/dashboardView.fxml"));
-
             Parent root = loader.load();
-
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
-
+            stage.setTitle("Airline Representative");
             stage.setScene(scene);
             stage.show();
+
         } else if (fxidUsernameTextField.getText().equals("2")) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/CateringOperationsManager/businessDashboardView.fxml"));
-
             Parent root = loader.load();
-
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
-
+            stage.setTitle("Catering Operations Manager");
             stage.setScene(scene);
             stage.show();
         }
