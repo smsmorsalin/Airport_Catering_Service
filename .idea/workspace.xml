@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/inventoryStatus_CateringOperationsManagerView.fxml" afterDir="false" />
-    <list default="true" id="16035505-93b3-4b96-a3f5-7088858b0893" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into aronno&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/approveOrRejectOrder_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/approveOrRejectOrder_CateringOperationsManagerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboard_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboard_CateringOperationsManagerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/monitorProduction_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/monitorProduction_CateringOperationsManagerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/reviewOrder_CateringOperationsManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/reviewOrder_CateringOperationsManagerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +116,7 @@
       <entry key="H4" value="253.7817743494392" />
       <entry key="D1" value="376.0203371641403" />
       <entry key="W1" value="404.07552891287105" />
-    </decayedCancelled>
+    </decayedShown>
     <decayedSelected>
       <entry key="MS100" value="1.9354633938669168E-74" />
       <entry key="MS500" value="1.8086602668403214E-15" />
@@ -165,6 +160,9 @@
     &quot;associatedIndex&quot;: 7
     }</component>
   <component name="ProjectId" id="3GpedlUA9Dw7O7qeNlxSVSDPNma" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -175,7 +173,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "morsalin",
+    "git-widget-placeholder": "saif",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -208,7 +206,6 @@
       <option name="project" value="LOCAL" />
       <updated>1784811645918</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
     <task id="LOCAL-00002" summary="Inmpliment generateReportView.fxml">
       <option name="closed" value="true" />
       <created>1785089466557</created>
@@ -249,7 +246,7 @@
       <option name="project" value="LOCAL" />
       <updated>1785138041443</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
