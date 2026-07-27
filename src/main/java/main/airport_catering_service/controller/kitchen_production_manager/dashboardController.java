@@ -67,4 +67,8 @@ public class dashboardController
     @javafx.fxml.FXML
     public void sideBarProductionPlanOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void logoutButtonOnAction(ActionEvent actionEvent) {
+    }
 }
