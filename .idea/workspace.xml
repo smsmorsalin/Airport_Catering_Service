@@ -4,105 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes." />
+    <list default="true" id="11de1fa8-45c1-4fb1-a1de-eba671c0e02e" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="FxmlFile" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Saif-kaif&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
-    &quot;accountId&quot;: &quot;5e089f63-5a80-4c03-9d05-e3c4ac5c4c7d&quot;
-  }
-}</component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="NextEditCompletionFeaturesState">
-    <decayedCancelled>
-      <entry key="MS100" value="6.233454360930045E-83" />
-      <entry key="MS500" value="3.621977572557011E-17" />
-      <entry key="S2" value="7.759979271343327E-5" />
-      <entry key="S5" value="0.023908341653925764" />
-      <entry key="S10" value="0.2082242764069078" />
-      <entry key="S30" value="1.8378820322044827" />
-      <entry key="S60" value="4.50796918395868" />
-      <entry key="M2" value="7.7155237934580825" />
-      <entry key="M5" value="10.978736443651977" />
-      <entry key="M10" value="13.00192746175964" />
-      <entry key="M15" value="14.98033410897843" />
-      <entry key="M30" value="20.6836939284595" />
-      <entry key="H1" value="29.371226317446244" />
-      <entry key="H2" value="57.37512529845638" />
-      <entry key="H4" value="133.73012246346946" />
-      <entry key="D1" value="365.13398686450745" />
-      <entry key="W1" value="442.4146657565133" />
-    </decayedCancelled>
-    <decayedSelected>
-      <entry key="MS100" value="1.0000000082669394" />
-      <entry key="MS500" value="1.0253813269180947" />
-      <entry key="S2" value="1.5811433897754608" />
-      <entry key="S5" value="2.2539164729516905" />
-      <entry key="S10" value="2.813324978192976" />
-      <entry key="S30" value="4.309391019067938" />
-      <entry key="S60" value="6.027666481304418" />
-      <entry key="M2" value="7.829010553530742" />
-      <entry key="M5" value="9.540227830795814" />
-      <entry key="M10" value="11.115166351333151" />
-      <entry key="M15" value="13.37919399782105" />
-      <entry key="M30" value="20.49608417898167" />
-      <entry key="H1" value="29.73168454859501" />
-      <entry key="H2" value="42.96497669552214" />
-      <entry key="H4" value="64.91630559854138" />
-      <entry key="D1" value="118.94656495123064" />
-      <entry key="W1" value="135.84414893734248" />
-    </decayedSelected>
-    <decayedShown>
-      <entry key="MS100" value="2.9929642033922748E-6" />
-      <entry key="MS500" value="0.08527194477809574" />
-      <entry key="S2" value="0.8823737318202048" />
-      <entry key="S5" value="1.783172083433634" />
-      <entry key="S10" value="2.6726895444297587" />
-      <entry key="S30" value="5.913504458112657" />
-      <entry key="S60" value="10.343033462220628" />
-      <entry key="M2" value="15.406985379054023" />
-      <entry key="M5" value="20.44797432640714" />
-      <entry key="M10" value="24.075083253382633" />
-      <entry key="M15" value="28.325649290498323" />
-      <entry key="M30" value="41.15361527502938" />
-      <entry key="H1" value="59.08384837277423" />
-      <entry key="H2" value="100.3258592234752" />
-      <entry key="H4" value="198.6345423648228" />
-      <entry key="D1" value="484.07631396609025" />
-      <entry key="W1" value="578.2581026495872" />
-    </decayedShown>
-  </component>
-  <component name="ProjectColorInfo">{
-    &quot;associatedIndex&quot;: 7
-    }</component>
-  <component name="ProjectId" id="3GpedlUA9Dw7O7qeNlxSVSDPNma" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="3H6Jg91fk5Jr5mrxbOTf2GLjETD" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -110,120 +26,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;saif&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "saif",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="16035505-93b3-4b96-a3f5-7088858b0893" name="Changes" comment="" />
-      <created>1784673028203</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1784673028203</updated>
-      <workItem from="1784917889209" duration="4752000" />
-      <workItem from="1784999395800" duration="77000" />
-      <workItem from="1785008799382" duration="128000" />
-      <workItem from="1785086783060" duration="9637000" />
-    </task>
-    <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+    <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java">
       <option name="closed" value="true" />
-      <created>1784811645917</created>
+      <created>1785181507100</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1784811645918</updated>
+      <updated>1785181507100</updated>
     </task>
-    <task id="LOCAL-00002" summary="Inmpliment generateReportView.fxml">
+    <task id="LOCAL-00002" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java">
       <option name="closed" value="true" />
-      <created>1785089466557</created>
+      <created>1785181581416</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1785089466558</updated>
+      <updated>1785181581416</updated>
     </task>
-    <task id="LOCAL-00003" summary="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes.">
-      <option name="closed" value="true" />
-      <created>1785101745054</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1785101745054</updated>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11de1fa8-45c1-4fb1-a1de-eba671c0e02e" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java" />
+      <created>1785182698385</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1785182698385</updated>
     </task>
-    <task id="LOCAL-00004" summary="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes.">
-      <option name="closed" value="true" />
-      <created>1785101891311</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1785101891311</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
-      <created>1785129286281</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1785129286281</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes.">
-      <option name="closed" value="true" />
-      <created>1785138024577</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1785138024577</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes.">
-      <option name="closed" value="true" />
-      <created>1785138041443</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1785138041443</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change HelloApplication" />
-    <MESSAGE value="Inmpliment generateReportView.fxml" />
-    <MESSAGE value="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes." />
+    <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java" />
   </component>
 </project>
