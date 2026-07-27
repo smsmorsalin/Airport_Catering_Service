@@ -3,8 +3,6 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
@@ -20,11 +18,11 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button fx:id="loadTaskButton" mnemonicParsing="false" onAction="#onLoadTask" prefHeight="42.0" prefWidth="174.0" text="Load Task" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="startPreparationButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onStartPreparation" prefHeight="42.0" prefWidth="174.0" text="Start Preparation" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="updatePreparationButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onUpdatePreparation" prefHeight="42.0" prefWidth="174.0" text="Update Preparation" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="saveProgressButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onSaveProgress" prefHeight="42.0" prefWidth="174.0" text="Save Progress" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="BackButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="verifyCodeButton" mnemonicParsing="false" onAction="#onVerifyCode" prefHeight="42.0" prefWidth="174.0" text="Verify Code" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="confirmDeliveryButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onConfirmDelivery" prefHeight="42.0" prefWidth="174.0" text="Confirm Delivery" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="generateReceiptButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onGenerateReceipt" prefHeight="42.0" prefWidth="174.0" text="Generate Receipt" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="clearButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClear" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
                 <Button fx:id="logoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
@@ -59,22 +57,16 @@
                 </Label>
                 <AnchorPane prefHeight="566.0" prefWidth="596.0">
                <children>
-                  <TextField fx:id="productionTaskTextField" layoutX="126.0" layoutY="22.0" />
-                  <TextField fx:id="preparationInstructionTextField" layoutX="427.0" layoutY="23.0" />
-                  <TextField fx:id="specialRequirementTextField" layoutX="138.0" layoutY="87.0" />
-                  <Text layoutX="17.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production Task ID" />
-                  <Text layoutX="286.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preparation Instructions" />
-                  <Text layoutX="9.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Special Requirements" />
-                  <TableView fx:id="managemealpreparationtableColumn" layoutX="-4.0" layoutY="144.0" prefHeight="421.0" prefWidth="605.0">
-                    <columns>
-                      <TableColumn fx:id="taskIdColumn" prefWidth="141.0" text="Task ID" />
-                      <TableColumn fx:id="malecategoryColumn" prefWidth="122.0" text="Meal Category" />
-                        <TableColumn fx:id="assignedteamColumn" prefWidth="173.0" text="Assigned Team" />
-                        <TableColumn fx:id="preparationstatusColumn" prefWidth="168.0" text="Preparation Status" />
-                    </columns>
-                  </TableView>
-               </children>
-            </AnchorPane>
+                  <TextField fx:id="assignmentIdTextField" layoutX="119.0" layoutY="14.0" />
+                  <TextField fx:id="receiverNameTextField" layoutX="422.0" layoutY="14.0" />
+                  <TextField fx:id="confirmationCodeTextField" layoutX="119.0" layoutY="71.0" />
+                  <Text layoutX="17.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment ID" />
+                  <Text layoutX="14.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation Code" />
+                  <Text layoutX="331.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receiver Name" />
+                  <Label fx:id="deliveryConfirmationLabel" layoutX="422.0" layoutY="76.0" text="Delivery Confirmation" />
+                  <Label fx:id="deliveryTimeLabel" layoutX="422.0" layoutY="131.0" text="Delivery Time" />
+                  <Label fx:id="receiptIdLabel" layoutX="422.0" layoutY="180.0" text="Receipt ID" />
+               </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
     </children>

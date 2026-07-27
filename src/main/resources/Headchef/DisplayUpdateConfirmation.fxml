@@ -19,12 +19,12 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Search Task" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Update Status" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Save Update" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="searchTextButton" mnemonicParsing="false" onAction="#onSearchText" prefHeight="42.0" prefWidth="174.0" text="Search Task" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="updateStatusButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onUpdateStatus" prefHeight="42.0" prefWidth="174.0" text="Update Status" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="saveUpdateButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onSaveUpdate" prefHeight="42.0" prefWidth="174.0" text="Save Update" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="clearButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClearButton" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="backbutton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="logoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -58,14 +58,14 @@
                 </Label>
                 <AnchorPane prefHeight="566.0" prefWidth="596.0">
                <children>
-                  <TextField layoutX="137.0" layoutY="25.0" />
+                  <TextField fx:id="productionTaskIdTextField" layoutX="137.0" layoutY="25.0" />
                   <Text layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production Task ID" />
-                  <ComboBox layoutX="422.0" layoutY="26.0" prefWidth="150.0" />
+                  <ComboBox fx:id="productionStatusComboBox" layoutX="422.0" layoutY="26.0" prefWidth="150.0" />
                   <Text layoutX="374.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
-                  <Label layoutX="87.0" layoutY="86.0" text="Update ID" />
-                  <Label layoutX="217.0" layoutY="86.0" text="Status" />
-                  <Label layoutX="376.0" layoutY="86.0" text="Completion %" />
-                  <Label layoutX="87.0" layoutY="151.0" text="Update Time" />
+                  <Label fx:id="updateIDLabel" layoutX="87.0" layoutY="86.0" text="Update ID" />
+                  <Label fx:id="updatestatusLabel" layoutX="217.0" layoutY="86.0" text="Status" />
+                  <Label fx:id="completionLabel" layoutX="376.0" layoutY="86.0" text="Completion %" />
+                  <Label fx:id="updatetimeLabel" layoutX="87.0" layoutY="151.0" text="Update Time" />
                </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
