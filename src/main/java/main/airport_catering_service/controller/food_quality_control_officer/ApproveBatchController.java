@@ -66,5 +66,6 @@ public class ApproveBatchController
 
     @javafx.fxml.FXML
     public void sideBarManageQualityIssueOnAction(ActionEvent actionEvent) {
+
     }
 }

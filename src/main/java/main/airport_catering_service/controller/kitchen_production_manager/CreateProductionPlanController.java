@@ -6,7 +6,7 @@ import javafx.scene.control.*;
 public class CreateProductionPlanController
 {
     @javafx.fxml.FXML
-    private ComboBox miniutesTargetTimrCOmboBox;
+    private ComboBox<String> miniutesTargetTimrCOmboBox;
     @javafx.fxml.FXML
     private TableColumn statusTableView;
     @javafx.fxml.FXML
@@ -18,7 +18,7 @@ public class CreateProductionPlanController
     @javafx.fxml.FXML
     private Label fxidDisplayProductionPlanIDLabel;
     @javafx.fxml.FXML
-    private ComboBox hourTargetTimrCOmboBox;
+    private ComboBox<String> hourTargetTimrCOmboBox;
     @javafx.fxml.FXML
     private Label fxidDisplayMealCategoriesLabel;
     @javafx.fxml.FXML

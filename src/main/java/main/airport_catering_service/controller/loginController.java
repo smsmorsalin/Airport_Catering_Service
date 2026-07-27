@@ -31,9 +31,9 @@ public class loginController
 
     @FXML
     public void registerButtonOnClick(Event event) throws IOException {
-        FXMLLoader registerFXML = new FXMLLoader(getClass().getResource("/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml"));
-        Node node = registerFXML.load();
-        login_anchorPane.getChildren().setAll(node);
+//        FXMLLoader registerFXML = new FXMLLoader(getClass().getResource("/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml"));
+//        Node node = registerFXML.load();
+//        login_anchorPane.getChildren().setAll(node);
 
     }
 
