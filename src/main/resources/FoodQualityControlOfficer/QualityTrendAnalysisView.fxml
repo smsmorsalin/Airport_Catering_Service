@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.food_quality_control_officer.QualityTrendAnalysisController">
+    <children>
+        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
+            <children>
+            <Button layoutX="10.0" layoutY="94.0" mnemonicParsing="false" onAction="#sideBarReceiveInspectionRequestOnAction" prefHeight="42.0" prefWidth="174.0" text="Receive Inspection Request" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarPerformInspectionOnAction" prefHeight="42.0" prefWidth="174.0" text=" Perform Inspection" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarFoodSafetyCheckOnAction" prefHeight="42.0" prefWidth="174.0" text="Food Safety Check" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarApproveBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Approve Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarRejectBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Reject Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sidebarManageQualityIssueOnAction" prefHeight="42.0" prefWidth="174.0" text=" Manage Quality Issue" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: royalBlue;" text=" Quality Trend Analysis" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarGenerateQAReportOnAction" prefHeight="42.0" prefWidth="174.0" text="Generate QA Report" textOverrun="CENTER_ELLIPSIS" />
+            </children>
+        </VBox>
+        <Button layoutY="-4.0" mnemonicParsing="false" onAction="#homeButtonAirportCateringServiceOnAction" prefHeight="42.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant>
+                            <color>
+                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
+                            </color>
+                        </Light.Distant>
+                    </light>
+                </Lighting>
+            </effect>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="582.0" style="-fx-background-color: silver;">
+            <children>
+                <AnchorPane prefHeight="563.0" prefWidth="582.0" style="-fx-background-color: darkBlue;">
+               <children>
+                  <Label layoutX="14.0" layoutY="66.0" text="Start Date" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="16.0" layoutY="105.0" text="End Date" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Label>
+                  <DatePicker fx:id="startDatePicker" layoutX="90.0" layoutY="62.0" />
+                  <DatePicker fx:id="endDatePicker" layoutX="90.0" layoutY="109.0" />
+                  <AnchorPane layoutX="77.0" layoutY="243.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Button layoutX="61.0" layoutY="163.0" mnemonicParsing="false" onAction="#analyzeTrendsOnAction" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: royalBlue;" text="Analyze Trends" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Button>
+                  <Label layoutX="150.0" layoutY="5.0" text="Monitor Food Qualitu Trends" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="291.0" layoutY="163.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="81.0" text="Clear">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane layoutX="38.0" layoutY="236.0" prefHeight="175.0" prefWidth="435.0" style="-fx-background-color: royalBlue;">
+                     <children>
+                        <Label fx:id="fxidDisplayGenerateQAReportLabel" layoutX="14.0" layoutY="14.0" prefHeight="15.0" prefWidth="248.0" text="Total Inspections : " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fxidDisplayPassedBatchesLabel" layoutX="14.0" layoutY="42.0" prefHeight="15.0" prefWidth="261.0" text="Passed Batches : " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fxidDisplayRejectedBatchesLabel" layoutX="14.0" layoutY="71.0" prefHeight="15.0" prefWidth="309.0" text="Rejected Batches : " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fxidDisplayCommonDefectLabel" layoutX="14.0" layoutY="101.0" prefHeight="15.0" prefWidth="321.0" text="Common Defect  :" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fxidDisplayComplianceRateLabel" layoutX="14.0" layoutY="132.0" prefHeight="15.0" prefWidth="321.0" text="Compliance Rate : " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            </children></VBox>
+        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
+    </children>
+</AnchorPane>
