@@ -14,11 +14,11 @@ public class CreateMenuListController
     @javafx.fxml.FXML
     private TextField staffRequirementTextField;
     @javafx.fxml.FXML
-    private ComboBox equipmentComboBox;
+    private ComboBox<String> equipmentComboBox;
     @javafx.fxml.FXML
     private TextField productionOrderIDTextField;
     @javafx.fxml.FXML
-    private ComboBox kitchenSectionComboBox;
+    private ComboBox<String> kitchenSectionComboBox;
     @javafx.fxml.FXML
     private Label fxidDisplayAssignedEquipmentLabel;
     @javafx.fxml.FXML

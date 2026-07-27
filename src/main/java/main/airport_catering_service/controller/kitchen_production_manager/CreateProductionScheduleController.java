@@ -8,15 +8,15 @@ import javafx.scene.control.TextField;
 public class CreateProductionScheduleController
 {
     @javafx.fxml.FXML
-    private ComboBox startsHoursTimeComboBox;
+    private ComboBox<String> startsHoursTimeComboBox;
     @javafx.fxml.FXML
-    private ComboBox workShiftComboBox1;
+    private ComboBox<String> workShiftComboBox1;
     @javafx.fxml.FXML
     private Label fxidDisplayMealCategoriesLabel;
     @javafx.fxml.FXML
-    private ComboBox endsMinutiesTimeComboBox;
+    private ComboBox<String> endsMinutiesTimeComboBox;
     @javafx.fxml.FXML
-    private ComboBox startHoursTimeComboBox;
+    private ComboBox<String> startHoursTimeComboBox;
     @javafx.fxml.FXML
     private Label fxidDisplayScheduleIDLabel;
     @javafx.fxml.FXML

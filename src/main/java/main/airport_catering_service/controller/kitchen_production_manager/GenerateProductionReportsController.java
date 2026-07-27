@@ -14,7 +14,7 @@ public class GenerateProductionReportsController
     @javafx.fxml.FXML
     private DatePicker startDatePicker;
     @javafx.fxml.FXML
-    private ComboBox reportTypeComboBox;
+    private ComboBox<String> reportTypeComboBox;
     @javafx.fxml.FXML
     private Label fxidDisplayTotalMealsProducedLabel;
     @javafx.fxml.FXML
