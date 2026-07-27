@@ -31,13 +31,36 @@ public class loginController
 
     @FXML
     public void registerButtonOnClick(Event event) throws IOException {
-//        FXMLLoader registerFXML = new FXMLLoader(getClass().getResource("/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml"));
-//        Node node = registerFXML.load();
-//        login_anchorPane.getChildren().setAll(node);
+       FXMLLoader registerFXML = new FXMLLoader(getClass().getResource("/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml"));
+       Node node = registerFXML.load();
+       login_anchorPane.getChildren().setAll(node);
 
     }
 
     @javafx.fxml.FXML
-    public void loginButtonOnClick(ActionEvent actionEvent) {
+    public void loginButtonOnClick(ActionEvent event) throws IOException {
+        if (fxidUsernameTextField.getText().equals("1")){
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/AirlineRepresentative/dashboardView.fxml"));
+
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+
+            stage.setScene(scene);
+            stage.show();
+        } else if (fxidUsernameTextField.getText().equals("2")) {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/CateringOperationsManager/businessDashboardView.fxml"));
+
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 }
