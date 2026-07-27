@@ -2,11 +2,12 @@ package main.airport_catering_service.controller.food_quality_control_officer;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.FoodQualityControlOfficer;
 
 public class dashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn descriptionTableView;
+    private TableColumn<dashboardController,String> descriptionTableView;
     @javafx.fxml.FXML
     private Label enterTicketIDTextField;
     @javafx.fxml.FXML
@@ -14,15 +15,15 @@ public class dashboardController
     @javafx.fxml.FXML
     private Label emargencyIssueLabel;
     @javafx.fxml.FXML
-    private TableColumn ticketIDTableColumn;
+    private TableColumn<dashboardController,Integer> ticketIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn statusTableView;
+    private TableColumn<dashboardController,String> statusTableView;
     @javafx.fxml.FXML
-    private ComboBox statusComboBox;
+    private ComboBox<String> statusComboBox;
     @javafx.fxml.FXML
-    private TableView mainTableView;
+    private TableView<dashboardController> mainTableView;
     @javafx.fxml.FXML
-    private TableColumn issueTypeTableView;
+    private TableColumn<dashboardController,Boolean> issueTypeTableView;
 
     @javafx.fxml.FXML
     public void initialize() {

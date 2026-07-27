@@ -10,7 +10,7 @@ import java.awt.*;
 public class PerformInspectionController
 {
     @javafx.fxml.FXML
-    private ComboBox tasteRatingComboBox;
+    private ComboBox<String> tasteRatingComboBox;
     @javafx.fxml.FXML
     private TextField temperatureReadingTextField;
     @javafx.fxml.FXML
@@ -22,9 +22,9 @@ public class PerformInspectionController
     @javafx.fxml.FXML
     private TextField batchNumberTextField;
     @javafx.fxml.FXML
-    private ComboBox appearanceRatingComboBox;
+    private ComboBox<String> appearanceRatingComboBox;
     @javafx.fxml.FXML
-    private ComboBox textureRatingbelComboBox;
+    private ComboBox<String> textureRatingbelComboBox;
     @javafx.fxml.FXML
     private Label fxidDisplayOverallScoreLabel;
     @javafx.fxml.FXML

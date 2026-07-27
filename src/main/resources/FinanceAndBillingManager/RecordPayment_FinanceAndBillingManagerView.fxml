@@ -16,6 +16,9 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="758.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+
+
+
     <children>
         <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5.0" style="-fx-background-radius: 9;">
             <children>
@@ -54,6 +57,16 @@
                         <Font size="15.0" />
                     </font>
                 </Button>
+            <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Revenue Summary" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Payment History" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">

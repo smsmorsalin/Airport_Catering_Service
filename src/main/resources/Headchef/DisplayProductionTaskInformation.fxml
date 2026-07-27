@@ -21,12 +21,12 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Search Task " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Assign Task" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Save Assignment " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Back " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Logout " textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Reset" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="searchTaskButton" mnemonicParsing="false" onAction="#onSearchTask" prefHeight="42.0" prefWidth="174.0" text="Search Task " textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="assignTaskButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onAssignTask" prefHeight="42.0" prefWidth="174.0" text="Assign Task" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="saveAssignmentButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onSaveAssignment" prefHeight="42.0" prefWidth="174.0" text="Save Assignment " textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back " textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="logoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Logout " textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="resetButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onReset" prefHeight="42.0" prefWidth="174.0" text="Reset" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -60,21 +60,21 @@
                 </Label>
                 <AnchorPane prefHeight="566.0" prefWidth="596.0">
                <children>
-                  <TextField layoutX="149.0" layoutY="14.0" />
-                  <ComboBox layoutX="432.0" layoutY="14.0" prefWidth="150.0" />
-                  <ComboBox layoutX="432.0" layoutY="74.0" prefWidth="150.0" />
-                  <ComboBox layoutX="432.0" layoutY="131.0" prefWidth="150.0" />
+                  <TextField fx:id="productiontaskIdTextField" layoutX="149.0" layoutY="14.0" />
+                  <ComboBox fx:id="kitchenStaffComboBox" layoutX="432.0" layoutY="14.0" prefWidth="150.0" />
+                  <ComboBox fx:id="workStationComboBox" layoutX="432.0" layoutY="74.0" prefWidth="150.0" />
+                  <ComboBox fx:id="shiftTimeComboBox" layoutX="432.0" layoutY="131.0" prefWidth="150.0" />
                   <Text layoutX="35.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production Task ID" />
                   <Text layoutX="351.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kitchen Staff" />
                   <Text layoutX="351.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Work Station" />
                   <Text layoutX="365.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shift Time" />
-                  <TableView layoutX="-3.0" layoutY="175.0" prefHeight="393.0" prefWidth="596.0">
+                  <TableView fx:id="displayProductionTaskInformationTableView" layoutX="-3.0" layoutY="175.0" prefHeight="393.0" prefWidth="596.0">
                     <columns>
-                      <TableColumn prefWidth="101.0" text="Staff ID" />
-                      <TableColumn prefWidth="132.0" text="Staff Name" />
-                        <TableColumn prefWidth="125.0" text="Work Station" />
-                        <TableColumn prefWidth="61.0" text="Shift" />
-                        <TableColumn prefWidth="173.0" text="Assignment Status" />
+                      <TableColumn fx:id="staffIdColumn" prefWidth="101.0" text="Staff ID" />
+                      <TableColumn fx:id="staffNameColumn" prefWidth="132.0" text="Staff Name" />
+                        <TableColumn fx:id="workStationColumn" prefWidth="125.0" text="Work Station" />
+                        <TableColumn fx:id="shiftColumn" prefWidth="61.0" text="Shift" />
+                        <TableColumn fx:id="assignmentStatusColumn" prefWidth="173.0" text="Assignment Status" />
                     </columns>
                   </TableView>
                </children></AnchorPane>
