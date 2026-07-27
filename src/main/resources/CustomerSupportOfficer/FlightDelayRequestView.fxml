@@ -15,7 +15,7 @@
             prefWidth="898.0"
             xmlns="http://javafx.com/javafx/26"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="CONTROLLER_NAME">
+            fx:controller="main.airport_catering_service.controller.customer_support_officer.FlightDelayRequestViewController">
 
 
     <children>
