@@ -1,8 +1,11 @@
 package user;
 
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import utility.databaseAccessor;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -121,10 +124,15 @@ public abstract class User {
         return user;
     }
 
-    public final void logout() throws IOException {
+    public final void logout( Event event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/airport_catering_serivce/logoutPage.fxml"));
-        Node node = loader.load();
+        FXMLLoader loader = new FXMLLoader(User.class.getResource("/main/airport_catering_serivce/logoutPage.fxml"));
+        Parent root = loader.load();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setTitle("Airport Catering Service");
+        stage.setScene(scene);
+
     }
 
     public final boolean changePassword(String oldPassword, String newPassword) {
