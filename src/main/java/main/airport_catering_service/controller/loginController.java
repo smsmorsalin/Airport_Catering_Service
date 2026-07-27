@@ -26,10 +26,6 @@ public class loginController
     @FXML
     private AnchorPane login_anchorPane;
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -46,11 +42,27 @@ public class loginController
     }
 
     @javafx.fxml.FXML
-    public void loginButtonOnClick(ActionEvent actionEvent) throws IOException {
+    public void loginButtonOnClick(ActionEvent event) throws IOException {
         if (fxidUsernameTextField.getText().equals("1")){
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/AirlineRepresentative/dashboardView.fxml")));
-            stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-            scene = new Scene(root);
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/AirlineRepresentative/dashboardView.fxml"));
+
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+
+            stage.setScene(scene);
+            stage.show();
+        } else if (fxidUsernameTextField.getText().equals("2")) {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/CateringOperationsManager/businessDashboardView.fxml"));
+
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+
             stage.setScene(scene);
             stage.show();
         }
