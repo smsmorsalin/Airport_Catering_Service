@@ -18,7 +18,7 @@ public class dashboardController
     @javafx.fxml.FXML
     private TableColumn statusTableView;
     @javafx.fxml.FXML
-    private ComboBox statusComboBox;
+    private ComboBox<String> statusComboBox;
     @javafx.fxml.FXML
     private TableView mainTableView;
     @javafx.fxml.FXML
@@ -66,5 +66,9 @@ public class dashboardController
 
     @javafx.fxml.FXML
     public void sideBarProductionPlanOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void logoutButtonOnAction(ActionEvent actionEvent) {
     }
 }
