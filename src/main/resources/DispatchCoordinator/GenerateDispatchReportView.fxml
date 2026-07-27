@@ -18,14 +18,14 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Receive Dispatch Request" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Package Order" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Assign Truck" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Schedule Delivery" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Monitor Deliveries" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Manage Delivery Delays" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="175.0" text="Emergency Delivery" />
-                <Button disable="true" layoutX="10.0" layoutY="264.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="175.0" text="Generate Dispatch Report" />
+                <Button mnemonicParsing="false" onAction="#receiveDispatchRequestButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Receive Dispatch Request" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#packageOrderButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Package Order" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#assignTruckButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Assign Truck" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#scheduleDeliveryButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Schedule Delivery" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#monitorDeliveryButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Monitor Delivery" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#manageDeliveryDelayButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Manage Delivery Delay" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#emergencyDeliveryButtonOnAction" prefHeight="41.0" prefWidth="175.0" text="Emergency Delivery" />
+                <Button disable="true" layoutX="10.0" layoutY="264.0" mnemonicParsing="false" onAction="#generateDispatchReportButtonOnAction" prefHeight="41.0" prefWidth="175.0" text="Generate Dispatch Report" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -54,13 +54,13 @@
          <children>
             <AnchorPane prefHeight="602.0" prefWidth="596.0">
                <children>
-                  <Text layoutX="14.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Type" />
-                  <Text layoutX="14.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date" />
-                  <Text layoutX="14.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date" />
-                  <DatePicker layoutX="88.0" layoutY="66.0" prefHeight="26.0" prefWidth="150.0" />
-                  <DatePicker layoutX="88.0" layoutY="108.0" prefHeight="26.0" prefWidth="150.0" />
-                  <TextField layoutX="88.0" layoutY="25.0" />
-                  <Button layoutX="18.0" layoutY="167.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="220.0" text="Download Dispatch Report " />
+                  <Text fx:id="reportTypeText" layoutX="14.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Type" />
+                  <Text fx:id="startDateText" layoutX="14.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date" />
+                  <Text fx:id="endDateText" layoutX="14.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date" />
+                  <DatePicker fx:id="startDateDatepicker" layoutX="88.0" layoutY="66.0" prefHeight="26.0" prefWidth="150.0" />
+                  <DatePicker fx:id="endDateDatepicker" layoutX="88.0" layoutY="108.0" prefHeight="26.0" prefWidth="150.0" />
+                  <TextField fx:id="reportTypeTextfield" layoutX="88.0" layoutY="25.0" />
+                  <Button layoutX="18.0" layoutY="167.0" mnemonicParsing="false" onAction="#downloadDispatchReportButtonOnAction" prefHeight="26.0" prefWidth="220.0" text="Download Dispatch Report " />
                </children>
             </AnchorPane>
          </children></VBox>

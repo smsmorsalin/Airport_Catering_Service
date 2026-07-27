@@ -22,12 +22,12 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Search Batch" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="View Rejection Details" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Resubmit Batch" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="searchBatchButton" mnemonicParsing="false" onAction="#onSearchBatch" prefHeight="42.0" prefWidth="174.0" text="Search Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="viewrejectionDetailsbutton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onViewRejectionDetails" prefHeight="42.0" prefWidth="174.0" text="View Rejection Details" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="resubmitBatch" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onResubmitBatch" prefHeight="42.0" prefWidth="174.0" text="Resubmit Batch" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="clearButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClear" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="backbutton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
+                <Button fx:id="logoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -61,19 +61,19 @@
                 </Label>
                 <AnchorPane prefHeight="566.0" prefWidth="596.0">
                <children>
-                  <TextField layoutX="150.0" layoutY="14.0" />
+                  <TextField fx:id="batchIDTextField" layoutX="150.0" layoutY="14.0" />
                   <Text layoutX="87.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Batch ID" />
-                  <ComboBox layoutX="424.0" layoutY="14.0" prefWidth="150.0" />
-                  <TextArea layoutX="382.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" />
+                  <ComboBox fx:id="rejectionreasonComboBox" layoutX="424.0" layoutY="14.0" prefWidth="150.0" />
+                  <TextArea fx:id="correctiveactionTextArea" layoutX="382.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" />
                   <Text layoutX="322.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rejection Reason" />
                   <Text layoutX="275.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Corrective Action" />
-                  <TableView layoutX="-3.0" layoutY="264.0" prefHeight="302.0" prefWidth="596.0">
+                  <TableView fx:id="handlerejectedfoodbatchesTableView" layoutX="-3.0" layoutY="264.0" prefHeight="302.0" prefWidth="596.0">
                     <columns>
-                      <TableColumn prefWidth="111.0" text="Batch ID" />
-                      <TableColumn prefWidth="96.0" text="Meal Name" />
-                        <TableColumn prefWidth="129.0" text="Rejection Reason" />
-                        <TableColumn prefWidth="102.0" text="Rework Status" />
-                        <TableColumn prefWidth="157.0" text="Assigned Team" />
+                      <TableColumn fx:id="batchIDColumn" prefWidth="111.0" text="Batch ID" />
+                      <TableColumn fx:id="meannameColumn" prefWidth="96.0" text="Meal Name" />
+                        <TableColumn fx:id="rejectionreasonColumn" prefWidth="129.0" text="Rejection Reason" />
+                        <TableColumn fx:id="reworkreasonColumn" prefWidth="102.0" text="Rework Status" />
+                        <TableColumn fx:id="assignedteamColumn" prefWidth="157.0" text="Assigned Team" />
                     </columns>
                   </TableView>
                </children></AnchorPane>

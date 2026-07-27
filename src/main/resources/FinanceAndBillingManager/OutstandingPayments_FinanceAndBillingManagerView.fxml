@@ -54,6 +54,16 @@
                         <Font size="15.0" />
                     </font>
                 </Button>
+            <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Revenue Summary" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Payment History" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">

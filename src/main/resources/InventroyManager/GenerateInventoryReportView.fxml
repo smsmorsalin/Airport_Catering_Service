@@ -19,14 +19,14 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Check Ingredient Availability" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Reserve Ingredients" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Create Purchase Request" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Receive Ingredients" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Update Inventory" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Manage Suppliers" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="222.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Low Stock Alerts" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" layoutX="10.0" layoutY="264.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Generate Inventory Report" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#checkIngredientAvailabilityButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Check Ingredient Availability" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#reserveIngredientButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Reserve Ingredient" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#createPurchaseRequestButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Create Purchase Request" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#receiveIngredientButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Receive Ingredient" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateInventoryButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Update Inventory" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#manageSupplierButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Manage Supplier" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="222.0" mnemonicParsing="false" onAction="#lowStockAlertButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Low Stock Alert" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" layoutX="10.0" layoutY="264.0" mnemonicParsing="false" onAction="#generateInventoryReportButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Generate Inventory Report" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -55,19 +55,19 @@
          <children>
             <AnchorPane prefHeight="592.0" prefWidth="596.0">
                <children>
-                  <Text layoutX="24.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Type" />
-                  <Text layoutX="24.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date" />
-                  <Text layoutX="24.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date" />
-                  <TextField layoutX="111.0" layoutY="49.0" />
-                  <DatePicker layoutX="110.0" layoutY="79.0" prefHeight="26.0" prefWidth="150.0" />
-                  <DatePicker layoutX="110.0" layoutY="113.0" prefHeight="26.0" prefWidth="150.0" />
-                  <Label layoutX="34.0" layoutY="188.0" text="Current Stock Summary" />
-                  <Label layoutX="34.0" layoutY="215.0" text="Ingredient Consumption" />
-                  <Label layoutX="34.0" layoutY="245.0" text="Purchase History" />
-                  <Label layoutX="34.0" layoutY="277.0" text="Stock Adjustments" />
-                  <Label layoutX="34.0" layoutY="311.0" text="Low Stock Items" />
-                  <Label layoutX="34.0" layoutY="345.0" text="Supplier Performance" />
-                  <Button layoutX="34.0" layoutY="427.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="184.0" text="Download inventory report" />
+                  <Text fx:id="reportTypeText" layoutX="24.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Type" />
+                  <Text fx:id="startDateText" layoutX="24.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date" />
+                  <Text fx:id="endDateText" layoutX="24.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date" />
+                  <TextField fx:id="reportTypeTextfield" layoutX="111.0" layoutY="49.0" />
+                  <DatePicker fx:id="startDateDatepicker" layoutX="110.0" layoutY="79.0" prefHeight="26.0" prefWidth="150.0" />
+                  <DatePicker fx:id="endDateDatepicker" layoutX="110.0" layoutY="113.0" prefHeight="26.0" prefWidth="150.0" />
+                  <Label fx:id="currentStockSummaryLabel" layoutX="34.0" layoutY="188.0" text="Current Stock Summary" />
+                  <Label fx:id="ingredientConsumptionLabel" layoutX="34.0" layoutY="215.0" text="Ingredient Consumption" />
+                  <Label fx:id="purchaseHistoryLabel" layoutX="34.0" layoutY="245.0" text="Purchase History" />
+                  <Label fx:id="stockAdjustmentLabel" layoutX="34.0" layoutY="277.0" text="Stock Adjustment" />
+                  <Label fx:id="lowStockItemLabel" layoutX="34.0" layoutY="311.0" text="Low Stock Item" />
+                  <Label fx:id="supplierPerformanceLabel" layoutX="34.0" layoutY="345.0" text="Supplier Performance" />
+                  <Button layoutX="34.0" layoutY="427.0" mnemonicParsing="false" onAction="#downloadInventoryReportButtonOnAction" prefHeight="26.0" prefWidth="184.0" text="Download inventory report" />
                </children>
             </AnchorPane>
          </children></VBox>

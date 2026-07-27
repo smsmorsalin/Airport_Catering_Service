@@ -16,14 +16,14 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Receive Dispatch Request" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Package Order" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Assign Truck" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Schedule Delivery" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Monitor Deliveries" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Manage Delivery Delays" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="175.0" text="Emergency Delivery" />
-                <Button layoutX="10.0" layoutY="264.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="175.0" text="Generate Dispatch Report" />
+                <Button mnemonicParsing="false" onAction="#receiveDispatchRequestButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Receive Dispatch Request" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#packageOrderButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Package Order" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#assignTruckButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Assign Truck" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#scheduleDeliveryButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Schedule Delivery" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#monitorDeliveryButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Monitor Delivery" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#manageDeliveryDelayButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Manage Delivery Delay" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#emergencyDeliveryButtonOnAction" prefHeight="41.0" prefWidth="175.0" text="Emergency Delivery" />
+                <Button layoutX="10.0" layoutY="264.0" mnemonicParsing="false" onAction="#generateDispatchReportButtonOnAction" prefHeight="41.0" prefWidth="175.0" text="Generate Dispatch Report" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
@@ -52,12 +52,12 @@
          <children>
             <AnchorPane prefHeight="588.0" prefWidth="596.0">
                <children>
-                  <Label layoutX="23.0" layoutY="311.0" prefHeight="18.0" prefWidth="206.0" text="Order ID" />
-                  <Label layoutX="23.0" layoutY="355.0" prefHeight="18.0" prefWidth="166.0" text="Truck ID" />
-                  <Label layoutX="23.0" layoutY="395.0" prefHeight="18.0" prefWidth="185.0" text="Driver Name" />
-                  <Label layoutX="23.0" layoutY="440.0" prefHeight="18.0" prefWidth="196.0" text="Current Status" />
-                  <Label layoutX="23.0" layoutY="477.0" prefHeight="18.0" prefWidth="196.0" text="Departure Time" />
-                  <Label layoutX="23.0" layoutY="520.0" prefHeight="18.0" prefWidth="206.0" text="Estimated Arrival Time" />
+                  <Label fx:id="orderIdLabel" layoutX="23.0" layoutY="341.0" prefHeight="18.0" prefWidth="206.0" text="Order ID" />
+                  <Label fx:id="truckIdLabel" layoutX="23.0" layoutY="377.0" prefHeight="18.0" prefWidth="166.0" text="Truck ID" />
+                  <Label fx:id="driverNameLabel" layoutX="23.0" layoutY="409.0" prefHeight="18.0" prefWidth="185.0" text="Driver Name" />
+                  <Label fx:id="currentStatusLabel" layoutX="23.0" layoutY="440.0" prefHeight="18.0" prefWidth="196.0" text="Current Status" />
+                  <Label fx:id="departureTimeLabel" layoutX="23.0" layoutY="471.0" prefHeight="18.0" prefWidth="196.0" text="Departure Time" />
+                  <Label fx:id="estimatedArrivalTimeLabel" layoutX="18.0" layoutY="502.0" prefHeight="18.0" prefWidth="206.0" text="Estimated Arrival Time" />
                </children>
             </AnchorPane>
          </children></VBox>
