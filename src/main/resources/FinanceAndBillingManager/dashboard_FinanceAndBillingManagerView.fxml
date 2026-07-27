@@ -3,58 +3,208 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="758.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+
+
     <children>
-        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+
+        <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5">
+
+
             <children>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Button" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Button" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Button" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Button" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Button" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text="Button" textOverrun="CENTER_ELLIPSIS" />
+
+
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px; -fx-background-color: #8577F2;" text="Dashboard" textFill="WHITE">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+
+
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Calculate Cost">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+
+
+
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Generate Invoice">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+
+
+
+
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Record Payment">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+
+
+
+
+
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Process Refund">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+
+
+
+
+
+
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Outstanding Payments">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+
+
+
+
+
+
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Financial Reports">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+
+
+
+
+
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Revenue Summary">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+
+
+
+
+
+
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px;" text="Payment History">
+
+
+                    <font>
+                        <Font size="15" />
+                    </font>
+
+
+                </Button>
+
+
             </children>
+
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+
+
+
+
+
+
+
+        <!-- TOP HEADER -->
+
+
+        <Button layoutY="3" prefHeight="29" prefWidth="175" style="-fx-background-color:pink;         -fx-background-radius:5;" text="Airport Catering Service">
+
+
             <font>
-                <Font name="Arial Bold" size="13.0" />
+                <Font name="Arial Bold" size="13" />
             </font>
-            <effect>
-                <Lighting>
-                    <bumpInput>
-                        <Shadow />
-                    </bumpInput>
-                    <light>
-                        <Light.Distant>
-                            <color>
-                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
-                            </color>
-                        </Light.Distant>
-                    </light>
-                </Lighting>
-            </effect>
+
+
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
+
+
         </Button>
-        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
+
+
+
+
+
+
+
+        <!-- MAIN CONTENT -->
+
+
+        <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:silver;">
+
+
             <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
+
+
+
+                <Label alignment="CENTER" prefWidth="609" text="welcome Username">
+
+
                     <font>
-                        <Font name="Gabriola" size="18.0" />
+                        <Font name="Gabriola" size="18" />
                     </font>
+
+
                 </Label>
-                <AnchorPane prefHeight="566.0" prefWidth="596.0" />
-            </children></VBox>
-        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
+
+
+
+
+
+
+                <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
+
+
+                    <children>
+
+
+
+
+
+
+
+
+
+                        <!-- PAYMENT TABLE -->
+
+
+                        <AnchorPane layoutX="6" layoutY="330" prefHeight="270" prefWidth="712" style="-fx-background-color:white;             -fx-background-radius:25;" />
+
+
+
+
+
+
+                    </children>
+
+
+                </AnchorPane>
+
+
+            </children>
+
+
+        </VBox>
+
+
     </children>
+
+
 </AnchorPane>
