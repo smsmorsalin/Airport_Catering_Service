@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes." />
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,61 +47,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0007099475182228" />
-      <entry key="MS500" value="1.2346550712339122" />
-      <entry key="S2" value="1.9962732710390423" />
-      <entry key="S5" value="3.5321117877921546" />
-      <entry key="S10" value="5.44384289041669" />
-      <entry key="S30" value="12.158299642806414" />
-      <entry key="S60" value="18.74560882755959" />
-      <entry key="M2" value="25.135387697327335" />
-      <entry key="M5" value="32.85989453794198" />
-      <entry key="M10" value="41.19512361951407" />
-      <entry key="M15" value="47.3952891912222" />
-      <entry key="M30" value="60.81105472901036" />
-      <entry key="H1" value="95.9925603507263" />
-      <entry key="H2" value="169.3940337991094" />
-      <entry key="H4" value="253.7817743494392" />
-      <entry key="D1" value="376.0203371641403" />
-      <entry key="W1" value="404.07552891287105" />
+      <entry key="MS100" value="6.233454360930045E-83" />
+      <entry key="MS500" value="3.621977572557011E-17" />
+      <entry key="S2" value="7.759979271343327E-5" />
+      <entry key="S5" value="0.023908341653925764" />
+      <entry key="S10" value="0.2082242764069078" />
+      <entry key="S30" value="1.8378820322044827" />
+      <entry key="S60" value="4.50796918395868" />
+      <entry key="M2" value="7.7155237934580825" />
+      <entry key="M5" value="10.978736443651977" />
+      <entry key="M10" value="13.00192746175964" />
+      <entry key="M15" value="14.98033410897843" />
+      <entry key="M30" value="20.6836939284595" />
+      <entry key="H1" value="29.371226317446244" />
+      <entry key="H2" value="57.37512529845638" />
+      <entry key="H4" value="133.73012246346946" />
+      <entry key="D1" value="365.13398686450745" />
+      <entry key="W1" value="442.4146657565133" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.9354633938669168E-74" />
-      <entry key="MS500" value="1.8086602668403214E-15" />
-      <entry key="S2" value="2.0842488164166166E-4" />
-      <entry key="S5" value="0.03901138047097941" />
-      <entry key="S10" value="0.25705427869770686" />
-      <entry key="S30" value="0.9890444733880885" />
-      <entry key="S60" value="1.508260980439943" />
-      <entry key="M2" value="2.832669472891744" />
-      <entry key="M5" value="8.009967961236145" />
-      <entry key="M10" value="14.895921038237274" />
-      <entry key="M15" value="19.629287249134165" />
-      <entry key="M30" value="27.49310342421832" />
-      <entry key="H1" value="36.51117887395655" />
-      <entry key="H2" value="50.00229790914515" />
-      <entry key="H4" value="64.79542032834256" />
-      <entry key="D1" value="86.20134253112285" />
-      <entry key="W1" value="91.13343635058223" />
+      <entry key="MS100" value="1.0000000082669394" />
+      <entry key="MS500" value="1.0253813269180947" />
+      <entry key="S2" value="1.5811433897754608" />
+      <entry key="S5" value="2.2539164729516905" />
+      <entry key="S10" value="2.813324978192976" />
+      <entry key="S30" value="4.309391019067938" />
+      <entry key="S60" value="6.027666481304418" />
+      <entry key="M2" value="7.829010553530742" />
+      <entry key="M5" value="9.540227830795814" />
+      <entry key="M10" value="11.115166351333151" />
+      <entry key="M15" value="13.37919399782105" />
+      <entry key="M30" value="20.49608417898167" />
+      <entry key="H1" value="29.73168454859501" />
+      <entry key="H2" value="42.96497669552214" />
+      <entry key="H4" value="64.91630559854138" />
+      <entry key="D1" value="118.94656495123064" />
+      <entry key="W1" value="135.84414893734248" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9272458907853249" />
-      <entry key="MS500" value="1.2159708595926557" />
-      <entry key="S2" value="1.9890175424047918" />
-      <entry key="S5" value="3.555796455079114" />
-      <entry key="S10" value="5.653258309823783" />
-      <entry key="S30" value="13.052354369813957" />
-      <entry key="S60" value="20.167241753876997" />
-      <entry key="M2" value="27.899689098993964" />
-      <entry key="M5" value="40.818076627823636" />
-      <entry key="M10" value="56.046888479559556" />
-      <entry key="M15" value="66.98594759247098" />
-      <entry key="M30" value="88.27628852099336" />
-      <entry key="H1" value="132.4818446959846" />
-      <entry key="H2" value="219.37734111874315" />
-      <entry key="H4" value="318.56295856949873" />
-      <entry key="D1" value="462.218139201473" />
-      <entry key="W1" value="495.208420815606" />
+      <entry key="MS100" value="2.9929642033922748E-6" />
+      <entry key="MS500" value="0.08527194477809574" />
+      <entry key="S2" value="0.8823737318202048" />
+      <entry key="S5" value="1.783172083433634" />
+      <entry key="S10" value="2.6726895444297587" />
+      <entry key="S30" value="5.913504458112657" />
+      <entry key="S60" value="10.343033462220628" />
+      <entry key="M2" value="15.406985379054023" />
+      <entry key="M5" value="20.44797432640714" />
+      <entry key="M10" value="24.075083253382633" />
+      <entry key="M15" value="28.325649290498323" />
+      <entry key="M30" value="41.15361527502938" />
+      <entry key="H1" value="59.08384837277423" />
+      <entry key="H2" value="100.3258592234752" />
+      <entry key="H4" value="198.6345423648228" />
+      <entry key="D1" value="484.07631396609025" />
+      <entry key="W1" value="578.2581026495872" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -171,11 +176,30 @@
       <option name="project" value="LOCAL" />
       <updated>1785101745054</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes.">
+      <option name="closed" value="true" />
+      <created>1785101891311</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1785101891311</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change HelloApplication" />
