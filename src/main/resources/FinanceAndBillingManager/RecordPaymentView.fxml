@@ -1,266 +1,517 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.Cursor?>
 
-<AnchorPane prefHeight="758.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
 
+<AnchorPane prefHeight="758.0"
+            prefWidth="898.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="CONTROLLER_NAME">
 
 
     <children>
-        <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5.0" style="-fx-background-radius: 9;">
+
+        <VBox layoutY="49"
+              prefHeight="706"
+              prefWidth="175"
+              spacing="5">
+
             <children>
-                <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Dashboard" textOverrun="CENTER_ELLIPSIS">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Button>
-                <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Calculate Cost" textOverrun="CENTER_ELLIPSIS">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Button>
-                <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Generate Invoice " textOverrun="CENTER_ELLIPSIS">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Button>
-                <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px; -fx-background-color: #007C91; -fx-background-color: #0096A6;" text="Record Payment" textOverrun="CENTER_ELLIPSIS">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Button>
-                <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text=" Process Refund" textOverrun="CENTER_ELLIPSIS">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Button>
-                <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text=" Outstanding Payments" textOverrun="CENTER_ELLIPSIS">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Button>
-                <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text=" Financial Reports" textOverrun="CENTER_ELLIPSIS">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                </Button>
-            <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Revenue Summary" textOverrun="CENTER_ELLIPSIS">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <Button lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="174.0" style="-fx-background-radius: 50px;" text="Payment History" textOverrun="CENTER_ELLIPSIS">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
+
+
+                <Button text="Dashboard"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50;"/>
+
+
+                <Button text="Calculate Cost"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50;"/>
+
+
+                <Button text="Generate Invoice"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50;"/>
+
+
+                <Button text="Record Payment"
+                        prefWidth="174"
+                        prefHeight="46"
+                        textFill="WHITE"
+                        style="-fx-background-color:#00853F;
+               -fx-background-radius:50;"/>
+
+
+                <Button text="Process Refund"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50;"/>
+
+
+                <Button text="Outstanding Payments"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50;"/>
+
+
+                <Button text="Financial Reports"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50;"/>
+
+
+                <Button text="Revenue Summary"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50;"/>
+
+
+                <Button text="Payment History"
+                        prefWidth="174"
+                        prefHeight="46"
+                        style="-fx-background-radius:50;"/>
+
+
             </children>
+
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+
+
+
+
+
+        <!-- HEADER -->
+
+
+        <Button layoutY="3"
+                prefHeight="29"
+                prefWidth="175"
+                text="Airport Catering Service"
+                style="-fx-background-color:#C0007F;
+               -fx-background-radius:5;">
+
+
             <font>
-                <Font name="Arial Bold" size="13.0" />
+                <Font name="Arial Bold" size="13"/>
             </font>
-            <effect>
-                <Lighting>
-                    <bumpInput>
-                        <Shadow />
-                    </bumpInput>
-                    <light>
-                        <Light.Distant>
-                            <color>
-                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
-                            </color>
-                        </Light.Distant>
-                    </light>
-                </Lighting>
-            </effect>
+
+
             <cursor>
-                <Cursor fx:constant="HAND" />
+                <Cursor fx:constant="HAND"/>
             </cursor>
+
+
         </Button>
-        <VBox layoutX="175.0" prefHeight="758.0" prefWidth="726.0" style="-fx-background-color: silver;">
+
+
+
+
+
+
+
+        <!-- MAIN AREA -->
+
+
+        <VBox layoutX="175"
+              prefWidth="726"
+              prefHeight="758"
+              style="-fx-background-color:#AFAFAF;">
+
+
             <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
+
+
+                <Label text="welcome Username"
+                       prefWidth="726"
+                       alignment="CENTER">
+
+
                     <font>
-                        <Font name="Gabriola" size="18.0" />
+                        <Font name="Gabriola" size="18"/>
                     </font>
+
+
                 </Label>
-                <AnchorPane prefHeight="734.0" prefWidth="708.0">
+
+
+
+
+
+
+                <AnchorPane prefHeight="734"
+                            prefWidth="726"
+                            style="-fx-background-color:white;">
+
+
                     <children>
-                        <AnchorPane layoutX="9.0" layoutY="8.0" prefHeight="182.0" prefWidth="372.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+
+
+
+
+
+                        <!-- PAYMENT INFORMATION CARD -->
+
+
+                        <AnchorPane layoutX="15"
+                                    layoutY="20"
+                                    prefWidth="680"
+                                    prefHeight="120"
+                                    style="-fx-background-color:#F8FAFC;
+                   -fx-background-radius:25;">
+
+
                             <children>
-                                <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="176.0" text="Payment Information">
+
+
+                                <Label layoutX="25"
+                                       layoutY="20"
+                                       text="Payment Information">
+
+
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="22"/>
                                     </font>
+
                                 </Label>
-                                <Label layoutX="14.0" layoutY="44.0" text="Order ID" />
-                                <TextField layoutX="14.0" layoutY="67.0" prefHeight="26.0" prefWidth="218.0" />
-                                <Button layoutX="251.0" layoutY="65.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" style="-fx-background-radius: 10px; -fx-background-color: Blue;" text="Verify Order" textFill="#fafafa" textOverrun="CENTER_ELLIPSIS">
-                                    <font>
-                                        <Font name="System Bold" size="14.0" />
-                                    </font>
-                                </Button>
-                        <Label layoutX="14.0" layoutY="102.0" prefHeight="35.0" prefWidth="289.0" text="Invoice Amount      :  ">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="14.0" layoutY="137.0" prefHeight="35.0" prefWidth="289.0" text="Amount Due          :  ">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
+
+
+
+                                <Label layoutX="25"
+                                       layoutY="65"
+                                       text="Invoice ID"/>
+
+
+                                <TextField fx:id="invoiceIdField"
+                                           layoutX="25"
+                                           layoutY="85"
+                                           prefWidth="180"/>
+
+
+
+
+                                <Button fx:id="verifyInvoiceButton"
+                                        layoutX="220"
+                                        layoutY="85"
+                                        text="Verify Invoice"
+                                        prefWidth="120"/>
+
+
+
+
+
+                                <Label layoutX="390"
+                                       layoutY="65"
+                                       text="Airline Name"/>
+
+
+                                <TextField fx:id="airlineNameField"
+                                           layoutX="390"
+                                           layoutY="85"
+                                           prefWidth="200"/>
+
+
+
                             </children>
+
                         </AnchorPane>
-                        <AnchorPane layoutX="10.0" layoutY="198.0" prefHeight="522.0" prefWidth="372.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+
+
+
+
+
+
+
+
+
+                        <!-- LEFT PAYMENT DETAILS -->
+
+
+                        <AnchorPane layoutX="15"
+                                    layoutY="165"
+                                    prefWidth="390"
+                                    prefHeight="470"
+                                    style="-fx-background-color:#FFFFFF;
+                   -fx-background-radius:25;">
+
+
                             <children>
-                                <Label layoutX="173.0" layoutY="-93.0" />
-                                <Label layoutX="12.0" layoutY="14.0" prefHeight="30.0" prefWidth="152.0" text="Payment Details">
+
+
+                                <Label layoutX="25"
+                                       layoutY="25"
+                                       text="Payment Details">
+
+
                                     <font>
-                                        <Font size="20.0" />
+                                        <Font size="20"/>
                                     </font>
+
+
                                 </Label>
-                                <Label layoutX="22.0" layoutY="61.0" text="Payment Method">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                                <Label layoutX="20.0" layoutY="135.0" text="Amount Paid">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                                <Button layoutX="105.0" layoutY="405.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="162.0" style="-fx-background-radius: 10px; -fx-background-color: Navy Blue;" text="Record Payment" textFill="#fcf6f6" textOverrun="CENTER_ELLIPSIS">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Button>
-                                <Button layoutX="12.0" layoutY="470.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="146.0" style="-fx-background-radius: 10px;" text="Reset" textOverrun="CENTER_ELLIPSIS">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                </Button>
-                                <Button layoutX="228.0" layoutY="470.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" style="-fx-background-radius: 10px;" text="Cancel" textOverrun="CENTER_ELLIPSIS">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                </Button>
-                        <ComboBox layoutX="20.0" layoutY="86.0" prefHeight="35.0" prefWidth="346.0" />
-                        <TextField layoutX="22.0" layoutY="160.0" prefHeight="35.0" prefWidth="346.0" />
-                        <Label layoutX="24.0" layoutY="327.0" text="Payment Date">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                        <DatePicker layoutX="22.0" layoutY="356.0" prefHeight="35.0" prefWidth="346.0" />
-                        <Label layoutX="24.0" layoutY="285.0" prefHeight="35.0" prefWidth="346.0" text="Due Amount : ">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="22.0" layoutY="216.0">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="24.0" layoutY="209.0" text="Transaction Reference">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                        <ComboBox layoutX="22.0" layoutY="240.0" prefHeight="35.0" prefWidth="346.0" />
+
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="80"
+                                       text="Invoice Amount"/>
+
+
+                                <Label fx:id="invoiceAmountLabel"
+                                       layoutX="210"
+                                       layoutY="80"
+                                       text="0.00"/>
+
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="120"
+                                       text="Amount Due"/>
+
+
+                                <Label fx:id="amountDueLabel"
+                                       layoutX="210"
+                                       layoutY="120"
+                                       text="0.00"/>
+
+
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="175"
+                                       text="Payment Method"/>
+
+
+                                <ComboBox fx:id="paymentMethodComboBox"
+                                          layoutX="180"
+                                          layoutY="170"
+                                          prefWidth="170"/>
+
+
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="230"
+                                       text="Transaction Reference"/>
+
+
+                                <TextField fx:id="transactionReferenceField"
+                                           layoutX="180"
+                                           layoutY="225"
+                                           prefWidth="170"/>
+
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="285"
+                                       text="Amount Paid"/>
+
+
+                                <TextField fx:id="amountPaidField"
+                                           layoutX="180"
+                                           layoutY="280"
+                                           prefWidth="170"/>
+
+
+
+
+                                <Label layoutX="35"
+                                       layoutY="340"
+                                       text="Payment Date"/>
+
+
+                                <DatePicker fx:id="paymentDatePicker"
+                                            layoutX="180"
+                                            layoutY="335"
+                                            prefWidth="170"/>
+
+
+
+
+
+                                <Button fx:id="recordPaymentButton"
+                                        layoutX="90"
+                                        layoutY="400"
+                                        prefWidth="180"
+                                        prefHeight="40"
+                                        text="Record Payment"
+                                        textFill="WHITE"
+                                        style="-fx-background-color:#00853F;
+               -fx-background-radius:10;"/>
+
+
+
                             </children>
+
+
                         </AnchorPane>
-                        <AnchorPane layoutX="385.0" layoutY="148.0" prefHeight="481.0" prefWidth="334.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+
+
+
+
+
+
+
+
+
+                        <!-- SUMMARY CARD -->
+
+
+                        <AnchorPane layoutX="445"
+                                    layoutY="190"
+                                    prefWidth="245"
+                                    prefHeight="360"
+                                    style="-fx-background-color:#F8FAFC;
+                   -fx-background-radius:25;">
+
+
                             <children>
-                                <Label layoutX="18.0" layoutY="14.0" prefHeight="35.0" prefWidth="162.0" text="Cost Summary">
+
+
+                                <Label layoutX="25"
+                                       layoutY="25"
+                                       text="Payment Summary">
+
+
                                     <font>
-                                        <Font size="24.0" />
+                                        <Font size="22"/>
                                     </font>
+
                                 </Label>
-                                <Label layoutX="32.0" layoutY="268.0">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                </Label>
-                                <Label layoutX="21.0" layoutY="69.0">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                </Label>
-                                <Label layoutX="14.0" layoutY="278.0">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                </Label>
-                                <Button layoutX="18.0" layoutY="326.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="139.0" style="-fx-background-radius: 10px;" text="Download Receipt" textOverrun="CENTER_ELLIPSIS">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                </Button>
-                                <Label layoutX="22.0" layoutY="51.0" prefHeight="35.0" prefWidth="289.0" text="Payment Id             :  ">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                                <Label layoutX="23.0" layoutY="86.0" prefHeight="35.0" prefWidth="289.0" text="Invoice ID               : ">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                                <Label layoutX="24.0" layoutY="121.0" prefHeight="35.0" prefWidth="289.0" text="Amount Paid          :">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                                <Label layoutX="22.0" layoutY="156.0" prefHeight="35.0" prefWidth="289.0" text="Payment Method    :">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                                <Label layoutX="23.0" layoutY="193.0" prefHeight="35.0" prefWidth="289.0" text="Payment Date         :">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                                <Label layoutX="22.0" layoutY="232.0" prefHeight="35.0" prefWidth="289.0" text="Due Amount            :">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                        <Label layoutX="22.0" layoutY="270.0" prefHeight="35.0" prefWidth="289.0" text="Payment Status        :">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="173.0" layoutY="326.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="139.0" style="-fx-background-radius: 10px;" text="Print Receipt" textOverrun="CENTER_ELLIPSIS">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Button>
-                        <Button layoutX="53.0" layoutY="398.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="227.0" style="-fx-background-radius: 10px;" text="Rrecord Another Payment " textOverrun="CENTER_ELLIPSIS">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Button>
+
+
+
+
+                                <Label layoutX="25"
+                                       layoutY="85"
+                                       text="Payment ID"/>
+
+
+                                <Label fx:id="paymentIdLabel"
+                                       layoutX="130"
+                                       layoutY="85"
+                                       text="PAY-000"/>
+
+
+
+
+
+                                <Label layoutX="25"
+                                       layoutY="130"
+                                       text="Invoice ID"/>
+
+
+                                <Label fx:id="summaryInvoiceLabel"
+                                       layoutX="130"
+                                       layoutY="130"
+                                       text="-"/>
+
+
+
+
+                                <Label layoutX="25"
+                                       layoutY="175"
+                                       text="Amount Paid"/>
+
+
+                                <Label fx:id="summaryAmountLabel"
+                                       layoutX="130"
+                                       layoutY="175"
+                                       text="0.00"/>
+
+
+
+
+
+                                <Label layoutX="25"
+                                       layoutY="220"
+                                       text="Payment Status"/>
+
+
+                                <Label fx:id="paymentStatusLabel"
+                                       layoutX="130"
+                                       layoutY="220"
+                                       text="Pending"/>
+
+
+
+
+
+                                <Button fx:id="downloadReceiptButton"
+                                        layoutX="45"
+                                        layoutY="275"
+                                        prefWidth="160"
+                                        prefHeight="35"
+                                        text="Download Receipt"
+                                        style="-fx-background-color:#00853F;
+               -fx-background-radius:10;"
+                                        textFill="WHITE"/>
+
+
+
+                                <Button fx:id="printReceiptButton"
+                                        layoutX="45"
+                                        layoutY="320"
+                                        prefWidth="160"
+                                        prefHeight="35"
+                                        text="Print Receipt"
+                                        style="-fx-background-color:#00853F;
+               -fx-background-radius:10;"
+                                        textFill="WHITE"/>
+
+
+
                             </children>
+
+
                         </AnchorPane>
-                    </children></AnchorPane>
-            </children></VBox>
-        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
+
+
+
+
+
+
+                        <Button fx:id="resetButton"
+                                layoutX="100"
+                                layoutY="670"
+                                prefWidth="100"
+                                text="Reset"/>
+
+
+
+                        <Button fx:id="cancelButton"
+                                layoutX="260"
+                                layoutY="670"
+                                prefWidth="100"
+                                text="Cancel"/>
+
+
+
+
+                    </children>
+
+
+                </AnchorPane>
+
+
+            </children>
+
+
+        </VBox>
+
+
     </children>
+
+
 </AnchorPane>
