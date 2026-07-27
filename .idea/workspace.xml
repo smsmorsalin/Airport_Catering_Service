@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16035505-93b3-4b96-a3f5-7088858b0893" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into aronno&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/EmergencyModification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/FlightCancellation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/FlightDelayRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/GenerateReports.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/RegisterComplaint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/ResolveComplaint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/ServiceUpdates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/TrackComplaint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/dashboardViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModification_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModificationView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellation_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellationView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightDelayRequest_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightDelayRequestView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/GenerateReports_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/GenerateReportsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/RegisterComplaint_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/RegisterComplaintView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ResolveComplaint_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ResolveComplaintView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ServiceUpdates_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ServiceUpdatesView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/TrackComplaint_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/TrackComplaintView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/dashboard_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/dashboardView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/CalculateCost_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/CalculateCostView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/FinancialReports_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/FinancialReportsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/GenerateInvoice_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/GenerateInvoiceView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/OutstandingPayments_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/OutstandingPaymentsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/PaymentHistory_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/PaymentHistoryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/ProcessRefund_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/ProcessRefundView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RecordPayment_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RecordPaymentView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RevenueSummary_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RevenueSummaryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/dashboard_FinanceAndBillingManagerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/dashboardView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="16035505-93b3-4b96-a3f5-7088858b0893" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into aronno&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
