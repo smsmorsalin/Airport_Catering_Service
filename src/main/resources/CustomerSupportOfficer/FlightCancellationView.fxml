@@ -15,7 +15,7 @@
             prefWidth="898.0"
             xmlns="http://javafx.com/javafx/26"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="CONTROLLER_NAME">
+            fx:controller="main.airport_catering_service.controller.customer_support_officer.FlightCancellationViewController">
 
 
     <children>
@@ -43,7 +43,6 @@
                 </Button>
 
 
-
                 <Button text="Register Complaint"
                         prefHeight="46"
                         prefWidth="174"
@@ -54,8 +53,6 @@
                 </Button>
 
 
-
-
                 <Button text="Track Complaint"
                         prefHeight="46"
                         prefWidth="174"
@@ -64,8 +61,6 @@
                         <Font size="15"/>
                     </font>
                 </Button>
-
-
 
 
                 <Button text="Resolve Complaint"
@@ -79,9 +74,31 @@
 
 
 
-
-
                 <Button text="Emergency Modification"
+                        prefHeight="46"
+                        prefWidth="174"
+                        style="-fx-background-radius:50px;">
+                    <font>
+                        <Font size="15"/>
+                    </font>
+                </Button>
+
+
+
+                <Button text="Flight Delay Request"
+                        prefHeight="46"
+                        prefWidth="174"
+                        style="-fx-background-radius:50px;">
+                    <font>
+                        <Font size="15"/>
+                    </font>
+                </Button>
+
+
+
+
+
+                <Button text="Flight Cancellation"
                         prefHeight="46"
                         prefWidth="174"
                         style="-fx-background-radius:50px;
@@ -98,48 +115,14 @@
 
 
 
-                <Button text="Flight Delay Request"
-                        prefHeight="46"
-                        prefWidth="174"
-                        style="-fx-background-radius:50px;">
-
-                    <font>
-                        <Font size="15"/>
-                    </font>
-
-                </Button>
-
-
-
-
-
-                <Button text="Flight Cancellation"
-                        prefHeight="46"
-                        prefWidth="174"
-                        style="-fx-background-radius:50px;">
-
-                    <font>
-                        <Font size="15"/>
-                    </font>
-
-                </Button>
-
-
-
-
-
                 <Button text="Service Updates"
                         prefHeight="46"
                         prefWidth="174"
                         style="-fx-background-radius:50px;">
-
                     <font>
                         <Font size="15"/>
                     </font>
-
                 </Button>
-
-
 
 
 
@@ -147,11 +130,9 @@
                         prefHeight="46"
                         prefWidth="174"
                         style="-fx-background-radius:50px;">
-
                     <font>
                         <Font size="15"/>
                     </font>
-
                 </Button>
 
 
@@ -165,12 +146,12 @@
 
 
 
-        <!-- TOP TITLE -->
+        <!-- TOP HEADER -->
 
 
-        <Button layoutY="3"
-                prefHeight="29"
-                prefWidth="175"
+        <Button layoutY="3.0"
+                prefHeight="29.0"
+                prefWidth="175.0"
                 text="Airport Catering Service"
                 style="-fx-background-color:pink;
         -fx-background-radius:5;">
@@ -194,12 +175,13 @@
 
 
 
+
         <!-- MAIN AREA -->
 
 
-        <VBox layoutX="175"
-              prefHeight="758"
-              prefWidth="726"
+        <VBox layoutX="175.0"
+              prefHeight="758.0"
+              prefWidth="726.0"
               style="-fx-background-color:silver;">
 
 
@@ -211,9 +193,11 @@
                        alignment="CENTER"
                        prefWidth="609">
 
+
                     <font>
                         <Font name="Gabriola" size="18"/>
                     </font>
+
 
                 </Label>
 
@@ -233,15 +217,17 @@
 
 
 
+                        <!-- PAGE TITLE -->
+
+
                         <Label layoutX="56"
                                layoutY="25"
-                               text="Emergency Modification">
+                               text="Flight Cancellation">
 
 
                             <font>
                                 <Font size="24"/>
                             </font>
-
 
                         </Label>
 
@@ -249,7 +235,7 @@
 
                         <Label layoutX="56"
                                layoutY="65"
-                               text="Submit emergency order modification request"/>
+                               text="Cancel flight order and process cancellation request"/>
 
 
 
@@ -258,8 +244,7 @@
 
 
 
-                        <!-- ORDER SEARCH -->
-
+                        <!-- ORDER VERIFICATION -->
 
 
                         <AnchorPane layoutX="6"
@@ -271,7 +256,6 @@
 
 
                             <children>
-
 
 
                                 <Label layoutX="20"
@@ -290,14 +274,14 @@
 
 
                                 <Label layoutX="20"
-                                       layoutY="48"
+                                       layoutY="50"
                                        text="Order ID"/>
 
 
 
                                 <TextField fx:id="orderIdField"
                                            layoutX="20"
-                                           layoutY="70"
+                                           layoutY="72"
                                            prefWidth="180"
                                            prefHeight="30"/>
 
@@ -305,28 +289,30 @@
 
 
                                 <Button fx:id="verifyOrderBtn"
-                                        layoutX="215"
-                                        layoutY="70"
+                                        layoutX="220"
+                                        layoutY="72"
                                         prefWidth="130"
                                         prefHeight="30"
-                                        text="Check Order"
+                                        text="Verify Order"
                                         style="-fx-background-radius:10;"/>
 
 
 
 
-                                <Label layoutX="400"
-                                       layoutY="48"
-                                       text="Eligibility Status"/>
+
+                                <Label layoutX="420"
+                                       layoutY="50"
+                                       text="Status:"/>
 
 
-                                <Label fx:id="eligibilityLabel"
-                                       layoutX="520"
-                                       layoutY="48"
+                                <Label fx:id="verificationStatus"
+                                       layoutX="490"
+                                       layoutY="50"
                                        text="Pending"/>
 
 
                             </children>
+
 
                         </AnchorPane>
 
@@ -338,12 +324,12 @@
 
 
 
-                        <!-- MODIFICATION FORM -->
+                        <!-- CANCELLATION FORM -->
 
 
                         <AnchorPane layoutX="6"
-                                    layoutY="230"
-                                    prefHeight="390"
+                                    layoutY="235"
+                                    prefHeight="330"
                                     prefWidth="420"
                                     style="-fx-background-color:white;
             -fx-background-radius:25;">
@@ -355,99 +341,7 @@
 
                                 <Label layoutX="25"
                                        layoutY="25"
-                                       text="Modification Details">
-
-
-                                    <font>
-                                        <Font size="18"/>
-                                    </font>
-
-
-                                </Label>
-
-
-
-
-                                <Label layoutX="25"
-                                       layoutY="80"
-                                       text="Modification Request"/>
-
-
-
-                                <TextArea fx:id="modificationRequestField"
-                                          layoutX="25"
-                                          layoutY="105"
-                                          prefWidth="350"
-                                          prefHeight="70"
-                                          promptText="Enter requested modification"/>
-
-
-
-
-                                <Label layoutX="25"
-                                       layoutY="195"
-                                       text="Reason"/>
-
-
-
-
-                                <TextArea fx:id="reasonField"
-                                          layoutX="25"
-                                          layoutY="220"
-                                          prefWidth="350"
-                                          prefHeight="65"
-                                          promptText="Enter reason"/>
-
-
-
-
-
-                                <Label layoutX="25"
-                                       layoutY="310"
-                                       text="Priority Level"/>
-
-
-
-
-                                <ComboBox fx:id="priorityCombo"
-                                          layoutX="150"
-                                          layoutY="305"
-                                          prefWidth="220"/>
-
-
-
-
-                            </children>
-
-                        </AnchorPane>
-
-
-
-
-
-
-
-
-
-                        <!-- SUMMARY PANEL -->
-
-
-                        <AnchorPane layoutX="445"
-                                    layoutY="230"
-                                    prefHeight="390"
-                                    prefWidth="273"
-                                    style="-fx-background-color:#EAF2FF;
-            -fx-background-radius:25;">
-
-
-                            <children>
-
-
-
-
-                                <Label layoutX="20"
-                                       layoutY="25"
-                                       text="Request Summary">
+                                       text="Cancellation Details">
 
 
                                     <font>
@@ -462,14 +356,15 @@
 
 
                                 <Label layoutX="25"
-                                       layoutY="85"
-                                       text="Order ID:"/>
+                                       layoutY="80"
+                                       text="Airline Name"/>
 
 
-                                <Label fx:id="summaryOrderId"
-                                       layoutX="130"
-                                       layoutY="85"
-                                       text="-"/>
+
+                                <TextField fx:id="airlineNameField"
+                                           layoutX="170"
+                                           layoutY="75"
+                                           prefWidth="200"/>
 
 
 
@@ -477,12 +372,104 @@
 
                                 <Label layoutX="25"
                                        layoutY="130"
-                                       text="Status:"/>
+                                       text="Cancellation Reason"/>
 
 
-                                <Label fx:id="summaryStatus"
+
+
+                                <ComboBox fx:id="reasonCombo"
+                                          layoutX="170"
+                                          layoutY="125"
+                                          prefWidth="200"/>
+
+
+
+
+
+
+
+                                <Label layoutX="25"
+                                       layoutY="180"
+                                       text="Additional Notes"/>
+
+
+
+
+                                <TextArea fx:id="notesField"
+                                          layoutX="25"
+                                          layoutY="205"
+                                          prefWidth="350"
+                                          prefHeight="75"
+                                          promptText="Enter additional notes"/>
+
+
+
+                            </children>
+
+
+                        </AnchorPane>
+
+
+
+
+
+
+
+
+
+                        <!-- CANCELLATION SUMMARY -->
+
+
+                        <AnchorPane layoutX="445"
+                                    layoutY="235"
+                                    prefHeight="330"
+                                    prefWidth="273"
+                                    style="-fx-background-color:#EAF2FF;
+            -fx-background-radius:25;">
+
+
+                            <children>
+
+
+
+                                <Label layoutX="20"
+                                       layoutY="25"
+                                       text="Cancellation Summary">
+
+
+                                    <font>
+                                        <Font size="20"/>
+                                    </font>
+
+
+                                </Label>
+
+
+
+
+
+                                <Label layoutX="25"
+                                       layoutY="90"
+                                       text="Order ID"/>
+
+
+                                <Label fx:id="summaryOrderId"
                                        layoutX="130"
-                                       layoutY="130"
+                                       layoutY="90"
+                                       text="-"/>
+
+
+
+
+
+                                <Label layoutX="25"
+                                       layoutY="135"
+                                       text="Refund Status"/>
+
+
+                                <Label fx:id="refundStatus"
+                                       layoutX="130"
+                                       layoutY="135"
                                        text="Pending"/>
 
 
@@ -490,25 +477,28 @@
 
 
                                 <Label layoutX="25"
-                                       layoutY="175"
-                                       text="Priority:"/>
+                                       layoutY="180"
+                                       text="Cancellation"/>
 
 
-                                <Label fx:id="summaryPriority"
+                                <Label fx:id="cancelStatus"
                                        layoutX="130"
-                                       layoutY="175"
-                                       text="-"/>
+                                       layoutY="180"
+                                       text="Not Started"/>
 
 
 
 
-                                <Button fx:id="submitModificationBtn"
-                                        layoutX="50"
-                                        layoutY="280"
-                                        prefWidth="170"
+
+
+
+                                <Button fx:id="cancelFlightBtn"
+                                        layoutX="45"
+                                        layoutY="250"
+                                        prefWidth="180"
                                         prefHeight="40"
-                                        text="Submit Request"
-                                        style="-fx-background-color:#0F6BFF;
+                                        text="Cancel Flight"
+                                        style="-fx-background-color:#DC2626;
         -fx-text-fill:white;
         -fx-background-radius:10;">
 
@@ -534,11 +524,14 @@
 
 
 
+
+
+
                         <!-- BOTTOM BUTTONS -->
 
 
-                        <Button layoutX="45"
-                                layoutY="650"
+                        <Button layoutX="50"
+                                layoutY="620"
                                 prefWidth="120"
                                 prefHeight="35"
                                 text="Reset"
@@ -546,9 +539,8 @@
 
 
 
-
-                        <Button layoutX="190"
-                                layoutY="650"
+                        <Button layoutX="200"
+                                layoutY="620"
                                 prefWidth="120"
                                 prefHeight="35"
                                 text="Cancel"
@@ -558,7 +550,6 @@
 
 
                     </children>
-
 
                 </AnchorPane>
 

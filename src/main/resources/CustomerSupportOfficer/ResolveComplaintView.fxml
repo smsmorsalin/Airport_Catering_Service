@@ -9,18 +9,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="758.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="758.0"
+            prefWidth="898.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="main.airport_catering_service.controller.customer_support_officer.ResolveComplaintViewController">
 
 
     <children>
-
-
-        <!-- ================= SIDEBAR ================= -->
-
-
         <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5">
-
-
             <children>
 
 
