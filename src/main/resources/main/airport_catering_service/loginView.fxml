@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="614.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.loginController">
+<AnchorPane fx:id="login_anchorPane" prefHeight="614.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.loginController">
    <children>
       <Label alignment="CENTER" prefHeight="104.0" prefWidth="600.0" style="-fx-background-color: orange;" />
       <Label alignment="CENTER" layoutX="146.0" layoutY="4.0" prefHeight="35.0" prefWidth="277.0" text="Airport Catering Service">
@@ -20,23 +20,15 @@
             <Font name="Arial Bold" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="158.0" layoutY="204.0" prefHeight="25.0" prefWidth="214.0" promptText="username" />
-      <TextField layoutX="161.0" layoutY="253.0" prefHeight="25.0" prefWidth="214.0" promptText="password" />
-      <Button layoutX="231.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: orange;" text="login">
+      <TextField fx:id="fxidUsernameTextField" layoutX="158.0" layoutY="204.0" prefHeight="25.0" prefWidth="214.0" promptText="username" />
+      <TextField fx:id="fxidPasswordTextfield" layoutX="161.0" layoutY="253.0" prefHeight="25.0" prefWidth="214.0" promptText="password" />
+      <Button layoutX="231.0" layoutY="304.0" mnemonicParsing="false" onAction="#loginButtonOnClick" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: orange;" text="login">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
       <Label layoutX="102.0" layoutY="378.0" prefHeight="17.0" prefWidth="259.0" text="click register to register as Airline Representative" />
-      <Label alignment="CENTER" layoutX="364.0" layoutY="378.0" prefHeight="17.0" prefWidth="54.0" style="-fx-background-color: silver; -fx-background-radius: 5;" text="register">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Label>
       <Label layoutX="159.0" layoutY="576.0" prefHeight="17.0" prefWidth="145.0" text="face any trouble? contact" />
-      <Label alignment="CENTER" layoutX="299.0" layoutY="576.0" prefHeight="17.0" prefWidth="80.0" style="-fx-background-color: silver; -fx-background-radius: 5;" text="support team">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Label>
+      <Button layoutX="361.0" layoutY="374.0" mnemonicParsing="false" onAction="#registerButtonOnClick" text="Register" />
+      <Button layoutX="296.0" layoutY="572.0" mnemonicParsing="false" onAction="#supportTeamButtonOnClick" text="Support Team" />
    </children>
 </AnchorPane>

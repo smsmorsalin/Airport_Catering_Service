@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="sihab">
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Inmpliment generateReportView.fxml">
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModification_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModification_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellation_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellation_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightDelayRequest_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightDelayRequest_CustomerSupportOfficerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ServiceUpdates_CustomerSupportOfficerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ServiceUpdates_CustomerSupportOfficerView.fxml" afterDir="false" />
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="change HelloApplication">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/operationalReportView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="FxmlFile" />
       </list>
     </option>
@@ -43,66 +51,66 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.004044948047876" />
-      <entry key="MS500" value="1.492203679819948" />
-      <entry key="S2" value="4.039216364506431" />
-      <entry key="S5" value="6.261646799043885" />
-      <entry key="S10" value="7.45167440669828" />
-      <entry key="S30" value="8.43708186872593" />
-      <entry key="S60" value="8.712184402149209" />
-      <entry key="M2" value="8.85446228049024" />
-      <entry key="M5" value="8.941388544117228" />
-      <entry key="M10" value="8.973000382444479" />
-      <entry key="M15" value="9.049657620687116" />
-      <entry key="M30" value="11.420205060268323" />
-      <entry key="H1" value="24.665492566196075" />
-      <entry key="H2" value="50.255264810685865" />
-      <entry key="H4" value="78.72222869578242" />
-      <entry key="D1" value="125.96638140631376" />
-      <entry key="W1" value="138.67695033154237" />
+      <entry key="MS100" value="1.0000000169859098" />
+      <entry key="MS500" value="1.091841680241671" />
+      <entry key="S2" value="3.310978687847509" />
+      <entry key="S5" value="7.110348680041016" />
+      <entry key="S10" value="13.975084526652276" />
+      <entry key="S30" value="30.294353627706315" />
+      <entry key="S60" value="39.478951842759514" />
+      <entry key="M2" value="47.2689248231854" />
+      <entry key="M5" value="59.171748252654496" />
+      <entry key="M10" value="74.30366957952687" />
+      <entry key="M15" value="87.13798817429242" />
+      <entry key="M30" value="116.08159467809934" />
+      <entry key="H1" value="148.52499603516304" />
+      <entry key="H2" value="175.6266603157789" />
+      <entry key="H4" value="193.7239460028353" />
+      <entry key="D1" value="211.9501956207129" />
+      <entry key="W1" value="215.41250108072282" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="3.8559086356894616E-241" />
-      <entry key="S30" value="7.278506010403416E-81" />
-      <entry key="S60" value="8.531416072629991E-41" />
-      <entry key="M2" value="9.237057389286974E-21" />
-      <entry key="M5" value="1.020457341804998E-8" />
-      <entry key="M10" value="1.606119861833057E-4" />
-      <entry key="M15" value="0.0053220042486503165" />
-      <entry key="M30" value="0.21361647296242034" />
-      <entry key="H1" value="1.4388179476786649" />
-      <entry key="H2" value="3.78003511492346" />
-      <entry key="H4" value="6.143197228616769" />
-      <entry key="D1" value="9.219029878199134" />
-      <entry key="W1" value="9.884481671750226" />
+      <entry key="MS500" value="1.526298421347243E-222" />
+      <entry key="S2" value="3.5148748300698355E-56" />
+      <entry key="S5" value="6.582133758809545E-23" />
+      <entry key="S10" value="8.13427926987516E-12" />
+      <entry key="S30" value="2.461805226946306E-4" />
+      <entry key="S60" value="0.026936492801638158" />
+      <entry key="M2" value="0.36861558661363797" />
+      <entry key="M5" value="2.55756414575666" />
+      <entry key="M10" value="7.088764898932002" />
+      <entry key="M15" value="11.50769865419015" />
+      <entry key="M30" value="21.484538452605094" />
+      <entry key="H1" value="31.68420361866623" />
+      <entry key="H2" value="39.43361812174971" />
+      <entry key="H4" value="44.296025246388034" />
+      <entry key="D1" value="48.9838180435394" />
+      <entry key="W1" value="49.85312432223829" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.027036558674532658" />
-      <entry key="MS500" value="0.7529251548109128" />
-      <entry key="S2" value="3.6696946008759688" />
-      <entry key="S5" value="6.082183988029544" />
-      <entry key="S10" value="7.355331303805005" />
-      <entry key="S30" value="8.40333885585583" />
-      <entry key="S60" value="8.695098219547264" />
-      <entry key="M2" value="8.845864640505278" />
-      <entry key="M5" value="8.937936291900577" />
-      <entry key="M10" value="8.971432127466448" />
-      <entry key="M15" value="9.053813137489497" />
-      <entry key="M30" value="11.63293377497274" />
-      <entry key="H1" value="26.102932345067234" />
-      <entry key="H2" value="54.03369528260738" />
-      <entry key="H4" value="84.86414455378457" />
-      <entry key="D1" value="135.1850852536946" />
-      <entry key="W1" value="148.56138166475986" />
+      <entry key="MS100" value="2.0360138087286872E-7" />
+      <entry key="MS500" value="0.13452458428476097" />
+      <entry key="S2" value="2.756472013965402" />
+      <entry key="S5" value="6.8295522335433585" />
+      <entry key="S10" value="13.818001881540765" />
+      <entry key="S30" value="30.221726129827008" />
+      <entry key="S60" value="39.44120485627119" />
+      <entry key="M2" value="47.57216472744755" />
+      <entry key="M5" value="61.64989889450259" />
+      <entry key="M10" value="81.30441097666532" />
+      <entry key="M15" value="98.55970879220379" />
+      <entry key="M30" value="137.4953255807349" />
+      <entry key="H1" value="180.16047038066068" />
+      <entry key="H2" value="215.03099506341525" />
+      <entry key="H4" value="238.00380643616663" />
+      <entry key="D1" value="260.9310766227867" />
+      <entry key="W1" value="265.2651994148405" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
+    &quot;associatedIndex&quot;: 7
+    }</component>
   <component name="ProjectId" id="3GpedlUA9Dw7O7qeNlxSVSDPNma" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -137,8 +145,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
       </set>
     </attachedChunks>
   </component>
@@ -162,31 +170,23 @@
       <option name="project" value="LOCAL" />
       <updated>1784811645918</updated>
     </task>
-    <task id="LOCAL-00002" summary="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue.">
+    <task id="LOCAL-00002" summary="Inmpliment generateReportView.fxml">
       <option name="closed" value="true" />
-      <created>1784840887525</created>
+      <created>1785089466557</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1784840887525</updated>
+      <updated>1785089466558</updated>
     </task>
-    <task id="LOCAL-00003" summary="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue.">
-      <option name="closed" value="true" />
-      <created>1784911000640</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1784911000640</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create FXML:&#10;deliveryMonitoring_CateringOperationsManagerView.fxml, emergencyIssue_CateringOperationsManagerView.fxml, inventoryStatus_CateringOperationsManagerView.fxml, add tableView and Text Field, comboBox for search button in layout.fxml for emergency issue." />
-    <MESSAGE value="sihab" />
-    <option name="LAST_COMMIT_MESSAGE" value="sihab" />
+    <MESSAGE value="change HelloApplication" />
+    <MESSAGE value="Inmpliment generateReportView.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inmpliment generateReportView.fxml" />
   </component>
 </project>
