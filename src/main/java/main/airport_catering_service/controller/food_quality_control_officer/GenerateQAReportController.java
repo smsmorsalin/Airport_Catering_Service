@@ -20,7 +20,7 @@ public class GenerateQAReportController
     @javafx.fxml.FXML
     private TextField startDatePicker;
     @javafx.fxml.FXML
-    private ComboBox reportTypeComboBox;
+    private ComboBox<String> reportTypeComboBox;
     @javafx.fxml.FXML
     private Label fxidDisplayTotalRejectedBatchesLabel;
     @javafx.fxml.FXML
