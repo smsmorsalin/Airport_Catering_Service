@@ -28,7 +28,7 @@
             <children>
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px; -fx-background-color: #8577F2;" text="Dashboard" textFill="WHITE">
+                <Button onAction="#sidebarDashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px; -fx-background-color: #8577F2;" text="Dashboard" textFill="WHITE">
                     <font>
                         <Font size="15" />
                     </font>
@@ -43,7 +43,7 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Generate Invoice">
+                <Button onAction="#sideBarGenerateInvoiceButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Generate Invoice">
                     <font>
                         <Font size="15" />
                     </font>
@@ -52,17 +52,7 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Record Payment">
-                    <font>
-                        <Font size="15" />
-                    </font>
-                </Button>
-
-
-
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Process Refund">
+                <Button onAction="#sideBarRecordPaymentButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Record Payment">
                     <font>
                         <Font size="15" />
                     </font>
@@ -72,8 +62,7 @@
 
 
 
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Outstanding Payments">
+                <Button onAction="#sideBarProcessRefundButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Process Refund">
                     <font>
                         <Font size="15" />
                     </font>
@@ -84,17 +73,7 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Financial Reports">
-                    <font>
-                        <Font size="15" />
-                    </font>
-                </Button>
-
-
-
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Revenue Summary">
+                <Button onAction="#sideBarOutstandingPaymentsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Outstanding Payments">
                     <font>
                         <Font size="15" />
                     </font>
@@ -105,7 +84,28 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px;" text="Payment History">
+                <Button onAction="#sideBarFinancialReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Financial Reports">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+
+
+
+
+
+                <Button onAction="#sideBarRevenueSummaryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Revenue Summary">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+
+
+
+
+
+
+                <Button onAction="#sideBarPaymentHistoryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px;" text="Payment History">
 
 
                     <font>

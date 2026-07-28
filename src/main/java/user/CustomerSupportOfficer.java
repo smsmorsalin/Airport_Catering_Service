@@ -75,4 +75,82 @@ public class CustomerSupportOfficer extends Employee{
         stage.show();
     }
 
+    public static void viewResolveComplaint(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/ResolveComplaintView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void viewEmergencyModification(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/EmergencyModificationView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void viewFlightDelayRequest(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/FlightDelayRequestView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void viewFlightCancellation(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/FlightCancellationView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void viewServiceUpdates(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/ServiceUpdatesView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void viewGenerateReports(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/GenerateReportsView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }
