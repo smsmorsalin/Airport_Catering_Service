@@ -3,6 +3,9 @@ package main.airport_catering_service.controller.airline_representative;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import user.User;
+
+import java.io.IOException;
 
 public class dashboardViewController
 {
@@ -42,7 +45,8 @@ public class dashboardViewController
     }
 
     @javafx.fxml.FXML
-    public void sideBarLogoutButtonOnClick(ActionEvent actionEvent) {
+    public void sideBarLogoutButtonOnClick(ActionEvent actionEvent) throws IOException {
+        User.logout(actionEvent);
     }
 
     @javafx.fxml.FXML

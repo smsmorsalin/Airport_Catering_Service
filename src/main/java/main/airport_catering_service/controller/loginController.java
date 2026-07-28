@@ -46,10 +46,8 @@ public class loginController
                     getClass().getResource("/AirlineRepresentative/dashboardView.fxml"));
 
             Parent root = loader.load();
-
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
-
             stage.setScene(scene);
             stage.show();
         } else if (fxidUsernameTextField.getText().equals("2")) {
@@ -57,10 +55,8 @@ public class loginController
                     getClass().getResource("/CateringOperationsManager/businessDashboardView.fxml"));
 
             Parent root = loader.load();
-
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
-
             stage.setScene(scene);
             stage.show();
         } else if (fxidUsernameTextField.getText().equals("3")) {
@@ -68,10 +64,8 @@ public class loginController
                     getClass().getResource("/CustomerSupportOfficer/dashboardView.fxml"));
 
             Parent root = loader.load();
-
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
-
             stage.setScene(scene);
             stage.show();
         }
@@ -80,10 +74,8 @@ public class loginController
                     getClass().getResource("/FinanceAndBillingManager/dashboardView.fxml"));
 
             Parent root = loader.load();
-
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
-
             stage.setScene(scene);
             stage.show();
         }
@@ -93,10 +85,8 @@ public class loginController
                     getClass().getResource("/KitchenProductionManager/dashboardView.fxml"));
 
             Parent root = loader.load();
-
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
-
             stage.setScene(scene);
             stage.show();
         }
@@ -105,10 +95,8 @@ public class loginController
                     getClass().getResource("/FoodQualityControlOfficer/dashboardView.fxml"));
 
             Parent root = loader.load();
-
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
-
             stage.setScene(scene);
             stage.show();
         }

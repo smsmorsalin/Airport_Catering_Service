@@ -39,7 +39,7 @@ public class CustomerSupportOfficer extends Employee{
     }
 
     @Override
-    public void viewDashboard() throws IOException{
+    public void viewDashboard(javafx.event.ActionEvent event) throws IOException{
 
     }
 
