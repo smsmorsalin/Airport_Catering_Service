@@ -12,4 +12,5 @@ module main.airport_catering_service {
     opens main.airport_catering_service.controller.airline_representative to javafx.fxml;
     opens main.airport_catering_service.controller.catering_operations_manager to javafx.fxml;
     opens main.airport_catering_service.controller.finance_and_billing_manager to javafx.fxml;
+    opens main.airport_catering_service.controller.customer_support_officer to javafx.fxml;
 }
