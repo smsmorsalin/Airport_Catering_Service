@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import main.airport_catering_service.HelloApplication;
+import user.KitchenProductionManager;
+import user.User;
 
 import java.io.IOException;
 import java.io.IOException;
@@ -60,7 +62,8 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void sideBarApproveProductionOnAction(ActionEvent actionEvent) {
+    public void sideBarApproveProductionOnAction(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -84,6 +87,7 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void logoutButtonOnAction(ActionEvent actionEvent) {
+    public void logoutButtonOnAction(ActionEvent actionEvent)throws  IOException {
+        User.logout(actionEvent);
     }
 }
