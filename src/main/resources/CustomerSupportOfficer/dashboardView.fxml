@@ -36,7 +36,7 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Register Complaint">
+                <Button onAction="#sideBarRegisterComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Register Complaint">
                     <font>
                         <Font size="15" />
                     </font>
@@ -44,7 +44,7 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Track Complaint">
+                <Button onAction="#sideBarTrackComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Track Complaint">
                     <font>
                         <Font size="15" />
                     </font>
