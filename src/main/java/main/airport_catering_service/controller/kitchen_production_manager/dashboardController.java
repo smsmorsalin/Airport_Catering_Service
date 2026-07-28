@@ -53,6 +53,7 @@ public class dashboardController
 
     @javafx.fxml.FXML
     public void sideBarMenuListOnAction(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewCreateMenuList(actionEvent);
 
 
     }
@@ -63,7 +64,7 @@ public class dashboardController
 
     @javafx.fxml.FXML
     public void sideBarApproveProductionOnAction(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
+//        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
     }
 
     @javafx.fxml.FXML

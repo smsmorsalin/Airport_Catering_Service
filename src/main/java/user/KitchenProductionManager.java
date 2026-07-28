@@ -24,9 +24,8 @@ public class KitchenProductionManager extends  Employee{
     public boolean updateProfile(){
         return false;
     }
-
-    public static void viewApproveProductionCompletion(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(KitchenProductionManager.class.getResource("/KitchenProductionManager/ApproveProductionCompletionView.fxml"));
+    public static void viewCreateMenuList(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(KitchenProductionManager.class.getResource("/KitchenProductionManager/CreateMenuListView.fxml"));
         Parent root = loader.load();
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -35,7 +34,5 @@ public class KitchenProductionManager extends  Employee{
         stage.setScene(scene);
         stage.show();
     }
-
-
-
 }
+
