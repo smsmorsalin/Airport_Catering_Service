@@ -11,12 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="758.0"
-            prefWidth="898.0"
-            xmlns="http://javafx.com/javafx/26"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="758.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.finance_and_billing_manager.PaymentHistoryViewController">
 
 
     <children>
@@ -25,54 +20,39 @@
         <!-- ================= SIDEBAR ================= -->
 
 
-        <VBox layoutY="49.0"
-              prefHeight="706.0"
-              prefWidth="175.0"
-              spacing="5">
+        <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5">
 
 
             <children>
 
 
-                <Button text="Dashboard"
-                        prefHeight="46"
-                        prefWidth="174"
-                        style="-fx-background-radius:50px;">
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Dashboard">
                     <font>
-                        <Font size="15"/>
+                        <Font size="15" />
                     </font>
                 </Button>
 
 
-                <Button text="Calculate Cost"
-                        prefHeight="46"
-                        prefWidth="174"
-                        style="-fx-background-radius:50px;">
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Calculate Cost">
                     <font>
-                        <Font size="15"/>
+                        <Font size="15" />
                     </font>
                 </Button>
 
 
 
-                <Button text="Generate Invoice"
-                        prefHeight="46"
-                        prefWidth="174"
-                        style="-fx-background-radius:50px;">
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Generate Invoice">
                     <font>
-                        <Font size="15"/>
+                        <Font size="15" />
                     </font>
                 </Button>
 
 
 
 
-                <Button text="Record Payment"
-                        prefHeight="46"
-                        prefWidth="174"
-                        style="-fx-background-radius:50px;">
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Record Payment">
                     <font>
-                        <Font size="15"/>
+                        <Font size="15" />
                     </font>
                 </Button>
 
@@ -80,12 +60,9 @@
 
 
 
-                <Button text="Process Refund"
-                        prefHeight="46"
-                        prefWidth="174"
-                        style="-fx-background-radius:50px;">
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Process Refund">
                     <font>
-                        <Font size="15"/>
+                        <Font size="15" />
                     </font>
                 </Button>
 
@@ -94,12 +71,9 @@
 
 
 
-                <Button text="Outstanding Payments"
-                        prefHeight="46"
-                        prefWidth="174"
-                        style="-fx-background-radius:50px;">
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Outstanding Payments">
                     <font>
-                        <Font size="15"/>
+                        <Font size="15" />
                     </font>
                 </Button>
 
@@ -108,12 +82,9 @@
 
 
 
-                <Button text="Financial Reports"
-                        prefHeight="46"
-                        prefWidth="174"
-                        style="-fx-background-radius:50px;">
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Financial Reports">
                     <font>
-                        <Font size="15"/>
+                        <Font size="15" />
                     </font>
                 </Button>
 
@@ -121,12 +92,9 @@
 
 
 
-                <Button text="Revenue Summary"
-                        prefHeight="46"
-                        prefWidth="174"
-                        style="-fx-background-radius:50px;">
+                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Revenue Summary">
                     <font>
-                        <Font size="15"/>
+                        <Font size="15" />
                     </font>
                 </Button>
 
@@ -135,16 +103,11 @@
 
 
 
-                <Button text="Payment History"
-                        prefHeight="46"
-                        prefWidth="174"
-                        style="-fx-background-radius:50px;
-        -fx-background-color:#8577F2;"
-                        textFill="white">
+                <Button onAction="#sidebarPaymentHistoryOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;         -fx-background-color:#8577F2;" text="Payment History" textFill="white">
 
 
                     <font>
-                        <Font size="15"/>
+                        <Font size="15" />
                     </font>
 
 
@@ -164,21 +127,16 @@
         <!-- TOP HEADER -->
 
 
-        <Button layoutY="3"
-                prefHeight="29"
-                prefWidth="175"
-                text="Airport Catering Service"
-                style="-fx-background-color:pink;
-        -fx-background-radius:5;">
+        <Button layoutY="3" prefHeight="29" prefWidth="175" style="-fx-background-color:pink;         -fx-background-radius:5;" text="Airport Catering Service">
 
 
             <font>
-                <Font name="Arial Bold" size="13"/>
+                <Font name="Arial Bold" size="13" />
             </font>
 
 
             <cursor>
-                <Cursor fx:constant="HAND"/>
+                <Cursor fx:constant="HAND" />
             </cursor>
 
 
@@ -193,23 +151,18 @@
         <!-- MAIN CONTENT -->
 
 
-        <VBox layoutX="175"
-              prefHeight="758"
-              prefWidth="726"
-              style="-fx-background-color:silver;">
+        <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:silver;">
 
 
             <children>
 
 
 
-                <Label text="welcome Username"
-                       alignment="CENTER"
-                       prefWidth="609">
+                <Label alignment="CENTER" prefWidth="609" text="welcome Username">
 
 
                     <font>
-                        <Font name="Gabriola" size="18"/>
+                        <Font name="Gabriola" size="18" />
                     </font>
 
 
@@ -220,9 +173,7 @@
 
 
 
-                <AnchorPane prefHeight="734"
-                            prefWidth="726"
-                            style="-fx-background-color:white;">
+                <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
 
 
                     <children>
@@ -234,13 +185,11 @@
                         <!-- PAGE TITLE -->
 
 
-                        <Label layoutX="56"
-                               layoutY="25"
-                               text="Payment History">
+                        <Label layoutX="56" layoutY="25" text="Payment History">
 
 
                             <font>
-                                <Font size="24"/>
+                                <Font size="24" />
                             </font>
 
 
@@ -248,9 +197,7 @@
 
 
 
-                        <Label layoutX="56"
-                               layoutY="65"
-                               text="View and manage all payment transactions"/>
+                        <Label layoutX="56" layoutY="65" text="View and manage all payment transactions" />
 
 
 
@@ -262,25 +209,18 @@
                         <!-- FILTER SECTION -->
 
 
-                        <AnchorPane layoutX="6"
-                                    layoutY="105"
-                                    prefHeight="200"
-                                    prefWidth="712"
-                                    style="-fx-background-color:white;
-            -fx-background-radius:25;">
+                        <AnchorPane layoutX="6" layoutY="105" prefHeight="200" prefWidth="712" style="-fx-background-color:white;             -fx-background-radius:25;">
 
 
                             <children>
 
 
 
-                                <Label layoutX="25"
-                                       layoutY="20"
-                                       text="Payment Search Filter">
+                                <Label layoutX="25" layoutY="20" text="Payment Search Filter">
 
 
                                     <font>
-                                        <Font size="20"/>
+                                        <Font size="20" />
                                     </font>
 
 
@@ -291,31 +231,21 @@
 
 
 
-                                <Label layoutX="25"
-                                       layoutY="70"
-                                       text="Invoice ID"/>
+                                <Label layoutX="25" layoutY="70" text="Invoice ID" />
 
 
 
-                                <TextField fx:id="invoiceIdField"
-                                           layoutX="120"
-                                           layoutY="65"
-                                           prefWidth="150"/>
+                                <TextField fx:id="invoiceIdTextField" layoutX="120" layoutY="65" prefWidth="150" />
 
 
 
 
 
-                                <Label layoutX="300"
-                                       layoutY="70"
-                                       text="Airline Name"/>
+                                <Label layoutX="300" layoutY="70" text="Airline Name" />
 
 
 
-                                <TextField fx:id="airlineField"
-                                           layoutX="400"
-                                           layoutY="65"
-                                           prefWidth="160"/>
+                                <TextField fx:id="airlineTextField" layoutX="400" layoutY="65" prefWidth="160" />
 
 
 
@@ -323,16 +253,11 @@
 
 
 
-                                <Label layoutX="25"
-                                       layoutY="125"
-                                       text="Payment Status"/>
+                                <Label layoutX="25" layoutY="125" text="Payment Status" />
 
 
 
-                                <ComboBox fx:id="paymentStatusCombo"
-                                          layoutX="120"
-                                          layoutY="120"
-                                          prefWidth="150"/>
+                                <ComboBox fx:id="paymentStatusComboBox" layoutX="120" layoutY="120" prefWidth="150" />
 
 
 
@@ -340,30 +265,17 @@
 
 
 
-                                <Label layoutX="300"
-                                       layoutY="125"
-                                       text="Payment Method"/>
+                                <Label layoutX="300" layoutY="125" text="Payment Method" />
 
 
 
-                                <ComboBox fx:id="paymentMethodCombo"
-                                          layoutX="400"
-                                          layoutY="120"
-                                          prefWidth="160"/>
+                                <ComboBox fx:id="paymentMethodComboBox" layoutX="400" layoutY="120" prefWidth="160" />
 
 
 
 
 
-                                <Button fx:id="searchPaymentBtn"
-                                        layoutX="590"
-                                        layoutY="120"
-                                        prefWidth="90"
-                                        prefHeight="30"
-                                        text="Search"
-                                        style="-fx-background-color:#0F6BFF;
-        -fx-text-fill:white;
-        -fx-background-radius:10;"/>
+                                <Button fx:id="searchPaymentBtn" layoutX="590" layoutY="120" onAction="#SearchOnAction" prefHeight="30" prefWidth="90" style="-fx-background-color:#0F6BFF;         -fx-text-fill:white;         -fx-background-radius:10;" text="Search" />
 
 
 
@@ -383,25 +295,18 @@
                         <!-- PAYMENT TABLE -->
 
 
-                        <AnchorPane layoutX="6"
-                                    layoutY="330"
-                                    prefHeight="270"
-                                    prefWidth="712"
-                                    style="-fx-background-color:white;
-            -fx-background-radius:25;">
+                        <AnchorPane layoutX="6" layoutY="330" prefHeight="270" prefWidth="712" style="-fx-background-color:white;             -fx-background-radius:25;">
 
 
                             <children>
 
 
 
-                                <Label layoutX="25"
-                                       layoutY="20"
-                                       text="Payment Transactions">
+                                <Label layoutX="25" layoutY="20" text="Payment Transactions">
 
 
                                     <font>
-                                        <Font size="20"/>
+                                        <Font size="20" />
                                     </font>
 
 
@@ -411,49 +316,31 @@
 
 
 
-                                <TableView fx:id="paymentTable"
-                                           layoutX="20"
-                                           layoutY="60"
-                                           prefWidth="670"
-                                           prefHeight="170">
+                                <TableView fx:id="paymentTable" layoutX="20" layoutY="60" prefHeight="170" prefWidth="670">
 
 
                                     <columns>
 
 
-                                        <TableColumn fx:id="paymentIdColumn"
-                                                     text="Payment ID"
-                                                     prefWidth="90"/>
+                                        <TableColumn fx:id="paymentIdColumn" prefWidth="90" text="Payment ID" />
 
 
-                                        <TableColumn fx:id="invoiceColumn"
-                                                     text="Invoice ID"
-                                                     prefWidth="90"/>
+                                        <TableColumn fx:id="invoiceColumn" prefWidth="90" text="Invoice ID" />
 
 
-                                        <TableColumn fx:id="airlineColumn"
-                                                     text="Airline"
-                                                     prefWidth="100"/>
+                                        <TableColumn fx:id="airlineColumn" prefWidth="100" text="Airline" />
 
 
-                                        <TableColumn fx:id="amountColumn"
-                                                     text="Amount Paid"
-                                                     prefWidth="100"/>
+                                        <TableColumn fx:id="amountColumn" prefWidth="100" text="Amount Paid" />
 
 
-                                        <TableColumn fx:id="methodColumn"
-                                                     text="Method"
-                                                     prefWidth="90"/>
+                                        <TableColumn fx:id="methodColumn" prefWidth="90" text="Method" />
 
 
-                                        <TableColumn fx:id="dateColumn"
-                                                     text="Date"
-                                                     prefWidth="90"/>
+                                        <TableColumn fx:id="dateColumn" prefWidth="90" text="Date" />
 
 
-                                        <TableColumn fx:id="statusColumn"
-                                                     text="Status"
-                                                     prefWidth="100"/>
+                                        <TableColumn fx:id="statusColumn" prefWidth="100" text="Status" />
 
 
                                     </columns>
@@ -480,12 +367,7 @@
                         <!-- ACTION PANEL -->
 
 
-                        <AnchorPane layoutX="6"
-                                    layoutY="625"
-                                    prefHeight="80"
-                                    prefWidth="712"
-                                    style="-fx-background-color:#EAF2FF;
-            -fx-background-radius:20;">
+                        <AnchorPane layoutX="6" layoutY="625" prefHeight="80" prefWidth="712" style="-fx-background-color:#EAF2FF;             -fx-background-radius:20;">
 
 
                             <children>
@@ -493,51 +375,25 @@
 
 
 
-                                <Button fx:id="viewPaymentBtn"
-                                        layoutX="30"
-                                        layoutY="22"
-                                        prefWidth="140"
-                                        prefHeight="35"
-                                        text="View Payment"
-                                        style="-fx-background-radius:10;"/>
+                                <Button fx:id="viewPaymentBtn" layoutX="30" layoutY="22" onAction="#ViewPaymentOnAction" prefHeight="35" prefWidth="140" style="-fx-background-radius:10;" text="View Payment" />
 
 
 
 
 
-                                <Button fx:id="receiptBtn"
-                                        layoutX="200"
-                                        layoutY="22"
-                                        prefWidth="150"
-                                        prefHeight="35"
-                                        text="Download Receipt"
-                                        style="-fx-background-color:green;
-        -fx-text-fill:white;
-        -fx-background-radius:10;"/>
+                                <Button fx:id="receiptBtn" layoutX="200" layoutY="22" onAction="#DownloadReceiptOnAction" prefHeight="35" prefWidth="150" style="-fx-background-color:green;         -fx-text-fill:white;         -fx-background-radius:10;" text="Download Receipt" />
 
 
 
 
 
 
-                                <Button fx:id="exportBtn"
-                                        layoutX="390"
-                                        layoutY="22"
-                                        prefWidth="120"
-                                        prefHeight="35"
-                                        text="Export PDF"
-                                        style="-fx-background-radius:10;"/>
+                                <Button fx:id="exportBtn" layoutX="390" layoutY="22" onAction="#ExportPDFOnAction" prefHeight="35" prefWidth="120" style="-fx-background-radius:10;" text="Export PDF" />
 
 
 
 
-                                <Button fx:id="resetBtn"
-                                        layoutX="540"
-                                        layoutY="22"
-                                        prefWidth="100"
-                                        prefHeight="35"
-                                        text="Reset"
-                                        style="-fx-background-radius:10;"/>
+                                <Button fx:id="resetBtn" layoutX="540" layoutY="22" onAction="#ResetOnAction" prefHeight="35" prefWidth="100" style="-fx-background-radius:10;" text="Reset" />
 
 
 
