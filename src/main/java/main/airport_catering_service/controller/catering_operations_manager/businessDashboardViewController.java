@@ -4,8 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.scene.control.Label;
 
-import java.io.IOException;
-
 public class businessDashboardViewController
 {
     @javafx.fxml.FXML
@@ -58,9 +56,7 @@ public class businessDashboardViewController
     }
 
     @javafx.fxml.FXML
-    public void sideBarLogoutButtonOnAction(Event event) throws IOException {
-//        UserObject.logout(event);
-        System.out.println("click");
+    public void sideBarLogoutButtonOnAction(Event event) {
     }
 
     @javafx.fxml.FXML

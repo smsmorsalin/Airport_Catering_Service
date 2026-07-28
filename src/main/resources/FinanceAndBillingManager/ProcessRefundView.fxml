@@ -10,11 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="758.0"
-            prefWidth="898.0"
-            xmlns="http://javafx.com/javafx/26"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="758.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.finance_and_billing_manager.ProcessRefundViewController">
 
 
     <children>
@@ -40,7 +36,7 @@
                 <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Record Payment" />
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-color:#C83D4A;                -fx-background-radius:50;" text="Process Refund" textFill="WHITE" />
+                <Button onAction="#sidebarProcessRefundOnAction" prefHeight="46" prefWidth="174" style="-fx-background-color:#C83D4A;                -fx-background-radius:50;" text="Process Refund" textFill="WHITE" />
 
 
                 <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Outstanding Payments" />
@@ -66,7 +62,7 @@
 
         <!-- HEADER -->
 
-        <Button layoutY="3" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
+        <Button layoutY="3" onAction="#sidebarHomePageOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
 
 
             <font>
@@ -153,7 +149,7 @@
 
 
 
-                                <Button fx:id="verifyRequestButton" layoutX="293.0" layoutY="105.0" prefWidth="140" text="Verify Request" />
+                                <Button fx:id="verifyRequestButton" layoutX="293.0" layoutY="105.0" onAction="#verifyrequestOnAction" prefWidth="140" text="Verify Request" />
 
 
 
@@ -164,7 +160,7 @@
 
 
 
-                                <TextField fx:id="orderIdField" layoutX="30" layoutY="180" prefWidth="410" />
+                                <TextField fx:id="orderidTextField" layoutX="30" layoutY="180" prefWidth="410" />
 
 
 
@@ -202,7 +198,7 @@
 
 
 
-                                <TextField fx:id="refundAmountField" layoutX="30" layoutY="440" prefWidth="410" />
+                                <TextField fx:id="refundAmounTextField" layoutX="30" layoutY="440" prefWidth="410" />
 
 
 
@@ -214,7 +210,7 @@
 
 
 
-                                <TextArea fx:id="additionalNotesArea" layoutX="30" layoutY="520" prefHeight="80" prefWidth="410" />
+                                <TextArea fx:id="additionalNotesTextField" layoutX="30" layoutY="520" prefHeight="80" prefWidth="410" />
 
 
 
@@ -223,15 +219,15 @@
 
 
 
-                                <Button fx:id="processRefundButton" layoutX="130" layoutY="610" prefHeight="45" prefWidth="200" style="-fx-background-color:#FF0000;                -fx-background-radius:10;" text="Process Refund" textFill="WHITE" />
+                                <Button fx:id="processRefundButton" layoutX="130" layoutY="610" onAction="#processRefundOnAction" prefHeight="45" prefWidth="200" style="-fx-background-color:#FF0000;                -fx-background-radius:10;" text="Process Refund" textFill="WHITE" />
 
 
 
-                                <Button fx:id="resetButton" layoutX="60" layoutY="680" prefWidth="120" text="Reset" />
+                                <Button fx:id="resetButton" layoutX="60" layoutY="680" onAction="#resetOnAction" prefWidth="120" text="Reset" />
 
 
 
-                                <Button fx:id="cancelButton" layoutX="300" layoutY="680" prefWidth="120" text="Cancel" />
+                                <Button fx:id="cancelButton" layoutX="300" layoutY="680" onAction="#cancelOnAction" prefWidth="120" text="Cancel" />
 
 
 
@@ -327,12 +323,12 @@
 
 
 
-                                <Button fx:id="printReceiptButton" layoutX="45" layoutY="360" prefHeight="40" prefWidth="160" text="Print Receipt" />
+                                <Button fx:id="printReceiptButton" layoutX="45" layoutY="360" onAction="#printReceiptOnAction" prefHeight="40" prefWidth="160" text="Print Receipt" />
 
 
 
 
-                                <Button fx:id="viewRefundButton" layoutX="45" layoutY="415" prefHeight="40" prefWidth="160" text="View Refund Details" />
+                                <Button fx:id="viewRefundButton" layoutX="45" layoutY="415" onAction="#ViewRefundDetailsOnAction" prefHeight="40" prefWidth="160" text="View Refund Details" />
 
 
 

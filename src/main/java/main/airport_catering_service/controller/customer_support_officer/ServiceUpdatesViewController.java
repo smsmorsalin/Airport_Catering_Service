@@ -1,30 +1,48 @@
 package main.airport_catering_service.controller.customer_support_officer;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
 public class ServiceUpdatesViewController
 {
     @javafx.fxml.FXML
-    private ComboBox priorityCombo;
-    @javafx.fxml.FXML
-    private ComboBox updateCategoryCombo;
-    @javafx.fxml.FXML
     private Label recentUpdatesLabel;
-    @javafx.fxml.FXML
-    private TextArea updateMessageField;
-    @javafx.fxml.FXML
-    private Label updateStatus;
-    @javafx.fxml.FXML
-    private TextField updateTitleField;
-    @javafx.fxml.FXML
-    private Label summaryCategory;
-    @javafx.fxml.FXML
-    private Label summaryPriority;
     @javafx.fxml.FXML
     private Button publishUpdateBtn;
     @javafx.fxml.FXML
     private Button viewUpdatesBtn;
+    @javafx.fxml.FXML
+    private TextArea updateMessageTextField;
+    @javafx.fxml.FXML
+    private ComboBox priorityComboBox;
+    @javafx.fxml.FXML
+    private Label updateStatusLabel;
+    @javafx.fxml.FXML
+    private Label summaryPriorityLabel;
+    @javafx.fxml.FXML
+    private Label summaryCategoryLabel;
+    @javafx.fxml.FXML
+    private ComboBox updateCategoryComboBox;
+    @javafx.fxml.FXML
+    private TextField updateTitleTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void ServiceUpdatesOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void ViewUpdatesLabel(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void PublishUpdateOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
+}

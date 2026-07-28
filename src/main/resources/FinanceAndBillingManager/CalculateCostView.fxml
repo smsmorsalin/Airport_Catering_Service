@@ -10,438 +10,119 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="758"
-            prefWidth="898"
-            xmlns="http://javafx.com/javafx/26"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="CONTROLLER_NAME">
-
-
-    <children>
-
-
-        <!-- ================= SIDEBAR ================= -->
-
-        <VBox layoutY="49" prefHeight="706" prefWidth="175" spacing="5">
-
-
-            <children>
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Dashboard" />
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-color:#084FC7;                -fx-background-radius:50;" text="Calculate Cost" textFill="WHITE" />
-
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Generate Invoice" />
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Record Payment" />
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Process Refund" />
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Outstanding Payments" />
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Financial Reports" />
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Revenue Summary" />
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Payment History" />
-
-
-            </children>
-
-        </VBox>
-
-
-
-
-
-        <!-- HEADER -->
-
-        <Button layoutY="3" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
-
-
-            <font>
-                <Font name="Arial Bold" size="13" />
-            </font>
-
-
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-
-
-        </Button>
-
-
-
-
-
-
-        <!-- MAIN AREA -->
-
-
-        <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:#AFAFAF;">
-
-
-            <children>
-
-
-                <Label alignment="CENTER" prefWidth="726" text="welcome Username">
-
-
-                    <font>
-                        <Font name="Gabriola" size="18" />
-                    </font>
-
-
-                </Label>
-
-
-
-
-
-                <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
-
-
-                    <children>
-
-
-
-
-
-
-                        <!-- SEARCH ORDER CARD -->
-
-
-                        <AnchorPane layoutX="15" layoutY="20" prefHeight="100" prefWidth="680" style="-fx-background-color:#F8FAFC;                    -fx-background-radius:25;">
-
-
-                            <children>
-
-
-                                <Label layoutX="20" layoutY="18" text="Search Order">
-
-
-                                    <font>
-                                        <Font size="22" />
-                                    </font>
-
-                                </Label>
-
-
-
-
-                                <Label layoutX="20" layoutY="55" text="Order ID" />
-
-
-                                <TextField fx:id="orderIdField" layoutX="20" layoutY="70" prefWidth="170" />
-
-
-
-
-                                <Button fx:id="searchOrderButton" layoutX="193.0" layoutY="69.0" prefHeight="26.0" prefWidth="92.0" text="Search Order" />
-
-
-
-
-
-
-
-                                <Label layoutX="297.0" layoutY="55.0" text="Airline Name:" />
-
-
-
-
-                                <Label layoutX="450.0" layoutY="55.0" text="Catering Date:" />
-
-
-
-                                <Label layoutX="586.0" layoutY="55.0" text="Order Time:" />
-
-                                <TextField fx:id="orderTimeField" layoutX="586.0" layoutY="70.0" prefWidth="90" />
-                                <DatePicker fx:id="cateringdatepicker" layoutX="439.0" layoutY="70.0" prefHeight="26.0" prefWidth="142.0" />
-                                <ComboBox fx:id="airlineNameCombobox" layoutX="291.0" layoutY="71.0" prefHeight="26.0" prefWidth="140.0" />
-
-
-
-                            </children>
-
-
-                        </AnchorPane>
-
-
-
-
-
-
-
-
-
-
-                        <!-- COST INPUT CARD -->
-
-
-                        <AnchorPane layoutX="15" layoutY="145" prefHeight="520" prefWidth="380" style="-fx-background-color:#FFFFFF;                    -fx-background-radius:25;">
-
-
-                            <children>
-
-
-
-                                <Label layoutX="25" layoutY="25" text="Order Information">
-
-
-                                    <font>
-                                        <Font size="20" />
-                                    </font>
-
-                                </Label>
-
-
-
-
-                                <Label layoutX="35" layoutY="70" text="Order Status :" />
-
-
-                                <Label fx:id="orderStatusLabel" layoutX="180" layoutY="70" text="Pending" />
-
-
-
-
-
-                                <Label layoutX="35" layoutY="105" text="Production Status :" />
-
-
-                                <Label fx:id="productionStatusLabel" layoutX="180" layoutY="105" text="Not Started" />
-
-
-
-
-
-
-
-                                <Label layoutX="25" layoutY="160" text="Cost Components">
-
-
-                                    <font>
-                                        <Font size="18" />
-                                    </font>
-
-                                </Label>
-
-
-
-
-
-
-                                <Label layoutX="35" layoutY="205" text="Raw Material Cost:" />
-
-
-                                <TextField fx:id="rawMaterialCostField" layoutX="190" layoutY="200" prefWidth="150" />
-
-
-
-
-
-                                <Label layoutX="35" layoutY="255" text="Ingredient Cost:" />
-
-
-                                <TextField fx:id="ingredientCostField" layoutX="190" layoutY="250" prefWidth="150" />
-
-
-
-
-
-                                <Label layoutX="35" layoutY="305" text="Production Cost:" />
-
-
-                                <TextField fx:id="productionCostField" layoutX="190" layoutY="300" prefWidth="150" />
-
-
-
-
-
-
-                                <Label layoutX="35" layoutY="355" text="Operational Cost:" />
-
-
-                                <TextField fx:id="operationalCostField" layoutX="190" layoutY="350" prefWidth="150" />
-
-
-
-
-
-
-                                <Label layoutX="35" layoutY="405" text="Packaging Cost:" />
-
-
-                                <TextField fx:id="packagingCostField" layoutX="190" layoutY="400" prefWidth="150" />
-
-
-
-
-
-
-                                <Label layoutX="35" layoutY="455" text="Transportation Cost:" />
-
-
-                                <TextField fx:id="transportationCostField" layoutX="190" layoutY="450" prefWidth="150" />
-
-
-
-
-
-
-
-                                <Button fx:id="calculateButton" layoutX="95" layoutY="485" prefHeight="40" prefWidth="180" style="-fx-background-color:#1239A5;                -fx-background-radius:10;" text="Calculate Total Cost" textFill="WHITE" />
-
-
-
-                            </children>
-
-
-                        </AnchorPane>
-
-
-
-
-
-
-
-
-
-                        <!-- SUMMARY CARD -->
-
-
-                        <AnchorPane layoutX="430" layoutY="230" prefHeight="350" prefWidth="260" style="-fx-background-color:#F8FAFC;                    -fx-background-radius:25;">
-
-
-                            <children>
-
-
-
-
-                                <Label layoutX="25" layoutY="25" text="Cost Summary">
-
-
-                                    <font>
-                                        <Font size="22" />
-                                    </font>
-
-
-                                </Label>
-
-
-
-
-
-                                <Label layoutX="25" layoutY="85" text="Raw Material Cost :" />
-
-
-                                <Label fx:id="summaryRawMaterial" layoutX="180" layoutY="85" text="0.00" />
-
-
-
-
-
-                                <Label layoutX="25" layoutY="125" text="Ingredient Cost :" />
-
-
-                                <Label fx:id="summaryIngredient" layoutX="180" layoutY="125" text="0.00" />
-
-
-
-
-
-                                <Label layoutX="25" layoutY="165" text="Production Cost :" />
-
-
-                                <Label fx:id="summaryProduction" layoutX="180" layoutY="165" text="0.00" />
-
-
-
-
-
-                                <Label layoutX="25" layoutY="205" text="Operational Cost :" />
-
-
-                                <Label fx:id="summaryOperational" layoutX="180" layoutY="205" text="0.00" />
-
-
-
-
-
-                                <Label layoutX="25" layoutY="245" text="Packaging Cost :" />
-
-
-                                <Label fx:id="summaryPackaging" layoutX="180" layoutY="245" text="0.00" />
-
-
-
-
-
-                                <Label layoutX="25" layoutY="285" text="Transportation Cost :" />
-
-
-                                <Label fx:id="summaryTransport" layoutX="180" layoutY="285" text="0.00" />
-
-
-
-
-
-                                <Label layoutX="25" layoutY="325" text="Total Cost :" />
-
-
-                                <Label fx:id="totalCostLabel" layoutX="180" layoutY="325" text="0.00" />
-
-
-
-
-
-
-                                <Button fx:id="saveCostButton" layoutX="60" layoutY="370" prefHeight="35" prefWidth="140" style="-fx-background-color:#00853F;                -fx-background-radius:10;" text="Save Cost Record" textFill="WHITE" />
-
-
-
-                            </children>
-
-
-                        </AnchorPane>
-
-
-
-
-
-                        <Button fx:id="resetButton" layoutX="90" layoutY="680" prefWidth="100" text="Reset" />
-
-
-
-                        <Button fx:id="cancelButton" layoutX="260" layoutY="680" prefWidth="100" text="Cancel" />
-
-
-
-                    </children>
-
-
-                </AnchorPane>
-
-
-            </children>
-
-
-        </VBox>
-
-
-    </children>
-
-
+<AnchorPane prefHeight="758" prefWidth="898" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.finance_and_billing_manager.CalculateCostViewController">
+
+   <children>
+      <VBox layoutY="49" prefHeight="706" prefWidth="175" spacing="5">
+         <children>
+            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Dashboard" />
+            <Button onAction="#sideBarCalculateCostOnAction" prefHeight="46" prefWidth="174" style="-fx-background-color:#084FC7;                -fx-background-radius:50;" text="Calculate Cost" textFill="WHITE" />
+            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Generate Invoice" />
+            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Record Payment" />
+            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Process Refund" />
+            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Outstanding Payments" />
+            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Financial Reports" />
+            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Revenue Summary" />
+            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Payment History" />
+         </children>
+      </VBox>
+      <Button layoutY="3" onAction="#sideBarHomePageOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
+         <font>
+            <Font name="Arial Bold" size="13" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:#AFAFAF;">
+         <children>
+            <Label alignment="CENTER" prefWidth="726" text="welcome Username">
+               <font>
+                  <Font name="Gabriola" size="18" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
+               <children>
+                  <AnchorPane layoutX="15" layoutY="20" prefHeight="100" prefWidth="680" style="-fx-background-color:#F8FAFC;                    -fx-background-radius:25;">
+                     <children>
+                        <Label layoutX="20" layoutY="18" text="Search Order">
+                           <font>
+                              <Font size="22" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20" layoutY="55" text="Order ID" />
+                        <TextField fx:id="orderidTextField" layoutX="20" layoutY="70" prefWidth="170" />
+                        <Button fx:id="searchOrderButton" layoutX="193.0" layoutY="69.0" onAction="#searchorderOnAction" prefHeight="26.0" prefWidth="92.0" text="Search Order" />
+                        <Label layoutX="297.0" layoutY="55.0" text="Airline Name:" />
+                        <Label layoutX="450.0" layoutY="55.0" text="Catering Date:" />
+                        <Label layoutX="586.0" layoutY="55.0" text="Order Time:" />
+                        <TextField fx:id="orderTimeField" layoutX="586.0" layoutY="70.0" prefHeight="27.0" prefWidth="36.0" />
+                        <DatePicker fx:id="cateringdatepicker" layoutX="439.0" layoutY="70.0" prefHeight="26.0" prefWidth="142.0" />
+                        <ComboBox fx:id="airlineNameCombobox" layoutX="291.0" layoutY="71.0" prefHeight="26.0" prefWidth="140.0" />
+                        <TextField fx:id="orderTimeField1" layoutX="631.0" layoutY="70.0" prefHeight="27.0" prefWidth="36.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="15" layoutY="145" prefHeight="520" prefWidth="380" style="-fx-background-color:#FFFFFF;                    -fx-background-radius:25;">
+                     <children>
+                        <Label layoutX="25" layoutY="25" text="Order Information">
+                           <font>
+                              <Font size="20" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35" layoutY="70" text="Order Status :" />
+                        <Label fx:id="orderStatusLabel" layoutX="180" layoutY="70" text="Pending" />
+                        <Label layoutX="35" layoutY="105" text="Production Status :" />
+                        <Label fx:id="productionStatusLabel" layoutX="180" layoutY="105" text="Not Started" />
+                        <Label layoutX="25" layoutY="160" text="Cost Components">
+                           <font>
+                              <Font size="18" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35" layoutY="205" text="Raw Material Cost:" />
+                        <TextField fx:id="rawMaterialCostTextField" layoutX="190" layoutY="200" prefWidth="150" />
+                        <Label layoutX="35" layoutY="255" text="Ingredient Cost:" />
+                        <TextField fx:id="ingredientCostTextField" layoutX="190" layoutY="250" prefWidth="150" />
+                        <Label layoutX="35" layoutY="305" text="Production Cost:" />
+                        <TextField fx:id="productionCostTextField" layoutX="190" layoutY="300" prefWidth="150" />
+                        <Label layoutX="35" layoutY="355" text="Operational Cost:" />
+                        <TextField fx:id="operationalCostTextField" layoutX="190" layoutY="350" prefWidth="150" />
+                        <Label layoutX="35" layoutY="405" text="Packaging Cost:" />
+                        <TextField fx:id="packagingCostTextField" layoutX="190" layoutY="400" prefWidth="150" />
+                        <Label layoutX="35" layoutY="455" text="Transportation Cost:" />
+                        <TextField fx:id="transportationCostTextField" layoutX="190" layoutY="450" prefWidth="150" />
+                        <Button fx:id="calculateButton" layoutX="95" layoutY="485" onAction="#calculateTotalCostOnAction" prefHeight="40" prefWidth="180" style="-fx-background-color:#1239A5;                -fx-background-radius:10;" text="Calculate Total Cost" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="430" layoutY="230" prefHeight="350" prefWidth="260" style="-fx-background-color:#F8FAFC;                    -fx-background-radius:25;">
+                     <children>
+                        <Label layoutX="25" layoutY="25" text="Cost Summary">
+                           <font>
+                              <Font size="22" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25" layoutY="85" text="Raw Material Cost :" />
+                        <Label fx:id="summaryRawMaterialCostLabel" layoutX="180" layoutY="85" text="0.00" />
+                        <Label layoutX="25.0" layoutY="125.0" text="Ingredient Cost :" />
+                        <Label fx:id="summaryIngredientCostLabel" layoutX="180" layoutY="125" text="0.00" />
+                        <Label layoutX="25" layoutY="165" text="Production Cost :" />
+                        <Label fx:id="summaryProductionCostLabel" layoutX="180" layoutY="165" text="0.00" />
+                        <Label layoutX="25" layoutY="205" text="Operational Cost :" />
+                        <Label fx:id="summaryOperationalCostLabel" layoutX="180" layoutY="205" text="0.00" />
+                        <Label layoutX="25" layoutY="245" text="Packaging Cost :" />
+                        <Label fx:id="summaryPackagingCostLabel" layoutX="180" layoutY="245" text="0.00" />
+                        <Label layoutX="25" layoutY="285" text="Transportation Cost :" />
+                        <Label fx:id="summaryTransportCostLabel" layoutX="180" layoutY="285" text="0.00" />
+                        <Label layoutX="25" layoutY="325" text="Total Cost :" />
+                        <Label fx:id="totalCostLabel" layoutX="180" layoutY="325" text="0.00" />
+                        <Button fx:id="saveCostButton" layoutX="60" layoutY="370" onAction="#saveCostRecordOnAction" prefHeight="35" prefWidth="140" style="-fx-background-color:#00853F;                -fx-background-radius:10;" text="Save Cost Record" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="resetButton" layoutX="90" layoutY="680" onAction="#resetOnAction" prefWidth="100" text="Reset" />
+                  <Button fx:id="cancelButton" layoutX="260" layoutY="680" onAction="#cancelOnAction" prefWidth="100" text="Cancel" />
+                  <Label layoutX="639.0" layoutY="96.0" text=":" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>

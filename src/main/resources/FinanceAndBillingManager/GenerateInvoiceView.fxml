@@ -9,11 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="758"
-            prefWidth="898"
-            xmlns="http://javafx.com/javafx/26"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="758" prefWidth="898" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.finance_and_billing_manager.GenerateInvoiceViewController">
 
 
     <children>
@@ -34,7 +30,7 @@
                 <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Calculate Cost" />
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-color:#00853F;                -fx-background-radius:50;" text="Generate Invoice" textFill="WHITE" />
+                <Button onAction="#sidebarGenerateInvoiceOnAction" prefHeight="46" prefWidth="174" style="-fx-background-color:#00853F;                -fx-background-radius:50;" text="Generate Invoice" textFill="WHITE" />
 
 
 
@@ -68,7 +64,7 @@
         <!-- HEADER -->
 
 
-        <Button layoutY="3" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
+        <Button layoutY="3" onAction="#sidebarHomePageOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
 
 
             <font>
@@ -144,11 +140,11 @@
                                 <Label layoutX="20" layoutY="60" text="Order ID" />
 
 
-                                <TextField fx:id="orderIdField" layoutX="20" layoutY="75" prefWidth="200" />
+                                <TextField fx:id="orderidTextField" layoutX="20" layoutY="75" prefWidth="200" />
 
 
 
-                                <Button fx:id="verifyOrderButton" layoutX="230" layoutY="75" prefWidth="120" text="Verify Order" />
+                                <Button fx:id="verifyOrderButton" layoutX="230" layoutY="75" onAction="#VerifyOrderOnAction" prefWidth="120" text="Verify Order" />
 
 
 
@@ -215,7 +211,7 @@
                                 <Label layoutX="35" layoutY="145" text="Billing Address :" />
 
 
-                                <TextField fx:id="billingAddressField" layoutX="170" layoutY="140" prefWidth="200" />
+                                <TextField fx:id="billingAddressTextField" layoutX="170" layoutY="140" prefWidth="200" />
 
 
 
@@ -238,7 +234,7 @@
                                 <Label layoutX="35" layoutY="240" text="Raw Material Cost :" />
 
 
-                                <Label fx:id="rawMaterialLabel" layoutX="230" layoutY="240" text="0.00" />
+                                <Label fx:id="rawMaterialCostLabel" layoutX="230" layoutY="240" text="0.00" />
 
 
 
@@ -246,14 +242,14 @@
                                 <Label layoutX="35" layoutY="275" text="Ingredient Cost :" />
 
 
-                                <Label fx:id="ingredientLabel" layoutX="230" layoutY="275" text="0.00" />
+                                <Label fx:id="ingredientCostLabel" layoutX="230" layoutY="275" text="0.00" />
 
 
 
                                 <Label layoutX="35" layoutY="310" text="Production Cost :" />
 
 
-                                <Label fx:id="productionLabel" layoutX="230" layoutY="310" text="0.00" />
+                                <Label fx:id="productionCostLabel" layoutX="230" layoutY="310" text="0.00" />
 
 
 
@@ -261,14 +257,14 @@
                                 <Label layoutX="35" layoutY="345" text="Operational Cost :" />
 
 
-                                <Label fx:id="operationLabel" layoutX="230" layoutY="345" text="0.00" />
+                                <Label fx:id="operationCostLabel" layoutX="230" layoutY="345" text="0.00" />
 
 
 
                                 <Label layoutX="35" layoutY="380" text="Packaging Cost :" />
 
 
-                                <Label fx:id="packagingLabel" layoutX="230" layoutY="380" text="0.00" />
+                                <Label fx:id="packagingCostLabel" layoutX="230" layoutY="380" text="0.00" />
 
 
 
@@ -276,7 +272,7 @@
                                 <Label layoutX="35" layoutY="415" text="Transportation Cost :" />
 
 
-                                <Label fx:id="transportLabel" layoutX="230" layoutY="415" text="0.00" />
+                                <Label fx:id="transportCostLabel" layoutX="230" layoutY="415" text="0.00" />
 
 
 
@@ -285,6 +281,7 @@
 
 
                                 <Label fx:id="totalAmountLabel" layoutX="250" layoutY="463" text="0.00" />
+                        <Label fx:id="AirlineNameLabel" layoutX="172.0" layoutY="68.0" prefHeight="30.0" prefWidth="200.0" text="-----" />
 
 
 
@@ -341,7 +338,7 @@
                                 <Label layoutX="25" layoutY="160" text="Airline Name :" />
 
 
-                                <Label fx:id="summaryAirlineLabel" layoutX="120" layoutY="160" text="-" />
+                                <Label fx:id="summaryAirlineNameLabel" layoutX="120" layoutY="160" text="-" />
 
 
 
@@ -349,7 +346,7 @@
                                 <Label layoutX="25" layoutY="200" text="Total Amount :" />
 
 
-                                <Label fx:id="summaryTotalLabel" layoutX="130" layoutY="200" text="0.00" />
+                                <Label fx:id="summaryTotalAmountLabel" layoutX="130" layoutY="200" text="0.00" />
 
 
 
@@ -367,7 +364,7 @@
 
 
 
-                                <Button fx:id="printInvoiceButton" layoutX="45" layoutY="340" prefHeight="45" prefWidth="150" style="         -fx-background-color:#00853F;         -fx-background-radius:10;" text="Print Invoice" textFill="WHITE" />
+                                <Button fx:id="printInvoiceButton" layoutX="45" layoutY="340" onAction="#printInvoiceOnAction" prefHeight="45" prefWidth="150" style="         -fx-background-color:#00853F;         -fx-background-radius:10;" text="Print Invoice" textFill="WHITE" />
 
 
 
