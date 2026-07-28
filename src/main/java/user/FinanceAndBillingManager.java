@@ -35,5 +35,81 @@ public class FinanceAndBillingManager extends Employee {
         stage.setScene(scene);
         stage.show();
     }
+    public static void viewGenerateInvoice(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/GenerateInvoiceView.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void viewRecordPayment(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/RecordPaymentView.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void viewProcessRefund(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/ProcessRefundView.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void viewOutstandingPayments(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/OutstandingPaymentsView.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void viewFinancialReports(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/FinancialReportsView.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void viewRevenueSummary(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/RevenueSummaryView.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void viewPaymentHistory(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/PaymentHistoryView.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
 
 }
