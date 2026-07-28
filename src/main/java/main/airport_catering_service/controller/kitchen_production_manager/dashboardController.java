@@ -1,7 +1,18 @@
 package main.airport_catering_service.controller.kitchen_production_manager;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
+import main.airport_catering_service.HelloApplication;
+
+import java.io.IOException;
+import java.io.IOException;
+import java.io.IOException;
+
+
+import java.io.IOException;
 
 public class dashboardController
 {
@@ -24,6 +35,8 @@ public class dashboardController
     @javafx.fxml.FXML
     private TableColumn issueTypeTableView;
 
+
+
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -37,7 +50,9 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void sideBarMenuListOnAction(ActionEvent actionEvent) {
+    public void sideBarMenuListOnAction(ActionEvent actionEvent) throws IOException {
+
+
     }
 
     @javafx.fxml.FXML

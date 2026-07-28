@@ -52,8 +52,7 @@ public class loginController
 
             stage.setScene(scene);
             stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("2")) {
+        } else if (fxidUsernameTextField.getText().equals("2")) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/CateringOperationsManager/businessDashboardView.fxml"));
 
@@ -65,31 +64,5 @@ public class loginController
             stage.setScene(scene);
             stage.show();
         }
-        else if (fxidUsernameTextField.getText().equals("4")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/FinanceAndBillingManager/dashboardView.fxml"));
-
-            Parent root = loader.load();
-
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("3")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/CustomerSupportOfficer/dashboardView.fxml"));
-
-            Parent root = loader.load();
-
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-
-            stage.setScene(scene);
-            stage.show();
-        }
-
-
     }
 }
