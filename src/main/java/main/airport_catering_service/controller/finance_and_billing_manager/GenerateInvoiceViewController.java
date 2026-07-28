@@ -70,4 +70,8 @@ public class GenerateInvoiceViewController
     @javafx.fxml.FXML
     public void VerifyOrderOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
 }

@@ -51,4 +51,8 @@ public class FinanceReportsViewController
     @javafx.fxml.FXML
     public void GenerateReportOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
 }

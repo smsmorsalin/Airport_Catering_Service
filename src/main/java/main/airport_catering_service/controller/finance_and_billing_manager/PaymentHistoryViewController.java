@@ -67,4 +67,8 @@ public class PaymentHistoryViewController
     @javafx.fxml.FXML
     public void SearchOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
 }

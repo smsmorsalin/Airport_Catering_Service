@@ -64,7 +64,7 @@ public class CalculateCostViewController
     public void resetOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarHomePageOnActioon(ActionEvent actionEvent) {
     }
 
@@ -86,5 +86,9 @@ public class CalculateCostViewController
 
     @javafx.fxml.FXML
     public void searchorderOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarHomePageOnAction(ActionEvent actionEvent) {
     }
 }

@@ -11,4 +11,8 @@ public class dashboardViewController
     @javafx.fxml.FXML
     public void sidebarLogOutButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
 }

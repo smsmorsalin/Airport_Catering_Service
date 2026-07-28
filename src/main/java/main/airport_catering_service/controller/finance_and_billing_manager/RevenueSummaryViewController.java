@@ -53,4 +53,8 @@ public class RevenueSummaryViewController
     @javafx.fxml.FXML
     public void ExportPDFOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
 }
