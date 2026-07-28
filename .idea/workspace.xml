@@ -5,13 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/CalculateCostViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/FinanceReportsViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/GenerateInvoiceViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/OutstandingPaymentsViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/PaymentHistoryViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/ProcessRefundViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/RecordPaymentViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/dashboardViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/CalculateCostView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/CalculateCostView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/FinancialReportsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/FinancialReportsView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/GenerateInvoiceView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/GenerateInvoiceView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/OutstandingPaymentsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/OutstandingPaymentsView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/PaymentHistoryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/PaymentHistoryView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/ProcessRefundView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/ProcessRefundView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RecordPaymentView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RecordPaymentView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RevenueSummaryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RevenueSummaryView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/dashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/dashboardView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,18 +39,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Saif-kaif"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Saif-kaif&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
-    "accountId": "5e089f63-5a80-4c03-9d05-e3c4ac5c4c7d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
+    &quot;accountId&quot;: &quot;5e089f63-5a80-4c03-9d05-e3c4ac5c4c7d&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
