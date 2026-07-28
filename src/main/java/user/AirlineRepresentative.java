@@ -5,6 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -44,75 +45,35 @@ public class AirlineRepresentative extends Employee {
     }
 
     public static void renderFxmlCreateCateringOrder(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(AirlineRepresentative.class.getResource("/AirlineRepresentative/createCateringOrderView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/createCateringOrderView.fxml");
     }
 
     public static void renderFxmlModifyOrder(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(AirlineRepresentative.class.getResource("/AirlineRepresentative/modifyOrderView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/modifyOrderView.fxml");
     }
 
     public static void renderFxmlCancelOrder(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(AirlineRepresentative.class.getResource("/AirlineRepresentative/cancelOrderView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/cancelOrderView.fxml");
     }
 
     public static void renderFxmlFlightDelay(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(AirlineRepresentative.class.getResource("/AirlineRepresentative/flightDelayView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/flightDelayView.fxml");
     }
 
     public static void renderFxmlTruckOrder(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(AirlineRepresentative.class.getResource("/AirlineRepresentative/truckOrderView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/truckOrderView.fxml");
     }
 
     public static void renderFxmlConfirmDelivery(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(AirlineRepresentative.class.getResource("/AirlineRepresentative/confirmDeliveryView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/confirmDeliveryView.fxml");
     }
 
     public static void renderFxmlPayBill(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(AirlineRepresentative.class.getResource("/AirlineRepresentative/payBillView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/payBillView.fxml");
     }
 
     public static void renderFxmlOrderHistory(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(AirlineRepresentative.class.getResource("/AirlineRepresentative/orderHistoryView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/orderHistoryView.fxml");
     }
 
 }
