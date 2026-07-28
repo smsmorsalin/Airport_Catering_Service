@@ -44,20 +44,5 @@ public class CateringOperationsManager extends Employee {
         return false;
     }
 
-    @Override
-    public boolean performAssignedDuty(String taskId){
-        return false;
-    }
-
-    @Override
-    public boolean viewWorkSchedule(LocalDate date){
-        return false;
-    }
-
-    @Override
-    public String getEmployeeType() {
-        return null;
-    }
-
 
 }
