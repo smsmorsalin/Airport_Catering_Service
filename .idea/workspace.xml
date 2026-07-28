@@ -32,6 +32,9 @@
     &quot;accountId&quot;: &quot;5e089f63-5a80-4c03-9d05-e3c4ac5c4c7d&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/RevenueSummaryViewController.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -157,6 +160,9 @@
     &quot;associatedIndex&quot;: 7
     }</component>
   <component name="ProjectId" id="3GpedlUA9Dw7O7qeNlxSVSDPNma" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
