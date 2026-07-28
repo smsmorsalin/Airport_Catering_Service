@@ -1,5 +1,6 @@
 package main.airport_catering_service.controller.customer_support_officer;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
 public class ResolveComplaintViewController
@@ -13,14 +14,35 @@ public class ResolveComplaintViewController
     @javafx.fxml.FXML
     private Button searchComplaintButton;
     @javafx.fxml.FXML
-    private TextField complaintIdField;
-    @javafx.fxml.FXML
     private Label airlineLabel;
     @javafx.fxml.FXML
-    private ComboBox resolutionStatusCombo;
+    private TextField complaintidTextField;
     @javafx.fxml.FXML
-    private TextArea resolutionNotes;
+    private TextArea resolutionNotesTextField;
+    @javafx.fxml.FXML
+    private ComboBox resolutionStatusComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void ResolveComplaintOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void cancelOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void SaveDraftOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void searchComplaintOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
+}

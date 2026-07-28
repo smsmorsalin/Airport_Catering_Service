@@ -73,4 +73,8 @@ public class ProcessRefundViewController
     @javafx.fxml.FXML
     public void ViewRefundDetailsOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
 }

@@ -71,4 +71,8 @@ public class RecordPaymentViewController
     @javafx.fxml.FXML
     public void sidebarRecoedPaymentOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
 }

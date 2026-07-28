@@ -41,4 +41,8 @@ public class OutstandingPaymentsViewController
     @javafx.fxml.FXML
     public void GenerateReportOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
 }

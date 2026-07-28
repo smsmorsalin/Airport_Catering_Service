@@ -1,30 +1,54 @@
 package main.airport_catering_service.controller.customer_support_officer;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
 public class EmergencyModificationViewController
 {
     @javafx.fxml.FXML
-    private ComboBox priorityCombo;
-    @javafx.fxml.FXML
-    private Label summaryStatus;
-    @javafx.fxml.FXML
-    private Label summaryPriority;
-    @javafx.fxml.FXML
     private TextField orderIdField;
     @javafx.fxml.FXML
     private Button verifyOrderBtn;
     @javafx.fxml.FXML
-    private TextArea modificationRequestField;
-    @javafx.fxml.FXML
-    private Label summaryOrderId;
-    @javafx.fxml.FXML
     private Button submitModificationBtn;
     @javafx.fxml.FXML
-    private TextArea reasonField;
+    private ComboBox priorityComboBox;
     @javafx.fxml.FXML
-    private Label eligibilityLabel;
+    private Label summaryOrderidLabel;
+    @javafx.fxml.FXML
+    private TextArea modificationRequestTextField;
+    @javafx.fxml.FXML
+    private Label summaryPriorityLabel;
+    @javafx.fxml.FXML
+    private TextArea reasonTextField;
+    @javafx.fxml.FXML
+    private Label summaryStatusLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void CancelOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void EmergencyModifyOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void resetOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void CheckOrderOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void SubmitButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
+}
