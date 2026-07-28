@@ -13,6 +13,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/dashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/dashboardView.fxml" afterDir="false" />
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="moduleoinfo update for food quality and kitchen controller">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +165,9 @@
       <entry key="W1" value="495.208420815606" />
     </decayedShown>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
     &quot;associatedIndex&quot;: 7
     }</component>
@@ -180,6 +186,11 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "aronno",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "saif",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -192,6 +203,22 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="" />
@@ -249,10 +276,54 @@
       <updated>1785225708428</updated>
     </task>
     <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00006" summary="moduleoinfo update for food quality and kitchen controller">
+      <option name="closed" value="true" />
+      <created>1785225398604</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1785225398604</updated>
+    </task>
+    <task id="LOCAL-00007" summary="moduleoinfo update for food quality and kitchen controller">
+      <option name="closed" value="true" />
+      <created>1785225921714</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1785225921714</updated>
+    </task>
+    <task id="LOCAL-00008" summary="moduleoinfo update for food quality and kitchen controller">
+      <option name="closed" value="true" />
+      <created>1785226024174</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1785226024174</updated>
+    </task>
+    <task id="LOCAL-00009" summary="moduleoinfo update for food quality and kitchen controller">
+      <option name="closed" value="true" />
+      <created>1785226094771</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1785226094771</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change HelloApplication" />
@@ -260,5 +331,7 @@
     <MESSAGE value="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes." />
     <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java&#10;#&#9;src/main/java/module-info.java" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java&#10;#&#9;src/main/java/module-info.java" />
+    <MESSAGE value="moduleoinfo update for food quality and kitchen controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="moduleoinfo update for food quality and kitchen controller" />
   </component>
 </project>
