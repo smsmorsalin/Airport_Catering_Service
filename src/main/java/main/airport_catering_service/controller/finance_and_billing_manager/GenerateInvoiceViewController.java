@@ -65,6 +65,8 @@ public class GenerateInvoiceViewController
 
     @javafx.fxml.FXML
     public void sidebarGenerateInvoiceOnAction(ActionEvent actionEvent) {
+
+
     }
 
     @javafx.fxml.FXML
