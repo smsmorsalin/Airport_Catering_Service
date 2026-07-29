@@ -137,7 +137,7 @@
         <!-- TOP HEADER -->
 
 
-        <Button layoutY="3" onAction="#sidebarHomePageOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:pink;         -fx-background-radius:5;" text="Airport Catering Service">
+        <Button layoutY="3" onAction="#sidebarHomePageButtonOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:pink;         -fx-background-radius:5;" text="Airport Catering Service">
 
 
             <font>

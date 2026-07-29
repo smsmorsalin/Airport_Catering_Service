@@ -39,19 +39,16 @@ public class dashboardViewController
 
     @javafx.fxml.FXML
     public void sideBarGenerateReportsButtonOnAction(ActionEvent actionEvent) throws  IOException{
-
         CustomerSupportOfficer.viewGenerateReports(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void sideBarServiceUpdatesButtonOnAction(ActionEvent actionEvent) throws IOException{
-
         CustomerSupportOfficer.viewServiceUpdates(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void sideBarFlightCancellationButtonOnAction(ActionEvent actionEvent) throws  IOException {
-
         CustomerSupportOfficer.viewFlightCancellation(actionEvent);
     }
 
@@ -67,7 +64,6 @@ public class dashboardViewController
 
     @javafx.fxml.FXML
     public void sideBarFlightDelayRequestButtonOnAction(ActionEvent actionEvent) throws IOException {
-
         CustomerSupportOfficer.viewFlightDelayRequest(actionEvent);
     }
 }

@@ -62,6 +62,11 @@ public class CustomerSupportOfficer extends Employee{
         stage.show();
     }
 
+    public static void viewdashboard(javafx.event.ActionEvent event) throws IOException {
+
+
+    }
+
     public static void viewTrackComplaint(javafx.event.ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(
                 CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/TrackComplaintView.fxml"));
