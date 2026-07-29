@@ -77,9 +77,9 @@ public class dashboardController {
 
     @javafx.fxml.FXML
     public void sideBarTrendAnalysisOnAction(ActionEvent actionEvent) throws IOException {
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/airport_catering_service/loginView.fxml"));
-//        Node node = loader.load();
-//        reg_anchorPane.getChildren().setAll(node);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/airport_catering_service/loginView.fxml"));
+        Node node = loader.load();
+        reg_anchorPane.getChildren().setAll(node);
 
 
     }
