@@ -48,7 +48,7 @@ public class CustomerSupportOfficer extends Employee{
         return false;
     }
 
-
+//Dashboard TO Button
     public static void viewResisterComplaint(javafx.event.ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(
                 CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/RegisterComplaintView.fxml"));
@@ -61,12 +61,6 @@ public class CustomerSupportOfficer extends Employee{
         stage.setScene(scene);
         stage.show();
     }
-
-    public static void viewdashboard(javafx.event.ActionEvent event) throws IOException {
-
-
-    }
-
     public static void viewTrackComplaint(javafx.event.ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(
                 CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/TrackComplaintView.fxml"));
@@ -148,6 +142,21 @@ public class CustomerSupportOfficer extends Employee{
     public static void viewGenerateReports(javafx.event.ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(
                 CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/GenerateReportsView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+//Button to Dashboard
+
+    public static void viewdashboard(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/dashboardView.fxml"));
 
         Parent root = loader.load();
 
