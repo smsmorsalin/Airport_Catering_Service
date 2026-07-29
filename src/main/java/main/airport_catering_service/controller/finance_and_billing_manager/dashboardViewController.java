@@ -16,7 +16,7 @@ public class dashboardViewController
     public void sidebarLogOutButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {
     }
 
@@ -70,5 +70,9 @@ public class dashboardViewController
     public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) throws  IOException {
 
         FinanceAndBillingManager.viewOutstandingPayments(actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageButtonOnAction(ActionEvent actionEvent) {
     }
 }

@@ -15,18 +15,18 @@
    <children>
       <VBox layoutY="49" prefHeight="706" prefWidth="175" spacing="5">
          <children>
-            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Dashboard" />
-            <Button onAction="#sideBarCalculateCostOnAction" prefHeight="46" prefWidth="174" style="-fx-background-color:#084FC7;                -fx-background-radius:50;" text="Calculate Cost" textFill="WHITE" />
-            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Generate Invoice" />
-            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Record Payment" />
-            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Process Refund" />
-            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Outstanding Payments" />
-            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Financial Reports" />
-            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Revenue Summary" />
-            <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Payment History" />
+            <Button onAction="#sidebardashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Dashboard" />
+            <Button onAction="#sideBarCalculateCostButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-color:#084FC7;                -fx-background-radius:50;" text="Calculate Cost" textFill="WHITE" />
+            <Button onAction="#sideBarGenerateInvoiceButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Generate Invoice" />
+            <Button onAction="#sideBarRecordPaymentButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Record Payment" />
+            <Button onAction="#sideBarProcessRefundButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Process Refund" />
+            <Button onAction="#sideBarOutstandingPaymentsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Outstanding Payments" />
+            <Button onAction="#sideBarFinancialReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Financial Reports" />
+            <Button onAction="#sideBarRevenueSummaryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Revenue Summary" />
+            <Button onAction="#sideBarPaymentHistoryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Payment History" />
          </children>
       </VBox>
-      <Button layoutY="3" onAction="#sideBarHomePageOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
+      <Button layoutY="3" onAction="#sideBarHomePageButtonOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
          <font>
             <Font name="Arial Bold" size="13" />
          </font>

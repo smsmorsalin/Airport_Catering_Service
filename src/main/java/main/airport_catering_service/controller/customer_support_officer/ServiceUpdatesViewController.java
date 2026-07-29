@@ -30,7 +30,7 @@ public class ServiceUpdatesViewController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void ServiceUpdatesOnAction(ActionEvent actionEvent) {
     }
 
@@ -44,5 +44,41 @@ public class ServiceUpdatesViewController
 
     @javafx.fxml.FXML
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarRegisterComplaintButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarFlightDelayRequestButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarGenerateReportsButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarServiceUpdatesButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarFlightCancellationButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarEmergencyModificationButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarResolveComplaintButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarTrackComplaintButtonOnAction(ActionEvent actionEvent) {
     }
 }

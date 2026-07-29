@@ -80,7 +80,7 @@ public class CalculateCostViewController
     public void calculateTotalCostOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarCalculateCostOnAction(ActionEvent actionEvent) {
     }
 
@@ -88,7 +88,47 @@ public class CalculateCostViewController
     public void searchorderOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarHomePageOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarRevenueSummaryButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarRecordPaymentButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarProcessRefundButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarGenerateInvoiceButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarPaymentHistoryButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarHomePageButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarCalculateCostButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarFinancialReportsButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) {
     }
 }
