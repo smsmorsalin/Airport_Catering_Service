@@ -54,29 +54,32 @@ public class dashboardController
 
     @javafx.fxml.FXML
     public void sideBarProductionScheduleOnAction(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.ViewCreateProductionSchedule(actionEvent);
 
     }
 
     @javafx.fxml.FXML
     public void sideBarMenuListOnAction(ActionEvent actionEvent) throws IOException {
-//        KitchenProductionManager.viewCreateMenuList(actionEvent);
+        KitchenProductionManager.viewCreateMenuList(actionEvent);
 
 
     }
 
     @javafx.fxml.FXML
-    public void sideBarReceiveOrdersOnAction(ActionEvent actionEvent) {
+    public void sideBarReceiveOrdersOnAction(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void sideBarApproveProductionOnAction(ActionEvent actionEvent) throws IOException {
-//        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
+        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
+
     }
 
     @javafx.fxml.FXML
-    public void sideBarCalculateIngredientOnAction(ActionEvent actionEvent) {
+    public void sideBarCalculateIngredientOnAction(ActionEvent actionEvent) throws IOException{
 
-//        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
+        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -93,9 +96,9 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionPlanOnAction(ActionEvent actionEvent) {
+    public void sideBarProductionPlanOnAction(ActionEvent actionEvent) throws  IOException{
 
-//        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
+        KitchenProductionManager.viewCreateProductionPlan(actionEvent);
     }
 
     @javafx.fxml.FXML
