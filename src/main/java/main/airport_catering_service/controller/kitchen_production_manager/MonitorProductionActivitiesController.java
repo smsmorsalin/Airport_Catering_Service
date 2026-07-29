@@ -1,5 +1,9 @@
 package main.airport_catering_service.controller.kitchen_production_manager;
 
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import java.net.URL;
+
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
