@@ -1,9 +1,7 @@
 package main.airport_catering_service.controller.food_quality_control_officer;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class FoodSafetyCheckController
 {
