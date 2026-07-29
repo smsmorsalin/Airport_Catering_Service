@@ -5,6 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import user.CustomerSupportOfficer;
+
+import java.io.IOException;
 
 public class GenerateReportsViewController
 {
@@ -54,7 +57,8 @@ public class GenerateReportsViewController
     }
 
     @javafx.fxml.FXML
-    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) {
+    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) throws IOException {
+        CustomerSupportOfficer.viewdashboard(actionEvent);
     }
 
     @javafx.fxml.FXML

@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.customer_support_officer;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.CustomerSupportOfficer;
+
+import java.io.IOException;
 
 public class EmergencyModificationViewController
 {
@@ -53,7 +56,8 @@ public class EmergencyModificationViewController
     }
 
     @javafx.fxml.FXML
-    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) {
+    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) throws IOException {
+        CustomerSupportOfficer.viewdashboard(actionEvent);
     }
 
     @javafx.fxml.FXML
