@@ -52,7 +52,7 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Resolve Complaint">
+                <Button onAction="#sideBarResolveComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Resolve Complaint">
                     <font>
                         <Font size="15" />
                     </font>
@@ -61,17 +61,7 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Emergency Modification">
-                    <font>
-                        <Font size="15" />
-                    </font>
-                </Button>
-
-
-
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Delay Request">
+                <Button onAction="#sideBarEmergencyModificationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Emergency Modification">
                     <font>
                         <Font size="15" />
                     </font>
@@ -81,7 +71,7 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Cancellation">
+                <Button onAction="#sideBarFlightDelayRequestButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Delay Request">
                     <font>
                         <Font size="15" />
                     </font>
@@ -91,7 +81,7 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Service Updates">
+                <Button onAction="#sideBarFlightCancellationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Cancellation">
                     <font>
                         <Font size="15" />
                     </font>
@@ -101,7 +91,17 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px;" text="Generate Reports">
+                <Button onAction="#sideBarServiceUpdatesButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Service Updates">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+
+
+
+
+
+                <Button onAction="#sideBarGenerateReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px;" text="Generate Reports">
 
                     <font>
                         <Font size="15" />
