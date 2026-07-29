@@ -1,24 +1,13 @@
 package main.airport_catering_service.controller.kitchen_production_manager;
 
+
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
-import main.airport_catering_service.HelloApplication;
-import user.KitchenProductionManager;
 import user.User;
-
-import java.io.IOException;
-import java.io.IOException;
+import user.KitchenProductionManager;
 import java.io.IOException;
 
 
-import java.io.IOException;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import main.airport_catering_service.HelloApplication;
 public class dashboardController
 {
     @javafx.fxml.FXML
