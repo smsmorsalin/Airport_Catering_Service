@@ -47,17 +47,106 @@ public class FoodQualityControlOfficer extends Employee {
         return false;
     }
 
-    public static void viewTrackComplaint(javafx.event.ActionEvent event) throws IOException{
-//        FXMLLoader loader = new FXMLLoader(
-//                CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/TrackComplaintView.fxml"));
-//
-//        Parent root = loader.load();
-//
-//        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        Scene scene = new Scene(root);
-//
-//        stage.setScene(scene);
-//        stage.show();
+    public static void viewQualityTrendAnalysis(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                FoodQualityControlOfficer.class.getResource("/FoodQualityControlOfficer/QualityTrendAnalysisView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
     }
+
+    public static void viewApproveBatch(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                FoodQualityControlOfficer.class.getResource("/FoodQualityControlOfficer/ApproveBatchView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+    public static void viewPerformInspection(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                FoodQualityControlOfficer.class.getResource("/FoodQualityControlOfficer/PerformInspectionView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void viewRejectBatch(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                FoodQualityControlOfficer.class.getResource("/FoodQualityControlOfficer/RejectBatchView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+    public static void viewReceiveInspectionRequest(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                FoodQualityControlOfficer.class.getResource("/FoodQualityControlOfficer/ReceiveInspectionRequestView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+    public static void  viewFoodSafetyCheck (javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                FoodQualityControlOfficer.class.getResource("/FoodQualityControlOfficer/FoodSafetyCheckView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+    public static void  viewGenerateQAReport (javafx.event.ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(
+                FoodQualityControlOfficer.class.getResource("/FoodQualityControlOfficer/GenerateQAReportView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+
+    }
+    public static void  viewManageQualityIssue (javafx.event.ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(
+                FoodQualityControlOfficer.class.getResource("/FoodQualityControlOfficer/ManageQualityIssueView.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
 
 }

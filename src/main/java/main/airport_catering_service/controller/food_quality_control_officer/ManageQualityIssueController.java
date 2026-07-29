@@ -1,9 +1,11 @@
 package main.airport_catering_service.controller.food_quality_control_officer;
 
 import javafx.event.ActionEvent;
-
-import java.awt.*;
-
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ComboBox;
 public class ManageQualityIssueController
 {
     @javafx.fxml.FXML

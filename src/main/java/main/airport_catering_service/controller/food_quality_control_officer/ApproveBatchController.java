@@ -1,9 +1,11 @@
 package main.airport_catering_service.controller.food_quality_control_officer;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-
-import java.awt.*;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 public class ApproveBatchController
 {

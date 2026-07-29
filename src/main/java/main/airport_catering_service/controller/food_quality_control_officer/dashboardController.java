@@ -38,31 +38,40 @@ public class dashboardController {
     }
 
     @javafx.fxml.FXML
-    public void sideBarQAReportOnAction(ActionEvent actionEvent) {
+    public void sideBarQAReportOnAction(ActionEvent actionEvent) throws  IOException {
+        FoodQualityControlOfficer.viewGenerateQAReport(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarQualityIssueOnAction(ActionEvent actionEvent) {
+    public void sideBarQualityIssueOnAction(ActionEvent actionEvent)throws IOException {
+        FoodQualityControlOfficer.viewManageQualityIssue(actionEvent);
+
+
     }
 
     @javafx.fxml.FXML
-    public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
+    public void sideBarRejectBatchOnAction(ActionEvent actionEvent)throws IOException {
+        FoodQualityControlOfficer.viewRejectBatch(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarFoodSafetyCheckOnAction(ActionEvent actionEvent) {
+    public void sideBarFoodSafetyCheckOnAction(ActionEvent actionEvent)throws IOException {
+        FoodQualityControlOfficer.viewFoodSafetyCheck(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarInspectionRequestOnAction(ActionEvent actionEvent) {
+    public void sideBarInspectionRequestOnAction(ActionEvent actionEvent) throws IOException{
+        FoodQualityControlOfficer.viewReceiveInspectionRequest(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent) {
+//        FoodQualityControlOfficer.viewQualityTrendAnalysis(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarPerformInspectionOnAction(ActionEvent actionEvent) {
+    public void sideBarPerformInspectionOnAction(ActionEvent actionEvent)throws IOException {
+        FoodQualityControlOfficer.viewPerformInspection(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -70,16 +79,15 @@ public class dashboardController {
     }
 
     @javafx.fxml.FXML
-    public void sideBarApproveBatchOnAction(ActionEvent actionEvent) {
+    public void sideBarApproveBatchOnAction(ActionEvent actionEvent) throws  IOException{
+        FoodQualityControlOfficer.viewApproveBatch(actionEvent);
 
 
     }
 
     @javafx.fxml.FXML
     public void sideBarTrendAnalysisOnAction(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/airport_catering_service/loginView.fxml"));
-        Node node = loader.load();
-        reg_anchorPane.getChildren().setAll(node);
+        FoodQualityControlOfficer.viewQualityTrendAnalysis(actionEvent);
 
 
     }
