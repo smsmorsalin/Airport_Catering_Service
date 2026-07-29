@@ -40,7 +40,7 @@ public class FinanceReportsViewController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sidebarFinalcialReportsOnAction(ActionEvent actionEvent) {
     }
 
@@ -52,7 +52,47 @@ public class FinanceReportsViewController
     public void GenerateReportOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarRevenueSummaryButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarRecordPaymentButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarCalculateCostButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarProcessRefundButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarGenerateInvoiceButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarPaymentHistoryButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarFinancialReportsButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) {
     }
 }
