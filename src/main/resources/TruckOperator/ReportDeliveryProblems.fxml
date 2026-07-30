@@ -1,77 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
-    <children>
-        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
-            <children>
-                <Button fx:id="submitReportButton" mnemonicParsing="false" onAction="#onSubmitReport" prefHeight="42.0" prefWidth="174.0" text="Submit Report" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="refreshButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onRefresh" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="clearButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClear" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="logoutbutton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
-            </children>
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="1280"
+            prefHeight="820"
+            fx:controller="main.airport_catering_service.controller.truck_operator.ReportDeliveryIssueController">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8"
+              style="-fx-background-color: linear-gradient(to right,#922B21,#C0392B);">
+
+            <padding>
+                <Insets top="18" right="25" bottom="18" left="25"/>
+            </padding>
+
+            <Label text="⚠ Report Delivery Issue">
+                <font>
+                    <Font size="30"/>
+                </font>
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+            </Label>
+
+            <Label text="Report delivery delays, damaged meals or transportation issues.">
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-size:15;
+                </style>
+            </Label>
+
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
-            <font>
-                <Font name="Arial Bold" size="13.0" />
-            </font>
-            <effect>
-                <Lighting>
-                    <bumpInput>
-                        <Shadow />
-                    </bumpInput>
-                    <light>
-                        <Light.Distant>
-                            <color>
-                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
-                            </color>
-                        </Light.Distant>
-                    </light>
-                </Lighting>
-            </effect>
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-        </Button>
-        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
-            <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
-                    <font>
-                        <Font name="Gabriola" size="18.0" />
-                    </font>
-                </Label>
-                <AnchorPane prefHeight="566.0" prefWidth="596.0">
-               <children>
-                  <TextField fx:id="assignmentIdTextField" layoutX="107.0" layoutY="14.0" />
-                  <Text layoutX="12.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment ID" />
-                  <ComboBox fx:id="problemTypeComboBox" layoutX="404.0" layoutY="15.0" prefWidth="150.0" />
-                  <ComboBox fx:id="priorityComboBox" layoutX="112.0" layoutY="75.0" prefWidth="150.0" />
-                  <Text layoutX="40.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Priority" />
-                  <Text layoutX="318.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problem Type" />
-                  <TextArea fx:id="problemDescriptionTextArea" layoutX="379.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0" />
-                  <Text layoutX="263.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Problem Description" />
-                  <Label fx:id="incidentIdLabel" layoutX="70.0" layoutY="134.0" text="Incident ID" />
-                  <Label fx:id="reportStatusLabel" layoutX="70.0" layoutY="167.0" text="Report Status" />
-                  <Label fx:id="submissionTimeLabel" layoutX="70.0" layoutY="201.0" text="Submission Time" />
-               </children></AnchorPane>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            </children></VBox>
-        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
-    </children>
-</AnchorPane>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="18">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Issue Report Form -->
+
+            <TitledPane text="Issue Information"
+                        collapsible="false"
+                        expanded="true">
+
+                <content>
+
+                    <GridPane hgap="20" vgap="18">
+
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+
+                        <Label text="Assignment ID"/>
+
+                        <TextField fx:id="assignmentIdField"
+                                   promptText="Enter Assignment ID"
+                                   prefWidth="220"
+                                   GridPane.columnIndex="1"/>
+
+                        <Button text="Load Assignment"
+                                fx:id="loadButton"
+                                prefWidth="150"
+                                onAction="#loadAssignment"
+                                style="-fx-background-color:#3498DB;-fx-text-fill:white;-fx-font-weight:bold;"
+                                GridPane.columnIndex="2"/>
+
+                        <Label text="Issue Type"
+                               GridPane.rowIndex="1"/>
+
+                        <ComboBox fx:id="issueTypeComboBox"
+                                  promptText="Select Issue"
+                                  prefWidth="220"
+                                  GridPane.rowIndex="1"
+                                  GridPane.columnIndex="1"/>
+
+                        <Label text="Issue Severity"
+                               GridPane.rowIndex="2"/>
+
+                        <ComboBox fx:id="severityComboBox"
+                                  promptText="Select Severity"
+                                  prefWidth="220"
+                                  GridPane.rowIndex="2"
+                                  GridPane.columnIndex="1"/>
+
+                        <Label text="Issue Time"
+                               GridPane.rowIndex="3"/>
+
+                        <DatePicker fx:id="issueDatePicker"
+                                    GridPane.rowIndex="3"
+                                    GridPane.columnIndex="1"/>
+
+                        <Label text="Current Location"
+                               GridPane.rowIndex="4"/>
+
+                        <TextField fx:id="locationField"
+                                   promptText="Current Location"
+                                   GridPane.rowIndex="4"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Issue Description"
+                               GridPane.rowIndex="5"/>
+
+                        <TextArea fx:id="descriptionTextArea"
+                                  wrapText="true"
+                                  prefHeight="120"
+                                  promptText="Describe the issue..."
+                                  GridPane.rowIndex="5"
+                                  GridPane.columnIndex="1"
+                                  GridPane.columnSpan="2"/>
+
+                        <HBox spacing="15"
+                              GridPane.rowIndex="6"
+                              GridPane.columnIndex="1">
+
+                            <Button text="Submit Report"
+                                    fx:id="submitButton"
+                                    prefWidth="170"
+                                    onAction="#submitIssueReport"
+                                    style="-fx-background-color:#27AE60;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+                            <Button text="Clear"
+                                    fx:id="clearButton"
+                                    prefWidth="120"
+                                    onAction="#clearForm"
+                                    style="-fx-background-color:#F39C12;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+                        </HBox>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- Issue History -->
+
+            <TitledPane text="Reported Issues"
+                        collapsible="false"
+                        expanded="true"
+                        VBox.vgrow="ALWAYS">
+
+                <content>
+
+                    <TableView fx:id="issueTable">
+
+                        <columns>
+
+                            <TableColumn fx:id="issueIdColumn"
+                                         text="Issue ID"
+                                         prefWidth="120"/>
+
+                            <TableColumn fx:id="assignmentIdColumn"
+                                         text="Assignment ID"
+                                         prefWidth="130"/>
+
+                            <TableColumn fx:id="issueTypeColumn"
+                                         text="Issue Type"
+                                         prefWidth="170"/>
+
+                            <TableColumn fx:id="severityColumn"
+                                         text="Severity"
+                                         prefWidth="130"/>
+
+                            <TableColumn fx:id="locationColumn"
+                                         text="Location"
+                                         prefWidth="180"/>
+
+                            <TableColumn fx:id="reportedTimeColumn"
+                                         text="Reported Time"
+                                         prefWidth="180"/>
+
+                            <TableColumn fx:id="statusColumn"
+                                         text="Status"
+                                         prefWidth="150"/>
+
+                        </columns>
+
+                    </TableView>
+
+                </content>
+
+            </TitledPane>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER_RIGHT"
+              spacing="15"
+              style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <Button text="Refresh"
+                    fx:id="refreshButton"
+                    prefWidth="120"
+                    onAction="#refreshTable"
+                    style="-fx-background-color:#16A085;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+            <Button text="Back"
+                    fx:id="backButton"
+                    prefWidth="120"
+                    onAction="#goBack"
+                    style="-fx-background-color:#566573;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

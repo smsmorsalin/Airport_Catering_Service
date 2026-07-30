@@ -1,73 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
-    <children>
-        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
-            <children>
-                <Button fx:id="searchTextButton" mnemonicParsing="false" onAction="#onSearchText" prefHeight="42.0" prefWidth="174.0" text="Search Task" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="updateStatusButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onUpdateStatus" prefHeight="42.0" prefWidth="174.0" text="Update Status" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="saveUpdateButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onSaveUpdate" prefHeight="42.0" prefWidth="174.0" text="Save Update" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="clearButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClearButton" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="backbutton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="logoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
-            </children>
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="1280"
+            prefHeight="820"
+            fx:controller="main.airport_catering_service.controller.headchef.RequestQualityInspectionController">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8"
+              style="-fx-background-color: linear-gradient(to right,#145A32,#27AE60);">
+
+            <padding>
+                <Insets top="18" right="25" bottom="18" left="25"/>
+            </padding>
+
+            <Label text="🧪 Request Quality Inspection">
+                <font>
+                    <Font size="30"/>
+                </font>
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+            </Label>
+
+            <Label text="Submit completed production batches for quality inspection.">
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-size:15;
+                </style>
+            </Label>
+
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
-            <font>
-                <Font name="Arial Bold" size="13.0" />
-            </font>
-            <effect>
-                <Lighting>
-                    <bumpInput>
-                        <Shadow />
-                    </bumpInput>
-                    <light>
-                        <Light.Distant>
-                            <color>
-                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
-                            </color>
-                        </Light.Distant>
-                    </light>
-                </Lighting>
-            </effect>
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-        </Button>
-        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
-            <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
-                    <font>
-                        <Font name="Gabriola" size="18.0" />
-                    </font>
-                </Label>
-                <AnchorPane prefHeight="566.0" prefWidth="596.0">
-               <children>
-                  <TextField fx:id="productionTaskIdTextField" layoutX="137.0" layoutY="25.0" />
-                  <Text layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production Task ID" />
-                  <ComboBox fx:id="productionStatusComboBox" layoutX="422.0" layoutY="26.0" prefWidth="150.0" />
-                  <Text layoutX="374.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
-                  <Label fx:id="updateIDLabel" layoutX="87.0" layoutY="86.0" text="Update ID" />
-                  <Label fx:id="updatestatusLabel" layoutX="217.0" layoutY="86.0" text="Status" />
-                  <Label fx:id="completionLabel" layoutX="376.0" layoutY="86.0" text="Completion %" />
-                  <Label fx:id="updatetimeLabel" layoutX="87.0" layoutY="151.0" text="Update Time" />
-               </children></AnchorPane>
-            </children></VBox>
-        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
-    </children>
-</AnchorPane>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="20">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Inspection Request Form -->
+
+            <TitledPane text="Inspection Request"
+                        collapsible="false"
+                        expanded="true">
+
+                <content>
+
+                    <GridPane hgap="20" vgap="18">
+
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+
+                        <Label text="Production Task ID"/>
+                        <TextField fx:id="taskIdField"
+                                   promptText="Enter Production Task ID"
+                                   prefWidth="220"
+                                   GridPane.columnIndex="1"/>
+
+                        <Button text="Load Task"
+                                fx:id="loadTaskButton"
+                                prefWidth="120"
+                                onAction="#loadTask"
+                                style="-fx-background-color:#2980B9;-fx-text-fill:white;-fx-font-weight:bold;"
+                                GridPane.columnIndex="2"/>
+
+                        <Label text="Meal Category"
+                               GridPane.rowIndex="1"/>
+                        <TextField fx:id="mealCategoryField"
+                                   editable="false"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Inspection Priority"
+                               GridPane.rowIndex="2"/>
+                        <ComboBox fx:id="priorityComboBox"
+                                  promptText="Select Priority"
+                                  prefWidth="220"
+                                  GridPane.rowIndex="2"
+                                  GridPane.columnIndex="1"/>
+
+                        <Label text="Preferred Inspection Time"
+                               GridPane.rowIndex="3"/>
+                        <DatePicker fx:id="inspectionDatePicker"
+                                    GridPane.rowIndex="3"
+                                    GridPane.columnIndex="1"/>
+
+                        <Label text="Remarks"
+                               GridPane.rowIndex="4"/>
+                        <TextArea fx:id="remarksTextArea"
+                                  promptText="Additional notes for Quality Inspector..."
+                                  wrapText="true"
+                                  prefHeight="120"
+                                  GridPane.rowIndex="4"
+                                  GridPane.columnIndex="1"
+                                  GridPane.columnSpan="2"/>
+
+                        <HBox spacing="15"
+                              GridPane.rowIndex="5"
+                              GridPane.columnIndex="1">
+
+                            <Button text="Submit Request"
+                                    fx:id="submitButton"
+                                    prefWidth="160"
+                                    onAction="#submitInspectionRequest"
+                                    style="-fx-background-color:#27AE60;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+                            <Button text="Reset"
+                                    fx:id="resetButton"
+                                    prefWidth="120"
+                                    onAction="#resetForm"
+                                    style="-fx-background-color:#F39C12;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+                        </HBox>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- Inspection Requests -->
+
+            <TitledPane text="Inspection Request History"
+                        collapsible="false"
+                        expanded="true"
+                        VBox.vgrow="ALWAYS">
+
+                <content>
+
+                    <TableView fx:id="inspectionTable">
+
+                        <columns>
+
+                            <TableColumn fx:id="requestIdColumn"
+                                         text="Request ID"
+                                         prefWidth="130"/>
+
+                            <TableColumn fx:id="taskIdColumn"
+                                         text="Task ID"
+                                         prefWidth="120"/>
+
+                            <TableColumn fx:id="mealCategoryColumn"
+                                         text="Meal Category"
+                                         prefWidth="170"/>
+
+                            <TableColumn fx:id="priorityColumn"
+                                         text="Priority"
+                                         prefWidth="130"/>
+
+                            <TableColumn fx:id="requestDateColumn"
+                                         text="Request Date"
+                                         prefWidth="180"/>
+
+                            <TableColumn fx:id="inspectionStatusColumn"
+                                         text="Inspection Status"
+                                         prefWidth="180"/>
+
+                            <TableColumn fx:id="remarksColumn"
+                                         text="Remarks"
+                                         prefWidth="280"/>
+
+                        </columns>
+
+                    </TableView>
+
+                </content>
+
+            </TitledPane>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox spacing="15"
+              alignment="CENTER_RIGHT"
+              style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <Button text="Refresh"
+                    fx:id="refreshButton"
+                    prefWidth="120"
+                    onAction="#refreshTable"
+                    style="-fx-background-color:#16A085;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+            <Button text="Back"
+                    fx:id="backButton"
+                    prefWidth="120"
+                    onAction="#goBack"
+                    style="-fx-background-color:#E74C3C;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

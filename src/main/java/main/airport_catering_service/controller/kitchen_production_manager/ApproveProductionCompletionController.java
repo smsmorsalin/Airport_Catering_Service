@@ -25,37 +25,21 @@ public class ApproveProductionCompletionController
     public void initialize() {
     }
 
-    @Deprecated
-    public void sideBarmanageMealPreparationOnAction(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
+    public void sideBarApproveProductionOnA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarAirportCateringServiceButtonOnA(ActionEvent actionEvent)throws IOException {
         KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarRequestQualityInspectionOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarUpdateProductionStatusOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarMonitorCookingProgressOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarViewProductionTasksOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarassignKitchenStaffOnAction(ActionEvent actionEvent) {
+    public void sideBarProductionScheduleOnA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -63,16 +47,133 @@ public class ApproveProductionCompletionController
     }
 
     @javafx.fxml.FXML
-    public void sideBarKitchenPerformanceReportOnAction(ActionEvent actionEvent) {
+    public void sideBarReceiveOrdersOnA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void ApproveCompletionOnAction(ActionEvent actionEvent ) {
-
-
+    public void ApproveCompletionOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void sideBarManageMealPreparationOnAction(ActionEvent actionEvent) {
+    public void sideBarProductionReportsOnA(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void sideBarCalculateIngredientOnA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarMenuListOnA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarProductionPlanOnA(ActionEvent actionEvent) {
+    }
+
+//    @javafx.fxml.FXML
+//    public void sideBarProductionScheduleOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void sideBarMenuListOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void sideBarApproveProductionOA(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void sideBarReceiveOrdersOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void sideBarCalculateIngredientOA(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void searchOrderOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void ApproveCompletionOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void sideBarProductionReportsOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void sideBarProductionPlanOnAction(ActionEvent actionEvent) {
+//    }
+
+//    @Deprecated
+//    public void sideBarmanageMealPreparationOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void clearOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
+//
+//    }
+//
+//    @Deprecated
+//    public void sideBarRequestQualityInspectionOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void sideBarUpdateProductionStatusOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void sideBarMonitorCookingProgressOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void sideBarViewProductionTasksOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void sideBarassignKitchenStaffOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void searchOrderOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void sideBarKitchenPerformanceReportOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void ApproveCompletionOnAction(ActionEvent actionEvent ) {
+//
+//
+//    }
+//
+//    @Deprecated
+//    public void sideBarManageMealPreparationOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void sideBarProductionScheduleOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void sideBarMenuListOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void sideBarReceiveOrdersOnAction(ActionEvent actionEvent) {
+//    }
+//
+//    @javafx.fxml.FXML
+//    public void sideBarProductionReportsOnAction(ActionEvent actionEvent) {
+//    }
 }
