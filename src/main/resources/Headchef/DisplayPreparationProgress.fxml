@@ -1,85 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
-    <children>
-        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
-            <children>
-                <Button fx:id="selectMonitoringProgress" mnemonicParsing="false" onAction="#onSelectMonitoringProgress" prefHeight="42.0" prefWidth="174.0" text="Select Monitor Cooking Progress" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="enterproductionTaskIdbutton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onEnterProductionTaskId" prefHeight="42.0" prefWidth="174.0" text="Enter Production Task ID" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="ValidateTaskIdButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onValidateTasjId" prefHeight="42.0" prefWidth="174.0" text="Validate Task ID" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="verifyProductionTaskExistsbutton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onVerifyProductionTaskExists" prefHeight="42.0" prefWidth="174.0" text="Verify Production Task Exists" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="retrieveCookingUpdates" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onRetrieveCookingUpdates" prefHeight="42.0" prefWidth="174.0" text="Retrieve Cooking Updates" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="calculateCompletionPercetnageButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onCalculateCompletionPercentage" prefHeight="42.0" prefWidth="174.0" text="Calculate Completion Percentage" textOverrun="CENTER_ELLIPSIS" />
-            <Button fx:id="diaplayCookingprogressButton" mnemonicParsing="false" onAction="#onDisplayCookingProgress" prefHeight="38.0" prefWidth="175.0" text="Display Cooking Progress" />
-            </children>
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="1280"
+            prefHeight="820"
+            fx:controller="main.airport_catering_service.controller.headchef.MonitorCookingProgressController">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8"
+              style="-fx-background-color: linear-gradient(to right,#D35400,#E67E22);">
+
+            <padding>
+                <Insets top="18" right="25" bottom="18" left="25"/>
+            </padding>
+
+            <Label text="👨‍🍳 Monitor Cooking Progress">
+                <font>
+                    <Font size="30"/>
+                </font>
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+            </Label>
+
+            <Label text="Track the real-time progress of all meal preparation tasks.">
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-size:15;
+                </style>
+            </Label>
+
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
-            <font>
-                <Font name="Arial Bold" size="13.0" />
-            </font>
-            <effect>
-                <Lighting>
-                    <bumpInput>
-                        <Shadow />
-                    </bumpInput>
-                    <light>
-                        <Light.Distant>
-                            <color>
-                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
-                            </color>
-                        </Light.Distant>
-                    </light>
-                </Lighting>
-            </effect>
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-        </Button>
-        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
-            <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
-                    <font>
-                        <Font name="Gabriola" size="18.0" />
-                    </font>
-                </Label>
-                <AnchorPane prefHeight="566.0" prefWidth="596.0">
-               <children>
-                  <TextField fx:id="productionTaskIdTextField" layoutX="138.0" layoutY="15.0" />
-                  <Text layoutX="9.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production Task ID:" />
-                  <Text layoutX="315.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="progress Status" />
-                  <ComboBox fx:id="progressStatusComboBox" layoutX="423.0" layoutY="15.0" prefWidth="150.0" />
-                  <Button fx:id="refreshbutton" layoutX="513.0" layoutY="55.0" mnemonicParsing="false" onAction="#onRefresh" text="Refresh" />
-                  <TableView fx:id="displayPreparationProgressTableView" layoutX="-2.0" layoutY="110.0" prefHeight="456.0" prefWidth="596.0">
-                    <columns>
-                      <TableColumn fx:id="taskIdColumn" prefWidth="75.0" text="Task ID" />
-                      <TableColumn fx:id="mealNameColumn" prefWidth="75.0" text="Meal Name" />
-                        <TableColumn fx:id="assignedChefColumn" prefWidth="75.0" text="Assigned Chef" />
-                        <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="Quantity" />
-                        <TableColumn fx:id="completedQuantityColumn" prefWidth="75.0" text="Completed Quantity" />
-                        <TableColumn fx:id="completionPercentageColumn" prefWidth="75.0" text="Completion Percentage" />
-                        <TableColumn fx:id="currentStatusColumn" prefWidth="75.0" text="Current Satus" />
-                        <TableColumn fx:id="lastUpdatedColumn" prefWidth="75.0" text="Last Update" />
-                    </columns>
-                  </TableView>
-               </children></AnchorPane>
-            </children></VBox>
-        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
-    </children>
-</AnchorPane>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="20">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Search -->
+
+            <TitledPane text="Search Production Task"
+                        collapsible="false"
+                        expanded="true">
+
+                <content>
+
+                    <HBox spacing="15" alignment="CENTER_LEFT">
+
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+
+                        <Label text="Production Task ID"/>
+
+                        <TextField fx:id="taskIdField"
+                                   promptText="Optional"
+                                   prefWidth="220"/>
+
+                        <Button text="🔍 Search"
+                                fx:id="searchButton"
+                                prefWidth="120"
+                                onAction="#searchTask"
+                                style="-fx-background-color:#3498DB;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+                        <Button text="Refresh"
+                                fx:id="refreshButton"
+                                prefWidth="120"
+                                onAction="#refreshProgress"
+                                style="-fx-background-color:#27AE60;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+                    </HBox>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- Overall Progress -->
+
+            <TitledPane text="Overall Kitchen Progress"
+                        collapsible="false"
+                        expanded="true">
+
+                <content>
+
+                    <VBox spacing="15">
+
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+
+                        <Label text="Overall Production Progress"/>
+
+                        <ProgressBar fx:id="overallProgressBar"
+                                     prefWidth="900"
+                                     progress="0.65"/>
+
+                        <Label fx:id="overallProgressLabel"
+                               text="65% Completed"/>
+
+                    </VBox>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- Task Table -->
+
+            <TitledPane text="Cooking Progress Details"
+                        collapsible="false"
+                        expanded="true"
+                        VBox.vgrow="ALWAYS">
+
+                <content>
+
+                    <TableView fx:id="progressTable">
+
+                        <columns>
+
+                            <TableColumn fx:id="taskIdColumn"
+                                         text="Task ID"
+                                         prefWidth="120"/>
+
+                            <TableColumn fx:id="mealCategoryColumn"
+                                         text="Meal Category"
+                                         prefWidth="170"/>
+
+                            <TableColumn fx:id="assignedTeamColumn"
+                                         text="Assigned Team"
+                                         prefWidth="180"/>
+
+                            <TableColumn fx:id="statusColumn"
+                                         text="Current Status"
+                                         prefWidth="170"/>
+
+                            <TableColumn fx:id="progressColumn"
+                                         text="Completion %"
+                                         prefWidth="140"/>
+
+                            <TableColumn fx:id="estimatedTimeColumn"
+                                         text="Estimated Completion"
+                                         prefWidth="220"/>
+
+                            <TableColumn fx:id="remarksColumn"
+                                         text="Remarks"
+                                         prefWidth="220"/>
+
+                        </columns>
+
+                    </TableView>
+
+                </content>
+
+            </TitledPane>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox spacing="15"
+              alignment="CENTER_RIGHT"
+              style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <Button text="Export Report"
+                    fx:id="exportButton"
+                    prefWidth="140"
+                    onAction="#exportProgressReport"
+                    style="-fx-background-color:#8E44AD;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+            <Button text="Back"
+                    fx:id="backButton"
+                    prefWidth="120"
+                    onAction="#goBack"
+                    style="-fx-background-color:#E74C3C;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

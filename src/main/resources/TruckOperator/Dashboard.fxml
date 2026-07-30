@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="1200"
+            prefHeight="800"
+            fx:controller="main.airport_catering_service.controller.truck_operator.TruckOperatorDashboardController">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8"
+              style="-fx-background-color: linear-gradient(to right,#1F618D,#3498DB);">
+
+            <padding>
+                <Insets top="20" right="25" bottom="20" left="25"/>
+            </padding>
+
+            <Label text="🚚 Truck Operator Dashboard">
+
+                <font>
+                    <Font size="30"/>
+                </font>
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+
+            </Label>
+
+            <Label text="Airport Catering Service - Delivery Management">
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-size:15;
+                </style>
+
+            </Label>
+
+        </VBox>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="18"
+              alignment="CENTER">
+
+            <padding>
+                <Insets top="35"
+                        right="40"
+                        bottom="35"
+                        left="40"/>
+            </padding>
+
+            <Button fx:id="viewAssignedDeliveriesButton"
+                    text="1. View Assigned Deliveries"
+                    prefWidth="360"
+                    prefHeight="45"
+                    onAction="#viewAssignedDeliveries"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="acceptAssignmentButton"
+                    text="2. Accept Assignment"
+                    prefWidth="360"
+                    prefHeight="45"
+                    onAction="#acceptAssignment"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="collectShipmentButton"
+                    text="3. Collect Shipment"
+                    prefWidth="360"
+                    prefHeight="45"
+                    onAction="#collectShipment"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="updateDepartureStatusButton"
+                    text="4. Update Departure Status"
+                    prefWidth="360"
+                    prefHeight="45"
+                    onAction="#updateDepartureStatus"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="updateTransitStatusButton"
+                    text="5. Update Transit Status"
+                    prefWidth="360"
+                    prefHeight="45"
+                    onAction="#updateTransitStatus"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="confirmDeliveryButton"
+                    text="6. Confirm Delivery"
+                    prefWidth="360"
+                    prefHeight="45"
+                    onAction="#confirmDelivery"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="reportDeliveryIssueButton"
+                    text="7. Report Delivery Issue"
+                    prefWidth="360"
+                    prefHeight="45"
+                    onAction="#reportDeliveryIssue"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="deliveryPerformanceReportButton"
+                    text="8. Delivery Performance Report"
+                    prefWidth="360"
+                    prefHeight="45"
+                    onAction="#deliveryPerformanceReport"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER_RIGHT"
+              spacing="15"
+              style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets top="15"
+                        right="20"
+                        bottom="15"
+                        left="20"/>
+            </padding>
+
+            <Button fx:id="logoutButton"
+                    text="Logout"
+                    prefWidth="120"
+                    prefHeight="40"
+                    onAction="#logout"
+                    style="-fx-background-color:#E74C3C;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>
