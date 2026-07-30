@@ -10,7 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import main.airport_catering_service.HelloApplication;
 
 import java.io.IOException;
 
@@ -100,6 +99,9 @@ public class loginController
             stage.setScene(scene);
             stage.show();
         }
+        else if (fxidUsernameTextField.getText().equals("5")) {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/InventoryManager/DashboardView.fxml"));
 
         else if (fxidUsernameTextField.getText().equals("7")) {
             FXMLLoader loader = new FXMLLoader(
@@ -112,6 +114,9 @@ public class loginController
             stage.show();
         }
 
+        else if (fxidUsernameTextField.getText().equals("6")) {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/DispatchCoordinator/DashboardView.fxml"));
         else if (fxidUsernameTextField.getText().equals("8")) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/TruckOperator/Dashboard.fxml"));

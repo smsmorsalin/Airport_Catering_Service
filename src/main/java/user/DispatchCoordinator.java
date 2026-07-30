@@ -1,5 +1,7 @@
 package user;
 
+import utility.SceneSwitchingHelper;
+
 import java.io.IOException;
 import java.time.LocalDate;
 
@@ -17,6 +19,15 @@ public class DispatchCoordinator extends Employee{
     @Override
     public void viewDashboard(javafx.event.ActionEvent event) throws IOException{
 
+    }
+
+
+    public static void renderAssignTruck(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/AssignTruckView.fxml");
+    }
+
+    public static void renderDashboard(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/DashboardView.fxml");
     }
 
 }

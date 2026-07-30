@@ -2,6 +2,10 @@ package main.airport_catering_service.controller.dispatch_coordinator;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.DispatchCoordinator;
+import user.User;
+
+import java.io.IOException;
 
 public class dashboardController
 {
@@ -45,10 +49,32 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void assignTruckButtonOnAction(ActionEvent actionEvent) {
+    public void assignTruckButtonOnAction(ActionEvent actionEvent) throws IOException {
+        DispatchCoordinator.renderAssignTruck(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void packageOrderButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void logoutButtonOnAction(ActionEvent actionEvent) throws IOException{
+        User.logout(actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void receiveDispatchRequestButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void manageDeliveryDelayButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void generateDispatchReportButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void emergencyDeliveryButtonOnAction(ActionEvent actionEvent) {
     }
 }
