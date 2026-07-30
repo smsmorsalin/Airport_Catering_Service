@@ -2,6 +2,10 @@ package main.airport_catering_service.controller.headchef;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import user.Headchef;
+import user.User;
+
+import java.io.IOException;
 
 public class HeadChefDashboardController
 {
@@ -29,7 +33,8 @@ public class HeadChefDashboardController
     }
 
     @javafx.fxml.FXML
-    public void logout(ActionEvent actionEvent) {
+    public void logout(ActionEvent actionEvent) throws IOException {
+        User.logout(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -45,7 +50,8 @@ public class HeadChefDashboardController
     }
 
     @javafx.fxml.FXML
-    public void viewProductionTasks(ActionEvent actionEvent) {
+    public void viewProductionTasks(ActionEvent actionEvent) throws IOException {
+        Headchef.renderDisplayPreparationProgress(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -57,7 +63,8 @@ public class HeadChefDashboardController
     }
 
     @javafx.fxml.FXML
-    public void monitorCookingProgress(ActionEvent actionEvent) {
+    public void monitorCookingProgress(ActionEvent actionEvent) throws IOException {
+        Headchef.renderDisplayCookingProgress(actionEvent);
     }
 
     @javafx.fxml.FXML
