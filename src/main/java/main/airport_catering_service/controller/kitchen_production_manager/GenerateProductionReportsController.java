@@ -5,6 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import user.KitchenProductionManager;
+
+import java.io.IOException;
 
 
 public class GenerateProductionReportsController
@@ -43,7 +46,8 @@ public class GenerateProductionReportsController
     }
 
     @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) {
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML

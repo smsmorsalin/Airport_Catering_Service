@@ -4,6 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import user.AirlineRepresentative;
+import user.KitchenProductionManager;
+
+import java.io.IOException;
 
 public class CalculateIngredientRequirementsController
 {
@@ -45,7 +49,8 @@ public class CalculateIngredientRequirementsController
     }
 
     @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) {
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML
