@@ -6,6 +6,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ComboBox;
+import user.FoodQualityControlOfficer;
+
+import java.io.IOException;
+
 public class ManageQualityIssueController
 {
     @javafx.fxml.FXML
@@ -52,7 +56,8 @@ public class ManageQualityIssueController
     }
 
     @javafx.fxml.FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) {
+    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws IOException {
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML

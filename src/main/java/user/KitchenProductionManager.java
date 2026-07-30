@@ -145,5 +145,17 @@ public class KitchenProductionManager extends  Employee{
         stage.setScene(scene);
         stage.show();
     }
+
+    public static void reverseDashboard(javafx.event.ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader
+                (KitchenProductionManager.class.getResource("/KitchenProductionManager/dashboardView.fxml"));
+        Parent root = loader.load();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
 }
 
