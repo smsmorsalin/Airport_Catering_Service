@@ -1,11 +1,18 @@
 package main.airport_catering_service.controller.food_quality_control_officer;
 
+
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import main.airport_catering_service.HelloApplication;
+import user.FoodQualityControlOfficer;
 
-import java.awt.*;
+import java.io.IOException;
 
 public class PerformInspectionController
 {
@@ -39,7 +46,12 @@ public class PerformInspectionController
     }
 
     @javafx.fxml.FXML
-    public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
+    public void sideBarRejectBatchOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ApproveBatchView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -59,7 +71,8 @@ public class PerformInspectionController
     }
 
     @javafx.fxml.FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) {
+    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws  IOException{
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML

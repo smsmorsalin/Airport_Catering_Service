@@ -1,9 +1,10 @@
 package main.airport_catering_service.controller.food_quality_control_officer;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import user.FoodQualityControlOfficer;
+
+import java.io.IOException;
 
 public class FoodSafetyCheckController
 {
@@ -57,7 +58,8 @@ public class FoodSafetyCheckController
     }
 
     @javafx.fxml.FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) {
+    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws IOException {
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML

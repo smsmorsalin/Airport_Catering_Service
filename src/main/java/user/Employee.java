@@ -100,8 +100,4 @@ public abstract class Employee extends User {
     }
 
 
-    public abstract boolean performAssignedDuty(String taskId);
-    public abstract boolean viewWorkSchedule(LocalDate date);
-    public abstract String getEmployeeType();
-
 }

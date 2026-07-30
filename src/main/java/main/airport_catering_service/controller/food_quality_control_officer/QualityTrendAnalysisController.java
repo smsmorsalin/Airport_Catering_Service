@@ -3,6 +3,9 @@ package main.airport_catering_service.controller.food_quality_control_officer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import user.FoodQualityControlOfficer;
+
+import java.io.IOException;
 
 public class QualityTrendAnalysisController
 {
@@ -50,7 +53,8 @@ public class QualityTrendAnalysisController
     }
 
     @javafx.fxml.FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) {
+    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws IOException {
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML
