@@ -20,6 +20,27 @@ public class KitchenProductionManager extends  Employee{
     }
 
     @Override
+    public String toString() {
+        return "KitchenProductionManager{" +
+                "employeeId=" + employeeId +
+                ", department='" + department + '\'' +
+                ", designation='" + designation + '\'' +
+                ", joinDate=" + joinDate +
+                ", shift='" + shift + '\'' +
+                ", salary=" + salary +
+                ", userId=" + userId +
+                ", fullName='" + fullName + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", status='" + status + '\'' +
+                ", createDate=" + createDate +
+                '}';
+    }
+
+    @Override
     public void viewDashboard(javafx.event.ActionEvent event) throws IOException {
 
     }
