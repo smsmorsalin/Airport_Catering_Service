@@ -76,49 +76,4 @@ public class CalculateIngredientRequirementsController
     @javafx.fxml.FXML
     public void sideBarMenuListOA(ActionEvent actionEvent) {
     }
-
-//    @javafx.fxml.FXML
-//    public void sideBarmanageMealPreparationOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void clearOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void searchOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarHandleRejectedBatchOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
-//
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarRequestQualityInspectionOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarUpdateProductionStatusOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarMonitorCookingProgressOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarViewProductionTasksOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void calculateOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarKitchenPerformanceReportOnAction(ActionEvent actionEvent) {
-//    }
 }

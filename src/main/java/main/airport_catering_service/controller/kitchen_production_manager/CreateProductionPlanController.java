@@ -74,7 +74,7 @@ public class CreateProductionPlanController
     public void sideBarMonitorProductionOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBArProductionPlanOA(ActionEvent actionEvent) {
     }
 
@@ -89,50 +89,4 @@ public class CreateProductionPlanController
     @javafx.fxml.FXML
     public void sideBarMenuListOA(ActionEvent actionEvent) {
     }
-
-//    @javafx.fxml.FXML
-//    public void clearOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void searchOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarHandleRejectedBatchOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
-//
-//
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void createPlanOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarRequestQualityInspectionOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarUpdateProductionStatusOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarMonitorCookingProgressOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarAssignKitchenStaffOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarViewProductionTasksOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarKitchenPerformanceReportOnAction(ActionEvent actionEvent) {
-//    }
 }

@@ -14,7 +14,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.kitchen_production_manager.ApproveProductionCompletionController">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
@@ -25,7 +24,7 @@
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionScheduleOnA" prefHeight="42.0" prefWidth="174.0" text="Production Schedule" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMenuListOnA" prefHeight="42.0" prefWidth="174.0" text="Menu List" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionReportsOnA" prefHeight="42.0" prefWidth="174.0" text="Monitor Production" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" mnemonicParsing="false" onAction="#sideBarApproveProductionOnA" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: blue;" text="Approve Production" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: blue;" text="Approve Production" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
                 <Button mnemonicParsing="false" onAction="#sideBarProductionReportsOnA" prefHeight="42.0" prefWidth="174.0" text="Production Reports" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
