@@ -8,6 +8,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import user.KitchenProductionManager;
 
 import java.io.IOException;
 
@@ -99,7 +100,8 @@ public class ReceiveApprovedCateringOrdersController
     }
 
     @FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) {
+    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws  IOException{
+        KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
     @FXML

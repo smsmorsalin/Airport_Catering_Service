@@ -54,7 +54,7 @@ public class QualityTrendAnalysisController
 
     @javafx.fxml.FXML
     public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws IOException {
-        FoodQualityControlOfficer.viewQualityTrendAnalysis(actionEvent);
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML

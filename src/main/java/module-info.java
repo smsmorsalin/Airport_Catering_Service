@@ -5,7 +5,6 @@ module main.airport_catering_service {
     requires javafx.graphics;
 
 
-
     opens main.airport_catering_service to javafx.fxml;
     exports main.airport_catering_service;
     exports main.airport_catering_service.controller;
