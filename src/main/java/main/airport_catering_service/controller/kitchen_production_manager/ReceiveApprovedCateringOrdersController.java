@@ -32,9 +32,6 @@ public class ReceiveApprovedCateringOrdersController
     @FXML
     private TextField orderIDTextField1;
 
-    @FXML
-    private AnchorPane anchorPan;
-
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -53,13 +50,7 @@ public class ReceiveApprovedCateringOrdersController
 
     @Deprecated
     public void sidebarAirporCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
-//        FXMLLoader fxmlL =  new FXMLLoader(dashboardViewController.class.getResource("dashboardView"));
-//        Node node = fxmlL.load();
-//        mainPane.getChildren().setAll(node);
-
-        FXMLLoader registerFXML = new FXMLLoader(getClass().getResource("/main/airport_catering_service/dashboardView.fxml"));
-        Node node = registerFXML.load();
-        anchorPan.getChildren().setAll(node);
+        KitchenProductionManager.reverseDashboard(actionEvent);
 
     }
 
@@ -73,6 +64,7 @@ public class ReceiveApprovedCateringOrdersController
 
     @FXML
     public void sideBarmanageMealPreparationOnAction(ActionEvent actionEvent) {
+
     }
 
     @FXML
@@ -97,11 +89,6 @@ public class ReceiveApprovedCateringOrdersController
 
     @FXML
     public void sideBarassignKitchenStaffOnAction(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws  IOException{
-        KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
     @FXML

@@ -67,7 +67,6 @@ public class dashboardController
 
     @javafx.fxml.FXML
     public void sideBarCalculateIngredientOnAction(ActionEvent actionEvent) throws IOException{
-
         KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
     }
 

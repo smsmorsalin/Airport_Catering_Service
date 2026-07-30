@@ -36,7 +36,6 @@ public class ApproveProductionCompletionController
     @javafx.fxml.FXML
     public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
         KitchenProductionManager.reverseDashboard(actionEvent);
-
     }
 
     @javafx.fxml.FXML
