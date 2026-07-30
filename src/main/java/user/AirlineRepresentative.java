@@ -11,9 +11,25 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 public class AirlineRepresentative extends User {
+    protected final String airlineId;
+    protected String officeContact;
 
-    public AirlineRepresentative(int userId, String password, String fullName, String role, String dateOfBirth, String gender, String email, String phone, String address, String status) {
+    public AirlineRepresentative(int userId, String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, String airlineId, String officeContact) {
         super(userId, password, fullName, role, dateOfBirth, gender, email, phone, address, status);
+        this.airlineId = airlineId;
+        this.officeContact = officeContact;
+    }
+
+    public String getAirlineId() {
+        return airlineId;
+    }
+
+    public String getOfficeContact() {
+        return officeContact;
+    }
+
+    public void setOfficeContact(String officeContact) {
+        this.officeContact = officeContact;
     }
 
     @Override

@@ -1,5 +1,7 @@
 package user;
 
+import utility.databaseAccessor;
+
 import java.time.LocalDate;
 import java.util.Random;
 
@@ -9,16 +11,14 @@ public abstract class Employee extends User {
     protected String department;
     protected String designation;
     protected final LocalDate joinDate;
-    protected String shift;
     protected float salary;
 
-    public Employee(int userId, String password, String fullName, String role, String dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, String shift, float salary) {
+    public Employee(int userId, String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, float salary) {
         super(userId, password, fullName, role, dateOfBirth, gender, email, phone, address, status);
         this.employeeId = employeeId;
         this.joinDate = joinDate;
         this.department = department;
         this.designation = designation;
-        this.shift = shift;
         this.salary = salary;
     }
 
@@ -46,14 +46,6 @@ public abstract class Employee extends User {
         return joinDate;
     }
 
-    public String getShift() {
-        return shift;
-    }
-
-    public void setShift(String shift) {
-        this.shift = shift;
-    }
-
     public float getSalary() {
         return salary;
     }
@@ -69,7 +61,6 @@ public abstract class Employee extends User {
                 ", department='" + department + '\'' +
                 ", designation='" + designation + '\'' +
                 ", joinDate=" + joinDate +
-                ", shift='" + shift + '\'' +
                 ", salary=" + salary +
                 ", userId=" + userId +
                 ", fullName='" + fullName + '\'' +
@@ -88,14 +79,7 @@ public abstract class Employee extends User {
     }
 
     public static final int generateEmployeeId(){
-        boolean tempUniqueIdCheck = false;
-        int tempId;
-        Random rand = new Random();
-        do {
-            tempId = rand.nextInt();
-//            tempUniqueIdCheck = databaseAccessor.verifyUnique(tempId, "Employee.bin", "employeeId");
-//            for Now as a testing purpose: tempId = unique id without verify
-        }while(!tempUniqueIdCheck);
+        int tempId = (int) databaseAccessor.generateNewUniqueId("User.bin", "userId");
         return tempId;
     }
 
