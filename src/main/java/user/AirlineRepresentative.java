@@ -10,10 +10,10 @@ import utility.SceneSwitchingHelper;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class AirlineRepresentative extends Employee {
+public class AirlineRepresentative extends User {
 
-    public AirlineRepresentative(int userId, String password, String fullName, String dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, String shift, float salary) {
-        super(userId, password, fullName, dateOfBirth, gender, email, phone, address, status, employeeId, joinDate, department, designation, shift, salary);
+    public AirlineRepresentative(int userId, String password, String fullName, String dateOfBirth, String gender, String email, String phone, String address, String status) {
+        super(userId, password, fullName, dateOfBirth, gender, email, phone, address, status);
     }
 
     @Override
