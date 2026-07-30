@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.inventory_manager.dashboardController">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
@@ -75,7 +75,7 @@
                   </TableView>
                   <Label fx:id="emargencyIssueText" layoutX="14.0" layoutY="34.0" prefHeight="17.0" prefWidth="95.0" text="Emargency Issue" textFill="#fa0702" />
                   <Label fx:id="enterTicketIdText" layoutY="348.0" prefHeight="17.0" prefWidth="88.0" text="Enter Ticket ID" />
-                  <TextField fx:id="enterTicketIdText" layoutX="95.0" layoutY="344.0" prefHeight="25.0" prefWidth="128.0" />
+                  <TextField fx:id="enterTicketIdTextfield" layoutX="95.0" layoutY="344.0" prefHeight="25.0" prefWidth="128.0" />
                   <ComboBox fx:id="statusCombobox" layoutX="298.0" layoutY="344.0" prefWidth="150.0" />
                   <Label fx:id="statusText" layoutX="252.0" layoutY="348.0" prefHeight="17.0" prefWidth="35.0" text="Status" />
                   <Button layoutX="486.0" layoutY="344.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="25.0" prefWidth="95.0" text="Update">

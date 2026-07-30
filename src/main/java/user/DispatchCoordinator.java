@@ -1,5 +1,6 @@
 package user;
 
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class DispatchCoordinator extends Employee{
@@ -9,28 +10,13 @@ public class DispatchCoordinator extends Employee{
     }
 
     @Override
-    public void viewDashboard(){}
-
-    @Override
-    public void goLogoutPage(){}
-
-    @Override
     public boolean updateProfile() {
         return false;
     }
 
     @Override
-    public boolean performAssignedDuty(String taskId){
-        return false;
+    public void viewDashboard(javafx.event.ActionEvent event) throws IOException{
+
     }
 
-    @Override
-    public boolean viewWorkSchedule(LocalDate date){
-        return false;
-    }
-
-    @Override
-    public String getEmployeeType(){
-        return "s";
-    }
 }
