@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utility.SceneSwitchingHelper;
 
 
 import java.io.IOException;
@@ -50,29 +51,11 @@ public class KitchenProductionManager extends  Employee{
     }
 
     public static void viewMonitorProductionActivities(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(KitchenProductionManager.class.getResource(
-                "/KitchenProductionManager/MonitorProductionActivities.fxml"));
-
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/KitchenProductionManager/MonitorProductionActivities.fxml");
     }
 
     public static void  viewGenerateProductionReports (javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(
-                KitchenProductionManager.class.getResource("/KitchenProductionManager/GenerateProductionReports.fxml"));
-
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/KitchenProductionManager/GenerateProductionReports.fxml");
     }
 
     public static void  viewCreateProductionPlan(javafx.event.ActionEvent event) throws IOException{
@@ -134,17 +117,17 @@ public class KitchenProductionManager extends  Employee{
         stage.show();
     }
     public static void  viewApproveProductionCompletion(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(
-                KitchenProductionManager.class.getResource("/KitchenProductionManager/ApproveProductionCompletion.fxml"));
-
+        FXMLLoader loader = new FXMLLoader
+                (KitchenProductionManager.class.getResource("/KitchenProductionManager/ApproveProductionCompletion.fxml"));
         Parent root = loader.load();
-
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
-
         stage.setScene(scene);
         stage.show();
+
     }
+
+
 
     public static void reverseDashboard(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader

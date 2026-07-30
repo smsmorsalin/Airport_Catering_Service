@@ -22,14 +22,14 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" onAction="#sideBarViewProductionTasksOnAction" prefHeight="42.0" prefWidth="174.0" text=" View Production Tasks" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarAssignKitchenStaffOnAction" prefHeight="42.0" prefWidth="174.0" text=" Assign Kitchen Staff" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: Blue;" text=" Manage Meal Preparation" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMonitorCookingProgressOnAction" prefHeight="42.0" prefWidth="174.0" text=" Monitor Cooking Progress" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarUpdateProductionStatusOnAction" prefHeight="42.0" prefWidth="174.0" text=" Update Production Status" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarRequestQualityInspectionOnAction" prefHeight="42.0" prefWidth="174.0" text="Request Quality Inspection" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" onAction="#sideBarHandleRejectedBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Handle Rejected Batch" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" onAction="#sideBarKitchenPerformanceReportOnAction" prefHeight="42.0" prefWidth="174.0" text=" Kitchen Performance Report" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarReceiveOrdersOA" prefHeight="42.0" prefWidth="174.0" text="Receive Orders" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarCalculateIngredientOA" prefHeight="42.0" prefWidth="174.0" text="Calculate Ingredient" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBArProductionPlanOA" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: Blue;" text="Production Plan" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionScheduleOA" prefHeight="42.0" prefWidth="174.0" text="Production Schedule" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMenuListOA" prefHeight="42.0" prefWidth="174.0" text="Menu List" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMonitorProductionOA" prefHeight="42.0" prefWidth="174.0" text="Monitor Production" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarApproveProductionOA" prefHeight="42.0" prefWidth="174.0" text="Approve Production" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarProductionReportsOA" prefHeight="42.0" prefWidth="174.0" text="Production Reports" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="-4.0" mnemonicParsing="false" onAction="#sidebarAirportCateringServiceButtonOnClick" prefHeight="42.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">

@@ -18,17 +18,17 @@
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" onAction="#sideBarViewProductionTasksOnAction" prefHeight="42.0" prefWidth="174.0" text=" View Production Tasks" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarassignKitchenStaffOnAction" prefHeight="42.0" prefWidth="174.0" text=" Assign Kitchen Staff" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarManageMealPreparationOnAction" prefHeight="42.0" prefWidth="174.0" text=" Manage Meal Preparation" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMonitorCookingProgressOnAction" prefHeight="42.0" prefWidth="174.0" text=" Monitor Cooking Progress" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarUpdateProductionStatusOnAction" prefHeight="42.0" prefWidth="174.0" text=" Update Production Status" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarRequestQualityInspectionOnAction" prefHeight="42.0" prefWidth="174.0" text="Request Quality Inspection" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: blue;" text=" Handle Rejected Batch" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" onAction="#sideBarKitchenPerformanceReportOnAction" prefHeight="42.0" prefWidth="174.0" text=" Kitchen Performance Report" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarReceiveOrdersOnA" prefHeight="42.0" prefWidth="174.0" text="Receive Orders" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarCalculateIngredientOnA" prefHeight="42.0" prefWidth="174.0" text="Calculate Ingredient" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionPlanOnA" prefHeight="42.0" prefWidth="174.0" text="Production Plan" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionScheduleOnA" prefHeight="42.0" prefWidth="174.0" text="Production Schedule" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMenuListOnA" prefHeight="42.0" prefWidth="174.0" text="Menu List" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionReportsOnA" prefHeight="42.0" prefWidth="174.0" text="Monitor Production" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" mnemonicParsing="false" onAction="#sideBarApproveProductionOnA" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: blue;" text="Approve Production" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarProductionReportsOnA" prefHeight="42.0" prefWidth="174.0" text="Production Reports" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" onAction="#sidebarAirportCateringServiceButtonOnClick" prefHeight="33.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+        <Button layoutY="3.0" mnemonicParsing="false" onAction="#sidebarAirportCateringServiceButtonOnA" prefHeight="33.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
             <font>
                 <Font name="Arial Bold" size="13.0" />
             </font>
