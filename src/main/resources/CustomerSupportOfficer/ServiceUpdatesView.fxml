@@ -25,36 +25,28 @@
             <children>
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Dashboard">
+                <Button onAction="#sidebardashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Dashboard">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Register Complaint">
+                <Button onAction="#sidebarRegisterComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Register Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Track Complaint">
+                <Button onAction="#sidebarTrackComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Track Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Resolve Complaint">
-                    <font>
-                        <Font size="15" />
-                    </font>
-                </Button>
-
-
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Emergency Modification">
+                <Button onAction="#sidebarResolveComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Resolve Complaint">
                     <font>
                         <Font size="15" />
                     </font>
@@ -62,8 +54,7 @@
 
 
 
-
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Delay Request">
+                <Button onAction="#sidebarEmergencyModificationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Emergency Modification">
                     <font>
                         <Font size="15" />
                     </font>
@@ -72,7 +63,7 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Cancellation">
+                <Button onAction="#sidebarFlightDelayRequestButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Delay Request">
                     <font>
                         <Font size="15" />
                     </font>
@@ -81,7 +72,16 @@
 
 
 
-                <Button onAction="#ServiceUpdatesOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;         -fx-background-color:#0F6BFF;" text="Service Updates" textFill="white">
+                <Button onAction="#sidebarFlightCancellationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Cancellation">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+
+
+
+
+                <Button onAction="#sidebarServiceUpdatesButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;         -fx-background-color:#0F6BFF;" text="Service Updates" textFill="white">
 
                     <font>
                         <Font size="15" />
@@ -92,7 +92,7 @@
 
 
 
-                <Button prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Generate Reports">
+                <Button onAction="#sidebarGenerateReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Generate Reports">
 
                     <font>
                         <Font size="15" />

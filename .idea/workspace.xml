@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,12 +27,12 @@
     &quot;assignee&quot;: &quot;Saif-kaif&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
-    "accountId": "ef1e225f-e8df-4381-ba31-5fa2f4c0db29"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
+    &quot;accountId&quot;: &quot;5e089f63-5a80-4c03-9d05-e3c4ac5c4c7d&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -44,65 +42,65 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000100376722" />
-      <entry key="MS500" value="1.0257650845404496" />
-      <entry key="S2" value="2.300513963936" />
-      <entry key="S5" value="6.324950072511182" />
-      <entry key="S10" value="12.53785782854679" />
-      <entry key="S30" value="36.89971892872053" />
-      <entry key="S60" value="58.25697118851957" />
-      <entry key="M2" value="76.56614829831281" />
-      <entry key="M5" value="95.47332360122832" />
-      <entry key="M10" value="111.43121387420588" />
-      <entry key="M15" value="122.27329379739439" />
-      <entry key="M30" value="141.05903303885404" />
-      <entry key="H1" value="156.37641579443718" />
-      <entry key="H2" value="166.53036377720113" />
-      <entry key="H4" value="172.43690098856734" />
-      <entry key="D1" value="177.8567777172789" />
-      <entry key="W1" value="178.83542048313325" />
+      <entry key="MS100" value="4.7453035304955764E-299" />
+      <entry key="MS500" value="2.1639777916662736E-60" />
+      <entry key="S2" value="1.2128783972920283E-15" />
+      <entry key="S5" value="1.0921042100572737E-6" />
+      <entry key="S10" value="0.0012020773644891162" />
+      <entry key="S30" value="0.2482121400171447" />
+      <entry key="S60" value="1.3307133663044002" />
+      <entry key="M2" value="4.111592358754396" />
+      <entry key="M5" value="13.195480102784018" />
+      <entry key="M10" value="25.242116232678423" />
+      <entry key="M15" value="33.637562505514104" />
+      <entry key="M30" value="47.82801242005272" />
+      <entry key="H1" value="59.01973777674648" />
+      <entry key="H2" value="66.26717159639244" />
+      <entry key="H4" value="70.42557851071402" />
+      <entry key="D1" value="74.20656483683622" />
+      <entry key="W1" value="74.8858623947846" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="2.264298154008337E-141" />
-      <entry key="S2" value="1.077442992756896E-35" />
-      <entry key="S5" value="1.767557593206283E-14" />
-      <entry key="S10" value="2.2336292988166065E-7" />
-      <entry key="S30" value="0.012544147680697856" />
-      <entry key="S60" value="0.20978924537704435" />
-      <entry key="M2" value="1.3894310352352406" />
-      <entry key="M5" value="8.971627092964946" />
-      <entry key="M10" value="20.564217791751418" />
-      <entry key="M15" value="27.996051400134075" />
-      <entry key="M30" value="38.8378599105156" />
-      <entry key="H1" value="46.09391364802799" />
-      <entry key="H2" value="50.31601470840516" />
-      <entry key="H4" value="52.59682990025111" />
-      <entry key="D1" value="54.590664279003725" />
-      <entry key="W1" value="54.94130359848788" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.000000000001273" />
+      <entry key="S2" value="1.001359543020969" />
+      <entry key="S5" value="1.1035269442014648" />
+      <entry key="S10" value="1.4533195389514293" />
+      <entry key="S30" value="2.7473346693188208" />
+      <entry key="S60" value="5.691175752889765" />
+      <entry key="M2" value="11.771401301052599" />
+      <entry key="M5" value="23.382540500848787" />
+      <entry key="M10" value="32.862743996759676" />
+      <entry key="M15" value="37.69241850950802" />
+      <entry key="M30" value="43.89212287018343" />
+      <entry key="H1" value="47.66556475985996" />
+      <entry key="H2" value="49.756513635606005" />
+      <entry key="H4" value="50.85835682711703" />
+      <entry key="D1" value="51.80688831723589" />
+      <entry key="W1" value="51.97234213231013" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.156399968346099E-5" />
-      <entry key="MS500" value="0.10379751622356502" />
-      <entry key="S2" value="1.5766332042739646" />
-      <entry key="S5" value="5.831093333413902" />
-      <entry key="S10" value="12.227418039355967" />
-      <entry key="S30" value="36.78397755852722" />
-      <entry key="S60" value="58.388255401525065" />
-      <entry key="M2" value="77.88752578364479" />
-      <entry key="M5" value="104.50042143147631" />
-      <entry key="M10" value="134.25379813238635" />
-      <entry key="M15" value="156.37193145238595" />
-      <entry key="M30" value="198.33946857720113" />
-      <entry key="H1" value="251.88891289647808" />
-      <entry key="H2" value="335.97797687643765" />
-      <entry key="H4" value="432.57177288164905" />
-      <entry key="D1" value="578.4650903898241" />
-      <entry key="W1" value="612.9177786386655" />
+      <entry key="MS100" value="0.0015008546692265741" />
+      <entry key="MS500" value="0.2724380280533763" />
+      <entry key="S2" value="0.7230198139493793" />
+      <entry key="S5" value="0.948993323902551" />
+      <entry key="S10" value="1.3115497458597196" />
+      <entry key="S30" value="2.8329514696508142" />
+      <entry key="S60" value="6.79016626931689" />
+      <entry key="M2" value="15.617485210606711" />
+      <entry key="M5" value="36.85786953514853" />
+      <entry key="M10" value="62.19681040884284" />
+      <entry key="M15" value="80.3704398294281" />
+      <entry key="M30" value="114.15188540230267" />
+      <entry key="H1" value="161.1809349936458" />
+      <entry key="H2" value="241.1226569268323" />
+      <entry key="H4" value="333.9556491722034" />
+      <entry key="D1" value="473.44303641852775" />
+      <entry key="W1" value="506.21988520805974" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
     &quot;associatedIndex&quot;: 7
@@ -115,31 +113,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "morsalin",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;saif&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="javafx" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -150,14 +149,6 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -239,7 +230,63 @@
       <option name="project" value="LOCAL" />
       <updated>1785261781498</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785352529531</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1785352529531</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785358092539</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1785358092539</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785360567919</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1785360567919</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785361970408</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1785361970408</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785363121630</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1785363121630</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785389375710</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1785389375710</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785389663746</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1785389663746</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

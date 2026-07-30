@@ -1,12 +1,15 @@
 package user;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
+import java.net.URL;
 import java.time.LocalDate;
 
 public class KitchenProductionManager extends  Employee{
@@ -24,8 +27,95 @@ public class KitchenProductionManager extends  Employee{
     public boolean updateProfile(){
         return false;
     }
-    public static void viewCreateMenuList(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(KitchenProductionManager.class.getResource("/KitchenProductionManager/CreateMenuListView.fxml"));
+
+    public static void viewMonitorProductionActivities(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(KitchenProductionManager.class.getResource(
+                "/KitchenProductionManager/MonitorProductionActivities.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void  viewGenerateProductionReports (javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                KitchenProductionManager.class.getResource("/KitchenProductionManager/GenerateProductionReports.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void  viewCreateProductionPlan(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                KitchenProductionManager.class.getResource("/KitchenProductionManager/CreateProductionPlan.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+    public static void  viewCalculateIngredientRequirements (javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                KitchenProductionManager.class.getResource("/KitchenProductionManager/CalculateIngredientRequirements.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+
+    }public static void  viewReceiveApprovedCateringOrders (javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                KitchenProductionManager.class.getResource("/KitchenProductionManager/ReceiveApprovedCateringOrders.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }public static void  viewCreateMenuList (javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                KitchenProductionManager.class.getResource("/KitchenProductionManager/CreateMenuList.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }public static void  ViewCreateProductionSchedule(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                KitchenProductionManager.class.getResource("/KitchenProductionManager/CreateProductionSchedule.fxml"));
+
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+    public static void  viewApproveProductionCompletion(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                KitchenProductionManager.class.getResource("/KitchenProductionManager/ApproveProductionCompletion.fxml"));
+
         Parent root = loader.load();
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
