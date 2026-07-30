@@ -5,6 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -51,6 +52,44 @@ public class CateringOperationsManager extends Employee {
     @Override
     public boolean updateProfile(){
         return false;
+    }
+
+
+    //below are the code for fxml sideBar rendering button on action
+    public static void renderFxmlBusinessDashboardView(javafx.event.ActionEvent event) throws IOException {
+        SceneSwitchingHelper.fullSceneReplacement(event, "/CateringOperationsManager/businessDashboardView.fxml");
+    }
+
+    public static void renderFxmlApproveOrRejectOrder(javafx.event.ActionEvent event) throws IOException {
+        SceneSwitchingHelper.fullSceneReplacement(event, "/CateringOperationsManager/approveOrRejectOrderView.fxml");
+    }
+
+    public static void renderFxmlReviewOrder(javafx.event.ActionEvent event) throws IOException {
+        SceneSwitchingHelper.fullSceneReplacement(event, "/CateringOperationsManager/reviewOrderView.fxml");
+    }
+
+    public static void renderFxmlOperationalReport(javafx.event.ActionEvent event) throws IOException {
+        SceneSwitchingHelper.fullSceneReplacement(event, "/CateringOperationsManager/operationalReportView.fxml");
+    }
+
+    public static void renderFxmlMonitorProduction(javafx.event.ActionEvent event) throws IOException {
+        SceneSwitchingHelper.fullSceneReplacement(event, "/CateringOperationsManager/monitorProductionView.fxml");
+    }
+
+    public static void renderFxmlInventoryStatus(javafx.event.ActionEvent event) throws IOException {
+        SceneSwitchingHelper.fullSceneReplacement(event, "/CateringOperationsManager/inventoryStatusView.fxml");
+    }
+
+    public static void renderFxmlDeliveryMonitoring(javafx.event.ActionEvent event) throws IOException {
+        SceneSwitchingHelper.fullSceneReplacement(event, "/CateringOperationsManager/deliveryMonitoringView.fxml");
+    }
+
+    public static void renderFxmlEmergencyIssue(javafx.event.ActionEvent event) throws IOException {
+        SceneSwitchingHelper.fullSceneReplacement(event, "/CateringOperationsManager/emergencyIssueView.fxml");
+    }
+
+    public static void renderFxmlGenerateReport(javafx.event.ActionEvent event) throws IOException {
+        SceneSwitchingHelper.fullSceneReplacement(event, "/CateringOperationsManager/generateReportView.fxml");
     }
 
 
