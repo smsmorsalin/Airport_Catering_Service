@@ -19,7 +19,7 @@ public class SceneSwitchingHelper {
             return;
         }
         try {
-            FXMLLoader loader = new FXMLLoader(SceneSwitchingHelper.class.getResource("/AirlineRepresentative/createCateringOrderView.fxml"));
+            FXMLLoader loader = new FXMLLoader(SceneSwitchingHelper.class.getResource(newScene));
             Parent root = loader.load();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
