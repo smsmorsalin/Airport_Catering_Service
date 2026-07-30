@@ -1,12 +1,19 @@
 package main.airport_catering_service.controller.food_quality_control_officer;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import user.FoodQualityControlOfficer;
+import user.User;
 
-public class dashboardController
-{
+import java.io.IOException;
+
+
+public class dashboardController {
     @javafx.fxml.FXML
-    private TableColumn descriptionTableView;
+    private TableColumn<dashboardController, String> descriptionTableView;
     @javafx.fxml.FXML
     private Label enterTicketIDTextField;
     @javafx.fxml.FXML
@@ -14,46 +21,57 @@ public class dashboardController
     @javafx.fxml.FXML
     private Label emargencyIssueLabel;
     @javafx.fxml.FXML
-    private TableColumn ticketIDTableColumn;
+    private TableColumn<dashboardController, Integer> ticketIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn statusTableView;
+    private TableColumn<dashboardController, String> statusTableView;
     @javafx.fxml.FXML
-    private ComboBox statusComboBox;
+    private ComboBox<String> statusComboBox;
     @javafx.fxml.FXML
-    private TableView mainTableView;
+    private TableView<dashboardController> mainTableView;
     @javafx.fxml.FXML
-    private TableColumn issueTypeTableView;
+    private TableColumn<dashboardController, Boolean> issueTypeTableView;
+
+    private AnchorPane reg_anchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void sideBarQAReportOnAction(ActionEvent actionEvent) {
+    public void sideBarQAReportOnAction(ActionEvent actionEvent) throws  IOException {
+        FoodQualityControlOfficer.viewGenerateQAReport(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarQualityIssueOnAction(ActionEvent actionEvent) {
+    public void sideBarQualityIssueOnAction(ActionEvent actionEvent)throws IOException {
+        FoodQualityControlOfficer.viewManageQualityIssue(actionEvent);
+
+
     }
 
     @javafx.fxml.FXML
-    public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
+    public void sideBarRejectBatchOnAction(ActionEvent actionEvent)throws IOException {
+        FoodQualityControlOfficer.viewRejectBatch(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarFoodSafetyCheckOnAction(ActionEvent actionEvent) {
+    public void sideBarFoodSafetyCheckOnAction(ActionEvent actionEvent)throws IOException {
+        FoodQualityControlOfficer.viewFoodSafetyCheck(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarInspectionRequestOnAction(ActionEvent actionEvent) {
+    public void sideBarInspectionRequestOnAction(ActionEvent actionEvent) throws IOException{
+        FoodQualityControlOfficer.viewReceiveInspectionRequest(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent) {
+//        FoodQualityControlOfficer.viewQualityTrendAnalysis(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarPerformInspectionOnAction(ActionEvent actionEvent) {
+    public void sideBarPerformInspectionOnAction(ActionEvent actionEvent)throws IOException {
+        FoodQualityControlOfficer.viewPerformInspection(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -61,10 +79,21 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void sideBarApproveBatchOnAction(ActionEvent actionEvent) {
+    public void sideBarApproveBatchOnAction(ActionEvent actionEvent) throws  IOException{
+        FoodQualityControlOfficer.viewApproveBatch(actionEvent);
+
+
     }
 
     @javafx.fxml.FXML
-    public void sideBarTrendAnalysisOnAction(ActionEvent actionEvent) {
+    public void sideBarTrendAnalysisOnAction(ActionEvent actionEvent) throws IOException {
+        FoodQualityControlOfficer.viewQualityTrendAnalysis(actionEvent);
+
+
+    }
+
+    @javafx.fxml.FXML
+    public void logoutButtonOnAction(ActionEvent actionEvent) throws  IOException{
+        User.logout(actionEvent);
     }
 }

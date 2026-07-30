@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="758.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.finance_and_billing_manager.FinanceReportsViewController">
+
+
+    <children>
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+
+        <VBox layoutY="49" prefHeight="706" prefWidth="175" spacing="5">
+
+
+            <children>
+
+
+                <Button onAction="#sidebardashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Dashboard" />
+
+
+                <Button onAction="#sideBarCalculateCostButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Calculate Cost" />
+
+
+                <Button onAction="#sideBarGenerateInvoiceButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Generate Invoice" />
+
+
+                <Button onAction="#sideBarRecordPaymentButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Record Payment" />
+
+
+                <Button onAction="#sideBarProcessRefundButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Process Refund" />
+
+
+                <Button onAction="#sideBarOutstandingPaymentsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Outstanding Payments" />
+
+
+
+                <Button onAction="#sideBarFinancialReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-color:#6C5CE7;                -fx-background-radius:50;" text="Financial Reports" textFill="WHITE" />
+
+
+
+                <Button onAction="#sideBarRevenueSummaryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Revenue Summary" />
+
+
+                <Button onAction="#sideBarPaymentHistoryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Payment History" />
+
+
+            </children>
+
+
+        </VBox>
+
+
+
+
+
+
+
+        <!-- HEADER -->
+
+
+        <Button layoutY="3" onAction="#sidebarHomePageButtonOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
+
+
+            <font>
+                <Font name="Arial Bold" size="13" />
+            </font>
+
+
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+
+
+        </Button>
+
+
+
+
+
+
+
+        <!-- MAIN -->
+
+
+        <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:#B5B5B5;">
+
+
+            <children>
+
+
+                <Label alignment="CENTER" prefWidth="726" text="welcome Username">
+
+
+                    <font>
+                        <Font name="Gabriola" size="18" />
+                    </font>
+
+
+                </Label>
+
+
+
+
+
+
+
+                <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
+
+
+                    <children>
+
+
+
+
+
+
+                        <!-- REPORT FILTER CARD -->
+
+
+                        <AnchorPane layoutX="15" layoutY="20" prefHeight="130" prefWidth="680" style="-fx-background-color:#F8FAFC;                    -fx-background-radius:25;">
+
+
+                            <children>
+
+
+                                <Label layoutX="25" layoutY="25" text="Financial Report Generator">
+
+
+                                    <font>
+                                        <Font size="22" />
+                                    </font>
+
+
+                                </Label>
+
+
+
+
+
+                                <Label layoutX="30" layoutY="75" text="Report Type" />
+
+
+                                <ComboBox fx:id="reportTypeComboBox" layoutX="120" layoutY="70" prefWidth="150" />
+
+
+
+
+
+                                <Label layoutX="300" layoutY="75" text="From Date" />
+
+
+                                <DatePicker fx:id="fromDatePicker" layoutX="370" layoutY="70" prefWidth="120" />
+
+
+
+
+
+                                <Label layoutX="500" layoutY="75" text="To" />
+
+
+                                <DatePicker fx:id="toDatePicker" layoutX="530" layoutY="70" prefWidth="120" />
+
+
+
+                            </children>
+
+
+                        </AnchorPane>
+
+
+
+
+
+
+
+
+
+                        <!-- SUMMARY CARDS -->
+
+
+                        <HBox layoutX="15" layoutY="175" spacing="15">
+
+
+                            <children>
+
+
+
+                                <AnchorPane prefHeight="100" prefWidth="150" style="-fx-background-color:#EAF2FF;                    -fx-background-radius:20;">
+
+
+                                    <children>
+
+
+                                        <Label layoutX="20" layoutY="20" text="Revenue" />
+
+
+                                        <Label fx:id="revenueLabel" layoutX="20" layoutY="55" text="0.00">
+
+
+                                            <font>
+                                                <Font size="20" />
+                                            </font>
+
+
+                                        </Label>
+
+
+                                    </children>
+
+
+                                </AnchorPane>
+
+
+
+
+
+
+                                <AnchorPane prefHeight="100" prefWidth="150" style="-fx-background-color:#FDECEC;                    -fx-background-radius:20;">
+
+
+                                    <children>
+
+
+                                        <Label layoutX="20" layoutY="20" text="Cost" />
+
+
+                                        <Label fx:id="costLabel" layoutX="20" layoutY="55" text="0.00">
+
+
+                                            <font>
+                                                <Font size="20" />
+                                            </font>
+
+
+                                        </Label>
+
+
+                                    </children>
+
+
+                                </AnchorPane>
+
+
+
+
+
+
+                                <AnchorPane prefHeight="100" prefWidth="150" style="-fx-background-color:#E8F8EF;                    -fx-background-radius:20;">
+
+
+                                    <children>
+
+
+                                        <Label layoutX="20" layoutY="20" text="Profit" />
+
+
+                                        <Label fx:id="profitLabel" layoutX="20" layoutY="55" text="0.00">
+
+
+                                            <font>
+                                                <Font size="20" />
+                                            </font>
+
+
+                                        </Label>
+
+
+                                    </children>
+
+
+                                </AnchorPane>
+
+
+
+
+
+
+                                <AnchorPane prefHeight="100" prefWidth="150" style="-fx-background-color:#FFF3CD;                    -fx-background-radius:20;">
+
+
+                                    <children>
+
+
+                                        <Label layoutX="20" layoutY="20" text="Outstanding" />
+
+
+                                        <Label fx:id="outstandingLabel" layoutX="20" layoutY="55" text="0.00">
+
+
+                                            <font>
+                                                <Font size="20" />
+                                            </font>
+
+
+                                        </Label>
+
+
+                                    </children>
+
+
+                                </AnchorPane>
+
+
+
+                            </children>
+
+
+                        </HBox>
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- REPORT TABLE -->
+
+
+                        <AnchorPane layoutX="15" layoutY="281.0" prefHeight="354.0" prefWidth="680" style="-fx-background-color:#FFFFFF;                    -fx-background-radius:25;">
+
+
+                            <children>
+
+
+                                <Label layoutX="25" layoutY="25" text="Financial Summary Report">
+
+
+                                    <font>
+                                        <Font size="20" />
+                                    </font>
+
+
+                                </Label>
+
+
+
+
+
+                                <TableView fx:id="financialReportTable" layoutX="13.0" layoutY="65" prefHeight="269.0" prefWidth="666.0">
+
+
+                                    <columns>
+
+
+                                        <TableColumn fx:id="dateColumn" prefWidth="125.5999755859375" text="Date" />
+
+
+                                        <TableColumn fx:id="revenueColumn" prefWidth="114.4000244140625" text="Revenue" />
+
+
+                                        <TableColumn fx:id="costColumn" prefWidth="127.20004272460938" text="Cost" />
+
+
+                                        <TableColumn fx:id="paymentColumn" prefWidth="142.39996337890625" text="Payment Received" />
+
+
+                                        <TableColumn fx:id="profitColumn" prefWidth="120.800048828125" text="Profit/Loss" />
+
+
+                                    </columns>
+
+
+                                </TableView>
+
+
+
+
+                            </children>
+
+
+                        </AnchorPane>
+
+
+
+
+
+
+
+
+
+                        <Button fx:id="generateReportButton" layoutX="150" layoutY="650" onAction="#GenerateReportOnAction" prefHeight="40" prefWidth="180" style="-fx-background-color:#6C5CE7;                -fx-background-radius:10;" text="Generate Report" textFill="WHITE" />
+
+
+
+
+                        <Button fx:id="exportPDFButton" layoutX="370" layoutY="650" onAction="#ExportPDFOnAction" prefHeight="40" prefWidth="150" text="Export PDF" />
+
+
+
+
+                    </children>
+
+
+                </AnchorPane>
+
+
+            </children>
+
+
+        </VBox>
+
+
+    </children>
+
+
+</AnchorPane>

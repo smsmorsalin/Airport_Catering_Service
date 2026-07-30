@@ -4,19 +4,22 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import user.KitchenProductionManager;
+
+import java.io.IOException;
 
 public class CreateProductionScheduleController
 {
     @javafx.fxml.FXML
-    private ComboBox startsHoursTimeComboBox;
+    private ComboBox<String> startsHoursTimeComboBox;
     @javafx.fxml.FXML
-    private ComboBox workShiftComboBox1;
+    private ComboBox<String> workShiftComboBox1;
     @javafx.fxml.FXML
     private Label fxidDisplayMealCategoriesLabel;
     @javafx.fxml.FXML
-    private ComboBox endsMinutiesTimeComboBox;
+    private ComboBox<String> endsMinutiesTimeComboBox;
     @javafx.fxml.FXML
-    private ComboBox startHoursTimeComboBox;
+    private ComboBox<String> startHoursTimeComboBox;
     @javafx.fxml.FXML
     private Label fxidDisplayScheduleIDLabel;
     @javafx.fxml.FXML
@@ -45,7 +48,8 @@ public class CreateProductionScheduleController
     }
 
     @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) {
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent)throws IOException {
+        KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML

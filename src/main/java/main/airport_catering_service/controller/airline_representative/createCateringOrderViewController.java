@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.airline_representative;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.AirlineRepresentative;
+
+import java.io.IOException;
 
 public class createCateringOrderViewController
 {
@@ -39,7 +42,8 @@ public class createCateringOrderViewController
     }
 
     @javafx.fxml.FXML
-    public void homeButtonAirportCateringService(ActionEvent actionEvent) {
+    public void homeButtonAirportCateringService(ActionEvent actionEvent) throws IOException {
+        AirlineRepresentative.renderFxmlDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML

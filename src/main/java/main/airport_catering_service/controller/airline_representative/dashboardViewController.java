@@ -3,6 +3,10 @@ package main.airport_catering_service.controller.airline_representative;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import user.AirlineRepresentative;
+import user.User;
+
+import java.io.IOException;
 
 public class dashboardViewController
 {
@@ -26,42 +30,52 @@ public class dashboardViewController
     }
 
     @javafx.fxml.FXML
-    public void sideBarTrackOrderButton(ActionEvent actionEvent) {
+    public void sideBarTrackOrderButton(ActionEvent actionEvent) throws IOException {
+        AirlineRepresentative.renderFxmlTruckOrder(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarCreateCateringOrderButton(ActionEvent actionEvent) {
+    public void sideBarCreateCateringOrderButton(ActionEvent actionEvent) throws IOException {
+        AirlineRepresentative.renderFxmlCreateCateringOrder(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void homeButtonAirportCateringService(ActionEvent actionEvent) {
+    public void homeButtonAirportCateringService(ActionEvent actionEvent) throws IOException {
+        AirlineRepresentative.renderFxmlDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarPayInvoiceButton(ActionEvent actionEvent) {
+    public void sideBarPayInvoiceButton(ActionEvent actionEvent) throws IOException {
+        AirlineRepresentative.renderFxmlPayBill(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarLogoutButtonOnClick(ActionEvent actionEvent) {
+    public void sideBarLogoutButtonOnClick(ActionEvent actionEvent) throws IOException {
+        User.logout(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarConfirmDeliveryButton(ActionEvent actionEvent) {
+    public void sideBarConfirmDeliveryButton(ActionEvent actionEvent) throws IOException {
+        AirlineRepresentative.renderFxmlConfirmDelivery(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarFlightDelayButton(ActionEvent actionEvent) {
+    public void sideBarFlightDelayButton(ActionEvent actionEvent) throws IOException {
+        AirlineRepresentative.renderFxmlFlightDelay(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarCancelOrderButton(ActionEvent actionEvent) {
+    public void sideBarCancelOrderButton(ActionEvent actionEvent) throws IOException {
+        AirlineRepresentative.renderFxmlCancelOrder(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarOrderHistoryButton(ActionEvent actionEvent) {
+    public void sideBarOrderHistoryButton(ActionEvent actionEvent) throws IOException {
+        AirlineRepresentative.renderFxmlOrderHistory(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarModifyOrderButton(ActionEvent actionEvent) {
+    public void sideBarModifyOrderButton(ActionEvent actionEvent) throws IOException {
+        AirlineRepresentative.renderFxmlModifyOrder(actionEvent);
     }
 }

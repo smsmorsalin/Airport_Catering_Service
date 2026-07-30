@@ -1,7 +1,13 @@
 package user;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import utility.databaseAccessor;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Random;
 
@@ -118,8 +124,14 @@ public abstract class User {
         return user;
     }
 
-    public final void logout(){
-        this.goLogoutPage();
+    public static void logout(javafx.event.ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(User.class.getResource("/main/airport_catering_service/loginView.fxml"));
+        Parent root = loader.load();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public final boolean changePassword(String oldPassword, String newPassword) {
@@ -146,7 +158,6 @@ public abstract class User {
         return tempId;
     }
 
-    public abstract void viewDashboard();
-    public abstract void goLogoutPage();
+    public abstract void viewDashboard(javafx.event.ActionEvent event) throws IOException;
     public abstract boolean updateProfile();
 }

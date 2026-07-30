@@ -4,6 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import user.FoodQualityControlOfficer;
+
+import java.io.IOException;
 
 public class GenerateQAReportController
 {
@@ -20,7 +23,7 @@ public class GenerateQAReportController
     @javafx.fxml.FXML
     private TextField startDatePicker;
     @javafx.fxml.FXML
-    private ComboBox reportTypeComboBox;
+    private ComboBox<String> reportTypeComboBox;
     @javafx.fxml.FXML
     private Label fxidDisplayTotalRejectedBatchesLabel;
     @javafx.fxml.FXML
@@ -63,7 +66,8 @@ public class GenerateQAReportController
     }
 
     @javafx.fxml.FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) {
+    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent)throws IOException {
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML

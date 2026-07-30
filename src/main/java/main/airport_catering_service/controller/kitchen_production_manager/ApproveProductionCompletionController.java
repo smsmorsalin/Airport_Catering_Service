@@ -1,8 +1,10 @@
 package main.airport_catering_service.controller.kitchen_production_manager;
 
 import javafx.event.ActionEvent;
+import user.KitchenProductionManager;
 
 import java.awt.*;
+import java.io.IOException;
 
 public class ApproveProductionCompletionController
 {
@@ -32,7 +34,9 @@ public class ApproveProductionCompletionController
     }
 
     @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) {
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.reverseDashboard(actionEvent);
+
     }
 
     @javafx.fxml.FXML
@@ -64,7 +68,9 @@ public class ApproveProductionCompletionController
     }
 
     @javafx.fxml.FXML
-    public void ApproveCompletionOnAction(ActionEvent actionEvent) {
+    public void ApproveCompletionOnAction(ActionEvent actionEvent ) {
+
+
     }
 
     @javafx.fxml.FXML
