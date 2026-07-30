@@ -1,5 +1,7 @@
 package user;
 
+import utility.SceneSwitchingHelper;
+
 import java.io.IOException;
 import java.time.LocalDate;
 
@@ -15,6 +17,10 @@ public class InventoryManager extends Employee{
     @Override
     public boolean updateProfile(){return false;}
 
+
+    public static void renderCheckIngredientAvailability(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/CheckIngredientAvailabilityView.fxml");
+    }
 
 
 }

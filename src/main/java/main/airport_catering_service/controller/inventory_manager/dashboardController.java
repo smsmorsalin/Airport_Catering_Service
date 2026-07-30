@@ -2,6 +2,10 @@ package main.airport_catering_service.controller.inventory_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.InventoryManager;
+import user.User;
+
+import java.io.IOException;
 
 public class dashboardController
 {
@@ -41,7 +45,8 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void logoutButtonOnAction(ActionEvent actionEvent) {
+    public void logoutButtonOnAction(ActionEvent actionEvent) throws IOException{
+        User.logout(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -61,7 +66,8 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void checkIngredientAvailabilityButtonOnAction(ActionEvent actionEvent) {
+    public void checkIngredientAvailabilityButtonOnAction(ActionEvent actionEvent) throws IOException {
+        InventoryManager.renderCheckIngredientAvailability(actionEvent);
     }
 
     @javafx.fxml.FXML

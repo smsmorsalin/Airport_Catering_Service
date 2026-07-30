@@ -57,7 +57,7 @@ public class ReceiveApprovedCateringOrdersController
 //        Node node = fxmlL.load();
 //        mainPane.getChildren().setAll(node);
 
-        FXMLLoader registerFXML = new FXMLLoader(getClass().getResource("/main/airport_catering_service/dashboardView.fxml"));
+        FXMLLoader registerFXML = new FXMLLoader(getClass().getResource("/main/airport_catering_service/DashboardView.fxml"));
         Node node = registerFXML.load();
         anchorPan.getChildren().setAll(node);
 
