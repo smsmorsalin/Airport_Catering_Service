@@ -1,9 +1,11 @@
 package main.airport_catering_service.controller.kitchen_production_manager;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import user.KitchenProductionManager;
 
-import java.awt.*;
+import javafx.scene.control.TextArea;
 import java.io.IOException;
 
 public class ApproveProductionCompletionController
@@ -25,38 +27,21 @@ public class ApproveProductionCompletionController
     public void initialize() {
     }
 
-    @Deprecated
-    public void sideBarmanageMealPreparationOnAction(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
+    @Deprecated
+    public void sideBarApproveProductionOnA(ActionEvent actionEvent) {
+    }
+
     @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
+    public void sidebarAirportCateringServiceButtonOnA(ActionEvent actionEvent)throws IOException {
         KitchenProductionManager.reverseDashboard(actionEvent);
-
     }
 
     @javafx.fxml.FXML
-    public void sideBarRequestQualityInspectionOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarUpdateProductionStatusOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarMonitorCookingProgressOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarViewProductionTasksOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarassignKitchenStaffOnAction(ActionEvent actionEvent) {
+    public void sideBarProductionScheduleOnA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -64,16 +49,26 @@ public class ApproveProductionCompletionController
     }
 
     @javafx.fxml.FXML
-    public void sideBarKitchenPerformanceReportOnAction(ActionEvent actionEvent) {
+    public void sideBarReceiveOrdersOnA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void ApproveCompletionOnAction(ActionEvent actionEvent ) {
-
-
+    public void ApproveCompletionOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void sideBarManageMealPreparationOnAction(ActionEvent actionEvent) {
+    public void sideBarProductionReportsOnA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarCalculateIngredientOnA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarMenuListOnA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarProductionPlanOnA(ActionEvent actionEvent) {
     }
 }

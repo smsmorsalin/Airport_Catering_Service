@@ -1,81 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
-    <children>
-        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
-            <children>
-                <Button fx:id="searchButton" mnemonicParsing="false" onAction="#onSearch" prefHeight="42.0" prefWidth="174.0" text="Search" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="refreshButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onRefresh" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="clearButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClear" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="logoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
-            </children>
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="1280"
+            prefHeight="820"
+            fx:controller="main.airport_catering_service.controller.truck_operator.ViewAssignedDeliveriesController">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8"
+              style="-fx-background-color: linear-gradient(to right,#154360,#2471A3);">
+
+            <padding>
+                <Insets top="18" right="25" bottom="18" left="25"/>
+            </padding>
+
+            <Label text="🚚 View Assigned Deliveries">
+
+                <font>
+                    <Font size="30"/>
+                </font>
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+
+            </Label>
+
+            <Label text="View and monitor all assigned delivery schedules">
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-size:15;
+                </style>
+
+            </Label>
+
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
-            <font>
-                <Font name="Arial Bold" size="13.0" />
-            </font>
-            <effect>
-                <Lighting>
-                    <bumpInput>
-                        <Shadow />
-                    </bumpInput>
-                    <light>
-                        <Light.Distant>
-                            <color>
-                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
-                            </color>
-                        </Light.Distant>
-                    </light>
-                </Lighting>
-            </effect>
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-        </Button>
-        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
-            <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
-                    <font>
-                        <Font name="Gabriola" size="18.0" />
-                    </font>
-                </Label>
-                <AnchorPane prefHeight="566.0" prefWidth="596.0">
-               <children>
-                  <TextField fx:id="assignmentIdTextField" layoutX="128.0" layoutY="14.0" />
-                  <DatePicker fx:id="deliveryDatePicker" layoutX="402.0" layoutY="15.0" />
-                  <Text layoutX="35.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment ID" />
-                  <Text layoutX="322.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Date" />
-                  <TableView fx:id="assignedDeliveryTableView" layoutX="-5.0" layoutY="121.0" prefHeight="439.0" prefWidth="608.0">
-                    <columns>
-                      <TableColumn fx:id="assignmentIdColumn" prefWidth="105.0" text="Assignment ID" />
-                      <TableColumn fx:id="orderIdColumn" prefWidth="93.0" text="Order ID" />
-                        <TableColumn fx:id="flightNumberColumn" prefWidth="95.0" text="Flight Number" />
-                        <TableColumn fx:id="airlineColumn" prefWidth="60.0" text="Airline" />
-                        <TableColumn fx:id="deliveryLocationColumn" prefWidth="106.0" text="Delivery Location" />
-                        <TableColumn fx:id="deliveryTimeColumn" prefWidth="89.0" text="Delivery Time" />
-                        <TableColumn fx:id="statusColumn" prefWidth="59.0" text="Status" />
-                    </columns>
-                  </TableView>
-               </children></AnchorPane>
-            </children></VBox>
-        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
-    </children>
-</AnchorPane>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="18">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Search Panel -->
+
+            <TitledPane text="Search Assigned Deliveries"
+                        collapsible="false"
+                        expanded="true">
+
+                <content>
+
+                    <GridPane hgap="20"
+                              vgap="18">
+
+                        <padding>
+                            <Insets top="20"
+                                    right="20"
+                                    bottom="20"
+                                    left="20"/>
+                        </padding>
+
+                        <Label text="Delivery Date"/>
+
+                        <DatePicker fx:id="deliveryDatePicker"
+                                    GridPane.columnIndex="1"/>
+
+                        <Label text="Assignment ID"
+                               GridPane.columnIndex="2"/>
+
+                        <TextField fx:id="assignmentIdField"
+                                   promptText="Optional"
+                                   prefWidth="220"
+                                   GridPane.columnIndex="3"/>
+
+                        <Button text="Search"
+                                fx:id="searchButton"
+                                prefWidth="120"
+                                onAction="#searchDeliveries"
+                                style="-fx-background-color:#27AE60;
+                                       -fx-text-fill:white;
+                                       -fx-font-weight:bold;"
+                                GridPane.columnIndex="4"/>
+
+                        <Button text="Clear"
+                                fx:id="clearButton"
+                                prefWidth="120"
+                                onAction="#clearSearch"
+                                style="-fx-background-color:#F39C12;
+                                       -fx-text-fill:white;
+                                       -fx-font-weight:bold;"
+                                GridPane.columnIndex="5"/>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- Assigned Delivery Table -->
+
+            <TitledPane text="Assigned Deliveries"
+                        collapsible="false"
+                        expanded="true"
+                        VBox.vgrow="ALWAYS">
+
+                <content>
+
+                    <TableView fx:id="deliveryTable">
+
+                        <columns>
+
+                            <TableColumn fx:id="assignmentIdColumn"
+                                         text="Assignment ID"
+                                         prefWidth="130"/>
+
+                            <TableColumn fx:id="orderIdColumn"
+                                         text="Order ID"
+                                         prefWidth="120"/>
+
+                            <TableColumn fx:id="flightNumberColumn"
+                                         text="Flight Number"
+                                         prefWidth="140"/>
+
+                            <TableColumn fx:id="airlineColumn"
+                                         text="Airline"
+                                         prefWidth="180"/>
+
+                            <TableColumn fx:id="locationColumn"
+                                         text="Delivery Location"
+                                         prefWidth="220"/>
+
+                            <TableColumn fx:id="deliveryTimeColumn"
+                                         text="Delivery Time"
+                                         prefWidth="170"/>
+
+                            <TableColumn fx:id="statusColumn"
+                                         text="Dispatch Status"
+                                         prefWidth="170"/>
+
+                        </columns>
+
+                    </TableView>
+
+                </content>
+
+            </TitledPane>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox spacing="15"
+              alignment="CENTER_RIGHT"
+              style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets top="15"
+                        right="20"
+                        bottom="15"
+                        left="20"/>
+            </padding>
+
+            <Button text="Refresh"
+                    fx:id="refreshButton"
+                    prefWidth="120"
+                    onAction="#refreshTable"
+                    style="-fx-background-color:#3498DB;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+            <Button text="Back"
+                    fx:id="backButton"
+                    prefWidth="120"
+                    onAction="#goBack"
+                    style="-fx-background-color:#E74C3C;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

@@ -67,12 +67,12 @@ public class dashboardController
 
     @javafx.fxml.FXML
     public void sideBarCalculateIngredientOnAction(ActionEvent actionEvent) throws IOException{
-
         KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent) {
+    public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent)throws  IOException {
+        KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -81,12 +81,11 @@ public class dashboardController
 
     @javafx.fxml.FXML
     public void sideBarProductionReportsOnAction(ActionEvent actionEvent)throws  IOException {
-        KitchenProductionManager.viewGenerateProductionReports (actionEvent);
+        KitchenProductionManager.viewGenerateProductionReports(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void sideBarProductionPlanOnAction(ActionEvent actionEvent) throws  IOException{
-
         KitchenProductionManager.viewCreateProductionPlan(actionEvent);
     }
 

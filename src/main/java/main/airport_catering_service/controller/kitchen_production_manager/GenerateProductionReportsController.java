@@ -33,48 +33,48 @@ public class GenerateProductionReportsController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void sideBarmanageMealPreparationOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @FXML
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void sideBarHandleRejectedBatchOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
+    @FXML
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException{
         KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
-    @javafx.fxml.FXML
-    public void sideBarRequestQualityInspectionOnAction(ActionEvent actionEvent) {
+    @FXML
+    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void sideBarUpdateProductionStatusOnAction(ActionEvent actionEvent) {
+    @FXML
+    public void sideBarApproveProductionOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void sideBarMonitorCookingProgressOnAction(ActionEvent actionEvent) {
+    @FXML
+    public void sideBarProductionPlanOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void sideBarViewProductionTasksOnAction(ActionEvent actionEvent) {
+    @FXML
+    public void sideBarMonitorProductionOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void sideBarassignKitchenStaffOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @FXML
     public void confirmOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @FXML
+    public void sideBarProductionScheduleOA(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void sideBarCalculateIngredientIOA(ActionEvent actionEvent) {
+    }
+
+    @FXML
     public void eportPDFOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void sideBarMenuListOA(ActionEvent actionEvent) {
     }
 }

@@ -14,14 +14,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.inventory_manager.receiveIngredientController">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
                 <Button mnemonicParsing="false" onAction="#checkIngredientAvailabilityButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Check Ingredient Availability" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#reserveIngredientButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Reserve Ingredient" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#reserveIngredientButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Reserve Ingredient" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#createPurchaseRequestButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Create Purchase Request" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#receiveIngredientButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Receive Ingredient" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#receiveIngredientButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Receive Ingredient" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateInventoryButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Update Inventory" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#manageSupplierButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Manage Supplier" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="222.0" mnemonicParsing="false" onAction="#lowStockAlertButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Low Stock Alert" textOverrun="CENTER_ELLIPSIS" />
@@ -52,16 +52,21 @@
         </Button>
         <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
          <children>
-            <AnchorPane prefHeight="590.0" prefWidth="596.0">
+            <AnchorPane prefHeight="587.0" prefWidth="596.0">
                <children>
-                  <Text fx:id="orderIdText" layoutX="24.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID" />
-                  <TextField fx:id="orderIdTextfield" layoutX="96.0" layoutY="19.0" />
-                  <Button layoutX="24.0" layoutY="70.0" mnemonicParsing="false" onAction="#searchButtonOnAction" text="Search" />
-                  <Label fx:id="reservationIdLabel" layoutX="33.0" layoutY="325.0" prefHeight="18.0" prefWidth="78.0" text="Reservation ID" />
-                  <Label fx:id="orderIdLabel" layoutX="33.0" layoutY="365.0" prefHeight="17.0" prefWidth="46.0" text="Order ID" />
-                  <Label fx:id="ingredientNameLabel" layoutX="33.0" layoutY="404.0" text="Ingredient Name" />
-                  <Label fx:id="reservedQuantityLabel" layoutX="33.0" layoutY="445.0" text="Reserved Quantity" />
-                  <Label fx:id="reservationDateLabel" layoutX="33.0" layoutY="482.0" text="Reservation Date" />
+                  <Text fx:id="purchaseRequestIdText" layoutX="26.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Purchase Request ID" />
+                  <Text fx:id="deliveryNoteNumberText" layoutX="26.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Note Number" />
+                  <Text fx:id="receivedQuantityText" layoutX="26.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Received Quantity" />
+                  <Text fx:id="supplierNameText" layoutX="26.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Name" />
+                  <TextField fx:id="purchaseRequestIdTextfield" layoutX="174.0" layoutY="34.0" />
+                  <TextField fx:id="deliveryNoteNumberTextfield" layoutX="175.0" layoutY="75.0" />
+                  <TextField fx:id="receivedQuantityTextfield" layoutX="176.0" layoutY="120.0" />
+                  <TextField fx:id="supplierNameTextfield" layoutX="177.0" layoutY="162.0" />
+                  <Label fx:id="receivingIdLabel" layoutX="37.0" layoutY="362.0" text="Receiving ID" />
+                  <Label fx:id="supplierNameLabel" layoutX="37.0" layoutY="392.0" text="Supplier Name" />
+                  <Label fx:id="ingredientNameLabel" layoutX="37.0" layoutY="428.0" text="Ingredient Name" />
+                  <Label fx:id="quantityReceivedLabel" layoutX="37.0" layoutY="463.0" text="Quantity Received" />
+                  <Label fx:id="receivingDateLabel" layoutX="37.0" layoutY="496.0" text="Receiving Date" />
                </children>
             </AnchorPane>
          </children></VBox>
