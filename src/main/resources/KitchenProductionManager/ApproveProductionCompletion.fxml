@@ -24,7 +24,7 @@
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionScheduleOnA" prefHeight="42.0" prefWidth="174.0" text="Production Schedule" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMenuListOnA" prefHeight="42.0" prefWidth="174.0" text="Menu List" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionReportsOnA" prefHeight="42.0" prefWidth="174.0" text="Monitor Production" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" mnemonicParsing="false" onAction="#sideBarApproveProductionOnA" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: blue;" text="Approve Production" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: blue;" text="Approve Production" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
                 <Button mnemonicParsing="false" onAction="#sideBarProductionReportsOnA" prefHeight="42.0" prefWidth="174.0" text="Production Reports" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>

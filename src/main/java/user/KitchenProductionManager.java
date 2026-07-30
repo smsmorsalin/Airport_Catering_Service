@@ -82,17 +82,9 @@ public class KitchenProductionManager extends  Employee{
         stage.setScene(scene);
         stage.show();
 
-    }public static void  viewReceiveApprovedCateringOrders (javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(
-                KitchenProductionManager.class.getResource("/KitchenProductionManager/ReceiveApprovedCateringOrders.fxml"));
+    }public static void  viewReceiveApprovedCateringOrders(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/KitchenProductionManager/ReceiveApprovedCateringOrders.fxml");
 
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
     }public static void  viewCreateMenuList (javafx.event.ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(
                 KitchenProductionManager.class.getResource("/KitchenProductionManager/CreateMenuList.fxml"));
@@ -117,17 +109,8 @@ public class KitchenProductionManager extends  Employee{
         stage.show();
     }
     public static void  viewApproveProductionCompletion(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader
-                (KitchenProductionManager.class.getResource("/KitchenProductionManager/ApproveProductionCompletion.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
+        SceneSwitchingHelper.fullSceneReplacement(event, "/KitchenProductionManager/ApproveProductionCompletion.fxml");
     }
-
-
 
     public static void reverseDashboard(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader
@@ -138,7 +121,5 @@ public class KitchenProductionManager extends  Employee{
         stage.setScene(scene);
         stage.show();
     }
-
-
 }
 

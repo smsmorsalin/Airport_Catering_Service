@@ -77,49 +77,4 @@ public class GenerateProductionReportsController
     @FXML
     public void sideBarMenuListOA(ActionEvent actionEvent) {
     }
-
-//    @javafx.fxml.FXML
-//    public void sideBarmanageMealPreparationOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void clearOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarHandleRejectedBatchOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
-//
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarRequestQualityInspectionOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarUpdateProductionStatusOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarMonitorCookingProgressOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarViewProductionTasksOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void sideBarassignKitchenStaffOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void confirmOnAction(ActionEvent actionEvent) {
-//    }
-//
-//    @javafx.fxml.FXML
-//    public void eportPDFOnAction(ActionEvent actionEvent) {
-//    }
 }

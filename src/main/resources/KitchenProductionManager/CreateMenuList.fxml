@@ -22,7 +22,7 @@
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarCalculateIngredientOA" prefHeight="42.0" prefWidth="174.0" text="Calculate Ingredient" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionPlanOA" prefHeight="42.0" prefWidth="174.0" text="Production Plan" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionScheduleOA" prefHeight="42.0" prefWidth="174.0" text="Production Schedule" textOverrun="CENTER_ELLIPSIS" />
-                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBArMenuListOA" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: blue;" text="Menu List" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: blue;" text="Menu List" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMonitorProductionOA" prefHeight="42.0" prefWidth="174.0" text="Monitor Production" textOverrun="CENTER_ELLIPSIS" />
                 <Button mnemonicParsing="false" onAction="#sideBarApproveProductionOA" prefHeight="42.0" prefWidth="174.0" text="Approve Production" textOverrun="CENTER_ELLIPSIS" />
                 <Button mnemonicParsing="false" onAction="#sideBarProductionReportsOA" prefHeight="42.0" prefWidth="174.0" text="Production Reports" textOverrun="CENTER_ELLIPSIS" />
