@@ -1,9 +1,11 @@
 package main.airport_catering_service.controller.kitchen_production_manager;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import user.KitchenProductionManager;
 
-import java.awt.*;
+import javafx.scene.control.TextArea;
 import java.io.IOException;
 
 public class ApproveProductionCompletionController
