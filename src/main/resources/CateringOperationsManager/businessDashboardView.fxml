@@ -16,7 +16,7 @@
 
 <AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.catering_operations_manager.businessDashboardViewController">
     <children>
-        <VBox layoutY="49.0" onDragDetected="#sideBarLogoutButtonOnAction" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
+        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
             <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: pink;" text="Business Dashboard" textOverrun="CENTER_ELLIPSIS">
                <VBox.margin>

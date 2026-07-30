@@ -4,10 +4,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Flight {
-//    - flightNumber: String
-//- flightDate: LocalDate
-//- departureTime: LocalTime
-//- destination: String
 
     private final String flightId;
     private String flightName;
