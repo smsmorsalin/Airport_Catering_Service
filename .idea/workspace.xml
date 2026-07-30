@@ -4,6 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/javafx/ActionEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utility/SceneSwitchingHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/SceneSwitchingHelper.java" afterDir="false" />
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/ApproveProductionCompletionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/ApproveProductionCompletionController.java" afterDir="false" />
@@ -49,61 +54,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="4.7453035304955764E-299" />
-      <entry key="MS500" value="2.1639777916662736E-60" />
-      <entry key="S2" value="1.2128783972920283E-15" />
-      <entry key="S5" value="1.0921042100572737E-6" />
-      <entry key="S10" value="0.0012020773644891162" />
-      <entry key="S30" value="0.2482121400171447" />
-      <entry key="S60" value="1.3307133663044002" />
-      <entry key="M2" value="4.111592358754396" />
-      <entry key="M5" value="13.195480102784018" />
-      <entry key="M10" value="25.242116232678423" />
-      <entry key="M15" value="33.637562505514104" />
-      <entry key="M30" value="47.82801242005272" />
-      <entry key="H1" value="59.01973777674648" />
-      <entry key="H2" value="66.26717159639244" />
-      <entry key="H4" value="70.42557851071402" />
-      <entry key="D1" value="74.20656483683622" />
-      <entry key="W1" value="74.8858623947846" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0000000000716132" />
+      <entry key="M2" value="1.000030162291638" />
+      <entry key="M5" value="1.1165753988389067" />
+      <entry key="M10" value="3.372556803821768" />
+      <entry key="M15" value="7.9537395834634115" />
+      <entry key="M30" value="22.745995090824007" />
+      <entry key="H1" value="40.79658000565207" />
+      <entry key="H2" value="55.41550607886573" />
+      <entry key="H4" value="64.81790486074053" />
+      <entry key="D1" value="73.99800886873112" />
+      <entry key="W1" value="75.7104025532506" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000000000001273" />
-      <entry key="S2" value="1.001359543020969" />
-      <entry key="S5" value="1.1035269442014648" />
-      <entry key="S10" value="1.4533195389514293" />
-      <entry key="S30" value="2.7473346693188208" />
-      <entry key="S60" value="5.691175752889765" />
-      <entry key="M2" value="11.771401301052599" />
-      <entry key="M5" value="23.382540500848787" />
-      <entry key="M10" value="32.862743996759676" />
-      <entry key="M15" value="37.69241850950802" />
-      <entry key="M30" value="43.89212287018343" />
-      <entry key="H1" value="47.66556475985996" />
-      <entry key="H2" value="49.756513635606005" />
-      <entry key="H4" value="50.85835682711703" />
-      <entry key="D1" value="51.80688831723589" />
-      <entry key="W1" value="51.97234213231013" />
+      <entry key="MS100" value="1.5288195425776683E-22" />
+      <entry key="MS500" value="4.465735063781797E-5" />
+      <entry key="S2" value="0.11502670695570225" />
+      <entry key="S5" value="0.6244164740622108" />
+      <entry key="S10" value="1.1132988115461258" />
+      <entry key="S30" value="1.6438296319629049" />
+      <entry key="S60" value="1.8129984762182152" />
+      <entry key="M2" value="1.9042410358186947" />
+      <entry key="M5" value="2.167656625615813" />
+      <entry key="M10" value="5.069278957059343" />
+      <entry key="M15" value="9.778922405532956" />
+      <entry key="M30" value="21.949921056406794" />
+      <entry key="H1" value="34.13727074690307" />
+      <entry key="H2" value="42.856087784634646" />
+      <entry key="H4" value="48.08575726083473" />
+      <entry key="D1" value="52.96300540590897" />
+      <entry key="W1" value="53.850549863977115" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0015008546692265741" />
-      <entry key="MS500" value="0.2724380280533763" />
-      <entry key="S2" value="0.7230198139493793" />
-      <entry key="S5" value="0.948993323902551" />
-      <entry key="S10" value="1.3115497458597196" />
-      <entry key="S30" value="2.8329514696508142" />
-      <entry key="S60" value="6.79016626931689" />
-      <entry key="M2" value="15.617485210606711" />
-      <entry key="M5" value="36.85786953514853" />
-      <entry key="M10" value="62.19681040884284" />
-      <entry key="M15" value="80.3704398294281" />
-      <entry key="M30" value="114.15188540230267" />
-      <entry key="H1" value="161.1809349936458" />
-      <entry key="H2" value="241.1226569268323" />
-      <entry key="H4" value="333.9556491722034" />
-      <entry key="D1" value="473.44303641852775" />
-      <entry key="W1" value="506.21988520805974" />
+      <entry key="MS100" value="7.127996676611603E-7" />
+      <entry key="MS500" value="0.058972649633145725" />
+      <entry key="S2" value="0.556067648006441" />
+      <entry key="S5" value="1.2235498327976453" />
+      <entry key="S10" value="1.825515615888586" />
+      <entry key="S30" value="2.5140230160263535" />
+      <entry key="S60" value="2.742463046927882" />
+      <entry key="M2" value="2.8674625015350808" />
+      <entry key="M5" value="3.2715941957929933" />
+      <entry key="M10" value="8.818825094967059" />
+      <entry key="M15" value="19.596459100068238" />
+      <entry key="M30" value="54.89242004813842" />
+      <entry key="H1" value="111.67857994852265" />
+      <entry key="H2" value="200.9963860293435" />
+      <entry key="H4" value="305.62115106768596" />
+      <entry key="D1" value="468.7321755528471" />
+      <entry key="W1" value="508.0337695743213" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -120,27 +125,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;saif&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "morsalin",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="javafx" />
@@ -293,6 +298,13 @@
       <option name="project" value="LOCAL" />
       <updated>1785389663746</updated>
     </task>
+    <task id="LOCAL-00017" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785414239538</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1785414239538</updated>
     <task id="LOCAL-00017" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
       <created>1785414301302</created>

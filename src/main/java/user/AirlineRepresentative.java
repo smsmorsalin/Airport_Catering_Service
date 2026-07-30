@@ -36,12 +36,7 @@ public class AirlineRepresentative extends Employee {
 
     // Bellow are the code for fxml sideBar rendering button on action
     public static void renderFxmlDashboard(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(AirlineRepresentative.class.getResource("/AirlineRepresentative/dashboardView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/dashboardView.fxml");
     }
 
     public static void renderFxmlCreateCateringOrder(javafx.event.ActionEvent event) throws IOException {
