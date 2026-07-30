@@ -55,16 +55,7 @@ public class KitchenProductionManager extends  Employee{
     }
 
     public static void  viewGenerateProductionReports (javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(
-                KitchenProductionManager.class.getResource("/KitchenProductionManager/GenerateProductionReports.fxml"));
-
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/KitchenProductionManager/GenerateProductionReports.fxml");
     }
 
     public static void  viewCreateProductionPlan(javafx.event.ActionEvent event) throws IOException{

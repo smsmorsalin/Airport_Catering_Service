@@ -81,7 +81,7 @@ public class dashboardController
 
     @javafx.fxml.FXML
     public void sideBarProductionReportsOnAction(ActionEvent actionEvent)throws  IOException {
-        KitchenProductionManager.viewGenerateProductionReports (actionEvent);
+        KitchenProductionManager.viewGenerateProductionReports(actionEvent);
     }
 
     @javafx.fxml.FXML
