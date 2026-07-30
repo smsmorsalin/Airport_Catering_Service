@@ -1,75 +1,236 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
-    <children>
-        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
-            <children>
-                <Button fx:id="updateTransitButton" mnemonicParsing="false" onAction="#onUpdateTransit" prefHeight="42.0" prefWidth="174.0" text="Update Transit" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="saveButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onSave" prefHeight="42.0" prefWidth="174.0" text="Save" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="refreshButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onRefresh" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="clearButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClear" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="logoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Logout" textOverrun="CENTER_ELLIPSIS" />
-            </children>
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="1280"
+            prefHeight="820"
+            fx:controller="main.airport_catering_service.controller.truck_operator.UpdateTransitStatusController">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8"
+              style="-fx-background-color: linear-gradient(to right,#6C3483,#8E44AD);">
+
+            <padding>
+                <Insets top="18" right="25" bottom="18" left="25"/>
+            </padding>
+
+            <Label text="🛰 Update Transit Status">
+
+                <font>
+                    <Font size="30"/>
+                </font>
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+
+            </Label>
+
+            <Label text="Track the vehicle while transporting airline meals.">
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-size:15;
+                </style>
+
+            </Label>
+
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
-            <font>
-                <Font name="Arial Bold" size="13.0" />
-            </font>
-            <effect>
-                <Lighting>
-                    <bumpInput>
-                        <Shadow />
-                    </bumpInput>
-                    <light>
-                        <Light.Distant>
-                            <color>
-                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
-                            </color>
-                        </Light.Distant>
-                    </light>
-                </Lighting>
-            </effect>
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-        </Button>
-        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
-            <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
-                    <font>
-                        <Font name="Gabriola" size="18.0" />
-                    </font>
-                </Label>
-                <AnchorPane prefHeight="566.0" prefWidth="596.0">
-               <children>
-                  <TextField fx:id="assignmentIdTextField" layoutX="112.0" layoutY="14.0" />
-                  <TextField fx:id="currentLocationTextField" layoutX="422.0" layoutY="14.0" />
-                  <ComboBox fx:id="deliveryStatusComboBox" layoutX="117.0" layoutY="68.0" prefWidth="150.0" />
-                  <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment ID" />
-                  <Text layoutX="312.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Location" />
-                  <Text layoutX="13.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Status" />
-                  <Label fx:id="label" layoutX="407.0" layoutY="73.0" text="Label" />
-                  <Label fx:id="label" layoutX="407.0" layoutY="108.0" text="Label" />
-                  <ProgressBar fx:id="completionBar" layoutX="372.0" layoutY="147.0" prefWidth="200.0" progress="0.0" />
-               </children></AnchorPane>
-            </children></VBox>
-        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
-    </children>
-</AnchorPane>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="20">
+
+            <padding>
+                <Insets top="20"
+                        right="20"
+                        bottom="20"
+                        left="20"/>
+            </padding>
+
+            <!-- Assignment Details -->
+
+            <TitledPane text="Delivery Assignment"
+                        collapsible="false"
+                        expanded="true">
+
+                <content>
+
+                    <GridPane hgap="20"
+                              vgap="18">
+
+                        <padding>
+                            <Insets top="20"
+                                    right="20"
+                                    bottom="20"
+                                    left="20"/>
+                        </padding>
+
+                        <Label text="Assignment ID"/>
+
+                        <TextField fx:id="assignmentIdField"
+                                   promptText="Enter Assignment ID"
+                                   prefWidth="220"
+                                   GridPane.columnIndex="1"/>
+
+                        <Button text="Load Assignment"
+                                fx:id="loadButton"
+                                prefWidth="150"
+                                onAction="#loadAssignment"
+                                style="-fx-background-color:#3498DB;-fx-text-fill:white;-fx-font-weight:bold;"
+                                GridPane.columnIndex="2"/>
+
+                        <Label text="Flight Number"
+                               GridPane.rowIndex="1"/>
+
+                        <TextField fx:id="flightNumberField"
+                                   editable="false"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Airline"
+                               GridPane.rowIndex="2"/>
+
+                        <TextField fx:id="airlineField"
+                                   editable="false"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Destination"
+                               GridPane.rowIndex="3"/>
+
+                        <TextField fx:id="destinationField"
+                                   editable="false"
+                                   GridPane.rowIndex="3"
+                                   GridPane.columnIndex="1"/>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- Transit Status -->
+
+            <TitledPane text="Transit Update"
+                        collapsible="false"
+                        expanded="true">
+
+                <content>
+
+                    <GridPane hgap="20"
+                              vgap="18">
+
+                        <padding>
+                            <Insets top="20"
+                                    right="20"
+                                    bottom="20"
+                                    left="20"/>
+                        </padding>
+
+                        <Label text="Current Status"/>
+
+                        <ComboBox fx:id="transitStatusComboBox"
+                                  promptText="Select Transit Status"
+                                  prefWidth="220"
+                                  GridPane.columnIndex="1"/>
+
+                        <Label text="Current Location"
+                               GridPane.rowIndex="1"/>
+
+                        <TextField fx:id="currentLocationField"
+                                   promptText="Current Location"
+                                   prefWidth="250"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Update Time"
+                               GridPane.rowIndex="2"/>
+
+                        <TextField fx:id="updateTimeField"
+                                   editable="false"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Remarks"
+                               GridPane.rowIndex="3"/>
+
+                        <TextArea fx:id="remarksTextArea"
+                                  prefHeight="100"
+                                  wrapText="true"
+                                  promptText="Traffic, delays, incidents..."
+                                  GridPane.rowIndex="3"
+                                  GridPane.columnIndex="1"
+                                  GridPane.columnSpan="2"/>
+
+                        <HBox spacing="15"
+                              GridPane.rowIndex="4"
+                              GridPane.columnIndex="1">
+
+                            <Button text="Update Transit"
+                                    fx:id="updateTransitButton"
+                                    prefWidth="170"
+                                    prefHeight="40"
+                                    onAction="#updateTransitStatus"
+                                    style="-fx-background-color:#27AE60;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+                            <Button text="Reset"
+                                    fx:id="resetButton"
+                                    prefWidth="120"
+                                    prefHeight="40"
+                                    onAction="#resetForm"
+                                    style="-fx-background-color:#F39C12;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+                        </HBox>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER_RIGHT"
+              spacing="15"
+              style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets top="15"
+                        right="20"
+                        bottom="15"
+                        left="20"/>
+            </padding>
+
+            <Button text="Back"
+                    fx:id="backButton"
+                    prefWidth="120"
+                    onAction="#goBack"
+                    style="-fx-background-color:#566573;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

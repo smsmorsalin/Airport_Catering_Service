@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="main.airport_catering_service.controller.headchef.HeadChefDashboardController"
+            prefWidth="1200"
+            prefHeight="800">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8"
+              style="-fx-background-color: linear-gradient(to right,#2C3E50,#34495E);">
+
+            <padding>
+                <Insets top="20" right="25" bottom="20" left="25"/>
+            </padding>
+
+            <Label text="👨‍🍳 Head Chef Dashboard">
+
+                <font>
+                    <Font size="30"/>
+                </font>
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+
+            </Label>
+
+            <Label text="Airport Catering Service Management Panel">
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-size:15;
+                </style>
+
+            </Label>
+
+        </VBox>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="18"
+              alignment="CENTER">
+
+            <padding>
+                <Insets top="35" right="40" bottom="35" left="40"/>
+            </padding>
+
+            <Button fx:id="viewProductionTasksButton"
+                    text="1. View Production Tasks"
+                    prefWidth="350"
+                    prefHeight="45"
+                    onAction="#viewProductionTasks"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="assignKitchenStaffButton"
+                    text="2. Assign Kitchen Staff"
+                    prefWidth="350"
+                    prefHeight="45"
+                    onAction="#assignKitchenStaff"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="manageMealPreparationButton"
+                    text="3. Manage Meal Preparation"
+                    prefWidth="350"
+                    prefHeight="45"
+                    onAction="#manageMealPreparation"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="monitorCookingProgressButton"
+                    text="4. Monitor Cooking Progress"
+                    prefWidth="350"
+                    prefHeight="45"
+                    onAction="#monitorCookingProgress"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="updateProductionStatusButton"
+                    text="5. Update Production Status"
+                    prefWidth="350"
+                    prefHeight="45"
+                    onAction="#updateProductionStatus"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="requestQualityInspectionButton"
+                    text="6. Request Quality Inspection"
+                    prefWidth="350"
+                    prefHeight="45"
+                    onAction="#requestQualityInspection"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="handleRejectedBatchButton"
+                    text="7. Handle Rejected Batch"
+                    prefWidth="350"
+                    prefHeight="45"
+                    onAction="#handleRejectedBatch"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+            <Button fx:id="kitchenPerformanceReportButton"
+                    text="8. Kitchen Performance Report"
+                    prefWidth="350"
+                    prefHeight="45"
+                    onAction="#kitchenPerformanceReport"
+                    style="-fx-font-size:15; -fx-font-weight:bold;"/>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER_RIGHT"
+              spacing="15"
+              style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <Button fx:id="logoutButton"
+                    text="Logout"
+                    prefWidth="120"
+                    prefHeight="40"
+                    onAction="#logout"
+                    style="-fx-background-color:#E74C3C;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>
