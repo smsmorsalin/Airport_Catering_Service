@@ -12,8 +12,8 @@ import java.time.LocalDate;
 
 public class CateringOperationsManager extends Employee {
 
-    public CateringOperationsManager(int userId, String password, String fullName, String dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, String shift, float salary) {
-        super(userId, password, fullName, dateOfBirth, gender, email, phone, address, status, employeeId, joinDate, department, designation, shift, salary);
+    public CateringOperationsManager(int userId, String password, String fullName, String role, String dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, String shift, float salary) {
+        super(userId, password, fullName, role, dateOfBirth, gender, email, phone, address, status, employeeId, joinDate, department, designation, shift, salary);
     }
 
     @Override

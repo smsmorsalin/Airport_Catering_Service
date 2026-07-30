@@ -12,8 +12,8 @@ public abstract class Employee extends User {
     protected String shift;
     protected float salary;
 
-    public Employee(int userId, String password, String fullName, String dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, String shift, float salary) {
-        super(userId, password, fullName, dateOfBirth, gender, email, phone, address, status);
+    public Employee(int userId, String password, String fullName, String role, String dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, String shift, float salary) {
+        super(userId, password, fullName, role, dateOfBirth, gender, email, phone, address, status);
         this.employeeId = employeeId;
         this.joinDate = joinDate;
         this.department = department;

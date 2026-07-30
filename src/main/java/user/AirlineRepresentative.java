@@ -12,8 +12,8 @@ import java.time.LocalDate;
 
 public class AirlineRepresentative extends User {
 
-    public AirlineRepresentative(int userId, String password, String fullName, String dateOfBirth, String gender, String email, String phone, String address, String status) {
-        super(userId, password, fullName, dateOfBirth, gender, email, phone, address, status);
+    public AirlineRepresentative(int userId, String password, String fullName, String role, String dateOfBirth, String gender, String email, String phone, String address, String status) {
+        super(userId, password, fullName, role, dateOfBirth, gender, email, phone, address, status);
     }
 
     @Override
