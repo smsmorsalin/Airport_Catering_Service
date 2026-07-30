@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/CateringOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/Meal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/Report.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/businessDashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/businessDashboardViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Flight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboardView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/DispatchCoordinator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/DispatchCoordinator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/FinanceAndBillingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/FinanceAndBillingManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/Headchef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Headchef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/InventoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utility/databaseAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/databaseAccessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -33,12 +48,12 @@
     &quot;assignee&quot;: &quot;Saif-kaif&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
-    &quot;accountId&quot;: &quot;5e089f63-5a80-4c03-9d05-e3c4ac5c4c7d&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
+    "accountId": "ef1e225f-e8df-4381-ba31-5fa2f4c0db29"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -50,59 +65,59 @@
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000000733202" />
-      <entry key="S5" value="1.0000887184240996" />
-      <entry key="S10" value="1.0100245241920434" />
-      <entry key="S30" value="1.2965911404887298" />
-      <entry key="S60" value="1.7518871667105738" />
-      <entry key="M2" value="2.218614691717531" />
-      <entry key="M5" value="2.6379591037906924" />
-      <entry key="M10" value="2.8094924055206043" />
-      <entry key="M15" value="2.8713605409707013" />
-      <entry key="M30" value="3.0539359099317562" />
-      <entry key="H1" value="5.410717008734677" />
-      <entry key="H2" value="17.038483186799017" />
-      <entry key="H4" value="39.15704455568155" />
-      <entry key="D1" value="85.07749829060619" />
-      <entry key="W1" value="97.7070069902753" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000000000075" />
+      <entry key="S10" value="1.0000000993661684" />
+      <entry key="S30" value="1.0171173064602408" />
+      <entry key="S60" value="1.5327094311467562" />
+      <entry key="M2" value="4.533780414620593" />
+      <entry key="M5" value="14.782331585835186" />
+      <entry key="M10" value="26.166320983612373" />
+      <entry key="M15" value="33.72393003213696" />
+      <entry key="M30" value="47.38740799803089" />
+      <entry key="H1" value="60.519581114564865" />
+      <entry key="H2" value="76.93091219850089" />
+      <entry key="H4" value="101.93625593594467" />
+      <entry key="D1" value="157.61804521742664" />
+      <entry key="W1" value="173.98435006032142" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="6.835929169711192E-12" />
-      <entry key="MS500" value="0.006118749608218638" />
-      <entry key="S2" value="0.42375773486011437" />
-      <entry key="S5" value="1.2423752852629117" />
-      <entry key="S10" value="1.9062600244594161" />
-      <entry key="S30" value="3.4652310125210652" />
-      <entry key="S60" value="5.406266327547146" />
-      <entry key="M2" value="7.450036538827181" />
-      <entry key="M5" value="9.337258586213611" />
-      <entry key="M10" value="10.121463276209775" />
-      <entry key="M15" value="10.403815052483239" />
-      <entry key="M30" value="10.800360822268324" />
-      <entry key="H1" value="12.854138952212791" />
-      <entry key="H2" value="21.86727160376336" />
-      <entry key="H4" value="38.14211390519579" />
-      <entry key="D1" value="70.64720989015603" />
-      <entry key="W1" value="79.41424346702165" />
+      <entry key="MS100" value="8.580789852337981E-68" />
+      <entry key="MS500" value="3.861050244464448E-14" />
+      <entry key="S2" value="4.436706054195399E-4" />
+      <entry key="S5" value="0.049655926511527115" />
+      <entry key="S10" value="0.3042408746715648" />
+      <entry key="S30" value="1.3953742026533322" />
+      <entry key="S60" value="2.329650326581824" />
+      <entry key="M2" value="3.5311082567616365" />
+      <entry key="M5" value="6.097369207301873" />
+      <entry key="M10" value="9.310650117729296" />
+      <entry key="M15" value="12.361285187138192" />
+      <entry key="M30" value="20.528075184212017" />
+      <entry key="H1" value="31.199157048419444" />
+      <entry key="H2" value="45.43728830153153" />
+      <entry key="H4" value="65.46612923421212" />
+      <entry key="D1" value="107.00297375710375" />
+      <entry key="W1" value="118.83268811953398" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.008490116113493637" />
-      <entry key="MS500" value="0.386831565650148" />
-      <entry key="S2" value="1.0240261809976987" />
-      <entry key="S5" value="1.822580331986414" />
-      <entry key="S10" value="2.5765439559778844" />
-      <entry key="S30" value="4.552809259447162" />
-      <entry key="S60" value="6.999047218142659" />
-      <entry key="M2" value="9.560394529842966" />
-      <entry key="M5" value="11.921237835858609" />
-      <entry key="M10" value="12.901735836749777" />
-      <entry key="M15" value="13.255143993141617" />
-      <entry key="M30" value="13.848188485701403" />
-      <entry key="H1" value="19.108805180812816" />
-      <entry key="H2" value="54.58420030918607" />
-      <entry key="H4" value="152.61658538181382" />
-      <entry key="D1" value="447.96499387058986" />
-      <entry key="W1" value="547.223056704123" />
+      <entry key="MS100" value="5.020087044219075E-4" />
+      <entry key="MS500" value="0.21884783242357542" />
+      <entry key="S2" value="0.6842796049478818" />
+      <entry key="S5" value="0.9019241684929217" />
+      <entry key="S10" value="1.2070998849601684" />
+      <entry key="S30" value="2.344974730588289" />
+      <entry key="S60" value="3.8099604745937885" />
+      <entry key="M2" value="8.01670361467573" />
+      <entry key="M5" value="20.8325603563181" />
+      <entry key="M10" value="35.43704132230373" />
+      <entry key="M15" value="46.05019372901097" />
+      <entry key="M30" value="67.88901215518317" />
+      <entry key="H1" value="92.01089390796872" />
+      <entry key="H2" value="131.84631277892922" />
+      <entry key="H4" value="225.9882797539889" />
+      <entry key="D1" value="544.8813131497598" />
+      <entry key="W1" value="660.7124099066149" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -126,8 +141,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "morsalin",
     "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -137,7 +156,8 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -155,6 +175,14 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
