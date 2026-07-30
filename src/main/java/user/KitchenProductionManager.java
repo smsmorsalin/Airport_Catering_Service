@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utility.SceneSwitchingHelper;
 
 
 import java.io.IOException;
@@ -134,16 +135,7 @@ public class KitchenProductionManager extends  Employee{
         stage.show();
     }
     public static void  viewApproveProductionCompletion(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(
-                KitchenProductionManager.class.getResource("/KitchenProductionManager/ApproveProductionCompletion.fxml"));
 
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
     }
 
     public static void reverseDashboard(javafx.event.ActionEvent event) throws IOException {
