@@ -5,6 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import user.Headchef;
+
+import java.io.IOException;
 
 public class ViewProductionTasksController
 {
@@ -44,15 +47,20 @@ public class ViewProductionTasksController
     }
 
     @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) {
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        Headchef.renderDashboardView(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void refreshTable(ActionEvent actionEvent) {
+    public void refreshTable(ActionEvent actionEvent) throws IOException {
+        Headchef.renderProductionTask(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void clearFields(ActionEvent actionEvent) {
+        productionTaskIdField.clear();
+        orderIdField.clear();
+
     }
 
     @javafx.fxml.FXML

@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.headchef;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.Headchef;
+
+import java.io.IOException;
 
 public class RequestQualityInspectionController
 {
@@ -47,15 +50,21 @@ public class RequestQualityInspectionController
     }
 
     @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) {
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        Headchef.renderDashboardView(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void refreshTable(ActionEvent actionEvent) {
+    public void refreshTable(ActionEvent actionEvent) throws IOException {
+        Headchef.renderDisplayUpdateConfirmation(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void resetForm(ActionEvent actionEvent) {
+        taskIdField.clear();
+        mealCategoryField.clear();
+        remarksTextArea.clear();
+
     }
 
     @javafx.fxml.FXML
