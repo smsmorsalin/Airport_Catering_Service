@@ -5,6 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utility.SceneSwitchingHelper;
 import utility.databaseAccessor;
 
 import java.io.IOException;
@@ -14,8 +15,9 @@ import java.util.Random;
 public abstract class User {
     protected final int userId;
     private String password;
+    protected String role;
     protected String fullName;
-    protected final String dateOfBirth;
+    protected final LocalDate dateOfBirth;
     protected final String gender;
     protected String email;
     protected String phone;
@@ -23,7 +25,7 @@ public abstract class User {
     protected String status;
     protected final LocalDate createDate;
 
-    public User(int userId, String password, String fullName, String dateOfBirth, String gender, String email, String phone, String address, String status) {
+    public User(int userId, String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status) {
         this.userId = userId;
         this.createDate = LocalDate.now();
         this.status = status;
@@ -34,6 +36,7 @@ public abstract class User {
         this.password = password;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
+        this.role = role;
     }
 
     public int getUserId() {
@@ -92,7 +95,7 @@ public abstract class User {
         return createDate;
     }
 
-    public String getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -100,12 +103,23 @@ public abstract class User {
         return gender;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "userId='" + userId + '\'' +
+                "userId=" + userId +
 //                ", password='" + password + '\'' +
+                ", role='" + role + '\'' +
                 ", fullName='" + fullName + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", gender='" + gender + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
@@ -125,13 +139,7 @@ public abstract class User {
     }
 
     public static void logout(javafx.event.ActionEvent event) throws IOException {
-
-        FXMLLoader loader = new FXMLLoader(User.class.getResource("/main/airport_catering_service/loginView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        SceneSwitchingHelper.fullSceneReplacement(event, "/main/airport_catering_service/loginView.fxml");
     }
 
     public final boolean changePassword(String oldPassword, String newPassword) {
@@ -146,15 +154,8 @@ public abstract class User {
         }
     }
 
-    public final int generateNewId(){
-        boolean tempUniqueIdCheck = false;
-        int tempId;
-        Random rand = new Random();
-        do {
-            tempId = rand.nextInt();
-//            tempUniqueIdCheck = databaseAccessor.verifyUnique(tempId, "User.bin", "userId");
-//            for Now as a testing purpose: tempId = unique id without verify
-        }while(!tempUniqueIdCheck);
+    public final static int generateNewId(){
+        int tempId = (int) databaseAccessor.generateNewUniqueId("User.bin", "userId");
         return tempId;
     }
 

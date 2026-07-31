@@ -99,10 +99,27 @@ public class loginController
             stage.setScene(scene);
             stage.show();
         }
+        else if (fxidUsernameTextField.getText().equals("5")) {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/InventoryManager/DashboardView.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else if (fxidUsernameTextField.getText().equals("6")) {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/DispatchCoordinator/DashboardView.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
         else if (fxidUsernameTextField.getText().equals("7")) {
             FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/Headchef/Dashboard.fxml"));
-
+                    getClass().getResource("/TruckOperator/Dashboard.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
@@ -111,13 +128,23 @@ public class loginController
         }
         else if (fxidUsernameTextField.getText().equals("8")) {
             FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/TruckOperator/DashboardView.fxml"));
-
+                    getClass().getResource("/Headchef/Dashboard.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
         }
+
+        else if (fxidUsernameTextField.getText().equals("admin")) {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/main/airport_catering_service/createNewEmployeeView.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+
     }
 }
