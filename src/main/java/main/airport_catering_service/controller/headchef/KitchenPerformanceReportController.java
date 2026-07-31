@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.headchef;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.Headchef;
+
+import java.io.IOException;
 
 public class KitchenPerformanceReportController
 {
@@ -49,18 +52,17 @@ public class KitchenPerformanceReportController
     private TableColumn preparedMealsColumn;
     @javafx.fxml.FXML
     private Label rejectedBatchLabel;
-    @javafx.fxml.FXML
-    private Button resetButton;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) {
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        Headchef.renderDashboardView(actionEvent);
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void resetFilter(ActionEvent actionEvent) {
     }
 
@@ -77,6 +79,7 @@ public class KitchenPerformanceReportController
     }
 
     @javafx.fxml.FXML
-    public void refreshReport(ActionEvent actionEvent) {
+    public void refreshReport(ActionEvent actionEvent) throws IOException {
+        Headchef.renderViewKitchenPerformanceReport(actionEvent);
     }
 }
