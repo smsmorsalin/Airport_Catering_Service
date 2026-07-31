@@ -53,6 +53,10 @@ public class CreateProductionPlanController
 
     @javafx.fxml.FXML
     public void clearOnAction(ActionEvent actionEvent) {
+        if (hourTargetTimrCOmboBox.getValue() == null || miniutesTargetTimrCOmboBox.getValue()==null) {
+            showAlert("TIme ComboBox should be filled");
+
+        }
     }
 
     @javafx.fxml.FXML
