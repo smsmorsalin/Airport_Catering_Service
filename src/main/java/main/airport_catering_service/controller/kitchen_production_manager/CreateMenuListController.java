@@ -10,24 +10,19 @@ import java.io.IOException;
 
 public class CreateMenuListController
 {
+
     @javafx.fxml.FXML
-    private Label fxidDisplayMenuStatusLabel;
+    private TextField mealNameTF;
     @javafx.fxml.FXML
-    private Label fxidDisplayStaffRequirementLabel;
+    private TableView mainTableView;
     @javafx.fxml.FXML
-    private TextField staffRequirementTextField;
+    private TableColumn mealNameTV;
     @javafx.fxml.FXML
-    private ComboBox<String> equipmentComboBox;
+    private TextField mealPriceTF;
     @javafx.fxml.FXML
-    private TextField productionOrderIDTextField;
+    private TableColumn mealIDTV;
     @javafx.fxml.FXML
-    private ComboBox<String> kitchenSectionComboBox;
-    @javafx.fxml.FXML
-    private Label fxidDisplayAssignedEquipmentLabel;
-    @javafx.fxml.FXML
-    private Label fxidDisplayMenuListIDLabel;
-    @javafx.fxml.FXML
-    private Label fxidDisplayKitchenSectionLabel;
+    private TableColumn mealPriceTV;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -70,7 +65,7 @@ public class CreateMenuListController
     public void sideBarCalculateIngredientOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void searchOrderOnAction(ActionEvent actionEvent) {
     }
 
@@ -82,7 +77,7 @@ public class CreateMenuListController
     public void claerOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 }
