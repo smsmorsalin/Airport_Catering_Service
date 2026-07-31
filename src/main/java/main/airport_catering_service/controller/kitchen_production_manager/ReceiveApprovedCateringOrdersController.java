@@ -36,11 +36,11 @@ public class ReceiveApprovedCateringOrdersController
     public void initialize() {
     }
 
-    @FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
-    @FXML
+    @Deprecated
     public void searchOnAction(ActionEvent actionEvent) {
     }
 

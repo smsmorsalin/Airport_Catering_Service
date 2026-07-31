@@ -42,6 +42,14 @@ public class RejectBatchController
 
     @javafx.fxml.FXML
     public void rejectionBatchOnAction(ActionEvent actionEvent) {
+        //check that all field are not empty
+        //load FoodRejection.bin file
+        //FoodRejection newRejection = new FoodRejection(rejectionId, batchNumber, rejectionId, rejectionStatus)
+        //write new reject in foodRejection.bin file
+
+//        fxidDisplayRejectionIDLabel.setText("Rejection ID: "+ newRejection.rejectionId);
+//        fxidDisplayRejectionDateLabel.setText("rejection Date: "+ newRejection.rejectionDate);
+//        fxidDisplayRejectionReasonLabel.setText("rejection Status"+ newRejection.rejectionStatus);
     }
 
     @javafx.fxml.FXML
