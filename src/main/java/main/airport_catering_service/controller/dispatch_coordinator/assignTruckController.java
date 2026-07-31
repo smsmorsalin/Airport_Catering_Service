@@ -29,8 +29,6 @@ public class assignTruckController
     @javafx.fxml.FXML
     private TableColumn capacityTableviewColumn;
     @javafx.fxml.FXML
-    private TableColumn availabilityStatusTableviewColumn;
-    @javafx.fxml.FXML
     private Text truckSelectionText;
     @javafx.fxml.FXML
     private Label driverNameLabel;

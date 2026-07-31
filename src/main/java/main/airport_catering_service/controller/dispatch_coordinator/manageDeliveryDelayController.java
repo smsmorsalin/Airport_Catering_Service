@@ -8,8 +8,6 @@ import javafx.scene.text.Text;
 public class manageDeliveryDelayController
 {
     @javafx.fxml.FXML
-    private Label delayStatusLabel;
-    @javafx.fxml.FXML
     private Label revisedDeliveryTimeLabel;
     @javafx.fxml.FXML
     private TextField deliveryIdTextfield;
