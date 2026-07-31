@@ -86,4 +86,8 @@ public class assignTruckController
     @javafx.fxml.FXML
     public void searchButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
+    }
 }

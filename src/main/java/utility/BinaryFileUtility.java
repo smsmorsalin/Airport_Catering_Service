@@ -6,32 +6,45 @@ import java.util.ArrayList;
 public class BinaryFileUtility {
 
     public static ArrayList<Object> readObjects(String fileName) {
-        ArrayList<Object> objectsList = null;
-        if (fileName == null) {
+
+        ArrayList<Object> objectsList = new ArrayList<>();
+
+        if (fileName == null || fileName.isBlank()) {
             return objectsList;
         }
-        ObjectInputStream ois = null;
-        try {
-            objectsList = new ArrayList<Object>();
-            ois = new ObjectInputStream(new FileInputStream(fileName));
+
+        File file = new File(fileName);
+
+        if (!file.exists() || file.length() == 0) {
+            return objectsList;
+        }
+
+        try (ObjectInputStream ois =
+                     new ObjectInputStream(new FileInputStream(file))) {
+
             while (true) {
                 Object tempObject = ois.readObject();
                 objectsList.add(tempObject);
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("File Not Found in read Objects Operation");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        } finally {
-            if (ois != null) {
-                try {
-                    ois.close();
-                } catch (IOException e) {
-                    System.out.println("Error while closing ObjectInputStream");
-                }
-            }
 
+        } catch (EOFException e) {
+            // all objects have been read
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+
+        } catch (InvalidClassException e) {
+            System.out.println("The class structure has changed.");
+            e.printStackTrace();
+
+        } catch (StreamCorruptedException e) {
+            System.out.println("The binary file is corrupted or has invalid headers.");
+            e.printStackTrace();
+
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
         }
+
         return objectsList;
     }
 

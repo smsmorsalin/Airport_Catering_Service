@@ -2,17 +2,20 @@ package main.airport_catering_service.controller.airline_representative;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import nonuser.Meal;
 import nonuser.OrderItem;
 import user.AirlineRepresentative;
+import utility.BinaryFileUtility;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class createCateringOrderViewController
 {
     @javafx.fxml.FXML
-    private ComboBox<String> fxidDeliveryTimeHourComboBox;
+    private ComboBox<Integer> fxidDeliveryTimeHourComboBox;
     @javafx.fxml.FXML
     private DatePicker fxidFlightDateDatePicker;
     @javafx.fxml.FXML
@@ -20,11 +23,11 @@ public class createCateringOrderViewController
     @javafx.fxml.FXML
     private TextField fxidDeliveryLocationTextField;
     @javafx.fxml.FXML
-    private ComboBox<String> fxidDeliveryTimeMinuteComboBox;
+    private ComboBox<Integer> fxidDeliveryTimeMinuteComboBox;
     @javafx.fxml.FXML
-    private ComboBox<String> fxidDepartureTimeHourComboBox;
+    private ComboBox<Integer> fxidDepartureTimeHourComboBox;
     @javafx.fxml.FXML
-    private ComboBox<String> fxidDepartureTimeMinuteComboBox;
+    private ComboBox<Integer> fxidDepartureTimeMinuteComboBox;
     @javafx.fxml.FXML
     private TextField mealQuantityTextField;
     @javafx.fxml.FXML
@@ -41,16 +44,44 @@ public class createCateringOrderViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        ArrayList<Object> readMealList;
+        readMealList = BinaryFileUtility.readObjects("Meal.bin");
+
+        for (Object mealObject : readMealList) {
+            mealListComboBox.getItems().add(((Meal) mealObject).getMealName());
+        }
+
+        for (int i = 0; i < 24; i++){
+            fxidDeliveryTimeHourComboBox.getItems().add(i);
+            fxidDepartureTimeHourComboBox.getItems().add(i);
+        }
+        for (int i = 0; i < 60; i++){
+            fxidDeliveryTimeMinuteComboBox.getItems().add(i);
+            fxidDepartureTimeMinuteComboBox.getItems().add(i);
+        }
     }
 
     @javafx.fxml.FXML
     public void addMealButton(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        if (fxidFlightDateDatePicker.getValue().isBefore(LocalDate.now())){
+            alert.setTitle("Warning");
+            alert.setContentText("Please select a future date");
+            alert.showAndWait();
+            return;
+        }
+
+        //if flightId not exist in flight.bin file generate an eror
+
+
     }
 
     @javafx.fxml.FXML
     public void placeCateringOrderButton(ActionEvent actionEvent) {
     }
 
+
+    //sideBar buttons
     @javafx.fxml.FXML
     public void sideBarTrackOrderButton(ActionEvent actionEvent) throws IOException {
         AirlineRepresentative.renderFxmlTruckOrder(actionEvent);

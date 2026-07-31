@@ -11,23 +11,13 @@ import java.io.IOException;
 public class ApproveProductionCompletionController
 {
     @javafx.fxml.FXML
-    private TextArea completionNotesTextArea;
-    @javafx.fxml.FXML
-    private Label fxidDisplayApprovalStatusLabel;
-    @javafx.fxml.FXML
-    private Label fxidDisplayApprovalIDLabel;
-    @javafx.fxml.FXML
-    private Label fxidDisplayApprovalTimeLabel;
-    @javafx.fxml.FXML
     private TextField productionOrderIDTextField;
-    @javafx.fxml.FXML
-    private Label fxidDisplayProductionOrderIDLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
@@ -44,7 +34,7 @@ public class ApproveProductionCompletionController
     public void sideBarProductionScheduleOnA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void searchOrderOnAction(ActionEvent actionEvent) {
     }
 

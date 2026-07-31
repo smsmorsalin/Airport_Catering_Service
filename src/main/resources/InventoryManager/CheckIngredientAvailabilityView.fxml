@@ -29,7 +29,7 @@
                 <Button layoutX="10.0" layoutY="264.0" mnemonicParsing="false" onAction="#generateInventoryReportButtonOnAction" prefHeight="42.0" prefWidth="174.0" text="Generate Inventory Report" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+        <Button layoutY="3.0" mnemonicParsing="false" onAction="#airportCateringServiceButtonOnAction" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
             <font>
                 <Font name="Arial Bold" size="13.0" />
             </font>
@@ -60,7 +60,7 @@
                   <TextField fx:id="orderIdTextfield" layoutX="135.0" layoutY="27.0" />
                   <TextField fx:id="ingredientNameTextfield" layoutX="136.0" layoutY="62.0" />
                   <Button layoutX="60.0" layoutY="112.0" mnemonicParsing="false" onAction="#searchButtonOnAction" text="Search" />
-                  <TableView fx:id="tableview" layoutX="7.0" layoutY="256.0" prefHeight="118.0" prefWidth="646.0">
+                  <TableView fx:id="tableview" layoutX="7.0" layoutY="256.0" prefHeight="210.0" prefWidth="646.0">
                     <columns>
                       <TableColumn fx:id="ingredientIdTableviewColumn" prefWidth="86.39996337890625" text="Ingredient ID" />
                       <TableColumn fx:id="ingredientNameTableviewColumn" prefWidth="116.0" text="Ingredient Name" />
