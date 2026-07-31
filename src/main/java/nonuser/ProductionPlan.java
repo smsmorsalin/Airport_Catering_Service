@@ -70,17 +70,4 @@ public class ProductionPlan {
     public void setStatus(String status) {
         this.status = status;
     }
-
-    @Override
-    public String toString() {
-        return "ProductionPlan{" +
-                "productionId=" + productionId +
-                ", productionDate=" + productionDate +
-                ", targetTime=" + targetTime +
-                ", StartTime=" + StartTime +
-                ", endTime=" + endTime +
-                ", workShift='" + workShift + '\'' +
-                ", status='" + status + '\'' +
-                '}';
-    }
 }
