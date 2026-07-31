@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Create a BluePrint of AirlineRepresentative how all method will be implimentable and also create Invoice, Payment non-user, DeliveryConfirmation classes." />
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/AppendableObjectOutputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/BinaryFileUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/createCateringOrderViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/createCateringOrderViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Meal.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,12 +34,12 @@
     &quot;assignee&quot;: &quot;Saif-kaif&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
-    "accountId": "ef1e225f-e8df-4381-ba31-5fa2f4c0db29"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
+    &quot;accountId&quot;: &quot;ef1e225f-e8df-4381-ba31-5fa2f4c0db29&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -43,61 +49,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="5.005634832760369E-12" />
-      <entry key="MS500" value="0.006569815498139926" />
-      <entry key="S2" value="0.47921000024565574" />
-      <entry key="S5" value="1.8077394389876758" />
-      <entry key="S10" value="4.393079862686441" />
-      <entry key="S30" value="14.932385899891232" />
-      <entry key="S60" value="24.01835879414763" />
-      <entry key="M2" value="31.499222290525218" />
-      <entry key="M5" value="38.02065669699318" />
-      <entry key="M10" value="43.187994826384156" />
-      <entry key="M15" value="48.843065111791766" />
-      <entry key="M30" value="69.49328983101931" />
-      <entry key="H1" value="111.4795045933634" />
-      <entry key="H2" value="173.69733794064905" />
-      <entry key="H4" value="244.8182242828831" />
-      <entry key="D1" value="380.429436755799" />
-      <entry key="W1" value="420.5294586964892" />
+      <entry key="MS100" value="1.7955364924771386" />
+      <entry key="MS500" value="2.0115873503789894" />
+      <entry key="S2" value="3.0963748422589434" />
+      <entry key="S5" value="4.0089968816832044" />
+      <entry key="S10" value="4.4554159299251825" />
+      <entry key="S30" value="4.8064705163441666" />
+      <entry key="S60" value="4.9347663915551205" />
+      <entry key="M2" value="5.453507331437496" />
+      <entry key="M5" value="8.564915289120133" />
+      <entry key="M10" value="15.564657747339442" />
+      <entry key="M15" value="23.417365632482646" />
+      <entry key="M30" value="48.39522461461443" />
+      <entry key="H1" value="96.8377279304133" />
+      <entry key="H2" value="173.58229382909175" />
+      <entry key="H4" value="266.2386774742462" />
+      <entry key="D1" value="446.76240161824364" />
+      <entry key="W1" value="500.87645997614845" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000000005416" />
-      <entry key="S2" value="1.0008919509906327" />
-      <entry key="S5" value="1.0757304837200583" />
-      <entry key="S10" value="1.3786507420022271" />
-      <entry key="S30" value="2.321744845441722" />
-      <entry key="S60" value="2.9553923265877384" />
-      <entry key="M2" value="3.6431301876671007" />
-      <entry key="M5" value="5.180148763680219" />
-      <entry key="M10" value="8.146495128941446" />
-      <entry key="M15" value="12.635954869884102" />
-      <entry key="M30" value="30.92473491631634" />
-      <entry key="H1" value="67.55610799725049" />
-      <entry key="H2" value="117.40754008333224" />
-      <entry key="H4" value="171.12799618716957" />
-      <entry key="D1" value="269.94020398571354" />
-      <entry key="W1" value="298.6664559379652" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="4.828031663796508E-286" />
+      <entry key="S2" value="4.687513455936756E-72" />
+      <entry key="S5" value="2.9402009323610417E-29" />
+      <entry key="S10" value="5.4223619690694215E-15" />
+      <entry key="S30" value="1.7568296783438454E-5" />
+      <entry key="S60" value="0.004194765935548404" />
+      <entry key="M2" value="0.06767179135258124" />
+      <entry key="M5" value="0.6432528201949911" />
+      <entry key="M10" value="3.1684520781386745" />
+      <entry key="M15" value="7.3304799803321945" />
+      <entry key="M30" value="24.149989972217675" />
+      <entry key="H1" value="61.600697804186574" />
+      <entry key="H2" value="122.04994402372377" />
+      <entry key="H4" value="193.145346480846" />
+      <entry key="D1" value="327.22159107424596" />
+      <entry key="W1" value="366.6527128818571" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="5.3836615939234924E-9" />
-      <entry key="MS500" value="0.028657965936067" />
-      <entry key="S2" value="0.8639319703309207" />
-      <entry key="S5" value="2.5433446252353953" />
-      <entry key="S10" value="5.534994965579986" />
-      <entry key="S30" value="17.10795905751966" />
-      <entry key="S60" value="26.876563883613056" />
-      <entry key="M2" value="35.08194413277216" />
-      <entry key="M5" value="43.168132088663" />
-      <entry key="M10" value="51.30824657830046" />
-      <entry key="M15" value="61.44949880147167" />
-      <entry key="M30" value="100.37672877185561" />
-      <entry key="H1" value="179.00895985146477" />
-      <entry key="H2" value="293.51280380840126" />
-      <entry key="H4" value="445.68209724990146" />
-      <entry key="D1" value="900.7081379442789" />
-      <entry key="W1" value="1081.2053094541416" />
+      <entry key="MS100" value="1.3501551325916856" />
+      <entry key="MS500" value="1.8747194314672806" />
+      <entry key="S2" value="3.056519275530133" />
+      <entry key="S5" value="3.9918782925855125" />
+      <entry key="S10" value="4.4465869322580245" />
+      <entry key="S30" value="4.803473466440476" />
+      <entry key="S60" value="4.937181774517574" />
+      <entry key="M2" value="5.518292622361455" />
+      <entry key="M5" value="9.198562991807103" />
+      <entry key="M10" value="18.71329392546927" />
+      <entry key="M15" value="30.721362486489937" />
+      <entry key="M30" value="72.50855631326591" />
+      <entry key="H1" value="158.40233794092194" />
+      <entry key="H2" value="297.0943252731792" />
+      <entry key="H4" value="482.6821536108307" />
+      <entry key="D1" value="1014.3624697917459" />
+      <entry key="W1" value="1227.4451550078563" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -114,33 +120,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.Launcher.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "morsalin",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;morsalin&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="javafx" />
@@ -341,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785457420665</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785490116535</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1785490116535</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

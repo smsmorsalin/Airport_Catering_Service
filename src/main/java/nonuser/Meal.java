@@ -3,10 +3,12 @@ package nonuser;
 public class Meal {
     private int mealId;
     private String mealName;
+    private float mealPrice;
 
-    public Meal(int mealId, String mealName) {
+    public Meal(int mealId, String mealName, float mealPrice) {
         this.mealId = mealId;
         this.mealName = mealName;
+        this.mealPrice = mealPrice;
     }
 
     public int getMealId() {
@@ -25,11 +27,20 @@ public class Meal {
         this.mealName = mealName;
     }
 
+    public float getMealPrice() {
+        return mealPrice;
+    }
+
+    public void setMealPrice(float mealPrice) {
+        this.mealPrice = mealPrice;
+    }
+
     @Override
     public String toString() {
         return "Meal{" +
                 "mealId=" + mealId +
                 ", mealName='" + mealName + '\'' +
+                ", mealPrice=" + mealPrice +
                 '}';
     }
 }
