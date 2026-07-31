@@ -1,7 +1,10 @@
 package nonuser;
 
+import utility.BinaryFileUtility;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 public class Flight {
 
@@ -70,5 +73,19 @@ public class Flight {
         //code
 
         return true;
+    }
+
+    public static boolean checkFlightIdExists(String checkFlightId){
+        ArrayList<Object> flightList = new ArrayList<>();
+        flightList = BinaryFileUtility.readObjects("Flight.bin");
+
+        for (Object object : flightList) {
+            if (object instanceof Flight flight) {
+                if(((Flight) object).getFlightId().equals(checkFlightId)){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

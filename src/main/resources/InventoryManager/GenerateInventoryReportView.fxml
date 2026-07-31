@@ -64,9 +64,6 @@
                   <Label fx:id="currentStockSummaryLabel" layoutX="34.0" layoutY="188.0" text="Current Stock Summary" />
                   <Label fx:id="ingredientConsumptionLabel" layoutX="34.0" layoutY="215.0" text="Ingredient Consumption" />
                   <Label fx:id="purchaseHistoryLabel" layoutX="34.0" layoutY="245.0" text="Purchase History" />
-                  <Label fx:id="stockAdjustmentLabel" layoutX="34.0" layoutY="277.0" text="Stock Adjustment" />
-                  <Label fx:id="lowStockItemLabel" layoutX="34.0" layoutY="311.0" text="Low Stock Item" />
-                  <Label fx:id="supplierPerformanceLabel" layoutX="34.0" layoutY="345.0" text="Supplier Performance" />
                   <Button layoutX="34.0" layoutY="427.0" mnemonicParsing="false" onAction="#downloadInventoryReportButtonOnAction" prefHeight="26.0" prefWidth="184.0" text="Download inventory report" />
                </children>
             </AnchorPane>

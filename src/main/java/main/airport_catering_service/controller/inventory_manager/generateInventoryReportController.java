@@ -17,17 +17,11 @@ public class generateInventoryReportController
     @javafx.fxml.FXML
     private Text startDateText;
     @javafx.fxml.FXML
-    private Label stockAdjustmentLabel;
-    @javafx.fxml.FXML
     private Label ingredientConsumptionLabel;
     @javafx.fxml.FXML
     private DatePicker endDateDatepicker;
     @javafx.fxml.FXML
-    private Label supplierPerformanceLabel;
-    @javafx.fxml.FXML
     private TextField reportTypeTextfield;
-    @javafx.fxml.FXML
-    private Label lowStockItemLabel;
     @javafx.fxml.FXML
     private Text endDateText;
     @javafx.fxml.FXML

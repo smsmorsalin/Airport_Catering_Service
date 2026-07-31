@@ -20,12 +20,6 @@ public class emergencyDeliveryController
     @javafx.fxml.FXML
     private TextField orderIdTextfield;
     @javafx.fxml.FXML
-    private TextField priorityLevelTextfield;
-    @javafx.fxml.FXML
-    private Label priorityStatusLabel;
-    @javafx.fxml.FXML
-    private Text priorityLevelText;
-    @javafx.fxml.FXML
     private TextField emergencyNotetextfield;
     @javafx.fxml.FXML
     private Text emergencyNotetext;

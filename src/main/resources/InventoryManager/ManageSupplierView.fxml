@@ -68,6 +68,7 @@
                   <Label fx:id="supplierNameLabel" layoutX="26.0" layoutY="441.0" text="Supplier Name" />
                   <Label fx:id="contactInformationLabel" layoutX="26.0" layoutY="479.0" text="Contact Information" />
                   <Label fx:id="supplierStatusLabel" layoutX="26.0" layoutY="520.0" text="Supplier Status" />
+                  <Button layoutX="21.0" layoutY="220.0" mnemonicParsing="false" onAction="#submitButtonOnAction" text="Submit" />
                </children>
             </AnchorPane>
          </children></VBox>
