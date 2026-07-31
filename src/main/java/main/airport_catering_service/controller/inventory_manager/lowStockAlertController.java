@@ -15,8 +15,6 @@ public class lowStockAlertController
     @javafx.fxml.FXML
     private TableColumn ingredientNameTableviewColumn;
     @javafx.fxml.FXML
-    private TableColumn recorderLevelTableviewColumn;
-    @javafx.fxml.FXML
     private TableColumn currentQuantityTableviewColumn;
 
     @javafx.fxml.FXML

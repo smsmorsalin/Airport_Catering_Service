@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.headchef;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.Headchef;
+
+import java.io.IOException;
 
 public class AssignKitchenStaffController
 {
@@ -43,11 +46,16 @@ public class AssignKitchenStaffController
     }
 
     @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) {
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        Headchef.renderDashboardView(actionEvent);
+
     }
 
     @javafx.fxml.FXML
     public void clearForm(ActionEvent actionEvent) {
+        taskIdField.clear();
+
+
     }
 
     @javafx.fxml.FXML
@@ -55,6 +63,7 @@ public class AssignKitchenStaffController
     }
 
     @javafx.fxml.FXML
-    public void refreshAssignments(ActionEvent actionEvent) {
+    public void refreshAssignments(ActionEvent actionEvent) throws IOException {
+        Headchef.renderProductionTaskInformation(actionEvent);
     }
 }

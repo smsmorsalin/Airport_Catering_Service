@@ -2,8 +2,10 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
@@ -59,8 +61,6 @@
                   <Text fx:id="packagingTypeText" layoutX="7.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Packaging Type" wrappingWidth="87.78045654296875" />
                   <Text fx:id="packagingNoteText" layoutX="3.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Packaging Note" wrappingWidth="94.5980224609375" />
                   <TextField fx:id="orderIdTextfield" layoutX="95.0" layoutY="32.0" />
-                  <TextField fx:id="packagingTypeTextfield" layoutX="95.0" layoutY="75.0" />
-                  <TextField fx:id="packagingNoteTextfield" layoutX="95.0" layoutY="119.0" />
                   <TableView fx:id="tableView" layoutY="338.0" prefHeight="200.0" prefWidth="596.0">
                     <columns>
                       <TableColumn fx:id="packagingIdTableviewColumn" prefWidth="151.199951171875" text="Packaging ID" />
@@ -69,6 +69,8 @@
                         <TableColumn fx:id="completionTimeTableviewColumn" minWidth="6.103515625E-5" prefWidth="159.20001220703125" text="Completion Time" />
                     </columns>
                   </TableView>
+                  <TextArea fx:id="packagingNoteTextArea" layoutX="95.0" layoutY="123.0" prefHeight="26.0" prefWidth="200.0" />
+                  <ComboBox fx:id="packagingTypeComboBox" layoutX="98.0" layoutY="75.0" prefWidth="150.0" />
                </children>
             </AnchorPane>
             </children></VBox>

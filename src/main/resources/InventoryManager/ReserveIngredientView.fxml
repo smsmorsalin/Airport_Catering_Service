@@ -60,7 +60,7 @@
                   <Label fx:id="reservationIdLabel" layoutX="33.0" layoutY="325.0" prefHeight="18.0" prefWidth="78.0" text="Reservation ID" />
                   <Label fx:id="orderIdLabel" layoutX="33.0" layoutY="365.0" prefHeight="17.0" prefWidth="46.0" text="Order ID" />
                   <Label fx:id="ingredientNameLabel" layoutX="33.0" layoutY="404.0" text="Ingredient Name" />
-                  <Label fx:id="reservedQuantityLabel" layoutX="33.0" layoutY="445.0" text="Reserved Quantity" />
+                  <Label fx:id="QuantityLabel" layoutX="33.0" layoutY="445.0" text="Quantity" />
                   <Label fx:id="reservationDateLabel" layoutX="33.0" layoutY="482.0" text="Reservation Date" />
                </children>
             </AnchorPane>

@@ -60,7 +60,7 @@
                   <TextField fx:id="orderIdTextfield" layoutX="135.0" layoutY="27.0" />
                   <TextField fx:id="ingredientNameTextfield" layoutX="136.0" layoutY="62.0" />
                   <Button layoutX="60.0" layoutY="112.0" mnemonicParsing="false" onAction="#searchButtonOnAction" text="Search" />
-                  <TableView fx:id="tableview" layoutX="7.0" layoutY="256.0" prefHeight="118.0" prefWidth="646.0">
+                  <TableView fx:id="tableview" layoutX="7.0" layoutY="256.0" prefHeight="210.0" prefWidth="646.0">
                     <columns>
                       <TableColumn fx:id="ingredientIdTableviewColumn" prefWidth="86.39996337890625" text="Ingredient ID" />
                       <TableColumn fx:id="ingredientNameTableviewColumn" prefWidth="116.0" text="Ingredient Name" />

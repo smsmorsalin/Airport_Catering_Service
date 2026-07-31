@@ -5,6 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import user.Truckoperator;
+
+import java.io.IOException;
 
 public class CollectShipmentController
 {
@@ -38,11 +41,19 @@ public class CollectShipmentController
     }
 
     @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) {
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        Truckoperator.renderDashboardView(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void resetForm(ActionEvent actionEvent) {
+        assignmentIdField.clear();
+        flightNumberField.clear();
+        mealQuantityField.clear();
+        orderIdField.clear();
+        airlineField.clear();
+        locationField.clear();
+
     }
 
     @javafx.fxml.FXML

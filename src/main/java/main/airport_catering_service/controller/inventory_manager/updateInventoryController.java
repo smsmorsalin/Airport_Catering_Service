@@ -8,31 +8,25 @@ import javafx.scene.text.Text;
 public class updateInventoryController
 {
     @javafx.fxml.FXML
-    private Text reasonText;
-    @javafx.fxml.FXML
     private Label ingredientNameLabel;
-    @javafx.fxml.FXML
-    private TextField reasonTextfield;
     @javafx.fxml.FXML
     private TextField ingredientIdTextfield;
     @javafx.fxml.FXML
-    private TextField adjustmentTypeTextfield;
-    @javafx.fxml.FXML
     private Text ingredientIdText;
-    @javafx.fxml.FXML
-    private Text adjustmentQuantityText;
     @javafx.fxml.FXML
     private Label newQuantityLabel;
     @javafx.fxml.FXML
-    private TextField adjustmentQuantityTextfield;
+    private Label ingredientIdLabel;
     @javafx.fxml.FXML
-    private Label adjustmentIdLabel;
+    private TextField newQuantityTextfield;
     @javafx.fxml.FXML
-    private Label previousQuantityLabel;
+    private Text ingredientNameText;
     @javafx.fxml.FXML
-    private Label adjustmentReasonLabel;
+    private Text newQuantityText;
     @javafx.fxml.FXML
-    private Text adjustmentTypeText;
+    private TextField ingredientNameTextfield;
+    @javafx.fxml.FXML
+    private Label quantityLabel;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -1,9 +1,7 @@
 package main.airport_catering_service.controller.inventory_manager;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 
 public class createPurchaseRequestController
@@ -11,17 +9,9 @@ public class createPurchaseRequestController
     @javafx.fxml.FXML
     private Text supplierText;
     @javafx.fxml.FXML
-    private Label purchaseRequestIdLabel;
-    @javafx.fxml.FXML
-    private Label ingredientNameLabel;
-    @javafx.fxml.FXML
-    private Label RequestDateLabel;
-    @javafx.fxml.FXML
     private TextField supplierTextfield;
     @javafx.fxml.FXML
     private TextField requiredQuantityTextfield;
-    @javafx.fxml.FXML
-    private Label quantityLabel;
     @javafx.fxml.FXML
     private Text requiredQuantityText;
     @javafx.fxml.FXML
@@ -31,11 +21,19 @@ public class createPurchaseRequestController
     @javafx.fxml.FXML
     private Text ingredientNameText;
     @javafx.fxml.FXML
-    private Label supplierLabel;
-    @javafx.fxml.FXML
     private TextField ingredientNameTextfield;
     @javafx.fxml.FXML
     private DatePicker expectedDeliveryDateDatepicker;
+    @javafx.fxml.FXML
+    private TableColumn quantityTableviewColumn;
+    @javafx.fxml.FXML
+    private TableColumn supplierTableviewColumn;
+    @javafx.fxml.FXML
+    private TableView tableView;
+    @javafx.fxml.FXML
+    private TableColumn ingredientNameTableviewColumn;
+    @javafx.fxml.FXML
+    private TableColumn purchaseRequestIdTableviewColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

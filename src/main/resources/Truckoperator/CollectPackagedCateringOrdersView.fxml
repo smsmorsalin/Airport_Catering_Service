@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="820" prefWidth="1280" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.truck_operator.CollectShipmentController">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8" style="-fx-background-color: linear-gradient(to right,#145A32,#27AE60);">
+
+            <padding>
+                <Insets bottom="18" left="25" right="25" top="18" />
+            </padding>
+
+            <Label text="📦 Collect Shipment">
+
+                <font>
+                    <Font size="30" />
+                </font>
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+
+            </Label>
+
+            <Label text="Verify and collect prepared meal shipments before departure.">
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-size:15;
+                </style>
+
+            </Label>
+
+        </VBox>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="20">
+
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+
+            <!-- Shipment Information -->
+
+            <TitledPane collapsible="false" expanded="true" text="Shipment Information">
+
+                <content>
+
+                    <GridPane hgap="20" vgap="18">
+
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+
+                        <Label text="Assignment ID" />
+
+                        <Button fx:id="loadShipmentButton" onAction="#loadShipment" prefWidth="150" style="-fx-background-color:#3498DB;                                        -fx-text-fill:white;                                        -fx-font-weight:bold;" text="Load Shipment" GridPane.columnIndex="2" />
+
+                        <Label text="Order ID" GridPane.rowIndex="1" />
+
+                        <Label text="Flight Number" GridPane.rowIndex="2" />
+
+                        <Label text="Airline" GridPane.rowIndex="3" />
+
+                        <Label text="Meal Quantity" GridPane.rowIndex="4" />
+
+                        <Label text="Delivery Location" GridPane.rowIndex="5" />
+                  <TextField fx:id="assignmentIdField" GridPane.columnIndex="1" />
+                  <TextField fx:id="orderIdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="flightNumberField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="airlineField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="mealQuantityField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="locationField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- Collection Confirmation -->
+
+            <TitledPane collapsible="false" expanded="true" text="Shipment Collection">
+
+                <content>
+
+                    <GridPane hgap="20" vgap="18">
+
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+
+                        <Label text="Collection Time" />
+
+                        <DatePicker fx:id="collectionDatePicker" GridPane.columnIndex="1" />
+
+                        <Label text="Collection Notes" GridPane.rowIndex="1" />
+
+                        <TextArea fx:id="notesTextArea" prefHeight="100" promptText="Optional notes..." wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+
+                        <HBox spacing="15" GridPane.columnIndex="1" GridPane.rowIndex="2">
+
+                            <Button fx:id="confirmCollectionButton" onAction="#confirmCollection" prefHeight="40" prefWidth="180" style="-fx-background-color:#27AE60;                                            -fx-text-fill:white;                                            -fx-font-weight:bold;" text="Confirm Collection" />
+
+                            <Button fx:id="resetButton" onAction="#resetForm" prefHeight="40" prefWidth="120" style="-fx-background-color:#F39C12;                                            -fx-text-fill:white;                                            -fx-font-weight:bold;" text="Reset" />
+
+                        </HBox>
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER_RIGHT" spacing="15" style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets bottom="15" left="20" right="20" top="15" />
+            </padding>
+
+            <Button fx:id="backButton" onAction="#goBack" prefWidth="120" style="-fx-background-color:#566573;                            -fx-text-fill:white;                            -fx-font-weight:bold;" text="Back" />
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

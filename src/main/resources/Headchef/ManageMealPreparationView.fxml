@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="820" prefWidth="1280" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.headchef.ManageMealPreparationController">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8" style="-fx-background-color: linear-gradient(to right,#8E44AD,#5B2C6F);">
+
+            <padding>
+                <Insets bottom="18" left="25" right="25" top="18" />
+            </padding>
+
+            <Label text="🍳 Manage Meal Preparation">
+                <font>
+                    <Font size="30" />
+                </font>
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+            </Label>
+
+            <Label text="Start and monitor meal preparation for production tasks.">
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-size:15;
+                </style>
+            </Label>
+
+        </VBox>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="20">
+
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+
+            <!-- Preparation Form -->
+
+            <TitledPane collapsible="false" expanded="true" text="Meal Preparation Details">
+
+                <content>
+
+                    <GridPane hgap="20" vgap="18">
+
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+
+                        <Label text="Production Task ID" />
+                        <TextField fx:id="taskIdField" prefWidth="250" promptText="Enter Production Task ID" GridPane.columnIndex="1" />
+
+                        <Label text="Preparation Status" GridPane.columnIndex="2" />
+
+                        <ComboBox fx:id="statusComboBox" prefWidth="220" promptText="Select Status" GridPane.columnIndex="3" />
+
+                        <Label text="Preparation Instructions" GridPane.rowIndex="1" />
+
+                        <Label text="Special Requirements" GridPane.rowIndex="2" />
+
+                        <HBox spacing="15" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
+
+                            <Button fx:id="startPreparationButton" onAction="#startPreparation" prefWidth="170" style="-fx-background-color:#27AE60;-fx-text-fill:white;-fx-font-weight:bold;" text="Start Preparation" />
+
+                            <Button fx:id="updateStatusButton" onAction="#updatePreparationStatus" prefWidth="150" style="-fx-background-color:#3498DB;-fx-text-fill:white;-fx-font-weight:bold;" text="Update Status" />
+
+                            <Button fx:id="clearButton" onAction="#clearForm" prefWidth="120" style="-fx-background-color:#95A5A6;-fx-text-fill:white;" text="Clear" />
+
+                        </HBox>
+                  <TextArea fx:id="instructionTextArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextArea fx:id="specialRequirementTextArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- Progress Table -->
+
+            <TitledPane collapsible="false" expanded="true" text="Preparation Progress" VBox.vgrow="ALWAYS">
+
+                <content>
+
+                    <TableView fx:id="preparationTable">
+
+                        <columns>
+
+                            <TableColumn fx:id="taskIdColumn" prefWidth="120" text="Task ID" />
+
+                            <TableColumn fx:id="mealCategoryColumn" prefWidth="220" text="Meal Category" />
+
+                            <TableColumn fx:id="assignedTeamColumn" prefWidth="200" text="Assigned Team" />
+
+                            <TableColumn fx:id="statusColumn" prefWidth="220" text="Preparation Status" />
+
+                            <TableColumn fx:id="remarksColumn" prefWidth="350" text="Remarks" />
+
+                        </columns>
+
+                    </TableView>
+
+                </content>
+
+            </TitledPane>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER_RIGHT" spacing="15" style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets bottom="15" left="20" right="20" top="15" />
+            </padding>
+
+            <Button fx:id="refreshButton" onAction="#refreshTable" prefWidth="120" style="-fx-background-color:#16A085;-fx-text-fill:white;-fx-font-weight:bold;" text="Refresh" />
+
+            <Button fx:id="backButton" onAction="#goBack" prefWidth="120" style="-fx-background-color:#E74C3C;-fx-text-fill:white;-fx-font-weight:bold;" text="Back" />
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>
