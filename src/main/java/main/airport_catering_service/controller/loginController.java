@@ -119,7 +119,7 @@ public class loginController
         }
         else if (fxidUsernameTextField.getText().equals("7")) {
             FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/TruckOperator/Dashboard.fxml"));
+                    getClass().getResource("/Truckoperator/DashboardView.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
