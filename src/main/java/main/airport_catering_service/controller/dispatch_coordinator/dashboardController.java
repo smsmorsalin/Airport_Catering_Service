@@ -84,4 +84,8 @@ public class dashboardController
     public void emergencyDeliveryButtonOnAction(ActionEvent actionEvent)throws IOException {
         DispatchCoordinator.renderEmergencyDelivery(actionEvent);
     }
+
+    @javafx.fxml.FXML
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
+    }
 }

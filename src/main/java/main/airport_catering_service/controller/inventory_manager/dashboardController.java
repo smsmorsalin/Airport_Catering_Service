@@ -84,4 +84,8 @@ public class dashboardController
     public void receiveIngredientButtonOnAction(ActionEvent actionEvent)throws IOException {
         InventoryManager.renderReceiveIngredient(actionEvent);
     }
+
+    @javafx.fxml.FXML
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
+    }
 }
