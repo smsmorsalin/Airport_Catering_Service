@@ -5,11 +5,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 import utility.databaseAccessor;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Random;
 
 public abstract class User {
@@ -129,13 +131,29 @@ public abstract class User {
     }
 
     public static final User verifyLogin(int userId, String password) {
-        User user = null;
-        if  (userId == 0 || password.isEmpty()) {
-            return user;
+        if (userId <= 0 || password == null || password.trim().isEmpty()) {
+            return null;
         }
-        // if: user in database/files then check the password for this user. if match then return the user object
-        //else: return null
-        return user;
+
+        ArrayList<Object> users = BinaryFileUtility.readObjects("User.bin");
+
+        if (users == null || users.isEmpty()) {
+            return null;
+        }
+
+        for (Object object : users) {
+
+            if (object instanceof User user) {
+
+                if (user.getUserId() == userId &&
+                        user.getPassword().equals(password)) {
+
+                    return user;
+                }
+            }
+        }
+
+        return null;
     }
 
     public static void logout(javafx.event.ActionEvent event) throws IOException {

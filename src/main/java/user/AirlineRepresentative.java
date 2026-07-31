@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import nonuser.*;
+import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 import utility.databaseAccessor;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class AirlineRepresentative extends User {
     protected final String airlineId;
@@ -57,33 +59,115 @@ public class AirlineRepresentative extends User {
 
 
 
-    public final void createCateringOrder(String flightId, String deliveryLocation, ArrayList<OrderItem> orderItems, LocalDate deliveryDate, LocalTime deliveryTime, String status){
-        ArrayList<String> orderItemIds = new ArrayList<String>();
-        for (OrderItem orderItem : orderItems){
-            BinaryFileUtility.writeObjects("OrderItem.bin", orderItem);
-            orderItemIds.add(orderItem.getIteamId());
+    public boolean createCateringOrder(String flightId, String deliveryLocation,
+                                       LocalDate deliveryDate, LocalTime deliveryTime) {
+
+        int orderId = databaseAccessor.generateNewUniqueId("CateringOrder.bin", "orderId");
+        ArrayList<OrderItem> orderItems = new ArrayList<>();
+        ArrayList<String> orderItemIds = new ArrayList<>();
+
+        for (OrderItem orderItem : orderItems) {
+            orderItemIds.add(orderItem.getItemId());
         }
-        int newOrderId = (Integer) databaseAccessor.generateNewUniqueId("CateringOrder.bin", "orderId");
-        CateringOrder newOrder = new CateringOrder(
-                newOrderId,
-                flightId,
-                LocalDate.now(),
-                deliveryLocation,
-                orderItemIds,
-                deliveryDate,
-                deliveryTime,
-                status
+
+        CateringOrder cateringOrder = new CateringOrder(
+                orderId, flightId, this.getUserId(), LocalDate.now(), deliveryLocation,
+                orderItemIds, deliveryDate, deliveryTime
         );
 
-        BinaryFileUtility.writeObjects("CateringOrder.bin", newOrder);
+        for (OrderItem orderItem : orderItems) {
+            BinaryFileUtility.writeObjects("OrderItem.bin", orderItem);
+        }
+
+        boolean saved = BinaryFileUtility.writeObjects("CateringOrder.bin", cateringOrder);
+
+        if (!saved) {
+            AlertGenerator.showAlert("Error", "Failed to save the catering order.");
+            return false;
+        }
+
+        return true;
     }
 
     public final void modifyCateringOrder(String orderId, ArrayList<String> orderItemIds){
         // find out the orderId and modify OrderItemIds
     }
 
-    public void cancelCateringOrder(String orderId){
-        //set status == cancel
+    public boolean cancelCateringOrder(int orderId){
+        ArrayList<Object> readCateringOrders =
+                BinaryFileUtility.readObjects("CateringOrder.bin");
+
+        if (readCateringOrders == null || readCateringOrders.isEmpty()) {
+            AlertGenerator.showAlert(
+                    "error",
+                    "No order exists in the database."
+            );
+            return false;
+        }
+
+        for (Object object : readCateringOrders) {
+
+            if (object instanceof CateringOrder cateringOrder) {
+
+                if (cateringOrder.getOrderId() == orderId) {
+
+                    // Check whether this logged-in user created the order
+                    if (cateringOrder.getAirlineRepresentativeId() != this.getUserId()) {
+                        AlertGenerator.showAlert(
+                                "error",
+                                "You can only cancel orders created by you."
+                        );
+                        return false;
+                    }
+
+                    if ("Cancelled".equals(cateringOrder.getStatus())) {
+                        AlertGenerator.showAlert(
+                                "error",
+                                "Order is already cancelled."
+                        );
+                        return false;
+                    }
+
+                    if ("Pending".equals(cateringOrder.getStatus())
+                            || "Approved".equals(cateringOrder.getStatus())) {
+
+                        cateringOrder.setStatus("Cancelled");
+
+                        boolean isSaved =
+                                BinaryFileUtility.overwriteObjects(
+                                        "CateringOrder.bin",
+                                        readCateringOrders
+                                );
+
+                        if (!isSaved) {
+                            AlertGenerator.showAlert(
+                                    "error",
+                                    "Failed to save the cancelled order."
+                            );
+                            return false;
+                        }
+
+                        AlertGenerator.showAlert(
+                                "success",
+                                "Order cancelled successfully."
+                        );
+                        return true;
+                    }
+
+                    AlertGenerator.showAlert(
+                            "error",
+                            "The order is processing and cannot be cancelled."
+                    );
+                    return false;
+                }
+            }
+        }
+
+        AlertGenerator.showAlert(
+                "error",
+                "Order ID does not exist."
+        );
+        return false;
     }
 
     public final void submitFlightDelayRequest(String orderId, LocalDate newDepartureDate, LocalTime newDepartureTime){

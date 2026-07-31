@@ -80,4 +80,25 @@ public class BinaryFileUtility {
         }
         return false;
     }
+
+    public static boolean overwriteObjects(String fileName, ArrayList<Object> objects) {
+        if (fileName == null || objects == null) {
+            return false;
+        }
+
+        try (ObjectOutputStream oos =
+                     new ObjectOutputStream(new FileOutputStream(fileName))) {
+
+            for (Object object : objects) {
+                oos.writeObject(object);
+            }
+
+            return true;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }
