@@ -1,9 +1,7 @@
 package main.airport_catering_service.controller.kitchen_production_manager;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import user.KitchenProductionManager;
 
 import java.io.IOException;
