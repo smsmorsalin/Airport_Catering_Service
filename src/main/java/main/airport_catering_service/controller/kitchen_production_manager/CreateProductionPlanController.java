@@ -1,6 +1,7 @@
 package main.airport_catering_service.controller.kitchen_production_manager;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import nonuser.ProductionPlan;
 import user.KitchenProductionManager;
@@ -39,6 +40,11 @@ public class CreateProductionPlanController
     @javafx.fxml.FXML
     private TableView<ProductionPlan> mainTableView;
 
+    public void showAlert(String s) {
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setContentText(s);
+        a.showAndWait();
+    }
     @javafx.fxml.FXML
     public void initialize() {
         hourTargetTimrCOmboBox.getItems().addAll("1","2","3","4","5","6","7","8","9","10","11","12");
@@ -53,15 +59,33 @@ public class CreateProductionPlanController
 
     @javafx.fxml.FXML
     public void clearOnAction(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void searchOnAction(ActionEvent actionEvent) {
+        int id = Integer.parseInt(productionOrderIDTextField.getText());
+
+
         if (hourTargetTimrCOmboBox.getValue() == null || miniutesTargetTimrCOmboBox.getValue()==null) {
             showAlert("TIme ComboBox should be filled");
-
         }
+
+        try {
+//            int id = Integer.parseInt(productionOrderIDTextField.getText());
+
+            if (id <= 0) {
+                showAlert("Production Order ID must be greater than 0.");
+            }
+        } catch (NumberFormatException e) {
+            showAlert("Production Order ID must contain only numbers.");
+        }
+
+
+
+
     }
 
-    @javafx.fxml.FXML
-    public void searchOnAction(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent)throws IOException {

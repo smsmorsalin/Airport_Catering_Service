@@ -52,14 +52,17 @@ public class CreateProductionScheduleController {
     @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
 
-        if(productionPlanIDTextField == null){
+        if(productionPlanIDTextField.getText().trim().isEmpty()){
             showAlert("Production Plan ID Should be filled");
+            return;
         }
         if (  Integer.parseInt(productionPlanIDTextField.getText()) <= 0){
             showAlert("Production Plan ID Should be filled");
+            return;
         }
         if (workShiftComboBox1 == null) {
             showAlert("ComboBox Can not be empty");
+            return;
         }
         if (startMinitueTimeComboBox.getValue() == null || startHoursTimeComboBox.getValue()==null || endsHoursTimeComboBox.getValue()==null || endsMinutiesTimeComboBox.getValue()==null ) {
             showAlert("TIme ComboBox should be filled");
