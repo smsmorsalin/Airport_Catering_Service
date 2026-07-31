@@ -52,8 +52,18 @@ public class CreateProductionScheduleController {
     @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
 
+        if(productionPlanIDTextField == null){
+            showAlert("Production Plan ID Should be filled");
+        }
+        if (  Integer.parseInt(productionPlanIDTextField.getText()) <= 0){
+            showAlert("Production Plan ID Should be filled");
+        }
         if (workShiftComboBox1 == null) {
             showAlert("ComboBox Can not be empty");
+        }
+        if (startMinitueTimeComboBox.getValue() == null || startHoursTimeComboBox.getValue()==null || endsHoursTimeComboBox.getValue()==null || endsMinutiesTimeComboBox.getValue()==null ) {
+            showAlert("TIme ComboBox should be filled");
+
         }
 
     }
@@ -103,101 +113,3 @@ public class CreateProductionScheduleController {
     public void sideBarMenuListOA(ActionEvent actionEvent) {
     }
 }
-
-//    }
-//}@FXML
-//public void createProductionPlanOnAction(ActionEvent actionEvent) {
-//
-//    String productionPlanId = productionPlanIDTextField.getText();
-//
-//    String startHour = startHoursTimeComboBox.getValue();
-//    String startMinute = startMinitueTimeComboBox.getValue();
-//
-//    String endHour = endsHoursTimeComboBox.getValue();
-//    String endMinute = endsMinutiesTimeComboBox.getValue();
-//
-//    String workShift = workShiftComboBox1.getValue();
-//
-//    // Check empty Production Plan ID
-//    if (productionPlanId == null || productionPlanId.trim().isEmpty()) {
-//        showAlert("Validation Error", "Please enter Production Plan ID.");
-//        return;
-//    }
-//
-//    // Check Production Plan ID is integer
-//    try {
-//        int id = Integer.parseInt(productionPlanId);
-//
-//        if (id <= 0) {
-//            showAlert(
-//                    "Validation Error",
-//                    "Production Plan ID must be greater than 0."
-//            );
-//            return;
-//        }
-//
-//    } catch (NumberFormatException e) {
-//        showAlert(
-//                "Validation Error",
-//                "Production Plan ID must contain numbers only."
-//        );
-//        return;
-//    }
-//
-//    // Check start time
-//    if (startHour == null || startMinute == null) {
-//        showAlert(
-//                "Validation Error",
-//                "Please select both start hour and start minute."
-//        );
-//        return;
-//    }
-//
-//    // Check end time
-//    if (endHour == null || endMinute == null) {
-//        showAlert(
-//                "Validation Error",
-//                "Please select both end hour and end minute."
-//        );
-//        return;
-//    }
-//
-//    // Check work shift
-//    if (workShift == null) {
-//        showAlert(
-//                "Validation Error",
-//                "Please select a work shift."
-//        );
-//        return;
-//    }
-//
-//    int startHourValue = Integer.parseInt(startHour);
-//    int startMinuteValue = Integer.parseInt(startMinute);
-//
-//    int endHourValue = Integer.parseInt(endHour);
-//    int endMinuteValue = Integer.parseInt(endMinute);
-//
-//    LocalTime startTime = LocalTime.of(
-//            startHourValue,
-//            startMinuteValue
-//    );
-//
-//    LocalTime endTime = LocalTime.of(
-//            endHourValue,
-//            endMinuteValue
-//    );
-//
-//    // Check end time is after start time
-//    if (!endTime.isAfter(startTime)) {
-//        showAlert(
-//                "Validation Error",
-//                "End time must be after start time."
-//        );
-//        return;
-//    }
-//
-//    showAlert(
-//            "Success",
-//            "Production plan information is valid."
-//    )
-//
