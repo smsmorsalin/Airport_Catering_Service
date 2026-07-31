@@ -32,5 +32,23 @@ public class Headchef extends Employee{
     public static void renderDisplayPreparationProgress(javafx.event.ActionEvent event) throws IOException{
         SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayPreparationProgress.fxml");
     }
+    public static void renderProductionTaskInformation(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayProductionTaskInformation.fxml");
+    }
+    public static void renderDisplayUpdateConfirmation(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayUpdateConfirmation.fxml");
+    }
+    public static void renderHandleRejectedFoodBatches(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/HandleRejectedFoodBatches.fxml");
+    }
+    public static void renderManageMealPreparation(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/ManageMealPreparation.fxml");
+    }
+    public static void renderProductionTaskView(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/ProductionTaskView.fxml");
+    }
+    public static void renderViewKitchenPerformanceReport(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/ViewKitchenPerformanceReport.fxml");
+    }
 
 }

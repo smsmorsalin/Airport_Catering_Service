@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/TruckOperatorDashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/headchef/HeadChefDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/headchef/HeadChefDashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/Headchef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Headchef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/AcceptDeliveryAssignment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/AcceptDeliveryAssignmentView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/CollectPackagedCateringOrders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/CollectPackagedCateringOrdersView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/ConfirmAircraftDelivery.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/ConfirmAircraftDeliveryView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/DashboardView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/DisplayDepartureConfirmation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/DisplayDepartureConfirmationView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/ReportDeliveryProblems.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/ReportDeliveryProblemsView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/StartDeliveryTrip.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/StartDeliveryTripView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/ViewAssignedDeliveryTasks.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/ViewAssignedDeliveryTasksView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/viewDeliveryHistory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/viewDeliveryHistoryView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,13 +131,18 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "Mahir",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="SharedIndexes">
