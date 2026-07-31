@@ -31,45 +31,22 @@ public class CreateProductionScheduleController {
                 "21", "22", "23", "24", "25", "26", "27", "28", "29", "30",
                 "31", "32", "33", "34", "35", "36", "37", "38", "39", "40",
                 "41", "42", "43", "44", "45", "46", "47", "48", "49", "50",
-                "51", "52", "53", "54", "55", "56", "57", "58", "59", "60");
+                "51", "52", "53", "54", "55", "56", "57", "58", "59");
         endsHoursTimeComboBox.getItems().addAll("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
         endsMinutiesTimeComboBox.getItems().addAll("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "12", "13", "14", "15", "16", "17", "18", "19", "20",
                 "21", "22", "23", "24", "25", "26", "27", "28", "29", "30",
                 "31", "32", "33", "34", "35", "36", "37", "38", "39", "40",
                 "41", "42", "43", "44", "45", "46", "47", "48", "49", "50",
-                "51", "52", "53", "54", "55", "56", "57", "58", "59", "60");
-
+                "51", "52", "53", "54", "55", "56", "57", "58", "59");
         workShiftComboBox1.getItems().addAll("Day", "Night");
     }
-
     public void showAlert(String s) {
         Alert a = new Alert(Alert.AlertType.INFORMATION);
         a.setContentText(s);
         a.showAndWait();
+        return;
     }
 
-
-    @Deprecated
-    public void clearOnAction(ActionEvent actionEvent) {
-
-        if(productionPlanIDTextField.getText().trim().isEmpty()){
-            showAlert("Production Plan ID Should be filled");
-            return;
-        }
-        if (  Integer.parseInt(productionPlanIDTextField.getText()) <= 0){
-            showAlert("Production Plan ID Should be filled");
-            return;
-        }
-        if (workShiftComboBox1 == null) {
-            showAlert("ComboBox Can not be empty");
-            return;
-        }
-        if (startMinitueTimeComboBox.getValue() == null || startHoursTimeComboBox.getValue()==null || endsHoursTimeComboBox.getValue()==null || endsMinutiesTimeComboBox.getValue()==null ) {
-            showAlert("TIme ComboBox should be filled");
-
-        }
-
-    }
 
     @javafx.fxml.FXML
     public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
@@ -97,14 +74,6 @@ public class CreateProductionScheduleController {
     }
 
     @javafx.fxml.FXML
-    public void createScheduleOnAction(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void confirmOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void sideBarCalculateIngredientOA(ActionEvent actionEvent) {
     }
 
@@ -114,5 +83,31 @@ public class CreateProductionScheduleController {
 
     @javafx.fxml.FXML
     public void sideBarMenuListOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void createScheduleOOnAction(ActionEvent actionEvent) {
+        if (productionPlanIDTextField.getText().trim().isEmpty()) {
+            showAlert("Production Plan ID should be filled");
+            return;
+        }
+        try {
+            int productionId = Integer.parseInt(productionPlanIDTextField.getText());
+            if(productionId <= 0){
+                showAlert("Production Plan ID must be greater than 0");
+                return;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+        if (workShiftComboBox1.getValue() == null) {
+            showAlert("Please select a Work Shift");
+            return;
+        }
+        if (startHoursTimeComboBox.getValue() == null || startMinitueTimeComboBox.getValue() == null || endsHoursTimeComboBox.getValue() == null || endsMinutiesTimeComboBox.getValue() == null) {
+            showAlert("Please select Start Time and End Time");
+            return;
+        }
     }
 }
