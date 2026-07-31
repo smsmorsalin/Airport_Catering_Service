@@ -79,7 +79,7 @@ public abstract class Employee extends User {
     }
 
     public static final int generateEmployeeId(){
-        int tempId = (int) databaseAccessor.generateNewUniqueId("User.bin", "userId");
+        int tempId = (int) databaseAccessor.generateNewUniqueId("User.bin", "employeeId");
         return tempId;
     }
 

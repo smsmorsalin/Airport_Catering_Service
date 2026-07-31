@@ -110,7 +110,7 @@
                               <Font size="15.0" />
                            </font>
                         </Label>
-                        <Label fx:id="fxidQualityCheckStatusLabel" layoutX="41.0" layoutY="100.0" prefHeight="25.0" prefWidth="417.0" text="Quality Check Status: ">
+                        <Label fx:id="fxidQualityCheckStatusLabel" layoutX="13.0" layoutY="100.0" prefHeight="25.0" prefWidth="417.0" text="Quality Inspection Status: ">
                            <font>
                               <Font size="15.0" />
                            </font>
