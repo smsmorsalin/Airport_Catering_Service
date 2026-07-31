@@ -2,26 +2,17 @@ package nonuser;
 
 public class InspectionRequest {
     private final int inspectionRequestId;
-    private final int productionOrderId;
+    private final int productionOrderId;          // FF
+    private final String batchNumber;
 
-    public InspectionRequest(int inspectionRequestId, int productionOrderId) {
+    public InspectionRequest(int inspectionRequestId, int productionOrderId, String batchNumber, String mealCategory, String inspectionStatus) {
         this.inspectionRequestId = inspectionRequestId;
         this.productionOrderId = productionOrderId;
+        this.batchNumber = batchNumber;
+        this.mealCategory = mealCategory;
+        this.inspectionStatus = inspectionStatus;
     }
 
-    public int getInspectionRequestId() {
-        return inspectionRequestId;
-    }
-
-    public int getProductionOrderId() {
-        return productionOrderId;
-    }
-
-    @Override
-    public String toString() {
-        return "InspectionRequest{" +
-                "inspectionRequestId=" + inspectionRequestId +
-                ", productionOrderId=" + productionOrderId +
-                '}';
-    }
+    private String mealCategory;
+    private String inspectionStatus;
 }
