@@ -30,4 +30,31 @@ public class DispatchCoordinator extends Employee{
         SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/DashboardView.fxml");
     }
 
+    public static void renderEmergencyDelivery(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/EmergencyDeliveryView.fxml");
+    }
+
+    public static void renderGenerateDispatchReport(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/GenerateDispatchReportView.fxml");
+    }
+
+    public static void renderManageDeliveryDelay(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/ManageDeliveryDelayView.fxml");
+    }
+
+    public static void renderMonitorDelivery(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/MonitorDeliveryView.fxml");
+    }
+
+    public static void renderPackageOrder(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/PackageOrderView.fxml");
+    }
+
+    public static void renderReceiveDispatchRequest(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/ReceiveDispatchRequestView.fxml");
+    }
+
+    public static void renderScheduleDelivery(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/ScheduleDeliveryView.fxml");
+    }
 }
