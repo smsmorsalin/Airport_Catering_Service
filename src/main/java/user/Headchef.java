@@ -21,34 +21,34 @@ public class Headchef extends Employee{
         return true;
     }
 
-    public static void renderDashboard(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/Dashboard.fxml");
+    public static void renderDashboardView(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DashboardView.fxml");
     }
 
     public static void renderDisplayCookingProgress(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayCookingProgress.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayCookingProgressView.fxml");
     }
 
     public static void renderDisplayPreparationProgress(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayPreparationProgress.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayPreparationProgressView.fxml");
     }
     public static void renderProductionTaskInformation(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayProductionTaskInformation.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayProductionTaskInformationView.fxml");
     }
     public static void renderDisplayUpdateConfirmation(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayUpdateConfirmation.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayUpdateConfirmationView.fxml");
     }
     public static void renderHandleRejectedFoodBatches(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/HandleRejectedFoodBatches.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/HandleRejectedFoodBatchesView.fxml");
     }
     public static void renderManageMealPreparation(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/ManageMealPreparation.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/ManageMealPreparationView.fxml");
     }
-    public static void renderProductionTaskView(javafx.event.ActionEvent event) throws IOException{
+    public static void renderProductionTask(javafx.event.ActionEvent event) throws IOException{
         SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/ProductionTaskView.fxml");
     }
     public static void renderViewKitchenPerformanceReport(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/ViewKitchenPerformanceReport.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/ViewKitchenPerformanceReportView.fxml");
     }
 
 }

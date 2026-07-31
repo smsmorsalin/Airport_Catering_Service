@@ -2,7 +2,11 @@ package main.airport_catering_service.controller.truck_operator;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import user.Truckoperator;
+
+import java.io.IOException;
 
 public class AcceptAssignmentController
 {
@@ -23,11 +27,9 @@ public class AcceptAssignmentController
     @javafx.fxml.FXML
     private TextField assignmentIdField;
     @javafx.fxml.FXML
-    private TextField deliveryTimeField;
-    @javafx.fxml.FXML
-    private Button rejectButton;
-    @javafx.fxml.FXML
     private Button acceptButton;
+    @javafx.fxml.FXML
+    private DatePicker deliverytimeDatePicker;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -38,15 +40,23 @@ public class AcceptAssignmentController
     }
 
     @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) {
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        Truckoperator.renderDashboardView(actionEvent);
+
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void rejectAssignment(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void clearForm(ActionEvent actionEvent) {
+        assignmentIdField.clear();
+        flightNumberField.clear();
+        orderIdField.clear();
+        airlineField.clear();
+        locationField.clear();
+
     }
 
     @javafx.fxml.FXML

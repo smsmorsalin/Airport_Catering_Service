@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.truck_operator;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.Truckoperator;
+
+import java.io.IOException;
 
 public class ReportDeliveryIssueController
 {
@@ -53,7 +56,8 @@ public class ReportDeliveryIssueController
     }
 
     @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) {
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        Truckoperator.renderDashboardView(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -61,10 +65,14 @@ public class ReportDeliveryIssueController
     }
 
     @javafx.fxml.FXML
-    public void refreshTable(ActionEvent actionEvent) {
+    public void refreshTable(ActionEvent actionEvent) throws IOException {
+        Truckoperator.renderReportDeliveryProblemsView(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void clearForm(ActionEvent actionEvent) {
+        assignmentIdField.clear();
+        locationField.clear();
+        descriptionTextArea.clear();
     }
 }

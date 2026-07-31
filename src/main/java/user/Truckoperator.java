@@ -1,5 +1,7 @@
 package user;
 
+import utility.SceneSwitchingHelper;
+
 import java.io.IOException;
 import java.time.LocalDate;
 
@@ -17,5 +19,39 @@ public class Truckoperator extends Employee {
     @Override
     public boolean updateProfile(){
         return true;
+    }
+
+    public static void renderDashboardView(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/DashboardView.fxml");
+    }
+
+    public static void renderAcceptDeliveryAssignmentView(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/AcceptDeliveryAssignmentView.fxml");
+    }
+
+    public static void renderCollectPackagedCateringOrdersView(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/CollectPackagedCateringOrdersView.fxml");
+    }
+
+    public static void renderConfirmAircraftDeliveryView(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/ConfirmAircraftDeliveryView.fxml");
+    }
+
+    public static void renderDisplayDepartureConfirmationView(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/DisplayDepartureConfirmationView.fxml");
+    }
+
+    public static void renderReportDeliveryProblemsView(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/ReportDeliveryProblemsView.fxml");
+    }
+
+    public static void renderStartDeliveryView(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/StartDeliveryTripView.fxml");
+    }
+    public static void renderAssignmentDeliveryTasksView(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/AssignedDeliveryTasksView.fxml");
+    }
+    public static void renderDeliveryHistoryView(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/DeliveryHistoryView.fxml");
     }
 }
