@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/Ingredient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruckView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruckView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/DashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/DashboardView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/EmergencyDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/EmergencyDeliveryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/GenerateDispatchReportView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/GenerateDispatchReportView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ManageDeliveryDelayView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ManageDeliveryDelayView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/PackageOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/PackageOrderView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/createPurchaseRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/createPurchaseRequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/updateInventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/updateInventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventoryManager/CheckIngredientAvailabilityView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventoryManager/CheckIngredientAvailabilityView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventoryManager/CreatePurchaseRequestView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventoryManager/CreatePurchaseRequestView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventoryManager/UpdateInventoryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventoryManager/UpdateInventoryView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +181,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784673028203</updated>
-      <workItem from="1785503002013" duration="305000" />
+      <workItem from="1785503002013" duration="4808000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
       <option name="closed" value="true" />
