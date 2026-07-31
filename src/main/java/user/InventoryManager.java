@@ -23,5 +23,35 @@ public class InventoryManager extends Employee{
         SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/CheckIngredientAvailabilityView.fxml");
     }
 
+    public static void renderCreatePurchaseRequest(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/CreatePurchaseRequestView.fxml");
+    }
 
+    public static void renderDashboard(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/DashboardView.fxml");
+    }
+
+    public static void renderGenerateInventoryReport(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/GenerateInventoryReportView.fxml");
+    }
+
+    public static void renderLowStockAlert(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/LowStockAlertView.fxml");
+    }
+
+    public static void renderManageSupplier(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/ManageSupplierView.fxml");
+    }
+
+    public static void renderReceiveIngredient(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/ReceiveIngredientView.fxml");
+    }
+
+    public static void renderReserveIngredient(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/ReserveIngredientView.fxml");
+    }
+
+    public static void renderUpdateInventory(javafx.event.ActionEvent event) throws IOException{
+        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/UpdateInventoryView.fxml");
+    }
 }

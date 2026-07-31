@@ -41,7 +41,8 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void manageSupplierButtonOnAction(ActionEvent actionEvent) {
+    public void manageSupplierButtonOnAction(ActionEvent actionEvent) throws IOException{
+        InventoryManager.renderManageSupplier(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -50,19 +51,23 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void updateInventoryButtonOnAction(ActionEvent actionEvent) {
+    public void updateInventoryButtonOnAction(ActionEvent actionEvent) throws IOException{
+        InventoryManager.renderUpdateInventory(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void createPurchaseRequestButtonOnAction(ActionEvent actionEvent) {
+    public void createPurchaseRequestButtonOnAction(ActionEvent actionEvent) throws IOException{
+        InventoryManager.renderCreatePurchaseRequest(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void generateInventoryReportButtonOnAction(ActionEvent actionEvent) {
+    public void generateInventoryReportButtonOnAction(ActionEvent actionEvent)throws IOException {
+        InventoryManager.renderGenerateInventoryReport(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void lowStockAlertButtonOnAction(ActionEvent actionEvent) {
+    public void lowStockAlertButtonOnAction(ActionEvent actionEvent) throws IOException{
+        InventoryManager.renderLowStockAlert(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -71,10 +76,12 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void reserveIngredientButtonOnAction(ActionEvent actionEvent) {
+    public void reserveIngredientButtonOnAction(ActionEvent actionEvent) throws IOException{
+        InventoryManager.renderReserveIngredient(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void receiveIngredientButtonOnAction(ActionEvent actionEvent) {
+    public void receiveIngredientButtonOnAction(ActionEvent actionEvent)throws IOException {
+        InventoryManager.renderReceiveIngredient(actionEvent);
     }
 }

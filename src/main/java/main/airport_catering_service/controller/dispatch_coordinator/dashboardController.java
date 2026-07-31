@@ -41,11 +41,13 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void monitorDeliveryButtonOnAction(ActionEvent actionEvent) {
+    public void monitorDeliveryButtonOnAction(ActionEvent actionEvent) throws IOException{
+        DispatchCoordinator.renderMonitorDelivery(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void scheduleDeliveryButtonOnAction(ActionEvent actionEvent) {
+    public void scheduleDeliveryButtonOnAction(ActionEvent actionEvent) throws IOException{
+        DispatchCoordinator.renderScheduleDelivery(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -54,7 +56,8 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void packageOrderButtonOnAction(ActionEvent actionEvent) {
+    public void packageOrderButtonOnAction(ActionEvent actionEvent)throws IOException {
+        DispatchCoordinator.renderPackageOrder(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -63,18 +66,22 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void receiveDispatchRequestButtonOnAction(ActionEvent actionEvent) {
+    public void receiveDispatchRequestButtonOnAction(ActionEvent actionEvent)throws IOException {
+        DispatchCoordinator.renderReceiveDispatchRequest(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void manageDeliveryDelayButtonOnAction(ActionEvent actionEvent) {
+    public void manageDeliveryDelayButtonOnAction(ActionEvent actionEvent) throws IOException{
+        DispatchCoordinator.renderManageDeliveryDelay(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void generateDispatchReportButtonOnAction(ActionEvent actionEvent) {
+    public void generateDispatchReportButtonOnAction(ActionEvent actionEvent)throws IOException {
+        DispatchCoordinator.renderGenerateDispatchReport(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void emergencyDeliveryButtonOnAction(ActionEvent actionEvent) {
+    public void emergencyDeliveryButtonOnAction(ActionEvent actionEvent)throws IOException {
+        DispatchCoordinator.renderEmergencyDelivery(actionEvent);
     }
 }
