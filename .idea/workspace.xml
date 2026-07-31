@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="create SuperAdmin, createNewEmployeeView.fxml, createNewEmployeeController">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryConfirmation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/Invoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/flightDelayViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/flightDelayViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/confirmDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/confirmDeliveryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/flightDelayView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/flightDelayView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/truckOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/truckOrderView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Create a BluePrint of AirlineRepresentative how all method will be implimentable and also create Invoice, Payment non-user, DeliveryConfirmation classes." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,61 +43,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.4351574711230349E-11" />
-      <entry key="MS500" value="0.006782345528133145" />
-      <entry key="S2" value="0.28697560346375045" />
-      <entry key="S5" value="0.6069291423777569" />
-      <entry key="S10" value="0.7790565720008765" />
-      <entry key="S30" value="0.9201457500826554" />
-      <entry key="S60" value="0.9601362460447774" />
-      <entry key="M2" value="1.0295473094734335" />
-      <entry key="M5" value="2.0394419979689573" />
-      <entry key="M10" value="6.1114210562940965" />
-      <entry key="M15" value="12.026700696092323" />
-      <entry key="M30" value="33.72081474188674" />
-      <entry key="H1" value="76.26584541806425" />
-      <entry key="H2" value="137.78491542140517" />
-      <entry key="H4" value="207.39515259709958" />
-      <entry key="D1" value="339.6787815711749" />
-      <entry key="W1" value="378.7284727520378" />
+      <entry key="MS100" value="5.005634832760369E-12" />
+      <entry key="MS500" value="0.006569815498139926" />
+      <entry key="S2" value="0.47921000024565574" />
+      <entry key="S5" value="1.8077394389876758" />
+      <entry key="S10" value="4.393079862686441" />
+      <entry key="S30" value="14.932385899891232" />
+      <entry key="S60" value="24.01835879414763" />
+      <entry key="M2" value="31.499222290525218" />
+      <entry key="M5" value="38.02065669699318" />
+      <entry key="M10" value="43.187994826384156" />
+      <entry key="M15" value="48.843065111791766" />
+      <entry key="M30" value="69.49328983101931" />
+      <entry key="H1" value="111.4795045933634" />
+      <entry key="H2" value="173.69733794064905" />
+      <entry key="H4" value="244.8182242828831" />
+      <entry key="D1" value="380.429436755799" />
+      <entry key="W1" value="420.5294586964892" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.000006844190745" />
-      <entry key="S5" value="1.0149553794190038" />
-      <entry key="S10" value="1.2073303491125014" />
-      <entry key="S30" value="2.224952221986073" />
-      <entry key="S60" value="2.9157657168525093" />
-      <entry key="M2" value="3.3992727734169703" />
-      <entry key="M5" value="4.110977105342712" />
-      <entry key="M10" value="7.225733314980888" />
-      <entry key="M15" value="12.369546624126283" />
-      <entry key="M30" value="32.10923449321888" />
-      <entry key="H1" value="69.37179551410657" />
-      <entry key="H2" value="118.47317171767382" />
-      <entry key="H4" value="170.81700695984338" />
-      <entry key="D1" value="266.909098787041" />
-      <entry key="W1" value="294.8195666907885" />
+      <entry key="MS500" value="1.0000000000005416" />
+      <entry key="S2" value="1.0008919509906327" />
+      <entry key="S5" value="1.0757304837200583" />
+      <entry key="S10" value="1.3786507420022271" />
+      <entry key="S30" value="2.321744845441722" />
+      <entry key="S60" value="2.9553923265877384" />
+      <entry key="M2" value="3.6431301876671007" />
+      <entry key="M5" value="5.180148763680219" />
+      <entry key="M10" value="8.146495128941446" />
+      <entry key="M15" value="12.635954869884102" />
+      <entry key="M30" value="30.92473491631634" />
+      <entry key="H1" value="67.55610799725049" />
+      <entry key="H2" value="117.40754008333224" />
+      <entry key="H4" value="171.12799618716957" />
+      <entry key="D1" value="269.94020398571354" />
+      <entry key="W1" value="298.6664559379652" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.2563874694568941E-10" />
-      <entry key="MS500" value="0.011003609304893714" />
-      <entry key="S2" value="0.4720582682113569" />
-      <entry key="S5" value="1.1181587489867513" />
-      <entry key="S10" value="1.6781740797972449" />
-      <entry key="S30" value="3.0102063939235832" />
-      <entry key="S60" value="3.79990349589005" />
-      <entry key="M2" value="4.387889348805688" />
-      <entry key="M5" value="6.130654287493096" />
-      <entry key="M10" value="13.31546365210048" />
-      <entry key="M15" value="24.367228627257933" />
-      <entry key="M30" value="65.78634480276126" />
-      <entry key="H1" value="145.6110787108093" />
-      <entry key="H2" value="258.77452071100464" />
-      <entry key="H4" value="408.6039290633115" />
-      <entry key="D1" value="857.8376100225298" />
-      <entry key="W1" value="1035.7453800443845" />
+      <entry key="MS100" value="5.3836615939234924E-9" />
+      <entry key="MS500" value="0.028657965936067" />
+      <entry key="S2" value="0.8639319703309207" />
+      <entry key="S5" value="2.5433446252353953" />
+      <entry key="S10" value="5.534994965579986" />
+      <entry key="S30" value="17.10795905751966" />
+      <entry key="S60" value="26.876563883613056" />
+      <entry key="M2" value="35.08194413277216" />
+      <entry key="M5" value="43.168132088663" />
+      <entry key="M10" value="51.30824657830046" />
+      <entry key="M15" value="61.44949880147167" />
+      <entry key="M30" value="100.37672877185561" />
+      <entry key="H1" value="179.00895985146477" />
+      <entry key="H2" value="293.51280380840126" />
+      <entry key="H4" value="445.68209724990146" />
+      <entry key="D1" value="900.7081379442789" />
+      <entry key="W1" value="1081.2053094541416" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -343,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785450340535</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Create a BluePrint of AirlineRepresentative how all method will be implimentable and also create Invoice, Payment non-user, DeliveryConfirmation classes.">
+      <option name="closed" value="true" />
+      <created>1785457420665</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1785457420665</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,6 +368,7 @@
     <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="create and impliment non-user classes Meal, OrderItem. cateringOrder.&#10;&#10;create interface Report." />
     <MESSAGE value="create SuperAdmin, createNewEmployeeView.fxml, createNewEmployeeController" />
-    <option name="LAST_COMMIT_MESSAGE" value="create SuperAdmin, createNewEmployeeView.fxml, createNewEmployeeController" />
+    <MESSAGE value="Create a BluePrint of AirlineRepresentative how all method will be implimentable and also create Invoice, Payment non-user, DeliveryConfirmation classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create a BluePrint of AirlineRepresentative how all method will be implimentable and also create Invoice, Payment non-user, DeliveryConfirmation classes." />
   </component>
 </project>
