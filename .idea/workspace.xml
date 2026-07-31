@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateProductionPlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateProductionPlanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateProductionScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateProductionScheduleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/CreateProductionSchedule.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/CreateProductionSchedule.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +134,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
@@ -387,7 +381,23 @@
       <option name="project" value="LOCAL" />
       <updated>1785518825242</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785521290464</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1785521290464</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785521312753</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1785521312753</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,13 +420,13 @@
     <MESSAGE value="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes." />
     <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java&#10;#&#9;src/main/java/module-info.java" />
     <MESSAGE value="moduleoinfo update for food quality and kitchen controller" />
-    <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="create and impliment non-user classes Meal, OrderItem. cateringOrder.&#10;&#10;create interface Report." />
     <MESSAGE value="create SuperAdmin, createNewEmployeeView.fxml, createNewEmployeeController" />
     <MESSAGE value="Create a BluePrint of AirlineRepresentative how all method will be implimentable and also create Invoice, Payment non-user, DeliveryConfirmation classes." />
     <MESSAGE value="create BinaryFileUtility class to read and write object from database." />
     <MESSAGE value="working with createCateringOrderViewController my pc stuck so i have to push the code." />
-    <option name="LAST_COMMIT_MESSAGE" value="working with createCateringOrderViewController my pc stuck so i have to push the code." />
+    <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
 </project>
