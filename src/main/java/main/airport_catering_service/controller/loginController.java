@@ -136,5 +136,15 @@ public class loginController
             stage.show();
         }
 
+        else if (fxidUsernameTextField.getText().equals("admin")) {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/main/airport_catering_service/createNewEmployeeView.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+
     }
 }

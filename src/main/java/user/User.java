@@ -17,7 +17,7 @@ public abstract class User {
     private String password;
     protected String role;
     protected String fullName;
-    protected final String dateOfBirth;
+    protected final LocalDate dateOfBirth;
     protected final String gender;
     protected String email;
     protected String phone;
@@ -25,7 +25,7 @@ public abstract class User {
     protected String status;
     protected final LocalDate createDate;
 
-    public User(int userId, String password, String fullName, String role, String dateOfBirth, String gender, String email, String phone, String address, String status) {
+    public User(int userId, String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status) {
         this.userId = userId;
         this.createDate = LocalDate.now();
         this.status = status;
@@ -95,7 +95,7 @@ public abstract class User {
         return createDate;
     }
 
-    public String getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
