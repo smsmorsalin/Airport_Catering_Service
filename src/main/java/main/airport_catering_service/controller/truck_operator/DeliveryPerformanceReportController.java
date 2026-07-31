@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.truck_operator;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.Truckoperator;
+
+import java.io.IOException;
 
 public class DeliveryPerformanceReportController
 {
@@ -47,18 +50,17 @@ public class DeliveryPerformanceReportController
     private TableColumn deliveryTimeColumn;
     @javafx.fxml.FXML
     private ProgressBar onTimeProgressBar;
-    @javafx.fxml.FXML
-    private Button resetButton;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) {
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        Truckoperator.renderDashboardView(actionEvent);
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void resetFilter(ActionEvent actionEvent) {
     }
 
@@ -75,6 +77,7 @@ public class DeliveryPerformanceReportController
     }
 
     @javafx.fxml.FXML
-    public void refreshReport(ActionEvent actionEvent) {
+    public void refreshReport(ActionEvent actionEvent) throws IOException {
+        Truckoperator.renderDeliveryHistoryView(actionEvent);
     }
 }
