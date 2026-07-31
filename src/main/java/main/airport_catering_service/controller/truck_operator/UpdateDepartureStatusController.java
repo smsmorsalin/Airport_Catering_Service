@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.truck_operator;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.Truckoperator;
+
+import java.io.IOException;
 
 public class UpdateDepartureStatusController
 {
@@ -41,7 +44,8 @@ public class UpdateDepartureStatusController
     }
 
     @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) {
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        Truckoperator.renderDashboardView(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -50,5 +54,13 @@ public class UpdateDepartureStatusController
 
     @javafx.fxml.FXML
     public void resetForm(ActionEvent actionEvent) {
+        assignmentIdField.clear();
+        departureTimeField.clear();
+        orderIdField.clear();
+        flightNumberField.clear();
+        remarksTextArea.clear();
+        airlineField.clear();
+        locationField.clear();
+
     }
 }

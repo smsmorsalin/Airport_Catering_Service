@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.truck_operator;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.Truckoperator;
+
+import java.io.IOException;
 
 public class ViewAssignedDeliveriesController
 {
@@ -17,8 +20,6 @@ public class ViewAssignedDeliveriesController
     private TableColumn assignmentIdColumn;
     @javafx.fxml.FXML
     private TextField assignmentIdField;
-    @javafx.fxml.FXML
-    private Button clearButton;
     @javafx.fxml.FXML
     private TableColumn flightNumberColumn;
     @javafx.fxml.FXML
@@ -39,15 +40,19 @@ public class ViewAssignedDeliveriesController
     }
 
     @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) {
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        Truckoperator.renderDashboardView(actionEvent);
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void clearSearch(ActionEvent actionEvent) {
+        assignmentIdField.clear();
+
     }
 
     @javafx.fxml.FXML
-    public void refreshTable(ActionEvent actionEvent) {
+    public void refreshTable(ActionEvent actionEvent) throws IOException {
+        Truckoperator.renderAssignmentDeliveryTasksView(actionEvent);
     }
 
     @javafx.fxml.FXML

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="850" prefWidth="1300" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.truck_operator.DeliveryPerformanceReportController">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8" style="-fx-background-color: linear-gradient(to right,#1F618D,#3498DB);">
+
+            <padding>
+                <Insets bottom="20" left="25" right="25" top="20" />
+            </padding>
+
+            <Label text="📊 Delivery Performance Report">
+
+                <font>
+                    <Font size="30" />
+                </font>
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+
+            </Label>
+
+            <Label text="View delivery performance and transportation statistics">
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-size:15;
+                </style>
+
+            </Label>
+
+        </VBox>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="18">
+
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+
+            <!-- Filter -->
+
+            <TitledPane collapsible="false" expanded="true" text="Report Filters">
+
+                <content>
+
+                    <GridPane hgap="20" vgap="15">
+
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+
+                        <Label text="From Date" />
+
+                        <DatePicker fx:id="fromDatePicker" GridPane.columnIndex="1" />
+
+                        <Label text="To Date" GridPane.columnIndex="2" />
+
+                        <DatePicker fx:id="toDatePicker" GridPane.columnIndex="3" />
+
+                        <Button fx:id="generateReportButton" onAction="#generateReport" prefWidth="160" style="-fx-background-color:#27AE60;-fx-text-fill:white;-fx-font-weight:bold;" text="Generate Report" GridPane.columnIndex="4" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- Summary -->
+
+            <TitledPane collapsible="false" expanded="true" text="Delivery Summary">
+
+                <content>
+
+                    <GridPane hgap="30" vgap="18">
+
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+
+                        <Label text="Total Deliveries" />
+                        <Label fx:id="totalDeliveriesLabel" text="0" GridPane.columnIndex="1" />
+
+                        <Label text="Successful Deliveries" GridPane.columnIndex="2" />
+                        <Label fx:id="successfulDeliveriesLabel" text="0" GridPane.columnIndex="3" />
+
+                        <Label text="Delayed Deliveries" GridPane.rowIndex="1" />
+                        <Label fx:id="delayedDeliveriesLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label text="Reported Issues" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="reportedIssuesLabel" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                        <Label text="On-Time Delivery Rate" GridPane.rowIndex="2" />
+                        <ProgressBar fx:id="onTimeProgressBar" prefWidth="250" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- Report Table -->
+
+            <TitledPane collapsible="false" expanded="true" text="Delivery Report" VBox.vgrow="ALWAYS">
+
+                <content>
+
+                    <TableView fx:id="reportTable">
+
+                        <columns>
+
+                            <TableColumn fx:id="assignmentIdColumn" prefWidth="130" text="Assignment ID" />
+
+                            <TableColumn fx:id="orderIdColumn" prefWidth="120" text="Order ID" />
+
+                            <TableColumn fx:id="flightNumberColumn" prefWidth="130" text="Flight" />
+
+                            <TableColumn fx:id="airlineColumn" prefWidth="170" text="Airline" />
+
+                            <TableColumn fx:id="destinationColumn" prefWidth="180" text="Destination" />
+
+                            <TableColumn fx:id="deliveryTimeColumn" prefWidth="180" text="Delivery Time" />
+
+                            <TableColumn fx:id="statusColumn" prefWidth="150" text="Status" />
+
+                            <TableColumn fx:id="remarksColumn" prefWidth="220" text="Remarks" />
+
+                        </columns>
+
+                    </TableView>
+
+                </content>
+
+            </TitledPane>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER_RIGHT" spacing="15" style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets bottom="15" left="20" right="20" top="15" />
+            </padding>
+
+            <Button fx:id="exportPdfButton" onAction="#exportPDF" prefWidth="140" style="-fx-background-color:#8E44AD;-fx-text-fill:white;-fx-font-weight:bold;" text="Export PDF" />
+
+            <Button fx:id="printButton" onAction="#printReport" prefWidth="140" style="-fx-background-color:#2980B9;-fx-text-fill:white;-fx-font-weight:bold;" text="Print Report" />
+
+            <Button fx:id="refreshButton" onAction="#refreshReport" prefWidth="120" style="-fx-background-color:#16A085;-fx-text-fill:white;-fx-font-weight:bold;" text="Refresh" />
+
+            <Button fx:id="backButton" onAction="#goBack" prefWidth="120" style="-fx-background-color:#E74C3C;-fx-text-fill:white;-fx-font-weight:bold;" text="Back" />
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>
