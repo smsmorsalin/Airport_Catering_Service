@@ -44,7 +44,7 @@ public class MonitorProductionActivitiesController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
@@ -81,7 +81,7 @@ public class MonitorProductionActivitiesController
     public void sideBarassignKitchenStaffOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void refreshOnAction(ActionEvent actionEvent) {
     }
 

@@ -32,11 +32,11 @@ public class CalculateIngredientRequirementsController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void searchOnAction(ActionEvent actionEvent) {
     }
 
