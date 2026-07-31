@@ -1,6 +1,5 @@
 package user;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -10,7 +9,6 @@ import utility.SceneSwitchingHelper;
 
 
 import java.io.IOException;
-import java.net.URL;
 import java.time.LocalDate;
 
 public class KitchenProductionManager extends  Employee{
@@ -59,12 +57,9 @@ public class KitchenProductionManager extends  Employee{
     public static void  viewCreateProductionPlan(javafx.event.ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(
                 KitchenProductionManager.class.getResource("/KitchenProductionManager/CreateProductionPlan.fxml"));
-
         Parent root = loader.load();
-
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
-
         stage.setScene(scene);
         stage.show();
     }
