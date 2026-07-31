@@ -1,11 +1,8 @@
 package main.airport_catering_service.controller.truck_operator;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import user.Truckoperator;
-import user.User;
-
-import java.io.IOException;
 
 public class TruckOperatorDashboardController
 {
@@ -33,47 +30,38 @@ public class TruckOperatorDashboardController
     }
 
     @javafx.fxml.FXML
-    public void collectShipment(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderCollectPackagedCateringOrders(actionEvent);
+    public void collectShipment(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void updateTransitStatus(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderDisplayDepartureConfirmation(actionEvent);
+    public void updateTransitStatus(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void logout(ActionEvent actionEvent) throws IOException {
-        User.logout(actionEvent);
+    public void logout(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void updateDepartureStatus(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderStartDeliveryTrip(actionEvent);
+    public void updateDepartureStatus(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void viewAssignedDeliveries(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderViewAssignedDeliveryTasks(actionEvent);
+    public void viewAssignedDeliveries(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void deliveryPerformanceReport(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderviewDeliveryHistory(actionEvent);
+    public void deliveryPerformanceReport(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void confirmDelivery(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderConfirmAircraftDelivery(actionEvent);
+    public void confirmDelivery(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void acceptAssignment(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderAcceptDeliveryAssignment(actionEvent);
+    public void acceptAssignment(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void reportDeliveryIssue(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderReportDeliveryProblems(actionEvent);
+    public void reportDeliveryIssue(ActionEvent actionEvent) {
     }
 }

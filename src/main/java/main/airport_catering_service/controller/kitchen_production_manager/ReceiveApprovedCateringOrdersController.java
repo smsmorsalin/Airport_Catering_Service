@@ -32,79 +32,52 @@ public class ReceiveApprovedCateringOrdersController
     @FXML
     private TextField orderIDTextField1;
 
-    @FXML
-    private AnchorPane anchorPan;
-
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void searchOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void confirmOnAction(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void sidebarAirporCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException {
-//        FXMLLoader fxmlL =  new FXMLLoader(dashboardViewController.class.getResource("dashboardView"));
-//        Node node = fxmlL.load();
-//        mainPane.getChildren().setAll(node);
-
-        FXMLLoader registerFXML = new FXMLLoader(getClass().getResource("/main/airport_catering_service/dashboardView.fxml"));
-        Node node = registerFXML.load();
-        anchorPan.getChildren().setAll(node);
-
-    }
-
-    @Deprecated
-    public void manageMealPreparationOnAction(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void assignKitchenStaffOnAction(ActionEvent actionEvent) {
-    }
-
     @FXML
-    public void sideBarmanageMealPreparationOnAction(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void sideBarHandleRejectedBatchOnAction(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void sideBarRequestQualityInspectionOnAction(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void sideBarUpdateProductionStatusOnAction(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void sideBarMonitorCookingProgressOnAction(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void sideBarassignKitchenStaffOnAction(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws  IOException{
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent)throws IOException {
         KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
     @FXML
-    public void sideBarKitchenPerformanceReportOnAction(ActionEvent actionEvent) {
+    public void sideBarProductionReportsOA(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void sideBarApproveProductionOA(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void sideBarProductionPlanOA(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void sideBarMonitorProductionOA(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void confirmOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void sideBarCalculateIngredientOA(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void sideBarProductionScheduleOA(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void sideBarMenuListOA(ActionEvent actionEvent) {
     }
 }

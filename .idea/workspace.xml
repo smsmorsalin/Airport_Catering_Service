@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/TruckOperatorDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/headchef/HeadChefDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/headchef/HeadChefDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/Headchef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Headchef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/AcceptDeliveryAssignment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/AcceptDeliveryAssignmentView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/CollectPackagedCateringOrders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/CollectPackagedCateringOrdersView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/ConfirmAircraftDelivery.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/ConfirmAircraftDeliveryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/DashboardView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/DisplayDepartureConfirmation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/DisplayDepartureConfirmationView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/ReportDeliveryProblems.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/ReportDeliveryProblemsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/StartDeliveryTrip.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/StartDeliveryTripView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/ViewAssignedDeliveryTasks.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/ViewAssignedDeliveryTasksView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TruckOperator/viewDeliveryHistory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TruckOperator/viewDeliveryHistoryView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -37,17 +23,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
+  &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;Saif-kaif&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="GithubPullRequestsUISettings">{
-    &quot;selectedUrlAndAccountId&quot;: {
+  &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
-    &quot;accountId&quot;: &quot;09b4b316-9114-4bc1-8e76-96925cab0536&quot;
-    }
-    }</component>
+    &quot;accountId&quot;: &quot;ef1e225f-e8df-4381-ba31-5fa2f4c0db29&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -58,98 +44,123 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000000000846" />
-      <entry key="S2" value="1.0005391600112892" />
-      <entry key="S5" value="1.0495300159089662" />
-      <entry key="S10" value="1.2495334478501305" />
-      <entry key="S30" value="2.473031464743272" />
-      <entry key="S60" value="4.009270822068966" />
-      <entry key="M2" value="5.53019398132509" />
-      <entry key="M5" value="7.702629747650558" />
-      <entry key="M10" value="11.074238065559728" />
-      <entry key="M15" value="13.591684755105325" />
-      <entry key="M30" value="17.588412543883464" />
-      <entry key="H1" value="20.414161499543535" />
-      <entry key="H2" value="22.100063127602326" />
-      <entry key="H4" value="23.02160965681413" />
-      <entry key="D1" value="23.83283740515582" />
-      <entry key="W1" value="23.97601726466647" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000000000075" />
+      <entry key="S10" value="1.0000000993661684" />
+      <entry key="S30" value="1.0171173064602408" />
+      <entry key="S60" value="1.5327094311467562" />
+      <entry key="M2" value="4.533780414620593" />
+      <entry key="M5" value="14.782331585835186" />
+      <entry key="M10" value="26.166320983612373" />
+      <entry key="M15" value="33.72393003213696" />
+      <entry key="M30" value="47.38740799803089" />
+      <entry key="H1" value="60.519581114564865" />
+      <entry key="H2" value="76.93091219850089" />
+      <entry key="H4" value="101.93625593594467" />
+      <entry key="D1" value="157.61804521742664" />
+      <entry key="W1" value="173.98435006032142" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
+      <entry key="MS100" value="8.580789852337981E-68" />
+      <entry key="MS500" value="3.861050244464448E-14" />
+      <entry key="S2" value="4.436706054195399E-4" />
+      <entry key="S5" value="0.049655926511527115" />
+      <entry key="S10" value="0.3042408746715648" />
+      <entry key="S30" value="1.3953742026533322" />
+      <entry key="S60" value="2.329650326581824" />
+      <entry key="M2" value="3.5311082567616365" />
+      <entry key="M5" value="6.097369207301873" />
+      <entry key="M10" value="9.310650117729296" />
+      <entry key="M15" value="12.361285187138192" />
+      <entry key="M30" value="20.528075184212017" />
+      <entry key="H1" value="31.199157048419444" />
+      <entry key="H2" value="45.43728830153153" />
+      <entry key="H4" value="65.46612923421212" />
+      <entry key="D1" value="107.00297375710375" />
+      <entry key="W1" value="118.83268811953398" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9012504626108302" />
-      <entry key="MS500" value="0.9794202975870101" />
-      <entry key="S2" value="0.9953521801602974" />
-      <entry key="S5" value="1.0473839068120858" />
-      <entry key="S10" value="1.2482913379621394" />
-      <entry key="S30" value="2.4712609600742406" />
-      <entry key="S60" value="4.0068611520736725" />
-      <entry key="M2" value="5.528067058323306" />
-      <entry key="M5" value="7.701237760707372" />
-      <entry key="M10" value="11.073138284920766" />
-      <entry key="M15" value="13.59074914573194" />
-      <entry key="M30" value="17.587782575103482" />
-      <entry key="H1" value="20.413788741504202" />
-      <entry key="H2" value="22.09985944043771" />
-      <entry key="H4" value="23.021503072261012" />
-      <entry key="D1" value="23.832818944529972" />
-      <entry key="W1" value="23.976014609858876" />
+      <entry key="MS100" value="5.020087044219075E-4" />
+      <entry key="MS500" value="0.21884783242357542" />
+      <entry key="S2" value="0.6842796049478818" />
+      <entry key="S5" value="0.9019241684929217" />
+      <entry key="S10" value="1.2070998849601684" />
+      <entry key="S30" value="2.344974730588289" />
+      <entry key="S60" value="3.8099604745937885" />
+      <entry key="M2" value="8.01670361467573" />
+      <entry key="M5" value="20.8325603563181" />
+      <entry key="M10" value="35.43704132230373" />
+      <entry key="M15" value="46.05019372901097" />
+      <entry key="M30" value="67.88901215518317" />
+      <entry key="H1" value="92.01089390796872" />
+      <entry key="H2" value="131.84631277892922" />
+      <entry key="H4" value="225.9882797539889" />
+      <entry key="D1" value="544.8813131497598" />
+      <entry key="W1" value="660.7124099066149" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
     &quot;associatedIndex&quot;: 7
     }</component>
   <component name="ProjectId" id="3GpedlUA9Dw7O7qeNlxSVSDPNma" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "Mahir",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;saif&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="javafx" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
       </set>
     </attachedChunks>
   </component>
@@ -169,10 +180,183 @@
       <option name="project" value="LOCAL" />
       <updated>1784811645918</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="romy">
+      <option name="closed" value="true" />
+      <created>1785190035144</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1785190035144</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <option name="closed" value="true" />
+      <created>1785193746539</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1785193746539</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java&#10;#&#9;src/main/java/module-info.java">
+      <option name="closed" value="true" />
+      <created>1785221293823</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1785221293823</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java&#10;#&#9;src/main/java/module-info.java">
+      <option name="closed" value="true" />
+      <created>1785221738546</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1785221738546</updated>
+    </task>
+    <task id="LOCAL-00006" summary="moduleoinfo update for food quality and kitchen controller">
+      <option name="closed" value="true" />
+      <created>1785225398604</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1785225398604</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785240187654</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1785240187654</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785242393483</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1785242393483</updated>
+    </task>
+    <task id="LOCAL-00009" summary="pull">
+      <option name="closed" value="true" />
+      <created>1785261781498</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1785261781498</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785352529531</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1785352529531</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785358092539</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1785358092539</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785360567919</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1785360567919</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785361970408</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1785361970408</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785363121630</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1785363121630</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785389375710</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1785389375710</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785389663746</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1785389663746</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785414239538</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1785414239538</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785418907497</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1785418907497</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/user/FoodQualityControlOfficer.java&#10;#&#9;src/main/java/user/KitchenProductionManager.java">
+      <option name="closed" value="true" />
+      <created>1785445428587</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1785445428587</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785476941808</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1785476941808</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change HelloApplication" />
+    <MESSAGE value="Inmpliment generateReportView.fxml" />
+    <MESSAGE value="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes." />
+    <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java&#10;#&#9;src/main/java/module-info.java" />
+    <MESSAGE value="moduleoinfo update for food quality and kitchen controller" />
+    <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
 </project>

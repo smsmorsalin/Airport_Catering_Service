@@ -20,10 +20,6 @@ public class flightDelayViewController
     @javafx.fxml.FXML
     private DatePicker fxidDelayFlightDateDatePicker;
     @javafx.fxml.FXML
-    private ComboBox fxidDelayDepartureTimeHourComboBox;
-    @javafx.fxml.FXML
-    private ComboBox fxidDelayDepartureTimeMinuteComboBox;
-    @javafx.fxml.FXML
     private Label fxidOrderedFlightDepartureTimeLabel;
     @javafx.fxml.FXML
     private ComboBox fxidDelayDeliveryTimeHourComboBox;
