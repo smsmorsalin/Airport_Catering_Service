@@ -7,15 +7,19 @@ import nonuser.Flight;
 import nonuser.Meal;
 import nonuser.OrderItem;
 import user.AirlineRepresentative;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 import utility.BinaryFileUtility;
+import utility.SceneSwitchingHelper;
 import utility.databaseAccessor;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class createCateringOrderViewController
+public class createCateringOrderViewController implements UserReceiver
 {
     @javafx.fxml.FXML
     private ComboBox<Integer> fxidDeliveryTimeHourComboBox;
@@ -42,6 +46,17 @@ public class createCateringOrderViewController
     @javafx.fxml.FXML
     private TableColumn<OrderItem, Integer> tableColMealQuantity;
 
+    private AirlineRepresentative loggedInUser;
+
+    @Override
+    public void setLoggedInUser(User user) {
+        if (user instanceof AirlineRepresentative airlineRepresentative) {
+            this.loggedInUser = airlineRepresentative;
+        } else {
+            AlertGenerator.showAlert("Error", "Invalid user for this page.");
+        }
+    }
+
     ArrayList<OrderItem> orderItemList = new ArrayList<>();
     ArrayList<Object> readMealList;
 
@@ -54,20 +69,28 @@ public class createCateringOrderViewController
             readMealList = new ArrayList<>();
         }
 
+        mealListComboBox.getItems().clear();
+
         for (Object mealObject : readMealList) {
             if (mealObject instanceof Meal meal) {
                 mealListComboBox.getItems().add(meal.getMealName());
             }
         }
 
-        for (int i = 0; i < 24; i++) {
-            fxidDeliveryTimeHourComboBox.getItems().add(i);
-            fxidDepartureTimeHourComboBox.getItems().add(i);
+        fxidDeliveryTimeHourComboBox.getItems().clear();
+        fxidDepartureTimeHourComboBox.getItems().clear();
+
+        for (int hour = 0; hour < 24; hour++) {
+            fxidDeliveryTimeHourComboBox.getItems().add(hour);
+            fxidDepartureTimeHourComboBox.getItems().add(hour);
         }
 
-        for (int i = 0; i < 60; i++) {
-            fxidDeliveryTimeMinuteComboBox.getItems().add(i);
-            fxidDepartureTimeMinuteComboBox.getItems().add(i);
+        fxidDeliveryTimeMinuteComboBox.getItems().clear();
+        fxidDepartureTimeMinuteComboBox.getItems().clear();
+
+        for (int minute = 0; minute < 60; minute++) {
+            fxidDeliveryTimeMinuteComboBox.getItems().add(minute);
+            fxidDepartureTimeMinuteComboBox.getItems().add(minute);
         }
 
         tableColMealName.setCellValueFactory(
@@ -82,21 +105,17 @@ public class createCateringOrderViewController
     @javafx.fxml.FXML
     public void addMealButton(ActionEvent actionEvent) {
 
-        if (mealListComboBox.getValue() == null) {
-            AlertGenerator.showAlert(
-                    "Warning",
-                    "Please select a meal"
-            );
+        String selectedMealName = mealListComboBox.getValue();
+
+        if (selectedMealName == null) {
+            AlertGenerator.showAlert("Warning", "Please select a meal.");
             return;
         }
 
         String quantityText = mealQuantityTextField.getText().trim();
 
         if (quantityText.isEmpty()) {
-            AlertGenerator.showAlert(
-                    "Warning",
-                    "Please enter the meal quantity"
-            );
+            AlertGenerator.showAlert("Warning", "Please enter the meal quantity.");
             return;
         }
 
@@ -105,51 +124,50 @@ public class createCateringOrderViewController
         try {
             quantity = Integer.parseInt(quantityText);
         } catch (NumberFormatException e) {
-            AlertGenerator.showAlert(
-                    "Warning",
-                    "Meal quantity must be a number"
-            );
+            AlertGenerator.showAlert("Warning", "Meal quantity must be a valid number.");
             return;
         }
 
         if (quantity <= 0) {
-            AlertGenerator.showAlert(
-                    "Warning",
-                    "Meal quantity must be greater than zero"
-            );
+            AlertGenerator.showAlert("Warning", "Meal quantity must be greater than zero.");
             return;
         }
 
-        String tempItemId =
-                databaseAccessor.generateNewUniqueId(
-                        "OrderItem.bin",
-                        "itemId", "S"
-                );
-
-        Meal tempMeal = null;
+        Meal selectedMeal = null;
 
         for (Object object : readMealList) {
             if (object instanceof Meal meal
-                    && meal.getMealName().equals(mealListComboBox.getValue())) {
+                    && meal.getMealName().equals(selectedMealName)) {
 
-                tempMeal = meal;
+                selectedMeal = meal;
                 break;
             }
         }
 
-        if (tempMeal == null) {
-            AlertGenerator.showAlert(
-                    "Error",
-                    "The selected meal was not found"
-            );
+        if (selectedMeal == null) {
+            AlertGenerator.showAlert("Error", "The selected meal was not found.");
             return;
         }
 
-        OrderItem newOrderItem =
-                new OrderItem(tempItemId, tempMeal, quantity);
+        // Prevent duplicate meals
+        for (OrderItem orderItem : orderItemList) {
+            if (orderItem.getMealName().equals(selectedMealName)) {
+                AlertGenerator.showAlert("Warning", "This meal has already been added.");
+                return;
+            }
+        }
+
+        String itemId = databaseAccessor.generateNewUniqueId(
+                "OrderItem.bin",
+                "itemId",
+                "S"
+        );
+
+        OrderItem newOrderItem = new OrderItem(itemId, selectedMeal, quantity);
 
         orderItemList.add(newOrderItem);
-        TableViewMeal.getItems().add(newOrderItem);
+
+        TableViewMeal.getItems().setAll(orderItemList);
 
         mealQuantityTextField.clear();
         mealListComboBox.setValue(null);
@@ -158,72 +176,155 @@ public class createCateringOrderViewController
 
     @javafx.fxml.FXML
     public void placeCateringOrderButton(ActionEvent actionEvent) {
-        if (fxidFlightNumberTextField.getText().isEmpty() ||
-                fxidDeliveryLocationTextField.getText().isEmpty() ||
-                fxidFlightDateDatePicker.getValue() == null ||
-                fxidDepartureTimeHourComboBox.getValue() == null ||
-                fxidDepartureTimeMinuteComboBox.getValue() == null ||
-                fxidDeliveryTimeMinuteComboBox.getValue() == null ||
-                fxidDepartureTimeHourComboBox.getValue() == null
-        ){
-            AlertGenerator.showAlert("Error", "Please fill all the fields");
-        }
-
-        if (fxidFlightDateDatePicker.getValue().isBefore(LocalDate.now())) {
-            AlertGenerator.showAlert("Warning", "Please enter a future date");
+        if (loggedInUser == null) {
+            AlertGenerator.showAlert("Error", "No logged-in airline representative was found.");
             return;
         }
-        boolean checkFlightId = Flight.checkFlightIdExists(fxidFlightNumberTextField.getText());
 
-        if(!checkFlightId){
-            AlertGenerator.showAlert("Warning", "The flight number you entered is not valid");
+        String flightId = fxidFlightNumberTextField.getText().trim();
+        String deliveryLocation = fxidDeliveryLocationTextField.getText().trim();
+        LocalDate flightDate = fxidFlightDateDatePicker.getValue();
+        Integer departureHour = fxidDepartureTimeHourComboBox.getValue();
+        Integer departureMinute = fxidDepartureTimeMinuteComboBox.getValue();
+        Integer deliveryHour = fxidDeliveryTimeHourComboBox.getValue();
+        Integer deliveryMinute = fxidDeliveryTimeMinuteComboBox.getValue();
+
+        if (flightId.isEmpty() || deliveryLocation.isEmpty() || flightDate == null || departureHour == null
+                || departureMinute == null || deliveryHour == null || deliveryMinute == null) {
+            AlertGenerator.showAlert("Error", "Please fill in all the fields.");
             return;
         }
-        //loginUser.CreateCateringOrder(String flightId, String deliveryLocation,
-        // ArrayList<OrderItem> orderItems,
-        // LocalDate deliveryDate, LocalTime deliveryTime, String status
+
+        if (orderItemList.isEmpty()) {
+            AlertGenerator.showAlert("Warning", "Please add at least one meal.");
+            return;
+        }
+
+        if (flightDate.isBefore(LocalDate.now())) {
+            AlertGenerator.showAlert("Warning", "Please enter today or a future date.");
+            return;
+        }
+
+        boolean flightExists = Flight.checkFlightIdExists(flightId);
+
+        if (!flightExists) {
+            AlertGenerator.showAlert("Warning", "The flight number you entered is not valid."
+            );
+            return;
+        }
+
+        LocalTime departureTime = LocalTime.of(departureHour, departureMinute);
+        LocalTime deliveryTime = LocalTime.of(deliveryHour, deliveryMinute);
+
+        if (!deliveryTime.isBefore(departureTime)) {
+            AlertGenerator.showAlert("Warning", "Delivery time must be before the departure time.");
+            return;
+        }
+
+        boolean orderCreated =
+                loggedInUser.createCateringOrder(
+                        flightId,
+                        deliveryLocation,
+                        flightDate,
+                        deliveryTime
+                );
+
+        if (orderCreated) {
+            AlertGenerator.showAlert(
+                    "Success",
+                    "Catering order placed successfully."
+            );
+
+            fxidFlightNumberTextField.clear();
+            fxidDeliveryLocationTextField.clear();
+            fxidFlightDateDatePicker.setValue(null);
+
+            fxidDepartureTimeHourComboBox.setValue(null);
+            fxidDepartureTimeMinuteComboBox.setValue(null);
+
+            fxidDeliveryTimeHourComboBox.setValue(null);
+            fxidDeliveryTimeMinuteComboBox.setValue(null);
+
+            mealListComboBox.setValue(null);
+            mealQuantityTextField.clear();
+
+            orderItemList.clear();
+            TableViewMeal.getItems().clear();
+        }
 
     }
 
 
     //sideBar buttons
     @javafx.fxml.FXML
-    public void sideBarTrackOrderButton(ActionEvent actionEvent) throws IOException {
-        AirlineRepresentative.renderFxmlTruckOrder(actionEvent);
+    public void sideBarTrackOrderButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/AirlineRepresentative/trackOrderView.fxml",
+                loggedInUser
+        );
     }
 
     @javafx.fxml.FXML
-    public void homeButtonAirportCateringService(ActionEvent actionEvent) throws IOException {
-        AirlineRepresentative.renderFxmlDashboard(actionEvent);
+    public void homeButtonAirportCateringService(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/AirlineRepresentative/dashboardView.fxml",
+                loggedInUser
+        );
     }
 
     @javafx.fxml.FXML
-    public void sideBarPayInvoiceButton(ActionEvent actionEvent) throws IOException {
-        AirlineRepresentative.renderFxmlPayBill(actionEvent);
+    public void sideBarPayInvoiceButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/AirlineRepresentative/payBillView.fxml",
+                loggedInUser
+        );
     }
 
     @javafx.fxml.FXML
-    public void sideBarConfirmDeliveryButton(ActionEvent actionEvent) throws IOException {
-        AirlineRepresentative.renderFxmlConfirmDelivery(actionEvent);
+    public void sideBarConfirmDeliveryButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/AirlineRepresentative/confirmDeliveryView.fxml",
+                loggedInUser
+        );
     }
 
     @javafx.fxml.FXML
-    public void sideBarFlightDelayButton(ActionEvent actionEvent) throws IOException {
-        AirlineRepresentative.renderFxmlFlightDelay(actionEvent);
+    public void sideBarFlightDelayButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/AirlineRepresentative/flightDelayView.fxml",
+                loggedInUser
+        );
     }
 
     @javafx.fxml.FXML
-    public void sideBarCancelOrderButton(ActionEvent actionEvent) throws IOException {
-        AirlineRepresentative.renderFxmlCancelOrder(actionEvent);
+    public void sideBarCancelOrderButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/AirlineRepresentative/cancelOrderView.fxml",
+                loggedInUser
+        );
     }
 
     @javafx.fxml.FXML
-    public void sideBarOrderHistoryButton(ActionEvent actionEvent) throws IOException {
-        AirlineRepresentative.renderFxmlOrderHistory(actionEvent);
+    public void sideBarOrderHistoryButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/AirlineRepresentative/orderHistoryView.fxml",
+                loggedInUser
+        );
     }
 
     @javafx.fxml.FXML
-    public void sideBarModifyOrderButton(ActionEvent actionEvent) throws IOException {
-        AirlineRepresentative.renderFxmlModifyOrder(actionEvent);
+    public void sideBarModifyOrderButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/AirlineRepresentative/modifyOrderView.fxml",
+                loggedInUser
+        );
     }
 }

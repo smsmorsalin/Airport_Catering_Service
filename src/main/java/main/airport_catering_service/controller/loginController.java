@@ -10,6 +10,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import user.AirlineRepresentative;
+import user.CateringOperationsManager;
+import user.User;
+import utility.AlertGenerator;
+import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 
@@ -40,25 +45,43 @@ public class loginController
 
     @javafx.fxml.FXML
     public void loginButtonOnClick(ActionEvent event) throws IOException {
-        if (fxidUsernameTextField.getText().equals("1")){
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/AirlineRepresentative/dashboardView.fxml"));
+        int userId = 0;
+        try {
+            userId = Integer.parseInt(fxidUsernameTextField.getText());
+        }catch (NumberFormatException e){
+            if(fxidUsernameTextField.getText().equals("admin")){
+                SceneSwitchingHelper.fullSceneReplacement(event, "/main/airport_catering_service/createNewEmployeeView.fxml");
+                return;
+            }
+        }
+        String password = fxidPasswordTextfield.getText();
 
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } else if (fxidUsernameTextField.getText().equals("2")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/CateringOperationsManager/businessDashboardView.fxml"));
+        User loggedInUser = User.verifyLogin(userId, password);
 
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } else if (fxidUsernameTextField.getText().equals("3")) {
+        if (loggedInUser == null) {
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Invalid username or password."
+            );
+            return;
+        }
+
+        if (loggedInUser instanceof AirlineRepresentative) {
+            SceneSwitchingHelper.switchSceneWithData(
+                    event,
+                    "/AirlineRepresentative/dashboardView.fxml",
+                    loggedInUser
+            );
+        }
+        else if (loggedInUser instanceof CateringOperationsManager) {
+            SceneSwitchingHelper.switchSceneWithData(
+                    event,
+                    "/CateringOperationsManager/businessDashboardView.fxml",
+                    loggedInUser
+            );
+        }
+
+        else if (fxidUsernameTextField.getText().equals("3")) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/CustomerSupportOfficer/dashboardView.fxml"));
 

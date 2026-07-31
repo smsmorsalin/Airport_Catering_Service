@@ -3,18 +3,18 @@ package nonuser;
 import java.io.Serializable;
 
 public class OrderItem implements Serializable {
-    private final String iteamId;
+    private final String itemId;
     private Meal meal; //FF
     private int quantity;
 
-    public OrderItem(String iteamId, Meal meal, int quantity) {
-        this.iteamId = iteamId;
+    public OrderItem(String itemId, Meal meal, int quantity) {
+        this.itemId = itemId;
         this.meal = meal;
         this.quantity = quantity;
     }
 
-    public String getIteamId() {
-        return iteamId;
+    public String getItemId() {
+        return itemId;
     }
 
     public Meal getMeal() {

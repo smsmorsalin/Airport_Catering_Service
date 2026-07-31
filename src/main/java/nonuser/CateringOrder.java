@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class CateringOrder {
     private final int orderId;
     private final String FlightId; //FF
+    private final int airlineRepresentativeId;
     private final LocalDate orderDate;
     private final String deliveryLocation;
     private ArrayList<String> orderItemIds; //FF of orderItem
@@ -14,15 +15,16 @@ public class CateringOrder {
     private LocalTime deliveryTime;
     private String Status;
 
-    public CateringOrder(int orderId, String flightId, LocalDate orderDate, String deliveryLocation, ArrayList<String> orderItemIds, LocalDate deliveryDate, LocalTime deliveryTime, String status) {
+    public CateringOrder(int orderId, String flightId,int airlineRepresentativeId, LocalDate orderDate, String deliveryLocation, ArrayList<String> orderItemIds, LocalDate deliveryDate, LocalTime deliveryTime) {
         this.orderId = orderId;
         FlightId = flightId;
         this.orderDate = orderDate;
+        this.airlineRepresentativeId = airlineRepresentativeId;
         this.deliveryLocation = deliveryLocation;
         this.orderItemIds = orderItemIds;
         this.deliveryDate = deliveryDate;
         this.deliveryTime = deliveryTime;
-        Status = status;
+        Status = "Pending";
     }
 
     public int getOrderId() {
@@ -71,5 +73,24 @@ public class CateringOrder {
 
     public void setStatus(String status) {
         Status = status;
+    }
+
+    public int getAirlineRepresentativeId() {
+        return airlineRepresentativeId;
+    }
+
+    @Override
+    public String toString() {
+        return "CateringOrder{" +
+                "orderId=" + orderId +
+                ", FlightId='" + FlightId + '\'' +
+                ", airlineRepresentativeId=" + airlineRepresentativeId +
+                ", orderDate=" + orderDate +
+                ", deliveryLocation='" + deliveryLocation + '\'' +
+                ", orderItemIds=" + orderItemIds +
+                ", deliveryDate=" + deliveryDate +
+                ", deliveryTime=" + deliveryTime +
+                ", Status='" + Status + '\'' +
+                '}';
     }
 }
