@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.headchef;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.Headchef;
+
+import java.io.IOException;
 
 public class MonitorCookingProgressController
 {
@@ -41,11 +44,13 @@ public class MonitorCookingProgressController
     }
 
     @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) {
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        Headchef.renderDashboardView(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void refreshProgress(ActionEvent actionEvent) {
+    public void refreshProgress(ActionEvent actionEvent) throws IOException {
+        Headchef.renderDisplayPreparationProgress(actionEvent);
     }
 
     @javafx.fxml.FXML
