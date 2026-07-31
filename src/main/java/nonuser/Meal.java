@@ -1,6 +1,8 @@
 package nonuser;
 
-public class Meal {
+import java.io.Serializable;
+
+public class Meal implements Serializable {
     private int mealId;
     private String mealName;
     private float mealPrice;
