@@ -72,4 +72,8 @@ public class generateInventoryReportController
     @javafx.fxml.FXML
     public void receiveIngredientButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
+    }
 }
