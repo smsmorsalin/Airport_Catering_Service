@@ -83,7 +83,7 @@
                         <Font name="Arial Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Button layoutX="393.0" layoutY="126.0" mnemonicParsing="false" onAction="#createScheduleOnAction" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: LimeGreen;" text="Create Schedule" textFill="WHITE">
+                  <Button layoutX="393.0" layoutY="126.0" mnemonicParsing="false" onAction="#createScheduleOOnAction" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: LimeGreen;" text="Create Schedule" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
