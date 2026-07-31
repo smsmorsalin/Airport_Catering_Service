@@ -75,4 +75,8 @@ public class manageSupplierController
     @javafx.fxml.FXML
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void submitButtonOnAction(ActionEvent actionEvent) {
+    }
 }

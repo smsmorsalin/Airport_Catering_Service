@@ -56,19 +56,17 @@
             <children>
             <AnchorPane prefHeight="590.0" prefWidth="357.0">
                <children>
-                  <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="582.0" prefWidth="590.0">
+                  <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="582.0" prefWidth="590.0">
                      <children>
                         <Text fx:id="orderIdText" layoutX="36.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID" />
                         <TextField fx:id="orderIdTextfield" layoutX="95.0" layoutY="43.0" />
                         <Button layoutX="43.0" layoutY="84.0" mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="26.0" prefWidth="77.0" text="Search" />
-                        <TableView fx:id="tableView" layoutX="8.0" layoutY="137.0" prefHeight="200.0" prefWidth="583.0">
+                        <TableView fx:id="tableView" layoutY="137.0" prefHeight="200.0" prefWidth="591.0">
                           <columns>
                             <TableColumn fx:id="truckIdTableviewColumn" prefWidth="75.0" text="Truck ID" />
-                            <TableColumn fx:id="truckNumberTableviewColumn" prefWidth="96.0" text="Truck Number" />
-                              <TableColumn fx:id="capacityTableviewColumn" prefWidth="87.20001220703125" text="Capacity" />
-                              <TableColumn fx:id="driverIdTableviewColumn" prefWidth="73.60006713867188" text="Driver ID" />
-                              <TableColumn fx:id="driverNameTableviewColumn" prefWidth="95.199951171875" text="Driver Name" />
-                              <TableColumn fx:id="availabilityStatusTableviewColumn" prefWidth="154.39996337890625" text="Availability Status" />
+                            <TableColumn fx:id="truckNumberTableviewColumn" prefWidth="174.4000244140625" text="Truck Number" />
+                              <TableColumn fx:id="driverIdTableviewColumn" prefWidth="152.79998779296875" text="Driver ID" />
+                              <TableColumn fx:id="driverNameTableviewColumn" prefWidth="188.79998779296875" text="Driver Name" />
                           </columns>
                         </TableView>
                         <Text fx:id="truckSelectionText" layoutX="14.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Truck Selection" />

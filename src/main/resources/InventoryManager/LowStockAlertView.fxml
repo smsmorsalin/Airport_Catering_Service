@@ -56,10 +56,9 @@
                   <TableView fx:id="tableView" layoutY="220.0" prefHeight="200.0" prefWidth="596.0">
                     <columns>
                       <TableColumn fx:id="ingredientIdTableviewColumn" prefWidth="87.199951171875" text="Ingredient ID" />
-                      <TableColumn fx:id="ingredientNameTableviewColumn" prefWidth="117.60003662109375" text="Ingredient Name" />
-                        <TableColumn fx:id="currentQuantityTableviewColumn" prefWidth="116.0" text="Current Quantity" />
-                        <TableColumn fx:id="recorderLevelTableviewColumn" prefWidth="124.80007934570312" text="Reorder Level" />
-                        <TableColumn fx:id="shortageQuantityTableviewColumn" prefWidth="149.5999755859375" text="Shortage Quantity" />
+                      <TableColumn fx:id="ingredientNameTableviewColumn" prefWidth="181.60003662109375" text="Ingredient Name" />
+                        <TableColumn fx:id="currentQuantityTableviewColumn" prefWidth="147.20004272460938" text="Current Quantity" />
+                        <TableColumn fx:id="shortageQuantityTableviewColumn" prefWidth="172.0" text="Shortage Quantity" />
                     </columns>
                   </TableView>
                </children>
