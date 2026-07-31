@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import nonuser.*;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 import utility.databaseAccessor;
 
@@ -59,13 +60,24 @@ public class AirlineRepresentative extends User {
     public final void createCateringOrder(String flightId, String deliveryLocation, ArrayList<OrderItem> orderItems, LocalDate deliveryDate, LocalTime deliveryTime, String status){
         ArrayList<String> orderItemIds = new ArrayList<String>();
         for (OrderItem orderItem : orderItems){
-            //add every orderitem into OrderItems file
+            BinaryFileUtility.writeObjects("OrderItem.bin", orderItem);
             orderItemIds.add(orderItem.getIteamId());
         }
-        int newOrderId = (int) databaseAccessor.generateNewUniqueId("CateringOrder.bin", "orderId");
-        CateringOrder newOrder = new CateringOrder(newOrderId, flightId, LocalDate.now(), deliveryLocation, orderItemIds, deliveryDate, deliveryTime,status );
+        int newOrderId = (Integer) databaseAccessor.generateNewUniqueId("CateringOrder.bin", "orderId");
+        CateringOrder newOrder = new CateringOrder(
+                newOrderId,
+                flightId,
+                LocalDate.now(),
+                deliveryLocation,
+                orderItemIds,
+                deliveryDate,
+                deliveryTime,
+                status
+        );
 
+        BinaryFileUtility.writeObjects("CateringOrder.bin", newOrder);
     }
+
     public final void modifyCateringOrder(String orderId, ArrayList<String> orderItemIds){
         // find out the orderId and modify OrderItemIds
     }

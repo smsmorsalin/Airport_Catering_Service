@@ -1,13 +1,15 @@
 package nonuser;
 
-public class OrderItem {
+import java.io.Serializable;
+
+public class OrderItem implements Serializable {
     private final String iteamId;
-    private int mealId; //FF
+    private Meal meal; //FF
     private int quantity;
 
-    public OrderItem(String iteamId, int mealId, int quantity) {
+    public OrderItem(String iteamId, Meal meal, int quantity) {
         this.iteamId = iteamId;
-        this.mealId = mealId;
+        this.meal = meal;
         this.quantity = quantity;
     }
 
@@ -15,12 +17,12 @@ public class OrderItem {
         return iteamId;
     }
 
-    public int getMealId() {
-        return mealId;
+    public Meal getMeal() {
+        return meal;
     }
 
-    public void setMealId(int mealId) {
-        this.mealId = mealId;
+    public void setMeal(Meal meal) {
+        this.meal = meal;
     }
 
     public int getQuantity() {
@@ -29,5 +31,21 @@ public class OrderItem {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public String getMealName() {
+        if (meal == null) {
+            return "";
+        }
+
+        return meal.getMealName();
+    }
+
+    public int getMealId() {
+        if (meal == null) {
+            return 0;
+        }
+
+        return meal.getMealId();
     }
 }
