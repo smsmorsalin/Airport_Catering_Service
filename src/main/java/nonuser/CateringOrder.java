@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 public class CateringOrder {
     private final int orderId;
-    private final String airlineId; //FF
     private final String FlightId; //FF
     private final LocalDate orderDate;
     private final String deliveryLocation;
@@ -15,9 +14,8 @@ public class CateringOrder {
     private LocalTime deliveryTime;
     private String Status;
 
-    public CateringOrder(int orderId, String airlineId, String flightId, LocalDate orderDate, String deliveryLocation, ArrayList<String> orderItemIds, LocalDate deliveryDate, LocalTime deliveryTime, String status) {
+    public CateringOrder(int orderId, String flightId, LocalDate orderDate, String deliveryLocation, ArrayList<String> orderItemIds, LocalDate deliveryDate, LocalTime deliveryTime, String status) {
         this.orderId = orderId;
-        this.airlineId = airlineId;
         FlightId = flightId;
         this.orderDate = orderDate;
         this.deliveryLocation = deliveryLocation;
@@ -29,10 +27,6 @@ public class CateringOrder {
 
     public int getOrderId() {
         return orderId;
-    }
-
-    public String getAirlineId() {
-        return airlineId;
     }
 
     public String getFlightId() {
