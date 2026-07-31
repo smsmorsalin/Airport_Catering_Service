@@ -38,15 +38,18 @@ public class HeadChefDashboardController
     }
 
     @javafx.fxml.FXML
-    public void manageMealPreparation(ActionEvent actionEvent) {
+    public void manageMealPreparation(ActionEvent actionEvent)throws IOException {
+        Headchef.renderManageMealPreparation(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void requestQualityInspection(ActionEvent actionEvent) {
+    public void requestQualityInspection(ActionEvent actionEvent) throws IOException {
+        Headchef.renderDisplayUpdateConfirmation(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void updateProductionStatus(ActionEvent actionEvent) {
+    public void updateProductionStatus(ActionEvent actionEvent) throws IOException {
+        Headchef.renderDisplayCookingProgress(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -55,11 +58,13 @@ public class HeadChefDashboardController
     }
 
     @javafx.fxml.FXML
-    public void kitchenPerformanceReport(ActionEvent actionEvent) {
+    public void kitchenPerformanceReport(ActionEvent actionEvent) throws IOException {
+        Headchef.renderViewKitchenPerformanceReport(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void assignKitchenStaff(ActionEvent actionEvent) {
+    public void assignKitchenStaff(ActionEvent actionEvent) throws IOException {
+        Headchef.renderProductionTaskInformation(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -68,6 +73,7 @@ public class HeadChefDashboardController
     }
 
     @javafx.fxml.FXML
-    public void handleRejectedBatch(ActionEvent actionEvent) {
+    public void handleRejectedBatch(ActionEvent actionEvent) throws IOException {
+        Headchef.renderHandleRejectedFoodBatches(actionEvent);
     }
 }
