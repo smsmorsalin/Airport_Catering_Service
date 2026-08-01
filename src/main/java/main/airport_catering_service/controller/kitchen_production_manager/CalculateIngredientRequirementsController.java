@@ -65,6 +65,7 @@ public class CalculateIngredientRequirementsController
             return;
         }
         String mealRecipe = mealRecipeTextField.getText().trim();
+
         if (numOfMealTextField.getText() == null || numOfMealTextField.getText().trim().isEmpty()) {
             AlertGenerator.showAlert("Missing Information", "Number of meals must be filled");
             return;
