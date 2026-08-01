@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.headchef;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.Headchef;
+
+import java.io.IOException;
 
 public class HandleRejectedBatchController
 {
@@ -51,7 +54,8 @@ public class HandleRejectedBatchController
     }
 
     @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) {
+    public void goBack(ActionEvent actionEvent) throws IOException {
+        Headchef.renderDashboardView(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -63,10 +67,18 @@ public class HandleRejectedBatchController
     }
 
     @javafx.fxml.FXML
-    public void refreshTable(ActionEvent actionEvent) {
+    public void refreshTable(ActionEvent actionEvent) throws IOException {
+        Headchef.renderHandleRejectedFoodBatches(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void clearForm(ActionEvent actionEvent) {
+        taskIdField.clear();
+        batchIdField.clear();
+        rejectedByField.clear();
+        rejectionReasonTextArea.clear();
+        chefRemarksTextArea.clear();
+        chefRemarksTextArea.clear();
+
     }
 }

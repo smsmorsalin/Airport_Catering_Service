@@ -76,4 +76,8 @@ public class HeadChefDashboardController
     public void handleRejectedBatch(ActionEvent actionEvent) throws IOException {
         Headchef.renderHandleRejectedFoodBatches(actionEvent);
     }
+    @Deprecated
+    public void ProductionTaskInformation(ActionEvent actionEvent) throws IOException {
+        Headchef.renderProductionTaskInformation(actionEvent);
+    }
 }
