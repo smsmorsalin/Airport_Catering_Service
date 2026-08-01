@@ -87,24 +87,29 @@ public class CreateProductionScheduleController {
 
     @javafx.fxml.FXML
     public void createScheduleOOnAction(ActionEvent actionEvent) {
-        if (productionPlanIDTextField.getText().trim().isEmpty()) {
+
+        if (productionPlanIDTextField.getText() == null || productionPlanIDTextField.getText().trim().isEmpty()) {
             showAlert("Production Plan ID should be filled");
             return;
         }
+        int productionId;
         try {
-            int productionId = Integer.parseInt(productionPlanIDTextField.getText());
-            if(productionId <= 0){
-                showAlert("Production Plan ID must be greater than 0");
-                return;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+            productionId = Integer.parseInt(productionPlanIDTextField.getText().trim()
+            );
+        } catch (NumberFormatException e) {
+            showAlert("Production Plan ID must be an integer");
             return;
         }
+        if (productionId <= 0) {
+            showAlert("Production Plan ID must be greater than 0");
+            return;
+        }
+
         if (workShiftComboBox1.getValue() == null) {
             showAlert("Please select a Work Shift");
             return;
         }
+
         if (startHoursTimeComboBox.getValue() == null || startMinitueTimeComboBox.getValue() == null || endsHoursTimeComboBox.getValue() == null || endsMinutiesTimeComboBox.getValue() == null) {
             showAlert("Please select Start Time and End Time");
             return;

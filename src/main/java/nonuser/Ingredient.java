@@ -1,33 +1,48 @@
 package nonuser;
 
 public class Ingredient {
-    private final int ingredientId;
-    private String IngredientName;
-    private double Quantity;
+    private final int ingredientId, unit;
+    private String ingredientName;
+    private double quantity;
+    private Integer estimatedCost;
 
-    public Ingredient(int ingredientId, String ingredientName, double quantity) {
+    public Ingredient(int ingredientId, int unit, String ingredientName, double quantity, Integer estimatedCost) {
         this.ingredientId = ingredientId;
-        IngredientName = ingredientName;
-        Quantity = quantity;
+        this.unit = unit;
+        this.ingredientName = ingredientName;
+        this.quantity = quantity;
+        this.estimatedCost = estimatedCost;
     }
 
     public int getIngredientId() {
         return ingredientId;
     }
 
+    public int getUnit() {
+        return unit;
+    }
+
     public String getIngredientName() {
-        return IngredientName;
+        return ingredientName;
     }
 
     public void setIngredientName(String ingredientName) {
-        IngredientName = ingredientName;
+        this.ingredientName = ingredientName;
     }
 
     public double getQuantity() {
-        return Quantity;
+        return quantity;
     }
 
     public void setQuantity(double quantity) {
-        Quantity = quantity;
+        this.quantity = quantity;
+    }
+
+    public Integer getEstimatedCost() {
+        return estimatedCost;
+    }
+
+    public void setEstimatedCost(Integer estimatedCost) {
+        this.estimatedCost = estimatedCost;
     }
 }
