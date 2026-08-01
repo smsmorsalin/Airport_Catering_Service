@@ -1,6 +1,7 @@
 package main.airport_catering_service.controller.kitchen_production_manager;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import user.KitchenProductionManager;
@@ -17,9 +18,34 @@ public class ApproveProductionCompletionController
     public void initialize() {
     }
 
-    @Deprecated
-    public void clearOnAction(ActionEvent actionEvent) {
+    public void showAlert(String s) {
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setContentText(s);
+        a.showAndWait();
+        return;
     }
+
+    @javafx.fxml.FXML
+    public void ApproveCompletionOnAction(ActionEvent actionEvent) {
+
+        if (productionOrderIDTextField.getText() == null || productionOrderIDTextField.getText().trim().isEmpty()) {
+            showAlert("Production Plan ID should be filled");
+            return;
+        }
+
+        int productionId;
+        try {
+            productionId = Integer.parseInt(productionOrderIDTextField.getText().trim());
+        } catch (Exception e) {
+            showAlert("Production Plan ID must be an integer");
+            return;
+        }
+        if (productionId <= 0) {
+            showAlert("Production Plan ID must be greater than 0");
+            return;
+        }
+    }
+
 
     @Deprecated
     public void sideBarApproveProductionOnA(ActionEvent actionEvent) {
@@ -34,17 +60,13 @@ public class ApproveProductionCompletionController
     public void sideBarProductionScheduleOnA(ActionEvent actionEvent) {
     }
 
-    @Deprecated
-    public void searchOrderOnAction(ActionEvent actionEvent) {
-    }
+
 
     @javafx.fxml.FXML
     public void sideBarReceiveOrdersOnA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void ApproveCompletionOnAction(ActionEvent actionEvent) {
-    }
+
 
     @javafx.fxml.FXML
     public void sideBarProductionReportsOnA(ActionEvent actionEvent) {
