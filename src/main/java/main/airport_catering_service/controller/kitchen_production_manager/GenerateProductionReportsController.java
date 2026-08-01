@@ -37,7 +37,7 @@ public class GenerateProductionReportsController
 
     }
 
-    @FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
