@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/user/UserReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/cancelOrderViewConroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/cancelOrderViewConroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/createCateringOrderViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/createCateringOrderViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/dashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/dashboardViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/CateringOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/CateringOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/SuperAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/SuperAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utility/BinaryFileUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/BinaryFileUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utility/SceneSwitchingHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/SceneSwitchingHelper.java" afterDir="false" />
-    </list>
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="workdone for 2 AirlineRepresentative Controller , loginController, superAdmin validation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,61 +43,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="3.175344825778604E-182" />
-      <entry key="S2" value="4.221314636390268E-46" />
-      <entry key="S5" value="7.082377792317753E-19" />
-      <entry key="S10" value="8.415686519111405E-10" />
-      <entry key="S30" value="9.485053556827635E-4" />
-      <entry key="S60" value="0.03462381897634707" />
-      <entry key="M2" value="0.29811658115154255" />
-      <entry key="M5" value="1.7189870830072496" />
-      <entry key="M10" value="4.36768306815163" />
-      <entry key="M15" value="7.067159220731584" />
-      <entry key="M30" value="15.675056400771911" />
-      <entry key="H1" value="39.000817615451304" />
-      <entry key="H2" value="100.09749087372062" />
-      <entry key="H4" value="225.0711411511792" />
-      <entry key="D1" value="665.2930919828129" />
-      <entry key="W1" value="849.0162531775709" />
+      <entry key="MS100" value="1.0053253873298684" />
+      <entry key="MS500" value="1.725118058197148" />
+      <entry key="S2" value="5.110795758219881" />
+      <entry key="S5" value="7.515142894392607" />
+      <entry key="S10" value="9.195849412058918" />
+      <entry key="S30" value="24.073785030103352" />
+      <entry key="S60" value="48.705554924184426" />
+      <entry key="M2" value="75.15977350641097" />
+      <entry key="M5" value="100.05039277020296" />
+      <entry key="M10" value="112.01835689662524" />
+      <entry key="M15" value="117.9734503932941" />
+      <entry key="M30" value="129.8142529149193" />
+      <entry key="H1" value="154.17036628096955" />
+      <entry key="H2" value="215.03005407890106" />
+      <entry key="H4" value="339.7941156588118" />
+      <entry key="D1" value="783.331763776419" />
+      <entry key="W1" value="969.4786784770372" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0000000026645497" />
-      <entry key="S30" value="1.002032432774489" />
-      <entry key="S60" value="1.0630921470206003" />
-      <entry key="M2" value="1.3663953224105798" />
-      <entry key="M5" value="2.6391959555868" />
-      <entry key="M10" value="5.619743364636763" />
-      <entry key="M15" value="8.644865820541156" />
-      <entry key="M30" value="16.731271206612377" />
-      <entry key="H1" value="34.05485696742655" />
-      <entry key="H2" value="73.74099065427885" />
-      <entry key="H4" value="153.27150217733822" />
-      <entry key="D1" value="447.0055506341803" />
-      <entry key="W1" value="572.6097318635792" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="4.531861530475042E-82" />
+      <entry key="S5" value="2.9007523494317096E-33" />
+      <entry key="S10" value="5.385863315096399E-17" />
+      <entry key="S30" value="3.7841373157110603E-6" />
+      <entry key="S60" value="0.0020659198307358528" />
+      <entry key="M2" value="0.06023482373695527" />
+      <entry key="M5" value="0.7571468988419617" />
+      <entry key="M10" value="3.0100294078184238" />
+      <entry key="M15" value="5.701569559949471" />
+      <entry key="M30" value="13.587733618760895" />
+      <entry key="H1" value="30.689379181259074" />
+      <entry key="H2" value="70.00249012865653" />
+      <entry key="H4" value="149.33571116386196" />
+      <entry key="D1" value="445.0716784475451" />
+      <entry key="W1" value="572.2551780309212" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.00344805857926037" />
-      <entry key="MS500" value="0.3217473118253177" />
-      <entry key="S2" value="0.7531452333169062" />
-      <entry key="S5" value="0.8927944723490157" />
-      <entry key="S10" value="0.944878022839626" />
-      <entry key="S30" value="0.9841397991861673" />
-      <entry key="S60" value="1.0864469694556917" />
-      <entry key="M2" value="1.653440492622928" />
-      <entry key="M5" value="4.342644386764264" />
-      <entry key="M10" value="9.96696720899808" />
-      <entry key="M15" value="15.689300309658236" />
-      <entry key="M30" value="32.38012514649813" />
-      <entry key="H1" value="73.02183877022915" />
-      <entry key="H2" value="173.8514017253011" />
-      <entry key="H4" value="382.71987513917657" />
-      <entry key="D1" value="1294.4463158946928" />
-      <entry key="W1" value="1767.5592140347906" />
+      <entry key="MS100" value="0.016605761343432297" />
+      <entry key="MS500" value="0.976256931627603" />
+      <entry key="S2" value="4.743214350835926" />
+      <entry key="S5" value="7.33821253639129" />
+      <entry key="S10" value="9.100546122376942" />
+      <entry key="S30" value="24.03599939504149" />
+      <entry key="S60" value="48.6848764983139" />
+      <entry key="M2" value="75.2061873910149" />
+      <entry key="M5" value="100.79703089824469" />
+      <entry key="M10" value="115.01425450340881" />
+      <entry key="M15" value="123.6578812249814" />
+      <entry key="M30" value="143.3796132371135" />
+      <entry key="H1" value="184.82870183788822" />
+      <entry key="H2" value="285.0445323643689" />
+      <entry key="H4" value="493.39451882787404" />
+      <entry key="D1" value="1409.7630700761988" />
+      <entry key="W1" value="1887.4528840274786" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -403,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785527481735</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="workdone for 2 AirlineRepresentative Controller , loginController, superAdmin validation">
+      <option name="closed" value="true" />
+      <created>1785540859459</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1785540859459</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,6 +428,7 @@
     <MESSAGE value="create BinaryFileUtility class to read and write object from database." />
     <MESSAGE value="working with createCateringOrderViewController my pc stuck so i have to push the code." />
     <MESSAGE value="merge others Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge others Changes" />
+    <MESSAGE value="workdone for 2 AirlineRepresentative Controller , loginController, superAdmin validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="workdone for 2 AirlineRepresentative Controller , loginController, superAdmin validation" />
   </component>
 </project>
