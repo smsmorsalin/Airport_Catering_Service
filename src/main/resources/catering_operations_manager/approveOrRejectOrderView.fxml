@@ -4,6 +4,8 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
@@ -87,17 +89,21 @@
                   <Label layoutX="25.0" layoutY="28.0" prefHeight="17.0" prefWidth="174.0" text="Enter Order ID To View Details" />
                   <TextField fx:id="fxidViewDetailsOrderIdTextField" layoutX="188.0" layoutY="24.0" promptText="order id" />
                   <Button layoutX="375.0" layoutY="24.0" mnemonicParsing="false" onAction="#viewDetailsButton" prefHeight="25.0" prefWidth="149.0" text="View Details" />
-                  <AnchorPane fx:id="fxidHiddenAnchorPane" layoutX="4.0" layoutY="60.0" prefHeight="291.0" prefWidth="588.0" style="-fx-background-color: BEIGE; -fx-background-radius: 10;">
+                  <AnchorPane fx:id="fxidHiddenAnchorPane" layoutX="4.0" layoutY="60.0" prefHeight="405.0" prefWidth="588.0" style="-fx-background-color: BEIGE; -fx-background-radius: 10;">
                      <children>
-                        <Label fx:id="fxidShowOrderIdLabel" layoutX="47.0" layoutY="13.0" prefHeight="17.0" prefWidth="448.0" text="Order ID:" />
-                        <Label fx:id="fxidShowAirlineNamelabel" layoutX="25.0" layoutY="34.0" prefHeight="17.0" prefWidth="448.0" text="Airline Name:" />
-                        <Label fx:id="fxidShowFlightNumberLabel" layoutX="18.0" layoutY="54.0" prefHeight="17.0" prefWidth="448.0" text="Flight Number:" />
-                        <Label fx:id="fxidShowDepartureDateLabel" layoutX="13.0" layoutY="73.0" prefHeight="17.0" prefWidth="448.0" text="Departure Date:" />
-                        <Label fx:id="fxidShowMealListLabel" layoutX="48.0" layoutY="94.0" prefHeight="17.0" prefWidth="539.0" text="Meal List:" />
-                        <Label fx:id="fxidShowTotalQuantityLabel" layoutX="22.0" layoutY="114.0" prefHeight="17.0" prefWidth="524.0" text="Total Quantity:" />
-                        <Label fx:id="fxidShowOrderStatusLabel" layoutX="28.0" layoutY="133.0" prefHeight="17.0" prefWidth="448.0" text="Order Status:" />
-                        <Button layoutX="77.0" layoutY="239.0" mnemonicParsing="false" onAction="#acceptOrderButton" prefHeight="25.0" prefWidth="149.0" text="Approve Order" textFill="#27bf36" />
-                        <Button layoutX="267.0" layoutY="239.0" mnemonicParsing="false" onAction="#rejectOrderButton" prefHeight="25.0" prefWidth="149.0" text="Reject Order" textFill="#eb0e0e" />
+                        <Label fx:id="fxidShowOrderIdLabel" layoutX="50.0" layoutY="19.0" prefHeight="17.0" prefWidth="448.0" text="Order ID:" />
+                        <Label fx:id="fxidShowFlightNumberLabel" layoutX="20.0" layoutY="39.0" prefHeight="17.0" prefWidth="448.0" text="Flight Number:" />
+                        <Label fx:id="fxidShowDeliveryDateLabel" layoutX="24.0" layoutY="58.0" prefHeight="17.0" prefWidth="448.0" text="Delivery Date:" />
+                        <Label fx:id="fxidShowOrderStatusLabel" layoutX="28.0" layoutY="79.0" prefHeight="17.0" prefWidth="448.0" text="Order Status:" />
+                        <Button layoutX="79.0" layoutY="352.0" mnemonicParsing="false" onAction="#acceptOrderButton" prefHeight="25.0" prefWidth="149.0" text="Approve Order" textFill="#27bf36" />
+                        <Button layoutX="269.0" layoutY="352.0" mnemonicParsing="false" onAction="#rejectOrderButton" prefHeight="25.0" prefWidth="149.0" text="Reject Order" textFill="#eb0e0e" />
+                        <TableView fx:id="fxidTableViewMealList" layoutX="20.0" layoutY="150.0" prefHeight="178.0" prefWidth="548.0">
+                          <columns>
+                            <TableColumn fx:id="tableColOrderedMealName" prefWidth="360.0" text="Ordered Meal" />
+                              <TableColumn fx:id="tableColQuanity" prefWidth="187.0" text="quantity" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="28.0" layoutY="127.0" prefHeight="17.0" prefWidth="67.0" text="Meal List" textFill="#0481ff" />
                      </children>
                   </AnchorPane>
                </children>
