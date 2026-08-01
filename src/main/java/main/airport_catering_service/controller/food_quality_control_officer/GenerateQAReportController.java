@@ -6,8 +6,10 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import user.FoodQualityControlOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class GenerateQAReportController
 {
@@ -32,6 +34,7 @@ public class GenerateQAReportController
 
     @javafx.fxml.FXML
     public void initialize() {
+        reportTypeComboBox.getItems().addAll( "Daily", "Weekly", "Monthly", "Inspection", "Approval", "Rejection", "Compliance", "Quality Trend");
     }
 
     @Deprecated
@@ -48,6 +51,21 @@ public class GenerateQAReportController
 
     @javafx.fxml.FXML
     public void generateReportOnAction(ActionEvent actionEvent) {
+        if(startDatePicker.getValue() == null || endDatePicker.getValue() ==null){
+            AlertGenerator.showAlert("Invalid Input","Date must in selected");
+            return;
+        }
+        if(startDatePicker.getValue().isAfter(endDatePicker.getValue())){
+            AlertGenerator.showAlert("Invalid Input","Start Date should be before end date");
+            return;
+        }
+        if(endDatePicker.getValue().isAfter(LocalDate.now())){
+            AlertGenerator.showAlert("Invaid Input","End date can not be present date");
+            return;
+        }
+        if(reportTypeComboBox.getItems()==null){
+            AlertGenerator.showAlert("Wrong Input","Combo Box must be selected ");
+        }
     }
 
     @javafx.fxml.FXML
