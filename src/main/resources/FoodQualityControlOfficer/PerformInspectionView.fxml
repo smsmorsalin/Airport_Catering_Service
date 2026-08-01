@@ -63,7 +63,7 @@
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
-                  <Label layoutX="11.0" layoutY="127.0" text="Taste Rating" textFill="WHITE">
+                  <Label layoutX="11.0" layoutY="132.0" text="Taste Rating" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
@@ -73,12 +73,8 @@
                      </font></Label>
                   <TextField fx:id="batchNumberTextField" layoutX="152.0" layoutY="51.0" />
                   <TextArea fx:id="inspectionNotesTextArea" layoutX="326.0" layoutY="78.0" prefHeight="63.0" prefWidth="237.0" />
-                  <Button layoutX="138.0" layoutY="247.0" mnemonicParsing="false" onAction="#searchBatchOnAction" style="-fx-background-color: royalBlue;" text="Search Batch" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font></Button>
                   <ComboBox fx:id="appearanceRatingComboBox" layoutX="152.0" layoutY="91.0" prefWidth="150.0" />
-                  <ComboBox fx:id="tasteRatingComboBox" layoutX="152.0" layoutY="123.0" prefWidth="150.0" />
+                  <ComboBox fx:id="tasteRatingComboBox" layoutX="152.0" layoutY="128.0" prefWidth="150.0" />
                   <AnchorPane layoutX="89.0" layoutY="296.0" prefHeight="126.0" prefWidth="298.0" style="-fx-background-color: royalBlue;" AnchorPane.rightAnchor="195.0">
                      <children>
                         <Label fx:id="fxidDisplayInspectionIDLabel" layoutX="13.0" layoutY="16.0" prefHeight="17.0" prefWidth="176.0" text="Inspection ID :" textFill="WHITE">
@@ -104,7 +100,7 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="301.0" layoutY="247.0" mnemonicParsing="false" onAction="#saveInspectionOnAction" style="-fx-background-color: LimeGreen;" text="Save Inspection" textFill="WHITE">
+                  <Button layoutX="185.0" layoutY="230.0" mnemonicParsing="false" onAction="#saveInspectionOnAction" style="-fx-background-color: LimeGreen;" text="Save Inspection" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
