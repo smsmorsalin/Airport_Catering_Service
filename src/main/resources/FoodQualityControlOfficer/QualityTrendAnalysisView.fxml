@@ -64,7 +64,7 @@
                   <DatePicker fx:id="startDatePicker" layoutX="90.0" layoutY="62.0" />
                   <DatePicker fx:id="endDatePicker" layoutX="90.0" layoutY="109.0" />
                   <AnchorPane layoutX="77.0" layoutY="243.0" prefHeight="200.0" prefWidth="200.0" />
-                  <Button layoutX="61.0" layoutY="163.0" mnemonicParsing="false" onAction="#analyzeTrendsOnAction" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: royalBlue;" text="Analyze Trends" textFill="WHITE">
+                  <Button layoutX="165.0" layoutY="168.0" mnemonicParsing="false" onAction="#analyzeTrendsOnAction" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: royalBlue;" text="Analyze Trends" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Button>
@@ -73,11 +73,6 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="291.0" layoutY="163.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="81.0" text="Clear">
-                     <font>
-                        <Font name="Arial Bold" size="12.0" />
-                     </font>
-                  </Button>
                   <AnchorPane layoutX="38.0" layoutY="236.0" prefHeight="175.0" prefWidth="435.0" style="-fx-background-color: royalBlue;">
                      <children>
                         <Label fx:id="fxidDisplayGenerateQAReportLabel" layoutX="14.0" layoutY="14.0" prefHeight="15.0" prefWidth="248.0" text="Total Inspections : " textFill="WHITE">

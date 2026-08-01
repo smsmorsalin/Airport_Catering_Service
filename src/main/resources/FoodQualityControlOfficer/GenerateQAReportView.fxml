@@ -94,7 +94,7 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="36.0" layoutY="189.0" mnemonicParsing="false" onAction="#generateReportOnAction" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: royalBlue;" text="Generate Report " textFill="WHITE">
+                  <Button layoutX="141.0" layoutY="189.0" mnemonicParsing="false" onAction="#generateReportOnAction" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: royalBlue;" text="Generate Report " textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Button>
@@ -103,12 +103,7 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="211.0" layoutY="189.0" mnemonicParsing="false" onAction="#exportPDFOnAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: limeGreen;" text="Export PDF" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="355.0" layoutY="189.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="80.0" text="Clear">
+                  <Button layoutX="315.0" layoutY="189.0" mnemonicParsing="false" onAction="#exportPDFOnAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: limeGreen;" text="Export PDF" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>

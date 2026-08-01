@@ -7,16 +7,22 @@ public class FoodRejection {
     private final int BatchNumber;
     private final LocalDate rejectionDate;
     private String rejectionStatus;
+    private final String rejectionReason;
 
-    public FoodRejection(int rejectionId, int batchNumber, LocalDate rejectionDate, String rejectionStatus) {
+    public FoodRejection(int rejectionId, int batchNumber, LocalDate rejectionDate, String rejectionReason, String rejectionStatus) {
         this.rejectionId = rejectionId;
         BatchNumber = batchNumber;
         this.rejectionDate = rejectionDate;
+        this.rejectionReason = rejectionReason;
         this.rejectionStatus = rejectionStatus;
     }
 
     public int getRejectionId() {
         return rejectionId;
+    }
+
+    public int getBatchNumber() {
+        return BatchNumber;
     }
 
     public LocalDate getRejectionDate() {
@@ -31,7 +37,8 @@ public class FoodRejection {
         this.rejectionStatus = rejectionStatus;
     }
 
-    public int getBatchNumber() {
-        return BatchNumber;
+    public String getRejectionReason() {
+        return rejectionReason;
     }
+
 }

@@ -4,9 +4,12 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+import nonuser.FoodRejection;
 import user.FoodQualityControlOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 
 public class RejectBatchController
@@ -18,30 +21,13 @@ public class RejectBatchController
     @javafx.fxml.FXML
     private TextArea rejectionReasonTextArea;
     @javafx.fxml.FXML
-    private TextArea correctiveActionRecommendationTextArea;
-    @javafx.fxml.FXML
     private TextField batchNumberTextField;
     @javafx.fxml.FXML
     private Label fxidDisplayRejectionDateLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
 
-    @javafx.fxml.FXML
-    public void clearOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void searchOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarQualityTrendAnalysisOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void rejectionBatchOnAction(ActionEvent actionEvent) {
         //check that all field are not empty
         //load FoodRejection.bin file
         //FoodRejection newRejection = new FoodRejection(rejectionId, batchNumber, rejectionId, rejectionStatus)
@@ -50,6 +36,56 @@ public class RejectBatchController
 //        fxidDisplayRejectionIDLabel.setText("Rejection ID: "+ newRejection.rejectionId);
 //        fxidDisplayRejectionDateLabel.setText("rejection Date: "+ newRejection.rejectionDate);
 //        fxidDisplayRejectionReasonLabel.setText("rejection Status"+ newRejection.rejectionStatus);
+    }
+
+
+    @javafx.fxml.FXML
+    public void rejectionBatchOnAction(ActionEvent actionEvent) {
+        rejectionReasonTextArea.clear();
+        batchNumberTextField.clear();
+
+
+        if(batchNumberTextField.getText() == null || rejectionReasonTextArea.getText() == null){
+            AlertGenerator.showAlert("Missing Information", "Please enter the batch batch number and rejection reason");
+            return;
+        }
+        int batchNum;
+        try{
+            batchNum = Integer.parseInt(batchNumberTextField.getText().trim());
+        }catch (Exception e){
+            AlertGenerator.showAlert("Invalid Inpujt","Batch Number must be filled with integer");
+            return;
+        }
+        if (batchNum<= 0){
+            AlertGenerator.showAlert("Invalid Input","Batch number must be grater that 0");
+            return;
+        }
+//public FoodRejection(int rejectionId, int batchNumber, LocalDate rejectionDate, String rejectionReason, String rejectionStatus)
+//        FoodRejection newRejection = new FoodRejection(
+//                 Integer.parseInt(rejectionReasonTextArea.getText()),
+//                Integer.parseInt(rejectionReasonTextArea.getText()),
+//        );
+//
+//
+//        fxidDisplayRejectionIDLabel.setText(
+//                "Rejection ID: " + newRejection.getRejectionId()
+//        );
+//
+//        fxidDisplayRejectionDateLabel.setText(
+//                "Rejection Date: " + newRejection.getRejectionDate()
+//        );
+//
+//        fxidDisplayRejectionReasonLabel.setText(
+//                "Rejection Status: " + newRejection.getRejectionStatus()
+//        );
+//
+//
+//        AlertGenerator.showAlert("Batch Rejected", "The batch was rejected successfully");
+    }
+
+
+    @javafx.fxml.FXML
+    public void sideBarQualityTrendAnalysisOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
