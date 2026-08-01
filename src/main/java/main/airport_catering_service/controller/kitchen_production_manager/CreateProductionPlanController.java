@@ -4,6 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import nonuser.ProductionPlan;
+import user.KitchenProductionManager;
+
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -73,7 +76,8 @@ public class CreateProductionPlanController {
     }
 
     @FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) {
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent)throws IOException {
+        KitchenProductionManager.reverseDashboard(actionEvent);
     }
     @FXML
     public void sideBarReceiveOrdersOA(ActionEvent actionEvent) {

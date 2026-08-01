@@ -6,8 +6,10 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import user.KitchenProductionManager;
+import utility.AlertGenerator;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 
 public class GenerateProductionReportsController
@@ -31,9 +33,11 @@ public class GenerateProductionReportsController
 
     @javafx.fxml.FXML
     public void initialize() {
+        reportTypeComboBox.getItems().addAll( "Daily", "Weekly", "Monthly", "Inspection", "Approval", "Rejection", "Compliance", "Quality Trend");
+
     }
 
-    @FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
@@ -60,6 +64,21 @@ public class GenerateProductionReportsController
 
     @FXML
     public void confirmOnAction(ActionEvent actionEvent) {
+        if(startDatePicker.getValue() == null || endDatePicker.getValue() ==null){
+            AlertGenerator.showAlert("Invalid Input","Date must in selected");
+            return;
+        }
+        if(startDatePicker.getValue().isAfter(endDatePicker.getValue())){
+            AlertGenerator.showAlert("Invalid Input","Start Date should be before end date");
+            return;
+        }
+        if(endDatePicker.getValue().isAfter(LocalDate.now())){
+            AlertGenerator.showAlert("Invaid Input","End date can not be present date");
+            return;
+        }
+        if(reportTypeComboBox.getItems()==null){
+            AlertGenerator.showAlert("Wrong Input","Combo Box must be selected ");
+        }
     }
 
     @FXML
