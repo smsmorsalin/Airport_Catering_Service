@@ -11,11 +11,17 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-//        DummyDataGenerator.morsalin();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/main/airport_catering_service/loginView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Airport Catering Service");
         stage.setScene(scene);
         stage.show();
+
+
+//        DummyDataGenerator.DeleteAllUser();
+//        DummyDataGenerator.morsalin();
+        DummyDataGenerator.totalUser();
+
+
     }
 }

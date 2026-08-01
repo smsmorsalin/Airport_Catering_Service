@@ -5,8 +5,10 @@ import nonuser.Flight;
 import user.AirlineRepresentative;
 import user.CateringOperationsManager;
 
+import java.io.File;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 public class DummyDataGenerator {
 
@@ -113,23 +115,41 @@ public class DummyDataGenerator {
         BinaryFileUtility.writeObjects("User.bin", manager);
 
         // Dummy Airline Representative
-//        AirlineRepresentative representative = new AirlineRepresentative(
-//                "1234",                      // password
-//                "Sarah Johnson",                      // fullName
-//                "Airline Representative",             // role
-//                LocalDate.of(1994, 9, 20),            // dateOfBirth
-//                "Female",                             // gender
-//                "sarah@skyair.com",                   // email
-//                "01822222222",                        // phone
-//                "Chattogram, Bangladesh",             // address
-//                "Active",                             // status
-//                "BG001",                              // airlineId
-//                "02-98765432"                         // officeContact
-//        );
-//        BinaryFileUtility.writeObjects("User.bin", representative);
+        AirlineRepresentative representative = new AirlineRepresentative(
+                "1234",                      // password
+                "S. M. S. Morsalin",                  // fullName
+                "Airline Representative",             // role
+                LocalDate.of(2005, 11, 20),            // dateOfBirth
+                "Male",                               // gender
+                "smsmorsalin1@gmail.com",             // email
+                "01755400336",                        // phone
+                "Bashundhara R/A Dhaka, Bangladesh",  // address
+                "Active",                             // status
+                "BG001",                              // airlineId
+                "02-98765432"                         // officeContact
+        );
+        BinaryFileUtility.writeObjects("User.bin", representative);
 
-        System.out.println("catering user id: "+" "+manager.getUserId() + "catering User pass: " +manager.getPassword());
-//        System.out.println("catering user id: "+ representative.getUserId()+" " + "catering User pass: " +representative.getPassword());
+        System.out.println("catering user id: "+manager.getUserId() +" " + "catering User pass: " +manager.getPassword());
+        System.out.println("catering user id: "+ representative.getUserId()+" " + "catering User pass: " +representative.getPassword());
+    }
+
+    public static void totalUser(){
+        ArrayList<Object> users =
+                BinaryFileUtility.readObjects("User.bin");
+
+        System.out.println("Number of users: " + users.size());
+    }
+
+    public static void DeleteAllUser(){
+        File file = new File("User.bin");
+
+        System.out.println("Deleting file: " + file.getAbsolutePath());
+
+        if (file.exists()) {
+            boolean deleted = file.delete();
+            System.out.println("Deleted: " + deleted);
+        }
     }
 }
 

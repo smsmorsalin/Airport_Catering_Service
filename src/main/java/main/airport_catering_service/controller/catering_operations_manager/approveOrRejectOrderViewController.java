@@ -34,13 +34,13 @@ public class approveOrRejectOrderViewController implements UserReceiver
     @javafx.fxml.FXML
     private AnchorPane fxidHiddenAnchorPane;
     @javafx.fxml.FXML
-    private TableColumn<Meal, String> tableColOrderedMealName;
+    private TableColumn<OrderItem, String> tableColOrderedMealName;
     @javafx.fxml.FXML
     private Label fxidShowDeliveryDateLabel;
     @javafx.fxml.FXML
-    private TableColumn<Meal, Integer> tableColQuanity;
+    private TableColumn<OrderItem, Integer> tableColQuanity;
     @javafx.fxml.FXML
-    private TableView<Meal> fxidTableViewMealList;
+    private TableView<OrderItem> fxidTableViewMealList;
 
 
     private ArrayList<Object> cateringOrderList;
@@ -61,8 +61,10 @@ public class approveOrRejectOrderViewController implements UserReceiver
 
     @javafx.fxml.FXML
     public void initialize() {
-        tableColQuanity.setCellValueFactory(new PropertyValueFactory<Meal, Integer>("quanity"));
-        tableColOrderedMealName.setCellValueFactory(new PropertyValueFactory<Meal, String>("mealName"));
+        fxidHiddenAnchorPane.setVisible(false);
+
+        tableColQuanity.setCellValueFactory(new PropertyValueFactory<OrderItem, Integer>("quantity"));
+        tableColOrderedMealName.setCellValueFactory(new PropertyValueFactory<OrderItem, String>("mealName"));
     }
 
     @javafx.fxml.FXML
@@ -71,6 +73,7 @@ public class approveOrRejectOrderViewController implements UserReceiver
             selectedId = Integer.parseInt(fxidViewDetailsOrderIdTextField.getText());
         }catch(NumberFormatException e){
             AlertGenerator.showAlert("error", "Please enter a valid ID");
+            fxidHiddenAnchorPane.setVisible(false);
         }
         cateringOrderList = BinaryFileUtility.readObjects("CateringOrder.bin");
         for (Object o : cateringOrderList) {
@@ -80,8 +83,8 @@ public class approveOrRejectOrderViewController implements UserReceiver
                         orderedItemList = BinaryFileUtility.readObjects("OrderItem.bin");
                         for  (Object o2 : orderedItemList) {
                             if (o2 instanceof OrderItem orderItem) {
-                                if (cateringOrder.getOrderItemIds().equals(orderItem.getItemId())) {
-                                    fxidTableViewMealList.getItems().add(orderItem.getMeal());
+                                if (cateringOrder.getOrderItemIds().contains(orderItem.getItemId())) {
+                                    fxidTableViewMealList.getItems().add(orderItem);
                                 }
                             }
                         }
@@ -94,10 +97,12 @@ public class approveOrRejectOrderViewController implements UserReceiver
                     }
                     if  (cateringOrder.getStatus().equals("Rejected")) {
                         AlertGenerator.showAlert("error", "Order already Rejected");
+                        fxidHiddenAnchorPane.setVisible(false);
                         return;
                     }
                     if  (cateringOrder.getStatus().equals("Approved")) {
                         AlertGenerator.showAlert("error", "Order already Approved");
+                        fxidHiddenAnchorPane.setVisible(false);
                         return;
                     }
 
@@ -105,6 +110,7 @@ public class approveOrRejectOrderViewController implements UserReceiver
             }
         }
         AlertGenerator.showAlert("error", "order doesn't exist");
+        fxidHiddenAnchorPane.setVisible(false);
 
 
     }
