@@ -1,5 +1,10 @@
 package user;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
@@ -53,5 +58,15 @@ public class InventoryManager extends Employee{
 
     public static void renderUpdateInventory(javafx.event.ActionEvent event) throws IOException{
         SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/UpdateInventoryView.fxml");
+    }
+
+    public static void reverseDashboard(javafx.event.ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader
+                (InventoryManager.class.getResource("/InventoryManager/DashboardView.fxml"));
+        Parent root = loader.load();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

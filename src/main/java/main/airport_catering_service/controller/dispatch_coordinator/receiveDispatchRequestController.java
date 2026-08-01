@@ -9,8 +9,6 @@ import javafx.scene.text.Text;
 public class receiveDispatchRequestController
 {
     @javafx.fxml.FXML
-    private TableColumn dispatchStatusTableviewColumn;
-    @javafx.fxml.FXML
     private TableColumn flightNumberTableviewColumn;
     @javafx.fxml.FXML
     private TableColumn orderIdTableviewColumn;
