@@ -9,9 +9,10 @@ import javafx.stage.Stage;
 import main.airport_catering_service.HelloApplication;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class FoodQualityControlOfficer extends Employee {
+public class FoodQualityControlOfficer extends Employee implements Serializable {
 
 
     public FoodQualityControlOfficer(int userId, String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, float salary) {

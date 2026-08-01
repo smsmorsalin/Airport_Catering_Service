@@ -12,7 +12,6 @@ import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class cancelOrderViewConroller implements UserReceiver {
@@ -53,20 +52,14 @@ public class cancelOrderViewConroller implements UserReceiver {
     @javafx.fxml.FXML
     public void checkOrderButton(ActionEvent actionEvent) {
         if (loggedInUser == null) {
-            AlertGenerator.showAlert(
-                    "error",
-                    "No logged-in airline representative found."
-            );
+            AlertGenerator.showAlert("error", "No logged-in airline representative found.");
             return;
         }
 
         String orderIdText = fxidOrderIdTextField.getText().trim();
 
         if (orderIdText.isEmpty()) {
-            AlertGenerator.showAlert(
-                    "error",
-                    "Please enter order ID."
-            );
+            AlertGenerator.showAlert("error", "Please enter order ID.");
             return;
         }
 
@@ -75,10 +68,7 @@ public class cancelOrderViewConroller implements UserReceiver {
         try {
             orderId = Integer.parseInt(orderIdText);
         } catch (NumberFormatException e) {
-            AlertGenerator.showAlert(
-                    "error",
-                    "Order ID must be a number."
-            );
+            AlertGenerator.showAlert("error", "Order ID must be a number.");
             return;
         }
 
@@ -86,10 +76,7 @@ public class cancelOrderViewConroller implements UserReceiver {
                 BinaryFileUtility.readObjects("CateringOrder.bin");
 
         if (orderObjects == null || orderObjects.isEmpty()) {
-            AlertGenerator.showAlert(
-                    "error",
-                    "No catering order exists."
-            );
+            AlertGenerator.showAlert("error", "No catering order exists.");
             return;
         }
 
@@ -104,10 +91,7 @@ public class cancelOrderViewConroller implements UserReceiver {
                 if (cateringOrder.getAirlineRepresentativeId()
                         != loggedInUser.getUserId()) {
 
-                    AlertGenerator.showAlert(
-                            "error",
-                            "This order was not created by you."
-                    );
+                    AlertGenerator.showAlert("error", "This order was not created by you.");
 
                     fxidHiddenAnochorPanel.setVisible(false);
                     return;
@@ -119,10 +103,7 @@ public class cancelOrderViewConroller implements UserReceiver {
         }
 
         if (selectedCateringOrder == null) {
-            AlertGenerator.showAlert(
-                    "error",
-                    "Order ID does not exist."
-            );
+            AlertGenerator.showAlert("error", "Order ID does not exist.");
 
             fxidHiddenAnochorPanel.setVisible(false);
             return;
@@ -143,18 +124,12 @@ public class cancelOrderViewConroller implements UserReceiver {
     @javafx.fxml.FXML
     public void cancleTheOrderButton(ActionEvent actionEvent) {
         if (loggedInUser == null) {
-            AlertGenerator.showAlert(
-                    "error",
-                    "No logged-in airline representative found."
-            );
+            AlertGenerator.showAlert("error", "No logged-in airline representative found.");
             return;
         }
 
         if (selectedCateringOrder == null) {
-            AlertGenerator.showAlert(
-                    "error",
-                    "Please check an order first."
-            );
+            AlertGenerator.showAlert("error", "Please check an order first.");
             return;
         }
 
@@ -176,18 +151,14 @@ public class cancelOrderViewConroller implements UserReceiver {
     //sidebar buttons
     @javafx.fxml.FXML
     public void sideBarTrackOrderButton(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent,
-                "/AirlineRepresentative/trackOrderView.fxml",
-                loggedInUser
-        );
+        SceneSwitchingHelper.switchSceneWithData(actionEvent, "/airline_representative/trackOrderView.fxml", loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarCreateCateringOrderButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/createCateringOrderView.fxml",
+                "/airline_representative/createCateringOrderView.fxml",
                 loggedInUser
         );
     }
@@ -196,7 +167,7 @@ public class cancelOrderViewConroller implements UserReceiver {
     public void homeButtonAirportCateringService(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/dashboardView.fxml",
+                "/airline_representative/dashboardView.fxml",
                 loggedInUser
         );
     }
@@ -205,7 +176,7 @@ public class cancelOrderViewConroller implements UserReceiver {
     public void sideBarPayInvoiceButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/payBillView.fxml",
+                "/airline_representative/payBillView.fxml",
                 loggedInUser
         );
     }
@@ -214,7 +185,7 @@ public class cancelOrderViewConroller implements UserReceiver {
     public void sideBarConfirmDeliveryButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/confirmDeliveryView.fxml",
+                "/airline_representative/confirmDeliveryView.fxml",
                 loggedInUser
         );
     }
@@ -223,7 +194,7 @@ public class cancelOrderViewConroller implements UserReceiver {
     public void sideBarFlightDelayButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/flightDelayView.fxml",
+                "/airline_representative/flightDelayView.fxml",
                 loggedInUser
         );
     }
@@ -232,7 +203,7 @@ public class cancelOrderViewConroller implements UserReceiver {
     public void sideBarOrderHistoryButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/orderHistoryView.fxml",
+                "/airline_representative/orderHistoryView.fxml",
                 loggedInUser
         );
     }
@@ -241,7 +212,7 @@ public class cancelOrderViewConroller implements UserReceiver {
     public void sideBarModifyOrderButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/modifyOrderView.fxml",
+                "/airline_representative/modifyOrderView.fxml",
                 loggedInUser
         );
     }

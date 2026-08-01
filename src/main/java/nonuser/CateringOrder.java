@@ -1,10 +1,11 @@
 package nonuser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class CateringOrder {
+public class CateringOrder implements Serializable {
     private final int orderId;
     private final String FlightId; //FF
     private final int airlineRepresentativeId;
