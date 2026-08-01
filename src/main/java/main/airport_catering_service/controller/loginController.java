@@ -43,9 +43,30 @@ public class loginController
 
     }
 
+
     @javafx.fxml.FXML
     public void loginButtonOnClick(ActionEvent event) throws IOException {
-        if (fxidUsernameTextField.getText().equals("3")) {
+        if (fxidUsernameTextField.getText().equals("1") && fxidPasswordTextfield.getText().isEmpty()) {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/airline_representative/dashboardView.fxml"));
+
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else if (fxidUsernameTextField.getText().equals("2") && fxidPasswordTextfield.getText().isEmpty()) {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/catering_operations_manager/businessDashboardView.fxml"));
+
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else if (fxidUsernameTextField.getText().equals("3")&& fxidPasswordTextfield.getText().isEmpty()) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/CustomerSupportOfficer/dashboardView.fxml"));
 
@@ -55,7 +76,9 @@ public class loginController
             stage.setScene(scene);
             stage.show();
         }
-        else if (fxidUsernameTextField.getText().equals("4")) {
+
+
+        else if (fxidUsernameTextField.getText().equals("4")&& fxidPasswordTextfield.getText().isEmpty()) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/FinanceAndBillingManager/dashboardView.fxml"));
 
@@ -66,7 +89,7 @@ public class loginController
             stage.show();
         }
 
-        else if (fxidUsernameTextField.getText().equals("9")) {
+        else if (fxidUsernameTextField.getText().equals("9")&& fxidPasswordTextfield.getText().isEmpty()) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/KitchenProductionManager/dashboardView.fxml"));
 
@@ -76,7 +99,7 @@ public class loginController
             stage.setScene(scene);
             stage.show();
         }
-        else if (fxidUsernameTextField.getText().equals("10")) {
+        else if (fxidUsernameTextField.getText().equals("10")&& fxidPasswordTextfield.getText().isEmpty()) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/FoodQualityControlOfficer/dashboardView.fxml"));
 
@@ -86,7 +109,7 @@ public class loginController
             stage.setScene(scene);
             stage.show();
         }
-        else if (fxidUsernameTextField.getText().equals("5")) {
+        else if (fxidUsernameTextField.getText().equals("5")&& fxidPasswordTextfield.getText().isEmpty()) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/InventoryManager/DashboardView.fxml"));
             Parent root = loader.load();
@@ -95,7 +118,7 @@ public class loginController
             stage.setScene(scene);
             stage.show();
         }
-        else if (fxidUsernameTextField.getText().equals("6")) {
+        else if (fxidUsernameTextField.getText().equals("6")&& fxidPasswordTextfield.getText().isEmpty()) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/DispatchCoordinator/DashboardView.fxml"));
             Parent root = loader.load();
@@ -104,7 +127,7 @@ public class loginController
             stage.setScene(scene);
             stage.show();
         }
-        else if (fxidUsernameTextField.getText().equals("7")) {
+        else if (fxidUsernameTextField.getText().equals("7")&& fxidPasswordTextfield.getText().isEmpty()) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/Truckoperator/DashboardView.fxml"));
             Parent root = loader.load();
@@ -113,7 +136,7 @@ public class loginController
             stage.setScene(scene);
             stage.show();
         }
-        else if (fxidUsernameTextField.getText().equals("8")) {
+        else if (fxidUsernameTextField.getText().equals("8")&& fxidPasswordTextfield.getText().isEmpty()) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/Headchef/DashboardView.fxml"));
             Parent root = loader.load();
@@ -123,15 +146,15 @@ public class loginController
             stage.show();
         }
 
-        else if (fxidUsernameTextField.getText().equals("admin")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/main/airport_catering_service/createNewEmployeeView.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
+//        else if (fxidUsernameTextField.getText().equals("admin")&& fxidPasswordTextfield.getText().isEmpty()) {
+//            FXMLLoader loader = new FXMLLoader(
+//                    getClass().getResource("/main/airport_catering_service/createNewEmployeeView.fxml"));
+//            Parent root = loader.load();
+//            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//            Scene scene = new Scene(root);
+//            stage.setScene(scene);
+//            stage.show();
+//        }
 
 
         // read user from database.
@@ -166,7 +189,7 @@ public class loginController
         else if (loggedInUser instanceof CateringOperationsManager) {
             SceneSwitchingHelper.switchSceneWithData(
                     event,
-                    "/catering_operationsManager/businessDashboardView.fxml",
+                    "/catering_operations_manager/businessDashboardView.fxml",
                     loggedInUser
             );
         }

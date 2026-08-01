@@ -1,9 +1,11 @@
 package user;
 
+import utility.BinaryFileUtility;
 import utility.databaseAccessor;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Random;
 
 public abstract class Employee extends User implements Serializable {
@@ -14,9 +16,9 @@ public abstract class Employee extends User implements Serializable {
     protected final LocalDate joinDate;
     protected float salary;
 
-    public Employee(int userId, String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, float salary) {
-        super(userId, password, fullName, role, dateOfBirth, gender, email, phone, address, status);
-        this.employeeId = employeeId;
+    public Employee(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, LocalDate joinDate, String department, String designation, float salary) {
+        super(password, fullName, role, dateOfBirth, gender, email, phone, address, status);
+        this.employeeId = generateEmployeeId();
         this.joinDate = joinDate;
         this.department = department;
         this.designation = designation;
@@ -80,8 +82,22 @@ public abstract class Employee extends User implements Serializable {
     }
 
     public static final int generateEmployeeId(){
-        int tempId = (int) databaseAccessor.generateNewUniqueId("User.bin", "employeeId");
-        return tempId;
+        ArrayList<Object> objects = BinaryFileUtility.readObjects("User.bin");
+
+        int maximumId = 0;
+
+        if (objects == null || objects.isEmpty()) {
+            return 1001;   // Starting Employee ID
+        }
+
+        for (Object object : objects) {
+            if (object instanceof Employee employee) {
+                if (employee.getEmployeeId() > maximumId) {
+                    maximumId = employee.getEmployeeId();
+                }
+            }
+        }
+        return maximumId == 0 ? 1001 : maximumId + 1;
     }
 
 

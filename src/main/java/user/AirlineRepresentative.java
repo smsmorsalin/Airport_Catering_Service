@@ -21,8 +21,8 @@ public class AirlineRepresentative extends User implements Serializable {
     protected final String airlineId;
     protected String officeContact;
 
-    public AirlineRepresentative(int userId, String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, String airlineId, String officeContact) {
-        super(userId, password, fullName, role, dateOfBirth, gender, email, phone, address, status);
+    public AirlineRepresentative(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, String airlineId, String officeContact) {
+        super(password, fullName, role, dateOfBirth, gender, email, phone, address, status);
         this.airlineId = airlineId;
         this.officeContact = officeContact;
     }
@@ -200,9 +200,7 @@ public class AirlineRepresentative extends User implements Serializable {
     }
 
     public static AirlineRepresentative createNewAirlineRepresentative(String password, String fullName, LocalDate dateOfBirth, String gender, String email, String phone, String address, String airlineId, String officeContact) {
-        int newUserId = User.generateNewId();
-
-        AirlineRepresentative newRepresentative = new AirlineRepresentative(newUserId, password, fullName, "Airline Representative", dateOfBirth,
+        AirlineRepresentative newRepresentative = new AirlineRepresentative(password, fullName, "Airline Representative", dateOfBirth,
                         gender, email, phone, address, "Active", airlineId, officeContact);
 
         boolean saved = BinaryFileUtility.writeObjects("User.bin", newRepresentative);

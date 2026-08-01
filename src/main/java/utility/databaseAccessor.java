@@ -1,5 +1,7 @@
 package utility;
 
+import user.User;
+
 import java.lang.reflect.Field;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -72,5 +74,6 @@ public class databaseAccessor {
 
         return String.valueOf(maxId + 1);
     }
+
 
 }
