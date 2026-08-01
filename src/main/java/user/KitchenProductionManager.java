@@ -9,9 +9,10 @@ import utility.SceneSwitchingHelper;
 
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class KitchenProductionManager extends  Employee{
+public class KitchenProductionManager extends  Employee implements Serializable {
 
     public KitchenProductionManager(int userId, String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, float salary) {
         super(userId, password, fullName, role, dateOfBirth, gender, email, phone, address, status, employeeId, joinDate, department, designation, salary);

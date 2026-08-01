@@ -46,7 +46,7 @@ public class dashboardViewController implements UserReceiver {
     @javafx.fxml.FXML
     public void sideBarTrackOrderButton(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/main/airport_catering_service/airline_representative/trackOrderView.fxml",
+                actionEvent, "/airline_representative/trackOrderView.fxml",
                 loggedInUser);
     }
 
@@ -54,7 +54,7 @@ public class dashboardViewController implements UserReceiver {
     public void sideBarCreateCateringOrderButton(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/main/airport_catering_service/airline_representative/createCateringOrderView.fxml",
+                "/airline_representative/createCateringOrderView.fxml",
                 loggedInUser
         );
     }
@@ -63,7 +63,7 @@ public class dashboardViewController implements UserReceiver {
     public void homeButtonAirportCateringService(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/main/airport_catering_service/airline_representative/dashboardView.fxml",
+                "/airline_representative/dashboardView.fxml",
                 loggedInUser
         );
     }
@@ -72,7 +72,7 @@ public class dashboardViewController implements UserReceiver {
     public void sideBarPayInvoiceButton(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/main/airport_catering_service/airline_representative/payBillView.fxml",
+                "/airline_representative/payBillView.fxml",
                 loggedInUser
         );
     }
@@ -86,7 +86,7 @@ public class dashboardViewController implements UserReceiver {
     public void sideBarConfirmDeliveryButton(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/main/airport_catering_service/airline_representative/confirmDeliveryView.fxml",
+                "/airline_representative/confirmDeliveryView.fxml",
                 loggedInUser
         );
     }
@@ -95,7 +95,7 @@ public class dashboardViewController implements UserReceiver {
     public void sideBarFlightDelayButton(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/main/airport_catering_service/airline_representative/flightDelayView.fxml",
+                "/airline_representative/flightDelayView.fxml",
                 loggedInUser
         );
     }
@@ -104,7 +104,7 @@ public class dashboardViewController implements UserReceiver {
     public void sideBarCancelOrderButton(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/main/airport_catering_service/airline_representative/cancelOrderView.fxml",
+                "/airline_representative/cancelOrderView.fxml",
                 loggedInUser
         );
     }
@@ -113,7 +113,7 @@ public class dashboardViewController implements UserReceiver {
     public void sideBarOrderHistoryButton(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/main/airport_catering_service/airline_representative/orderHistoryView.fxml",
+                "/airline_representative/orderHistoryView.fxml",
                 loggedInUser
         );
     }
@@ -122,7 +122,7 @@ public class dashboardViewController implements UserReceiver {
     public void sideBarModifyOrderButton(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/main/airport_catering_service/airline_representative/modifyOrderView.fxml",
+                "/airline_representative/modifyOrderView.fxml",
                 loggedInUser
         );
     }

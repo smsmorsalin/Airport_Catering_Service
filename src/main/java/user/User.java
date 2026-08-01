@@ -10,11 +10,12 @@ import utility.SceneSwitchingHelper;
 import utility.databaseAccessor;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Random;
 
-public abstract class User {
+public abstract class User implements Serializable {
     protected final int userId;
     private String password;
     protected String role;

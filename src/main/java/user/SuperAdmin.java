@@ -3,9 +3,10 @@ package user;
 import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class SuperAdmin{
+public class SuperAdmin implements Serializable {
     private final String username;
     private String adminPassword;
 

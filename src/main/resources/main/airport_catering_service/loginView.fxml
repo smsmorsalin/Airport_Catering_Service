@@ -20,7 +20,7 @@
             <Font name="Arial Bold" size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="fxidUsernameTextField" layoutX="158.0" layoutY="204.0" prefHeight="25.0" prefWidth="214.0" promptText="username" />
+      <TextField fx:id="fxidUsernameTextField" layoutX="158.0" layoutY="204.0" prefHeight="25.0" prefWidth="214.0" promptText="user ID" />
       <TextField fx:id="fxidPasswordTextfield" layoutX="161.0" layoutY="253.0" prefHeight="25.0" prefWidth="214.0" promptText="password" />
       <Button layoutX="231.0" layoutY="304.0" mnemonicParsing="false" onAction="#loginButtonOnClick" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: orange;" text="login">
          <cursor>
