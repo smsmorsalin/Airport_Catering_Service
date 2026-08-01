@@ -79,7 +79,7 @@
             <children>
                 <AnchorPane prefHeight="591.0" prefWidth="610.0">
                <children>
-                  <Label alignment="CENTER" layoutX="1.0" prefHeight="17.0" prefWidth="609.0" text="Create a New Catring Order">
+                  <Label alignment="CENTER" layoutX="1.0" prefHeight="17.0" prefWidth="609.0" text="Cancel Catring Order">
                      <font>
                         <Font name="Gabriola" size="21.0" />
                      </font>
@@ -104,17 +104,12 @@
                               <Font size="16.0" />
                            </font>
                         </Text>
-                        <Text fx:id="fxidDepartureTime" layoutX="108.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Departure Time" wrappingWidth="429.1367187499999">
+                        <Text fx:id="fxidDeliveryLocation" layoutX="108.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Location" wrappingWidth="429.1367187499999">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Text>
-                        <Text fx:id="fxidDeliveryLocation" layoutX="108.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Location" wrappingWidth="429.1367187499999">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Text>
-                        <Text fx:id="fxidDeliveryTime" layoutX="108.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Time" wrappingWidth="429.1367187499999">
+                        <Text fx:id="fxidDeliveryTime" layoutX="108.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Time" wrappingWidth="429.1367187499999">
                            <font>
                               <Font size="16.0" />
                            </font>

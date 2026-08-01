@@ -59,11 +59,10 @@ public class AirlineRepresentative extends User implements Serializable {
 
 
 
-    public boolean createCateringOrder(String flightId, String deliveryLocation,
+    public boolean createCateringOrder(String flightId, String deliveryLocation,ArrayList<OrderItem> orderItems,
                                        LocalDate deliveryDate, LocalTime deliveryTime) {
 
         int orderId = databaseAccessor.generateNewUniqueId("CateringOrder.bin", "orderId");
-        ArrayList<OrderItem> orderItems = new ArrayList<>();
         ArrayList<String> orderItemIds = new ArrayList<>();
 
         for (OrderItem orderItem : orderItems) {
@@ -85,7 +84,8 @@ public class AirlineRepresentative extends User implements Serializable {
             AlertGenerator.showAlert("Error", "Failed to save the catering order.");
             return false;
         }
-
+        AlertGenerator.showAlert("Info", "Successfully saved the catering order.\n" +
+                "Order Id: "+ orderId);
         return true;
     }
 
@@ -119,7 +119,7 @@ public class AirlineRepresentative extends User implements Serializable {
                         return false;
                     }
 
-                    if ("Pending".equals(cateringOrder.getStatus()) || "Approved".equals(cateringOrder.getStatus())) {
+                    if ("Pending".equals(cateringOrder.getStatus())) {
 
                         cateringOrder.setStatus("Cancelled");
 
@@ -144,8 +144,8 @@ public class AirlineRepresentative extends User implements Serializable {
         return false;
     }
 
-    public final void submitFlightDelayRequest(String orderId, LocalDate newDepartureDate, LocalTime newDepartureTime){
-        // find out id and set
+    public final void submitFlightDelayRequest(ArrayList<Object> CateringOrderList){
+        BinaryFileUtility.overwriteObjects("CateringOrder.bin", CateringOrderList);
     }
 
     public ArrayList<String> trackCateringOrderStatus(String orderId){

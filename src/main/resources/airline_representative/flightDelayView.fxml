@@ -103,28 +103,23 @@
                            </font>
                         </Label>
                         <Line endX="133.5" layoutX="250.0" layoutY="29.0" startX="-100.0" />
-                        <Label fx:id="fxidOrderedFlightNumberLabel" layoutX="86.0" layoutY="44.0" prefHeight="19.0" prefWidth="372.0" text="Flight Number:">
+                        <Label fx:id="fxidOrderedFlightNumberLabel" layoutX="86.0" layoutY="72.0" prefHeight="19.0" prefWidth="372.0" text="Flight Number:">
                            <font>
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label fx:id="fxidOrderedFlightDateLabel" layoutX="106.0" layoutY="66.0" prefHeight="19.0" prefWidth="372.0" text="Flight Date: ">
+                        <Label fx:id="fxidOrderedDeliveryDateLabel" layoutX="94.0" layoutY="94.0" prefHeight="19.0" prefWidth="372.0" text="Delivery Date: ">
                            <font>
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label fx:id="fxidOrderedFlightDepartureTimeLabel" layoutX="45.0" layoutY="87.0" prefHeight="19.0" prefWidth="372.0" text="Flight Departure Time:">
+                        <Label fx:id="fxidOrderedDeliveryTimeLabel" layoutX="91.0" layoutY="116.0" prefHeight="19.0" prefWidth="372.0" text="Delivery Time:">
                            <font>
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label fx:id="fxidOrderedDeliveryTimeLabel" layoutX="91.0" layoutY="109.0" prefHeight="19.0" prefWidth="372.0" text="Delivery Time:">
-                           <font>
-                              <Font size="13.0" />
-                           </font>
-                        </Label>
-                        <Text layoutX="56.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Delay Flight Date" wrappingWidth="127.0" />
-                        <DatePicker fx:id="fxidDelayFlightDateDatePicker" layoutX="193.0" layoutY="207.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: white;" />
+                        <Text layoutX="48.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Delay Delivery Date" wrappingWidth="135.0" />
+                        <DatePicker fx:id="fxidDelayDeliveryDateDatePicker" layoutX="193.0" layoutY="207.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: white;" />
                         <Label layoutX="212.0" layoutY="166.0" prefHeight="20.0" prefWidth="119.0" text="Delay schedule">
                            <font>
                               <Font size="14.0" />
@@ -144,6 +139,11 @@
                            </children>
                         </HBox>
                         <Button layoutX="142.0" layoutY="317.0" mnemonicParsing="false" onAction="#submitDelayRequestButton" prefHeight="25.0" prefWidth="221.0" text="Submit Delay Request" />
+                        <Label fx:id="fxidOrderedDetailsOrderIdLabel" layoutX="123.0" layoutY="49.0" prefHeight="19.0" prefWidth="372.0" text="order Id:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                </children>
