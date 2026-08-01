@@ -3,8 +3,8 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="pushed the bin file">
+  <component name="ChangeListManager"/>
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="pushed the bin file"/>
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CateringOrder.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" />
@@ -57,7 +57,7 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
+<!--  </component>-->
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
