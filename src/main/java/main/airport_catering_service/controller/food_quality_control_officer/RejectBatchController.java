@@ -18,8 +18,6 @@ public class RejectBatchController
     @javafx.fxml.FXML
     private TextArea rejectionReasonTextArea;
     @javafx.fxml.FXML
-    private TextArea correctiveActionRecommendationTextArea;
-    @javafx.fxml.FXML
     private TextField batchNumberTextField;
     @javafx.fxml.FXML
     private Label fxidDisplayRejectionDateLabel;
@@ -28,7 +26,7 @@ public class RejectBatchController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 

@@ -33,7 +33,7 @@ public class ApproveBatchController
     public void approveBatchOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 

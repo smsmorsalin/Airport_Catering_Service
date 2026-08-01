@@ -27,11 +27,11 @@ public class ReceiveInspectionRequestController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void requestOnAction(ActionEvent actionEvent) {
     }
 
@@ -55,7 +55,7 @@ public class ReceiveInspectionRequestController
     public void sideBarPerformInspectionOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void refreshOnAction(ActionEvent actionEvent) {
     }
 
