@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="workdone for flightDelayController">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/flightDelayViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/flightDelayViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/approveOrRejectOrderViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/approveOrRejectOrderViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/businessDashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/businessDashboardViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/createNewEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/createNewEmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/DispatchCoordinator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/DispatchCoordinator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/FinanceAndBillingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/FinanceAndBillingManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/Headchef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Headchef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/InventoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/SuperAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/SuperAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utility/AppendableObjectOutputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/AppendableObjectOutputStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utility/databaseAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/databaseAccessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/approveOrRejectOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/approveOrRejectOrderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/businessDashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/businessDashboardView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/deliveryMonitoringView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/deliveryMonitoringView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/emergencyIssueView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/emergencyIssueView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/generateReportView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/generateReportView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/inventoryStatusView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/inventoryStatusView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/monitorProductionView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/monitorProductionView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/operationalReportView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/operationalReportView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/reviewOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/reviewOrderView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,61 +43,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="7.11846217599E-312" />
-      <entry key="MS500" value="5.894910779393499E-63" />
-      <entry key="S2" value="2.770890151689376E-16" />
-      <entry key="S5" value="5.984773567656289E-7" />
-      <entry key="S10" value="7.73613182907832E-4" />
-      <entry key="S30" value="0.09182190523767346" />
-      <entry key="S60" value="0.31552773714515986" />
-      <entry key="M2" value="0.9644342591876076" />
-      <entry key="M5" value="5.04650297989432" />
-      <entry key="M10" value="10.991527076883203" />
-      <entry key="M15" value="14.736448592600409" />
-      <entry key="M30" value="21.460613537633172" />
-      <entry key="H1" value="38.32460395911098" />
-      <entry key="H2" value="97.54046316074646" />
-      <entry key="H4" value="237.5258062984906" />
-      <entry key="D1" value="850.8873140386853" />
-      <entry key="W1" value="1154.8844997480849" />
+      <entry key="MS100" value="1.0000008539838767" />
+      <entry key="MS500" value="1.166701822652563" />
+      <entry key="S2" value="3.097497074494236" />
+      <entry key="S5" value="4.527597650442713" />
+      <entry key="S10" value="5.255700391742886" />
+      <entry key="S30" value="8.12303142828123" />
+      <entry key="S60" value="14.417491187033797" />
+      <entry key="M2" value="23.87168138795617" />
+      <entry key="M5" value="37.07051767026524" />
+      <entry key="M10" value="47.399410503638414" />
+      <entry key="M15" value="53.1594979137238" />
+      <entry key="M30" value="62.44028674377622" />
+      <entry key="H1" value="80.48990610503662" />
+      <entry key="H2" value="139.71190965517465" />
+      <entry key="H4" value="279.4429366753585" />
+      <entry key="D1" value="894.1521851702402" />
+      <entry key="W1" value="1199.5500428491946" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.000000005057249" />
-      <entry key="S5" value="1.0004803587873572" />
-      <entry key="S10" value="1.0219170889343758" />
-      <entry key="S30" value="1.2798702999155682" />
-      <entry key="S60" value="1.5391589979535678" />
-      <entry key="M2" value="2.012515543115705" />
-      <entry key="M5" value="4.649083916406857" />
-      <entry key="M10" value="8.754385850709372" />
-      <entry key="M15" value="11.565718728662352" />
-      <entry key="M30" value="18.183808419337016" />
-      <entry key="H1" value="34.97525361355076" />
-      <entry key="H2" value="75.93519819354746" />
-      <entry key="H4" value="159.1917640250438" />
-      <entry key="D1" value="539.8239565087144" />
-      <entry key="W1" value="737.0112275600596" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="5.289803872059267E-150" />
+      <entry key="S2" value="4.795787095314865E-38" />
+      <entry key="S5" value="1.181823235028999E-15" />
+      <entry key="S10" value="3.512267945706641E-8" />
+      <entry key="S30" value="0.00416124500939813" />
+      <entry key="S60" value="0.08776313910435742" />
+      <entry key="M2" value="0.4805665903305791" />
+      <entry key="M5" value="2.6216403815116056" />
+      <entry key="M10" value="6.5739826050903485" />
+      <entry key="M15" value="9.555231289602208" />
+      <entry key="M30" value="16.527955538012822" />
+      <entry key="H1" value="33.34479230954835" />
+      <entry key="H2" value="74.14411795085493" />
+      <entry key="H4" value="157.30313618869957" />
+      <entry key="D1" value="538.7512427245141" />
+      <entry key="W1" value="736.8018269557548" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.002582084732513E-141" />
-      <entry key="MS500" value="7.249667113584327E-29" />
-      <entry key="S2" value="9.22740363456133E-8" />
-      <entry key="S5" value="0.001535805734667989" />
-      <entry key="S10" value="0.040640327538711975" />
-      <entry key="S30" value="0.5198749968597175" />
-      <entry key="S60" value="1.2050632205735718" />
-      <entry key="M2" value="2.546579610575899" />
-      <entry key="M5" value="9.450380913742732" />
-      <entry key="M10" value="19.584489848971632" />
-      <entry key="M15" value="26.178921697532477" />
-      <entry key="M30" value="39.56841073023761" />
-      <entry key="H1" value="73.24492218285248" />
-      <entry key="H2" value="173.43251745522957" />
-      <entry key="H4" value="398.21875251040177" />
-      <entry key="D1" value="1543.6462071976725" />
-      <entry key="W1" value="2229.2985329437743" />
+      <entry key="MS100" value="0.9592648566334236" />
+      <entry key="MS500" value="1.1522751647614333" />
+      <entry key="S2" value="3.077470238912841" />
+      <entry key="S5" value="4.5149385227982055" />
+      <entry key="S10" value="5.247574230588621" />
+      <entry key="S30" value="8.114570176524285" />
+      <entry key="S60" value="14.457997236650973" />
+      <entry key="M2" value="24.241582050448642" />
+      <entry key="M5" value="39.5496716566503" />
+      <entry key="M10" value="53.849844370354084" />
+      <entry key="M15" value="62.61129996659908" />
+      <entry key="M30" value="78.89832079193123" />
+      <entry key="H1" value="113.78190070341007" />
+      <entry key="H2" value="213.8136878529018" />
+      <entry key="H4" value="438.22933803491253" />
+      <entry key="D1" value="1585.5344412131456" />
+      <entry key="W1" value="2273.6588095458865" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -461,7 +429,23 @@
       <option name="project" value="LOCAL" />
       <updated>1785598077329</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="can't find problem if i want to create multiple user the both user is not working.">
+      <option name="closed" value="true" />
+      <created>1785606443320</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1785606443320</updated>
+    </task>
+    <task id="LOCAL-00034">
+      <option name="closed" value="true" />
+      <created>1785606522698</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1785606522698</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,6 +480,7 @@
     <MESSAGE value="Create dummyDataBase, Create new Airline Representative. Place new Order new Order. impliment all class Seriazable" />
     <MESSAGE value="pushed the bin file" />
     <MESSAGE value="workdone for flightDelayController" />
-    <option name="LAST_COMMIT_MESSAGE" value="workdone for flightDelayController" />
+    <MESSAGE value="can't find problem if i want to create multiple user the both user is not working." />
+    <option name="LAST_COMMIT_MESSAGE" value="can't find problem if i want to create multiple user the both user is not working." />
   </component>
 </project>
