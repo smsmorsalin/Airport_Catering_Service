@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import user.FoodQualityControlOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
@@ -31,15 +32,32 @@ public class ApproveBatchController
 
     @javafx.fxml.FXML
     public void approveBatchOnAction(ActionEvent actionEvent) {
+
+        if(batchNumberTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Wring Input","Batch number should be filled with integer");
+            return;
+        }
+        if(approvalRemarksTextArea.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Wring Input","Approve remark should be filled with integer");
+            return;
+        }
+        int batchId;
+        try{
+            batchId = Integer.parseInt(batchNumberTextField.getText().trim());
+        }catch (Exception e){
+            AlertGenerator.showAlert("Invalid","Batch Id should be Integer");
+            return;
+        }
+        if(batchId <= 0){
+            AlertGenerator.showAlert("Invalid Inout","Batch id should ne grater than 0");
+            return;
+        }
+        if(approvalRemarksTextArea.getText().matches("//d+")){
+            AlertGenerator.showAlert("Invalid Input","Approve Remark should be Character");
+            return;
+        }
     }
 
-    @Deprecated
-    public void clearOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void searchOnAction(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
