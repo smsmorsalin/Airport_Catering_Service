@@ -4,7 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="workdone for 2 AirlineRepresentative Controller , loginController, superAdmin validation" />
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/DummyDataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airlineRepresentativeSelfRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airlineRepresentativeSelfRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/cancelOrderViewConroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/cancelOrderViewConroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/createCateringOrderViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/createCateringOrderViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/dashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/dashboardViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Airline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Airline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/CateringOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/CateringOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryConfirmation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryConfirmation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/DispatchCoordinator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/DispatchCoordinator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/FinanceAndBillingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/FinanceAndBillingManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/Headchef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Headchef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/InventoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/SuperAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/SuperAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/cancelOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/cancelOrderView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/confirmDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/confirmDeliveryView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/createCateringOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/createCateringOrderView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/dashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/dashboardView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/flightDelayView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/flightDelayView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/modifyOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/modifyOrderView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/orderHistoryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/orderHistoryView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/payBillView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/payBillView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AirlineRepresentative/truckOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/truckOrderView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/approveOrRejectOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/approveOrRejectOrderView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/businessDashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/businessDashboardView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/deliveryMonitoringView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/deliveryMonitoringView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/emergencyIssueView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/emergencyIssueView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/generateReportView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/generateReportView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/inventoryStatusView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/inventoryStatusView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/monitorProductionView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/monitorProductionView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/operationalReportView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/operationalReportView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CateringOperationsManager/reviewOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operationsManager/reviewOrderView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/airlineRepresentativeSelfRegisterView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/loginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main/airport_catering_service/loginView.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +61,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -43,61 +90,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0053253873298684" />
-      <entry key="MS500" value="1.725118058197148" />
-      <entry key="S2" value="5.110795758219881" />
-      <entry key="S5" value="7.515142894392607" />
-      <entry key="S10" value="9.195849412058918" />
-      <entry key="S30" value="24.073785030103352" />
-      <entry key="S60" value="48.705554924184426" />
-      <entry key="M2" value="75.15977350641097" />
-      <entry key="M5" value="100.05039277020296" />
-      <entry key="M10" value="112.01835689662524" />
-      <entry key="M15" value="117.9734503932941" />
-      <entry key="M30" value="129.8142529149193" />
-      <entry key="H1" value="154.17036628096955" />
-      <entry key="H2" value="215.03005407890106" />
-      <entry key="H4" value="339.7941156588118" />
-      <entry key="D1" value="783.331763776419" />
-      <entry key="W1" value="969.4786784770372" />
+      <entry key="MS100" value="1.0000036593022184" />
+      <entry key="MS500" value="1.08317873270589" />
+      <entry key="S2" value="1.728971329731486" />
+      <entry key="S5" value="2.389933381602804" />
+      <entry key="S10" value="3.031752014745377" />
+      <entry key="S30" value="4.05160901056996" />
+      <entry key="S60" value="4.47257496465715" />
+      <entry key="M2" value="4.722082304053075" />
+      <entry key="M5" value="5.4937820983279755" />
+      <entry key="M10" value="14.067017632350279" />
+      <entry key="M15" value="28.099231233225108" />
+      <entry key="M30" value="66.19987397324455" />
+      <entry key="H1" value="116.2192489842037" />
+      <entry key="H2" value="192.6989432541075" />
+      <entry key="H4" value="326.43871590711683" />
+      <entry key="D1" value="793.3414206866556" />
+      <entry key="W1" value="991.8185933915004" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="4.531861530475042E-82" />
-      <entry key="S5" value="2.9007523494317096E-33" />
-      <entry key="S10" value="5.385863315096399E-17" />
-      <entry key="S30" value="3.7841373157110603E-6" />
-      <entry key="S60" value="0.0020659198307358528" />
-      <entry key="M2" value="0.06023482373695527" />
-      <entry key="M5" value="0.7571468988419617" />
-      <entry key="M10" value="3.0100294078184238" />
-      <entry key="M15" value="5.701569559949471" />
-      <entry key="M30" value="13.587733618760895" />
-      <entry key="H1" value="30.689379181259074" />
-      <entry key="H2" value="70.00249012865653" />
-      <entry key="H4" value="149.33571116386196" />
-      <entry key="D1" value="445.0716784475451" />
-      <entry key="W1" value="572.2551780309212" />
+      <entry key="MS500" value="1.1592239235411919E-179" />
+      <entry key="S2" value="2.0295601751029305E-45" />
+      <entry key="S5" value="2.0375969573219877E-18" />
+      <entry key="S10" value="2.3601994142980927E-9" />
+      <entry key="S30" value="0.002741512768906041" />
+      <entry key="S60" value="0.09057877042318856" />
+      <entry key="M2" value="0.5227692351144556" />
+      <entry key="M5" value="1.8052351979965473" />
+      <entry key="M10" value="4.939237227765695" />
+      <entry key="M15" value="8.86349896904134" />
+      <entry key="M30" value="20.101879018652816" />
+      <entry key="H1" value="39.93335921753879" />
+      <entry key="H2" value="80.10791166280512" />
+      <entry key="H4" value="159.87716248719846" />
+      <entry key="D1" value="465.3210389924541" />
+      <entry key="W1" value="599.6525244586751" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.016605761343432297" />
-      <entry key="MS500" value="0.976256931627603" />
-      <entry key="S2" value="4.743214350835926" />
-      <entry key="S5" value="7.33821253639129" />
-      <entry key="S10" value="9.100546122376942" />
-      <entry key="S30" value="24.03599939504149" />
-      <entry key="S60" value="48.6848764983139" />
-      <entry key="M2" value="75.2061873910149" />
-      <entry key="M5" value="100.79703089824469" />
-      <entry key="M10" value="115.01425450340881" />
-      <entry key="M15" value="123.6578812249814" />
-      <entry key="M30" value="143.3796132371135" />
-      <entry key="H1" value="184.82870183788822" />
-      <entry key="H2" value="285.0445323643689" />
-      <entry key="H4" value="493.39451882787404" />
-      <entry key="D1" value="1409.7630700761988" />
-      <entry key="W1" value="1887.4528840274786" />
+      <entry key="MS100" value="0.9526412959917544" />
+      <entry key="MS500" value="1.0718154953678223" />
+      <entry key="S2" value="1.722815634791624" />
+      <entry key="S5" value="2.3751359963086855" />
+      <entry key="S10" value="2.9975234084467774" />
+      <entry key="S30" value="4.019194615888091" />
+      <entry key="S60" value="4.5371483809236155" />
+      <entry key="M2" value="5.223320645761332" />
+      <entry key="M5" value="7.281895947164473" />
+      <entry key="M10" value="18.989106188211835" />
+      <entry key="M15" value="36.9440969927052" />
+      <entry key="M30" value="86.2797571801968" />
+      <entry key="H1" value="156.12425269281766" />
+      <entry key="H2" value="272.8113957603205" />
+      <entry key="H4" value="490.12120960884124" />
+      <entry key="D1" value="1436.6304142061445" />
+      <entry key="W1" value="1936.2590882896857" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -397,7 +444,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785540859459</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785581250936</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1785581250936</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

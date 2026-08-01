@@ -45,43 +45,7 @@ public class loginController
 
     @javafx.fxml.FXML
     public void loginButtonOnClick(ActionEvent event) throws IOException {
-        int userId = 0;
-        try {
-            userId = Integer.parseInt(fxidUsernameTextField.getText());
-        }catch (NumberFormatException e){
-            if(fxidUsernameTextField.getText().equals("admin")){
-                SceneSwitchingHelper.fullSceneReplacement(event, "/main/airport_catering_service/createNewEmployeeView.fxml");
-                return;
-            }
-        }
-        String password = fxidPasswordTextfield.getText();
-
-        User loggedInUser = User.verifyLogin(userId, password);
-
-        if (loggedInUser == null) {
-            AlertGenerator.showAlert(
-                    "Error",
-                    "Invalid username or password."
-            );
-            return;
-        }
-
-        if (loggedInUser instanceof AirlineRepresentative) {
-            SceneSwitchingHelper.switchSceneWithData(
-                    event,
-                    "/AirlineRepresentative/dashboardView.fxml",
-                    loggedInUser
-            );
-        }
-        else if (loggedInUser instanceof CateringOperationsManager) {
-            SceneSwitchingHelper.switchSceneWithData(
-                    event,
-                    "/CateringOperationsManager/businessDashboardView.fxml",
-                    loggedInUser
-            );
-        }
-
-        else if (fxidUsernameTextField.getText().equals("3")) {
+        if (fxidUsernameTextField.getText().equals("3")) {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/CustomerSupportOfficer/dashboardView.fxml"));
 
@@ -167,6 +131,44 @@ public class loginController
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+        }
+
+
+        // read user from database.
+        int userId = 0;
+        try {
+            userId = Integer.parseInt(fxidUsernameTextField.getText());
+        }catch (NumberFormatException e){
+            if(fxidUsernameTextField.getText().equals("admin")){
+                SceneSwitchingHelper.fullSceneReplacement(event, "/main/airport_catering_service/createNewEmployeeView.fxml");
+                return;
+            }
+        }
+        String password = fxidPasswordTextfield.getText();
+
+        User loggedInUser = User.verifyLogin(userId, password);
+
+        if (loggedInUser == null) {
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Invalid username or password."
+            );
+            return;
+        }
+
+        if (loggedInUser instanceof AirlineRepresentative) {
+            SceneSwitchingHelper.switchSceneWithData(
+                    event,
+                    "/airline_representative/dashboardView.fxml",
+                    loggedInUser
+            );
+        }
+        else if (loggedInUser instanceof CateringOperationsManager) {
+            SceneSwitchingHelper.switchSceneWithData(
+                    event,
+                    "/catering_operationsManager/businessDashboardView.fxml",
+                    loggedInUser
+            );
         }
 
     }

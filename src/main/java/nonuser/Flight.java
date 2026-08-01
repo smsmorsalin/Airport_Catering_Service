@@ -2,11 +2,12 @@ package nonuser;
 
 import utility.BinaryFileUtility;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class Flight {
+public class Flight implements Serializable {
 
     private final String flightId;
     private String flightName;

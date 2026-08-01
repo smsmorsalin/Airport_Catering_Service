@@ -1,4 +1,6 @@
 package nonuser;
 
-public class Payment {
+import java.io.Serializable;
+
+public class Payment implements Serializable {
 }

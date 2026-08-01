@@ -2,10 +2,11 @@ package user;
 
 import utility.databaseAccessor;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Random;
 
-public abstract class Employee extends User {
+public abstract class Employee extends User implements Serializable {
 
     protected final int employeeId;
     protected String department;

@@ -3,6 +3,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,32 +17,40 @@
                 <Font name="Arial Bold" size="17.0" />
             </font>
         </Label>
-        <TextField fx:id="fxidUsernameTextField" layoutX="231.0" layoutY="55.0" prefHeight="25.0" prefWidth="214.0" promptText="username" />
-        <TextField fx:id="fxidFullNameTextField" layoutX="231.0" layoutY="91.0" prefHeight="25.0" prefWidth="214.0" promptText="Full name" />
-        <Button layoutX="231.0" layoutY="304.0" mnemonicParsing="false" onAction="#registerButtonOnClick" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: orange;" text="Register">
+        <TextField fx:id="fxidFullNameTextField" layoutX="231.0" layoutY="49.0" prefHeight="25.0" prefWidth="214.0" promptText="Full name" />
+        <Button layoutX="231.0" layoutY="401.0" mnemonicParsing="false" onAction="#registerButtonOnClick" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: orange;" text="Register">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-        <Label layoutX="148.0" layoutY="358.0" prefHeight="17.0" prefWidth="227.0" text="already have account? click here to go for">
+        <Label layoutX="148.0" layoutY="455.0" prefHeight="17.0" prefWidth="227.0" text="already have account? click here to go for">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Label>
-      <Label layoutX="163.0" layoutY="59.0" prefHeight="17.0" prefWidth="58.0" text="username" />
-      <Label layoutX="165.0" layoutY="96.0" prefHeight="17.0" prefWidth="58.0" text="Full name" />
-      <TextField fx:id="fxidPhoneNumberTextField" layoutX="231.0" layoutY="127.0" prefHeight="25.0" prefWidth="214.0" promptText="phone number" />
-      <Label layoutX="137.0" layoutY="131.0" prefHeight="17.0" prefWidth="86.0" text="phone Number" />
-      <Label layoutX="119.0" layoutY="165.0" prefHeight="17.0" prefWidth="108.0" text="Select your Airline" />
-      <ComboBox fx:id="fxidAirlineComboBox" layoutX="231.0" layoutY="162.0" prefHeight="25.0" prefWidth="214.0" />
+      <Label layoutX="165.0" layoutY="54.0" prefHeight="17.0" prefWidth="58.0" text="Full name" />
+      <TextField fx:id="fxidPhoneNumberTextField" layoutX="231.0" layoutY="85.0" prefHeight="25.0" prefWidth="214.0" promptText="phone number" />
+      <Label layoutX="106.0" layoutY="89.0" prefHeight="17.0" prefWidth="117.0" text="Enter phone Number" />
+      <Label layoutX="119.0" layoutY="123.0" prefHeight="17.0" prefWidth="108.0" text="Select your Airline" />
+      <ComboBox fx:id="fxidAirlineComboBox" layoutX="231.0" layoutY="120.0" prefHeight="25.0" prefWidth="214.0" />
       <Label layoutX="98.0" layoutY="583.0" prefHeight="17.0" prefWidth="220.0" text="if you can't find your Airline contact with ">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <TextField fx:id="fxidNewPasswordTextField" layoutX="231.0" layoutY="205.0" prefHeight="25.0" prefWidth="214.0" promptText="new password" />
-      <Label layoutX="137.0" layoutY="209.0" prefHeight="17.0" prefWidth="86.0" text="new password" />
-      <TextField fx:id="fxidConfirmPasswordTextField" layoutX="231.0" layoutY="244.0" prefHeight="25.0" prefWidth="214.0" promptText="new password" />
-      <Label layoutX="126.0" layoutY="248.0" prefHeight="17.0" prefWidth="97.0" text="confirm password" />
-      <Button layoutX="375.0" layoutY="354.0" mnemonicParsing="false" onAction="#loginButtonOnClick" text="Login" />
+      <TextField fx:id="fxidNewPasswordTextField" layoutX="231.0" layoutY="154.0" prefHeight="25.0" prefWidth="214.0" promptText="new password" />
+      <Label layoutX="115.0" layoutY="158.0" prefHeight="17.0" prefWidth="108.0" text="Enter new password" />
+      <TextField fx:id="fxidConfirmPasswordTextField" layoutX="231.0" layoutY="186.0" prefHeight="25.0" prefWidth="214.0" promptText="new password" />
+      <Label layoutX="126.0" layoutY="190.0" prefHeight="17.0" prefWidth="97.0" text="confirm password" />
+      <Button layoutX="375.0" layoutY="451.0" mnemonicParsing="false" onAction="#loginButtonOnClick" text="Login" />
       <Button layoutX="318.0" layoutY="579.0" mnemonicParsing="false" onAction="#supportTeamButtonOnClick" text="Support Team" />
+      <Label layoutX="146.0" layoutY="224.0" prefHeight="17.0" prefWidth="77.0" text="Date of Birth" />
+      <DatePicker fx:id="fxidDateOfBirthDatePicker" layoutX="231.0" layoutY="220.0" prefHeight="25.0" prefWidth="214.0" />
+      <ComboBox fx:id="fxidGenderComboBox" layoutX="231.0" layoutY="253.0" prefHeight="25.0" prefWidth="214.0" />
+      <Label layoutX="146.0" layoutY="257.0" prefHeight="17.0" prefWidth="77.0" text="Select gender" />
+      <Label layoutX="112.0" layoutY="290.0" prefHeight="17.0" prefWidth="108.0" text="Enter email address" />
+      <TextField fx:id="fxidEmailAddressTextField" layoutX="231.0" layoutY="286.0" prefHeight="25.0" prefWidth="208.0" />
+      <Label layoutX="63.0" layoutY="322.0" prefHeight="17.0" prefWidth="157.0" text="Enter office contact Number" />
+      <TextField fx:id="fxidOfficeContactNumberField" layoutX="231.0" layoutY="318.0" prefHeight="25.0" prefWidth="208.0" />
+      <Label layoutX="134.0" layoutY="354.0" prefHeight="17.0" prefWidth="86.0" text="Enter address" />
+      <TextField fx:id="fxidAddressTextField" layoutX="231.0" layoutY="350.0" prefHeight="25.0" prefWidth="208.0" />
     </children>
 </AnchorPane>

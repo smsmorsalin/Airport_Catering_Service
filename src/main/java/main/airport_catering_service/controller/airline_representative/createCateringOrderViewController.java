@@ -14,7 +14,6 @@ import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 import utility.databaseAccessor;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -260,7 +259,7 @@ public class createCateringOrderViewController implements UserReceiver
     public void sideBarTrackOrderButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/trackOrderView.fxml",
+                "/airline_representative/trackOrderView.fxml",
                 loggedInUser
         );
     }
@@ -269,7 +268,7 @@ public class createCateringOrderViewController implements UserReceiver
     public void homeButtonAirportCateringService(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/dashboardView.fxml",
+                "/airline_representative/dashboardView.fxml",
                 loggedInUser
         );
     }
@@ -278,7 +277,7 @@ public class createCateringOrderViewController implements UserReceiver
     public void sideBarPayInvoiceButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/payBillView.fxml",
+                "/airline_representative/payBillView.fxml",
                 loggedInUser
         );
     }
@@ -287,7 +286,7 @@ public class createCateringOrderViewController implements UserReceiver
     public void sideBarConfirmDeliveryButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/confirmDeliveryView.fxml",
+                "/airline_representative/confirmDeliveryView.fxml",
                 loggedInUser
         );
     }
@@ -296,7 +295,7 @@ public class createCateringOrderViewController implements UserReceiver
     public void sideBarFlightDelayButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/flightDelayView.fxml",
+                "/airline_representative/flightDelayView.fxml",
                 loggedInUser
         );
     }
@@ -305,7 +304,7 @@ public class createCateringOrderViewController implements UserReceiver
     public void sideBarCancelOrderButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/cancelOrderView.fxml",
+                "/airline_representative/cancelOrderView.fxml",
                 loggedInUser
         );
     }
@@ -314,7 +313,7 @@ public class createCateringOrderViewController implements UserReceiver
     public void sideBarOrderHistoryButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/orderHistoryView.fxml",
+                "/airline_representative/orderHistoryView.fxml",
                 loggedInUser
         );
     }
@@ -323,7 +322,7 @@ public class createCateringOrderViewController implements UserReceiver
     public void sideBarModifyOrderButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/AirlineRepresentative/modifyOrderView.fxml",
+                "/airline_representative/modifyOrderView.fxml",
                 loggedInUser
         );
     }
