@@ -15,19 +15,19 @@ public class GenerateQAReportController
     @javafx.fxml.FXML
     private Label fxidDisplayAverageQualityScoreLabel;
     @javafx.fxml.FXML
-    private TextField endDatePicker;
-    @javafx.fxml.FXML
     private Label fxidDisplayCompliancePercentageLabel;
     @javafx.fxml.FXML
     private Label fxidDisplayTotalBatchesInspectedLabel;
-    @javafx.fxml.FXML
-    private TextField startDatePicker;
     @javafx.fxml.FXML
     private ComboBox<String> reportTypeComboBox;
     @javafx.fxml.FXML
     private Label fxidDisplayTotalRejectedBatchesLabel;
     @javafx.fxml.FXML
     private Label reportTypeComboBox1;
+    @javafx.fxml.FXML
+    private DatePicker endDatePicker;
+    @javafx.fxml.FXML
+    private DatePicker startDatePicker;
 
     @javafx.fxml.FXML
     public void initialize() {
