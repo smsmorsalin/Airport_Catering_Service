@@ -110,11 +110,10 @@ public class cancelOrderViewConroller implements UserReceiver {
         }
 
         // Load order information into the Label
-        fxidFlightNumber.setText(selectedCateringOrder.getFlightId());
-        fxidFlightDate.setText(selectedCateringOrder.getDeliveryDate().toString());
-        fxidDeliveryTime.setText(selectedCateringOrder.getDeliveryTime().toString());
-        fxidDeliveryLocation.setText(selectedCateringOrder.getDeliveryLocation());
-        fxidDepartureTime.setText("Not available");
+        fxidFlightNumber.setText("Flight Number: "+ selectedCateringOrder.getFlightId());
+        fxidFlightDate.setText("Flight Date: "+ selectedCateringOrder.getDeliveryDate().toString());
+        fxidDeliveryTime.setText("Departure Time: "+ selectedCateringOrder.getDeliveryTime().toString());
+        fxidDeliveryLocation.setText("Delivery Location: "+ selectedCateringOrder.getDeliveryLocation());
         fxidHiddenAnochorPanel.setVisible(true);
 
     }

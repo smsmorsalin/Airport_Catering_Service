@@ -15,6 +15,7 @@ public class CateringOrder implements Serializable {
     private LocalDate deliveryDate;
     private LocalTime deliveryTime;
     private String Status;
+    private boolean isDelay;
 
     public CateringOrder(int orderId, String flightId,int airlineRepresentativeId, LocalDate orderDate, String deliveryLocation, ArrayList<String> orderItemIds, LocalDate deliveryDate, LocalTime deliveryTime) {
         this.orderId = orderId;
@@ -26,6 +27,7 @@ public class CateringOrder implements Serializable {
         this.deliveryDate = deliveryDate;
         this.deliveryTime = deliveryTime;
         Status = "Pending";
+        this.isDelay = false;
     }
 
     public int getOrderId() {
@@ -80,6 +82,14 @@ public class CateringOrder implements Serializable {
         return airlineRepresentativeId;
     }
 
+    public boolean isDelay() {
+        return isDelay;
+    }
+
+    public void setDelay(boolean delay) {
+        isDelay = delay;
+    }
+
     @Override
     public String toString() {
         return "CateringOrder{" +
@@ -92,6 +102,7 @@ public class CateringOrder implements Serializable {
                 ", deliveryDate=" + deliveryDate +
                 ", deliveryTime=" + deliveryTime +
                 ", Status='" + Status + '\'' +
+                ", isDelay=" + isDelay +
                 '}';
     }
 }

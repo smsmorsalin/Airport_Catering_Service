@@ -224,6 +224,7 @@ public class createCateringOrderViewController implements UserReceiver
                 loggedInUser.createCateringOrder(
                         flightId,
                         deliveryLocation,
+                        orderItemList,
                         flightDate,
                         deliveryTime
                 );

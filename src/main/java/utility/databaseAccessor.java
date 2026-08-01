@@ -1,39 +1,10 @@
 package utility;
 
 import java.lang.reflect.Field;
+import java.text.ParseException;
 import java.util.ArrayList;
 
 public class databaseAccessor {
-
-    public static boolean verifyUnique(Object objectToVerify,
-                                       String fileName,
-                                       String fieldName) {
-
-        ArrayList<Object> objectList = BinaryFileUtility.readObjects(fileName);
-
-        if (objectList == null) {
-            return true;
-        }
-
-        try {
-            for (Object object : objectList) {
-
-                Field field = object.getClass().getDeclaredField(fieldName);
-                field.setAccessible(true);
-
-                Object value = field.get(object);
-
-                if (value.equals(objectToVerify)) {
-                    return false;
-                }
-            }
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return true;
-    }
 
     public static Integer generateNewUniqueId(String fileName,
                                               String fieldName) {
@@ -92,6 +63,8 @@ public class databaseAccessor {
                 }
             }
 
+        }catch (NumberFormatException e1){
+            System.out.println("Exception in converting String to Integer");
         }
         catch (Exception e) {
             e.printStackTrace();
