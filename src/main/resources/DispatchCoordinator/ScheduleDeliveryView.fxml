@@ -68,7 +68,7 @@
                   <Label fx:id="scheduleIdLabel" layoutX="23.0" layoutY="366.0" text="Schedule ID" />
                   <Label fx:id="orderIdLabel" layoutX="23.0" layoutY="394.0" text="Order ID" />
                   <Label fx:id="flightNumberLabel" layoutX="23.0" layoutY="423.0" text="Flight Number" />
-                  <Label fx:id="deliveryDateAndTimeLabel" layoutX="23.0" layoutY="449.0" text="Delivery Date &amp; Time" />
+                  <Label fx:id="deliveryDateAndTimeLabel" layoutX="23.0" layoutY="449.0" text="Delivery Date " />
                   <Label fx:id="assignedTruckLabel" layoutX="23.0" layoutY="476.0" text="Assigned Truck" />
                </children>
             </AnchorPane>

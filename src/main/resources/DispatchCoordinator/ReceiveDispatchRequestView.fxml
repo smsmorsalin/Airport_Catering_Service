@@ -60,12 +60,11 @@
                   <Button layoutX="37.0" layoutY="169.0" mnemonicParsing="false" onAction="#searchButtonOnACtion" prefHeight="26.0" prefWidth="86.0" text="Search" />
                   <TableView fx:id="tableView" layoutX="-1.0" layoutY="338.0" prefHeight="200.0" prefWidth="596.0">
                     <columns>
-                      <TableColumn fx:id="dispatchRequestIdTableviewColumn" prefWidth="126.39996337890625" text="Dispatch Request ID" />
-                      <TableColumn fx:id="orderIdTableviewColumn" prefWidth="56.0" text="Order ID" />
-                        <TableColumn fx:id="flightNumberTableviewColumn" prefWidth="96.0" text="Flight Number" />
-                        <TableColumn fx:id="deliveryLocationTableviewColumn" prefWidth="112.80001831054688" text="Delivery Location" />
-                        <TableColumn fx:id="deliveryTimeTableviewColumn" minWidth="0.0" prefWidth="94.4000244140625" text="Delivery Time" />
-                        <TableColumn fx:id="dispatchStatusTableviewColumn" minWidth="0.0" prefWidth="111.199951171875" text="Dispatch Status" />
+                      <TableColumn fx:id="dispatchRequestIdTableviewColumn" prefWidth="144.79998779296875" text="Dispatch Request ID" />
+                      <TableColumn fx:id="orderIdTableviewColumn" prefWidth="72.79998779296875" text="Order ID" />
+                        <TableColumn fx:id="flightNumberTableviewColumn" prefWidth="125.60000610351562" text="Flight Number" />
+                        <TableColumn fx:id="deliveryLocationTableviewColumn" prefWidth="102.4000244140625" text="Delivery Location" />
+                        <TableColumn fx:id="deliveryTimeTableviewColumn" minWidth="0.0" prefWidth="151.99993896484375" text="Delivery Time" />
                     </columns>
                   </TableView>
                   <Text fx:id="dispatchNoteText" layoutX="35.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dispatch Note" />
