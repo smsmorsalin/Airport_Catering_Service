@@ -5,6 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 import utility.databaseAccessor;
@@ -28,8 +29,8 @@ public abstract class User implements Serializable {
     protected String status;
     protected final LocalDate createDate;
 
-    public User(int userId, String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status) {
-        this.userId = userId;
+    public User(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status) {
+        this.userId = generateNewId();
         this.createDate = LocalDate.now();
         this.status = status;
         this.address = address;
@@ -174,8 +175,24 @@ public abstract class User implements Serializable {
     }
 
     public final static int generateNewId(){
-        int tempId = (int) databaseAccessor.generateNewUniqueId("User.bin", "userId");
-        return tempId;
+        ArrayList<Object> objects =
+                BinaryFileUtility.readObjects("User.bin");
+
+        int maximumId = 0;
+
+        if (objects == null || objects.isEmpty()) {
+            return 1;
+        }
+
+        for (Object object : objects) {
+            if (object instanceof User user) {
+                if (user.getUserId() > maximumId) {
+                    maximumId = user.getUserId();
+                }
+            }
+        }
+
+        return maximumId + 1;
     }
 
     public abstract void viewDashboard(javafx.event.ActionEvent event) throws IOException;

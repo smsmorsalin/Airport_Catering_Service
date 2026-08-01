@@ -1,11 +1,12 @@
 package main.airport_catering_service.controller;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import user.SuperAdmin;
+import user.User;
+
+import java.io.IOException;
+import java.util.Objects;
 
 public class createNewEmployeeController
 {
@@ -56,7 +57,7 @@ public class createNewEmployeeController
     }
 
     @javafx.fxml.FXML
-    public void createNewUserButtonOnAction(ActionEvent actionEvent) {
+    public void createNewUserButtonOnAction(ActionEvent actionEvent) throws IOException {
 
 //        String password, String fullName, String role, String dateOfBirth,
 //                String gender, String email, String phone, String address,
@@ -75,5 +76,12 @@ public class createNewEmployeeController
                 Float.parseFloat(salaryTextField.getText()),
                 joiningDateDatePicker.getValue()
         );
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setTitle("Want to go login Page?");
+        a.setContentText("if you click yes you will go to login page. otherwise you will stay here");
+        a.showAndWait();
+
+        if (a.isResizable()) return;
+        User.logout(actionEvent);
     }
 }
