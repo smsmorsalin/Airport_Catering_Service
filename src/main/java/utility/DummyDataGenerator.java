@@ -2,13 +2,15 @@ package utility;
 
 import nonuser.Airline;
 import nonuser.Flight;
+import user.AirlineRepresentative;
+import user.CateringOperationsManager;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class DummyDataGenerator {
 
-        public static void main() {
+        public static void Airlines() {
 
             //Airlines
             BinaryFileUtility.writeObjects(
@@ -89,5 +91,45 @@ public class DummyDataGenerator {
 
             System.out.println("Dummy Airline.bin and Flight.bin created successfully.");
         }
+
+    public static void morsalin() {
+
+        // Dummy Catering Operations Manager
+        CateringOperationsManager manager = new CateringOperationsManager(
+                "1234",                      // password
+                "John Smith",                         // fullName
+                "Catering Operations Manager",        // role
+                LocalDate.of(1988, 5, 15),            // dateOfBirth
+                "Male",                               // gender
+                "john.smith@airport.com",             // email
+                "01711111111",                        // phone
+                "Dhaka, Bangladesh",                  // address
+                "Active",                             // status
+                LocalDate.of(2022, 1, 10),            // joinDate
+                "Operations",                         // department
+                "Operations Manager",                 // designation
+                85000f                               // salary
+        );
+        BinaryFileUtility.writeObjects("User.bin", manager);
+
+        // Dummy Airline Representative
+//        AirlineRepresentative representative = new AirlineRepresentative(
+//                "1234",                      // password
+//                "Sarah Johnson",                      // fullName
+//                "Airline Representative",             // role
+//                LocalDate.of(1994, 9, 20),            // dateOfBirth
+//                "Female",                             // gender
+//                "sarah@skyair.com",                   // email
+//                "01822222222",                        // phone
+//                "Chattogram, Bangladesh",             // address
+//                "Active",                             // status
+//                "BG001",                              // airlineId
+//                "02-98765432"                         // officeContact
+//        );
+//        BinaryFileUtility.writeObjects("User.bin", representative);
+
+        System.out.println("catering user id: "+" "+manager.getUserId() + "catering User pass: " +manager.getPassword());
+//        System.out.println("catering user id: "+ representative.getUserId()+" " + "catering User pass: " +representative.getPassword());
+    }
 }
 

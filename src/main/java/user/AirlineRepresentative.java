@@ -212,7 +212,23 @@ public class AirlineRepresentative extends User implements Serializable {
         return null;
     }
 
-
+    @Override
+    public String toString() {
+        return "AirlineRepresentative{" +
+                "airlineId='" + airlineId + '\'' +
+                ", officeContact='" + officeContact + '\'' +
+                ", userId=" + userId +
+                ", role='" + role + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", status='" + status + '\'' +
+                ", createDate=" + createDate +
+                '}';
+    }
 
     // Bellow are the code for fxml sideBar rendering button on action
     public static void renderFxmlDashboard(javafx.event.ActionEvent event) throws IOException {

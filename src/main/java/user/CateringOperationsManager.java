@@ -5,11 +5,14 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import nonuser.CateringOrder;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class CateringOperationsManager extends Employee implements Serializable {
 
@@ -53,6 +56,12 @@ public class CateringOperationsManager extends Employee implements Serializable 
     public boolean updateProfile(){
         return false;
     }
+
+    public void approveOrRejectOrder(ArrayList<Object> cateringOrder){
+        boolean b = BinaryFileUtility.overwriteObjects("CateringOrder.bin", cateringOrder);
+
+    }
+
 
 
     //below are the code for fxml sideBar rendering button on action
