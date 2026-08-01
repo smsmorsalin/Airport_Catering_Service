@@ -19,8 +19,6 @@ public class PerformInspectionController
     @javafx.fxml.FXML
     private ComboBox<String> tasteRatingComboBox;
     @javafx.fxml.FXML
-    private TextField temperatureReadingTextField;
-    @javafx.fxml.FXML
     private Label fxidDisplayInspectionDateLabel;
     @javafx.fxml.FXML
     private Label fxidDisplayInspectionIDLabel;
@@ -31,8 +29,6 @@ public class PerformInspectionController
     @javafx.fxml.FXML
     private ComboBox<String> appearanceRatingComboBox;
     @javafx.fxml.FXML
-    private ComboBox<String> textureRatingbelComboBox;
-    @javafx.fxml.FXML
     private Label fxidDisplayOverallScoreLabel;
     @javafx.fxml.FXML
     private Label fxidDisplayInspectioStatusLabel;
@@ -41,7 +37,7 @@ public class PerformInspectionController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 

@@ -13,8 +13,6 @@ import java.io.IOException;
 public class ManageQualityIssueController
 {
     @javafx.fxml.FXML
-    private TextArea correctiveActionTextArea;
-    @javafx.fxml.FXML
     private TextArea followUpNotesTextArea;
     @javafx.fxml.FXML
     private Label fxidDisplayFollowUpdateLabel;
@@ -27,7 +25,7 @@ public class ManageQualityIssueController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
@@ -68,7 +66,7 @@ public class ManageQualityIssueController
     public void sideBarApproveBatchOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void saveOnAction(ActionEvent actionEvent) {
     }
 }
