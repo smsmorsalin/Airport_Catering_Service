@@ -45,6 +45,7 @@ public class cancelOrderViewConroller implements UserReceiver {
 
     @javafx.fxml.FXML
     public void initialize() {
+        fxidHiddenAnochorPanel.setVisible(false);
 
 
     }
