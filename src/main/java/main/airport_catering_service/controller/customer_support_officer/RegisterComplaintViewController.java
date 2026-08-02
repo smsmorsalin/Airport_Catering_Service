@@ -11,13 +11,9 @@ public class RegisterComplaintViewController
     @javafx.fxml.FXML
     private Button submitButton;
     @javafx.fxml.FXML
-    private Button cancelButton;
-    @javafx.fxml.FXML
     private ComboBox<String> categoryComboBox;
     @javafx.fxml.FXML
     private ComboBox<String> airlineComboBox;
-    @javafx.fxml.FXML
-    private Button resetButton;
     @javafx.fxml.FXML
     private CheckBox highCheckBox;
     @javafx.fxml.FXML
@@ -35,16 +31,8 @@ public class RegisterComplaintViewController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void resetOnAction(ActionEvent actionEvent) {
-    }
-
     @Deprecated
     public void RegisterComplaintOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void cancelOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
