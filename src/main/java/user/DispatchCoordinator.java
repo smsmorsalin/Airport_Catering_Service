@@ -23,7 +23,7 @@ public class DispatchCoordinator extends Employee implements Serializable {
     }
 
     @Override
-    public void viewDashboard(javafx.event.ActionEvent event,User user) throws IOException{
+    public void viewDashboard(javafx.event.ActionEvent event,User user){
         SceneSwitchingHelper.switchSceneWithData(event,"/DispatchCoordinator/DashboardView.fxml",user);
     }
 

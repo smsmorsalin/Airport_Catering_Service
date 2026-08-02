@@ -19,6 +19,7 @@ public class InventoryManager extends Employee implements Serializable {
 
     @Override
     public void viewDashboard(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event,"/InventoryManager/DashboardView.fxml" ,user);
     }
 
     @Override
