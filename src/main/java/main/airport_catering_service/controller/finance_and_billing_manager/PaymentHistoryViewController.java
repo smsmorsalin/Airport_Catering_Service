@@ -11,17 +11,11 @@ public class PaymentHistoryViewController
     @javafx.fxml.FXML
     private TextField invoiceIdTextField;
     @javafx.fxml.FXML
-    private Button exportBtn;
-    @javafx.fxml.FXML
     private TableColumn amountColumn;
-    @javafx.fxml.FXML
-    private Button viewPaymentBtn;
     @javafx.fxml.FXML
     private Button receiptBtn;
     @javafx.fxml.FXML
     private TableColumn methodColumn;
-    @javafx.fxml.FXML
-    private Button resetBtn;
     @javafx.fxml.FXML
     private TextField airlineTextField;
     @javafx.fxml.FXML
@@ -47,23 +41,11 @@ public class PaymentHistoryViewController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void ResetOnAction(ActionEvent actionEvent) {
-    }
-
     @Deprecated
     public void sidebarPaymentHistoryOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void DownloadReceiptOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void ExportPDFOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @Deprecated
     public void ViewPaymentOnAction(ActionEvent actionEvent) {
     }
 
@@ -75,9 +57,17 @@ public class PaymentHistoryViewController
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarHomePageButtonOnAction(ActionEvent actionEvent) throws IOException {
 
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void viewpaymentButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -124,4 +114,5 @@ public class PaymentHistoryViewController
     public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) throws IOException{
         FinanceAndBillingManager.viewOutstandingPayments(actionEvent);
     }
+
 }

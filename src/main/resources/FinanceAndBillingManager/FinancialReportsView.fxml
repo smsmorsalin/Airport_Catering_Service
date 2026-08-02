@@ -288,7 +288,6 @@
 
                         </AnchorPane>
                         <Button fx:id="generateReportButton" layoutX="150" layoutY="650" onAction="#GenerateReportOnAction" prefHeight="40" prefWidth="180" style="-fx-background-color:#6C5CE7;                -fx-background-radius:10;" text="Generate Report" textFill="WHITE" />
-                        <Button fx:id="exportPDFButton" layoutX="370" layoutY="650" onAction="#ExportPDFOnAction" prefHeight="40" prefWidth="150" text="Export PDF" />
                     </children>
                 </AnchorPane>
             </children>

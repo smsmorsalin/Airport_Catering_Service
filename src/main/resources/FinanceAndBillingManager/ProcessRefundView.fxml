@@ -223,14 +223,6 @@
 
 
 
-                                <Button fx:id="resetButton" layoutX="60" layoutY="680" onAction="#resetOnAction" prefWidth="120" text="Reset" />
-
-
-
-                                <Button fx:id="cancelButton" layoutX="300" layoutY="680" onAction="#cancelOnAction" prefWidth="120" text="Cancel" />
-
-
-
                             </children>
 
 
@@ -315,15 +307,6 @@
 
 
                                 <Label fx:id="transactionMethodLabel" layoutX="160" layoutY="315" text="-" />
-
-
-
-
-
-
-
-
-                                <Button fx:id="printReceiptButton" layoutX="45" layoutY="360" onAction="#printReceiptOnAction" prefHeight="40" prefWidth="160" text="Print Receipt" />
 
 
 

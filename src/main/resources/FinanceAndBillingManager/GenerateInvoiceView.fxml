@@ -134,7 +134,6 @@
                                 <Label layoutX="25" layoutY="240" text="Due Date :" />
                                 <Label fx:id="summaryDateLabel" layoutX="120" layoutY="240" text="-" />
                                 <Button fx:id="generateInvoiceButton" layoutX="45" layoutY="290" onAction="#generateinvoiceOnAction" prefHeight="45" prefWidth="150" style="         -fx-background-color:#00853F;         -fx-background-radius:10;" text="Generate Invoice" textFill="WHITE" />
-                                <Button fx:id="printInvoiceButton" layoutX="45" layoutY="340" onAction="#printInvoiceOnAction" prefHeight="45" prefWidth="150" style="         -fx-background-color:#00853F;         -fx-background-radius:10;" text="Print Invoice" textFill="WHITE" />
                             </children>
                         </AnchorPane>
                     </children>

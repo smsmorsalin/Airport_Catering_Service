@@ -36,8 +36,6 @@ public class FinanceReportsViewController
     private Button generateReportButton;
     @javafx.fxml.FXML
     private TableColumn dateColumn;
-    @javafx.fxml.FXML
-    private Button exportPDFButton;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -48,10 +46,6 @@ public class FinanceReportsViewController
     }
 
     @javafx.fxml.FXML
-    public void ExportPDFOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void GenerateReportOnAction(ActionEvent actionEvent) {
     }
 
@@ -59,7 +53,7 @@ public class FinanceReportsViewController
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarHomePageButtonOnAction(ActionEvent actionEvent) throws IOException {
 
     }
@@ -107,5 +101,9 @@ public class FinanceReportsViewController
     @javafx.fxml.FXML
     public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) throws IOException{
         FinanceAndBillingManager.viewOutstandingPayments(actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageButtonOnAction(ActionEvent actionEvent) {
     }
 }

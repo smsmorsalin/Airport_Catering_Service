@@ -46,8 +46,6 @@ public class GenerateInvoiceViewController
     @javafx.fxml.FXML
     private TextField billingAddressTextField;
     @javafx.fxml.FXML
-    private Button printInvoiceButton;
-    @javafx.fxml.FXML
     private Label AirlineNameLabel;
     @javafx.fxml.FXML
     private Button verifyOrderButton;
@@ -56,10 +54,6 @@ public class GenerateInvoiceViewController
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void printInvoiceOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -80,9 +74,13 @@ public class GenerateInvoiceViewController
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarHomePageButtonOnAction(ActionEvent actionEvent) throws IOException {
 
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -129,4 +127,5 @@ public class GenerateInvoiceViewController
     public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) throws IOException{
         FinanceAndBillingManager.viewOutstandingPayments(actionEvent);
     }
+
 }
