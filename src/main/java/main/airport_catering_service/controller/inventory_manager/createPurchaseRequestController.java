@@ -3,6 +3,9 @@ package main.airport_catering_service.controller.inventory_manager;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
+import user.InventoryManager;
+
+import java.io.IOException;
 
 public class createPurchaseRequestController
 {
@@ -72,6 +75,7 @@ public class createPurchaseRequestController
     }
 
     @javafx.fxml.FXML
-    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
+        InventoryManager.renderDashboard(actionEvent);
     }
 }
