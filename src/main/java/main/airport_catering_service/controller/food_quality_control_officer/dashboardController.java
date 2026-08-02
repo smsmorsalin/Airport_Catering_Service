@@ -7,6 +7,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import user.FoodQualityControlOfficer;
 import user.User;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
@@ -35,7 +36,33 @@ public class dashboardController {
 
     @javafx.fxml.FXML
     public void initialize() {
+        statusComboBox.getItems().addAll("Pending","Processing","Completed");
     }
+    @javafx.fxml.FXML
+    public void updateOnAction(ActionEvent actionEvent) {
+        mainTableView.getItems().clear();
+
+        if(statusComboBox.getValue() == null){
+            AlertGenerator.showAlert("Invalid Input","ComboBox items should be selected");
+            return;
+        }
+        if(enterTicketIDTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Ticket Id should be filled");
+            return;
+        }
+        int ticketId;
+        try{
+            ticketId = Integer.parseInt(enterTicketIDTextField.getText());
+        }catch (Exception e){
+            AlertGenerator.showAlert("Invalid Input","Ticket Id should be only Integer");
+            return;
+        }
+        if(ticketId <= 0){
+            AlertGenerator.showAlert("Invalid Input","Ticker Id should not be grater than 0");
+            return;
+        }
+    }
+
 
     @javafx.fxml.FXML
     public void sideBarQAReportOnAction(ActionEvent actionEvent) throws  IOException {
@@ -74,9 +101,6 @@ public class dashboardController {
         FoodQualityControlOfficer.viewPerformInspection(actionEvent);
     }
 
-    @javafx.fxml.FXML
-    public void updateOnAction(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void sideBarApproveBatchOnAction(ActionEvent actionEvent) throws  IOException{
