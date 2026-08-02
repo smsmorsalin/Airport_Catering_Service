@@ -13,9 +13,9 @@ public class RegisterComplaintViewController
     @javafx.fxml.FXML
     private Button cancelButton;
     @javafx.fxml.FXML
-    private ComboBox categoryComboBox;
+    private ComboBox<String> categoryComboBox;
     @javafx.fxml.FXML
-    private ComboBox airlineComboBox;
+    private ComboBox<String> airlineComboBox;
     @javafx.fxml.FXML
     private Button resetButton;
     @javafx.fxml.FXML
@@ -57,7 +57,7 @@ public class RegisterComplaintViewController
 
     @javafx.fxml.FXML
     public void sidebarRegisterComplaintButtonOnAction(ActionEvent actionEvent) throws IOException {
-        CustomerSupportOfficer.viewResisterComplaint(actionEvent);
+        CustomerSupportOfficer.viewRegisterComplaint(actionEvent);
     }
 
     @javafx.fxml.FXML

@@ -117,8 +117,6 @@
                         <Button fx:id="saveCostButton" layoutX="60" layoutY="370" onAction="#saveCostRecordOnAction" prefHeight="35" prefWidth="140" style="-fx-background-color:#00853F;                -fx-background-radius:10;" text="Save Cost Record" textFill="WHITE" />
                      </children>
                   </AnchorPane>
-                  <Button fx:id="resetButton" layoutX="90" layoutY="680" onAction="#resetOnAction" prefWidth="100" text="Reset" />
-                  <Button fx:id="cancelButton" layoutX="260" layoutY="680" onAction="#cancelOnAction" prefWidth="100" text="Cancel" />
                   <Label layoutX="639.0" layoutY="96.0" text=":" />
                </children>
             </AnchorPane>

@@ -25,7 +25,7 @@ public class FlightCancellationViewController
     @javafx.fxml.FXML
     private Label Statuslabel;
     @javafx.fxml.FXML
-    private ComboBox reasonComboBox;
+    private ComboBox<String> reasonComboBox;
     @javafx.fxml.FXML
     private TextField airlineNameTextField;
 
@@ -63,34 +63,42 @@ public class FlightCancellationViewController
     }
 
     @javafx.fxml.FXML
-    public void sidebarFlightDelayRequestButtonOnAction(ActionEvent actionEvent) {
+    public void sidebarFlightDelayRequestButtonOnAction(ActionEvent actionEvent) throws IOException{
+        CustomerSupportOfficer.viewFlightDelayRequest(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sidebarEmergencyModificationButtonOnAction(ActionEvent actionEvent) {
+    public void sidebarEmergencyModificationButtonOnAction(ActionEvent actionEvent) throws IOException{
+        CustomerSupportOfficer.viewEmergencyModification(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sidebarTrackComplaintButtonOnAction(ActionEvent actionEvent) {
+    public void sidebarTrackComplaintButtonOnAction(ActionEvent actionEvent) throws IOException{
+        CustomerSupportOfficer.viewTrackComplaint(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sidebarRegisterComplaintButtonOnAction(ActionEvent actionEvent) {
+    public void sidebarRegisterComplaintButtonOnAction(ActionEvent actionEvent) throws IOException{
+        CustomerSupportOfficer.viewRegisterComplaint(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sidebarGenerateReportsButtonOnAction(ActionEvent actionEvent) {
+    public void sidebarGenerateReportsButtonOnAction(ActionEvent actionEvent) throws IOException{
+        CustomerSupportOfficer.viewGenerateReports(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sidebarServiceUpdatesButtonOnAction(ActionEvent actionEvent) {
+    public void sidebarServiceUpdatesButtonOnAction(ActionEvent actionEvent) throws  IOException{
+        CustomerSupportOfficer.viewServiceUpdates(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sidebarFlightCancellationButtonOnAction(ActionEvent actionEvent) {
+    public void sidebarFlightCancellationButtonOnAction(ActionEvent actionEvent) throws IOException{
+        CustomerSupportOfficer.viewFlightCancellation(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sidebarResolveComplaintButtonOnAction(ActionEvent actionEvent) {
+    public void sidebarResolveComplaintButtonOnAction(ActionEvent actionEvent) throws IOException{
+        CustomerSupportOfficer.viewResolveComplaint(actionEvent);
     }
 }

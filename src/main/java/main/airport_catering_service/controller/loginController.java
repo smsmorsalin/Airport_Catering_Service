@@ -114,38 +114,40 @@ public class loginController {
         }
 
 
+        loggedInUser.viewDashboard(event,  loggedInUser);
+
 //         * Open Airline Representative dashboard
 
-        if (loggedInUser instanceof AirlineRepresentative) {
-
-            SceneSwitchingHelper.switchSceneWithData(
-                    event,
-                    "/airline_representative/dashboardView.fxml",
-                    loggedInUser
-            );
-
-            return;
-        }
-
-
-//         * Open Catering Operations Manager dashboard
-        if (loggedInUser instanceof CateringOperationsManager) {
-
-            SceneSwitchingHelper.switchSceneWithData(
-                    event,
-                    "/catering_operations_manager/businessDashboardView.fxml",
-                    loggedInUser
-            );
-
-            return;
-        }
-
-
-//         * The user exists, but no dashboard is configured
-        AlertGenerator.showAlert(
-                "Login Error",
-                "No dashboard is configured for this user role."
-        );
+//        if (loggedInUser instanceof AirlineRepresentative) {
+//
+//            SceneSwitchingHelper.switchSceneWithData(
+//                    event,
+//                    "/airline_representative/dashboardView.fxml",
+//                    loggedInUser
+//            );
+//
+//            return;
+//        }
+//
+//
+////         * Open Catering Operations Manager dashboard
+//        if (loggedInUser instanceof CateringOperationsManager) {
+//
+//            SceneSwitchingHelper.switchSceneWithData(
+//                    event,
+//                    "/catering_operations_manager/businessDashboardView.fxml",
+//                    loggedInUser
+//            );
+//
+//            return;
+//        }
+//
+//
+////         * The user exists, but no dashboard is configured
+//        AlertGenerator.showAlert(
+//                "Login Error",
+//                "No dashboard is configured for this user role."
+//        );
 
     }
 }
