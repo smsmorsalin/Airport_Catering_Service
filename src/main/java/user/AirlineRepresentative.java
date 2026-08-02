@@ -89,8 +89,23 @@ public class AirlineRepresentative extends User implements Serializable {
         return true;
     }
 
-    public final void modifyCateringOrder(String orderId, ArrayList<String> orderItemIds){
-        // find out the orderId and modify OrderItemIds
+    public final void modifyCateringOrder(int orderId, ArrayList<String> orderItemIds){
+        ArrayList<Object> cateringOrderList = BinaryFileUtility.readObjects("CateringOrder.bin");
+
+        for (Object object : cateringOrderList) {
+
+            if (object instanceof CateringOrder cateringOrder) {
+
+                if (cateringOrder.getOrderId() == orderId) {
+
+                    cateringOrder.setOrderItemIds(orderItemIds);
+
+                    BinaryFileUtility.overwriteObjects("CateringOrder.bin", cateringOrderList);
+
+                    return;
+                }
+            }
+        }
     }
 
     public boolean cancelCateringOrder(int orderId){
@@ -148,33 +163,49 @@ public class AirlineRepresentative extends User implements Serializable {
         BinaryFileUtility.overwriteObjects("CateringOrder.bin", CateringOrderList);
     }
 
-    public ArrayList<String> trackCateringOrderStatus(String orderId){
-
-        // find out orderStatus from CateringOrder by orderId
-
+    public ArrayList<String> trackCateringOrderStatus(int orderId){
         ArrayList<String> statusList = new ArrayList<String>();
-        String orderStatus = "delivered";
+        ArrayList<Object> cateringOrderList = BinaryFileUtility.readObjects("CateringOrder.bin");
+        String orderStatus = "";
 
-        if (orderStatus.equals("approved")){
-            statusList.add("approved");
-        } else if (orderStatus.equals("prodcution")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
+        for (Object object : cateringOrderList) {
+            if (object instanceof CateringOrder cateringOrder && orderId == (cateringOrder.getOrderId())) {
+                orderStatus = cateringOrder.getStatus();
+                break;
+            }
+        }
+        if (orderStatus.isEmpty()) {
+            AlertGenerator.showAlert("error", "Order ID does not exist.");
+            return null;
+        }
+        if(orderStatus.equals("Cancelled")){
+            AlertGenerator.showAlert("error", "Order is already cancelled.");
+            return null;
+        }
+        if(orderStatus.equals("Pending")){
+            AlertGenerator.showAlert("error", "Order is Pending.");
+        }
+
+        if (orderStatus.equals("Approved")){
+            statusList.add("Approved");
+        } else if (orderStatus.equals("Production")) {
+            statusList.add("Approved");
+            statusList.add("Production");
         } else if (orderStatus.equals("quality Inspection")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
+            statusList.add("Approved");
+            statusList.add("Production");
             statusList.add("quality Inspection");
-        } else if (orderStatus.equals("dispatch")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
-            statusList.add("quality Inspection");
-            statusList.add("dispatch");
-        } else if (orderStatus.equals("delivery")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
-            statusList.add("quality Inspection");
-            statusList.add("dispatch");
-            statusList.add("delivery");
+        } else if (orderStatus.equals("Dispatch")) {
+            statusList.add("Approved");
+            statusList.add("Production");
+            statusList.add("Quality Inspection");
+            statusList.add("Dispatch");
+        } else if (orderStatus.equals("Delivery")) {
+            statusList.add("Approved");
+            statusList.add("Production");
+            statusList.add("Quality Inspection");
+            statusList.add("Dispatch");
+            statusList.add("Delivery");
         }
         return statusList;
 
