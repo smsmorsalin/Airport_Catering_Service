@@ -58,6 +58,7 @@ public class flightDelayViewController implements UserReceiver
 
     @javafx.fxml.FXML
     public void initialize() {
+        fxidHiddenAnchorPane.setVisible(false);
 
         fxidDelayDeliveryTimeHourComboBox.getItems().clear();
 

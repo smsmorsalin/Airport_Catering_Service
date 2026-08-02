@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
-public class reviewOrder_CateringOperationManagerController
+public class reviewOrderController
 {
     @javafx.fxml.FXML
     private TextField fxidViewDetailsOrderIdTextField;

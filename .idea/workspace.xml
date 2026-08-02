@@ -47,61 +47,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="7.11846217599E-312" />
-      <entry key="MS500" value="5.894910779393499E-63" />
-      <entry key="S2" value="2.770890151689376E-16" />
-      <entry key="S5" value="5.984773567656289E-7" />
-      <entry key="S10" value="7.73613182907832E-4" />
-      <entry key="S30" value="0.09182190523767346" />
-      <entry key="S60" value="0.31552773714515986" />
-      <entry key="M2" value="0.9644342591876076" />
-      <entry key="M5" value="5.04650297989432" />
-      <entry key="M10" value="10.991527076883203" />
-      <entry key="M15" value="14.736448592600409" />
-      <entry key="M30" value="21.460613537633172" />
-      <entry key="H1" value="38.32460395911098" />
-      <entry key="H2" value="97.54046316074646" />
-      <entry key="H4" value="237.5258062984906" />
-      <entry key="D1" value="850.8873140386853" />
-      <entry key="W1" value="1154.8844997480849" />
+      <entry key="MS100" value="1.5927301457270876E-146" />
+      <entry key="MS500" value="6.925138124853453E-30" />
+      <entry key="S2" value="5.129878865405242E-8" />
+      <entry key="S5" value="0.0012135119983706843" />
+      <entry key="S10" value="0.034917887767825395" />
+      <entry key="S30" value="0.39661576421118766" />
+      <entry key="S60" value="1.0135459758888574" />
+      <entry key="M2" value="2.448151447640249" />
+      <entry key="M5" value="8.57640262392231" />
+      <entry key="M10" value="18.670334838630087" />
+      <entry key="M15" value="26.645141534851554" />
+      <entry key="M30" value="44.90062072599961" />
+      <entry key="H1" value="77.33972077632644" />
+      <entry key="H2" value="142.6559949474542" />
+      <entry key="H4" value="278.71152199585555" />
+      <entry key="D1" value="987.2570853713787" />
+      <entry key="W1" value="1393.734452307585" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.000000005057249" />
-      <entry key="S5" value="1.0004803587873572" />
-      <entry key="S10" value="1.0219170889343758" />
-      <entry key="S30" value="1.2798702999155682" />
-      <entry key="S60" value="1.5391589979535678" />
-      <entry key="M2" value="2.012515543115705" />
-      <entry key="M5" value="4.649083916406857" />
-      <entry key="M10" value="8.754385850709372" />
-      <entry key="M15" value="11.565718728662352" />
-      <entry key="M30" value="18.183808419337016" />
-      <entry key="H1" value="34.97525361355076" />
-      <entry key="H2" value="75.93519819354746" />
-      <entry key="H4" value="159.1917640250438" />
-      <entry key="D1" value="539.8239565087144" />
-      <entry key="W1" value="737.0112275600596" />
+      <entry key="S2" value="1.0000000090207581" />
+      <entry key="S5" value="1.0008753787265172" />
+      <entry key="S10" value="1.0479279200404736" />
+      <entry key="S30" value="1.7457631275989258" />
+      <entry key="S60" value="2.585741644458781" />
+      <entry key="M2" value="4.103809112508533" />
+      <entry key="M5" value="9.900333718593048" />
+      <entry key="M10" value="17.922613180064104" />
+      <entry key="M15" value="23.650017062867505" />
+      <entry key="M30" value="36.094468740181355" />
+      <entry key="H1" value="59.03613177143083" />
+      <entry key="H2" value="106.2003261956061" />
+      <entry key="H4" value="196.2930854072236" />
+      <entry key="D1" value="644.465264578167" />
+      <entry key="W1" value="906.9203592285878" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.002582084732513E-141" />
-      <entry key="MS500" value="7.249667113584327E-29" />
-      <entry key="S2" value="9.22740363456133E-8" />
-      <entry key="S5" value="0.001535805734667989" />
-      <entry key="S10" value="0.040640327538711975" />
-      <entry key="S30" value="0.5198749968597175" />
-      <entry key="S60" value="1.2050632205735718" />
-      <entry key="M2" value="2.546579610575899" />
-      <entry key="M5" value="9.450380913742732" />
-      <entry key="M10" value="19.584489848971632" />
-      <entry key="M15" value="26.178921697532477" />
-      <entry key="M30" value="39.56841073023761" />
-      <entry key="H1" value="73.24492218285248" />
-      <entry key="H2" value="173.43251745522957" />
-      <entry key="H4" value="398.21875251040177" />
-      <entry key="D1" value="1543.6462071976725" />
-      <entry key="W1" value="2229.2985329437743" />
+      <entry key="MS100" value="7.514309163482153E-5" />
+      <entry key="MS500" value="0.14968483807736607" />
+      <entry key="S2" value="0.6220058623456276" />
+      <entry key="S5" value="0.8286862917147759" />
+      <entry key="S10" value="0.9819749348831811" />
+      <entry key="S30" value="2.0554362422781876" />
+      <entry key="S60" value="3.5166898364082066" />
+      <entry key="M2" value="6.462281506337683" />
+      <entry key="M5" value="18.35654288629526" />
+      <entry key="M10" value="36.47255593938165" />
+      <entry key="M15" value="50.187076313961" />
+      <entry key="M30" value="80.91442286409836" />
+      <entry key="H1" value="136.31348479619285" />
+      <entry key="H2" value="248.8023330246864" />
+      <entry key="H4" value="475.63529619642776" />
+      <entry key="D1" value="1765.1289740009354" />
+      <entry key="W1" value="2631.538185336889" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -129,7 +129,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "saif",
+    "git-widget-placeholder": "Mahir",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -425,29 +425,29 @@
       <option name="project" value="LOCAL" />
       <updated>1785598077329</updated>
     </task>
-    <task id="LOCAL-00033" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+    <task id="LOCAL-00033" summary="can't find problem if i want to create multiple user the both user is not working.">
       <option name="closed" value="true" />
-      <created>1785608568382</created>
+      <created>1785606443320</created>
       <option name="number" value="00033" />
       <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
-      <updated>1785608568382</updated>
+      <updated>1785606443320</updated>
     </task>
-    <task id="LOCAL-00034" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+    <task id="LOCAL-00034">
       <option name="closed" value="true" />
-      <created>1785610348019</created>
+      <created>1785606522698</created>
       <option name="number" value="00034" />
       <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
-      <updated>1785610348019</updated>
+      <updated>1785606522698</updated>
     </task>
-    <task id="LOCAL-00035" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+    <task id="LOCAL-00035">
       <option name="closed" value="true" />
-      <created>1785610459450</created>
+      <created>1785611563675</created>
       <option name="number" value="00035" />
       <option name="presentableId" value="LOCAL-00035" />
       <option name="project" value="LOCAL" />
-      <updated>1785610459450</updated>
+      <updated>1785611563675</updated>
     </task>
     <task id="LOCAL-00036" summary="saif">
       <option name="closed" value="true" />
@@ -506,6 +506,31 @@
       <updated>1785639586273</updated>
     </task>
     <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00036" summary="finish work for one more controller(approveOrRejectOrderController) for CateringOperationsManager">
+      <option name="closed" value="true" />
+      <created>1785618711911</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1785618711911</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fixed all error for user login">
+      <option name="closed" value="true" />
+      <created>1785622943597</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1785622943597</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fixed all error for user login">
+      <option name="closed" value="true" />
+      <created>1785645508948</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1785645508948</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,6 +553,7 @@
     <MESSAGE value="Inmpliment Employee class. Create &amp; implimented Airline.java and Flight.java nonuser classes." />
     <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/main/airport_catering_service/controller/loginController.java&#10;#&#9;src/main/java/module-info.java" />
     <MESSAGE value="moduleoinfo update for food quality and kitchen controller" />
+    <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="create and impliment non-user classes Meal, OrderItem. cateringOrder.&#10;&#10;create interface Report." />
     <MESSAGE value="create SuperAdmin, createNewEmployeeView.fxml, createNewEmployeeController" />
@@ -545,5 +571,9 @@
     <MESSAGE value="user 9 and 10 dashBoard" />
     <MESSAGE value="create dashboard non user class" />
     <option name="LAST_COMMIT_MESSAGE" value="create dashboard non user class" />
+    <MESSAGE value="can't find problem if i want to create multiple user the both user is not working." />
+    <MESSAGE value="finish work for one more controller(approveOrRejectOrderController) for CateringOperationsManager" />
+    <MESSAGE value="fixed all error for user login" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed all error for user login" />
   </component>
 </project>

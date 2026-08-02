@@ -33,6 +33,7 @@ public class dashboardViewController implements UserReceiver {
     public void setLoggedInUser(User user) {
         if (user instanceof AirlineRepresentative airlineRepresentative) {
             this.loggedInUser = airlineRepresentative;
+            welcomeMessageFxid.setText("Welcome "+ loggedInUser.getFullName());
         } else {
             AlertGenerator.showAlert("Error", "Invalid user for this page.");
         }
@@ -41,12 +42,13 @@ public class dashboardViewController implements UserReceiver {
     @javafx.fxml.FXML
     public void initialize() {
 
+
     }
 
     @javafx.fxml.FXML
     public void sideBarTrackOrderButton(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/airline_representative/trackOrderView.fxml",
+                actionEvent, "/airline_representative/truckOrderView.fxml",
                 loggedInUser);
     }
 

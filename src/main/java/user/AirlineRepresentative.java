@@ -1,254 +1,89 @@
-package user;
+package nonuser;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import nonuser.*;
-import utility.AlertGenerator;
-import utility.BinaryFileUtility;
-import utility.SceneSwitchingHelper;
-import utility.databaseAccessor;
-
-import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.ArrayList;
+import java.util.UUID;
 
-public class AirlineRepresentative extends User implements Serializable {
-    protected final String airlineId;
-    protected String officeContact;
+public class DeliveryConfirmation implements Serializable {
+    private final String confirmationId;
+    private int orderId;
+    private String receiverName;
+    private String confirmedBy;
+    private LocalDate confirmationTime;
+    private String clientSignature;
+    private boolean confirmed;
 
-    public AirlineRepresentative(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, String airlineId, String officeContact) {
-        super(password, fullName, role, dateOfBirth, gender, email, phone, address, status);
-        this.airlineId = airlineId;
-        this.officeContact = officeContact;
+    // orderId: the CateringOrder being confirmed
+    // receiverName: name of the person who received the delivery (client)
+    // confirmedBy: how it was confirmed, e.g. "sms", "call", "in-person"
+    // confirmationTime: date the confirmation was made
+    public DeliveryConfirmation(int orderId, String receiverName, String confirmedBy, LocalDate confirmationTime) {
+        this.confirmationId = UUID.randomUUID().toString();
+        this.orderId = orderId;
+        this.receiverName = receiverName;
+        this.confirmedBy = confirmedBy;
+        this.confirmationTime = confirmationTime;
+        this.confirmed = true;
     }
 
-    public String getAirlineId() {
-        return airlineId;
+    public String getConfirmationId() {
+        return confirmationId;
     }
 
-    public String getOfficeContact() {
-        return officeContact;
+    public int getOrderId() {
+        return orderId;
     }
 
-    public void setOfficeContact(String officeContact) {
-        this.officeContact = officeContact;
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getReceiverName() {
+        return receiverName;
+    }
+
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
+    }
+
+    public String getConfirmedBy() {
+        return confirmedBy;
+    }
+
+    public void setConfirmedBy(String confirmedBy) {
+        this.confirmedBy = confirmedBy;
+    }
+
+    public LocalDate getConfirmationTime() {
+        return confirmationTime;
+    }
+
+    public void setConfirmationTime(LocalDate confirmationTime) {
+        this.confirmationTime = confirmationTime;
+    }
+
+    public String getClientSignature() {
+        return clientSignature;
+    }
+
+    public void setClientSignature(String clientSignature) {
+        this.clientSignature = clientSignature;
+    }
+
+    public boolean isConfirmed() {
+        return confirmed;
     }
 
     @Override
-    public void viewDashboard(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/airline_representative/dashboardView.fxml"));
-
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public String toString() {
+        return "DeliveryConfirmation{" +
+                "confirmationId='" + confirmationId + '\'' +
+                ", orderId=" + orderId +
+                ", receiverName='" + receiverName + '\'' +
+                ", confirmedBy='" + confirmedBy + '\'' +
+                ", confirmationTime=" + confirmationTime +
+                ", clientSignature='" + clientSignature + '\'' +
+                ", confirmed=" + confirmed +
+                '}';
     }
-
-    @Override
-    public boolean updateProfile(){
-        return false;
-    }
-
-
-
-
-    public boolean createCateringOrder(String flightId, String deliveryLocation,ArrayList<OrderItem> orderItems,
-                                       LocalDate deliveryDate, LocalTime deliveryTime) {
-
-        int orderId = databaseAccessor.generateNewUniqueId("CateringOrder.bin", "orderId");
-        ArrayList<String> orderItemIds = new ArrayList<>();
-
-        for (OrderItem orderItem : orderItems) {
-            orderItemIds.add(orderItem.getItemId());
-        }
-
-        CateringOrder cateringOrder = new CateringOrder(
-                orderId, flightId, this.getUserId(), LocalDate.now(), deliveryLocation,
-                orderItemIds, deliveryDate, deliveryTime
-        );
-
-        for (OrderItem orderItem : orderItems) {
-            BinaryFileUtility.writeObjects("OrderItem.bin", orderItem);
-        }
-
-        boolean saved = BinaryFileUtility.writeObjects("CateringOrder.bin", cateringOrder);
-
-        if (!saved) {
-            AlertGenerator.showAlert("Error", "Failed to save the catering order.");
-            return false;
-        }
-        AlertGenerator.showAlert("Info", "Successfully saved the catering order.\n" +
-                "Order Id: "+ orderId);
-        return true;
-    }
-
-    public final void modifyCateringOrder(String orderId, ArrayList<String> orderItemIds){
-        // find out the orderId and modify OrderItemIds
-    }
-
-    public boolean cancelCateringOrder(int orderId){
-        ArrayList<Object> readCateringOrders =
-                BinaryFileUtility.readObjects("CateringOrder.bin");
-
-        if (readCateringOrders == null || readCateringOrders.isEmpty()) {
-            AlertGenerator.showAlert("error", "No order exists in the database.");
-            return false;
-        }
-
-        for (Object object : readCateringOrders) {
-
-            if (object instanceof CateringOrder cateringOrder) {
-
-                if (cateringOrder.getOrderId() == orderId) {
-
-                    // Check whether this logged-in user created the order
-                    if (cateringOrder.getAirlineRepresentativeId() != this.getUserId()) {
-                        AlertGenerator.showAlert("error", "You can only cancel orders created by you.");
-                        return false;
-                    }
-
-                    if ("Cancelled".equals(cateringOrder.getStatus())) {
-                        AlertGenerator.showAlert("error", "Order is already cancelled.");
-                        return false;
-                    }
-
-                    if ("Pending".equals(cateringOrder.getStatus())) {
-
-                        cateringOrder.setStatus("Cancelled");
-
-                        boolean isSaved = BinaryFileUtility.overwriteObjects("CateringOrder.bin", readCateringOrders);
-
-                        if (!isSaved) {
-                            AlertGenerator.showAlert("error", "Failed to save the cancelled order.");
-                            return false;
-                        }
-
-                        AlertGenerator.showAlert("success", "Order cancelled successfully.");
-                        return true;
-                    }
-
-                    AlertGenerator.showAlert("error", "The order is processing and cannot be cancelled.");
-                    return false;
-                }
-            }
-        }
-
-        AlertGenerator.showAlert("error", "Order ID does not exist.");
-        return false;
-    }
-
-    public final void submitFlightDelayRequest(ArrayList<Object> CateringOrderList){
-        BinaryFileUtility.overwriteObjects("CateringOrder.bin", CateringOrderList);
-    }
-
-    public ArrayList<String> trackCateringOrderStatus(String orderId){
-
-        // find out orderStatus from CateringOrder by orderId
-
-        ArrayList<String> statusList = new ArrayList<String>();
-        String orderStatus = "delivered";
-
-        if (orderStatus.equals("approved")){
-            statusList.add("approved");
-        } else if (orderStatus.equals("prodcution")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
-        } else if (orderStatus.equals("quality Inspection")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
-            statusList.add("quality Inspection");
-        } else if (orderStatus.equals("dispatch")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
-            statusList.add("quality Inspection");
-            statusList.add("dispatch");
-        } else if (orderStatus.equals("delivery")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
-            statusList.add("quality Inspection");
-            statusList.add("dispatch");
-            statusList.add("delivery");
-        }
-        return statusList;
-
-    }
-
-    public final DeliveryConfirmation confirmCateringDelivery(int orderId, String receiverName){
-        // find out the order from CateringOrder
-        // if the delivery already done give an alert
-        //else: create a ConfirmCateringDelivery
-        DeliveryConfirmation newDeliveryConfirmation = new DeliveryConfirmation(1, "sms", LocalDate.now());
-        return newDeliveryConfirmation;
-    }
-
-    public final Boolean payCateringBill(String invoiceId,String method,String transactionReference){
-        // add Payment
-        return true;
-    }
-
-    //most dificult one
-    public final void viewOrderPaymentHistory(LocalDate startDate, LocalDate endDate, String flightNumber, String status){
-
-
-    }
-
-    public static AirlineRepresentative createNewAirlineRepresentative(String password, String fullName, LocalDate dateOfBirth, String gender, String email, String phone, String address, String airlineId, String officeContact) {
-        AirlineRepresentative newRepresentative = new AirlineRepresentative(password, fullName, "Airline Representative", dateOfBirth,
-                        gender, email, phone, address, "Active", airlineId, officeContact);
-
-        boolean saved = BinaryFileUtility.writeObjects("User.bin", newRepresentative);
-
-        if (saved) {
-            return newRepresentative;
-        }
-
-        return null;
-    }
-
-
-
-    // Bellow are the code for fxml sideBar rendering button on action
-    public static void renderFxmlDashboard(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/dashboardView.fxml");
-    }
-
-    public static void renderFxmlCreateCateringOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/createCateringOrderView.fxml");
-    }
-
-    public static void renderFxmlModifyOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/modifyOrderView.fxml");
-    }
-
-    public static void renderFxmlCancelOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/cancelOrderView.fxml");
-    }
-
-    public static void renderFxmlFlightDelay(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/flightDelayView.fxml");
-    }
-
-    public static void renderFxmlTruckOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/truckOrderView.fxml");
-    }
-
-    public static void renderFxmlConfirmDelivery(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/confirmDeliveryView.fxml");
-    }
-
-    public static void renderFxmlPayBill(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/payBillView.fxml");
-    }
-
-    public static void renderFxmlOrderHistory(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/orderHistoryView.fxml");
-    }
-
 }
