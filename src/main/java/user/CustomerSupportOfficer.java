@@ -6,8 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import javax.imageio.IIOException;
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -49,7 +47,7 @@ public class CustomerSupportOfficer extends Employee implements Serializable {
     }
 
 //Dashboard TO Button
-    public static void viewResisterComplaint(javafx.event.ActionEvent event) throws IOException{
+    public static void viewRegisterComplaint(javafx.event.ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(
                 CustomerSupportOfficer.class.getResource("/CustomerSupportOfficer/RegisterComplaintView.fxml"));
 

@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.finance_and_billing_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import utility.AlertGenerator;
+
+import java.time.LocalDate;
 
 public class CalculateCostViewController
 {
@@ -78,6 +81,34 @@ public class CalculateCostViewController
 
     @javafx.fxml.FXML
     public void calculateTotalCostOnAction(ActionEvent actionEvent) {
+        if(ingredientCostTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        int ingredientId;
+        try{
+            ingredientId = Integer.parseInt(ingredientCostTextField.getText());
+        }
+        catch (NumberFormatException e){
+            AlertGenerator.showAlert("Wrong Input","textField should be an integer");
+            return;
+        }
+        if(ingredientId <= 0){
+            AlertGenerator.showAlert("Invalid Input","Text field should be grater than 0");
+            return;
+        }
+
+        if(airlineNameCombobox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Combo Box should be selected");
+            return;
+        }
+        if(cateringdatepicker.getValue().isBefore(LocalDate.now())){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
+
+
+
     }
 
     @Deprecated
