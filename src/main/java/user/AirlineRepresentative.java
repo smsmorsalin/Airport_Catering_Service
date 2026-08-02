@@ -82,7 +82,7 @@ public class AirlineRepresentative extends User implements Serializable {
     }
 
     public final void modifyCateringOrder(String orderId, ArrayList<String> orderItemIds){
-        // find out the orderId and modify OrderItemIds
+        // find out the orderId and modify catering order where cateringOrder.orderID == orderId the whole CateringOrder.bin
     }
 
     public boolean cancelCateringOrder(int orderId){
