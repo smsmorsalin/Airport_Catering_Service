@@ -55,9 +55,8 @@
                   <Label fx:id="orderIdLabel" layoutX="23.0" layoutY="341.0" prefHeight="18.0" prefWidth="206.0" text="Order ID" />
                   <Label fx:id="truckIdLabel" layoutX="23.0" layoutY="377.0" prefHeight="18.0" prefWidth="166.0" text="Truck ID" />
                   <Label fx:id="driverNameLabel" layoutX="23.0" layoutY="409.0" prefHeight="18.0" prefWidth="185.0" text="Driver Name" />
-                  <Label fx:id="currentStatusLabel" layoutX="23.0" layoutY="440.0" prefHeight="18.0" prefWidth="196.0" text="Current Status" />
-                  <Label fx:id="departureTimeLabel" layoutX="23.0" layoutY="471.0" prefHeight="18.0" prefWidth="196.0" text="Departure Time" />
-                  <Label fx:id="estimatedArrivalTimeLabel" layoutX="18.0" layoutY="502.0" prefHeight="18.0" prefWidth="206.0" text="Estimated Arrival Time" />
+                  <Label fx:id="departureTimeLabel" layoutX="23.0" layoutY="447.0" prefHeight="18.0" prefWidth="196.0" text="Departure Time" />
+                  <Label fx:id="estimatedArrivalTimeLabel" layoutX="18.0" layoutY="484.0" prefHeight="18.0" prefWidth="206.0" text="Estimated Arrival Time" />
                </children>
             </AnchorPane>
          </children></VBox>

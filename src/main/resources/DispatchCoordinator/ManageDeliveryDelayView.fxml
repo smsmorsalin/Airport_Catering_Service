@@ -62,7 +62,6 @@
                   <Label fx:id="deliveryIdLabel" layoutX="29.0" layoutY="410.0" text="Delivery ID" />
                   <Label fx:id="delayReasonLabel" layoutX="29.0" layoutY="444.0" text="Delay Reason" />
                   <Label fx:id="revisedDeliveryTimeLabel" layoutX="28.0" layoutY="475.0" text="Revised Delivery Time" />
-                  <Label fx:id="delayStatusLabel" layoutX="25.0" layoutY="508.0" text="Delay Status" />
                   <TextField fx:id="delayReasonTextfield" layoutX="150.0" layoutY="74.0" />
                </children>
             </AnchorPane>

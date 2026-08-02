@@ -3,19 +3,22 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.airline_representative.cancelOrderViewConroller">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.airline_representative.flightDelayViewController">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
@@ -27,11 +30,11 @@
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: pink;" text="Cancel Order" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarCancelOrderButton" prefHeight="42.0" prefWidth="174.0" text="Cancel Order" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#sideBarFlightDelayButton" prefHeight="42.0" prefWidth="174.0" text="Flight delay" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: pink;" text="Flight delay" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
@@ -77,56 +80,70 @@
         </Button>
         <VBox fillWidth="false" layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
             <children>
-                <AnchorPane prefHeight="591.0" prefWidth="610.0">
+                <AnchorPane prefHeight="590.0" prefWidth="610.0">
                <children>
-                  <Label alignment="CENTER" layoutX="1.0" prefHeight="17.0" prefWidth="609.0" text="Create a New Catring Order">
+                  <Label alignment="CENTER" layoutX="1.0" prefHeight="17.0" prefWidth="609.0" text="Flight Delay">
                      <font>
                         <Font name="Gabriola" size="21.0" />
                      </font>
                   </Label>
-                  <Line endX="183.5" layoutX="247.0" layoutY="26.0" startX="-100.0" />
-                  <Text layoutX="33.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Order" wrappingWidth="87.13671875" />
-                  <TextField fx:id="fxidOrderIdTextField" layoutX="108.0" layoutY="51.0" prefHeight="25.0" prefWidth="197.0" promptText="order id" style="-fx-background-color: white;" />
-                  <Button layoutX="375.0" layoutY="51.0" mnemonicParsing="false" onAction="#checkOrderButton" prefHeight="25.0" prefWidth="127.0" text="check Order">
+                  <Text layoutX="10.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Order" wrappingWidth="87.13671875" />
+                  <TextField fx:id="fxidOrderIdTextField" layoutX="93.0" layoutY="45.0" prefHeight="25.0" prefWidth="197.0" promptText="order id" style="-fx-background-color: white;" />
+                  <Button layoutX="367.0" layoutY="44.0" mnemonicParsing="false" onAction="#loadOrderedData" prefHeight="25.0" prefWidth="127.0" text="Load Ordered Data">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <AnchorPane fx:id="fxidHiddenAnochorPanel" layoutX="14.0" layoutY="116.0" prefHeight="341.0" prefWidth="583.0" style="-fx-background-color: aqua; -fx-background-radius: 50;">
+                  <Line endX="183.5" layoutX="254.0" layoutY="24.0" startX="-100.0" />
+                  <AnchorPane fx:id="fxidHiddenAnchorPane" layoutY="88.0" prefHeight="501.0" prefWidth="610.0">
                      <children>
-                        <Text fx:id="fxidFlightNumber" layoutX="108.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flight Number" wrappingWidth="412.13671875">
+                        <Label layoutX="200.0" layoutY="9.0" prefHeight="20.0" prefWidth="135.0" text="Your Ordered Details">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="fxidFlightDate" layoutX="108.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flight Date" wrappingWidth="429.13671875">
+                        </Label>
+                        <Line endX="133.5" layoutX="250.0" layoutY="29.0" startX="-100.0" />
+                        <Label fx:id="fxidOrderedFlightNumberLabel" layoutX="86.0" layoutY="72.0" prefHeight="19.0" prefWidth="372.0" text="Flight Number:">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="fxidDepartureTime" layoutX="108.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Departure Time" wrappingWidth="429.1367187499999">
+                        </Label>
+                        <Label fx:id="fxidOrderedDeliveryDateLabel" layoutX="94.0" layoutY="94.0" prefHeight="19.0" prefWidth="372.0" text="Delivery Date: ">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="fxidDeliveryLocation" layoutX="108.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Location" wrappingWidth="429.1367187499999">
+                        </Label>
+                        <Label fx:id="fxidOrderedDeliveryTimeLabel" layoutX="91.0" layoutY="116.0" prefHeight="19.0" prefWidth="372.0" text="Delivery Time:">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="fxidDeliveryTime" layoutX="108.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Time" wrappingWidth="429.1367187499999">
+                        </Label>
+                        <Text layoutX="48.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Delay Delivery Date" wrappingWidth="135.0" />
+                        <DatePicker fx:id="fxidDelayDeliveryDateDatePicker" layoutX="193.0" layoutY="207.0" prefHeight="25.0" prefWidth="197.0" style="-fx-background-color: white;" />
+                        <Label layoutX="212.0" layoutY="166.0" prefHeight="20.0" prefWidth="119.0" text="Delay schedule">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Button layoutX="100.0" layoutY="136.0" mnemonicParsing="false" onAction="#cancleTheOrderButton" prefHeight="25.0" prefWidth="353.0" style="-fx-background-radius: 5;" text="Cancle Order">
+                        </Label>
+                        <Line endX="149.5" layoutX="242.0" layoutY="186.0" startX="-100.0" />
+                        <Text layoutX="45.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Delay Delivery Time" wrappingWidth="142.13671875" />
+                        <HBox layoutX="193.0" layoutY="246.0" prefHeight="25.0" prefWidth="200.0">
+                           <children>
+                              <ComboBox fx:id="fxidDelayDeliveryTimeHourComboBox" prefHeight="25.0" prefWidth="87.0" promptText="Hour" style="-fx-background-color: white;" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":" textAlignment="CENTER" wrappingWidth="14.90234375">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <ComboBox fx:id="fxidDelayDeliveryTimeMinuteComboBox" prefHeight="25.0" prefWidth="106.0" promptText="Minute" style="-fx-background-color: white;" />
+                           </children>
+                        </HBox>
+                        <Button layoutX="142.0" layoutY="317.0" mnemonicParsing="false" onAction="#submitDelayRequestButton" prefHeight="25.0" prefWidth="221.0" text="Submit Delay Request" />
+                        <Label fx:id="fxidOrderedDetailsOrderIdLabel" layoutX="123.0" layoutY="49.0" prefHeight="19.0" prefWidth="372.0" text="order Id:">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="13.0" />
                            </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
+                        </Label>
                      </children>
                   </AnchorPane>
                </children>

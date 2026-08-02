@@ -5,14 +5,18 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utility.AlertGenerator;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 import utility.databaseAccessor;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Random;
 
-public abstract class User {
+public abstract class User implements Serializable {
     protected final int userId;
     private String password;
     protected String role;
@@ -25,8 +29,8 @@ public abstract class User {
     protected String status;
     protected final LocalDate createDate;
 
-    public User(int userId, String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status) {
-        this.userId = userId;
+    public User(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status) {
+        this.userId = generateNewId();
         this.createDate = LocalDate.now();
         this.status = status;
         this.address = address;
@@ -129,13 +133,29 @@ public abstract class User {
     }
 
     public static final User verifyLogin(int userId, String password) {
-        User user = null;
-        if  (userId == 0 || password.isEmpty()) {
-            return user;
+        if (userId <= 0 || password == null || password.trim().isEmpty()) {
+            return null;
         }
-        // if: user in database/files then check the password for this user. if match then return the user object
-        //else: return null
-        return user;
+
+        ArrayList<Object> users = BinaryFileUtility.readObjects("User.bin");
+
+        if (users == null || users.isEmpty()) {
+            return null;
+        }
+
+        for (Object object : users) {
+
+            if (object instanceof User user) {
+
+                if (user.getUserId() == userId &&
+                        user.getPassword().equals(password)) {
+
+                    return user;
+                }
+            }
+        }
+
+        return null;
     }
 
     public static void logout(javafx.event.ActionEvent event) throws IOException {
@@ -155,8 +175,24 @@ public abstract class User {
     }
 
     public final static int generateNewId(){
-        int tempId = (int) databaseAccessor.generateNewUniqueId("User.bin", "userId");
-        return tempId;
+        ArrayList<Object> objects =
+                BinaryFileUtility.readObjects("User.bin");
+
+        int maximumId = 0;
+
+        if (objects == null || objects.isEmpty()) {
+            return 1;
+        }
+
+        for (Object object : objects) {
+            if (object instanceof User user) {
+                if (user.getUserId() > maximumId) {
+                    maximumId = user.getUserId();
+                }
+            }
+        }
+
+        return maximumId + 1;
     }
 
     public abstract void viewDashboard(javafx.event.ActionEvent event) throws IOException;

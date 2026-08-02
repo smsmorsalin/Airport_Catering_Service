@@ -1,6 +1,5 @@
 package user;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -10,13 +9,13 @@ import utility.SceneSwitchingHelper;
 
 
 import java.io.IOException;
-import java.net.URL;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class KitchenProductionManager extends  Employee{
+public class KitchenProductionManager extends  Employee implements Serializable {
 
-    public KitchenProductionManager(int userId, String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, float salary) {
-        super(userId, password, fullName, role, dateOfBirth, gender, email, phone, address, status, employeeId, joinDate, department, designation, salary);
+    public KitchenProductionManager(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, LocalDate joinDate, String department, String designation, float salary) {
+        super(password, fullName, role, dateOfBirth, gender, email, phone, address, status, joinDate, department, designation, salary);
     }
 
     @Override
@@ -59,12 +58,9 @@ public class KitchenProductionManager extends  Employee{
     public static void  viewCreateProductionPlan(javafx.event.ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(
                 KitchenProductionManager.class.getResource("/KitchenProductionManager/CreateProductionPlan.fxml"));
-
         Parent root = loader.load();
-
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
-
         stage.setScene(scene);
         stage.show();
     }

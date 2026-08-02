@@ -109,11 +109,6 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button layoutX="329.0" layoutY="190.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="69.0" text="Clear">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
                </children></AnchorPane>
             </children></VBox>
         <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />

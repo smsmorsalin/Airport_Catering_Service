@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.airport_catering_service.HelloApplication;
 import user.FoodQualityControlOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
@@ -18,8 +19,6 @@ public class PerformInspectionController
 {
     @javafx.fxml.FXML
     private ComboBox<String> tasteRatingComboBox;
-    @javafx.fxml.FXML
-    private TextField temperatureReadingTextField;
     @javafx.fxml.FXML
     private Label fxidDisplayInspectionDateLabel;
     @javafx.fxml.FXML
@@ -31,19 +30,44 @@ public class PerformInspectionController
     @javafx.fxml.FXML
     private ComboBox<String> appearanceRatingComboBox;
     @javafx.fxml.FXML
-    private ComboBox<String> textureRatingbelComboBox;
-    @javafx.fxml.FXML
     private Label fxidDisplayOverallScoreLabel;
     @javafx.fxml.FXML
     private Label fxidDisplayInspectioStatusLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
+        appearanceRatingComboBox.getItems().addAll("Excellent","Good","Fair","Poor");
+        tasteRatingComboBox.getItems().addAll("1","2","3","4,","5");
     }
 
     @javafx.fxml.FXML
-    public void clearOnAction(ActionEvent actionEvent) {
+    public void saveInspectionOnAction(ActionEvent actionEvent) {
+
+        if(batchNumberTextField.getText().trim().isEmpty() || inspectionNotesTextArea.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text Area/Text Filed should be filled");
+            return;
+        }
+        int batchNum;
+        try{
+            batchNum = Integer.parseInt(batchNumberTextField.getText().trim());
+        }catch (Exception e){
+            AlertGenerator.showAlert("Invalid Input","Batch number should be filled with integer");
+            return;
+        }
+        if (batchNum <= 0){
+            AlertGenerator.showAlert("Invalid Input","Batch number should be grater than 0");
+            return;
+        }
+        if (appearanceRatingComboBox.getValue() == null || tasteRatingComboBox.getValue() == null){
+            AlertGenerator.showAlert("Selected Error","Combo Box valued should be select");
+            return;
+        }
+        if (inspectionNotesTextArea.getText().matches("//d+")){
+            AlertGenerator.showAlert("Invalid Error","TextArea should be fill with characters");
+            return;
+        }
     }
+
 
     @javafx.fxml.FXML
     public void sideBarRejectBatchOnAction(ActionEvent actionEvent) throws IOException {
@@ -66,9 +90,7 @@ public class PerformInspectionController
     public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void saveInspectionOnAction(ActionEvent actionEvent) {
-    }
+
 
     @javafx.fxml.FXML
     public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws  IOException{
@@ -87,7 +109,4 @@ public class PerformInspectionController
     public void sideBarManageQualityIssueOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void searchBatchOnAction(ActionEvent actionEvent) {
-    }
 }

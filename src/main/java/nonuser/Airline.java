@@ -1,6 +1,8 @@
 package nonuser;
 
-public class Airline {
+import java.io.Serializable;
+
+public class Airline implements Serializable {
     private final String airlineId;
     private String airlineName;
     private String contactInfo;

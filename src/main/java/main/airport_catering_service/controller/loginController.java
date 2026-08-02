@@ -10,11 +10,19 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import user.AirlineRepresentative;
+import user.CateringOperationsManager;
+import user.User;
+import utility.AlertGenerator;
+import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 
-public class loginController
-{
+public class loginController {
+
+    private static final String ADMIN_USERNAME = "admin";
+    private static final String ADMIN_PASSWORD = "admin123";
+
     @javafx.fxml.FXML
     private TextField fxidPasswordTextfield;
     @javafx.fxml.FXML
@@ -38,113 +46,106 @@ public class loginController
 
     }
 
+
     @javafx.fxml.FXML
     public void loginButtonOnClick(ActionEvent event) throws IOException {
-        if (fxidUsernameTextField.getText().equals("1")){
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/AirlineRepresentative/dashboardView.fxml"));
+        String username = fxidUsernameTextField.getText().trim();
+        String password = fxidPasswordTextfield.getText();
 
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } else if (fxidUsernameTextField.getText().equals("2")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/CateringOperationsManager/businessDashboardView.fxml"));
-
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } else if (fxidUsernameTextField.getText().equals("3")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/CustomerSupportOfficer/dashboardView.fxml"));
-
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("4")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/FinanceAndBillingManager/dashboardView.fxml"));
-
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+        /*
+         * Check empty fields
+         */
+        if (username.isEmpty() || password.isEmpty()) {
+            AlertGenerator.showAlert(
+                    "Validation Error",
+                    "Username and password are required."
+            );
+            return;
         }
 
-        else if (fxidUsernameTextField.getText().equals("9")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/KitchenProductionManager/dashboardView.fxml"));
+        /*
+         * Super Admin login
+         */
+        if (username.equalsIgnoreCase(ADMIN_USERNAME)) {
 
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("10")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/FoodQualityControlOfficer/dashboardView.fxml"));
+            if (!password.equals(ADMIN_PASSWORD)) {
+                AlertGenerator.showAlert(
+                        "Login Error",
+                        "Invalid admin password."
+                );
+                return;
+            }
 
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("5")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/InventoryManager/DashboardView.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("6")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/DispatchCoordinator/DashboardView.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("7")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/Truckoperator/DashboardView.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("8")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/Headchef/DashboardView.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            SceneSwitchingHelper.fullSceneReplacement(
+                    event,
+                    "/main/airport_catering_service/createNewEmployeeView.fxml"
+            );
+
+            return;
         }
 
-        else if (fxidUsernameTextField.getText().equals("admin")) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/main/airport_catering_service/createNewEmployeeView.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+
+//         * Normal users must enter a numeric user ID
+        int userId;
+
+        try {
+            userId = Integer.parseInt(username);
+
+        } catch (NumberFormatException e) {
+
+            AlertGenerator.showAlert(
+                    "Login Error",
+                    "User ID must be a number."
+            );
+
+            return;
         }
+
+
+//         * Verify user ID and password from User.bin
+        User loggedInUser = User.verifyLogin(userId, password);
+
+        if (loggedInUser == null) {
+            AlertGenerator.showAlert(
+                    "Login Error",
+                    "Invalid user ID or password."
+            );
+            return;
+        }
+
+
+//         * Open Airline Representative dashboard
+
+        if (loggedInUser instanceof AirlineRepresentative) {
+
+            SceneSwitchingHelper.switchSceneWithData(
+                    event,
+                    "/airline_representative/dashboardView.fxml",
+                    loggedInUser
+            );
+
+            return;
+        }
+
+
+//         * Open Catering Operations Manager dashboard
+        if (loggedInUser instanceof CateringOperationsManager) {
+
+            SceneSwitchingHelper.switchSceneWithData(
+                    event,
+                    "/catering_operations_manager/businessDashboardView.fxml",
+                    loggedInUser
+            );
+
+            return;
+        }
+
+
+//         * The user exists, but no dashboard is configured
+        AlertGenerator.showAlert(
+                "Login Error",
+                "No dashboard is configured for this user role."
+        );
 
     }
 }

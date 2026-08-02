@@ -2,11 +2,14 @@ package main.airport_catering_service.controller.food_quality_control_officer;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import user.FoodQualityControlOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class GenerateQAReportController
 {
@@ -15,25 +18,26 @@ public class GenerateQAReportController
     @javafx.fxml.FXML
     private Label fxidDisplayAverageQualityScoreLabel;
     @javafx.fxml.FXML
-    private TextField endDatePicker;
-    @javafx.fxml.FXML
     private Label fxidDisplayCompliancePercentageLabel;
     @javafx.fxml.FXML
     private Label fxidDisplayTotalBatchesInspectedLabel;
-    @javafx.fxml.FXML
-    private TextField startDatePicker;
     @javafx.fxml.FXML
     private ComboBox<String> reportTypeComboBox;
     @javafx.fxml.FXML
     private Label fxidDisplayTotalRejectedBatchesLabel;
     @javafx.fxml.FXML
     private Label reportTypeComboBox1;
+    @javafx.fxml.FXML
+    private DatePicker endDatePicker;
+    @javafx.fxml.FXML
+    private DatePicker startDatePicker;
 
     @javafx.fxml.FXML
     public void initialize() {
+        reportTypeComboBox.getItems().addAll( "Daily", "Weekly", "Monthly", "Inspection", "Approval", "Rejection", "Compliance", "Quality Trend");
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
@@ -47,6 +51,21 @@ public class GenerateQAReportController
 
     @javafx.fxml.FXML
     public void generateReportOnAction(ActionEvent actionEvent) {
+        if(startDatePicker.getValue() == null || endDatePicker.getValue() ==null){
+            AlertGenerator.showAlert("Invalid Input","Date must in selected");
+            return;
+        }
+        if(startDatePicker.getValue().isAfter(endDatePicker.getValue())){
+            AlertGenerator.showAlert("Invalid Input","Start Date should be before end date");
+            return;
+        }
+        if(endDatePicker.getValue().isAfter(LocalDate.now())){
+            AlertGenerator.showAlert("Invaid Input","End date can not be present date");
+            return;
+        }
+        if(reportTypeComboBox.getItems()==null){
+            AlertGenerator.showAlert("Wrong Input","Combo Box must be selected ");
+        }
     }
 
     @javafx.fxml.FXML

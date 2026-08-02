@@ -16,19 +16,19 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.catering_operations_manager.reviewOrder_CateringOperationManagerController">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.catering_operations_manager.approveOrRejectOrderViewController">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
-                <Button mnemonicParsing="false" onAction="#sideBarBusinessDashboardButton" prefHeight="42.0" prefWidth="174.0" text="Business Dashboard" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#SideBarBusinessDashboardButton" prefHeight="42.0" prefWidth="174.0" text="Business Dashboard" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" top="10.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: pink;" text="Review All Catering Orders" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarReviewAllCateringOrdersButton" prefHeight="42.0" prefWidth="174.0" text="Review All Catering Orders" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#sideBarApproveOrRejectOrdersButton" prefHeight="42.0" prefWidth="174.0" text="Approve/Reject Orders" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: pink;" text="Approve/Reject Orders" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
@@ -78,36 +78,32 @@
         </Button>
         <VBox fillWidth="false" layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
             <children>
-                <AnchorPane prefHeight="589.0" prefWidth="596.0">
+                <AnchorPane prefHeight="592.0" prefWidth="596.0">
                <children>
-                  <Label alignment="CENTER" layoutX="175.0" layoutY="1.0" prefHeight="17.0" prefWidth="203.0" text="Rivew Catering Orders">
+                  <Label alignment="CENTER" layoutX="194.0" prefHeight="17.0" prefWidth="203.0" text="Approve/Reject Orders">
                      <font>
                         <Font name="Calibri Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Line endX="100.0" layoutX="277.0" layoutY="18.0" startX="-100.0" />
-                  <TableView fx:id="fxidTableViewRivewCateringOrders" layoutY="34.0" prefHeight="226.0" prefWidth="597.0">
-                    <columns>
-                      <TableColumn fx:id="tableColOrderId" prefWidth="92.0" text="Order ID" />
-                      <TableColumn fx:id="tableColAirlineName" prefWidth="114.0" text="Airline Name" />
-                        <TableColumn fx:id="tableColFlighNumber" prefWidth="123.0" text="Flight Number" />
-                        <TableColumn fx:id="tableColDepartureDate" prefWidth="133.0" text="Departure Date" />
-                        <TableColumn fx:id="tableColOrderStatus" prefWidth="133.0" text="Order Status" />
-                    </columns>
-                  </TableView>
-                  <Label layoutX="11.0" layoutY="278.0" prefHeight="17.0" prefWidth="174.0" text="Enter Order ID To View Details" />
-                  <TextField fx:id="fxidViewDetailsOrderIdTextField" layoutX="183.0" layoutY="274.0" promptText="order id" />
-                  <Button layoutX="377.0" layoutY="274.0" mnemonicParsing="false" onAction="#viewDetailsButton" prefHeight="25.0" prefWidth="149.0" text="View Details" />
-                  <AnchorPane fx:id="fxidHiddenAnchorPane" layoutX="6.0" layoutY="314.0" prefHeight="265.0" prefWidth="588.0" style="-fx-background-color: BEIGE; -fx-background-radius: 10;">
+                  <Line endX="100.0" layoutX="295.0" layoutY="15.0" startX="-100.0" />
+                  <Label layoutX="25.0" layoutY="28.0" prefHeight="17.0" prefWidth="174.0" text="Enter Order ID To View Details" />
+                  <TextField fx:id="fxidViewDetailsOrderIdTextField" layoutX="188.0" layoutY="24.0" promptText="order id" />
+                  <Button layoutX="375.0" layoutY="24.0" mnemonicParsing="false" onAction="#viewDetailsButton" prefHeight="25.0" prefWidth="149.0" text="View Details" />
+                  <AnchorPane fx:id="fxidHiddenAnchorPane" layoutX="4.0" layoutY="60.0" prefHeight="405.0" prefWidth="588.0" style="-fx-background-color: BEIGE; -fx-background-radius: 10;">
                      <children>
-                        <Label fx:id="fxidShowOrderIdLabel" layoutX="47.0" layoutY="13.0" prefHeight="17.0" prefWidth="448.0" text="Order ID:" />
-                        <Label fx:id="fxidShowAirlineNamelabel" layoutX="25.0" layoutY="34.0" prefHeight="17.0" prefWidth="448.0" text="Airline Name:" />
-                        <Label fx:id="fxidShowFlightNumberLabel" layoutX="18.0" layoutY="54.0" prefHeight="17.0" prefWidth="448.0" text="Flight Number:" />
-                        <Label fx:id="fxidShowDepartureDateLabel" layoutX="13.0" layoutY="73.0" prefHeight="17.0" prefWidth="448.0" text="Departure Date:" />
-                        <Label fx:id="fxidShowMealListLabel" layoutX="48.0" layoutY="94.0" prefHeight="17.0" prefWidth="539.0" text="Meal List:" />
-                        <Label fx:id="fxidShowTotalQuantityLabel" layoutX="22.0" layoutY="114.0" prefHeight="17.0" prefWidth="524.0" text="Total Quantity:" />
-                        <Label fx:id="fxidShowOrderStatusLabel" layoutX="28.0" layoutY="133.0" prefHeight="17.0" prefWidth="448.0" text="Order Status:" />
-                        <Button fx:id="fxidGoForApproveOrRejectOrderLabel" layoutX="170.0" layoutY="221.0" mnemonicParsing="false" onAction="#goForApproveOrRejectOrderButton" prefHeight="25.0" prefWidth="187.0" text="Go for Approve/Reject order" />
+                        <Label fx:id="fxidShowOrderIdLabel" layoutX="50.0" layoutY="19.0" prefHeight="17.0" prefWidth="448.0" text="Order ID:" />
+                        <Label fx:id="fxidShowFlightNumberLabel" layoutX="20.0" layoutY="39.0" prefHeight="17.0" prefWidth="448.0" text="Flight Number:" />
+                        <Label fx:id="fxidShowDeliveryDateLabel" layoutX="24.0" layoutY="58.0" prefHeight="17.0" prefWidth="448.0" text="Delivery Date:" />
+                        <Label fx:id="fxidShowOrderStatusLabel" layoutX="28.0" layoutY="79.0" prefHeight="17.0" prefWidth="448.0" text="Order Status:" />
+                        <Button layoutX="79.0" layoutY="352.0" mnemonicParsing="false" onAction="#acceptOrderButton" prefHeight="25.0" prefWidth="149.0" text="Approve Order" textFill="#27bf36" />
+                        <Button layoutX="269.0" layoutY="352.0" mnemonicParsing="false" onAction="#rejectOrderButton" prefHeight="25.0" prefWidth="149.0" text="Reject Order" textFill="#eb0e0e" />
+                        <TableView fx:id="fxidTableViewMealList" layoutX="20.0" layoutY="150.0" prefHeight="178.0" prefWidth="548.0">
+                          <columns>
+                            <TableColumn fx:id="tableColOrderedMealName" prefWidth="360.0" text="Ordered Meal" />
+                              <TableColumn fx:id="tableColQuanity" prefWidth="187.0" text="quantity" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="28.0" layoutY="127.0" prefHeight="17.0" prefWidth="67.0" text="Meal List" textFill="#0481ff" />
                      </children>
                   </AnchorPane>
                </children>

@@ -6,20 +6,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import nonuser.*;
+import utility.AlertGenerator;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 import utility.databaseAccessor;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class AirlineRepresentative extends User {
+public class AirlineRepresentative extends User implements Serializable {
     protected final String airlineId;
     protected String officeContact;
 
-    public AirlineRepresentative(int userId, String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, String airlineId, String officeContact) {
-        super(userId, password, fullName, role, dateOfBirth, gender, email, phone, address, status);
+    public AirlineRepresentative(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, String airlineId, String officeContact) {
+        super(password, fullName, role, dateOfBirth, gender, email, phone, address, status);
         this.airlineId = airlineId;
         this.officeContact = officeContact;
     }
@@ -39,7 +42,7 @@ public class AirlineRepresentative extends User {
     @Override
     public void viewDashboard(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/AirlineRepresentative/dashboardView.fxml"));
+                getClass().getResource("/airline_representative/dashboardView.fxml"));
 
         Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -56,55 +59,153 @@ public class AirlineRepresentative extends User {
 
 
 
-    public final void createCateringOrder(String flightId, String deliveryLocation, ArrayList<OrderItem> orderItems, LocalDate deliveryDate, LocalTime deliveryTime, String status){
-        ArrayList<String> orderItemIds = new ArrayList<String>();
-        for (OrderItem orderItem : orderItems){
-            //add every orderitem into OrderItems file
-            orderItemIds.add(orderItem.getIteamId());
+    public boolean createCateringOrder(String flightId, String deliveryLocation,ArrayList<OrderItem> orderItems,
+                                       LocalDate deliveryDate, LocalTime deliveryTime) {
+
+        int orderId = databaseAccessor.generateNewUniqueId("CateringOrder.bin", "orderId");
+        ArrayList<String> orderItemIds = new ArrayList<>();
+
+        for (OrderItem orderItem : orderItems) {
+            orderItemIds.add(orderItem.getItemId());
         }
-        int newOrderId = (int) databaseAccessor.generateNewUniqueId("CateringOrder.bin", "orderId");
-        CateringOrder newOrder = new CateringOrder(newOrderId, flightId, LocalDate.now(), deliveryLocation, orderItemIds, deliveryDate, deliveryTime,status );
 
+        CateringOrder cateringOrder = new CateringOrder(
+                orderId, flightId, this.getUserId(), LocalDate.now(), deliveryLocation,
+                orderItemIds, deliveryDate, deliveryTime
+        );
+
+        for (OrderItem orderItem : orderItems) {
+            BinaryFileUtility.writeObjects("OrderItem.bin", orderItem);
+        }
+
+        boolean saved = BinaryFileUtility.writeObjects("CateringOrder.bin", cateringOrder);
+
+        if (!saved) {
+            AlertGenerator.showAlert("Error", "Failed to save the catering order.");
+            return false;
+        }
+        AlertGenerator.showAlert("Info", "Successfully saved the catering order.\n" +
+                "Order Id: "+ orderId);
+        return true;
     }
-    public final void modifyCateringOrder(String orderId, ArrayList<String> orderItemIds){
-        // find out the orderId and modify OrderItemIds
+
+    public final void modifyCateringOrder(int orderId, ArrayList<String> orderItemIds){
+        ArrayList<Object> cateringOrderList = BinaryFileUtility.readObjects("CateringOrder.bin");
+
+        for (Object object : cateringOrderList) {
+
+            if (object instanceof CateringOrder cateringOrder) {
+
+                if (cateringOrder.getOrderId() == orderId) {
+
+                    cateringOrder.setOrderItemIds(orderItemIds);
+
+                    BinaryFileUtility.overwriteObjects("CateringOrder.bin", cateringOrderList);
+
+                    return;
+                }
+            }
+        }
     }
 
-    public void cancelCateringOrder(String orderId){
-        //set status == cancel
+    public boolean cancelCateringOrder(int orderId){
+        ArrayList<Object> readCateringOrders =
+                BinaryFileUtility.readObjects("CateringOrder.bin");
+
+        if (readCateringOrders == null || readCateringOrders.isEmpty()) {
+            AlertGenerator.showAlert("error", "No order exists in the database.");
+            return false;
+        }
+
+        for (Object object : readCateringOrders) {
+
+            if (object instanceof CateringOrder cateringOrder) {
+
+                if (cateringOrder.getOrderId() == orderId) {
+
+                    // Check whether this logged-in user created the order
+                    if (cateringOrder.getAirlineRepresentativeId() != this.getUserId()) {
+                        AlertGenerator.showAlert("error", "You can only cancel orders created by you.");
+                        return false;
+                    }
+
+                    if ("Cancelled".equals(cateringOrder.getStatus())) {
+                        AlertGenerator.showAlert("error", "Order is already cancelled.");
+                        return false;
+                    }
+
+                    if ("Pending".equals(cateringOrder.getStatus())) {
+
+                        cateringOrder.setStatus("Cancelled");
+
+                        boolean isSaved = BinaryFileUtility.overwriteObjects("CateringOrder.bin", readCateringOrders);
+
+                        if (!isSaved) {
+                            AlertGenerator.showAlert("error", "Failed to save the cancelled order.");
+                            return false;
+                        }
+
+                        AlertGenerator.showAlert("success", "Order cancelled successfully.");
+                        return true;
+                    }
+
+                    AlertGenerator.showAlert("error", "The order is processing and cannot be cancelled.");
+                    return false;
+                }
+            }
+        }
+
+        AlertGenerator.showAlert("error", "Order ID does not exist.");
+        return false;
     }
 
-    public final void submitFlightDelayRequest(String orderId, LocalDate newDepartureDate, LocalTime newDepartureTime){
-        // find out id and set
+    public final void submitFlightDelayRequest(ArrayList<Object> CateringOrderList){
+        BinaryFileUtility.overwriteObjects("CateringOrder.bin", CateringOrderList);
     }
 
-    public ArrayList<String> trackCateringOrderStatus(String orderId){
-
-        // find out orderStatus from CateringOrder by orderId
-
+    public ArrayList<String> trackCateringOrderStatus(int orderId){
         ArrayList<String> statusList = new ArrayList<String>();
-        String orderStatus = "delivered";
+        ArrayList<Object> cateringOrderList = BinaryFileUtility.readObjects("CateringOrder.bin");
+        String orderStatus = "";
 
-        if (orderStatus.equals("approved")){
-            statusList.add("approved");
-        } else if (orderStatus.equals("prodcution")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
+        for (Object object : cateringOrderList) {
+            if (object instanceof CateringOrder cateringOrder && orderId == (cateringOrder.getOrderId())) {
+                orderStatus = cateringOrder.getStatus();
+                break;
+            }
+        }
+        if (orderStatus.isEmpty()) {
+            AlertGenerator.showAlert("error", "Order ID does not exist.");
+            return null;
+        }
+        if(orderStatus.equals("Cancelled")){
+            AlertGenerator.showAlert("error", "Order is already cancelled.");
+            return null;
+        }
+        if(orderStatus.equals("Pending")){
+            AlertGenerator.showAlert("error", "Order is Pending.");
+        }
+
+        if (orderStatus.equals("Approved")){
+            statusList.add("Approved");
+        } else if (orderStatus.equals("Production")) {
+            statusList.add("Approved");
+            statusList.add("Production");
         } else if (orderStatus.equals("quality Inspection")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
+            statusList.add("Approved");
+            statusList.add("Production");
             statusList.add("quality Inspection");
-        } else if (orderStatus.equals("dispatch")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
-            statusList.add("quality Inspection");
-            statusList.add("dispatch");
-        } else if (orderStatus.equals("delivery")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
-            statusList.add("quality Inspection");
-            statusList.add("dispatch");
-            statusList.add("delivery");
+        } else if (orderStatus.equals("Dispatch")) {
+            statusList.add("Approved");
+            statusList.add("Production");
+            statusList.add("Quality Inspection");
+            statusList.add("Dispatch");
+        } else if (orderStatus.equals("Delivery")) {
+            statusList.add("Approved");
+            statusList.add("Production");
+            statusList.add("Quality Inspection");
+            statusList.add("Dispatch");
+            statusList.add("Delivery");
         }
         return statusList;
 
@@ -129,42 +230,72 @@ public class AirlineRepresentative extends User {
 
     }
 
+    public static AirlineRepresentative createNewAirlineRepresentative(String password, String fullName, LocalDate dateOfBirth, String gender, String email, String phone, String address, String airlineId, String officeContact) {
+        AirlineRepresentative newRepresentative = new AirlineRepresentative(password, fullName, "Airline Representative", dateOfBirth,
+                        gender, email, phone, address, "Active", airlineId, officeContact);
+
+        boolean saved = BinaryFileUtility.writeObjects("User.bin", newRepresentative);
+
+        if (saved) {
+            return newRepresentative;
+        }
+
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return "AirlineRepresentative{" +
+                "airlineId='" + airlineId + '\'' +
+                ", officeContact='" + officeContact + '\'' +
+                ", userId=" + userId +
+                ", role='" + role + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", status='" + status + '\'' +
+                ", createDate=" + createDate +
+                '}';
+    }
 
     // Bellow are the code for fxml sideBar rendering button on action
     public static void renderFxmlDashboard(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/dashboardView.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/dashboardView.fxml");
     }
 
     public static void renderFxmlCreateCateringOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/createCateringOrderView.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/createCateringOrderView.fxml");
     }
 
     public static void renderFxmlModifyOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/modifyOrderView.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/modifyOrderView.fxml");
     }
 
     public static void renderFxmlCancelOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/cancelOrderView.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/cancelOrderView.fxml");
     }
 
     public static void renderFxmlFlightDelay(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/flightDelayView.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/flightDelayView.fxml");
     }
 
     public static void renderFxmlTruckOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/truckOrderView.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/truckOrderView.fxml");
     }
 
     public static void renderFxmlConfirmDelivery(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/confirmDeliveryView.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/confirmDeliveryView.fxml");
     }
 
     public static void renderFxmlPayBill(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/payBillView.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/payBillView.fxml");
     }
 
     public static void renderFxmlOrderHistory(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/orderHistoryView.fxml");
+        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/orderHistoryView.fxml");
     }
 
 }
