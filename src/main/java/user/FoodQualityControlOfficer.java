@@ -40,7 +40,7 @@ public class FoodQualityControlOfficer extends Employee implements Serializable 
     }
 
     @Override
-    public void viewDashboard(ActionEvent event) throws IOException {
+    public void viewDashboard(ActionEvent event, User user){
 
     }
 

@@ -92,6 +92,11 @@ public class flightDelayViewController implements UserReceiver
                         AlertGenerator.showAlert("Error", "Order has been delivered");
                         return;
                     }
+                    if (! cateringOrder.getAirlineId().equals(loggedInUser.getAirlineId())) {
+                        AlertGenerator.showAlert("Error", "order does not belong to your airline.");
+                        fxidHiddenAnchorPane.setVisible(false);
+                        return;
+                    }
                     fxidOrderedDetailsOrderIdLabel.setText("Order ID: " + cateringOrder.getOrderId());
                     fxidOrderedFlightNumberLabel.setText("Flight Number: " + cateringOrder.getFlightId());
                     OldDeliveryTime = cateringOrder.getDeliveryDate();

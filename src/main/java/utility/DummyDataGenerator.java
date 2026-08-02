@@ -131,7 +131,7 @@ public class DummyDataGenerator {
         BinaryFileUtility.writeObjects("User.bin", representative);
 
         System.out.println("catering user id: "+manager.getUserId() +" " + "catering User pass: " +manager.getPassword());
-        System.out.println("catering user id: "+ representative.getUserId()+" " + "catering User pass: " +representative.getPassword());
+        System.out.println("Airline Rep user id: "+ representative.getUserId()+" " + "catering User pass: " +representative.getPassword());
     }
 
     public static void totalUser(){

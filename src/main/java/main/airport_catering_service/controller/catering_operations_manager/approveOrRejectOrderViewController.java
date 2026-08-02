@@ -122,6 +122,7 @@ public class approveOrRejectOrderViewController implements UserReceiver
             if (o instanceof CateringOrder cateringOrder) {
                 if (selectedId == cateringOrder.getOrderId()) {
                     cateringOrder.setStatus("Approved");
+                    cateringOrder.setOrderAcceptOrRejectBy(loggedInUser.getFullName());
                     break;
                 }
             }
@@ -139,6 +140,7 @@ public class approveOrRejectOrderViewController implements UserReceiver
             if (o instanceof CateringOrder cateringOrder) {
                 if (selectedId == cateringOrder.getOrderId()) {
                     cateringOrder.setStatus("Rejected");
+                    cateringOrder.setOrderAcceptOrRejectBy(loggedInUser.getFullName());
                     break;
                 }
             }
