@@ -425,11 +425,6 @@
 
 
 
-
-                        <Button fx:id="exportButton" layoutX="266.0" layoutY="650.0" onAction="#ExportPDFOnAction" prefHeight="40" prefWidth="150" text="Export PDF" />
-
-
-
                     </children>
 
 

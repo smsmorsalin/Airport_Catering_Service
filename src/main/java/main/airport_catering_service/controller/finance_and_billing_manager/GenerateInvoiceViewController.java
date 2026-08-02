@@ -5,6 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import user.FinanceAndBillingManager;
+
+import java.io.IOException;
 
 public class GenerateInvoiceViewController
 {
@@ -43,8 +46,6 @@ public class GenerateInvoiceViewController
     @javafx.fxml.FXML
     private TextField billingAddressTextField;
     @javafx.fxml.FXML
-    private Button printInvoiceButton;
-    @javafx.fxml.FXML
     private Label AirlineNameLabel;
     @javafx.fxml.FXML
     private Button verifyOrderButton;
@@ -53,10 +54,6 @@ public class GenerateInvoiceViewController
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void printInvoiceOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -77,43 +74,58 @@ public class GenerateInvoiceViewController
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {
     }
 
+    @Deprecated
+    public void sideBarHomePageButtonOnAction(ActionEvent actionEvent) throws IOException {
+
+    }
+
     @javafx.fxml.FXML
     public void sidebarHomePageButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void sideBarRevenueSummaryButtonOnAction(ActionEvent actionEvent) {
+    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) throws IOException{
+        FinanceAndBillingManager.viewdashboard(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarRecordPaymentButtonOnAction(ActionEvent actionEvent) {
+    public void sideBarRevenueSummaryButtonOnAction(ActionEvent actionEvent) throws IOException {
+        FinanceAndBillingManager.viewRevenueSummary(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarCalculateCostButtonOnAction(ActionEvent actionEvent) {
+    public void sideBarRecordPaymentButtonOnAction(ActionEvent actionEvent) throws IOException{
+        FinanceAndBillingManager.viewRecordPayment(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) {
+    public void sideBarProcessRefundButtonOnAction(ActionEvent actionEvent) throws IOException{
+        FinanceAndBillingManager.viewProcessRefund(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarProcessRefundButtonOnAction(ActionEvent actionEvent) {
+    public void sideBarGenerateInvoiceButtonOnAction(ActionEvent actionEvent) throws IOException{
+        FinanceAndBillingManager.viewGenerateInvoice(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarGenerateInvoiceButtonOnAction(ActionEvent actionEvent) {
+    public void sideBarPaymentHistoryButtonOnAction(ActionEvent actionEvent) throws IOException{
+        FinanceAndBillingManager.viewPaymentHistory(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarPaymentHistoryButtonOnAction(ActionEvent actionEvent) {
+    public void sideBarCalculateCostButtonOnAction(ActionEvent actionEvent) throws IOException{
+        FinanceAndBillingManager.viewCalculateCost(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarFinancialReportsButtonOnAction(ActionEvent actionEvent) {
+    public void sideBarFinancialReportsButtonOnAction(ActionEvent actionEvent) throws IOException{
+        FinanceAndBillingManager.viewFinancialReports(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) {
+    public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) throws IOException{
+        FinanceAndBillingManager.viewOutstandingPayments(actionEvent);
     }
+
 }

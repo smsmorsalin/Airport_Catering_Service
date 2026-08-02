@@ -15,10 +15,6 @@
 
     <children>
 
-
-        <!-- ================= SIDEBAR ================= -->
-
-
         <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5">
 
 
@@ -107,14 +103,6 @@
         </VBox>
 
 
-
-
-
-
-
-        <!-- TOP HEADER -->
-
-
         <Button layoutY="3" onAction="#sidebarHomePageOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:pink;         -fx-background-radius:5;" text="Airport Catering Service">
 
 
@@ -131,12 +119,6 @@
         </Button>
 
 
-
-
-
-
-
-        <!-- MAIN AREA -->
 
 
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:silver;">
@@ -169,10 +151,6 @@
 
 
 
-
-                        <!-- PAGE TITLE -->
-
-
                         <Label layoutX="56" layoutY="25" text="Service Updates">
 
 
@@ -186,15 +164,6 @@
 
                         <Label layoutX="56" layoutY="65" text="Create and manage catering service announcements" />
 
-
-
-
-
-
-
-
-
-                        <!-- UPDATE CREATION PANEL -->
 
 
                         <AnchorPane layoutX="6" layoutY="105" prefHeight="430" prefWidth="420" style="-fx-background-color:white;             -fx-background-radius:25;">
@@ -286,16 +255,6 @@
                         </AnchorPane>
 
 
-
-
-
-
-
-
-
-                        <!-- UPDATE SUMMARY PANEL -->
-
-
                         <AnchorPane layoutX="438.0" layoutY="105.0" prefHeight="430" prefWidth="273" style="-fx-background-color:#EAF2FF;             -fx-background-radius:25;">
 
 
@@ -361,17 +320,6 @@
 
 
                         </AnchorPane>
-
-
-
-
-
-
-
-
-
-                        <!-- RECENT UPDATES -->
-
 
                         <AnchorPane layoutX="6" layoutY="570" prefHeight="100" prefWidth="712" style="-fx-background-color:#F8FAFC;             -fx-background-radius:20;">
 

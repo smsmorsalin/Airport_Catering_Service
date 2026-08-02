@@ -307,31 +307,10 @@
 
 
 
-
-
-                                <Button fx:id="downloadReceiptButton" layoutX="45" layoutY="275" onAction="#downloadreceiptOnAction" prefHeight="35" prefWidth="160" style="-fx-background-color:#00853F;                -fx-background-radius:10;" text="Download Receipt" textFill="WHITE" />
-
-
-
-                                <Button layoutX="45" layoutY="320" onAction="#printreceiptOnAction" prefHeight="35" prefWidth="160" style="-fx-background-color:#00853F;                -fx-background-radius:10;" text="Print Receipt" textFill="WHITE" />
-
-
-
                             </children>
 
 
                         </AnchorPane>
-
-
-
-
-
-
-                        <Button fx:id="resetButton" layoutX="100" layoutY="670" onAction="#resetOnAction" prefWidth="100" text="Reset" />
-
-
-
-                        <Button fx:id="cancelButton" layoutX="260" layoutY="670" onAction="#cancelOnAction" prefWidth="100" text="Cancel" />
 
 
 
