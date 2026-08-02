@@ -13,9 +13,9 @@ public class RegisterComplaintViewController
     @javafx.fxml.FXML
     private Button cancelButton;
     @javafx.fxml.FXML
-    private ComboBox categoryComboBox;
+    private ComboBox<String> categoryComboBox;
     @javafx.fxml.FXML
-    private ComboBox airlineComboBox;
+    private ComboBox<String> airlineComboBox;
     @javafx.fxml.FXML
     private Button resetButton;
     @javafx.fxml.FXML
