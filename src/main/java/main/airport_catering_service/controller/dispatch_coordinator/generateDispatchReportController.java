@@ -4,6 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import user.DispatchCoordinator;
+
+import java.io.IOException;
 
 public class generateDispatchReportController
 {
@@ -61,6 +64,7 @@ public class generateDispatchReportController
     }
 
     @javafx.fxml.FXML
-    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
+        DispatchCoordinator.renderDashboard(actionEvent);
     }
 }

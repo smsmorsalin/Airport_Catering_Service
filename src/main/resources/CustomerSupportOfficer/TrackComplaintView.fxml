@@ -12,10 +12,6 @@
 
     <children>
 
-
-        <!-- ================= SIDEBAR ================= -->
-
-
         <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5.0">
 
 
@@ -274,15 +270,6 @@
 
 
                         <Button layoutX="38" layoutY="610" onAction="#ResolveComplaintOnAction" prefHeight="40" prefWidth="150" style="-fx-background-color:#0F6BFF;         -fx-text-fill:white;         -fx-background-radius:10;" text="Resolve Complaint" />
-
-
-
-
-                        <Button layoutX="210" layoutY="610" onAction="#printStatusOnAction" prefHeight="40" prefWidth="130" style="-fx-background-radius:10;" text="Print Status" />
-
-
-
-                        <Button layoutX="365" layoutY="610" onAction="#backOnAction" prefHeight="40" prefWidth="130" style="-fx-background-radius:10;" text="Back" />
 
 
 
