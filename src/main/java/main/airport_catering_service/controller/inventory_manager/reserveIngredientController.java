@@ -4,6 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import user.InventoryManager;
+
+import java.io.IOException;
 
 public class reserveIngredientController
 {
@@ -63,6 +66,7 @@ public class reserveIngredientController
     }
 
     @javafx.fxml.FXML
-    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) throws IOException {
+        InventoryManager.renderDashboard(actionEvent);
     }
 }

@@ -1,5 +1,6 @@
 package user;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -17,7 +18,6 @@ public class KitchenProductionManager extends  Employee implements Serializable 
     public KitchenProductionManager(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, LocalDate joinDate, String department, String designation, float salary) {
         super(password, fullName, role, dateOfBirth, gender, email, phone, address, status, joinDate, department, designation, salary);
     }
-
     @Override
     public String toString() {
         return "KitchenProductionManager{" +
@@ -40,6 +40,7 @@ public class KitchenProductionManager extends  Employee implements Serializable 
 
     @Override
     public void viewDashboard(javafx.event.ActionEvent event, User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/dashboardView.fxml", user);
 
     }
     @Override

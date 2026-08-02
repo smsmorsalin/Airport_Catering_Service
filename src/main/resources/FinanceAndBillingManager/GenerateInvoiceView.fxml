@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="758" prefWidth="898" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.finance_and_billing_manager.GenerateInvoiceViewController">
+<AnchorPane prefHeight="758" prefWidth="898" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.finance_and_billing_manager.GenerateInvoiceViewController">
 
 
     <children>
@@ -87,10 +83,10 @@
                                         <Font size="20" />
                                     </font>
                                 </Label>
-                                <Label layoutX="35" layoutY="75" text="Airline Name :" />
+                                <Label layoutX="35" layoutY="75" text="Order ID" />
                                 <Label fx:id="airlineNameLabel" layoutX="170" layoutY="75" text="" />
-                                <Label layoutX="35" layoutY="110" text="Billing Status :" />
-                                <Label fx:id="billingStatusLabel" layoutX="170" layoutY="110" text="Pending" />
+                                <Label layoutX="35" layoutY="110" text="Order Status" />
+                                <Label fx:id="orderStatusLabel" layoutX="170" layoutY="110" prefHeight="17.0" prefWidth="111.0" text="----" />
                                 <Label layoutX="35" layoutY="145" text="Billing Address :" />
                                 <TextField fx:id="billingAddressTextField" layoutX="170" layoutY="140" prefWidth="200" />
                                 <Label layoutX="35" layoutY="200" text="Cost Breakdown">
@@ -112,7 +108,7 @@
                                 <Label fx:id="transportCostLabel" layoutX="230" layoutY="415" text="0.00" />
                                 <Label layoutX="35" layoutY="455" prefHeight="35" prefWidth="300" style="-fx-background-color: #FFD900; -fx-background-radius: 10;" text="Total Amount:" />
                                 <Label fx:id="totalAmountLabel" layoutX="250" layoutY="463" text="0.00" />
-                        <Label fx:id="AirlineNameLabel" layoutX="172.0" layoutY="68.0" prefHeight="30.0" prefWidth="200.0" text="-----" />
+                        <Label fx:id="OrderIdLabel" layoutX="172.0" layoutY="68.0" prefHeight="30.0" prefWidth="200.0" text="-----" />
                             </children>
                         </AnchorPane>
                         <AnchorPane layoutX="470" layoutY="220" prefHeight="370" prefWidth="220" style="             -fx-background-color:#F8FAFC;             -fx-background-radius:25;">
@@ -134,7 +130,6 @@
                                 <Label layoutX="25" layoutY="240" text="Due Date :" />
                                 <Label fx:id="summaryDateLabel" layoutX="120" layoutY="240" text="-" />
                                 <Button fx:id="generateInvoiceButton" layoutX="45" layoutY="290" onAction="#generateinvoiceOnAction" prefHeight="45" prefWidth="150" style="         -fx-background-color:#00853F;         -fx-background-radius:10;" text="Generate Invoice" textFill="WHITE" />
-                                <Button fx:id="printInvoiceButton" layoutX="45" layoutY="340" onAction="#printInvoiceOnAction" prefHeight="45" prefWidth="150" style="         -fx-background-color:#00853F;         -fx-background-radius:10;" text="Print Invoice" textFill="WHITE" />
                             </children>
                         </AnchorPane>
                     </children>

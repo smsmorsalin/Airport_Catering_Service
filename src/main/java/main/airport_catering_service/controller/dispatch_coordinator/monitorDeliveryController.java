@@ -2,6 +2,9 @@ package main.airport_catering_service.controller.dispatch_coordinator;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
+import user.DispatchCoordinator;
+
+import java.io.IOException;
 
 public class monitorDeliveryController
 {
@@ -55,6 +58,7 @@ public class monitorDeliveryController
     }
 
     @javafx.fxml.FXML
-    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
+        DispatchCoordinator.renderDashboard(actionEvent);
     }
 }

@@ -34,15 +34,7 @@ public class FlightCancellationViewController
     }
 
     @javafx.fxml.FXML
-    public void cancelButtonOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void CancelFlightOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void resetButtonOnAction(ActionEvent actionEvent) {
     }
 
     @Deprecated

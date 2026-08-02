@@ -409,26 +409,6 @@
 
 
 
-                        <Button fx:id="exportPdfBtn" layoutX="300" layoutY="620" onAction="#ExportPDFOnAction" prefHeight="40" prefWidth="140" style="-fx-background-color:green;         -fx-text-fill:white;         -fx-background-radius:10;" text="Export PDF">
-
-
-                            <font>
-                                <Font size="14" />
-                            </font>
-
-
-                        </Button>
-
-
-
-
-
-                        <Button layoutX="470" layoutY="620" onAction="#ResetOnAction" prefHeight="40" prefWidth="120" style="-fx-background-radius:10;" text="Reset" />
-
-
-
-
-
                     </children>
 
 

@@ -33,8 +33,6 @@ public class RevenueSummaryViewController
     @javafx.fxml.FXML
     private Label refundAmountLabel;
     @javafx.fxml.FXML
-    private Button exportButton;
-    @javafx.fxml.FXML
     private TableColumn dateColumn;
     @javafx.fxml.FXML
     private TableColumn orderColumn;
@@ -53,17 +51,20 @@ public class RevenueSummaryViewController
     public void sidebarRevenueSummaryOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void ExportPDFOnAction(ActionEvent actionEvent) {
-    }
+
 
     @Deprecated
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarHomePageButtonOnAction(ActionEvent actionEvent) throws IOException {
 
+    }
+
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
