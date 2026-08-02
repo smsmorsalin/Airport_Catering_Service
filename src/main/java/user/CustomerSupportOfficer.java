@@ -39,7 +39,7 @@ public class CustomerSupportOfficer extends Employee implements Serializable {
     }
 
     @Override
-    public void viewDashboard(javafx.event.ActionEvent event) throws IOException{
+    public void viewDashboard(javafx.event.ActionEvent event, User user){
 
     }
 

@@ -40,15 +40,8 @@ public class AirlineRepresentative extends User implements Serializable {
     }
 
     @Override
-    public void viewDashboard(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/airline_representative/dashboardView.fxml"));
-
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public void viewDashboard(javafx.event.ActionEvent event, User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/airline_representative/dashboardView.fxml", user);
     }
 
     @Override
@@ -62,7 +55,6 @@ public class AirlineRepresentative extends User implements Serializable {
     public boolean createCateringOrder(String flightId, String deliveryLocation,ArrayList<OrderItem> orderItems,
                                        LocalDate deliveryDate, LocalTime deliveryTime) {
 
-        int orderId = databaseAccessor.generateNewUniqueId("CateringOrder.bin", "orderId");
         ArrayList<String> orderItemIds = new ArrayList<>();
 
         for (OrderItem orderItem : orderItems) {
@@ -70,7 +62,7 @@ public class AirlineRepresentative extends User implements Serializable {
         }
 
         CateringOrder cateringOrder = new CateringOrder(
-                orderId, flightId, this.getUserId(), LocalDate.now(), deliveryLocation,
+                flightId, this.getAirlineId(), this.getUserId(), LocalDate.now(), deliveryLocation,
                 orderItemIds, deliveryDate, deliveryTime
         );
 
@@ -85,7 +77,7 @@ public class AirlineRepresentative extends User implements Serializable {
             return false;
         }
         AlertGenerator.showAlert("Info", "Successfully saved the catering order.\n" +
-                "Order Id: "+ orderId);
+                "Order Id: "+ cateringOrder.getOrderId());
         return true;
     }
 
@@ -170,8 +162,11 @@ public class AirlineRepresentative extends User implements Serializable {
 
         for (Object object : cateringOrderList) {
             if (object instanceof CateringOrder cateringOrder && orderId == (cateringOrder.getOrderId())) {
-                orderStatus = cateringOrder.getStatus();
-                break;
+                if (cateringOrder.getAirlineId().equals(this.getAirlineId())) {
+                    orderStatus = cateringOrder.getStatus();
+                    break;
+                }
+                AlertGenerator.showAlert("error", "This order doesn't belong to your airline.");
             }
         }
         if (orderStatus.isEmpty()) {

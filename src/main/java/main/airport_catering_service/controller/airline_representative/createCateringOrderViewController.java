@@ -156,13 +156,7 @@ public class createCateringOrderViewController implements UserReceiver
             }
         }
 
-        String itemId = databaseAccessor.generateNewUniqueId(
-                "OrderItem.bin",
-                "itemId",
-                "S"
-        );
-
-        OrderItem newOrderItem = new OrderItem(itemId, selectedMeal, quantity);
+        OrderItem newOrderItem = new OrderItem(selectedMeal, quantity);
 
         orderItemList.add(newOrderItem);
 
