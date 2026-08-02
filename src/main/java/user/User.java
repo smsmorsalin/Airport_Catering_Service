@@ -174,7 +174,7 @@ public abstract class User implements Serializable {
         }
     }
 
-    public final static int generateNewId(){
+    private static int generateNewId(){
         ArrayList<Object> objects =
                 BinaryFileUtility.readObjects("User.bin");
 
@@ -195,6 +195,6 @@ public abstract class User implements Serializable {
         return maximumId + 1;
     }
 
-    public abstract void viewDashboard(javafx.event.ActionEvent event) throws IOException;
+    public abstract void viewDashboard(javafx.event.ActionEvent event, User user);
     public abstract boolean updateProfile();
 }

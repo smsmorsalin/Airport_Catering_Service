@@ -17,7 +17,7 @@ public class FinanceAndBillingManager extends Employee implements Serializable {
     }
 
     @Override
-    public void viewDashboard(javafx.event.ActionEvent event) throws IOException{
+    public void viewDashboard(javafx.event.ActionEvent event, User user){
 
     }
 
@@ -104,6 +104,21 @@ public class FinanceAndBillingManager extends Employee implements Serializable {
 
     public static void viewPaymentHistory(javafx.event.ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/PaymentHistoryView.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    //Button to Dashboard
+
+    public static void viewdashboard(javafx.event.ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(
+                CustomerSupportOfficer.class.getResource("/FinanceAndBillingManager/dashboardView.fxml"));
+
         Parent root = loader.load();
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

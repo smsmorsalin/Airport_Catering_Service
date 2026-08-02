@@ -16,5 +16,12 @@ public class HelloApplication extends Application {
         stage.setTitle("Airport Catering Service");
         stage.setScene(scene);
         stage.show();
+
+
+//        DummyDataGenerator.DeleteAllUser();
+//        DummyDataGenerator.morsalin();
+        DummyDataGenerator.totalUser();
+
+
     }
 }

@@ -18,8 +18,11 @@ import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 
-public class loginController
-{
+public class loginController {
+
+    private static final String ADMIN_USERNAME = "admin";
+    private static final String ADMIN_PASSWORD = "admin123";
+
     @javafx.fxml.FXML
     private TextField fxidPasswordTextfield;
     @javafx.fxml.FXML
@@ -46,153 +49,105 @@ public class loginController
 
     @javafx.fxml.FXML
     public void loginButtonOnClick(ActionEvent event) throws IOException {
-        if (fxidUsernameTextField.getText().equals("1") && fxidPasswordTextfield.getText().isEmpty()) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/airline_representative/dashboardView.fxml"));
-
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("2") && fxidPasswordTextfield.getText().isEmpty()) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/catering_operations_manager/businessDashboardView.fxml"));
-
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("3")&& fxidPasswordTextfield.getText().isEmpty()) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/CustomerSupportOfficer/dashboardView.fxml"));
-
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-
-
-        else if (fxidUsernameTextField.getText().equals("4")&& fxidPasswordTextfield.getText().isEmpty()) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/FinanceAndBillingManager/dashboardView.fxml"));
-
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-
-        else if (fxidUsernameTextField.getText().equals("9")&& fxidPasswordTextfield.getText().isEmpty()) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/KitchenProductionManager/dashboardView.fxml"));
-
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("10")&& fxidPasswordTextfield.getText().isEmpty()) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/FoodQualityControlOfficer/dashboardView.fxml"));
-
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("5")&& fxidPasswordTextfield.getText().isEmpty()) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/InventoryManager/DashboardView.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("6")&& fxidPasswordTextfield.getText().isEmpty()) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/DispatchCoordinator/DashboardView.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("7")&& fxidPasswordTextfield.getText().isEmpty()) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/Truckoperator/DashboardView.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else if (fxidUsernameTextField.getText().equals("8")&& fxidPasswordTextfield.getText().isEmpty()) {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/Headchef/DashboardView.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-
-//        else if (fxidUsernameTextField.getText().equals("admin")&& fxidPasswordTextfield.getText().isEmpty()) {
-//            FXMLLoader loader = new FXMLLoader(
-//                    getClass().getResource("/main/airport_catering_service/createNewEmployeeView.fxml"));
-//            Parent root = loader.load();
-//            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//            Scene scene = new Scene(root);
-//            stage.setScene(scene);
-//            stage.show();
-//        }
-
-
-        // read user from database.
-        int userId = 0;
-        try {
-            userId = Integer.parseInt(fxidUsernameTextField.getText());
-        }catch (NumberFormatException e){
-            if(fxidUsernameTextField.getText().equals("admin")){
-                SceneSwitchingHelper.fullSceneReplacement(event, "/main/airport_catering_service/createNewEmployeeView.fxml");
-                return;
-            }
-        }
+        String username = fxidUsernameTextField.getText().trim();
         String password = fxidPasswordTextfield.getText();
 
-        User loggedInUser = User.verifyLogin(userId, password);
-
-        if (loggedInUser == null) {
+        /*
+         * Check empty fields
+         */
+        if (username.isEmpty() || password.isEmpty()) {
             AlertGenerator.showAlert(
-                    "Error",
-                    "Invalid username or password."
+                    "Validation Error",
+                    "Username and password are required."
             );
             return;
         }
 
-        if (loggedInUser instanceof AirlineRepresentative) {
-            SceneSwitchingHelper.switchSceneWithData(
+        /*
+         * Super Admin login
+         */
+        if (username.equalsIgnoreCase(ADMIN_USERNAME)) {
+
+            if (!password.equals(ADMIN_PASSWORD)) {
+                AlertGenerator.showAlert(
+                        "Login Error",
+                        "Invalid admin password."
+                );
+                return;
+            }
+
+            SceneSwitchingHelper.fullSceneReplacement(
                     event,
-                    "/airline_representative/dashboardView.fxml",
-                    loggedInUser
+                    "/main/airport_catering_service/createNewEmployeeView.fxml"
             );
+
+            return;
         }
-        else if (loggedInUser instanceof CateringOperationsManager) {
-            SceneSwitchingHelper.switchSceneWithData(
-                    event,
-                    "/catering_operations_manager/businessDashboardView.fxml",
-                    loggedInUser
+
+
+//         * Normal users must enter a numeric user ID
+        int userId;
+
+        try {
+            userId = Integer.parseInt(username);
+
+        } catch (NumberFormatException e) {
+
+            AlertGenerator.showAlert(
+                    "Login Error",
+                    "User ID must be a number."
             );
+
+            return;
         }
+
+
+//         * Verify user ID and password from User.bin
+        User loggedInUser = User.verifyLogin(userId, password);
+
+        if (loggedInUser == null) {
+            AlertGenerator.showAlert(
+                    "Login Error",
+                    "Invalid user ID or password."
+            );
+            return;
+        }
+
+
+        loggedInUser.viewDashboard(event,  loggedInUser);
+
+//         * Open Airline Representative dashboard
+
+//        if (loggedInUser instanceof AirlineRepresentative) {
+//
+//            SceneSwitchingHelper.switchSceneWithData(
+//                    event,
+//                    "/airline_representative/dashboardView.fxml",
+//                    loggedInUser
+//            );
+//
+//            return;
+//        }
+//
+//
+////         * Open Catering Operations Manager dashboard
+//        if (loggedInUser instanceof CateringOperationsManager) {
+//
+//            SceneSwitchingHelper.switchSceneWithData(
+//                    event,
+//                    "/catering_operations_manager/businessDashboardView.fxml",
+//                    loggedInUser
+//            );
+//
+//            return;
+//        }
+//
+//
+////         * The user exists, but no dashboard is configured
+//        AlertGenerator.showAlert(
+//                "Login Error",
+//                "No dashboard is configured for this user role."
+//        );
 
     }
 }

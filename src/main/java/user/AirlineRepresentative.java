@@ -40,15 +40,8 @@ public class AirlineRepresentative extends User implements Serializable {
     }
 
     @Override
-    public void viewDashboard(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/airline_representative/dashboardView.fxml"));
-
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public void viewDashboard(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/airline_representative/dashboardView.fxml", user);
     }
 
     @Override
@@ -62,15 +55,14 @@ public class AirlineRepresentative extends User implements Serializable {
     public boolean createCateringOrder(String flightId, String deliveryLocation,ArrayList<OrderItem> orderItems,
                                        LocalDate deliveryDate, LocalTime deliveryTime) {
 
-        int orderId = databaseAccessor.generateNewUniqueId("CateringOrder.bin", "orderId");
         ArrayList<String> orderItemIds = new ArrayList<>();
 
         for (OrderItem orderItem : orderItems) {
             orderItemIds.add(orderItem.getItemId());
         }
-
+//        String flightId, String airlineId, int airlineRepresentativeId, LocalDate orderDate, String deliveryLocation, ArrayList<String> orderItemIds, LocalDate deliveryDate, LocalTime deliveryTime
         CateringOrder cateringOrder = new CateringOrder(
-                orderId, flightId, this.getUserId(), LocalDate.now(), deliveryLocation,
+                flightId,this.airlineId, this.getUserId(), LocalDate.now(), deliveryLocation,
                 orderItemIds, deliveryDate, deliveryTime
         );
 
@@ -85,7 +77,7 @@ public class AirlineRepresentative extends User implements Serializable {
             return false;
         }
         AlertGenerator.showAlert("Info", "Successfully saved the catering order.\n" +
-                "Order Id: "+ orderId);
+                "Order Id: "+ cateringOrder.getOrderId());
         return true;
     }
 
@@ -180,12 +172,11 @@ public class AirlineRepresentative extends User implements Serializable {
 
     }
 
-    public final DeliveryConfirmation confirmCateringDelivery(int orderId, String receiverName){
+    public final void confirmCateringDelivery(int orderId, String receiverName){
         // find out the order from CateringOrder
         // if the delivery already done give an alert
         //else: create a ConfirmCateringDelivery
-        DeliveryConfirmation newDeliveryConfirmation = new DeliveryConfirmation(1, "sms", LocalDate.now());
-        return newDeliveryConfirmation;
+
     }
 
     public final Boolean payCateringBill(String invoiceId,String method,String transactionReference){
@@ -212,7 +203,23 @@ public class AirlineRepresentative extends User implements Serializable {
         return null;
     }
 
-
+    @Override
+    public String toString() {
+        return "AirlineRepresentative{" +
+                "airlineId='" + airlineId + '\'' +
+                ", officeContact='" + officeContact + '\'' +
+                ", userId=" + userId +
+                ", role='" + role + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", status='" + status + '\'' +
+                ", createDate=" + createDate +
+                '}';
+    }
 
     // Bellow are the code for fxml sideBar rendering button on action
     public static void renderFxmlDashboard(javafx.event.ActionEvent event) throws IOException {

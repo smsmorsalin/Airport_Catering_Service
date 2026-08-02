@@ -27,6 +27,7 @@ public class businessDashboardViewController implements UserReceiver
     public void setLoggedInUser(User user) {
         if (user instanceof CateringOperationsManager cateringOperationsManager) {
             this.loggedInUser = cateringOperationsManager;
+            welcomeMessageFxid.setText("Welcome "+ loggedInUser.getFullName());
         } else {
             AlertGenerator.showAlert("Error", "Invalid user for this page.");
         }
@@ -34,6 +35,7 @@ public class businessDashboardViewController implements UserReceiver
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML

@@ -5,11 +5,14 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import nonuser.CateringOrder;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class CateringOperationsManager extends Employee implements Serializable {
 
@@ -38,21 +41,20 @@ public class CateringOperationsManager extends Employee implements Serializable 
     }
 
     @Override
-    public void viewDashboard(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/catering_operations_manager/businessDashboardView.fxml"));
-
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public void viewDashboard(javafx.event.ActionEvent event, User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/catering_operations_manager/businessDashboardView.fxml", user);
     }
 
     @Override
     public boolean updateProfile(){
         return false;
     }
+
+    public void approveOrRejectOrder(ArrayList<Object> cateringOrder){
+        boolean b = BinaryFileUtility.overwriteObjects("CateringOrder.bin", cateringOrder);
+
+    }
+
 
 
     //below are the code for fxml sideBar rendering button on action

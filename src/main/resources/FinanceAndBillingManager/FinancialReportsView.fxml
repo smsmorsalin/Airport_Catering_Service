@@ -17,12 +17,7 @@
 
     <children>
 
-
-        <!-- ================= SIDEBAR ================= -->
-
-
         <VBox layoutY="49" prefHeight="706" prefWidth="175" spacing="5">
-
 
             <children>
 
@@ -61,15 +56,6 @@
 
         </VBox>
 
-
-
-
-
-
-
-        <!-- HEADER -->
-
-
         <Button layoutY="3" onAction="#sidebarHomePageButtonOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
 
 
@@ -84,15 +70,6 @@
 
 
         </Button>
-
-
-
-
-
-
-
-        <!-- MAIN -->
-
 
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:#B5B5B5;">
 
@@ -110,24 +87,10 @@
 
                 </Label>
 
-
-
-
-
-
-
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
 
 
                     <children>
-
-
-
-
-
-
-                        <!-- REPORT FILTER CARD -->
-
 
                         <AnchorPane layoutX="15" layoutY="20" prefHeight="130" prefWidth="680" style="-fx-background-color:#F8FAFC;                    -fx-background-radius:25;">
 
@@ -145,30 +108,16 @@
 
                                 </Label>
 
-
-
-
-
                                 <Label layoutX="30" layoutY="75" text="Report Type" />
 
 
                                 <ComboBox fx:id="reportTypeComboBox" layoutX="120" layoutY="70" prefWidth="150" />
 
-
-
-
-
                                 <Label layoutX="300" layoutY="75" text="From Date" />
-
 
                                 <DatePicker fx:id="fromDatePicker" layoutX="370" layoutY="70" prefWidth="120" />
 
-
-
-
-
                                 <Label layoutX="500" layoutY="75" text="To" />
-
 
                                 <DatePicker fx:id="toDatePicker" layoutX="530" layoutY="70" prefWidth="120" />
 
@@ -179,19 +128,7 @@
 
                         </AnchorPane>
 
-
-
-
-
-
-
-
-
-                        <!-- SUMMARY CARDS -->
-
-
                         <HBox layoutX="15" layoutY="175" spacing="15">
-
 
                             <children>
 
@@ -282,20 +219,9 @@
 
                                 </AnchorPane>
 
-
-
-
-
-
                                 <AnchorPane prefHeight="100" prefWidth="150" style="-fx-background-color:#FFF3CD;                    -fx-background-radius:20;">
-
-
                                     <children>
-
-
                                         <Label layoutX="20" layoutY="20" text="Outstanding" />
-
-
                                         <Label fx:id="outstandingLabel" layoutX="20" layoutY="55" text="0.00">
 
 
@@ -319,39 +245,15 @@
 
                         </HBox>
 
-
-
-
-
-
-
-
-
-
-
-                        <!-- REPORT TABLE -->
-
-
                         <AnchorPane layoutX="15" layoutY="281.0" prefHeight="354.0" prefWidth="680" style="-fx-background-color:#FFFFFF;                    -fx-background-radius:25;">
-
-
                             <children>
-
-
                                 <Label layoutX="25" layoutY="25" text="Financial Summary Report">
-
-
                                     <font>
                                         <Font size="20" />
                                     </font>
 
 
                                 </Label>
-
-
-
-
-
                                 <TableView fx:id="financialReportTable" layoutX="13.0" layoutY="65" prefHeight="269.0" prefWidth="666.0">
 
 
@@ -385,38 +287,11 @@
 
 
                         </AnchorPane>
-
-
-
-
-
-
-
-
-
                         <Button fx:id="generateReportButton" layoutX="150" layoutY="650" onAction="#GenerateReportOnAction" prefHeight="40" prefWidth="180" style="-fx-background-color:#6C5CE7;                -fx-background-radius:10;" text="Generate Report" textFill="WHITE" />
-
-
-
-
                         <Button fx:id="exportPDFButton" layoutX="370" layoutY="650" onAction="#ExportPDFOnAction" prefHeight="40" prefWidth="150" text="Export PDF" />
-
-
-
-
                     </children>
-
-
                 </AnchorPane>
-
-
             </children>
-
-
         </VBox>
-
-
     </children>
-
-
 </AnchorPane>

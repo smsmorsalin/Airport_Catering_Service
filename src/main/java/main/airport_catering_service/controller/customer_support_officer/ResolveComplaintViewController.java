@@ -23,7 +23,7 @@ public class ResolveComplaintViewController
     @javafx.fxml.FXML
     private TextArea resolutionNotesTextField;
     @javafx.fxml.FXML
-    private ComboBox resolutionStatusComboBox;
+    private ComboBox<String> resolutionStatusComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -71,7 +71,7 @@ public class ResolveComplaintViewController
 
     @javafx.fxml.FXML
     public void sidebarRegisterComplaintButtonOnAction(ActionEvent actionEvent)throws IOException {
-        CustomerSupportOfficer.viewResisterComplaint(actionEvent);
+        CustomerSupportOfficer.viewRegisterComplaint(actionEvent);
     }
 
     @javafx.fxml.FXML

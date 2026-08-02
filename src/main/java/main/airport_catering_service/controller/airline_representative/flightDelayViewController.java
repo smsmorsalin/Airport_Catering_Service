@@ -58,6 +58,7 @@ public class flightDelayViewController implements UserReceiver
 
     @javafx.fxml.FXML
     public void initialize() {
+        fxidHiddenAnchorPane.setVisible(false);
 
         fxidDelayDeliveryTimeHourComboBox.getItems().clear();
 
@@ -89,6 +90,11 @@ public class flightDelayViewController implements UserReceiver
                 if(cateringOrder.getOrderId() == selectedCateringOrderId){
                     if (cateringOrder.getStatus().equals("delivered")){
                         AlertGenerator.showAlert("Error", "Order has been delivered");
+                        return;
+                    }
+                    if (! cateringOrder.getAirlineId().equals(loggedInUser.getAirlineId())) {
+                        AlertGenerator.showAlert("Error", "order does not belong to your airline.");
+                        fxidHiddenAnchorPane.setVisible(false);
                         return;
                     }
                     fxidOrderedDetailsOrderIdLabel.setText("Order ID: " + cateringOrder.getOrderId());
