@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import main.airport_catering_service.HelloApplication;
+import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -40,7 +41,8 @@ public class FoodQualityControlOfficer extends Employee implements Serializable 
     }
 
     @Override
-    public void viewDashboard(ActionEvent event, User user){
+    public void viewDashboard(javafx.event.ActionEvent event, User user){
+        SceneSwitchingHelper.switchSceneWithData(event,"/FoodQualityControlOfficer/dashboardView.fxml",user);
 
     }
 
