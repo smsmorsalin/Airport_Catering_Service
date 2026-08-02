@@ -1,6 +1,6 @@
 package nonuser;
 
-public class DashBoard {
+public class DashBoard{
     private final String description;
     private final int ticketID;
     private final String status;

@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="user 9 and 10 dashBoard">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/DashBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/dashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/dashboardController.java" afterDir="false" />
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="create dashboard non user class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/DashBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/DashBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -489,7 +489,23 @@
       <option name="project" value="LOCAL" />
       <updated>1785638391884</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="user 9 and 10 dashBoard">
+      <option name="closed" value="true" />
+      <created>1785639512036</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1785639512036</updated>
+    </task>
+    <task id="LOCAL-00042" summary="create dashboard non user class">
+      <option name="closed" value="true" />
+      <created>1785639586273</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1785639586273</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,6 +543,7 @@
     <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif" />
     <MESSAGE value="saif" />
     <MESSAGE value="user 9 and 10 dashBoard" />
-    <option name="LAST_COMMIT_MESSAGE" value="user 9 and 10 dashBoard" />
+    <MESSAGE value="create dashboard non user class" />
+    <option name="LAST_COMMIT_MESSAGE" value="create dashboard non user class" />
   </component>
 </project>
