@@ -1,5 +1,7 @@
 package nonuser;
 
+import utility.databaseAccessor;
+
 import java.io.Serializable;
 
 public class OrderItem implements Serializable {
@@ -7,8 +9,8 @@ public class OrderItem implements Serializable {
     private Meal meal; //FF
     private int quantity;
 
-    public OrderItem(String itemId, Meal meal, int quantity) {
-        this.itemId = itemId;
+    public OrderItem(Meal meal, int quantity) {
+        this.itemId = generateItemId();
         this.meal = meal;
         this.quantity = quantity;
     }
@@ -47,5 +49,9 @@ public class OrderItem implements Serializable {
         }
 
         return meal.getMealId();
+    }
+
+    private static String generateItemId(){
+        return databaseAccessor.generateNewUniqueStringId("OrderItem.bin", "itemId");
     }
 }
