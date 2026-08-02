@@ -3,9 +3,7 @@ package main.airport_catering_service.controller.customer_support_officer;
 import javafx.event.ActionEvent;
 import user.CustomerSupportOfficer;
 
-import javax.imageio.IIOException;
 import java.io.IOException;
-import java.time.LocalDate;
 
 public class dashboardViewController
 {
@@ -29,7 +27,7 @@ public class dashboardViewController
 
     @javafx.fxml.FXML
     public void sideBarRegisterComplaintButtonOnAction(ActionEvent actionEvent) throws IOException {
-        CustomerSupportOfficer.viewResisterComplaint(actionEvent);
+        CustomerSupportOfficer.viewRegisterComplaint(actionEvent);
     }
 
     @javafx.fxml.FXML

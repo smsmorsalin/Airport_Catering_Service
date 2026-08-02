@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/GenerateReportsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/GenerateReportsViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/RegisterComplaintViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/RegisterComplaintViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/ResolveComplaintViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/ResolveComplaintViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/TrackComplaintViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/TrackComplaintViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/dashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/dashboardViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/CalculateCostViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/CalculateCostViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,30 +123,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.Launcher.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "aronno",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;aronno&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="javafx" />
@@ -444,29 +451,29 @@
       <option name="project" value="LOCAL" />
       <updated>1785611563675</updated>
     </task>
-    <task id="LOCAL-00036" summary="saif">
+    <task id="LOCAL-00036" summary="finish work for one more controller(approveOrRejectOrderController) for CateringOperationsManager">
       <option name="closed" value="true" />
-      <created>1785610479748</created>
+      <created>1785618711911</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1785610479748</updated>
+      <updated>1785618711911</updated>
     </task>
-    <task id="LOCAL-00037" summary="saif">
+    <task id="LOCAL-00037" summary="fixed all error for user login">
       <option name="closed" value="true" />
-      <created>1785610625445</created>
+      <created>1785622943597</created>
       <option name="number" value="00037" />
       <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1785610625445</updated>
+      <updated>1785622943597</updated>
     </task>
-    <task id="LOCAL-00038" summary="saif">
+    <task id="LOCAL-00038" summary="fixed all error for user login">
       <option name="closed" value="true" />
-      <created>1785636825548</created>
+      <created>1785645508948</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1785636825548</updated>
+      <updated>1785645508948</updated>
     </task>
     <task id="LOCAL-00039" summary="saif">
       <option name="closed" value="true" />
@@ -501,31 +508,6 @@
       <updated>1785639586273</updated>
     </task>
     <option name="localTasksCounter" value="43" />
-    <task id="LOCAL-00036" summary="finish work for one more controller(approveOrRejectOrderController) for CateringOperationsManager">
-      <option name="closed" value="true" />
-      <created>1785618711911</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1785618711911</updated>
-    </task>
-    <task id="LOCAL-00037" summary="fixed all error for user login">
-      <option name="closed" value="true" />
-      <created>1785622943597</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1785622943597</updated>
-    </task>
-    <task id="LOCAL-00038" summary="fixed all error for user login">
-      <option name="closed" value="true" />
-      <created>1785645508948</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1785645508948</updated>
-    </task>
-    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,10 +547,9 @@
     <MESSAGE value="saif" />
     <MESSAGE value="user 9 and 10 dashBoard" />
     <MESSAGE value="create dashboard non user class" />
-    <option name="LAST_COMMIT_MESSAGE" value="create dashboard non user class" />
     <MESSAGE value="can't find problem if i want to create multiple user the both user is not working." />
     <MESSAGE value="finish work for one more controller(approveOrRejectOrderController) for CateringOperationsManager" />
     <MESSAGE value="fixed all error for user login" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed all error for user login" />
+    <option name="LAST_COMMIT_MESSAGE" value="create dashboard non user class" />
   </component>
 </project>
