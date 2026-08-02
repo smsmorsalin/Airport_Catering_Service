@@ -1,5 +1,7 @@
 package nonuser;
 
+import utility.databaseAccessor;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -8,6 +10,7 @@ import java.util.ArrayList;
 public class CateringOrder implements Serializable {
     private final int orderId;
     private final String FlightId; //FF
+    private final String airlineId;
     private final int airlineRepresentativeId;
     private final LocalDate orderDate;
     private final String deliveryLocation;
@@ -16,9 +19,10 @@ public class CateringOrder implements Serializable {
     private LocalTime deliveryTime;
     private String Status;
     private boolean isDelay;
+    private String orderAcceptOrRejectBy;
 
-    public CateringOrder(int orderId, String flightId,int airlineRepresentativeId, LocalDate orderDate, String deliveryLocation, ArrayList<String> orderItemIds, LocalDate deliveryDate, LocalTime deliveryTime) {
-        this.orderId = orderId;
+    public CateringOrder(String flightId, String airlineId, int airlineRepresentativeId, LocalDate orderDate, String deliveryLocation, ArrayList<String> orderItemIds, LocalDate deliveryDate, LocalTime deliveryTime) {
+        this.orderId = generateOrderId();
         FlightId = flightId;
         this.orderDate = orderDate;
         this.airlineRepresentativeId = airlineRepresentativeId;
@@ -28,6 +32,8 @@ public class CateringOrder implements Serializable {
         this.deliveryTime = deliveryTime;
         Status = "Pending";
         this.isDelay = false;
+        this.airlineId = airlineId;
+        this.orderAcceptOrRejectBy = "N/A";
     }
 
     public int getOrderId() {
@@ -90,11 +96,28 @@ public class CateringOrder implements Serializable {
         isDelay = delay;
     }
 
+    public String getAirlineId() {
+        return airlineId;
+    }
+
+    public String getOrderAcceptOrRejectBy() {
+        return orderAcceptOrRejectBy;
+    }
+
+    public void setOrderAcceptOrRejectBy(String orderAcceptOrRejectBy) {
+        this.orderAcceptOrRejectBy = orderAcceptOrRejectBy;
+    }
+
+    private static int generateOrderId() {
+        return databaseAccessor.generateNewUniqueId("CateringOrder.bin", "orderId");
+    }
+
     @Override
     public String toString() {
         return "CateringOrder{" +
                 "orderId=" + orderId +
                 ", FlightId='" + FlightId + '\'' +
+                ", airlineId='" + airlineId + '\'' +
                 ", airlineRepresentativeId=" + airlineRepresentativeId +
                 ", orderDate=" + orderDate +
                 ", deliveryLocation='" + deliveryLocation + '\'' +
@@ -102,7 +125,8 @@ public class CateringOrder implements Serializable {
                 ", deliveryDate=" + deliveryDate +
                 ", deliveryTime=" + deliveryTime +
                 ", Status='" + Status + '\'' +
-                ", isDelay=" + isDelay +
+                ", isDelay=" + isDelay + '\'' +
+                ", orderAcceptOrRejectBy='" + orderAcceptOrRejectBy + '\'' +
                 '}';
     }
 }

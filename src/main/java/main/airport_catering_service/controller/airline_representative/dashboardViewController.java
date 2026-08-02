@@ -48,7 +48,7 @@ public class dashboardViewController implements UserReceiver {
     @javafx.fxml.FXML
     public void sideBarTrackOrderButton(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/airline_representative/truckOrderView.fxml",
+                actionEvent, "/airline_representative/trackOrderView.fxml",
                 loggedInUser);
     }
 

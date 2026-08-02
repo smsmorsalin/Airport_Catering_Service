@@ -88,12 +88,9 @@ public class cancelOrderViewConroller implements UserReceiver {
             if (object instanceof CateringOrder cateringOrder
                     && cateringOrder.getOrderId() == orderId) {
 
-                // The order exists, but it belongs to another user
-                if (cateringOrder.getAirlineRepresentativeId()
-                        != loggedInUser.getUserId()) {
-
-                    AlertGenerator.showAlert("error", "This order was not created by you.");
-
+                // The order exists, but it belongs to another airline
+                if (!cateringOrder.getAirlineId().equals(loggedInUser.getAirlineId())) {
+                    AlertGenerator.showAlert("error", "This order not belong to your airline.");
                     fxidHiddenAnochorPanel.setVisible(false);
                     return;
                 }

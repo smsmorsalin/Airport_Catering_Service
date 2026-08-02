@@ -71,7 +71,7 @@ public class ResolveComplaintViewController
 
     @javafx.fxml.FXML
     public void sidebarRegisterComplaintButtonOnAction(ActionEvent actionEvent)throws IOException {
-        CustomerSupportOfficer.viewResisterComplaint(actionEvent);
+        CustomerSupportOfficer.viewRegisterComplaint(actionEvent);
     }
 
     @javafx.fxml.FXML

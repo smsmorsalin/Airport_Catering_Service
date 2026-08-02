@@ -3,7 +3,6 @@ package main.airport_catering_service.controller.customer_support_officer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import user.CustomerSupportOfficer;
 
@@ -78,7 +77,7 @@ public class TrackComplaintViewController
 
     @javafx.fxml.FXML
     public void sidebarRegisterComplaintButtonOnAction(ActionEvent actionEvent) throws IOException{
-        CustomerSupportOfficer.viewResisterComplaint(actionEvent);
+        CustomerSupportOfficer.viewRegisterComplaint(actionEvent);
     }
 
     @javafx.fxml.FXML
