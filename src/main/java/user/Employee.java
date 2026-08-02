@@ -81,7 +81,7 @@ public abstract class Employee extends User implements Serializable {
         //code
     }
 
-    public static final int generateEmployeeId(){
+    private static final int generateEmployeeId(){
         ArrayList<Object> objects = BinaryFileUtility.readObjects("User.bin");
 
         int maximumId = 0;
