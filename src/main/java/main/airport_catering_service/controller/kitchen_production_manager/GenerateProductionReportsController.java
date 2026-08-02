@@ -1,9 +1,16 @@
 package main.airport_catering_service.controller.kitchen_production_manager;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import user.KitchenProductionManager;
+import utility.AlertGenerator;
+
+import java.io.IOException;
+import java.time.LocalDate;
+
 
 public class GenerateProductionReportsController
 {
@@ -26,49 +33,67 @@ public class GenerateProductionReportsController
 
     @javafx.fxml.FXML
     public void initialize() {
+        reportTypeComboBox.getItems().addAll( "Daily", "Weekly", "Monthly", "Inspection", "Approval", "Rejection", "Compliance", "Quality Trend");
+
     }
 
-    @javafx.fxml.FXML
-    public void sideBarmanageMealPreparationOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @Deprecated
     public void clearOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void sideBarHandleRejectedBatchOnAction(ActionEvent actionEvent) {
+    @FXML
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
-    @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) {
+    @FXML
+    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void sideBarRequestQualityInspectionOnAction(ActionEvent actionEvent) {
+    @FXML
+    public void sideBarApproveProductionOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void sideBarUpdateProductionStatusOnAction(ActionEvent actionEvent) {
+    @FXML
+    public void sideBarProductionPlanOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void sideBarMonitorCookingProgressOnAction(ActionEvent actionEvent) {
+    @FXML
+    public void sideBarMonitorProductionOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void sideBarViewProductionTasksOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarassignKitchenStaffOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @FXML
     public void confirmOnAction(ActionEvent actionEvent) {
+        if(startDatePicker.getValue() == null || endDatePicker.getValue() ==null){
+            AlertGenerator.showAlert("Invalid Input","Date must in selected");
+            return;
+        }
+        if(startDatePicker.getValue().isAfter(endDatePicker.getValue())){
+            AlertGenerator.showAlert("Invalid Input","Start Date should be before end date");
+            return;
+        }
+        if(endDatePicker.getValue().isAfter(LocalDate.now())){
+            AlertGenerator.showAlert("Invaid Input","End date can not be present date");
+            return;
+        }
+        if(reportTypeComboBox.getItems()==null){
+            AlertGenerator.showAlert("Wrong Input","Combo Box must be selected ");
+        }
     }
 
-    @javafx.fxml.FXML
+    @FXML
+    public void sideBarProductionScheduleOA(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void sideBarCalculateIngredientIOA(ActionEvent actionEvent) {
+    }
+
+    @FXML
     public void eportPDFOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void sideBarMenuListOA(ActionEvent actionEvent) {
     }
 }

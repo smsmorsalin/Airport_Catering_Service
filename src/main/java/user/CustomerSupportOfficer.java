@@ -9,12 +9,13 @@ import javafx.stage.Stage;
 import javax.imageio.IIOException;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class CustomerSupportOfficer extends Employee{
+public class CustomerSupportOfficer extends Employee implements Serializable {
 
-    public CustomerSupportOfficer(int userId, String password, String fullName, String dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, String shift, float salary) {
-        super(userId, password, fullName, dateOfBirth, gender, email, phone, address, status, employeeId, joinDate, department, designation, shift, salary);
+    public CustomerSupportOfficer(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, LocalDate joinDate, String department, String designation, float salary) {
+        super(password, fullName, role, dateOfBirth, gender, email, phone, address, status, joinDate, department, designation, salary);
     }
 
     @Override
@@ -24,7 +25,6 @@ public class CustomerSupportOfficer extends Employee{
                 ", department='" + department + '\'' +
                 ", designation='" + designation + '\'' +
                 ", joinDate=" + joinDate +
-                ", shift='" + shift + '\'' +
                 ", salary=" + salary +
                 ", userId=" + userId +
                 ", fullName='" + fullName + '\'' +

@@ -3,6 +3,11 @@ package main.airport_catering_service.controller.food_quality_control_officer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import user.FoodQualityControlOfficer;
+import utility.AlertGenerator;
+
+import java.io.IOException;
+import java.time.LocalDate;
 
 public class QualityTrendAnalysisController
 {
@@ -26,8 +31,23 @@ public class QualityTrendAnalysisController
     }
 
     @javafx.fxml.FXML
-    public void clearOnAction(ActionEvent actionEvent) {
+    public void analyzeTrendsOnAction(ActionEvent actionEvent) {
+        if (startDatePicker.getValue() == null || endDatePicker
+                .getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date picker should be selected");
+            return;
+        }
+        if (startDatePicker.getValue().isAfter(endDatePicker.getValue())){
+            AlertGenerator.showAlert("Invalid Input","Start Date should not be after End Date");
+            return;
+        }
+        if(endDatePicker.getValue().isAfter(LocalDate.now())){
+            AlertGenerator.showAlert("Wrong Input","End Date should not be present date");
+            return;
+        }
     }
+
+
 
     @javafx.fxml.FXML
     public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
@@ -41,16 +61,15 @@ public class QualityTrendAnalysisController
     public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void analyzeTrendsOnAction(ActionEvent actionEvent) {
-    }
+
 
     @javafx.fxml.FXML
     public void sideBarPerformInspectionOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) {
+    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws IOException {
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML

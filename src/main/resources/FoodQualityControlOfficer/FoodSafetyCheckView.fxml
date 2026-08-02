@@ -64,10 +64,6 @@
                      </font></Label>
                   <TextField fx:id="batchNumberTextField" layoutX="142.0" layoutY="68.0" />
                   <TextField fx:id="storageTemperatureTextField" layoutX="142.0" layoutY="105.0" />
-                  <Button layoutX="23.0" layoutY="160.0" mnemonicParsing="false" onAction="#searchOnAction" style="-fx-background-color: royalBlue;" text="Search Batch " textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="12.0" />
-                     </font></Button>
                   <AnchorPane layoutX="70.0" layoutY="229.0" prefHeight="166.0" prefWidth="383.0" style="-fx-background-color: royalBlue;">
                      <children>
                         <Label fx:id="fxidDisplayComplianceIdLabel" layoutX="13.0" layoutY="26.0" prefHeight="17.0" prefWidth="248.0" text="Compliance ID : " textFill="WHITE">
@@ -93,12 +89,7 @@
                         <Font name="Arial Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Button layoutX="379.0" layoutY="159.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="77.0" text="Clear">
-                     <font>
-                        <Font name="System Bold Italic" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="212.0" layoutY="159.0" mnemonicParsing="false" onAction="#evaluateOnAction" style="-fx-background-color: limeGreen;" text="Evaluate " textFill="WHITE">
+                  <Button layoutX="194.0" layoutY="163.0" mnemonicParsing="false" onAction="#evaluateOnAction" style="-fx-background-color: limeGreen;" text="Evaluate " textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>

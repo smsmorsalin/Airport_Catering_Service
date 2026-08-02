@@ -1,25 +1,20 @@
 package main.airport_catering_service.controller.kitchen_production_manager;
 
+
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
-import main.airport_catering_service.HelloApplication;
-import user.KitchenProductionManager;
+import nonuser.DashBoard;
 import user.User;
+import user.KitchenProductionManager;
+import utility.AlertGenerator;
 
 import java.io.IOException;
-import java.io.IOException;
-import java.io.IOException;
 
-
-import java.io.IOException;
 
 public class dashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn descriptionTableView;
+    private TableColumn<String,DashBoard>descriptionTableView;
     @javafx.fxml.FXML
     private Label enterTicketIDTextField;
     @javafx.fxml.FXML
@@ -27,28 +22,59 @@ public class dashboardController
     @javafx.fxml.FXML
     private Label emargencyIssueLabel;
     @javafx.fxml.FXML
-    private TableColumn ticketIDTableColumn;
+    private TableColumn<Integer,DashBoard> ticketIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn statusTableView;
+    private TableColumn<String,DashBoard> statusTableView;
     @javafx.fxml.FXML
     private ComboBox<String> statusComboBox;
     @javafx.fxml.FXML
-    private TableView mainTableView;
+    private TableView<DashBoard> mainTableView;
     @javafx.fxml.FXML
-    private TableColumn issueTypeTableView;
+    private TableColumn<Boolean,DashBoard> issueTypeTableView;
 
 
 
     @javafx.fxml.FXML
     public void initialize() {
+        statusComboBox.getItems().addAll("Pending","Processing","Completed");
+    }
+
+
+    @javafx.fxml.FXML
+    public void updateOnAction(ActionEvent actionEvent) {
+        mainTableView.getItems().clear();
+
+        if(statusComboBox.getValue() == null){
+            AlertGenerator.showAlert("Invalid Input","ComboBox items should be selected");
+            return;
+        }
+        if(enterTicketIDTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Ticket Id should be filled");
+            return;
+        }
+        int ticketId;
+        try{
+            ticketId = Integer.parseInt(enterTicketIDTextField.getText());
+        }catch (Exception e){
+            AlertGenerator.showAlert("Invalid Input","Ticket Id should be only Integer");
+            return;
+        }
+        if(ticketId <= 0){
+            AlertGenerator.showAlert("Invalid Input","Ticker Id should not be grater than 0");
+            return;
+        }
     }
 
     @javafx.fxml.FXML
-    public void sideBarMonitorProductionOnAction(ActionEvent actionEvent) {
+    public void sideBarMonitorProductionOnAction(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewMonitorProductionActivities(actionEvent);
+
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionScheduleOnAction(ActionEvent actionEvent) {
+    public void sideBarProductionScheduleOnAction(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.ViewCreateProductionSchedule(actionEvent);
+
     }
 
     @javafx.fxml.FXML
@@ -59,32 +85,36 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void sideBarReceiveOrdersOnAction(ActionEvent actionEvent) {
+    public void sideBarReceiveOrdersOnAction(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent);
     }
 
     @javafx.fxml.FXML
     public void sideBarApproveProductionOnAction(ActionEvent actionEvent) throws IOException {
-//        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
+        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
+
     }
 
     @javafx.fxml.FXML
-    public void sideBarCalculateIngredientOnAction(ActionEvent actionEvent) {
+    public void sideBarCalculateIngredientOnAction(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent) {
+    public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent)throws  IOException {
+        KitchenProductionManager.reverseDashboard(actionEvent);
+    }
+
+
+
+    @javafx.fxml.FXML
+    public void sideBarProductionReportsOnAction(ActionEvent actionEvent)throws  IOException {
+        KitchenProductionManager.viewGenerateProductionReports(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void updateOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarProductionReportsOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarProductionPlanOnAction(ActionEvent actionEvent) {
+    public void sideBarProductionPlanOnAction(ActionEvent actionEvent) throws  IOException{
+        KitchenProductionManager.viewCreateProductionPlan(actionEvent);
     }
 
     @javafx.fxml.FXML

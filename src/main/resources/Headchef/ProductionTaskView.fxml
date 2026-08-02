@@ -1,81 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
-    <children>
-        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
-            <children>
-                <Button fx:id="searchButton" mnemonicParsing="false" onAction="#onSearch" prefHeight="42.0" prefWidth="174.0" text="Search " textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="viewDetailsButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onViewDetails" prefHeight="42.0" prefWidth="174.0" text="View details " textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="clearButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClear" prefHeight="42.0" prefWidth="174.0" text="Clear" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" prefHeight="42.0" prefWidth="174.0" text="Back" textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="logoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="42.0" prefWidth="174.0" text="Log out " textOverrun="CENTER_ELLIPSIS" />
-                <Button fx:id="refreshButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onRefresh" prefHeight="42.0" prefWidth="174.0" text="Refresh" textOverrun="CENTER_ELLIPSIS" />
-            </children>
+<BorderPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.headchef.ViewProductionTasksController">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="12" style="-fx-background-color:#34495E;">
+
+            <padding>
+                <Insets bottom="20" left="30" right="30" top="20" />
+            </padding>
+
+            <Label text="🍽 Head Chef Dashboard">
+                <font>
+                    <Font size="30" />
+                </font>
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+            </Label>
+
+            <Label text="View and manage assigned production tasks">
+                <style>
+                    -fx-text-fill:#ECF0F1;
+                    -fx-font-size:15;
+                </style>
+            </Label>
+
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
-            <font>
-                <Font name="Arial Bold" size="13.0" />
-            </font>
-            <effect>
-                <Lighting>
-                    <bumpInput>
-                        <Shadow />
-                    </bumpInput>
-                    <light>
-                        <Light.Distant>
-                            <color>
-                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
-                            </color>
-                        </Light.Distant>
-                    </light>
-                </Lighting>
-            </effect>
-            <cursor>
-                <Cursor fx:constant="HAND" />
-            </cursor>
-        </Button>
-        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
-            <children>
-                <Label alignment="CENTER" prefHeight="17.0" prefWidth="609.0" text="welcome Username">
-                    <font>
-                        <Font name="Gabriola" size="18.0" />
-                    </font>
-                </Label>
-                <AnchorPane prefHeight="566.0" prefWidth="596.0">
-               <children>
-                  <TextField fx:id="productionTaskIdTextField" layoutX="123.0" layoutY="31.0" />
-                  <TextField fx:id="orderIdTextField" layoutX="410.0" layoutY="30.0" />
-                  <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Production task ID:" />
-                  <Text layoutX="346.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID:" />
-                  <TableView fx:id="productionTaskTableView" layoutX="-4.0" layoutY="205.0" prefHeight="360.0" prefWidth="596.0">
-                    <columns>
-                      <TableColumn fx:id="taskIdColumn" prefWidth="68.0" text="Task ID" />
-                      <TableColumn fx:id="orderIdColumn" prefWidth="82.0" text="Order ID" />
-                        <TableColumn fx:id="airlinenameColumn" prefWidth="90.0" text="Airline Name" />
-                        <TableColumn fx:id="flightnumberColumn" prefWidth="87.0" text="Fliight Number" />
-                        <TableColumn fx:id="mealtypeColumn" prefWidth="89.0" text="Meal Type" />
-                        <TableColumn fx:id="quantityColumn" prefWidth="73.0" text="Quantity " />
-                        <TableColumn fx:id="statusColumn" prefWidth="106.0" text="Completion Time" />
-                    </columns>
-                  </TableView>
-               </children></AnchorPane>
-            </children></VBox>
-        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
-    </children>
-</AnchorPane>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="20">
+
+            <padding>
+                <Insets bottom="20" left="25" right="25" top="20" />
+            </padding>
+
+            <!-- SEARCH CARD -->
+
+            <TitledPane collapsible="false" expanded="true" text="Search Production Task">
+
+                <content>
+
+                    <GridPane hgap="18" vgap="18">
+
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+
+                        <Label text="Production Task ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+                        <TextField fx:id="productionTaskIdField" prefWidth="220" promptText="Enter Task ID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Label text="Order ID (Optional):" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+                        <Button fx:id="searchButton" onAction="#searchTask" prefHeight="35" prefWidth="120" style="-fx-background-color:#2E86DE;-fx-text-fill:white;-fx-font-weight:bold;" text="🔍 Search" GridPane.columnIndex="5" />
+
+                        <Button fx:id="clearButton" onAction="#clearFields" prefHeight="35" prefWidth="100" style="-fx-background-color:#95A5A6;-fx-text-fill:white;" text="Clear" GridPane.columnIndex="6" />
+                  <TextField fx:id="orderIdField" GridPane.columnIndex="3" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- TABLE -->
+
+            <TitledPane collapsible="false" expanded="true" text="Production Task Details" VBox.vgrow="ALWAYS">
+
+                <content>
+
+                    <TableView fx:id="productionTaskTable" prefHeight="500">
+
+                        <columns>
+
+                            <TableColumn fx:id="taskIdColumn" prefWidth="120" text="Task ID" />
+
+                            <TableColumn fx:id="orderIdColumn" prefWidth="110" text="Order ID" />
+
+                            <TableColumn fx:id="airlineColumn" prefWidth="170" text="Airline Name" />
+
+                            <TableColumn fx:id="flightColumn" prefWidth="150" text="Flight Number" />
+
+                            <TableColumn fx:id="mealTypeColumn" prefWidth="220" text="Meal Types" />
+
+                            <TableColumn fx:id="mealQuantityColumn" prefWidth="120" text="Meal Quantity" />
+
+                            <TableColumn fx:id="completionTimeColumn" prefWidth="180" text="Completion Time" />
+
+                            <TableColumn fx:id="priorityColumn" prefWidth="120" text="Priority" />
+
+                        </columns>
+
+                    </TableView>
+
+                </content>
+
+            </TitledPane>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER_RIGHT" spacing="15" style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets bottom="15" left="25" right="25" top="15" />
+            </padding>
+
+            <Button fx:id="refreshButton" onAction="#refreshTable" prefHeight="35" prefWidth="120" style="-fx-background-color:#27AE60;-fx-text-fill:white;-fx-font-weight:bold;" text="Refresh" />
+
+            <Button fx:id="backButton" onAction="#goBack" prefHeight="35" prefWidth="120" style="-fx-background-color:#E74C3C;-fx-text-fill:white;-fx-font-weight:bold;" text="Back" />
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

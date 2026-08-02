@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="850" prefWidth="1300" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.headchef.KitchenPerformanceReportController">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8" style="-fx-background-color: linear-gradient(to right,#1B4F72,#21618C);">
+
+            <padding>
+                <Insets bottom="20" left="25" right="25" top="20" />
+            </padding>
+
+            <Label text="📊 Kitchen Performance Report">
+
+                <font>
+                    <Font size="30" />
+                </font>
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+
+            </Label>
+
+            <Label text="Monitor kitchen productivity and production performance">
+
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-size:15;
+                </style>
+
+            </Label>
+
+        </VBox>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="18">
+
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+
+            <!-- FILTER -->
+
+            <TitledPane collapsible="false" expanded="true" text="Report Filters">
+
+                <content>
+
+                    <GridPane hgap="20" vgap="15">
+
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+
+                        <Label text="From Date" />
+
+                        <DatePicker fx:id="fromDatePicker" GridPane.columnIndex="1" />
+
+                        <Label text="To Date" GridPane.columnIndex="2" />
+
+                        <DatePicker fx:id="toDatePicker" GridPane.columnIndex="3" />
+
+                        <Button fx:id="generateReportButton" onAction="#generateReport" prefWidth="160" style="-fx-background-color:#27AE60;-fx-text-fill:white;-fx-font-weight:bold;" text="Generate Report" GridPane.columnIndex="4" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- SUMMARY -->
+
+            <TitledPane collapsible="false" expanded="true" text="Kitchen Summary">
+
+                <content>
+
+                    <GridPane hgap="30" vgap="18">
+
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+
+                        <Label text="Total Production Tasks" />
+                        <Label fx:id="totalTasksLabel" text="0" GridPane.columnIndex="1" />
+
+                        <Label text="Meals Prepared" GridPane.columnIndex="2" />
+                        <Label fx:id="mealsPreparedLabel" text="0" GridPane.columnIndex="3" />
+
+                        <Label text="Completed Tasks" GridPane.rowIndex="1" />
+                        <Label fx:id="completedTasksLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label text="Pending Tasks" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="pendingTasksLabel" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                        <Label text="Rejected Batches" GridPane.rowIndex="2" />
+                        <Label fx:id="rejectedBatchLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <Label text="Production Efficiency" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <ProgressBar fx:id="efficiencyProgressBar" prefWidth="250" progress="0.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- REPORT TABLE -->
+
+            <TitledPane collapsible="false" expanded="true" text="Performance Details" VBox.vgrow="ALWAYS">
+
+                <content>
+
+                    <TableView fx:id="reportTable">
+
+                        <columns>
+
+                            <TableColumn fx:id="taskIdColumn" prefWidth="120" text="Task ID" />
+
+                            <TableColumn fx:id="mealCategoryColumn" prefWidth="180" text="Meal Category" />
+
+                            <TableColumn fx:id="teamColumn" prefWidth="180" text="Kitchen Team" />
+
+                            <TableColumn fx:id="preparedMealsColumn" prefWidth="150" text="Meals Prepared" />
+
+                            <TableColumn fx:id="completionColumn" prefWidth="140" text="Completion %" />
+
+                            <TableColumn fx:id="statusColumn" prefWidth="150" text="Status" />
+
+                            <TableColumn fx:id="productionTimeColumn" prefWidth="180" text="Production Time" />
+
+                            <TableColumn fx:id="remarksColumn" prefWidth="250" text="Remarks" />
+
+                        </columns>
+
+                    </TableView>
+
+                </content>
+
+            </TitledPane>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER_RIGHT" spacing="15" style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets bottom="15" left="20" right="20" top="15" />
+            </padding>
+
+            <Button fx:id="exportPdfButton" onAction="#exportPDF" prefWidth="140" style="-fx-background-color:#8E44AD;-fx-text-fill:white;-fx-font-weight:bold;" text="Export PDF" />
+
+            <Button fx:id="printButton" onAction="#printReport" prefWidth="140" style="-fx-background-color:#2980B9;-fx-text-fill:white;-fx-font-weight:bold;" text="Print Report" />
+
+            <Button fx:id="refreshButton" onAction="#refreshReport" prefWidth="120" style="-fx-background-color:#16A085;-fx-text-fill:white;-fx-font-weight:bold;" text="Refresh" />
+
+            <Button fx:id="backButton" onAction="#goBack" prefWidth="120" style="-fx-background-color:#E74C3C;-fx-text-fill:white;-fx-font-weight:bold;" text="Back" />
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

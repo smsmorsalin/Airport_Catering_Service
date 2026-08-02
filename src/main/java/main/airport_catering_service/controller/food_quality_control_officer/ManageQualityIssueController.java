@@ -1,13 +1,18 @@
 package main.airport_catering_service.controller.food_quality_control_officer;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ComboBox;
+import user.FoodQualityControlOfficer;
+import utility.AlertGenerator;
 
-import java.awt.*;
+import java.io.IOException;
 
 public class ManageQualityIssueController
 {
-    @javafx.fxml.FXML
-    private TextArea correctiveActionTextArea;
     @javafx.fxml.FXML
     private TextArea followUpNotesTextArea;
     @javafx.fxml.FXML
@@ -21,12 +26,29 @@ public class ManageQualityIssueController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void clearOnAction(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void searchOnAction(ActionEvent actionEvent) {
+        if (issueIDTextField.getText().trim().isEmpty() || followUpNotesTextArea.getText().isEmpty()){
+            AlertGenerator.showAlert("Wrong Input", "TextFiled and Text Area should be filled");
+            return;
+        }
+        int issueId;
+        try{
+            issueId = Integer.parseInt(issueIDTextField.getText());
+        }catch (Exception e){
+            AlertGenerator.showAlert("Invalid Input","Issue Id should be an Integer");
+            return;
+        }
+        if(issueId <= 0){
+            AlertGenerator.showAlert("Invalid Input","Issue Id should be grater than 0");
+            return;
+        }
+        if (followUpNotesTextArea.getText().matches("\\d+")){
+            AlertGenerator.showAlert("Invalid Input","Follow up notes should be done with character not Numbers");
+            return;
+        }
+
     }
 
     @javafx.fxml.FXML
@@ -50,7 +72,8 @@ public class ManageQualityIssueController
     }
 
     @javafx.fxml.FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) {
+    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws IOException {
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -61,7 +84,4 @@ public class ManageQualityIssueController
     public void sideBarApproveBatchOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void saveOnAction(ActionEvent actionEvent) {
-    }
 }

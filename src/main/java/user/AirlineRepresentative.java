@@ -1,79 +1,89 @@
-package user;
+package nonuser;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import utility.SceneSwitchingHelper;
-
-import java.io.IOException;
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.UUID;
 
-public class AirlineRepresentative extends Employee {
+public class DeliveryConfirmation implements Serializable {
+    private final String confirmationId;
+    private int orderId;
+    private String receiverName;
+    private String confirmedBy;
+    private LocalDate confirmationTime;
+    private String clientSignature;
+    private boolean confirmed;
 
-    public AirlineRepresentative(int userId, String password, String fullName, String dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, String shift, float salary) {
-        super(userId, password, fullName, dateOfBirth, gender, email, phone, address, status, employeeId, joinDate, department, designation, shift, salary);
+    // orderId: the CateringOrder being confirmed
+    // receiverName: name of the person who received the delivery (client)
+    // confirmedBy: how it was confirmed, e.g. "sms", "call", "in-person"
+    // confirmationTime: date the confirmation was made
+    public DeliveryConfirmation(int orderId, String receiverName, String confirmedBy, LocalDate confirmationTime) {
+        this.confirmationId = UUID.randomUUID().toString();
+        this.orderId = orderId;
+        this.receiverName = receiverName;
+        this.confirmedBy = confirmedBy;
+        this.confirmationTime = confirmationTime;
+        this.confirmed = true;
+    }
+
+    public String getConfirmationId() {
+        return confirmationId;
+    }
+
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getReceiverName() {
+        return receiverName;
+    }
+
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
+    }
+
+    public String getConfirmedBy() {
+        return confirmedBy;
+    }
+
+    public void setConfirmedBy(String confirmedBy) {
+        this.confirmedBy = confirmedBy;
+    }
+
+    public LocalDate getConfirmationTime() {
+        return confirmationTime;
+    }
+
+    public void setConfirmationTime(LocalDate confirmationTime) {
+        this.confirmationTime = confirmationTime;
+    }
+
+    public String getClientSignature() {
+        return clientSignature;
+    }
+
+    public void setClientSignature(String clientSignature) {
+        this.clientSignature = clientSignature;
+    }
+
+    public boolean isConfirmed() {
+        return confirmed;
     }
 
     @Override
-    public void viewDashboard(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/AirlineRepresentative/dashboardView.fxml"));
-
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public String toString() {
+        return "DeliveryConfirmation{" +
+                "confirmationId='" + confirmationId + '\'' +
+                ", orderId=" + orderId +
+                ", receiverName='" + receiverName + '\'' +
+                ", confirmedBy='" + confirmedBy + '\'' +
+                ", confirmationTime=" + confirmationTime +
+                ", clientSignature='" + clientSignature + '\'' +
+                ", confirmed=" + confirmed +
+                '}';
     }
-
-    @Override
-    public boolean updateProfile(){
-        return false;
-    }
-
-
-    // Bellow are the code for fxml sideBar rendering button on action
-    public static void renderFxmlDashboard(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(AirlineRepresentative.class.getResource("/AirlineRepresentative/dashboardView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public static void renderFxmlCreateCateringOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/createCateringOrderView.fxml");
-    }
-
-    public static void renderFxmlModifyOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/modifyOrderView.fxml");
-    }
-
-    public static void renderFxmlCancelOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/cancelOrderView.fxml");
-    }
-
-    public static void renderFxmlFlightDelay(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/flightDelayView.fxml");
-    }
-
-    public static void renderFxmlTruckOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/truckOrderView.fxml");
-    }
-
-    public static void renderFxmlConfirmDelivery(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/confirmDeliveryView.fxml");
-    }
-
-    public static void renderFxmlPayBill(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/payBillView.fxml");
-    }
-
-    public static void renderFxmlOrderHistory(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/AirlineRepresentative/orderHistoryView.fxml");
-    }
-
 }

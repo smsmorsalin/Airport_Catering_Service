@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.kitchen_production_manager.MonitorProductionActivitiesController">
+    <children>
+        <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#sideBarReceiveOrdersOA" prefHeight="42.0" prefWidth="174.0" text="Receive Orders" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarCalculateIngredientOA" prefHeight="42.0" prefWidth="174.0" text="Calculate Ingredient" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#SideBarProductionPlanOA" prefHeight="42.0" prefWidth="174.0" text="Production Plan" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionScheduleOA" prefHeight="42.0" prefWidth="174.0" text="Production Schedule" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMenuListOA" prefHeight="42.0" prefWidth="174.0" text="Menu List" textOverrun="CENTER_ELLIPSIS" />
+                <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: blue;" text="Monitor Production" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarApproveProductionOA" prefHeight="42.0" prefWidth="174.0" text="Approve Production" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarProductionReportsOA" prefHeight="42.0" prefWidth="174.0" text="Production Reports" textOverrun="CENTER_ELLIPSIS" />
+            </children>
+        </VBox>
+        <Button layoutY="3.0" mnemonicParsing="false" onAction="#sidebarAirportCateringServiceButtonOnClick" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+            <font>
+                <Font name="Arial Bold" size="13.0" />
+            </font>
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant>
+                            <color>
+                                <Color red="1.0" green="0.03703703731298447" blue="0.9197530746459961" />
+                            </color>
+                        </Light.Distant>
+                    </light>
+                </Lighting>
+            </effect>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <VBox layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
+            <children>
+                <AnchorPane prefHeight="664.0" prefWidth="596.0" style="-fx-background-color: darkBlue;">
+               <children>
+                  <Label layoutX="30.0" layoutY="55.0" prefHeight="17.0" prefWidth="129.0" text="Production Order ID" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Label>
+                  <Button layoutX="404.0" layoutY="52.0" mnemonicParsing="false" onAction="#searchOnAction" style="-fx-background-color: royalBlue;" text="Search " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font></Button>
+                  <TextField fx:id="productionOrderIDTextField" layoutX="175.0" layoutY="51.0" />
+                  <TableView fx:id="mainTableView" layoutX="50.0" layoutY="98.0" prefHeight="237.0" prefWidth="487.0">
+                    <columns>
+                      <TableColumn fx:id="productionOrderIDTableView" prefWidth="132.6667022705078" text="Production Order ID" />
+                      <TableColumn fx:id="ProductionStatusTableView" prefWidth="116.0" text="Production Status" />
+                        <TableColumn fx:id="completionPercentageTableView" prefWidth="152.00003051757812" text="Completion Percentage" />
+                        <TableColumn fx:id="delayAlertTableView1" prefWidth="84.6666259765625" text="Delay Alert" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="productionOrderIDTextField1" layoutX="120.0" layoutY="14.0" prefHeight="21.0" prefWidth="273.0" text="Monitor Production Activities" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="66.0" layoutY="352.0" prefHeight="189.0" prefWidth="455.0" style="-fx-background-color: royalBlue;">
+                     <children>
+                        <Label fx:id="fxidDisplayAirlineNameLabel" layoutX="21.0" layoutY="13.0" prefHeight="17.0" prefWidth="96.0" text="Airline Name" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fxidDisplayAssignedChefLabel" layoutX="21.0" layoutY="41.0" prefHeight="17.0" prefWidth="123.0" text="Assigned Chef" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fxidDisplayTotalQuantityLabel" layoutX="21.0" layoutY="72.0" prefHeight="17.0" prefWidth="149.0" text="Total Quantity" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fxidDisplayCompletedQuantityLabel" layoutX="21.0" layoutY="105.0" prefHeight="17.0" prefWidth="149.0" text="Completed Quantity" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fxidDisplayRemainingQuantityLabel" layoutX="21.0" layoutY="134.0" prefHeight="17.0" prefWidth="149.0" text="Remaining Quantity" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            </children></VBox>
+        <Line endX="67.0" layoutX="108.0" layoutY="42.0" startX="-108.0" />
+    </children>
+</AnchorPane>

@@ -1,24 +1,27 @@
 package user;
 
+import utility.BinaryFileUtility;
+import utility.databaseAccessor;
+
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Random;
 
-public abstract class Employee extends User {
+public abstract class Employee extends User implements Serializable {
 
     protected final int employeeId;
     protected String department;
     protected String designation;
     protected final LocalDate joinDate;
-    protected String shift;
     protected float salary;
 
-    public Employee(int userId, String password, String fullName, String dateOfBirth, String gender, String email, String phone, String address, String status, int employeeId, LocalDate joinDate, String department, String designation, String shift, float salary) {
-        super(userId, password, fullName, dateOfBirth, gender, email, phone, address, status);
-        this.employeeId = employeeId;
+    public Employee(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, LocalDate joinDate, String department, String designation, float salary) {
+        super(password, fullName, role, dateOfBirth, gender, email, phone, address, status);
+        this.employeeId = generateEmployeeId();
         this.joinDate = joinDate;
         this.department = department;
         this.designation = designation;
-        this.shift = shift;
         this.salary = salary;
     }
 
@@ -46,14 +49,6 @@ public abstract class Employee extends User {
         return joinDate;
     }
 
-    public String getShift() {
-        return shift;
-    }
-
-    public void setShift(String shift) {
-        this.shift = shift;
-    }
-
     public float getSalary() {
         return salary;
     }
@@ -69,7 +64,6 @@ public abstract class Employee extends User {
                 ", department='" + department + '\'' +
                 ", designation='" + designation + '\'' +
                 ", joinDate=" + joinDate +
-                ", shift='" + shift + '\'' +
                 ", salary=" + salary +
                 ", userId=" + userId +
                 ", fullName='" + fullName + '\'' +
@@ -88,15 +82,22 @@ public abstract class Employee extends User {
     }
 
     public static final int generateEmployeeId(){
-        boolean tempUniqueIdCheck = false;
-        int tempId;
-        Random rand = new Random();
-        do {
-            tempId = rand.nextInt();
-//            tempUniqueIdCheck = databaseAccessor.verifyUnique(tempId, "Employee.bin", "employeeId");
-//            for Now as a testing purpose: tempId = unique id without verify
-        }while(!tempUniqueIdCheck);
-        return tempId;
+        ArrayList<Object> objects = BinaryFileUtility.readObjects("User.bin");
+
+        int maximumId = 0;
+
+        if (objects == null || objects.isEmpty()) {
+            return 1001;   // Starting Employee ID
+        }
+
+        for (Object object : objects) {
+            if (object instanceof Employee employee) {
+                if (employee.getEmployeeId() > maximumId) {
+                    maximumId = employee.getEmployeeId();
+                }
+            }
+        }
+        return maximumId == 0 ? 1001 : maximumId + 1;
     }
 
 

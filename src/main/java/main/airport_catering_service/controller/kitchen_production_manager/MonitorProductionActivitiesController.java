@@ -1,19 +1,29 @@
 package main.airport_catering_service.controller.kitchen_production_manager;
 
+import javafx.scene.Node;
+import javafx.scene.Parent;
+
+import java.io.IOException;
+import java.net.URL;
+
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import nonuser.ProductionActivities;
+import user.KitchenProductionManager;
+import utility.AlertGenerator;
 
 public class MonitorProductionActivitiesController
 {
     @javafx.fxml.FXML
     private Label fxidDisplayCompletedQuantityLabel;
     @javafx.fxml.FXML
-    private TableColumn ProductionStatusTableView;
+    private TableColumn<ProductionActivities,String> ProductionStatusTableView;
     @javafx.fxml.FXML
-    private TableColumn completionPercentageTableView;
+    private TableColumn<ProductionActivities,Float> completionPercentageTableView;
     @javafx.fxml.FXML
     private Label productionOrderIDTextField1;
     @javafx.fxml.FXML
@@ -21,7 +31,7 @@ public class MonitorProductionActivitiesController
     @javafx.fxml.FXML
     private Label fxidDisplayAssignedChefLabel;
     @javafx.fxml.FXML
-    private TableColumn delayAlertTableView1;
+    private TableColumn<ProductionActivities,String> delayAlertTableView1;
     @javafx.fxml.FXML
     private TextField productionOrderIDTextField;
     @javafx.fxml.FXML
@@ -29,55 +39,92 @@ public class MonitorProductionActivitiesController
     @javafx.fxml.FXML
     private Label fxidDisplayRemainingQuantityLabel;
     @javafx.fxml.FXML
-    private TableView mainTableView;
+    private TableView<ProductionActivities> mainTableView;
     @javafx.fxml.FXML
-    private TableColumn productionOrderIDTableView;
+    private TableColumn<ProductionActivities,Integer> productionOrderIDTableView;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void clearOnAction(ActionEvent actionEvent) {
+        productionOrderIDTableView.setCellValueFactory(new PropertyValueFactory<>(""));
+        ProductionStatusTableView.setCellValueFactory(new PropertyValueFactory<>(""));
+        completionPercentageTableView.setCellValueFactory(new PropertyValueFactory<>(""));
+        delayAlertTableView1.setCellValueFactory(new PropertyValueFactory<>(""));
     }
 
     @javafx.fxml.FXML
     public void searchOnAction(ActionEvent actionEvent) {
+        if(productionOrderIDTextField.getText() == null || productionOrderIDTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","ID should be filled");
+            return;
+        }
+        int productionID;
+        try {
+           productionID = Integer.parseInt(productionOrderIDTextField.getText().trim());
+        }catch (Exception e){
+            AlertGenerator.showAlert("Invalid Input","Id should be filled with Integer");
+            return;
+        }
+        if(productionID <= 0){
+            AlertGenerator.showAlert("Invalid Input","Id should be grater than 0");
+            return;
+        }
+
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarHandleRejectedBatchOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) {
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarManageMealPreparationOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarUpdateProductionStatusOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarMonitorCookingProgressOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarViewProductionTasksOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void sideBarassignKitchenStaffOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void refreshOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarKitchenPerformanceReportOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void SideBarProductionPlanOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarProductionReportsOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarApproveProductionOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarCalculateIngredientOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarProductionScheduleOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarMenuListOA(ActionEvent actionEvent) {
     }
 }

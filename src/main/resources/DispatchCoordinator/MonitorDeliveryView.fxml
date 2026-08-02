@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.dispatch_coordinator.monitorDeliveryController">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
@@ -26,7 +26,7 @@
                 <Button layoutX="10.0" layoutY="264.0" mnemonicParsing="false" onAction="#generateDispatchReportButtonOnAction" prefHeight="41.0" prefWidth="175.0" text="Generate Dispatch Report" />
             </children>
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+        <Button layoutY="3.0" mnemonicParsing="false" onAction="#airportCateringServiceButtonOnAction" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
             <font>
                 <Font name="Arial Bold" size="13.0" />
             </font>
@@ -55,9 +55,8 @@
                   <Label fx:id="orderIdLabel" layoutX="23.0" layoutY="341.0" prefHeight="18.0" prefWidth="206.0" text="Order ID" />
                   <Label fx:id="truckIdLabel" layoutX="23.0" layoutY="377.0" prefHeight="18.0" prefWidth="166.0" text="Truck ID" />
                   <Label fx:id="driverNameLabel" layoutX="23.0" layoutY="409.0" prefHeight="18.0" prefWidth="185.0" text="Driver Name" />
-                  <Label fx:id="currentStatusLabel" layoutX="23.0" layoutY="440.0" prefHeight="18.0" prefWidth="196.0" text="Current Status" />
-                  <Label fx:id="departureTimeLabel" layoutX="23.0" layoutY="471.0" prefHeight="18.0" prefWidth="196.0" text="Departure Time" />
-                  <Label fx:id="estimatedArrivalTimeLabel" layoutX="18.0" layoutY="502.0" prefHeight="18.0" prefWidth="206.0" text="Estimated Arrival Time" />
+                  <Label fx:id="departureTimeLabel" layoutX="23.0" layoutY="447.0" prefHeight="18.0" prefWidth="196.0" text="Departure Time" />
+                  <Label fx:id="estimatedArrivalTimeLabel" layoutX="18.0" layoutY="484.0" prefHeight="18.0" prefWidth="206.0" text="Estimated Arrival Time" />
                </children>
             </AnchorPane>
          </children></VBox>

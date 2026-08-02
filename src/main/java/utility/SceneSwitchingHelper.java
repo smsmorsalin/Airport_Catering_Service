@@ -5,21 +5,23 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import user.User;
+import user.UserReceiver;
 
 import java.io.IOException;
 
 public class SceneSwitchingHelper {
 
-    public static void fullSceneReplacement(javafx.event.ActionEvent event, String newScene) throws IOException {
-        if (newScene.isEmpty()){
+    public static void fullSceneReplacement(javafx.event.ActionEvent event, String fxml) throws IOException {
+        if (fxml.isEmpty()){
             return;
         }
-        newScene = newScene.trim();
-        if (newScene.isEmpty()){
+        fxml = fxml.trim();
+        if (fxml.isEmpty()){
             return;
         }
         try {
-            FXMLLoader loader = new FXMLLoader(SceneSwitchingHelper.class.getResource("/AirlineRepresentative/createCateringOrderView.fxml"));
+            FXMLLoader loader = new FXMLLoader(SceneSwitchingHelper.class.getResource(fxml));
             Parent root = loader.load();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
@@ -29,4 +31,23 @@ public class SceneSwitchingHelper {
             throw new RuntimeException(e);
         }
     }
+
+        public static void switchSceneWithData(javafx.event.ActionEvent event, String fxml, User user) {
+
+            try {
+                FXMLLoader loader = new FXMLLoader(SceneSwitchingHelper.class.getResource(fxml));
+                Parent root = loader.load();
+                Object controller = loader.getController();
+                if (controller instanceof UserReceiver receiver) {
+                    receiver.setLoggedInUser(user);
+                }
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(new Scene(root));
+                stage.show();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
 }

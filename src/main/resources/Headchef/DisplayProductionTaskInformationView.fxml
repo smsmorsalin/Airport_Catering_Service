@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="main.airport_catering_service.controller.headchef.AssignKitchenStaffController"
+            prefWidth="1250"
+            prefHeight="820">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8"
+              style="-fx-background-color: linear-gradient(to right,#2C3E50,#34495E);">
+
+            <padding>
+                <Insets top="18" right="25" bottom="18" left="25"/>
+            </padding>
+
+            <Label text="👨‍🍳 Assign Kitchen Staff">
+                <font>
+                    <Font size="28"/>
+                </font>
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+            </Label>
+
+            <Label text="Assign available kitchen staff to a production task">
+                <style>
+                    -fx-text-fill:#ECF0F1;
+                    -fx-font-size:15;
+                </style>
+            </Label>
+
+        </VBox>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="20">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Assignment Form -->
+
+            <TitledPane text="Kitchen Staff Assignment"
+                        collapsible="false"
+                        expanded="true">
+
+                <content>
+
+                    <GridPane hgap="18" vgap="18">
+
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+
+                        <Label text="Production Task ID"/>
+                        <TextField fx:id="taskIdField"
+                                   promptText="Enter Production Task ID"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Kitchen Staff"
+                               GridPane.columnIndex="2"/>
+
+                        <ComboBox fx:id="staffComboBox"
+                                  promptText="Select Staff"
+                                  prefWidth="220"
+                                  GridPane.columnIndex="3"/>
+
+                        <Label text="Work Station"
+                               GridPane.rowIndex="1"/>
+
+                        <ComboBox fx:id="workStationComboBox"
+                                  promptText="Select Station"
+                                  prefWidth="220"
+                                  GridPane.rowIndex="1"
+                                  GridPane.columnIndex="1"/>
+
+                        <Label text="Shift Time"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="2"/>
+
+                        <ComboBox fx:id="shiftComboBox"
+                                  promptText="Select Shift"
+                                  prefWidth="220"
+                                  GridPane.rowIndex="1"
+                                  GridPane.columnIndex="3"/>
+
+                        <Button text="Assign Staff"
+                                fx:id="assignButton"
+                                onAction="#assignKitchenStaff"
+                                prefWidth="150"
+                                style="-fx-background-color:#27AE60;-fx-text-fill:white;-fx-font-weight:bold;"
+                                GridPane.rowIndex="2"
+                                GridPane.columnIndex="1"/>
+
+                        <Button text="Clear"
+                                fx:id="clearButton"
+                                onAction="#clearForm"
+                                prefWidth="120"
+                                style="-fx-background-color:#95A5A6;-fx-text-fill:white;"
+                                GridPane.rowIndex="2"
+                                GridPane.columnIndex="2"/>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- Assigned Staff -->
+
+            <TitledPane text="Current Staff Assignments"
+                        collapsible="false"
+                        expanded="true"
+                        VBox.vgrow="ALWAYS">
+
+                <content>
+
+                    <TableView fx:id="assignmentTable">
+
+                        <columns>
+
+                            <TableColumn fx:id="assignmentIdColumn"
+                                         text="Assignment ID"
+                                         prefWidth="130"/>
+
+                            <TableColumn fx:id="taskIdColumn"
+                                         text="Production Task"
+                                         prefWidth="130"/>
+
+                            <TableColumn fx:id="staffNameColumn"
+                                         text="Staff Name"
+                                         prefWidth="200"/>
+
+                            <TableColumn fx:id="stationColumn"
+                                         text="Work Station"
+                                         prefWidth="170"/>
+
+                            <TableColumn fx:id="shiftColumn"
+                                         text="Shift"
+                                         prefWidth="150"/>
+
+                            <TableColumn fx:id="assignedTaskColumn"
+                                         text="Assigned Task"
+                                         prefWidth="220"/>
+
+                            <TableColumn fx:id="statusColumn"
+                                         text="Status"
+                                         prefWidth="130"/>
+
+                        </columns>
+
+                    </TableView>
+
+                </content>
+
+            </TitledPane>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER_RIGHT"
+              spacing="15"
+              style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <Button text="Refresh"
+                    fx:id="refreshButton"
+                    onAction="#refreshAssignments"
+                    prefWidth="120"
+                    style="-fx-background-color:#3498DB;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+            <Button text="Back"
+                    fx:id="backButton"
+                    onAction="#goBack"
+                    prefWidth="120"
+                    style="-fx-background-color:#E74C3C;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="1280"
+            prefHeight="820"
+            fx:controller="main.airport_catering_service.controller.truck_operator.ReportDeliveryIssueController">
+
+    <!-- ================= HEADER ================= -->
+
+    <top>
+
+        <VBox spacing="8"
+              style="-fx-background-color: linear-gradient(to right,#922B21,#C0392B);">
+
+            <padding>
+                <Insets top="18" right="25" bottom="18" left="25"/>
+            </padding>
+
+            <Label text="⚠ Report Delivery Issue">
+                <font>
+                    <Font size="30"/>
+                </font>
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-weight:bold;
+                </style>
+            </Label>
+
+            <Label text="Report delivery delays, damaged meals or transportation issues.">
+                <style>
+                    -fx-text-fill:white;
+                    -fx-font-size:15;
+                </style>
+            </Label>
+
+        </VBox>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <VBox spacing="18">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Issue Report Form -->
+
+            <TitledPane text="Issue Information"
+                        collapsible="false"
+                        expanded="true">
+
+                <content>
+
+                    <GridPane hgap="20" vgap="18">
+
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+
+                        <Label text="Assignment ID"/>
+
+                        <TextField fx:id="assignmentIdField"
+                                   promptText="Enter Assignment ID"
+                                   prefWidth="220"
+                                   GridPane.columnIndex="1"/>
+
+                        <Button text="Load Assignment"
+                                fx:id="loadButton"
+                                prefWidth="150"
+                                onAction="#loadAssignment"
+                                style="-fx-background-color:#3498DB;-fx-text-fill:white;-fx-font-weight:bold;"
+                                GridPane.columnIndex="2"/>
+
+                        <Label text="Issue Type"
+                               GridPane.rowIndex="1"/>
+
+                        <ComboBox fx:id="issueTypeComboBox"
+                                  promptText="Select Issue"
+                                  prefWidth="220"
+                                  GridPane.rowIndex="1"
+                                  GridPane.columnIndex="1"/>
+
+                        <Label text="Issue Severity"
+                               GridPane.rowIndex="2"/>
+
+                        <ComboBox fx:id="severityComboBox"
+                                  promptText="Select Severity"
+                                  prefWidth="220"
+                                  GridPane.rowIndex="2"
+                                  GridPane.columnIndex="1"/>
+
+                        <Label text="Issue Time"
+                               GridPane.rowIndex="3"/>
+
+                        <DatePicker fx:id="issueDatePicker"
+                                    GridPane.rowIndex="3"
+                                    GridPane.columnIndex="1"/>
+
+                        <Label text="Current Location"
+                               GridPane.rowIndex="4"/>
+
+                        <TextField fx:id="locationField"
+                                   promptText="Current Location"
+                                   GridPane.rowIndex="4"
+                                   GridPane.columnIndex="1"/>
+
+                        <Label text="Issue Description"
+                               GridPane.rowIndex="5"/>
+
+                        <TextArea fx:id="descriptionTextArea"
+                                  wrapText="true"
+                                  prefHeight="120"
+                                  promptText="Describe the issue..."
+                                  GridPane.rowIndex="5"
+                                  GridPane.columnIndex="1"
+                                  GridPane.columnSpan="2"/>
+
+                        <HBox spacing="15"
+                              GridPane.rowIndex="6"
+                              GridPane.columnIndex="1">
+
+                            <Button text="Submit Report"
+                                    fx:id="submitButton"
+                                    prefWidth="170"
+                                    onAction="#submitIssueReport"
+                                    style="-fx-background-color:#27AE60;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+                            <Button text="Clear"
+                                    fx:id="clearButton"
+                                    prefWidth="120"
+                                    onAction="#clearForm"
+                                    style="-fx-background-color:#F39C12;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+                        </HBox>
+
+                    </GridPane>
+
+                </content>
+
+            </TitledPane>
+
+            <!-- Issue History -->
+
+            <TitledPane text="Reported Issues"
+                        collapsible="false"
+                        expanded="true"
+                        VBox.vgrow="ALWAYS">
+
+                <content>
+
+                    <TableView fx:id="issueTable">
+
+                        <columns>
+
+                            <TableColumn fx:id="issueIdColumn"
+                                         text="Issue ID"
+                                         prefWidth="120"/>
+
+                            <TableColumn fx:id="assignmentIdColumn"
+                                         text="Assignment ID"
+                                         prefWidth="130"/>
+
+                            <TableColumn fx:id="issueTypeColumn"
+                                         text="Issue Type"
+                                         prefWidth="170"/>
+
+                            <TableColumn fx:id="severityColumn"
+                                         text="Severity"
+                                         prefWidth="130"/>
+
+                            <TableColumn fx:id="locationColumn"
+                                         text="Location"
+                                         prefWidth="180"/>
+
+                            <TableColumn fx:id="reportedTimeColumn"
+                                         text="Reported Time"
+                                         prefWidth="180"/>
+
+                            <TableColumn fx:id="statusColumn"
+                                         text="Status"
+                                         prefWidth="150"/>
+
+                        </columns>
+
+                    </TableView>
+
+                </content>
+
+            </TitledPane>
+
+        </VBox>
+
+    </center>
+
+    <!-- ================= FOOTER ================= -->
+
+    <bottom>
+
+        <HBox alignment="CENTER_RIGHT"
+              spacing="15"
+              style="-fx-background-color:#ECF0F1;">
+
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+
+            <Button text="Refresh"
+                    fx:id="refreshButton"
+                    prefWidth="120"
+                    onAction="#refreshTable"
+                    style="-fx-background-color:#16A085;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+            <Button text="Back"
+                    fx:id="backButton"
+                    prefWidth="120"
+                    onAction="#goBack"
+                    style="-fx-background-color:#566573;-fx-text-fill:white;-fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

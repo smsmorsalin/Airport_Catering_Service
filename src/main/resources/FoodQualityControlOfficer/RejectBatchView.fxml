@@ -62,17 +62,8 @@
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
-                  <Label layoutX="19.0" layoutY="176.0" text=" Corrective Action Recommendation" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="12.0" />
-                     </font></Label>
                   <TextField fx:id="batchNumberTextField" layoutX="132.0" layoutY="68.0" />
                   <TextArea fx:id="rejectionReasonTextArea" layoutX="76.0" layoutY="131.0" prefHeight="17.0" prefWidth="200.0" />
-                  <TextArea fx:id="correctiveActionRecommendationTextArea" layoutX="76.0" layoutY="199.0" prefHeight="39.0" prefWidth="200.0" />
-                  <Button layoutX="31.0" layoutY="265.0" mnemonicParsing="false" onAction="#searchOnAction" style="-fx-background-color: royalBlue;" text="Search Batch " textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font></Button>
                   <AnchorPane layoutX="37.0" layoutY="339.0" prefHeight="123.0" prefWidth="441.0" style="-fx-background-color: royalBlue;">
                      <children>
                         <Label fx:id="fxidDisplayRejectionIDLabel" layoutX="22.0" layoutY="14.0" prefHeight="17.0" prefWidth="258.0" text="Rejection ID : " textFill="WHITE">
@@ -94,12 +85,7 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="188.0" layoutY="265.0" mnemonicParsing="false" onAction="#rejectionBatchOnAction" style="-fx-background-color: red;" text="Reject Batch " textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="352.0" layoutY="265.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="67.0" text="Clear">
+                  <Button layoutX="345.0" layoutY="74.0" mnemonicParsing="false" onAction="#rejectionBatchOnAction" style="-fx-background-color: red;" text="Reject Batch " textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>

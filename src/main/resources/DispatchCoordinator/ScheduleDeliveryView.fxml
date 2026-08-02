@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.dispatch_coordinator.scheduleDeliveryController">
     <children>
         <VBox layoutY="49.0" prefHeight="536.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
@@ -29,7 +29,7 @@
                 <Button layoutX="10.0" layoutY="264.0" mnemonicParsing="false" onAction="#generateDispatchReportButtonOnAction" prefHeight="41.0" prefWidth="175.0" text="Generate Dispatch Report" />
             </children>
         </VBox>
-        <Button layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
+        <Button layoutY="3.0" mnemonicParsing="false" onAction="#airportCateringServiceButtonOnAction" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">
             <font>
                 <Font name="Arial Bold" size="13.0" />
             </font>
@@ -68,7 +68,7 @@
                   <Label fx:id="scheduleIdLabel" layoutX="23.0" layoutY="366.0" text="Schedule ID" />
                   <Label fx:id="orderIdLabel" layoutX="23.0" layoutY="394.0" text="Order ID" />
                   <Label fx:id="flightNumberLabel" layoutX="23.0" layoutY="423.0" text="Flight Number" />
-                  <Label fx:id="deliveryDateAndTimeLabel" layoutX="23.0" layoutY="449.0" text="Delivery Date &amp; Time" />
+                  <Label fx:id="deliveryDateAndTimeLabel" layoutX="23.0" layoutY="449.0" text="Delivery Date " />
                   <Label fx:id="assignedTruckLabel" layoutX="23.0" layoutY="476.0" text="Assigned Truck" />
                </children>
             </AnchorPane>
