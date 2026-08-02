@@ -23,9 +23,10 @@ public class DispatchCoordinator extends Employee implements Serializable {
     }
 
     @Override
-    public void viewDashboard(javafx.event.ActionEvent event, User user){
-
+    public void viewDashboard(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event,"/DispatchCoordinator/DashboardView.fxml",user);
     }
+
 
 
     public static void renderAssignTruck(javafx.event.ActionEvent event) throws IOException{
@@ -62,15 +63,8 @@ public class DispatchCoordinator extends Employee implements Serializable {
 
     public static void renderScheduleDelivery(javafx.event.ActionEvent event) throws IOException{
         SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/ScheduleDeliveryView.fxml");
+
     }
 
-    public static void reverseDashboard(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader
-                (DispatchCoordinator.class.getResource("/DispatchCoordinator/DashboardView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+
 }

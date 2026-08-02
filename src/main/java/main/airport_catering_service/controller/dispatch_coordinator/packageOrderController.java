@@ -5,6 +5,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import user.DispatchCoordinator;
+
+import java.io.IOException;
 
 public class packageOrderController
 {
@@ -68,6 +71,7 @@ public class packageOrderController
     }
 
     @javafx.fxml.FXML
-    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) throws IOException {
+        DispatchCoordinator.renderDashboard(actionEvent);
     }
 }
