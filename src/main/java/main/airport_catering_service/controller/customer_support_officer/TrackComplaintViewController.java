@@ -32,15 +32,7 @@ public class TrackComplaintViewController
     }
 
     @javafx.fxml.FXML
-    public void backOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void ResolveComplaintOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void printStatusOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

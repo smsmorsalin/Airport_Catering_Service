@@ -36,16 +36,8 @@ public class FlightDelayRequestViewController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void cancelButtonOnAction(ActionEvent actionEvent) {
-    }
-
     @Deprecated
     public void FlightDelayRequestOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void resetButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

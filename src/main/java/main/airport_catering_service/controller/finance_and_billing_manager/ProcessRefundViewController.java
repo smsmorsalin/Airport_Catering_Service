@@ -13,8 +13,6 @@ public class ProcessRefundViewController
     @javafx.fxml.FXML
     private Label refundIdLabel;
     @javafx.fxml.FXML
-    private Button printReceiptButton;
-    @javafx.fxml.FXML
     private Label refundStatusLabel;
     @javafx.fxml.FXML
     private Button viewRefundButton;
@@ -29,8 +27,6 @@ public class ProcessRefundViewController
     @javafx.fxml.FXML
     private TextField orderidTextField;
     @javafx.fxml.FXML
-    private Button cancelButton;
-    @javafx.fxml.FXML
     private Label refundDateLabel;
     @javafx.fxml.FXML
     private TextArea additionalNotesTextField;
@@ -40,8 +36,6 @@ public class ProcessRefundViewController
     private ComboBox<String> refundMethodComboBox;
     @javafx.fxml.FXML
     private Button processRefundButton;
-    @javafx.fxml.FXML
-    private Button resetButton;
     @javafx.fxml.FXML
     private Label transactionMethodLabel;
 
@@ -53,17 +47,7 @@ public class ProcessRefundViewController
     public void sidebarProcessRefundOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void resetOnAction(ActionEvent actionEvent) {
-    }
 
-    @javafx.fxml.FXML
-    public void printReceiptOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void cancelOnAction(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void processRefundOnAction(ActionEvent actionEvent) {
@@ -81,9 +65,13 @@ public class ProcessRefundViewController
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarHomePageButtonOnAction(ActionEvent actionEvent) throws IOException {
 
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -130,4 +118,6 @@ public class ProcessRefundViewController
     public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) throws IOException{
         FinanceAndBillingManager.viewOutstandingPayments(actionEvent);
     }
+
+
 }

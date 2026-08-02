@@ -140,11 +140,7 @@
 
 
                             <children>
-
-                                <Button fx:id="viewPaymentBtn" layoutX="30" layoutY="22" onAction="#ViewPaymentOnAction" prefHeight="35" prefWidth="140" style="-fx-background-radius:10;" text="View Payment" />
-                                <Button fx:id="receiptBtn" layoutX="200" layoutY="22" onAction="#DownloadReceiptOnAction" prefHeight="35" prefWidth="150" style="-fx-background-color:green;         -fx-text-fill:white;         -fx-background-radius:10;" text="Download Receipt" />
-                                <Button fx:id="exportBtn" layoutX="390" layoutY="22" onAction="#ExportPDFOnAction" prefHeight="35" prefWidth="120" style="-fx-background-radius:10;" text="Export PDF" />
-                                <Button fx:id="resetBtn" layoutX="540" layoutY="22" onAction="#ResetOnAction" prefHeight="35" prefWidth="100" style="-fx-background-radius:10;" text="Reset" />
+                                <Button fx:id="receiptBtn" layoutX="32.0" layoutY="22.0" onAction="#viewpaymentButtonOnAction" prefHeight="35" prefWidth="150" style="-fx-background-color:green;         -fx-text-fill:white;         -fx-background-radius:10;" text="View Payement" />
                             </children>
                         </AnchorPane>
                     </children>

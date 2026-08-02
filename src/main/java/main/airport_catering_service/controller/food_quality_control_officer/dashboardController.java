@@ -7,6 +7,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import nonuser.DashBoard;
 import user.FoodQualityControlOfficer;
+import user.KitchenProductionManager;
 import user.User;
 import utility.AlertGenerator;
 
@@ -34,6 +35,14 @@ public class dashboardController {
     private TableColumn<Boolean,DashBoard> issueTypeTableView;
 
     private AnchorPane reg_anchorPane;
+
+    private FoodQualityControlOfficer loggedInUser;
+    public void setLoggedInUser(User user){
+        if (user instanceof FoodQualityControlOfficer foodQualityControlOfficer){
+            this.loggedInUser = foodQualityControlOfficer;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {

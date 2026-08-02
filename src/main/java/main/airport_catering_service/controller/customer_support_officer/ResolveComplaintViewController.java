@@ -34,14 +34,6 @@ public class ResolveComplaintViewController
     }
 
     @javafx.fxml.FXML
-    public void cancelOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void SaveDraftOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void searchComplaintOnAction(ActionEvent actionEvent) {
     }
 

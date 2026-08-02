@@ -15,8 +15,6 @@ public class RecordPaymentViewController
     @javafx.fxml.FXML
     private Label paymentIdLabel;
     @javafx.fxml.FXML
-    private Button downloadReceiptButton;
-    @javafx.fxml.FXML
     private TextField transactionReferenceTextField;
     @javafx.fxml.FXML
     private Label summaryInvoiceLabel;
@@ -29,8 +27,6 @@ public class RecordPaymentViewController
     @javafx.fxml.FXML
     private TextField amountPaidTextField;
     @javafx.fxml.FXML
-    private Button cancelButton;
-    @javafx.fxml.FXML
     private Label amountDueLabel;
     @javafx.fxml.FXML
     private Button recordPaymentButton;
@@ -40,23 +36,9 @@ public class RecordPaymentViewController
     private TextField invoiceidTextField;
     @javafx.fxml.FXML
     private Label invoiceAmountLabel;
-    @javafx.fxml.FXML
-    private Button resetButton;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void printreceiptOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void resetOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void downloadreceiptOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -67,10 +49,6 @@ public class RecordPaymentViewController
     public void verifyInvoiceOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void cancelOnAction(ActionEvent actionEvent) {
-    }
-
     @Deprecated
     public void sidebarRecoedPaymentOnAction(ActionEvent actionEvent) {
     }
@@ -79,9 +57,13 @@ public class RecordPaymentViewController
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void sideBarHomePageButtonOnAction(ActionEvent actionEvent) throws IOException {
 
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

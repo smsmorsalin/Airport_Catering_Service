@@ -287,14 +287,6 @@
 
 
 
-                        <Button layoutX="220.0" layoutY="678.0" onAction="#SaveDraftOnAction" prefHeight="35" prefWidth="130" style="-fx-background-radius:10;" text="Save Draft" />
-
-
-
-                        <Button layoutX="370.0" layoutY="678.0" onAction="#cancelOnAction" prefHeight="35" prefWidth="130" style="-fx-background-radius:10;" text="Cancel" />
-
-
-
 
                     </children>
 

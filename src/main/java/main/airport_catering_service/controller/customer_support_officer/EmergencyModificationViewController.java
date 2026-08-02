@@ -31,18 +31,9 @@ public class EmergencyModificationViewController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void CancelOnAction(ActionEvent actionEvent) {
-    }
-
     @Deprecated
     public void EmergencyModifyOnAction(ActionEvent actionEvent) {
     }
-
-    @javafx.fxml.FXML
-    public void resetOnAction(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void CheckOrderOnAction(ActionEvent actionEvent) {
     }

@@ -2,7 +2,6 @@ package main.airport_catering_service.controller.finance_and_billing_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
-import user.CustomerSupportOfficer;
 import user.FinanceAndBillingManager;
 import utility.AlertGenerator;
 
@@ -66,9 +65,6 @@ public class CalculateCostViewController
     public void resetOnAction(ActionEvent actionEvent) {
     }
 
-    @Deprecated
-    public void sideBarHomePageOnActioon(ActionEvent actionEvent) {
-    }
 
     @Deprecated
     public void cancelOnAction(ActionEvent actionEvent) {
