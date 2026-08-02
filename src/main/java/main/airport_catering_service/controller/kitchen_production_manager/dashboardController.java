@@ -3,6 +3,7 @@ package main.airport_catering_service.controller.kitchen_production_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import nonuser.DashBoard;
 import user.User;
 import user.KitchenProductionManager;
 import utility.AlertGenerator;
@@ -13,7 +14,7 @@ import java.io.IOException;
 public class dashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn descriptionTableView;
+    private TableColumn<String,DashBoard>descriptionTableView;
     @javafx.fxml.FXML
     private Label enterTicketIDTextField;
     @javafx.fxml.FXML
@@ -21,15 +22,15 @@ public class dashboardController
     @javafx.fxml.FXML
     private Label emargencyIssueLabel;
     @javafx.fxml.FXML
-    private TableColumn ticketIDTableColumn;
+    private TableColumn<Integer,DashBoard> ticketIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn statusTableView;
+    private TableColumn<String,DashBoard> statusTableView;
     @javafx.fxml.FXML
     private ComboBox<String> statusComboBox;
     @javafx.fxml.FXML
-    private TableView mainTableView;
+    private TableView<DashBoard> mainTableView;
     @javafx.fxml.FXML
-    private TableColumn issueTypeTableView;
+    private TableColumn<Boolean,DashBoard> issueTypeTableView;
 
 
 

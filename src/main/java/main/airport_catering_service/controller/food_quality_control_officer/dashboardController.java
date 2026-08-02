@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import nonuser.DashBoard;
 import user.FoodQualityControlOfficer;
 import user.User;
 import utility.AlertGenerator;
@@ -14,7 +15,7 @@ import java.io.IOException;
 
 public class dashboardController {
     @javafx.fxml.FXML
-    private TableColumn<dashboardController, String> descriptionTableView;
+    private TableColumn<String,DashBoard> descriptionTableView;
     @javafx.fxml.FXML
     private Label enterTicketIDTextField;
     @javafx.fxml.FXML
@@ -22,15 +23,15 @@ public class dashboardController {
     @javafx.fxml.FXML
     private Label emargencyIssueLabel;
     @javafx.fxml.FXML
-    private TableColumn<dashboardController, Integer> ticketIDTableColumn;
+    private TableColumn<Integer,DashBoard> ticketIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn<dashboardController, String> statusTableView;
+    private TableColumn<String,DashBoard> statusTableView;
     @javafx.fxml.FXML
     private ComboBox<String> statusComboBox;
     @javafx.fxml.FXML
-    private TableView<dashboardController> mainTableView;
+    private TableView<DashBoard> mainTableView;
     @javafx.fxml.FXML
-    private TableColumn<dashboardController, Boolean> issueTypeTableView;
+    private TableColumn<Boolean,DashBoard> issueTypeTableView;
 
     private AnchorPane reg_anchorPane;
 
