@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="create dashboard non user class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/DashBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/DashBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +127,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Mahir",
+    "git-widget-placeholder": "saif",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -449,29 +447,29 @@
       <option name="project" value="LOCAL" />
       <updated>1785611563675</updated>
     </task>
-    <task id="LOCAL-00036" summary="saif">
+    <task id="LOCAL-00036" summary="finish work for one more controller(approveOrRejectOrderController) for CateringOperationsManager">
       <option name="closed" value="true" />
-      <created>1785610479748</created>
+      <created>1785618711911</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1785610479748</updated>
+      <updated>1785618711911</updated>
     </task>
-    <task id="LOCAL-00037" summary="saif">
+    <task id="LOCAL-00037" summary="fixed all error for user login">
       <option name="closed" value="true" />
-      <created>1785610625445</created>
+      <created>1785622943597</created>
       <option name="number" value="00037" />
       <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1785610625445</updated>
+      <updated>1785622943597</updated>
     </task>
-    <task id="LOCAL-00038" summary="saif">
+    <task id="LOCAL-00038" summary="fixed all error for user login">
       <option name="closed" value="true" />
-      <created>1785636825548</created>
+      <created>1785645508948</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1785636825548</updated>
+      <updated>1785645508948</updated>
     </task>
     <task id="LOCAL-00039" summary="saif">
       <option name="closed" value="true" />
@@ -506,31 +504,6 @@
       <updated>1785639586273</updated>
     </task>
     <option name="localTasksCounter" value="43" />
-    <task id="LOCAL-00036" summary="finish work for one more controller(approveOrRejectOrderController) for CateringOperationsManager">
-      <option name="closed" value="true" />
-      <created>1785618711911</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1785618711911</updated>
-    </task>
-    <task id="LOCAL-00037" summary="fixed all error for user login">
-      <option name="closed" value="true" />
-      <created>1785622943597</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1785622943597</updated>
-    </task>
-    <task id="LOCAL-00038" summary="fixed all error for user login">
-      <option name="closed" value="true" />
-      <created>1785645508948</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1785645508948</updated>
-    </task>
-    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,10 +543,9 @@
     <MESSAGE value="saif" />
     <MESSAGE value="user 9 and 10 dashBoard" />
     <MESSAGE value="create dashboard non user class" />
-    <option name="LAST_COMMIT_MESSAGE" value="create dashboard non user class" />
     <MESSAGE value="can't find problem if i want to create multiple user the both user is not working." />
     <MESSAGE value="finish work for one more controller(approveOrRejectOrderController) for CateringOperationsManager" />
     <MESSAGE value="fixed all error for user login" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed all error for user login" />
+    <option name="LAST_COMMIT_MESSAGE" value="create dashboard non user class" />
   </component>
 </project>
