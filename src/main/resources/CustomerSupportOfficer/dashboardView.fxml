@@ -101,21 +101,21 @@
                <children>
                   <AnchorPane layoutX="6.0" layoutY="7.0" prefHeight="720.0" prefWidth="712.0">
                      <children>
-                        <Label layoutX="7.0" layoutY="2.0" prefHeight="17.0" prefWidth="95.0" text="Emargency Issue" textFill="#fa0702" />
-                        <TableView layoutX="2.0" layoutY="25.0" prefHeight="358.0" prefWidth="702.0">
+                        <Label fx:id="emargencyIssueLabel" layoutX="7.0" layoutY="2.0" prefHeight="17.0" prefWidth="95.0" text="Emargency Issue" textFill="#fa0702" />
+                        <TableView fx:id="mainTableView" layoutX="2.0" layoutY="25.0" prefHeight="358.0" prefWidth="702.0">
                            <columns>
-                              <TableColumn prefWidth="83.0" text="Ticket ID" />
-                              <TableColumn prefWidth="84.0" text="Issue Type" />
-                              <TableColumn prefWidth="330.0" text="Description" />
-                              <TableColumn prefWidth="91.0" text="Status" />
+                              <TableColumn fx:id="ticketIDTableColumn" prefWidth="83.0" text="Ticket ID" />
+                              <TableColumn fx:id="issueTypeTableView" prefWidth="84.0" text="Issue Type" />
+                              <TableColumn fx:id="descriptionTableView" prefWidth="330.0" text="Description" />
+                              <TableColumn fx:id="statusTableView" prefWidth="91.0" text="Status" />
                            </columns>
                         </TableView>
                         <Label layoutX="4.0" layoutY="428.0" prefHeight="17.0" prefWidth="88.0" text="Enter Ticket ID" />
-                        <TextField layoutX="85.0" layoutY="424.0" prefHeight="25.0" prefWidth="128.0" />
+                        <TextField fx:id="enterticketIDTextField" layoutX="85.0" layoutY="424.0" prefHeight="25.0" prefWidth="128.0" />
                         <Label layoutX="222.0" layoutY="395.0" prefHeight="17.0" prefWidth="165.0" text="Update Issue's Current Status" textFill="#47a432" />
-                        <ComboBox layoutX="286.0" layoutY="424.0" prefWidth="150.0" />
+                        <ComboBox fx:id="statusComboBox" layoutX="286.0" layoutY="424.0" prefWidth="150.0" />
                         <Label layoutX="246.0" layoutY="428.0" prefHeight="17.0" prefWidth="35.0" text="Status" />
-                        <Button layoutX="468.0" layoutY="424.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Update">
+                        <Button layoutX="468.0" layoutY="424.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="25.0" prefWidth="95.0" text="Update">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
