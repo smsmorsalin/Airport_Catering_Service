@@ -2,7 +2,7 @@ package nonuser;
 
 import utility.databaseAccessor;
 
-import java.io.Serializable;
+import java.io.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -110,6 +110,46 @@ public class CateringOrder implements Serializable {
 
     private static int generateOrderId() {
         return databaseAccessor.generateNewUniqueId("CateringOrder.bin", "orderId");
+    }
+
+    public static CateringOrder findById(int orderId) {
+
+        try (ObjectInputStream ois =
+                     new ObjectInputStream(
+                             new FileInputStream("CateringOrder.bin"))) {
+
+            while (true) {
+
+                Object object = ois.readObject();
+
+                if (object instanceof CateringOrder cateringOrder) {
+
+                    if (cateringOrder.getOrderId() == orderId) {
+                        return cateringOrder;
+                    }
+                }
+            }
+
+        } catch (EOFException e) {
+            // End of file reached normally
+            System.out.println("Catering order not found: " + orderId);
+
+        } catch (FileNotFoundException e) {
+            System.out.println("CateringOrder.bin file not found");
+
+        } catch (InvalidClassException e) {
+            System.out.println("CateringOrder class version does not match the file");
+
+        } catch (IOException e) {
+            System.out.println("Error reading CateringOrder.bin");
+            e.printStackTrace();
+
+        } catch (ClassNotFoundException e) {
+            System.out.println("CateringOrder class not found");
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
     @Override

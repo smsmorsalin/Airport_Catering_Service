@@ -35,9 +35,9 @@ public class flightDelayViewController implements UserReceiver
     private AnchorPane fxidHiddenAnchorPane;
 
     private AirlineRepresentative loggedInUser;
-    private ArrayList<Object> selectedCateringOrder;
+    private CateringOrder selectedCateringOrder;
     private LocalDate OldDeliveryTime;
-    int selectedCateringOrderId = 0;
+
 
     @FXML
     private Label fxidOrderedDetailsOrderIdLabel;
@@ -76,39 +76,36 @@ public class flightDelayViewController implements UserReceiver
 
     @javafx.fxml.FXML
     public void loadOrderedData(ActionEvent actionEvent) {
+        int selectedCateringOrderId = 0;
         try{
             selectedCateringOrderId = Integer.parseInt(fxidOrderIdTextField.getText());
         }catch(NumberFormatException e){
             AlertGenerator.showAlert("Error", "Invalid Order ID");
         }
 
-        selectedCateringOrder = new ArrayList<>();
-        selectedCateringOrder = BinaryFileUtility.readObjects("CateringOrder.bin");
-
-        for(Object o : selectedCateringOrder){
-            if (o instanceof CateringOrder cateringOrder){
-                if(cateringOrder.getOrderId() == selectedCateringOrderId){
-                    if (cateringOrder.getStatus().equals("delivered")){
-                        AlertGenerator.showAlert("Error", "Order has been delivered");
-                        return;
-                    }
-                    if (! cateringOrder.getAirlineId().equals(loggedInUser.getAirlineId())) {
-                        AlertGenerator.showAlert("Error", "order does not belong to your airline.");
-                        fxidHiddenAnchorPane.setVisible(false);
-                        return;
-                    }
-                    fxidOrderedDetailsOrderIdLabel.setText("Order ID: " + cateringOrder.getOrderId());
-                    fxidOrderedFlightNumberLabel.setText("Flight Number: " + cateringOrder.getFlightId());
-                    OldDeliveryTime = cateringOrder.getDeliveryDate();
-                    fxidOrderedDeliveryDateLabel.setText("Delivery Date: " + cateringOrder.getDeliveryDate().toString());
-                    fxidOrderedDeliveryTimeLabel.setText("Delivery Time: " + cateringOrder.getDeliveryTime().toString());
-                    fxidHiddenAnchorPane.setVisible(true);
-                    return;
-
-                }
-            }
+        selectedCateringOrder = CateringOrder.findById(selectedCateringOrderId);
+        if(selectedCateringOrder  == null){
+            AlertGenerator.showAlert("Error", "Invalid Order ID");
+            return;
         }
+
+        if (selectedCateringOrder.getStatus().equals("delivered")){
+            AlertGenerator.showAlert("Error", "Order has been delivered");
+            return;
+        }
+        if (! selectedCateringOrder.getAirlineId().equals(loggedInUser.getAirlineId())) {
+            AlertGenerator.showAlert("Error", "order does not belong to your airline.");
+            fxidHiddenAnchorPane.setVisible(false);
+            return;
+        }
+        fxidOrderedDetailsOrderIdLabel.setText("Order ID: " + selectedCateringOrder.getOrderId());
+        fxidOrderedFlightNumberLabel.setText("Flight Number: " + selectedCateringOrder.getFlightId());
+        OldDeliveryTime = selectedCateringOrder.getDeliveryDate();
+        fxidOrderedDeliveryDateLabel.setText("Delivery Date: " + selectedCateringOrder.getDeliveryDate().toString());
+        fxidOrderedDeliveryTimeLabel.setText("Delivery Time: " + selectedCateringOrder.getDeliveryTime().toString());
+        fxidHiddenAnchorPane.setVisible(true);
     }
+
 
     @javafx.fxml.FXML
     public void submitDelayRequestButton(ActionEvent actionEvent) {
@@ -123,21 +120,8 @@ public class flightDelayViewController implements UserReceiver
             return;
         }
         LocalTime selectedNewTime = LocalTime.of(fxidDelayDeliveryTimeHourComboBox.getValue(), fxidDelayDeliveryTimeMinuteComboBox.getValue());
-        for(Object o : selectedCateringOrder) {
-            if (o instanceof CateringOrder cateringOrder) {
-                if (cateringOrder.getOrderId() == selectedCateringOrderId) {
-                    cateringOrder.setDeliveryDate(fxidDelayDeliveryDateDatePicker.getValue());
-                    cateringOrder.setDeliveryTime(selectedNewTime);
-                    cateringOrder.setDelay(true);
-                    loggedInUser.submitFlightDelayRequest(selectedCateringOrder);
 
-                    AlertGenerator.showAlert("Success", "Delay Order has been submitted");
-                    fxidHiddenAnchorPane.setVisible(false);
-                    fxidOrderIdTextField.clear();
-                    return;
-                }
-            }
-        }
+        loggedInUser.submitFlightDelayRequest(selectedCateringOrder.getOrderId(), fxidDelayDeliveryDateDatePicker.getValue(), selectedNewTime);
     }
 
 
@@ -145,7 +129,9 @@ public class flightDelayViewController implements UserReceiver
     //sideBar Buttons
     @javafx.fxml.FXML
     public void sideBarTrackOrderButton(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(actionEvent, "/airline_representative/trackOrderView.fxml", loggedInUser);
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/airline_representative/truckOrderView.fxml",
+                loggedInUser);
     }
 
 
