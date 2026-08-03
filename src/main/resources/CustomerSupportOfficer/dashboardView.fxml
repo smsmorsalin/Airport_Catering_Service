@@ -18,89 +18,50 @@
 
     <children>
 
-
-        <!-- ================= SIDEBAR ================= -->
-
-
         <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5">
 
-
             <children>
-
 
                 <Button onAction="#sidebarDashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px; -fx-background-color: #0F6BFF;" text="Dashboard" textFill="WHITE">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
                 <Button onAction="#sideBarRegisterComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Register Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
                 <Button onAction="#sideBarTrackComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Track Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
                 <Button onAction="#sideBarResolveComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Resolve Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
                 <Button onAction="#sideBarEmergencyModificationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Emergency Modification">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
-
                 <Button onAction="#sideBarFlightDelayRequestButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Delay Request">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
-
                 <Button onAction="#sideBarFlightCancellationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Cancellation">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
-
                 <Button onAction="#sideBarServiceUpdatesButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Service Updates">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
-
                 <Button onAction="#sideBarGenerateReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px;" text="Generate Reports">
 
                     <font>
@@ -116,70 +77,26 @@
                   <Insets top="195.0" />
                </VBox.margin>
             </Button>
-
-
-
             </children>
-
         </VBox>
-
-
-
-
-
-
-        <!-- TOP HEADER -->
-
-
         <Button layoutY="3" onAction="#sidebarHomePageOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:pink;         -fx-background-radius:5;" text="Airport Catering Service">
-
-
             <font>
                 <Font name="Arial Bold" size="13" />
             </font>
-
-
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
 
 
         </Button>
-
-
-
-
-
-
-
-
-        <!-- MAIN AREA -->
-
-
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:silver;">
 
-
             <children>
-
-
-
                 <Label alignment="CENTER" prefWidth="609" text="welcome Username">
-
-
                     <font>
                         <Font name="Gabriola" size="18" />
                     </font>
-
-
                 </Label>
-
-
-
-
-
-
-
-
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
                <children>
                   <AnchorPane layoutX="6.0" layoutY="7.0" prefHeight="720.0" prefWidth="712.0">
@@ -210,12 +127,6 @@
 
 
             </children>
-
-
         </VBox>
-
-
     </children>
-
-
 </AnchorPane>
