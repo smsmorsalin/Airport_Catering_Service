@@ -67,60 +67,35 @@ public class ReceiveApprovedCateringOrdersController
             return;
         }
 
-
-
-
-        // ================= FILE READ =================
-
-        ArrayList<Object> cateringOrderObjects =
-                BinaryFileUtility.readObjects("CateringOrder.bin");
-
+        // file read
+        ArrayList<Object> cateringOrderObjects = BinaryFileUtility.readObjects("CateringOrder.bin");
         CateringOrder selectedOrder = null;
-
         int orderId=0;
         for (Object object : cateringOrderObjects) {
-
             if (object instanceof CateringOrder cateringOrder) {
-
                 if (cateringOrder.getOrderId() == orderId) {
                     selectedOrder = cateringOrder;
                     break;
                 }
             }
         }
-
-        if (selectedOrder == null) {
-            AlertGenerator.showAlert(
-                    "Not Found",
-                    "Catering order not found"
-            );
+        if (selectedOrder == null) {AlertGenerator.showAlert("Not Found", "Catering order not found");
             return;
         }
 
         if (!selectedOrder.getStatus().equalsIgnoreCase("Approved")) {
-            AlertGenerator.showAlert(
-                    "Not Approved",
-                    "This catering order is not approved"
-            );
+            AlertGenerator.showAlert("Not Approved", "This catering order is not approved");
             return;
         }
 
-
         // Prevent duplicate receiving
-
-        ArrayList<Object> receivedOrderObjects =
-                BinaryFileUtility.readObjects(
-                        "ReceivedApprovedCateringOrder.bin"
-                );
+        ArrayList<Object> receivedOrderObjects = BinaryFileUtility.readObjects("ReceivedApprovedCateringOrder.bin");
 
         for (Object object : receivedOrderObjects) {
-
             if (object instanceof CateringOrder cateringOrder) {
-
                 if (cateringOrder.getOrderId() == orderId) {
-                    AlertGenerator.showAlert(
-                            "Already Received",
-                            "This catering order has already been received"
+                    AlertGenerator.showAlert("Already Received",
+                           "This catering order has already been received"
                     );
                     return;
                 }
@@ -128,49 +103,34 @@ public class ReceiveApprovedCateringOrdersController
         }
 
 
-        // ================= FILE WRITE =================
+        // file write
 
-        boolean saved = BinaryFileUtility.writeObjects(
-                "ReceivedApprovedCateringOrder.bin",
-                selectedOrder
-        );
+        boolean saved = BinaryFileUtility.writeObjects("ReceivedApprovedCateringOrder.bin", selectedOrder);
 
         if (!saved) {
-            AlertGenerator.showAlert(
-                    "Error",
-                    "Approved catering order could not be saved"
-            );
+            AlertGenerator.showAlert("Error", "Approved catering order could not be saved");
             return;
         }
 
 
-        // ================= SHOW =================
-
+        // show
         loadReceivedOrders();
-
         int productionTaskId=0;
-        AlertGenerator.showAlert(
-                "Successful",
+        AlertGenerator.showAlert("Successful",
                 "Approved catering order received successfully.\n" +
                         "Production Task ID: " + productionTaskId + "\n" +
                         "Order ID: " + orderId
         );
-
         productionTaskIDTextField.clear();
         orderIDTextField1.clear();
     }
-
     private void loadReceivedOrders() {
 
         mainTableView.getItems().clear();
 
-        ArrayList<Object> receivedOrderObjects =
-                BinaryFileUtility.readObjects(
-                        "ReceivedApprovedCateringOrder.bin"
-                );
+        ArrayList<Object> receivedOrderObjects = BinaryFileUtility.readObjects("ReceivedApprovedCateringOrder.bin");
 
         for (Object object : receivedOrderObjects) {
-
             if (object instanceof CateringOrder cateringOrder) {
                 mainTableView.getItems().add(cateringOrder);
             }
