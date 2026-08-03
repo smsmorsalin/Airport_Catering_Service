@@ -5,6 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -18,6 +19,7 @@ public class FinanceAndBillingManager extends Employee implements Serializable {
 
     @Override
     public void viewDashboard(javafx.event.ActionEvent event, User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/FinanceAndBillingManager/dashboardView.fxml", user);
 
     }
 
