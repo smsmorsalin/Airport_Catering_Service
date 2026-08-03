@@ -12,27 +12,29 @@ import javafx.scene.layout.AnchorPane;
 import nonuser.CateringOrder;
 import user.KitchenProductionManager;
 import utility.AlertGenerator;
+import utility.BinaryFileUtility;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 
 public class ReceiveApprovedCateringOrdersController
 {
     @javafx.fxml.FXML
-    private TableColumn<Integer, CateringOrder> productionOrderIDTableColumn;
+    private TableColumn<CateringOrder,Integer> productionOrderIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn<String,CateringOrder> mealTypesTableView;
+    private TableColumn<CateringOrder, String> mealTypesTableView;
     @javafx.fxml.FXML
-    private TableColumn<String,CateringOrder> airlineNameTableView;
+    private TableColumn<CateringOrder,String> airlineNameTableView;
     @javafx.fxml.FXML
-    private TableColumn<LocalDate,CateringOrder> deliveryDeadlineTableView;
+    private TableColumn<CateringOrder, LocalDate> deliveryDeadlineTableView;
     @javafx.fxml.FXML
     private TableView<CateringOrder> mainTableView;
     @FXML
     private TextField productionTaskIDTextField;
     @FXML
-    private TableColumn<Integer,CateringOrder> mealQuantityTableView;
+    private TableColumn<CateringOrder,Integer> mealQuantityTableView;
     @FXML
     private TextField orderIDTextField1;
 
@@ -64,7 +66,116 @@ public class ReceiveApprovedCateringOrdersController
             AlertGenerator.showAlert("Invalid Input","Id Should be grater than 0");
             return;
         }
+
+
+
+
+        // ================= FILE READ =================
+
+        ArrayList<Object> cateringOrderObjects =
+                BinaryFileUtility.readObjects("CateringOrder.bin");
+
+        CateringOrder selectedOrder = null;
+
+        int orderId=0;
+        for (Object object : cateringOrderObjects) {
+
+            if (object instanceof CateringOrder cateringOrder) {
+
+                if (cateringOrder.getOrderId() == orderId) {
+                    selectedOrder = cateringOrder;
+                    break;
+                }
+            }
+        }
+
+        if (selectedOrder == null) {
+            AlertGenerator.showAlert(
+                    "Not Found",
+                    "Catering order not found"
+            );
+            return;
+        }
+
+        if (!selectedOrder.getStatus().equalsIgnoreCase("Approved")) {
+            AlertGenerator.showAlert(
+                    "Not Approved",
+                    "This catering order is not approved"
+            );
+            return;
+        }
+
+
+        // Prevent duplicate receiving
+
+        ArrayList<Object> receivedOrderObjects =
+                BinaryFileUtility.readObjects(
+                        "ReceivedApprovedCateringOrder.bin"
+                );
+
+        for (Object object : receivedOrderObjects) {
+
+            if (object instanceof CateringOrder cateringOrder) {
+
+                if (cateringOrder.getOrderId() == orderId) {
+                    AlertGenerator.showAlert(
+                            "Already Received",
+                            "This catering order has already been received"
+                    );
+                    return;
+                }
+            }
+        }
+
+
+        // ================= FILE WRITE =================
+
+        boolean saved = BinaryFileUtility.writeObjects(
+                "ReceivedApprovedCateringOrder.bin",
+                selectedOrder
+        );
+
+        if (!saved) {
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Approved catering order could not be saved"
+            );
+            return;
+        }
+
+
+        // ================= SHOW =================
+
+        loadReceivedOrders();
+
+        int productionTaskId=0;
+        AlertGenerator.showAlert(
+                "Successful",
+                "Approved catering order received successfully.\n" +
+                        "Production Task ID: " + productionTaskId + "\n" +
+                        "Order ID: " + orderId
+        );
+
+        productionTaskIDTextField.clear();
+        orderIDTextField1.clear();
     }
+
+    private void loadReceivedOrders() {
+
+        mainTableView.getItems().clear();
+
+        ArrayList<Object> receivedOrderObjects =
+                BinaryFileUtility.readObjects(
+                        "ReceivedApprovedCateringOrder.bin"
+                );
+
+        for (Object object : receivedOrderObjects) {
+
+            if (object instanceof CateringOrder cateringOrder) {
+                mainTableView.getItems().add(cateringOrder);
+            }
+        }
+}
 
 
     @FXML
