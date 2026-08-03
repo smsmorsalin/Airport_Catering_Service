@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="fix error AirlineRepresentative">
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="delete DeliveryConfirmation.java file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryConfirmation.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,28 +22,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Saif-kaif&quot;
-    }
-    }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
-    "accountId": "ef1e225f-e8df-4381-ba31-5fa2f4c0db29"
-  },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
-    },
-    "owner": "smsmorsalin",
-    "repository": "Airport_Catering_Service"
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Saif-kaif"
   }
 }]]></component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
+    &quot;accountId&quot;: &quot;ef1e225f-e8df-4381-ba31-5fa2f4c0db29&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;smsmorsalin&quot;,
+    &quot;repository&quot;: &quot;Airport_Catering_Service&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -54,61 +53,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000399934292716" />
-      <entry key="MS500" value="1.1635683862617554" />
-      <entry key="S2" value="2.8486358117639066" />
-      <entry key="S5" value="5.32459524214888" />
-      <entry key="S10" value="7.888191328069131" />
-      <entry key="S30" value="11.704497428402309" />
-      <entry key="S60" value="13.545323915662761" />
-      <entry key="M2" value="16.106863502519392" />
-      <entry key="M5" value="21.462769538925524" />
-      <entry key="M10" value="26.93960231620354" />
-      <entry key="M15" value="30.571323689291432" />
-      <entry key="M30" value="36.338727607811656" />
-      <entry key="H1" value="40.523854999813125" />
-      <entry key="H2" value="43.07474326376176" />
-      <entry key="H4" value="44.486881279399675" />
-      <entry key="D1" value="45.74046281436793" />
-      <entry key="W1" value="45.96273865500083" />
+      <entry key="MS100" value="1.0066612100919372" />
+      <entry key="MS500" value="1.3676143544311974" />
+      <entry key="S2" value="2.1512996240758726" />
+      <entry key="S5" value="3.430711320331778" />
+      <entry key="S10" value="4.415890872867051" />
+      <entry key="S30" value="5.385444849511869" />
+      <entry key="S60" value="5.680347769891055" />
+      <entry key="M2" value="5.836949105452602" />
+      <entry key="M5" value="5.933988259447169" />
+      <entry key="M10" value="5.966860755086143" />
+      <entry key="M15" value="5.9778853519569175" />
+      <entry key="M30" value="6.007436736440869" />
+      <entry key="H1" value="6.9091261653301865" />
+      <entry key="H2" value="12.468640338896758" />
+      <entry key="H4" value="23.2419042803369" />
+      <entry key="D1" value="45.05674225676531" />
+      <entry key="W1" value="50.93712644335023" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
+      <entry key="MS100" value="1.0306086913441009E-7" />
+      <entry key="MS500" value="0.040051497630006025" />
+      <entry key="S2" value="0.44735746631086387" />
+      <entry key="S5" value="0.7248729207495002" />
+      <entry key="S10" value="0.851394691520625" />
+      <entry key="S30" value="0.9477860509313344" />
+      <entry key="S60" value="0.973543040102149" />
+      <entry key="M2" value="0.9866828467659449" />
+      <entry key="M5" value="0.9946517046447839" />
+      <entry key="M10" value="0.997322267195907" />
+      <entry key="M15" value="0.998214047152864" />
+      <entry key="M30" value="0.9991066245165547" />
+      <entry key="H1" value="0.9995532124487194" />
+      <entry key="H2" value="0.9997765812663943" />
+      <entry key="H4" value="0.9998882843930087" />
+      <entry key="D1" value="0.9999813798654162" />
+      <entry key="W1" value="0.9999973399595464" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9330690357413796" />
-      <entry key="MS500" value="1.1466534907747925" />
-      <entry key="S2" value="2.8377077512427245" />
-      <entry key="S5" value="5.316235315773897" />
-      <entry key="S10" value="7.881614899742032" />
-      <entry key="S30" value="11.701007597729724" />
-      <entry key="S60" value="13.543190986134354" />
-      <entry key="M2" value="16.105322752132764" />
-      <entry key="M5" value="21.461512167311042" />
-      <entry key="M10" value="26.93850795776495" />
-      <entry key="M15" value="30.570355347716127" />
-      <entry key="M30" value="36.338040037860374" />
-      <entry key="H1" value="40.5234342198334" />
-      <entry key="H2" value="43.074508962381806" />
-      <entry key="H4" value="44.48675745130297" />
-      <entry key="D1" value="45.74044118321198" />
-      <entry key="W1" value="45.962735539610655" />
+      <entry key="MS100" value="0.9327176251551926" />
+      <entry key="MS500" value="1.3476969935435934" />
+      <entry key="S2" value="2.3319613319793717" />
+      <entry key="S5" value="3.938953858704362" />
+      <entry key="S10" value="5.12908225679226" />
+      <entry key="S30" value="6.278919691156793" />
+      <entry key="S60" value="6.625586482262704" />
+      <entry key="M2" value="6.809182950586013" />
+      <entry key="M5" value="6.9227878509295175" />
+      <entry key="M10" value="6.961244772819883" />
+      <entry key="M15" value="6.9741378483400585" />
+      <entry key="M30" value="7.005560874631794" />
+      <entry key="H1" value="7.908178471719449" />
+      <entry key="H2" value="13.468135929983882" />
+      <entry key="H4" value="24.241621652425106" />
+      <entry key="D1" value="46.05668467720161" />
+      <entry key="W1" value="51.93711781036638" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -129,13 +128,19 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#168 on morsalin",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "#175 on morsalin",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -150,8 +155,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
       </set>
     </attachedChunks>
   </component>
@@ -187,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785692136637</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="delete DeliveryConfirmation.java file">
+      <option name="closed" value="true" />
+      <created>1785696423780</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1785696423782</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +208,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix error AirlineRepresentative" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix error AirlineRepresentative" />
+    <MESSAGE value="delete DeliveryConfirmation.java file" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete DeliveryConfirmation.java file" />
   </component>
 </project>
