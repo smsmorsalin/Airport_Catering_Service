@@ -5,6 +5,9 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import user.InventoryManager;
+
+import java.io.IOException;
 
 public class generateInventoryReportController
 {
@@ -68,6 +71,7 @@ public class generateInventoryReportController
     }
 
     @javafx.fxml.FXML
-    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) throws IOException {
+        InventoryManager.renderDashboard(actionEvent);
     }
 }

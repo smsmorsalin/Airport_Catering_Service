@@ -26,6 +26,8 @@ public class FinanceAndBillingManager extends Employee implements Serializable {
         return false;
     }
 
+
+
     public static void viewCalculateCost(javafx.event.ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/CalculateCostView.fxml"));
         Parent root = loader.load();

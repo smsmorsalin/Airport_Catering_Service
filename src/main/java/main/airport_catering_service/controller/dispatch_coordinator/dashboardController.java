@@ -86,7 +86,6 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
-        DispatchCoordinator.reverseDashboard(actionEvent);
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
     }
 }
