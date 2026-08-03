@@ -15,52 +15,28 @@
 
     <children>
 
-
-        <!-- ================= SIDEBAR ================= -->
-
-
         <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5">
-
-
             <children>
-
-
                 <Button onAction="#sidebardashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Dashboard">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
                 <Button onAction="#sidebarRegisterComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Register Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
                 <Button onAction="#sidebarTrackComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Track Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
                 <Button onAction="#sidebarResolveComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Resolve Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
-
                 <Button onAction="#sidebarEmergencyModificationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;         -fx-background-color:#0F6BFF;" text="Emergency Modify" textFill="white">
 
                     <font>
@@ -68,11 +44,6 @@
                     </font>
 
                 </Button>
-
-
-
-
-
                 <Button onAction="#sidebarFlightDelayRequestButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Delay Request">
 
                     <font>
@@ -80,11 +51,6 @@
                     </font>
 
                 </Button>
-
-
-
-
-
                 <Button onAction="#sidebarFlightCancellationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Cancellation">
 
                     <font>
@@ -92,11 +58,6 @@
                     </font>
 
                 </Button>
-
-
-
-
-
                 <Button onAction="#sidebarServiceUpdatesButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Service Updates">
 
                     <font>
@@ -104,305 +65,99 @@
                     </font>
 
                 </Button>
-
-
-
-
-
                 <Button onAction="#sidebarGenerateReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Generate Reports">
 
                     <font>
                         <Font size="15" />
                     </font>
-
                 </Button>
-
-
-
             </children>
 
         </VBox>
-
-
-
-
-
-
-        <!-- TOP TITLE -->
-
-
         <Button layoutY="3" onAction="#sidebarHomePageOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:pink;         -fx-background-radius:5;" text="Airport Catering Service">
-
-
             <font>
                 <Font name="Arial Bold" size="13" />
             </font>
-
-
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
-
-
         </Button>
-
-
-
-
-
-
-
-        <!-- MAIN AREA -->
-
 
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:silver;">
 
-
             <children>
-
-
-
                 <Label alignment="CENTER" prefWidth="609" text="welcome Username">
 
                     <font>
                         <Font name="Gabriola" size="18" />
                     </font>
-
                 </Label>
-
-
-
-
-
-
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
-
-
                     <children>
-
-
-
-
-
                         <Label layoutX="56" layoutY="25" text="Emergency Modification">
-
-
                             <font>
                                 <Font size="24" />
                             </font>
-
-
                         </Label>
-
-
-
                         <Label layoutX="56" layoutY="65" text="Submit emergency order modification request" />
-
-
-
-
-
-
-
-
-                        <!-- ORDER SEARCH -->
-
-
-
                         <AnchorPane layoutX="6" layoutY="105" prefHeight="110" prefWidth="712" style="-fx-background-color:white;             -fx-background-radius:25;">
 
-
                             <children>
-
-
 
                                 <Label layoutX="20" layoutY="15" text="Order Verification">
-
-
                                     <font>
                                         <Font size="18" />
                                     </font>
-
-
                                 </Label>
-
-
-
-
                                 <Label layoutX="20" layoutY="48" text="Order ID" />
-
-
-
                                 <TextField fx:id="orderIdField" layoutX="20" layoutY="70" prefHeight="30" prefWidth="180" />
-
-
-
-
                                 <Button fx:id="verifyOrderBtn" layoutX="215" layoutY="70" onAction="#CheckOrderOnAction" prefHeight="30" prefWidth="130" style="-fx-background-radius:10;" text="Check Order" />
-
-
                             </children>
 
                         </AnchorPane>
-
-
-
-
-
-
-
-
-
-                        <!-- MODIFICATION FORM -->
-
-
                         <AnchorPane layoutX="6" layoutY="230" prefHeight="390" prefWidth="420" style="-fx-background-color:white;             -fx-background-radius:25;">
-
-
                             <children>
-
-
-
                                 <Label layoutX="25" layoutY="25" text="Modification Details">
-
-
                                     <font>
                                         <Font size="18" />
                                     </font>
-
-
                                 </Label>
-
-
-
-
                                 <Label layoutX="25" layoutY="80" text="Modification Request" />
-
-
-
                                 <TextArea fx:id="modificationRequestTextField" layoutX="25" layoutY="105" prefHeight="70" prefWidth="350" promptText="Enter requested modification" />
-
-
-
-
                                 <Label layoutX="25" layoutY="195" text="Reason" />
-
-
-
-
                                 <TextArea fx:id="reasonTextField" layoutX="25" layoutY="220" prefHeight="65" prefWidth="350" promptText="Enter reason" />
-
-
-
-
-
                                 <Label layoutX="25" layoutY="310" text="Priority Level" />
-
-
-
-
                                 <ComboBox fx:id="priorityComboBox" layoutX="150" layoutY="305" prefWidth="220" />
 
-
-
-
                             </children>
 
                         </AnchorPane>
-
-
-
-
-
-
-
-
-
-                        <!-- SUMMARY PANEL -->
-
-
                         <AnchorPane layoutX="445" layoutY="230" prefHeight="390" prefWidth="273" style="-fx-background-color:#EAF2FF;             -fx-background-radius:25;">
-
-
                             <children>
-
-
-
-
                                 <Label layoutX="20" layoutY="25" text="Request Summary">
-
-
                                     <font>
                                         <Font size="20" />
                                     </font>
-
-
                                 </Label>
 
-
-
-
-
                                 <Label layoutX="25" layoutY="85" text="Order ID:" />
-
-
                                 <Label fx:id="summaryOrderidLabel" layoutX="130" layoutY="85" text="-" />
-
-
-
-
-
                                 <Label layoutX="25" layoutY="130" text="Status:" />
-
-
                                 <Label fx:id="summaryStatusLabel" layoutX="130" layoutY="130" text="Pending" />
-
-
-
-
-
                                 <Label layoutX="25" layoutY="175" text="Priority:" />
-
-
                                 <Label fx:id="summaryPriorityLabel" layoutX="130" layoutY="175" text="-" />
 
-
-
-
                                 <Button fx:id="submitModificationBtn" layoutX="50" layoutY="280" onAction="#SubmitButtonOnAction" prefHeight="40" prefWidth="170" style="-fx-background-color:#0F6BFF;         -fx-text-fill:white;         -fx-background-radius:10;" text="Submit Request">
-
-
                                     <font>
                                         <Font size="14" />
                                     </font>
-
-
                                 </Button>
 
-
-
-
                             </children>
-
-
                         </AnchorPane>
-
-
-
-
                     </children>
-
-
                 </AnchorPane>
-
-
             </children>
-
-
         </VBox>
-
-
     </children>
-
-
 </AnchorPane>

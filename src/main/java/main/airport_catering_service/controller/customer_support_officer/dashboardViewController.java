@@ -1,15 +1,46 @@
 package main.airport_catering_service.controller.customer_support_officer;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.*;
 import user.CustomerSupportOfficer;
+import user.User;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
 public class dashboardViewController
 {
     @javafx.fxml.FXML
+    private TableColumn descriptionTableView;
+    @javafx.fxml.FXML
+    private Label emargencyIssueLabel;
+    @javafx.fxml.FXML
+    private TableColumn ticketIDTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn statusTableView;
+    @javafx.fxml.FXML
+    private ComboBox statusComboBox;
+    @javafx.fxml.FXML
+    private TextField enterticketIDTextField;
+    @javafx.fxml.FXML
+    private TableView mainTableView;
+    @javafx.fxml.FXML
+    private TableColumn issueTypeTableView;
+
+    private CustomerSupportOfficer loggedInUser;
+    public void setLoggedInUser(User user){
+        if (user instanceof CustomerSupportOfficer CustomerSupportOfficer){
+            this.loggedInUser = CustomerSupportOfficer;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
+
+
+
+
+
+    @javafx.fxml.FXML
     public void initialize() {
-        CustomerSupportOfficer c = null;
 
     }
 
@@ -63,5 +94,9 @@ public class dashboardViewController
     @javafx.fxml.FXML
     public void sideBarFlightDelayRequestButtonOnAction(ActionEvent actionEvent) throws IOException {
         CustomerSupportOfficer.viewFlightDelayRequest(actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void updateOnAction(ActionEvent actionEvent) {
     }
 }

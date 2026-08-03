@@ -1,5 +1,6 @@
 package utility;
 
+import nonuser.CateringOrder;
 import user.User;
 
 import java.lang.reflect.Field;
@@ -63,6 +64,40 @@ public class databaseAccessor {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static Object checkTheIdExist(String fileName, String fieldName, int toCheckId) {
+
+        ArrayList<Object> objectList;
+
+        try {
+            objectList = BinaryFileUtility.readObjects(fileName);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        if (objectList == null || objectList.isEmpty()) {
+            return null;
+        }
+
+        for (Object object : objectList) {
+            try {
+                Field field = object.getClass().getDeclaredField(fieldName);
+                field.setAccessible(true);
+
+                int id = Integer.parseInt(field.get(object).toString());
+
+                if (id == toCheckId) {
+                    return object;   // Found
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        return null;    // Not found
     }
 
 }

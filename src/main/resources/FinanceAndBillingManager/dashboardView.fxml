@@ -18,24 +18,17 @@
 
     <children>
         <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5">
-
-
             <children>
                 <Button onAction="#sidebarDashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px; -fx-background-color: #8577F2;" text="Dashboard" textFill="WHITE">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
                 <Button onAction="#sideBarCalculateCostButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Calculate Cost">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
                 <Button onAction="#sideBarGenerateInvoiceButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Generate Invoice">
                     <font>
                         <Font size="15" />
@@ -53,14 +46,11 @@
                         <Font size="15" />
                     </font>
                 </Button>
-
-
                 <Button onAction="#sideBarOutstandingPaymentsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Outstanding Payments">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
                 <Button onAction="#sideBarFinancialReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Financial Reports">
                     <font>
                         <Font size="15" />
@@ -74,12 +64,9 @@
                 </Button>
 
                 <Button onAction="#sideBarPaymentHistoryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px;" text="Payment History">
-
-
                     <font>
                         <Font size="15" />
                     </font>
-
                 </Button>
             <Button onAction="#sidebarLogOutButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px; -fx-background-color: red;" text="Log Out">
                <font>
@@ -89,66 +76,42 @@
                   <Insets top="195.0" />
                </VBox.margin>
             </Button>
-
-
             </children>
-
         </VBox>
-
-
         <Button layoutY="3" onAction="#sidebarHomePageButtonOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:pink;         -fx-background-radius:5;" text="Airport Catering Service">
-
-
             <font>
                 <Font name="Arial Bold" size="13" />
             </font>
-
-
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
-
-
         </Button>
-
-
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:silver;">
-
-
             <children>
-
-
-
                 <Label alignment="CENTER" prefWidth="609" text="welcome Username">
-
-
                     <font>
                         <Font name="Gabriola" size="18" />
                     </font>
-
-
                 </Label>
-
-
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
                <children>
                   <AnchorPane layoutX="17.0" layoutY="37.0" prefHeight="658.0" prefWidth="688.0" style="-fx-background-radius: 25;">
                      <children>
-                        <Label layoutX="7.0" layoutY="2.0" prefHeight="17.0" prefWidth="95.0" text="Emargency Issue" textFill="#fa0702" />
-                        <TableView layoutX="2.0" layoutY="25.0" prefHeight="223.0" prefWidth="670.0">
+                        <Label fx:id="emargencyIssueLabel" layoutX="7.0" layoutY="2.0" prefHeight="17.0" prefWidth="95.0" text="Emargency Issue" textFill="#fa0702" />
+                        <TableView fx:id="mainTableView" layoutX="6.0" layoutY="21.0" prefHeight="223.0" prefWidth="670.0">
                            <columns>
-                              <TableColumn prefWidth="83.0" text="Ticket ID" />
-                              <TableColumn prefWidth="84.0" text="Issue Type" />
-                              <TableColumn prefWidth="330.0" text="Description" />
-                              <TableColumn prefWidth="91.0" text="Status" />
+                              <TableColumn fx:id="ticketIDTableColumn" prefWidth="83.0" text="Ticket ID" />
+                              <TableColumn fx:id="issueTypeTableView" prefWidth="84.0" text="Issue Type" />
+                              <TableColumn fx:id="descriptionTableView" prefWidth="330.0" text="Description" />
+                              <TableColumn fx:id="statusTableView" prefWidth="91.0" text="Status" />
                            </columns>
                         </TableView>
                         <Label layoutX="4.0" layoutY="304.0" prefHeight="17.0" prefWidth="88.0" text="Enter Ticket ID" />
-                        <TextField layoutX="85.0" layoutY="300.0" prefHeight="25.0" prefWidth="128.0" />
+                        <TextField fx:id="enterTicketIDtextField" layoutX="85.0" layoutY="300.0" prefHeight="25.0" prefWidth="128.0" />
                         <Label layoutX="222.0" layoutY="271.0" prefHeight="17.0" prefWidth="165.0" text="Update Issue's Current Status" textFill="#47a432" />
-                        <ComboBox layoutX="286.0" layoutY="300.0" prefWidth="150.0" />
+                        <ComboBox fx:id="statusComboBox" layoutX="286.0" layoutY="300.0" prefWidth="150.0" />
                         <Label layoutX="246.0" layoutY="304.0" prefHeight="17.0" prefWidth="35.0" text="Status" />
-                        <Button layoutX="468.0" layoutY="300.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Update">
+                        <Button layoutX="468.0" layoutY="300.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="25.0" prefWidth="95.0" text="Update">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>

@@ -102,8 +102,6 @@
                                     <font>
                                         <Font size="20" />
                                     </font>
-
-
                                 </Label>
                                 <Label layoutX="25" layoutY="70" text="Invoice ID" />
                                 <TextField fx:id="invoiceIdTextField" layoutX="120" layoutY="65" prefWidth="150" />

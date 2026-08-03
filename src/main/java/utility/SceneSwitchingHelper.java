@@ -9,6 +9,7 @@ import user.User;
 import user.UserReceiver;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class SceneSwitchingHelper {
 
@@ -32,22 +33,46 @@ public class SceneSwitchingHelper {
         }
     }
 
-        public static void switchSceneWithData(javafx.event.ActionEvent event, String fxml, User user) {
+    public static void switchSceneWithData(javafx.event.ActionEvent event, String fxml, User user) {
+        try {
 
-            try {
-                FXMLLoader loader = new FXMLLoader(SceneSwitchingHelper.class.getResource(fxml));
-                Parent root = loader.load();
-                Object controller = loader.getController();
-                if (controller instanceof UserReceiver receiver) {
-                    receiver.setLoggedInUser(user);
-                }
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                stage.setScene(new Scene(root));
-                stage.show();
+            URL location = SceneSwitchingHelper.class.getResource(fxml);
 
-            } catch (IOException e) {
-                e.printStackTrace();
+            if (location == null) {
+                AlertGenerator.showAlert(
+                        "FXML Error",
+                        "FXML file not found:\n" + fxml
+                );
+                return;
             }
+
+            FXMLLoader loader = new FXMLLoader(location);
+            Parent root = loader.load();
+
+            Object controller = loader.getController();
+
+            if (controller instanceof UserReceiver receiver) {
+                receiver.setLoggedInUser(user);
+            }
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            AlertGenerator.showAlert(
+                    "Scene Loading Error",
+                    "Unable to load the FXML file."
+            );
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            AlertGenerator.showAlert(
+                    "Unexpected Error",
+                    e.getMessage()
+            );
         }
+    }
 
 }
