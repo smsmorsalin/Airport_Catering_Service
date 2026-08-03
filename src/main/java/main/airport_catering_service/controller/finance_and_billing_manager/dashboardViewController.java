@@ -3,6 +3,10 @@ package main.airport_catering_service.controller.finance_and_billing_manager;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.FinanceAndBillingManager;
+<<<<<<< HEAD
+import user.KitchenProductionManager;
+=======
+>>>>>>> f82d5b9173af5fc5ed5a83068e71f706a69bcf2c
 import user.User;
 import utility.AlertGenerator;
 
@@ -11,6 +15,18 @@ import java.io.IOException;
 
 public class dashboardViewController
 {
+
+
+
+
+    private FinanceAndBillingManager loggedInUser;
+    public void setLoggedInUser(User user){
+        if (user instanceof FinanceAndBillingManager financeAndBillingManager){
+            this.loggedInUser = financeAndBillingManager;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
+
     @javafx.fxml.FXML
     private TableColumn descriptionTableView;
     @javafx.fxml.FXML
