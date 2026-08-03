@@ -32,7 +32,13 @@ public class dashboardController
     @javafx.fxml.FXML
     private TableColumn<Boolean,DashBoard> issueTypeTableView;
 
-
+    private KitchenProductionManager loggedInUser;
+    public void setLoggedInUser(User user){
+        if (user instanceof KitchenProductionManager kitchenProductionManager){
+            this.loggedInUser = kitchenProductionManager;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {

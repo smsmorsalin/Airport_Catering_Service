@@ -390,22 +390,6 @@
 
 
 
-
-
-
-                        <!-- BOTTOM BUTTONS -->
-
-
-                        <Button layoutX="45" layoutY="650" onAction="#resetOnAction" prefHeight="35" prefWidth="120" style="-fx-background-radius:10;" text="Reset" />
-
-
-
-
-                        <Button layoutX="190" layoutY="650" onAction="#CancelOnAction" prefHeight="35" prefWidth="120" style="-fx-background-radius:10;" text="Cancel" />
-
-
-
-
                     </children>
 
 

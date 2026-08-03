@@ -19,8 +19,6 @@ public class GenerateReportsViewController
     @javafx.fxml.FXML
     private ComboBox<String> reportTypeCombo;
     @javafx.fxml.FXML
-    private Button exportPdfBtn;
-    @javafx.fxml.FXML
     private Label generatedReportLabel;
     @javafx.fxml.FXML
     private TextField airlineTextField;
@@ -31,14 +29,6 @@ public class GenerateReportsViewController
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void ResetOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void ExportPDFOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
