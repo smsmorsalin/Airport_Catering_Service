@@ -31,6 +31,7 @@ public class cancelOrderViewConroller implements UserReceiver {
     private TextField fxidOrderIdTextField;
 
     private AirlineRepresentative loggedInUser;
+    CateringOrder orderObjects;
 
     @Override
     public void setLoggedInUser(User user) {
@@ -40,8 +41,6 @@ public class cancelOrderViewConroller implements UserReceiver {
             AlertGenerator.showAlert("Error", "Invalid user for this page.");
         }
     }
-
-    private CateringOrder selectedCateringOrder;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -73,45 +72,26 @@ public class cancelOrderViewConroller implements UserReceiver {
             return;
         }
 
-        ArrayList<Object> orderObjects =
-                BinaryFileUtility.readObjects("CateringOrder.bin");
+        orderObjects = CateringOrder.findById(orderId);
 
-        if (orderObjects == null || orderObjects.isEmpty()) {
-            AlertGenerator.showAlert("error", "No catering order exists.");
-            return;
-        }
-
-        selectedCateringOrder = null;
-
-        for (Object object : orderObjects) {
-
-            if (object instanceof CateringOrder cateringOrder
-                    && cateringOrder.getOrderId() == orderId) {
-
-                // The order exists, but it belongs to another airline
-                if (!cateringOrder.getAirlineId().equals(loggedInUser.getAirlineId())) {
-                    AlertGenerator.showAlert("error", "This order not belong to your airline.");
-                    fxidHiddenAnochorPanel.setVisible(false);
-                    return;
-                }
-
-                selectedCateringOrder = cateringOrder;
-                break;
-            }
-        }
-
-        if (selectedCateringOrder == null) {
-            AlertGenerator.showAlert("error", "Order ID does not exist.");
-
+        if (orderObjects == null ) {
+            AlertGenerator.showAlert("error", "Order does not exist.");
             fxidHiddenAnochorPanel.setVisible(false);
             return;
         }
 
+        if (!orderObjects.getAirlineId().equals(loggedInUser.getAirlineId())) {
+            AlertGenerator.showAlert("error", "This order not belong to your airline.");
+            fxidHiddenAnochorPanel.setVisible(false);
+            return;
+        }
+
+
         // Load order information into the Label
-        fxidFlightNumber.setText("Flight Number: "+ selectedCateringOrder.getFlightId());
-        fxidFlightDate.setText("Flight Date: "+ selectedCateringOrder.getDeliveryDate().toString());
-        fxidDeliveryTime.setText("Departure Time: "+ selectedCateringOrder.getDeliveryTime().toString());
-        fxidDeliveryLocation.setText("Delivery Location: "+ selectedCateringOrder.getDeliveryLocation());
+        fxidFlightNumber.setText("Flight Number: "+ orderObjects.getFlightId());
+        fxidFlightDate.setText("Flight Date: "+ orderObjects.getDeliveryDate().toString());
+        fxidDeliveryTime.setText("Departure Time: "+ orderObjects.getDeliveryTime().toString());
+        fxidDeliveryLocation.setText("Delivery Location: "+ orderObjects.getDeliveryLocation());
         fxidHiddenAnochorPanel.setVisible(true);
 
     }
@@ -125,20 +105,20 @@ public class cancelOrderViewConroller implements UserReceiver {
             return;
         }
 
-        if (selectedCateringOrder == null) {
+        if (orderObjects == null) {
             AlertGenerator.showAlert("error", "Please check an order first.");
             return;
         }
 
         boolean isCancelled =
                 loggedInUser.cancelCateringOrder(
-                        selectedCateringOrder.getOrderId()
+                        orderObjects.getOrderId()
                 );
 
         if (isCancelled) {
             fxidHiddenAnochorPanel.setVisible(false);
             fxidOrderIdTextField.clear();
-            selectedCateringOrder = null;
+            orderObjects = null;
         }
     }
 
@@ -148,7 +128,9 @@ public class cancelOrderViewConroller implements UserReceiver {
     //sidebar buttons
     @javafx.fxml.FXML
     public void sideBarTrackOrderButton(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(actionEvent, "/airline_representative/trackOrderView.fxml", loggedInUser);
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/airline_representative/truckOrderView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
