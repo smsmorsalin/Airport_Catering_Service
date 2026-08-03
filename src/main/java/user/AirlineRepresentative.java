@@ -60,7 +60,7 @@ public class AirlineRepresentative extends User implements Serializable {
         for (OrderItem orderItem : orderItems) {
             orderItemIds.add(orderItem.getItemId());
         }
-//        String flightId, String airlineId, int airlineRepresentativeId, LocalDate orderDate, String deliveryLocation, ArrayList<String> orderItemIds, LocalDate deliveryDate, LocalTime deliveryTime
+
         CateringOrder cateringOrder = new CateringOrder(
                 flightId,this.airlineId, this.getUserId(), LocalDate.now(), deliveryLocation,
                 orderItemIds, deliveryDate, deliveryTime
@@ -136,37 +136,60 @@ public class AirlineRepresentative extends User implements Serializable {
         return false;
     }
 
-    public final void submitFlightDelayRequest(ArrayList<Object> CateringOrderList){
-        BinaryFileUtility.overwriteObjects("CateringOrder.bin", CateringOrderList);
+    public final void submitFlightDelayRequest(int orderId, LocalDate newDeliveryDate, LocalTime newDeliveryTime){
+        ArrayList<Object> readCateringOrderList = BinaryFileUtility.readObjects("CateringOrder.bin");
+        if (readCateringOrderList == null || readCateringOrderList.isEmpty()) {
+            AlertGenerator.showAlert("error", "No order exists in the database.");
+            return;
+        }
+        for (Object object : readCateringOrderList) {
+            if (object instanceof CateringOrder cateringOrder) {
+                if (cateringOrder.getOrderId() == orderId) {
+                    if (cateringOrder.getAirlineId() != this.getAirlineId()) {
+                        AlertGenerator.showAlert("error", "this Airline not belong to You");
+                    }
+                    cateringOrder.setDeliveryDate(newDeliveryDate);
+                    cateringOrder.setDeliveryTime(newDeliveryTime);
+                    BinaryFileUtility.overwriteObjects("CateringOrder.bin", readCateringOrderList);
+                    AlertGenerator.showAlert("success", "Delay request submitted.");
+                    break;
+                }
+            }
+        }
+
     }
 
-    public ArrayList<String> trackCateringOrderStatus(String orderId){
+    public ArrayList<String> trackCateringOrderStatus(int orderId){
 
-        // find out orderStatus from CateringOrder by orderId
+        CateringOrder cateringOrder = CateringOrder.findById(orderId);
+        if (cateringOrder == null){
+            AlertGenerator.showAlert("error", "Order does not exist.");
+            return null;
+        }
+        String orderStatus = cateringOrder.getStatus();
 
         ArrayList<String> statusList = new ArrayList<String>();
-        String orderStatus = "delivered";
 
-        if (orderStatus.equals("approved")){
-            statusList.add("approved");
-        } else if (orderStatus.equals("prodcution")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
-        } else if (orderStatus.equals("quality Inspection")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
-            statusList.add("quality Inspection");
-        } else if (orderStatus.equals("dispatch")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
-            statusList.add("quality Inspection");
-            statusList.add("dispatch");
-        } else if (orderStatus.equals("delivery")) {
-            statusList.add("approved");
-            statusList.add("prodcution");
-            statusList.add("quality Inspection");
-            statusList.add("dispatch");
-            statusList.add("delivery");
+        if (orderStatus.equals("Approved")){
+            statusList.add("Approved");
+        } else if (orderStatus.equals("Production")) {
+            statusList.add("Approved");
+            statusList.add("Production");
+        } else if (orderStatus.equals("Quality Inspection")) {
+            statusList.add("Approved");
+            statusList.add("Production");
+            statusList.add("Quality Inspection");
+        } else if (orderStatus.equals("Dispatch")) {
+            statusList.add("Approved");
+            statusList.add("Production");
+            statusList.add("Quality Inspection");
+            statusList.add("Dispatch");
+        } else if (orderStatus.equals("Delivery")) {
+            statusList.add("Approved");
+            statusList.add("Production");
+            statusList.add("Quality Inspection");
+            statusList.add("Dispatch");
+            statusList.add("Delivery");
         }
         return statusList;
 

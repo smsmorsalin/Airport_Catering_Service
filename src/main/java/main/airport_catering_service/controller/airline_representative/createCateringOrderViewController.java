@@ -253,10 +253,8 @@ public class createCateringOrderViewController implements UserReceiver
     @javafx.fxml.FXML
     public void sideBarTrackOrderButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent,
-                "/airline_representative/trackOrderView.fxml",
-                loggedInUser
-        );
+                actionEvent, "/airline_representative/truckOrderView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
