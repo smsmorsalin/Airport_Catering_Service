@@ -11,323 +11,104 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="758.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.finance_and_billing_manager.RecordPaymentViewController">
-
-
     <children>
-
         <VBox layoutY="49" prefHeight="706" prefWidth="175" spacing="5">
-
             <children>
 
-
                 <Button onAction="#sidebardashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Dashboard" />
-
-
                 <Button onAction="#sideBarCalculateCostButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Calculate Cost" />
-
-
                 <Button onAction="#sideBarGenerateInvoiceButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Generate Invoice" />
-
-
                 <Button onAction="#sideBarRecordPaymentButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-color:#00853F;                -fx-background-radius:50;" text="Record Payment" textFill="WHITE" />
-
-
                 <Button onAction="#sideBarProcessRefundButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Process Refund" />
-
-
                 <Button onAction="#sideBarOutstandingPaymentsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Outstanding Payments" />
-
-
                 <Button onAction="#sideBarFinancialReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Financial Reports" />
-
-
                 <Button onAction="#sideBarRevenueSummaryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Revenue Summary" />
-
-
                 <Button onAction="#sideBarPaymentHistoryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Payment History" />
-
-
             </children>
 
         </VBox>
-
-
-
-
-
-        <!-- HEADER -->
-
-
         <Button layoutY="3" onAction="#sidebarHomePageButtonOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
-
-
             <font>
                 <Font name="Arial Bold" size="13" />
             </font>
-
-
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
 
 
         </Button>
-
-
-
-
-
-
-
-        <!-- MAIN AREA -->
-
-
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:#AFAFAF;">
 
-
             <children>
-
-
                 <Label alignment="CENTER" prefWidth="726" text="welcome Username">
-
-
                     <font>
                         <Font name="Gabriola" size="18" />
                     </font>
-
-
                 </Label>
-
-
-
-
-
 
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
 
-
                     <children>
 
-
-
-
-
-                        <!-- PAYMENT INFORMATION CARD -->
-
-
                         <AnchorPane layoutX="15" layoutY="20" prefHeight="120" prefWidth="680" style="-fx-background-color:#F8FAFC;                    -fx-background-radius:25;">
-
-
                             <children>
-
-
                                 <Label layoutX="25" layoutY="20" text="Payment Information">
-
-
                                     <font>
                                         <Font size="22" />
                                     </font>
-
                                 </Label>
-
-
-
                                 <Label layoutX="25" layoutY="65" text="Invoice ID" />
-
-
                                 <TextField fx:id="invoiceidTextField" layoutX="25" layoutY="85" prefWidth="180" />
-
-
-
-
                                 <Button fx:id="verifyInvoiceButton" layoutX="220" layoutY="85" onAction="#verifyInvoiceOnAction" prefWidth="120" text="Verify Invoice" />
-
-
-
-
-
                                 <Label layoutX="390" layoutY="65" text="Airline Name" />
                         <Label fx:id="airlinenameLabel" layoutX="391.0" layoutY="84.0" prefHeight="30.0" prefWidth="246.0" text="-" />
-
-
-
                             </children>
-
                         </AnchorPane>
-
-
-
-
-
-
-
-
-
-                        <!-- LEFT PAYMENT DETAILS -->
-
-
                         <AnchorPane layoutX="15" layoutY="165" prefHeight="470" prefWidth="390" style="-fx-background-color:#FFFFFF;                    -fx-background-radius:25;">
-
-
                             <children>
-
-
                                 <Label layoutX="25" layoutY="25" text="Payment Details">
-
-
                                     <font>
                                         <Font size="20" />
                                     </font>
-
-
                                 </Label>
 
-
-
-
                                 <Label layoutX="35" layoutY="80" text="Invoice Amount" />
-
-
                                 <Label fx:id="invoiceAmountLabel" layoutX="210" layoutY="80" text="0.00" />
-
-
-
-
                                 <Label layoutX="35" layoutY="120" text="Amount Due" />
-
-
                                 <Label fx:id="amountDueLabel" layoutX="210" layoutY="120" text="0.00" />
-
-
-
-
-
                                 <Label layoutX="35" layoutY="175" text="Payment Method" />
-
-
                                 <ComboBox fx:id="paymentMethodComboBox" layoutX="180" layoutY="170" prefWidth="170" />
-
-
-
-
-
                                 <Label layoutX="35" layoutY="230" text="Transaction Reference" />
-
-
                                 <TextField fx:id="transactionReferenceTextField" layoutX="180" layoutY="225" prefWidth="170" />
-
-
-
-
                                 <Label layoutX="35" layoutY="285" text="Amount Paid" />
-
-
                                 <TextField fx:id="amountPaidTextField" layoutX="180" layoutY="280" prefWidth="170" />
-
-
-
-
                                 <Label layoutX="35" layoutY="340" text="Payment Date" />
-
-
                                 <DatePicker fx:id="paymentDatePicker" layoutX="180" layoutY="335" prefWidth="170" />
-
-
-
-
-
                                 <Button fx:id="recordPaymentButton" layoutX="90" layoutY="400" onAction="#recordpaymentOnAction" prefHeight="40" prefWidth="180" style="-fx-background-color:#00853F;                -fx-background-radius:10;" text="Record Payment" textFill="WHITE" />
-
-
-
                             </children>
-
-
                         </AnchorPane>
-
-
-
-
-
-
-
-
-
-                        <!-- SUMMARY CARD -->
-
-
                         <AnchorPane layoutX="445" layoutY="190" prefHeight="360" prefWidth="245" style="-fx-background-color:#F8FAFC;                    -fx-background-radius:25;">
-
-
                             <children>
-
-
                                 <Label layoutX="25" layoutY="25" text="Payment Summary">
-
-
                                     <font>
                                         <Font size="22" />
                                     </font>
 
                                 </Label>
-
-
-
-
                                 <Label layoutX="25" layoutY="85" text="Payment ID" />
-
-
                                 <Label fx:id="paymentIdLabel" layoutX="130" layoutY="85" text="PAY-000" />
-
-
-
-
-
                                 <Label layoutX="25" layoutY="130" text="Invoice ID" />
-
-
                                 <Label fx:id="summaryInvoiceLabel" layoutX="130" layoutY="130" text="-" />
-
-
-
-
                                 <Label layoutX="25" layoutY="175" text="Amount Paid" />
-
-
                                 <Label fx:id="summaryAmountLabel" layoutX="130" layoutY="175" text="0.00" />
-
-
-
-
-
                                 <Label layoutX="25" layoutY="220" text="Payment Status" />
-
-
                                 <Label fx:id="paymentStatusLabel" layoutX="130" layoutY="220" text="-" />
 
-
-
                             </children>
-
-
                         </AnchorPane>
-
-
-
-
                     </children>
-
-
                 </AnchorPane>
-
-
             </children>
-
-
         </VBox>
-
-
     </children>
-
-
 </AnchorPane>
