@@ -18,24 +18,17 @@
 
     <children>
         <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5">
-
-
             <children>
                 <Button onAction="#sidebarDashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px; -fx-background-color: #8577F2;" text="Dashboard" textFill="WHITE">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
                 <Button onAction="#sideBarCalculateCostButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Calculate Cost">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
                 <Button onAction="#sideBarGenerateInvoiceButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Generate Invoice">
                     <font>
                         <Font size="15" />
@@ -53,14 +46,11 @@
                         <Font size="15" />
                     </font>
                 </Button>
-
-
                 <Button onAction="#sideBarOutstandingPaymentsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Outstanding Payments">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
                 <Button onAction="#sideBarFinancialReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Financial Reports">
                     <font>
                         <Font size="15" />
@@ -74,12 +64,9 @@
                 </Button>
 
                 <Button onAction="#sideBarPaymentHistoryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px;" text="Payment History">
-
-
                     <font>
                         <Font size="15" />
                     </font>
-
                 </Button>
             <Button onAction="#sidebarLogOutButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px; -fx-background-color: red;" text="Log Out">
                <font>
@@ -89,47 +76,23 @@
                   <Insets top="195.0" />
                </VBox.margin>
             </Button>
-
-
             </children>
-
         </VBox>
-
-
         <Button layoutY="3" onAction="#sidebarHomePageButtonOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:pink;         -fx-background-radius:5;" text="Airport Catering Service">
-
-
             <font>
                 <Font name="Arial Bold" size="13" />
             </font>
-
-
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
-
-
         </Button>
-
-
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:silver;">
-
-
             <children>
-
-
-
                 <Label alignment="CENTER" prefWidth="609" text="welcome Username">
-
-
                     <font>
                         <Font name="Gabriola" size="18" />
                     </font>
-
-
                 </Label>
-
-
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
                <children>
                   <AnchorPane layoutX="17.0" layoutY="37.0" prefHeight="658.0" prefWidth="688.0" style="-fx-background-radius: 25;">
