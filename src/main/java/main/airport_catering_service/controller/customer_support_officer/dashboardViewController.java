@@ -3,6 +3,8 @@ package main.airport_catering_service.controller.customer_support_officer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.CustomerSupportOfficer;
+import user.User;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
@@ -25,11 +27,20 @@ public class dashboardViewController
     @javafx.fxml.FXML
     private TableColumn issueTypeTableView;
 
+    private CustomerSupportOfficer loggedInUser;
+    public void setLoggedInUser(User user){
+        if (user instanceof CustomerSupportOfficer CustomerSupportOfficer){
+            this.loggedInUser = CustomerSupportOfficer;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
+
+
+
+
+
     @javafx.fxml.FXML
     public void initialize() {
-        CustomerSupportOfficer c = null;
-
-
 
     }
 
