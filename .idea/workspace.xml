@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22ad7f92-dc34-4ca5-a7c7-dda07d99f945" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/assignTruckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/assignTruckController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/dashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/emergencyDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/emergencyDeliveryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/generateDispatchReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/generateDispatchReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/manageDeliveryDelayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/manageDeliveryDelayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/monitorDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/monitorDeliveryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/packageOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/packageOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/receiveDispatchRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/receiveDispatchRequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/scheduleDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/scheduleDeliveryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/dashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/DashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/DashboardView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/PackageOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/PackageOrderView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ReceiveDispatchRequestView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ReceiveDispatchRequestView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ScheduleDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ScheduleDeliveryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/InventoryManager/DashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventoryManager/DashboardView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="22ad7f92-dc34-4ca5-a7c7-dda07d99f945" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +160,7 @@
       <option name="presentableId" value="Default" />
       <updated>1784673028203</updated>
       <workItem from="1785847567609" duration="638000" />
-      <workItem from="1785874111113" duration="6358000" />
+      <workItem from="1785874111113" duration="6666000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
       <option name="closed" value="true" />
