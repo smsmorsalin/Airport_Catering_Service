@@ -2,6 +2,7 @@ package main.airport_catering_service.controller.inventory_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 import user.DispatchCoordinator;
 import user.InventoryManager;
 import user.User;
@@ -36,6 +37,11 @@ public class dashboardController implements UserReceiver
     private TableColumn descriptionTableviewColumn;
 
     private InventoryManager loggedInUser;
+    @javafx.fxml.FXML
+    private Text reasonText;
+    @javafx.fxml.FXML
+    private TextField reasonTextfield;
+
     @Override
     public void setLoggedInUser(User user){
         if (user instanceof InventoryManager inventoryManager){
