@@ -3,6 +3,7 @@ package main.airport_catering_service.controller.customer_support_officer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.CustomerSupportOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
@@ -14,8 +15,6 @@ public class ResolveComplaintViewController
     private Label currentStatusLabel;
     @javafx.fxml.FXML
     private Label orderIdLabel;
-    @javafx.fxml.FXML
-    private Button searchComplaintButton;
     @javafx.fxml.FXML
     private Label airlineLabel;
     @javafx.fxml.FXML
@@ -31,11 +30,34 @@ public class ResolveComplaintViewController
 
     @javafx.fxml.FXML
     public void ResolveComplaintOnAction(ActionEvent actionEvent) {
+        if(complaintidTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        int orderId;
+        try{
+            orderId = Integer.parseInt(complaintidTextField.getText());
+        }
+        catch (NumberFormatException e){
+            AlertGenerator.showAlert("Wrong Input","textField should be an integer");
+            return;
+        }
+        if(orderId <= 0){
+            AlertGenerator.showAlert("Invalid Input","Text field should be grater than 0");
+            return;
+        }
+        if(resolutionNotesTextField.getText().trim().isEmpty()) {
+            AlertGenerator.showAlert("Invalid Input", "Text field should be filled");
+            return;
+        }
+
+        if(resolutionStatusComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
+
     }
 
-    @javafx.fxml.FXML
-    public void searchComplaintOnAction(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {

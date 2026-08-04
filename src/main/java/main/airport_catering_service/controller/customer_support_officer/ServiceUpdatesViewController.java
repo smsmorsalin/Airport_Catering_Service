@@ -3,6 +3,7 @@ package main.airport_catering_service.controller.customer_support_officer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.CustomerSupportOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
@@ -13,17 +14,9 @@ public class ServiceUpdatesViewController
     @javafx.fxml.FXML
     private Button publishUpdateBtn;
     @javafx.fxml.FXML
-    private Button viewUpdatesBtn;
-    @javafx.fxml.FXML
     private TextArea updateMessageTextField;
     @javafx.fxml.FXML
     private ComboBox<String> priorityComboBox;
-    @javafx.fxml.FXML
-    private Label updateStatusLabel;
-    @javafx.fxml.FXML
-    private Label summaryPriorityLabel;
-    @javafx.fxml.FXML
-    private Label summaryCategoryLabel;
     @javafx.fxml.FXML
     private ComboBox<String> updateCategoryComboBox;
     @javafx.fxml.FXML
@@ -33,16 +26,24 @@ public class ServiceUpdatesViewController
     public void initialize() {
     }
 
-    @Deprecated
-    public void ServiceUpdatesOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void ViewUpdatesLabel(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void PublishUpdateOnAction(ActionEvent actionEvent) {
+        if(updateTitleTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        if(updateMessageTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        if(updateCategoryComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
+        if(priorityComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
     }
 
     @javafx.fxml.FXML

@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import nonuser.Report;
 import user.CustomerSupportOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
@@ -21,11 +22,11 @@ public class GenerateReportsViewController
     @javafx.fxml.FXML
     private Label generatedReportLabel;
     @javafx.fxml.FXML
-    private TextField airlineTextField;
-    @javafx.fxml.FXML
     private ComboBox<String> statusComboBox;
     @javafx.fxml.FXML
     private ComboBox<String> dateRangeComboBox;
+    @javafx.fxml.FXML
+    private ComboBox <String > airlineNameComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -33,6 +34,22 @@ public class GenerateReportsViewController
 
     @javafx.fxml.FXML
     public void GenerateReportOnAction(ActionEvent actionEvent) {
+        if(airlineNameComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
+        if(reportTypeCombo.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
+        if(statusComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
+        if(dateRangeComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
     }
 
     @javafx.fxml.FXML

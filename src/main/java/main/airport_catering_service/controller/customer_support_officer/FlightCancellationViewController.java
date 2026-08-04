@@ -3,13 +3,12 @@ package main.airport_catering_service.controller.customer_support_officer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.CustomerSupportOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
 public class FlightCancellationViewController
 {
-    @javafx.fxml.FXML
-    private Button verifyOrderBtn;
     @javafx.fxml.FXML
     private Button cancelFlightBtn;
     @javafx.fxml.FXML
@@ -17,17 +16,9 @@ public class FlightCancellationViewController
     @javafx.fxml.FXML
     private TextArea notesTextField;
     @javafx.fxml.FXML
-    private Label cancelStatusLabel;
+    private ComboBox <String> cancellationreasonComboBox;
     @javafx.fxml.FXML
-    private Label summaryOrderidLabel;
-    @javafx.fxml.FXML
-    private Label refundStatusLabel;
-    @javafx.fxml.FXML
-    private Label Statuslabel;
-    @javafx.fxml.FXML
-    private ComboBox<String> reasonComboBox;
-    @javafx.fxml.FXML
-    private TextField airlineNameTextField;
+    private ComboBox <String > airlinenameComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -35,16 +26,36 @@ public class FlightCancellationViewController
 
     @javafx.fxml.FXML
     public void CancelFlightOnAction(ActionEvent actionEvent) {
-    }
+        if(orderidTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        int orderId;
+        try{
+            orderId = Integer.parseInt(orderidTextField.getText());
+        }
+        catch (NumberFormatException e){
+            AlertGenerator.showAlert("Wrong Input","textField should be an integer");
+            return;
+        }
+        if(orderId <= 0){
+            AlertGenerator.showAlert("Invalid Input","Text field should be grater than 0");
+            return;
+        }
+        if(notesTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
 
-    @Deprecated
-    public void FlightCancellationOnAction(ActionEvent actionEvent) {
+        if(airlinenameComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
+        if(cancellationreasonComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
     }
-
-    @javafx.fxml.FXML
-    public void VerifyOrderOnAction(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {
     }

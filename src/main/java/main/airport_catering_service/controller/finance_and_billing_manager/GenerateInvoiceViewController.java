@@ -5,9 +5,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import nonuser.CateringOrder;
+import nonuser.Invoice;
 import user.FinanceAndBillingManager;
+import utility.AlertGenerator;
+import utility.BinaryFileUtility;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class GenerateInvoiceViewController
 {
@@ -38,19 +44,24 @@ public class GenerateInvoiceViewController
     @javafx.fxml.FXML
     private Label transportCostLabel;
     @javafx.fxml.FXML
-    private Label billingStatusLabel;
-    @javafx.fxml.FXML
     private Label operationCostLabel;
     @javafx.fxml.FXML
     private Label airlineNameLabel;
     @javafx.fxml.FXML
     private TextField billingAddressTextField;
     @javafx.fxml.FXML
-    private Label AirlineNameLabel;
-    @javafx.fxml.FXML
     private Button verifyOrderButton;
     @javafx.fxml.FXML
     private Button generateInvoiceButton;
+
+    private int selectedCateringOrderId;
+    private ArrayList<Object> selectedObjectedList;
+    private ArrayList<Object> selectedInvoiceList;
+    @javafx.fxml.FXML
+    private Label OrderIdLabel;
+    @javafx.fxml.FXML
+    private Label orderStatusLabel;
+    private CateringOrder selectedCateringOrder;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -58,6 +69,39 @@ public class GenerateInvoiceViewController
 
     @javafx.fxml.FXML
     public void generateinvoiceOnAction(ActionEvent actionEvent) {
+
+        if(orderidTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        if(billingAddressTextField.getText().trim().matches("//d+")){
+            AlertGenerator.showAlert("Invalid Input","Billing Address  Should be String");
+            return;
+        }
+        int ingredientId;
+        try{
+            ingredientId = Integer.parseInt(orderidTextField.getText());
+        }
+        catch (NumberFormatException e){
+            AlertGenerator.showAlert("Wrong Input","textField should be an integer");
+            return;
+        }
+        if(ingredientId <= 0){
+            AlertGenerator.showAlert("Invalid Input","Text field should be grater than 0");
+            return;
+        }
+
+        if(orderidTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+
+        if(dueDatePicker.getValue().isBefore(LocalDate.now()) || dueDatePicker.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
+
+
     }
 
     @Deprecated
@@ -68,6 +112,46 @@ public class GenerateInvoiceViewController
 
     @javafx.fxml.FXML
     public void VerifyOrderOnAction(ActionEvent actionEvent) {
+        try{
+            selectedCateringOrderId = Integer.parseInt(orderidTextField.getText());
+        } catch (NumberFormatException e) {
+            AlertGenerator.showAlert("error", "Enter an integer Value");
+            return;
+        }
+        selectedObjectedList = BinaryFileUtility.readObjects("CateringOrder.bin");
+        for(Object obj : selectedObjectedList){
+            if (obj instanceof CateringOrder cateringOrder){
+                if(cateringOrder.getOrderId() == selectedCateringOrderId){
+                    if(cateringOrder.getStatus().equals("Canceled")){
+                        AlertGenerator.showAlert("error", "Order Already canceled");
+                        return;
+                    }
+                    if(cateringOrder.getStatus().equals("Delivery")){
+                        AlertGenerator.showAlert("error", "Order Already Delivered");
+                        return;
+                    }
+                    if(cateringOrder.getStatus().equals("Rejected")){
+                        AlertGenerator.showAlert("error", "Order Already Rejected");
+                        return;
+                    }
+                    selectedInvoiceList = BinaryFileUtility.readObjects("Invoice.bin");
+
+                    for (Object obj2 : selectedInvoiceList){
+                        if (obj2 instanceof Invoice invoice){
+                            if(invoice.getOrderId() == selectedCateringOrderId){
+                                AlertGenerator.showAlert("error", "Already Invoice Generated");
+                                return;
+                            }
+                            selectedCateringOrder = cateringOrder;
+                        }
+                    }
+                    OrderIdLabel.setText("Order Id: " +cateringOrder.getOrderId());
+                    orderStatusLabel.setText("Order Status: "+ cateringOrder.getStatus());
+                    return;
+                }
+            }
+        }
+
     }
 
     @Deprecated

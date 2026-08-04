@@ -90,7 +90,7 @@
                   <Line endX="183.5" layoutX="253.0" layoutY="25.0" startX="-100.0" />
                   <Text layoutX="36.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Order" wrappingWidth="87.13671875" />
                   <TextField fx:id="fxidOrderIdTextField" layoutX="120.0" layoutY="39.0" prefHeight="25.0" prefWidth="197.0" promptText="order id" style="-fx-background-color: white;" />
-                  <Button layoutX="353.0" layoutY="37.0" mnemonicParsing="false" onAction="#loadOrderedDataToTable" prefHeight="25.0" prefWidth="127.0" text="Load Ordered Data">
+                  <Button layoutX="353.0" layoutY="37.0" mnemonicParsing="false" onAction="#loadOrderedDataOnAction" prefHeight="25.0" prefWidth="127.0" text="Load Ordered Data">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -98,21 +98,21 @@
                   <Line endX="498.0" layoutX="107.0" layoutY="74.0" startX="-108.0" />
                   <AnchorPane fx:id="fxidHiddenMainAnchorPane" layoutY="76.0" prefHeight="510.0" prefWidth="606.0">
                      <children>
-                        <Text layoutX="26.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Serial Number From Table to Edit Meal" wrappingWidth="251.0">
+                        <Text layoutX="33.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Item ID From Table to Edit the Item" wrappingWidth="235.0">
                            <font>
                               <Font name="Arial" size="12.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="fxidSerialNumberFromTable" layoutX="277.0" layoutY="229.0" prefHeight="25.0" prefWidth="148.0" promptText="Serial number from table" style="-fx-background-color: white;" />
-                        <Button fx:id="editMealButton" layoutX="447.0" layoutY="229.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="edit meal">
+                        <TextField fx:id="fxidItemIdFromTable" layoutX="277.0" layoutY="229.0" prefHeight="25.0" prefWidth="148.0" promptText="Item ID from table" style="-fx-background-color: white;" />
+                        <Button layoutX="447.0" layoutY="229.0" mnemonicParsing="false" onAction="#editItemButtonOnAction" prefHeight="25.0" prefWidth="108.0" text="edit Item">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
                         <TableView fx:id="orderedMealTableviewFxid" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="563.0">
                           <columns>
-                            <TableColumn fx:id="TableColOrderedMealSerialNumber" prefWidth="113.0" text="Serial Number" />
-                            <TableColumn fx:id="TableColOrderedMealMealName" prefWidth="286.0" text="meal name" />
+                            <TableColumn fx:id="TableColOrderedItemIdNumber" prefWidth="113.0" text="Item ID" />
+                            <TableColumn fx:id="TableColOrderedMealMealName" prefWidth="286.0" text="Item name" />
                               <TableColumn fx:id="TableColOrderedMealQuantity" prefWidth="163.0" text="quantity" />
                           </columns>
                         </TableView>
@@ -130,15 +130,19 @@
                               </Button>
                               <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected meal" wrappingWidth="77.0" />
                               <Text layoutX="249.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="quantity" wrappingWidth="53.13671875" />
-                              <Button layoutX="131.0" layoutY="107.0" mnemonicParsing="false" onAction="#modifyOrderButton" prefHeight="25.0" prefWidth="332.0" text="Modify Order">
+                              <Button layoutX="131.0" layoutY="107.0" mnemonicParsing="false" onAction="#modifyOrderButton" prefHeight="42.0" prefWidth="332.0" text="Modify Order">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
                               </Button>
-                              <Line endX="463.5" layoutX="115.0" layoutY="60.0" startX="-100.0" />
+                              <Line endX="463.5" layoutX="115.0" layoutY="86.0" startX="-100.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="60.0" opacity="0.48" prefHeight="17.0" prefWidth="356.0" text="If you you want to delete the Item assign 0 (zero) in quantity field" />
                            </children>
                         </AnchorPane>
-                        <Text layoutX="134.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="your selected serial number meal will load below" wrappingWidth="284.5">
+                        <Text layoutX="175.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="your selected Item will load below" wrappingWidth="197.0">
                            <font>
                               <Font name="Arial" size="12.0" />
                            </font>

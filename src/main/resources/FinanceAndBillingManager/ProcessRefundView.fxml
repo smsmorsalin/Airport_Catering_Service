@@ -15,330 +15,103 @@
 
     <children>
 
-
-        <!-- ================= SIDEBAR ================= -->
-
         <VBox layoutY="49" prefHeight="706" prefWidth="175" spacing="5">
 
 
             <children>
 
-
                 <Button onAction="#sidebardashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Dashboard" />
-
-
                 <Button onAction="#sideBarCalculateCostButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Calculate Cost" />
-
-
                 <Button onAction="#sideBarGenerateInvoiceButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Generate Invoice" />
-
-
                 <Button onAction="#sideBarRecordPaymentButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Record Payment" />
-
-
                 <Button onAction="#sideBarProcessRefundButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-color:#C83D4A;                -fx-background-radius:50;" text="Process Refund" textFill="WHITE" />
-
-
                 <Button onAction="#sideBarOutstandingPaymentsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Outstanding Payments" />
-
-
                 <Button onAction="#sideBarFinancialReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Financial Reports" />
-
-
                 <Button onAction="#sideBarRevenueSummaryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Revenue Summary" />
-
-
                 <Button onAction="#sideBarPaymentHistoryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Payment History" />
-
 
             </children>
 
         </VBox>
 
-
-
-
-
-
-        <!-- HEADER -->
-
         <Button layoutY="3" onAction="#sidebarHomePageButtonOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
-
-
             <font>
                 <Font name="Arial Bold" size="13" />
             </font>
-
-
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
-
-
         </Button>
-
-
-
-
-
-
-
-        <!-- MAIN AREA -->
-
-
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:#B5B5B5;">
-
 
             <children>
 
-
                 <Label alignment="CENTER" prefWidth="726" text="welcome Username">
-
-
                     <font>
                         <Font name="Gabriola" size="18" />
                     </font>
-
-
                 </Label>
-
-
-
-
-
-
 
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
 
 
                     <children>
-
-
-
-
-
-                        <!-- REFUND INFORMATION CARD -->
-
-
                         <AnchorPane layoutX="7.0" layoutY="12.0" prefHeight="706.0" prefWidth="452.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
-
-
                             <children>
-
-
-
                                 <Label layoutX="30" layoutY="30" text="Refund Information">
-
-
                                     <font>
                                         <Font size="24" />
                                     </font>
 
                                 </Label>
-
-
-
-
-
                                 <Label layoutX="30" layoutY="85" text="Refund Request ID" />
-
-
-
                                 <TextField fx:id="refundRequestIdField" layoutX="30" layoutY="105" prefWidth="260" />
-
-
-
-
-                                <Button fx:id="verifyRequestButton" layoutX="293.0" layoutY="105.0" onAction="#verifyrequestOnAction" prefWidth="140" text="Verify Request" />
-
-
-
-
-
-
                                 <Label layoutX="30" layoutY="160" text="Order ID" />
-
-
-
-                                <TextField fx:id="orderidTextField" layoutX="30" layoutY="180" prefWidth="410" />
-
-
-
-
-
-
-
+                                <TextField fx:id="orderidTextField" layoutX="30" layoutY="180" prefHeight="26.0" prefWidth="389.0" />
                                 <Label layoutX="30" layoutY="250" text="Refund Reason" />
-
-
-
                                 <ComboBox fx:id="refundReasonComboBox" layoutX="30" layoutY="270" prefWidth="410" />
-
-
-
-
-
-
-
-
                                 <Label layoutX="30" layoutY="335" text="Refund Method" />
-
-
-
                                 <ComboBox fx:id="refundMethodComboBox" layoutX="30" layoutY="355" prefWidth="410" />
-
-
-
-
-
-
-
-
                                 <Label layoutX="30" layoutY="420" text="Refund Amount" />
-
-
-
-                                <TextField fx:id="refundAmounTextField" layoutX="30" layoutY="440" prefWidth="410" />
-
-
-
-
-
-
-
+                                <TextField fx:id="refundAmountTextField" layoutX="30" layoutY="440" prefWidth="410" />
                                 <Label layoutX="30" layoutY="500" text="Additional Notes" />
-
-
-
                                 <TextArea fx:id="additionalNotesTextField" layoutX="30" layoutY="520" prefHeight="80" prefWidth="410" />
-
-
-
-
-
-
-
-
                                 <Button fx:id="processRefundButton" layoutX="130" layoutY="610" onAction="#processRefundOnAction" prefHeight="45" prefWidth="200" style="-fx-background-color:#FF0000;                -fx-background-radius:10;" text="Process Refund" textFill="WHITE" />
-
-
-
                             </children>
-
-
                         </AnchorPane>
-
-
-
-
-
-
-
-
-
-                        <!-- REFUND CONFIRMATION CARD -->
-
-
                         <AnchorPane layoutX="471.0" layoutY="161.0" prefHeight="420" prefWidth="240" style="-fx-background-color:#FFFFFF;                    -fx-background-radius:25;">
-
-
                             <children>
-
-
                                 <Label layoutX="25" layoutY="30" text="Refund Confirmation">
-
-
                                     <font>
                                         <Font size="22" />
                                     </font>
 
                                 </Label>
-
-
-
-
-
                                 <Label layoutX="25" layoutY="90" text="Refund ID :" />
-
-
                                 <Label fx:id="refundIdLabel" layoutX="130" layoutY="90" text="-" />
-
-
-
-
-
                                 <Label layoutX="25" layoutY="135" text="Refund Amount :" />
-
-
                                 <Label fx:id="refundAmountLabel" layoutX="150" layoutY="135" text="0.00" />
-
-
-
-
-
                                 <Label layoutX="25" layoutY="180" text="Refund Status :" />
-
-
                                 <Label fx:id="refundStatusLabel" layoutX="150" layoutY="180" text="Pending" />
-
-
-
-
-
                                 <Label layoutX="25" layoutY="225" text="Refund Date :" />
-
-
                                 <Label fx:id="refundDateLabel" layoutX="150" layoutY="225" text="-" />
-
-
-
-
-
                                 <Label layoutX="25" layoutY="270" text="Payment Method :" />
-
-
                                 <Label fx:id="paymentMethodLabel" layoutX="150" layoutY="270" text="-" />
-
-
-
-
-
                                 <Label layoutX="25" layoutY="315" text="Transaction Method :" />
-
-
                                 <Label fx:id="transactionMethodLabel" layoutX="160" layoutY="315" text="-" />
-
-
-
-
-                                <Button fx:id="viewRefundButton" layoutX="45" layoutY="415" onAction="#ViewRefundDetailsOnAction" prefHeight="40" prefWidth="160" text="View Refund Details" />
-
-
-
 
                             </children>
 
-
                         </AnchorPane>
-
-
-
-
-
 
                     </children>
 
-
                 </AnchorPane>
-
 
             </children>
 
-
         </VBox>
 
-
     </children>
-
 
 </AnchorPane>
