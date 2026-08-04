@@ -35,13 +35,16 @@ public class dashboardViewController implements UserReceiver
     @javafx.fxml.FXML
     private TableColumn <Airline,String> issueTypeTableView;
 
-//    private FinanceAndBillingManager loggedInUser;
-//    public void setLoggedInUser(User user){
-//        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
-//            this.loggedInUser = FinanceAndBillingManager;
-//        }
-//        AlertGenerator.showAlert("error", "error Authentication failed");
-//    }
+    private FinanceAndBillingManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
+            this.loggedInUser = FinanceAndBillingManager;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
+
+
 
 
 
@@ -65,7 +68,8 @@ public class dashboardViewController implements UserReceiver
     }
 
     @javafx.fxml.FXML
-    public void sidebarLogOutButtonOnAction(ActionEvent actionEvent) {
+    public void sidebarLogOutButtonOnAction(ActionEvent actionEvent) throws IOException {
+        User.logout(actionEvent);
     }
 
     @Deprecated
@@ -120,5 +124,6 @@ public class dashboardViewController implements UserReceiver
     public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) throws IOException{
         FinanceAndBillingManager.viewOutstandingPayments(actionEvent);
     }
+
 
 }
