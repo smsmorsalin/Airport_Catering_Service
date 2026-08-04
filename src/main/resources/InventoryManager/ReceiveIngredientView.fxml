@@ -67,6 +67,7 @@
                   <Label fx:id="ingredientNameLabel" layoutX="37.0" layoutY="428.0" text="Ingredient Name" />
                   <Label fx:id="quantityLabel" layoutX="37.0" layoutY="463.0" text="Quantity" />
                   <Label fx:id="receivingDateLabel" layoutX="37.0" layoutY="496.0" text="Receiving Date" />
+                  <Button layoutX="70.0" layoutY="224.0" mnemonicParsing="false" onAction="#searchAndShowButtonOnAction" prefHeight="26.0" prefWidth="138.0" text="Search And Show" />
                </children>
             </AnchorPane>
          </children></VBox>

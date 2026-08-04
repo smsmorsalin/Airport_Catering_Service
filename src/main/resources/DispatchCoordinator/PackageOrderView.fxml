@@ -71,6 +71,7 @@
                   </TableView>
                   <TextArea fx:id="packagingNoteTextArea" layoutX="95.0" layoutY="123.0" prefHeight="26.0" prefWidth="200.0" />
                   <ComboBox fx:id="packagingTypeComboBox" layoutX="98.0" layoutY="75.0" prefWidth="150.0" />
+                  <Button layoutX="14.0" layoutY="198.0" mnemonicParsing="false" onAction="#searchAndShowButtonOnAction" prefHeight="26.0" prefWidth="174.0" text="Search And Show" />
                </children>
             </AnchorPane>
             </children></VBox>

@@ -11,8 +11,6 @@ public class monitorDeliveryController
     @javafx.fxml.FXML
     private Label driverNameLabel;
     @javafx.fxml.FXML
-    private Label currentStatusLabel;
-    @javafx.fxml.FXML
     private Label departureTimeLabel;
     @javafx.fxml.FXML
     private Label orderIdLabel;
@@ -60,5 +58,9 @@ public class monitorDeliveryController
     @javafx.fxml.FXML
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
         DispatchCoordinator.renderDashboard(actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
     }
 }

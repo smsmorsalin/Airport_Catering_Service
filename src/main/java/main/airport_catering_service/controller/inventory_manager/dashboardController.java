@@ -2,8 +2,10 @@ package main.airport_catering_service.controller.inventory_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.DispatchCoordinator;
 import user.InventoryManager;
 import user.User;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
@@ -31,6 +33,15 @@ public class dashboardController
     private TableView tableView;
     @javafx.fxml.FXML
     private TableColumn descriptionTableviewColumn;
+
+    private InventoryManager loggedInUser;
+    public void setLoggedInUser(User user){
+        if (user instanceof InventoryManager inventoryManager){
+            loggedInUser = inventoryManager;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -15,8 +15,6 @@ public class receiveIngredientController
     @javafx.fxml.FXML
     private Text deliveryNoteNumberText;
     @javafx.fxml.FXML
-    private Label supplierNameLabel;
-    @javafx.fxml.FXML
     private Text supplierNameText;
     @javafx.fxml.FXML
     private Label receivingDateLabel;
@@ -24,8 +22,6 @@ public class receiveIngredientController
     private Label receivingIdLabel;
     @javafx.fxml.FXML
     private Text receivedQuantityText;
-    @javafx.fxml.FXML
-    private Label quantityReceivedLabel;
     @javafx.fxml.FXML
     private TextField purchaseRequestIdTextfield;
     @javafx.fxml.FXML
@@ -36,6 +32,10 @@ public class receiveIngredientController
     private TextField deliveryNoteNumberTextfield;
     @javafx.fxml.FXML
     private TextField receivedQuantityTextfield;
+    @javafx.fxml.FXML
+    private Label quantityLabel;
+    @javafx.fxml.FXML
+    private Label supplierLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -76,5 +76,9 @@ public class receiveIngredientController
     @javafx.fxml.FXML
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) throws IOException {
         InventoryManager.renderDashboard(actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
     }
 }

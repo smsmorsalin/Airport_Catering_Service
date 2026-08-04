@@ -60,7 +60,7 @@
                      <children>
                         <Text fx:id="orderIdText" layoutX="36.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID" />
                         <TextField fx:id="orderIdTextfield" layoutX="95.0" layoutY="43.0" />
-                        <Button layoutX="43.0" layoutY="84.0" mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="26.0" prefWidth="77.0" text="Search" />
+                        <Button layoutX="43.0" layoutY="84.0" mnemonicParsing="false" onAction="#searchAndShowButtonOnAction" prefHeight="26.0" prefWidth="176.0" text="Search And Show" />
                         <TableView fx:id="tableView" layoutY="137.0" prefHeight="200.0" prefWidth="591.0">
                           <columns>
                             <TableColumn fx:id="truckIdTableviewColumn" prefWidth="75.0" text="Truck ID" />

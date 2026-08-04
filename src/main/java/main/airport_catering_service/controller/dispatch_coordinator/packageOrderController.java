@@ -1,9 +1,7 @@
 package main.airport_catering_service.controller.dispatch_coordinator;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import user.DispatchCoordinator;
 
@@ -22,8 +20,6 @@ public class packageOrderController
     @javafx.fxml.FXML
     private TextField orderIdTextfield;
     @javafx.fxml.FXML
-    private TextField packagingNoteTextfield;
-    @javafx.fxml.FXML
     private TableColumn packagingTypeTableviewColumn;
     @javafx.fxml.FXML
     private TableView tableView;
@@ -32,7 +28,9 @@ public class packageOrderController
     @javafx.fxml.FXML
     private Text packagingNoteText;
     @javafx.fxml.FXML
-    private TextField packagingTypeTextfield;
+    private ComboBox packagingTypeComboBox;
+    @javafx.fxml.FXML
+    private TextArea packagingNoteTextArea;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -73,5 +71,9 @@ public class packageOrderController
     @javafx.fxml.FXML
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) throws IOException {
         DispatchCoordinator.renderDashboard(actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
     }
 }
