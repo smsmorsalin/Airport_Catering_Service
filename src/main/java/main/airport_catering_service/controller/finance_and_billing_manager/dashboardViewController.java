@@ -4,7 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import nonuser.Airline;
 import user.FinanceAndBillingManager;
+//<<<<<<< HEAD
 import user.KitchenProductionManager;
+//=======
+//>>>>>>> f82d5b9173af5fc5ed5a83068e71f706a69bcf2c
 import user.User;
 import user.UserReceiver;
 import utility.AlertGenerator;
@@ -32,13 +35,13 @@ public class dashboardViewController implements UserReceiver
     @javafx.fxml.FXML
     private TableColumn <Airline,String> issueTypeTableView;
 
-    private FinanceAndBillingManager loggedInUser;
-    public void setLoggedInUser(User user){
-        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
-            this.loggedInUser = FinanceAndBillingManager;
-        }
-        AlertGenerator.showAlert("error", "error Authentication failed");
-    }
+//    private FinanceAndBillingManager loggedInUser;
+//    public void setLoggedInUser(User user){
+//        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
+//            this.loggedInUser = FinanceAndBillingManager;
+//        }
+//        AlertGenerator.showAlert("error", "error Authentication failed");
+//    }
 
 
 

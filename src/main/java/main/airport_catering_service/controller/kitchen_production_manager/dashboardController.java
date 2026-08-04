@@ -35,8 +35,9 @@ public class dashboardController {
     public void setLoggedInUser(User user){
         if (user instanceof KitchenProductionManager kitchenProductionManager){
             this.loggedInUser = kitchenProductionManager;
-        }
+        }else{
         AlertGenerator.showAlert("error", "error Authentication failed");
+        }
     }
 
     @javafx.fxml.FXML
@@ -69,10 +70,17 @@ public class dashboardController {
             return;
         }
     }
+    @javafx.fxml.FXML
+    public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent)throws  IOException {
+        KitchenProductionManager.reverseDashboard(actionEvent);
+    }
+
+
 
     @javafx.fxml.FXML
     public void sideBarMonitorProductionOnAction(ActionEvent actionEvent) throws IOException {
         KitchenProductionManager.viewMonitorProductionActivities(actionEvent);
+
 
     }
 
@@ -104,13 +112,6 @@ public class dashboardController {
     public void sideBarCalculateIngredientOnAction(ActionEvent actionEvent) throws IOException{
         KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
     }
-
-    @javafx.fxml.FXML
-    public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent)throws  IOException {
-        KitchenProductionManager.reverseDashboard(actionEvent);
-    }
-
-
 
     @javafx.fxml.FXML
     public void sideBarProductionReportsOnAction(ActionEvent actionEvent)throws  IOException {

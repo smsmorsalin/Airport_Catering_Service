@@ -70,61 +70,44 @@ public class MonitorProductionActivitiesController
         }
 
     }
-
-    @Deprecated
-    public void sideBarHandleRejectedBatchOnAction(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException{
         KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
-    @Deprecated
-    public void sideBarManageMealPreparationOnAction(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void sideBarUpdateProductionStatusOnAction(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void sideBarMonitorCookingProgressOnAction(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void sideBarViewProductionTasksOnAction(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void sideBarKitchenPerformanceReportOnAction(ActionEvent actionEvent) {
+    @javafx.fxml.FXML
+    public void SideBarProductionPlanOA(ActionEvent actionEvent)throws IOException{
+        KitchenProductionManager.viewCreateProductionPlan(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void SideBarProductionPlanOA(ActionEvent actionEvent) {
+    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) {
+    public void sideBarProductionReportsOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewGenerateProductionReports(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionReportsOA(ActionEvent actionEvent) {
+    public void sideBarApproveProductionOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarApproveProductionOA(ActionEvent actionEvent) {
+    public void sideBarCalculateIngredientOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
+
     }
 
     @javafx.fxml.FXML
-    public void sideBarCalculateIngredientOA(ActionEvent actionEvent) {
+    public void sideBarProductionScheduleOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.ViewCreateProductionSchedule(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionScheduleOA(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarMenuListOA(ActionEvent actionEvent) {
+    public void sideBarMenuListOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewCreateMenuList(actionEvent);
     }
 }

@@ -37,29 +37,48 @@ public class GenerateProductionReportsController
 
     }
 
-    @Deprecated
-    public void clearOnAction(ActionEvent actionEvent) {
-    }
-
     @FXML
     public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException{
         KitchenProductionManager.reverseDashboard(actionEvent);
     }
 
     @FXML
-    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) {
+    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent);
     }
 
     @FXML
-    public void sideBarApproveProductionOA(ActionEvent actionEvent) {
+    public void sideBarApproveProductionOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
     }
 
     @FXML
-    public void sideBarProductionPlanOA(ActionEvent actionEvent) {
+    public void sideBarProductionPlanOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewCreateProductionPlan(actionEvent);
     }
 
     @FXML
-    public void sideBarMonitorProductionOA(ActionEvent actionEvent) {
+    public void sideBarMonitorProductionOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewMonitorProductionActivities(actionEvent);
+    }
+
+    @FXML
+    public void sideBarProductionScheduleOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.ViewCreateProductionSchedule(actionEvent);
+    }
+
+    @FXML
+    public void sideBarCalculateIngredientIOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
+    }
+    @FXML
+    public void exportPDFOnAction(ActionEvent actionEvent) {
+    }
+
+
+    @FXML
+    public void sideBarMenuListOA(ActionEvent actionEvent) throws IOException{
+        KitchenProductionManager.viewCreateMenuList(actionEvent);
     }
 
     @FXML
@@ -81,19 +100,6 @@ public class GenerateProductionReportsController
         }
     }
 
-    @FXML
-    public void sideBarProductionScheduleOA(ActionEvent actionEvent) {
-    }
 
-    @FXML
-    public void sideBarCalculateIngredientIOA(ActionEvent actionEvent) {
-    }
 
-    @FXML
-    public void eportPDFOnAction(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void sideBarMenuListOA(ActionEvent actionEvent) {
-    }
 }
