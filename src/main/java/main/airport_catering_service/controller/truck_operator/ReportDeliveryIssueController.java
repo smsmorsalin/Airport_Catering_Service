@@ -2,11 +2,15 @@ package main.airport_catering_service.controller.truck_operator;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.Headchef;
 import user.Truckoperator;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class ReportDeliveryIssueController
+public class ReportDeliveryIssueController implements UserReceiver
 {
     @javafx.fxml.FXML
     private TableColumn severityColumn;
@@ -47,6 +51,15 @@ public class ReportDeliveryIssueController
     @javafx.fxml.FXML
     private ComboBox severityComboBox;
 
+    private Headchef loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof Headchef headchef){
+            loggedInUser = headchef;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
+
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -57,7 +70,7 @@ public class ReportDeliveryIssueController
 
     @javafx.fxml.FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderDashboardView(actionEvent);
+        Truckoperator.renderDashboardView(actionEvent, loggedInUser);
     }
 
     @javafx.fxml.FXML
@@ -66,7 +79,7 @@ public class ReportDeliveryIssueController
 
     @javafx.fxml.FXML
     public void refreshTable(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderReportDeliveryProblemsView(actionEvent);
+        Truckoperator.renderReportDeliveryProblemsView(actionEvent, loggedInUser);
     }
 
     @javafx.fxml.FXML
