@@ -26,40 +26,40 @@ public class InventoryManager extends Employee implements Serializable {
     public boolean updateProfile(){return false;}
 
 
-    public static void renderCheckIngredientAvailability(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/CheckIngredientAvailabilityView.fxml");
+    public static void renderCheckIngredientAvailability(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/InventoryManager/CheckIngredientAvailabilityView.fxml",user);
     }
 
-    public static void renderCreatePurchaseRequest(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/CreatePurchaseRequestView.fxml");
+    public static void renderCreatePurchaseRequest(javafx.event.ActionEvent event,User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/InventoryManager/CreatePurchaseRequestView.fxml",user);
     }
 
-    public static void renderDashboard(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/DashboardView.fxml");
+    public static void renderDashboard(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/InventoryManager/DashboardView.fxml",user);
     }
 
-    public static void renderGenerateInventoryReport(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/GenerateInventoryReportView.fxml");
+    public static void renderGenerateInventoryReport(javafx.event.ActionEvent event,User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/InventoryManager/GenerateInventoryReportView.fxml",user);
     }
 
-    public static void renderLowStockAlert(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/LowStockAlertView.fxml");
+    public static void renderLowStockAlert(javafx.event.ActionEvent event,User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/InventoryManager/LowStockAlertView.fxml",user);
     }
 
-    public static void renderManageSupplier(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/ManageSupplierView.fxml");
+    public static void renderManageSupplier(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/InventoryManager/ManageSupplierView.fxml",user);
     }
 
-    public static void renderReceiveIngredient(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/ReceiveIngredientView.fxml");
+    public static void renderReceiveIngredient(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/InventoryManager/ReceiveIngredientView.fxml",user);
     }
 
-    public static void renderReserveIngredient(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/ReserveIngredientView.fxml");
+    public static void renderReserveIngredient(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/InventoryManager/ReserveIngredientView.fxml",user);
     }
 
-    public static void renderUpdateInventory(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/InventoryManager/UpdateInventoryView.fxml");
+    public static void renderUpdateInventory(javafx.event.ActionEvent event,User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/InventoryManager/UpdateInventoryView.fxml",user);
     }
 
 }

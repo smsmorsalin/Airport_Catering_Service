@@ -33,36 +33,36 @@ public class DispatchCoordinator extends Employee implements Serializable {
         SceneSwitchingHelper.switchSceneWithData(event, "/DispatchCoordinator/AssignTruckView.fxml", user);
     }
 
-    public static void renderDashboard(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/DashboardView.fxml");
+    public static void renderDashboard(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/DispatchCoordinator/DashboardView.fxml",user);
     }
 
-    public static void renderEmergencyDelivery(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/EmergencyDeliveryView.fxml");
+    public static void renderEmergencyDelivery(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/DispatchCoordinator/EmergencyDeliveryView.fxml",user);
     }
 
-    public static void renderGenerateDispatchReport(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/GenerateDispatchReportView.fxml");
+    public static void renderGenerateDispatchReport(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/DispatchCoordinator/GenerateDispatchReportView.fxml",user);
     }
 
-    public static void renderManageDeliveryDelay(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/ManageDeliveryDelayView.fxml");
+    public static void renderManageDeliveryDelay(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/DispatchCoordinator/ManageDeliveryDelayView.fxml",user);
     }
 
-    public static void renderMonitorDelivery(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/MonitorDeliveryView.fxml");
+    public static void renderMonitorDelivery(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/DispatchCoordinator/MonitorDeliveryView.fxml",user);
     }
 
-    public static void renderPackageOrder(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/PackageOrderView.fxml");
+    public static void renderPackageOrder(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/DispatchCoordinator/PackageOrderView.fxml",user);
     }
 
-    public static void renderReceiveDispatchRequest(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/ReceiveDispatchRequestView.fxml");
+    public static void renderReceiveDispatchRequest(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/DispatchCoordinator/ReceiveDispatchRequestView.fxml",user);
     }
 
-    public static void renderScheduleDelivery(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/ScheduleDeliveryView.fxml");
+    public static void renderScheduleDelivery(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/DispatchCoordinator/ScheduleDeliveryView.fxml",user);
 
     }
 

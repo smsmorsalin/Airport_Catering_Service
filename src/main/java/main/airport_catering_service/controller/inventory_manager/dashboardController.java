@@ -5,11 +5,12 @@ import javafx.scene.control.*;
 import user.DispatchCoordinator;
 import user.InventoryManager;
 import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class dashboardController
+public class dashboardController implements UserReceiver
 {
     @javafx.fxml.FXML
     private TextField enterTicketIdTextfield;
@@ -35,6 +36,7 @@ public class dashboardController
     private TableColumn descriptionTableviewColumn;
 
     private InventoryManager loggedInUser;
+    @Override
     public void setLoggedInUser(User user){
         if (user instanceof InventoryManager inventoryManager){
             loggedInUser = inventoryManager;
@@ -52,48 +54,48 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void manageSupplierButtonOnAction(ActionEvent actionEvent) throws IOException{
-        InventoryManager.renderManageSupplier(actionEvent);
+    public void manageSupplierButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderManageSupplier(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void logoutButtonOnAction(ActionEvent actionEvent) throws IOException{
+    public void logoutButtonOnAction(ActionEvent actionEvent)throws IOException{
         User.logout(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void updateInventoryButtonOnAction(ActionEvent actionEvent) throws IOException{
-        InventoryManager.renderUpdateInventory(actionEvent);
+    public void updateInventoryButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderUpdateInventory(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void createPurchaseRequestButtonOnAction(ActionEvent actionEvent) throws IOException{
-        InventoryManager.renderCreatePurchaseRequest(actionEvent);
+    public void createPurchaseRequestButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderCreatePurchaseRequest(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void generateInventoryReportButtonOnAction(ActionEvent actionEvent)throws IOException {
-        InventoryManager.renderGenerateInventoryReport(actionEvent);
+    public void generateInventoryReportButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderGenerateInventoryReport(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void lowStockAlertButtonOnAction(ActionEvent actionEvent) throws IOException{
-        InventoryManager.renderLowStockAlert(actionEvent);
+    public void lowStockAlertButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderLowStockAlert(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void checkIngredientAvailabilityButtonOnAction(ActionEvent actionEvent) throws IOException {
-        InventoryManager.renderCheckIngredientAvailability(actionEvent);
+    public void checkIngredientAvailabilityButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderCheckIngredientAvailability(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void reserveIngredientButtonOnAction(ActionEvent actionEvent) throws IOException{
-        InventoryManager.renderReserveIngredient(actionEvent);
+    public void reserveIngredientButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderReserveIngredient(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void receiveIngredientButtonOnAction(ActionEvent actionEvent)throws IOException {
-        InventoryManager.renderReceiveIngredient(actionEvent);
+    public void receiveIngredientButtonOnAction(ActionEvent actionEvent){
+        InventoryManager.renderReceiveIngredient(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
