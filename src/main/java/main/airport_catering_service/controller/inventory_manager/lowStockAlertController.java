@@ -39,34 +39,42 @@ public class lowStockAlertController implements UserReceiver
 
     @javafx.fxml.FXML
     public void manageSupplierButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderManageSupplier(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void updateInventoryButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderUpdateInventory(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void createPurchaseRequestButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderCreatePurchaseRequest(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void generateInventoryReportButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderGenerateInventoryReport(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void lowStockAlertButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderLowStockAlert(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void checkIngredientAvailabilityButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderCheckIngredientAvailability(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void reserveIngredientButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderReserveIngredient(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void receiveIngredientButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderReceiveIngredient(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
