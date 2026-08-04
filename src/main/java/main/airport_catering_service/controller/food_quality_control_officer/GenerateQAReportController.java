@@ -6,12 +6,14 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import user.FoodQualityControlOfficer;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class GenerateQAReportController
+public class GenerateQAReportController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label fxidDisplayTotalApprovedBatchesLabel;
@@ -31,6 +33,17 @@ public class GenerateQAReportController
     private DatePicker endDatePicker;
     @javafx.fxml.FXML
     private DatePicker startDatePicker;
+
+    private FoodQualityControlOfficer loggedInUser;
+
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FoodQualityControlOfficer foodQualityControlOfficer){
+            loggedInUser = foodQualityControlOfficer;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "You are not a valid user for this page");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {

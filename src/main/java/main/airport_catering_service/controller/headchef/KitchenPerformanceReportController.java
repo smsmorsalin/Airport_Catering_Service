@@ -3,10 +3,13 @@ package main.airport_catering_service.controller.headchef;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.Headchef;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class KitchenPerformanceReportController
+public class KitchenPerformanceReportController implements UserReceiver
 {
     @javafx.fxml.FXML
     private TableColumn mealCategoryColumn;
@@ -53,13 +56,22 @@ public class KitchenPerformanceReportController
     @javafx.fxml.FXML
     private Label rejectedBatchLabel;
 
+    private Headchef loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof Headchef headchef){
+            loggedInUser = headchef;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
+
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
-        Headchef.renderDashboardView(actionEvent);
+        Headchef.renderDashboardView(actionEvent, loggedInUser);
     }
 
     @Deprecated
@@ -72,6 +84,14 @@ public class KitchenPerformanceReportController
 
     @javafx.fxml.FXML
     public void generateReport(ActionEvent actionEvent) {
+        if(fromDatePicker.getValue() == null || toDatePicker.getValue() == null) {
+            AlertGenerator.showAlert("Error", "Please enter a date and time");
+            return;
+        }
+        if (toDatePicker.getValue().isBefore(fromDatePicker.getValue())) {
+            AlertGenerator.showAlert("Error", "Please enter a date and time");
+            return;
+        }
     }
 
     @javafx.fxml.FXML
@@ -80,6 +100,6 @@ public class KitchenPerformanceReportController
 
     @javafx.fxml.FXML
     public void refreshReport(ActionEvent actionEvent) throws IOException {
-        Headchef.renderViewKitchenPerformanceReport(actionEvent);
+        Headchef.renderViewKitchenPerformanceReport(actionEvent, loggedInUser);
     }
 }

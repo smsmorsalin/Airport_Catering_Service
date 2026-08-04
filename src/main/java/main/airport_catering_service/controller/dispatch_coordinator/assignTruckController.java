@@ -65,39 +65,44 @@ public class assignTruckController implements UserReceiver
 
     @javafx.fxml.FXML
     public void monitorDeliveryButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderMonitorDelivery(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void scheduleDeliveryButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderScheduleDelivery(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void assignTruckButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderAssignTruck(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void packageOrderButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderPackageOrder(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void receiveDispatchRequestButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderReceiveDispatchRequest(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void manageDeliveryDelayButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderManageDeliveryDelay(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void generateDispatchReportButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderGenerateDispatchReport(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void emergencyDeliveryButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderEmergencyDelivery(actionEvent,loggedInUser);
     }
 
-    @Deprecated
-    public void searchButtonOnAction(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {

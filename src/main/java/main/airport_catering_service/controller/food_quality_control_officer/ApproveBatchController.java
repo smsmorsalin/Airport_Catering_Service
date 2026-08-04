@@ -7,11 +7,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import user.FoodQualityControlOfficer;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
+import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 
-public class ApproveBatchController
+public class ApproveBatchController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label fxidDisplayApprovalStatusLabel;
@@ -25,6 +28,18 @@ public class ApproveBatchController
     private Label fxidDisplayApprovalByLabel;
     @javafx.fxml.FXML
     private Label fxidDisplayApprovalIdLabel;
+
+    private FoodQualityControlOfficer loggedInUser;
+
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FoodQualityControlOfficer foodQualityControlOfficer){
+            loggedInUser = foodQualityControlOfficer;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "You are not a valid user for this page");
+    }
+
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -61,22 +76,37 @@ public class ApproveBatchController
 
     @javafx.fxml.FXML
     public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/RejectBatchView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarQualityTrendAnalysisOnAction(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/QualityTrendAnalysisView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarFoodSafetyCheckOnAction(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/FoodSafetyCheckView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/ReceiveInspectionRequestView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarPerformInspectionOnAction(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/PerformInspectionView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
@@ -86,10 +116,16 @@ public class ApproveBatchController
 
     @javafx.fxml.FXML
     public void sideBarGenerateQAReportOnAction(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/GenerateQAReportView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarManageQualityIssueOnAction(ActionEvent actionEvent) {
+            SceneSwitchingHelper.switchSceneWithData(
+                    actionEvent, "/food_quality_control_officer/QualityTrendAnalysisView.fxml",
+                    loggedInUser);
 
     }
 }
