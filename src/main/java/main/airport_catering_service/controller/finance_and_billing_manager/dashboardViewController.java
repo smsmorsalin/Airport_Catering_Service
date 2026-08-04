@@ -36,6 +36,7 @@ public class dashboardViewController implements UserReceiver
     private TableColumn <Airline,String> issueTypeTableView;
 
     private FinanceAndBillingManager loggedInUser;
+    @Override
     public void setLoggedInUser(User user){
         if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
             this.loggedInUser = FinanceAndBillingManager;
