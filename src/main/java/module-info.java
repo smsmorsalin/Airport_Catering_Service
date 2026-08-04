@@ -4,6 +4,7 @@ module main.airport_catering_service {
     requires java.desktop;
     requires javafx.graphics;
     requires main.airport_catering_service;
+
     //requires main.airport_catering_service;
     //requires main.airport_catering_service;
 
