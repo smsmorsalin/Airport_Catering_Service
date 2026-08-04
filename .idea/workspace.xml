@@ -4,12 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into Mahir&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/assignTruckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/assignTruckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/dashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/emergencyDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/emergencyDeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/manageDeliveryDelayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/manageDeliveryDelayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/monitorDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/monitorDeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/packageOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/packageOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/scheduleDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/scheduleDeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/createPurchaseRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/createPurchaseRequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/dashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/lowStockAlertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/lowStockAlertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/receiveIngredientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/receiveIngredientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/updateInventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/updateInventoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/Headchef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Headchef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/DispatchCoordinator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/DispatchCoordinator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruckView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruckView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/EmergencyDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/EmergencyDeliveryView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ManageDeliveryDelayView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ManageDeliveryDelayView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/MonitorDeliveryView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/PackageOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/PackageOrderView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ScheduleDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/ScheduleDeliveryView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventoryManager/CreatePurchaseRequestView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventoryManager/CreatePurchaseRequestView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventoryManager/LowStockAlertView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventoryManager/LowStockAlertView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventoryManager/ReceiveIngredientView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventoryManager/ReceiveIngredientView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventoryManager/UpdateInventoryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventoryManager/UpdateInventoryView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,22 +52,22 @@
     &quot;assignee&quot;: &quot;Saif-kaif&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
-    &quot;accountId&quot;: &quot;ef1e225f-e8df-4381-ba31-5fa2f4c0db29&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
+    "accountId": "ca804a1f-f117-4e10-a38a-3edf62ca5ddc"
   },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
     },
-    &quot;owner&quot;: &quot;smsmorsalin&quot;,
-    &quot;repository&quot;: &quot;Airport_Catering_Service&quot;
+    "owner": "smsmorsalin",
+    "repository": "Airport_Catering_Service"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -135,7 +155,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Mahir",
+    "git-widget-placeholder": "sihab",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -144,7 +164,28 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true"
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ACS.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;aronno&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
 }]]></component>
   <component name="RunManager">
@@ -159,8 +200,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
       </set>
     </attachedChunks>
   </component>
@@ -171,6 +212,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784673028203</updated>
+      <workItem from="1785847567609" duration="638000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
       <option name="closed" value="true" />
@@ -212,13 +254,18 @@
       <option name="project" value="LOCAL" />
       <updated>1785760534863</updated>
     </task>
-    <task id="LOCAL-00006" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into Mahir&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+    <task id="LOCAL-00006">
       <option name="closed" value="true" />
-      <created>1785846098728</created>
+      <created>1785845636840</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1785846098728</updated>
+      <updated>1785845636840</updated>
+      <created>1785838907894</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1785838907894</updated>
     </task>
     <option name="localTasksCounter" value="7" />
     <servers />

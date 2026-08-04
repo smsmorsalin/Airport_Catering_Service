@@ -69,4 +69,8 @@ public class manageDeliveryDelayController
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
         DispatchCoordinator.renderDashboard(actionEvent);
     }
+
+    @javafx.fxml.FXML
+    public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
+    }
 }

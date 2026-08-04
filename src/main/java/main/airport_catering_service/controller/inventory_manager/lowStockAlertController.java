@@ -60,4 +60,8 @@ public class lowStockAlertController
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
         InventoryManager.renderDashboard(actionEvent);
     }
+
+    @javafx.fxml.FXML
+    public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
+    }
 }

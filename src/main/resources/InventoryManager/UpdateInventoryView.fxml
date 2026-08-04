@@ -64,6 +64,7 @@
                   <Label fx:id="ingredientNameLabel" layoutX="19.0" layoutY="372.0" text="Ingredient Name" />
                   <Label fx:id="quantityLabel" layoutX="19.0" layoutY="409.0" text="Quantity" />
                   <Label fx:id="newQuantityLabel" layoutX="19.0" layoutY="447.0" />
+                  <Button layoutX="73.0" layoutY="178.0" mnemonicParsing="false" onAction="#searchAndShowButtonOnAction" prefHeight="26.0" prefWidth="137.0" text="Search and Show" />
                </children>
             </AnchorPane>
          </children></VBox>

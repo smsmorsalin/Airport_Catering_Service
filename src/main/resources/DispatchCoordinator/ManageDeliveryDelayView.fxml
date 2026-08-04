@@ -63,6 +63,7 @@
                   <Label fx:id="delayReasonLabel" layoutX="29.0" layoutY="444.0" text="Delay Reason" />
                   <Label fx:id="revisedDeliveryTimeLabel" layoutX="28.0" layoutY="475.0" text="Revised Delivery Time" />
                   <TextField fx:id="delayReasonTextfield" layoutX="150.0" layoutY="74.0" />
+                  <Button layoutX="14.0" layoutY="190.0" mnemonicParsing="false" onAction="#searchAndShowButtonOnAction" prefHeight="26.0" prefWidth="143.0" text="Search And Show" />
                </children>
             </AnchorPane>
          </children></VBox>

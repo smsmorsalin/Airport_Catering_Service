@@ -29,8 +29,8 @@ public class DispatchCoordinator extends Employee implements Serializable {
 
 
 
-    public static void renderAssignTruck(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/DispatchCoordinator/AssignTruckView.fxml");
+    public static void renderAssignTruck(javafx.event.ActionEvent event, User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/DispatchCoordinator/AssignTruckView.fxml", user);
     }
 
     public static void renderDashboard(javafx.event.ActionEvent event) throws IOException{

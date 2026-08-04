@@ -74,6 +74,7 @@
                         <TableColumn fx:id="supplierTableviewColumn" prefWidth="117.5999755859375" text="Supplier" />
                     </columns>
                   </TableView>
+                  <Button layoutX="16.0" layoutY="180.0" mnemonicParsing="false" onAction="#searchAndShowButtonOnAction" prefHeight="26.0" prefWidth="210.0" text="Search And Show" />
                </children>
             </AnchorPane>
          </children></VBox>
