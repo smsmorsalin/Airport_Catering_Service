@@ -35,13 +35,13 @@ public class dashboardViewController implements UserReceiver
     @javafx.fxml.FXML
     private TableColumn <Airline,String> issueTypeTableView;
 
-//    private FinanceAndBillingManager loggedInUser;
-//    public void setLoggedInUser(User user){
-//        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
-//            this.loggedInUser = FinanceAndBillingManager;
-//        }
-//        AlertGenerator.showAlert("error", "error Authentication failed");
-//    }
+    private FinanceAndBillingManager loggedInUser;
+    public void setLoggedInUser(User user){
+        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
+            this.loggedInUser = FinanceAndBillingManager;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
 
 
 

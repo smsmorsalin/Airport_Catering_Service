@@ -5,10 +5,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import user.DispatchCoordinator;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class manageDeliveryDelayController
+public class manageDeliveryDelayController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label revisedDeliveryTimeLabel;
@@ -28,6 +31,16 @@ public class manageDeliveryDelayController
     private Text delayReasonText;
     @javafx.fxml.FXML
     private TextField revisedDeliveryTimeTextfield;
+
+    private DispatchCoordinator loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof DispatchCoordinator dispatchCoordinator){
+            loggedInUser = dispatchCoordinator;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -67,7 +80,7 @@ public class manageDeliveryDelayController
 
     @javafx.fxml.FXML
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
-        DispatchCoordinator.renderDashboard(actionEvent);
+        DispatchCoordinator.renderDashboard(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML

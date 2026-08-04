@@ -6,10 +6,13 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import user.InventoryManager;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class checkIngredientAvailabilityController
+public class checkIngredientAvailabilityController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Text ingredientNameText;
@@ -33,6 +36,16 @@ public class checkIngredientAvailabilityController
     private TableColumn availableQuantityTableviewColumn;
     @javafx.fxml.FXML
     private TableColumn requiredQuantityTableviewColumn;
+
+    private InventoryManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof InventoryManager inventoryManager){
+            loggedInUser = inventoryManager;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -75,7 +88,7 @@ public class checkIngredientAvailabilityController
     }
 
     @javafx.fxml.FXML
-    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) throws IOException {
-        InventoryManager.renderDashboard(actionEvent);
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent){
+        InventoryManager.renderDashboard(actionEvent, loggedInUser);
     }
 }
