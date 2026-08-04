@@ -93,5 +93,31 @@ public class manageDeliveryDelayController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
+
+        if (deliveryIdTextfield.getText() == null || deliveryIdTextfield.getText().trim().isEmpty() || delayReasonTextfield.getText() == null
+                || delayReasonTextfield.getText().trim().isEmpty() || revisedDeliveryTimeTextfield.getText() == null
+                || revisedDeliveryTimeTextfield.getText().trim().isEmpty()) {
+
+            AlertGenerator.showAlert("Invalid Input", "All fields must be filled.");
+            return;
+        }
+
+        int deliveryId;
+
+        try {
+            deliveryId = Integer.parseInt(deliveryIdTextfield.getText().trim());
+        } catch (Exception e) {
+            AlertGenerator.showAlert("Invalid Input", "Delivery ID must be an integer.");
+            return;
+        }
+
+        if (deliveryId <= 0) {
+            AlertGenerator.showAlert("Invalid Input", "Delivery ID must be greater than 0.");
+            return;
+        }
+
+        String delayReason = delayReasonTextfield.getText().trim();
+        String revisedDeliveryTime = revisedDeliveryTimeTextfield.getText().trim();
+
     }
 }

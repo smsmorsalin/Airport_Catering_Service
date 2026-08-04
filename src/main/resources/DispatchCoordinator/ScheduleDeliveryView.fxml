@@ -3,7 +3,8 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
@@ -55,22 +56,24 @@
          <children>
             <AnchorPane prefHeight="590.0" prefWidth="596.0">
                <children>
-                  <Text fx:id="componentText" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Component" />
                   <Text fx:id="orderIdText" layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID" />
                   <Text fx:id="locationText" layoutX="14.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" />
                   <Text fx:id="deliveryTimeText" layoutX="14.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Time" />
                   <Text fx:id="deliveryDateText" layoutX="14.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Date" />
-                  <TextField fx:id="componentTextfield" layoutX="122.0" layoutY="16.0" />
                   <TextField fx:id="orderIdTextfield" layoutX="123.0" layoutY="47.0" />
                   <TextField fx:id="locationTextfield" layoutX="123.0" layoutY="82.0" />
                   <TextField fx:id="deliveryTimeTextfield" layoutX="123.0" layoutY="121.0" />
                   <DatePicker fx:id="deliveryDateDatepicker" layoutX="121.0" layoutY="157.0" prefHeight="26.0" prefWidth="150.0" />
-                  <Label fx:id="scheduleIdLabel" layoutX="23.0" layoutY="366.0" text="Schedule ID" />
-                  <Label fx:id="orderIdLabel" layoutX="23.0" layoutY="394.0" text="Order ID" />
-                  <Label fx:id="flightNumberLabel" layoutX="23.0" layoutY="423.0" text="Flight Number" />
-                  <Label fx:id="deliveryDateAndTimeLabel" layoutX="23.0" layoutY="449.0" text="Delivery Date " />
-                  <Label fx:id="assignedTruckLabel" layoutX="23.0" layoutY="476.0" text="Assigned Truck" />
                   <Button layoutX="11.0" layoutY="242.0" mnemonicParsing="false" onAction="#searchAndShowButtonOnAction" prefHeight="26.0" prefWidth="150.0" text="Search and Show" />
+                  <TableView fx:id="tableView" layoutX="1.0" layoutY="358.0" prefHeight="200.0" prefWidth="590.0">
+                    <columns>
+                      <TableColumn fx:id="scheduleIdTableviewColumn" prefWidth="95.199951171875" text="Schedule ID" />
+                      <TableColumn fx:id="orderIdTableviewColumn" prefWidth="96.0" text="Order ID" />
+                        <TableColumn fx:id="flightNumberTableviewColumn" prefWidth="125.60003662109375" text="Flight Number" />
+                        <TableColumn fx:id="deliveryDateTableviewColumn" prefWidth="124.00009155273438" text="Delivery Date " />
+                        <TableColumn fx:id="assignedTruckTableviewColumn" prefWidth="145.59991455078125" text="Assigned Truck" />
+                    </columns>
+                  </TableView>
                </children>
             </AnchorPane>
          </children></VBox>
