@@ -5,13 +5,15 @@ public class Ingredient {
     private String ingredientName;
     private double quantity;
     private Integer estimatedCost;
+    private double PricePerUnit;
 
-    public Ingredient(int ingredientId, int unit, String ingredientName, double quantity, Integer estimatedCost) {
+    public Ingredient(int ingredientId, int unit, String ingredientName, double quantity, Integer estimatedCost, double pricePerUnit) {
         this.ingredientId = ingredientId;
         this.unit = unit;
         this.ingredientName = ingredientName;
         this.quantity = quantity;
         this.estimatedCost = estimatedCost;
+        PricePerUnit = pricePerUnit;
     }
 
     public int getIngredientId() {
@@ -44,5 +46,25 @@ public class Ingredient {
 
     public void setEstimatedCost(Integer estimatedCost) {
         this.estimatedCost = estimatedCost;
+    }
+
+    public double getPricePerUnit() {
+        return PricePerUnit;
+    }
+
+    public void setPricePerUnit(double pricePerUnit) {
+        PricePerUnit = pricePerUnit;
+    }
+
+    @Override
+    public String toString() {
+        return "Ingredient{" +
+                "ingredientId=" + ingredientId +
+                ", unit=" + unit +
+                ", ingredientName='" + ingredientName + '\'' +
+                ", quantity=" + quantity +
+                ", estimatedCost=" + estimatedCost +
+                ", PricePerUnit=" + PricePerUnit +
+                '}';
     }
 }

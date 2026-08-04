@@ -10,8 +10,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import nonuser.Ingredient;
 import user.KitchenProductionManager;
 import utility.AlertGenerator;
+import utility.BinaryFileUtility;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class CalculateIngredientRequirementsController
 {
@@ -84,7 +86,24 @@ public class CalculateIngredientRequirementsController
             return;
         }
         AlertGenerator.showAlert("Successful", "All entered information is valid");
+
+        ArrayList<Object> ingredientList = BinaryFileUtility.readObjects("Ingredient.bin");
+
+        mainTableView.getItems().clear();
+
+        for (Object obj : ingredientList) {
+            if (obj instanceof Ingredient ingredient) {
+                ingredient.setQuantity(ingredient.getQuantity() * numberOfMeals
+                );
+
+
+                ingredient.setEstimatedCost((int) (ingredient.getQuantity() * ingredient.getPricePerUnit()));
+                mainTableView.getItems().add(ingredient);
+            }
+        }
     }
+
+
 
     @javafx.fxml.FXML
     public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent)throws IOException {
