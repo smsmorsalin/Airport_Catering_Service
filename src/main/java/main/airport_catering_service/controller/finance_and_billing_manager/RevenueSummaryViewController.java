@@ -2,9 +2,13 @@ package main.airport_catering_service.controller.finance_and_billing_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import nonuser.Revenue;
 import user.FinanceAndBillingManager;
+import utility.AlertGenerator;
+import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class RevenueSummaryViewController
 {
@@ -15,7 +19,7 @@ public class RevenueSummaryViewController
     @javafx.fxml.FXML
     private Label totalRevenueLabel;
     @javafx.fxml.FXML
-    private TableView revenueTable;
+    private TableView <Revenue>revenueTable;
     @javafx.fxml.FXML
     private Label pendingAmountLabel;
     @javafx.fxml.FXML
@@ -25,19 +29,19 @@ public class RevenueSummaryViewController
     @javafx.fxml.FXML
     private Label netRevenueLabel;
     @javafx.fxml.FXML
-    private TableColumn paymentColumn;
+    private TableColumn <Revenue,Integer>revenueColumn;
     @javafx.fxml.FXML
-    private TableColumn revenueColumn;
-    @javafx.fxml.FXML
-    private TableColumn netRevenueColumn;
+    private TableColumn <Revenue,Integer> netRevenueColumn;
     @javafx.fxml.FXML
     private Label refundAmountLabel;
     @javafx.fxml.FXML
-    private TableColumn dateColumn;
+    private TableColumn <Revenue, LocalDate>dateColumn;
     @javafx.fxml.FXML
-    private TableColumn orderColumn;
+    private TableColumn <Revenue,Integer> orderColumn;
     @javafx.fxml.FXML
     private Button generateSummaryButton;
+    @javafx.fxml.FXML
+    private TableColumn <Revenue,Integer> paymentreceiveColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -45,6 +49,23 @@ public class RevenueSummaryViewController
 
     @javafx.fxml.FXML
     public void GenerateSummaryOnAction(ActionEvent actionEvent) {
+
+        if(airlineComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Combo Box should be selected");
+            return;
+        }
+        if(fromDatePicker.getValue() == null || toDatePicker.getValue() ==null){
+            AlertGenerator.showAlert("Invalid Input","Date must in selected");
+            return;
+        }
+        if(fromDatePicker.getValue().isAfter(toDatePicker.getValue())){
+            AlertGenerator.showAlert("Invalid Input","Start Date should be before end date");
+            return;
+        }
+        if(toDatePicker.getValue().isAfter(LocalDate.now())){
+            AlertGenerator.showAlert("Invalid Input","End date can not be present date");
+            return;
+        }
     }
 
     @Deprecated
@@ -110,5 +131,13 @@ public class RevenueSummaryViewController
     @javafx.fxml.FXML
     public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) throws IOException{
         FinanceAndBillingManager.viewOutstandingPayments(actionEvent);
+    }
+
+    public TableColumn getPaymentreceiveColumn() {
+        return paymentreceiveColumn;
+    }
+
+    public void setPaymentreceiveColumn(TableColumn paymentreceiveColumn) {
+        this.paymentreceiveColumn = paymentreceiveColumn;
     }
 }

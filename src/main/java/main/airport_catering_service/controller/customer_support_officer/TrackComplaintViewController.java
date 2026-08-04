@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import user.CustomerSupportOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
@@ -33,10 +34,18 @@ public class TrackComplaintViewController
 
     @javafx.fxml.FXML
     public void ResolveComplaintOnAction(ActionEvent actionEvent) {
+        if(complaintIdTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
     }
 
     @javafx.fxml.FXML
     public void SearchComplaintOnAction(ActionEvent actionEvent) {
+        if(complaintIdTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
     }
 
     @javafx.fxml.FXML
