@@ -8,7 +8,8 @@ public class EmergencyDispatch {
     private String AssignTruck;
     private LocalTime DeliveryTime;
     private Integer DispatchRequestID;
-    private Integer Schedule ;
+    private Integer Schedule;
+
 
     public EmergencyDispatch(Integer dispatchId, String assignTruck, LocalTime deliveryTime) {
         DispatchId = dispatchId;
@@ -38,5 +39,21 @@ public class EmergencyDispatch {
 
     public void setDeliveryTime(LocalTime deliveryTime) {
         DeliveryTime = deliveryTime;
+    }
+
+    public Integer getDispatchRequestID() {
+        return DispatchRequestID;
+    }
+
+    public void setDispatchRequestID(Integer dispatchRequestID) {
+        DispatchRequestID = dispatchRequestID;
+    }
+
+    public Integer getSchedule() {
+        return Schedule;
+    }
+
+    public void setSchedule(Integer schedule) {
+        Schedule = schedule;
     }
 }

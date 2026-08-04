@@ -6,10 +6,13 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import user.Truckoperator;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class UpdateTransitStatusController
+public class UpdateTransitStatusController implements UserReceiver
 {
     @javafx.fxml.FXML
     private TextField updateTimeField;
@@ -36,6 +39,15 @@ public class UpdateTransitStatusController
     @javafx.fxml.FXML
     private TextField destinationField;
 
+    private Truckoperator loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof Truckoperator truckoperator){
+            loggedInUser = truckoperator;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
+
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -46,7 +58,7 @@ public class UpdateTransitStatusController
 
     @javafx.fxml.FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderDashboardView(actionEvent);
+        Truckoperator.renderDashboardView(actionEvent, loggedInUser);
     }
 
     @javafx.fxml.FXML

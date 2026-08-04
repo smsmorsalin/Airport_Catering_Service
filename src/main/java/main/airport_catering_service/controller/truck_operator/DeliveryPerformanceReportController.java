@@ -2,11 +2,15 @@ package main.airport_catering_service.controller.truck_operator;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.Headchef;
 import user.Truckoperator;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class DeliveryPerformanceReportController
+public class DeliveryPerformanceReportController implements UserReceiver
 {
     @javafx.fxml.FXML
     private TableColumn orderIdColumn;
@@ -51,13 +55,22 @@ public class DeliveryPerformanceReportController
     @javafx.fxml.FXML
     private ProgressBar onTimeProgressBar;
 
+    private Headchef loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof Headchef headchef){
+            loggedInUser = headchef;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
+
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderDashboardView(actionEvent);
+        Truckoperator.renderDashboardView(actionEvent, loggedInUser);
     }
 
     @Deprecated
@@ -78,6 +91,6 @@ public class DeliveryPerformanceReportController
 
     @javafx.fxml.FXML
     public void refreshReport(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderDeliveryHistoryView(actionEvent);
+        Truckoperator.renderDeliveryHistoryView(actionEvent, loggedInUser);
     }
 }
