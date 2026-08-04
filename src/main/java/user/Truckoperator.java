@@ -1,5 +1,6 @@
 package user;
 
+import javafx.event.ActionEvent;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
@@ -14,6 +15,7 @@ public class Truckoperator extends Employee implements Serializable {
 
     @Override
     public void viewDashboard(javafx.event.ActionEvent event, User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/DashboardView.fxml", user);
 
     }
 

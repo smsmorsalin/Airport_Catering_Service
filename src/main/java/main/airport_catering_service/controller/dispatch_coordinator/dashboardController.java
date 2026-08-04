@@ -4,10 +4,12 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.DispatchCoordinator;
 import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class dashboardController
+public class dashboardController implements UserReceiver
 {
     @javafx.fxml.FXML
     private TextField enterTicketIdTextfield;
@@ -32,6 +34,17 @@ public class dashboardController
     @javafx.fxml.FXML
     private TableColumn descriptionTableviewColumn;
 
+    //for all DispatchCoordinator just copy past
+    private DispatchCoordinator loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof DispatchCoordinator dispatchCoordinator){
+            loggedInUser = dispatchCoordinator;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
+
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -41,23 +54,23 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void monitorDeliveryButtonOnAction(ActionEvent actionEvent) throws IOException{
-        DispatchCoordinator.renderMonitorDelivery(actionEvent);
+    public void monitorDeliveryButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderMonitorDelivery(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void scheduleDeliveryButtonOnAction(ActionEvent actionEvent) throws IOException{
-        DispatchCoordinator.renderScheduleDelivery(actionEvent);
+    public void scheduleDeliveryButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderScheduleDelivery(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void assignTruckButtonOnAction(ActionEvent actionEvent) throws IOException {
-        DispatchCoordinator.renderAssignTruck(actionEvent);
+    public void assignTruckButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderAssignTruck(actionEvent, loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void packageOrderButtonOnAction(ActionEvent actionEvent)throws IOException {
-        DispatchCoordinator.renderPackageOrder(actionEvent);
+    public void packageOrderButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderPackageOrder(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
@@ -67,22 +80,22 @@ public class dashboardController
 
     @javafx.fxml.FXML
     public void receiveDispatchRequestButtonOnAction(ActionEvent actionEvent)throws IOException {
-        DispatchCoordinator.renderReceiveDispatchRequest(actionEvent);
+        DispatchCoordinator.renderReceiveDispatchRequest(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void manageDeliveryDelayButtonOnAction(ActionEvent actionEvent) throws IOException{
-        DispatchCoordinator.renderManageDeliveryDelay(actionEvent);
+        DispatchCoordinator.renderManageDeliveryDelay(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void generateDispatchReportButtonOnAction(ActionEvent actionEvent)throws IOException {
-        DispatchCoordinator.renderGenerateDispatchReport(actionEvent);
+        DispatchCoordinator.renderGenerateDispatchReport(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void emergencyDeliveryButtonOnAction(ActionEvent actionEvent)throws IOException {
-        DispatchCoordinator.renderEmergencyDelivery(actionEvent);
+        DispatchCoordinator.renderEmergencyDelivery(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
