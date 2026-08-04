@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/EmergencyModificationViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/EmergencyModificationViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/FlightCancellationViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/FlightCancellationViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/FlightDelayRequestViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/FlightDelayRequestViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/GenerateReportsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/GenerateReportsViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/RegisterComplaintViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/RegisterComplaintViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/ResolveComplaintViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/ResolveComplaintViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/TrackComplaintViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/TrackComplaintViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/CalculateCostViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/CalculateCostViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/FinanceReportsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/FinanceReportsViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/GenerateInvoiceViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/GenerateInvoiceViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/OutstandingPaymentsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/OutstandingPaymentsViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/PaymentHistoryViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/PaymentHistoryViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/ProcessRefundViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/ProcessRefundViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/RecordPaymentViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/RecordPaymentViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/RevenueSummaryViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/RevenueSummaryViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryConfirmation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModificationView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/EmergencyModificationView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellationView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightCancellationView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightDelayRequestView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/FlightDelayRequestView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/GenerateReportsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/GenerateReportsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/RegisterComplaintView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/RegisterComplaintView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ResolveComplaintView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ResolveComplaintView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ServiceUpdatesView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/ServiceUpdatesView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/TrackComplaintView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CustomerSupportOfficer/TrackComplaintView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/FinancialReportsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/FinancialReportsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/GenerateInvoiceView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/GenerateInvoiceView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/PaymentHistoryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/PaymentHistoryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/ProcessRefundView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/ProcessRefundView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RecordPaymentView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RecordPaymentView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RevenueSummaryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FinanceAndBillingManager/RevenueSummaryView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,21 +109,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;aronno&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "sihab",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="" />
@@ -180,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785677869428</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785682948729</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1785682948729</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
