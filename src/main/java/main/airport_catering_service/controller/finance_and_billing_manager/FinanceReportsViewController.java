@@ -4,12 +4,14 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import nonuser.FinancialReport;
 import user.FinanceAndBillingManager;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class FinanceReportsViewController
+public class FinanceReportsViewController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label outstandingLabel;
@@ -39,6 +41,15 @@ public class FinanceReportsViewController
     private Button generateReportButton;
     @javafx.fxml.FXML
     private TableColumn<FinancialReport, LocalDate> dateColumn;
+
+    private FinanceAndBillingManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
+            this.loggedInUser = FinanceAndBillingManager;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -3,11 +3,14 @@ package main.airport_catering_service.controller.customer_support_officer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.CustomerSupportOfficer;
+import user.FinanceAndBillingManager;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class ResolveComplaintViewController
+public class ResolveComplaintViewController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label complaintIdLabel;
@@ -23,6 +26,16 @@ public class ResolveComplaintViewController
     private TextArea resolutionNotesTextField;
     @javafx.fxml.FXML
     private ComboBox<String> resolutionStatusComboBox;
+
+
+    private FinanceAndBillingManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
+            this.loggedInUser = FinanceAndBillingManager;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {

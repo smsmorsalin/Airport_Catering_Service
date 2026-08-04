@@ -4,13 +4,15 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import nonuser.Revenue;
 import user.FinanceAndBillingManager;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class RevenueSummaryViewController
+public class RevenueSummaryViewController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label paidAmountLabel;
@@ -42,6 +44,15 @@ public class RevenueSummaryViewController
     private Button generateSummaryButton;
     @javafx.fxml.FXML
     private TableColumn <Revenue,Integer> paymentreceiveColumn;
+
+    private FinanceAndBillingManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
+            this.loggedInUser = FinanceAndBillingManager;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
