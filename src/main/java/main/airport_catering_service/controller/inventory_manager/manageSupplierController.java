@@ -103,5 +103,21 @@ public class manageSupplierController implements UserReceiver
 
     @javafx.fxml.FXML
     public void submitButtonOnAction(ActionEvent actionEvent) {
+
+        if (supplierNameTextfield.getText().trim().isEmpty()
+                || contactPersonTextfield.getText().trim().isEmpty() || phoneNumberTextfield.getText().trim().isEmpty()
+                || emailTextfield.getText().trim().isEmpty() || addressTextfield.getText().trim().isEmpty()) {
+
+            AlertGenerator.showAlert("Invalid Input", "All fields must be filled.");
+            return;
+        }
+
+        String supplierName = supplierNameTextfield.getText().trim();
+        String contactPerson = contactPersonTextfield.getText().trim();
+        String phoneNumber = phoneNumberTextfield.getText().trim();
+        String email = emailTextfield.getText().trim();
+        String address = addressTextfield.getText().trim();
+
+
     }
 }

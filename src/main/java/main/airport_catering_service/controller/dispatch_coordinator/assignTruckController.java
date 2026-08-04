@@ -114,9 +114,9 @@ public class assignTruckController implements UserReceiver
 
         tableView.getItems().clear();
 
-        if (orderIdTextfield.getText() == null || orderIdTextfield.getText().trim().isEmpty()
-                || driverSelectionTextfield.getText() == null || driverSelectionTextfield.getText().trim().isEmpty()
-                || truckSelectionTextfield.getText() == null || truckSelectionTextfield.getText().trim().isEmpty()) {
+        if ( orderIdTextfield.getText().trim().isEmpty()
+                || driverSelectionTextfield.getText().trim().isEmpty()
+                || truckSelectionTextfield.getText().trim().isEmpty()) {
 
             AlertGenerator.showAlert("Invalid Input", "All text fields must be filled.");
             return;

@@ -61,10 +61,7 @@ public class dashboardController implements UserReceiver
 
         tableView.getItems().clear();
 
-        if (enterTicketIdTextfield.getText() == null
-                || enterTicketIdTextfield.getText().trim().isEmpty()
-                || reasonTextfield.getText() == null
-                || reasonTextfield.getText().trim().isEmpty()) {
+        if (enterTicketIdTextfield.getText().trim().isEmpty() || reasonTextfield.getText().trim().isEmpty()) {
 
             AlertGenerator.showAlert("Invalid Input", "Ticket ID and Reason must be filled.");
             return;

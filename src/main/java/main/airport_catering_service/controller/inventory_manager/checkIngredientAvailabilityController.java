@@ -93,6 +93,30 @@ public class checkIngredientAvailabilityController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchButtonOnAction(ActionEvent actionEvent) {
+
+        tableview.getItems().clear();
+
+        if (orderIdTextfield.getText().trim().isEmpty() || ingredientNameTextfield.getText().trim().isEmpty()) {
+
+            AlertGenerator.showAlert("Invalid Input", "Order ID and Ingredient Name must be filled.");
+            return;
+        }
+
+        int orderId;
+
+        try {
+            orderId = Integer.parseInt(orderIdTextfield.getText().trim());
+        } catch (Exception e) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID must be an integer.");
+            return;
+        }
+
+        if (orderId <= 0) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID must be greater than 0.");
+            return;
+        }
+
+        String ingredientName = ingredientNameTextfield.getText().trim();
     }
 
     @javafx.fxml.FXML

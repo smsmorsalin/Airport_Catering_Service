@@ -101,5 +101,30 @@ public class receiveIngredientController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
+        if (purchaseRequestIdTextfield.getText().trim().isEmpty() || receivedQuantityTextfield.getText().trim().isEmpty()
+                || supplierNameTextfield.getText().trim().isEmpty() || deliveryNoteNumberTextfield.getText().trim().isEmpty()) {
+
+            AlertGenerator.showAlert("Invalid Input", "All fields must be filled.");
+            return;
+        }
+
+        int purchaseRequestId;
+        int receivedQuantity;
+
+        try {
+            purchaseRequestId = Integer.parseInt(purchaseRequestIdTextfield.getText().trim());
+            receivedQuantity = Integer.parseInt(receivedQuantityTextfield.getText().trim());
+        } catch (Exception e) {
+            AlertGenerator.showAlert("Invalid Input", "Purchase Request ID and Received Quantity must be integers.");
+            return;
+        }
+
+        if (purchaseRequestId <= 0 || receivedQuantity <= 0) {
+            AlertGenerator.showAlert("Invalid Input", "Purchase Request ID and Received Quantity must be greater than 0.");
+            return;
+        }
+
+        String supplierName = supplierNameTextfield.getText().trim();
+        String deliveryNoteNumber = deliveryNoteNumberTextfield.getText().trim();
     }
 }

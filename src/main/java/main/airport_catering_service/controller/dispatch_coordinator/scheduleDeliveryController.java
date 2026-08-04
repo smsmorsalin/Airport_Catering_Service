@@ -107,9 +107,7 @@ public class scheduleDeliveryController implements UserReceiver
 
         tableView.getItems().clear();
 
-        if (orderIdTextfield.getText() == null
-                || orderIdTextfield.getText().trim().isEmpty() || locationTextfield.getText() == null
-                || locationTextfield.getText().trim().isEmpty() || deliveryTimeTextfield.getText() == null
+        if (orderIdTextfield.getText().trim().isEmpty() || locationTextfield.getText().trim().isEmpty()
                 || deliveryTimeTextfield.getText().trim().isEmpty() || deliveryDateDatepicker.getValue() == null) {
 
             AlertGenerator.showAlert("Invalid Input", "All fields must be filled.");

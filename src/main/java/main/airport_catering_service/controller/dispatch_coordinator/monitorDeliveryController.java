@@ -94,8 +94,7 @@ public class monitorDeliveryController implements UserReceiver
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
 
-        if (truckIdTextfield.getText() == null
-                || truckIdTextfield.getText().trim().isEmpty() || orderIdTextfield.getText() == null
+        if (truckIdTextfield.getText().trim().isEmpty()
                 || orderIdTextfield.getText().trim().isEmpty()) {
 
             AlertGenerator.showAlert("Invalid Input", "Truck ID and Order ID must be filled.");
