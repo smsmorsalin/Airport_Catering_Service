@@ -32,11 +32,11 @@ public class GenerateReportsViewController implements UserReceiver
     @javafx.fxml.FXML
     private ComboBox <String > airlineNameComboBox;
 
-    private FinanceAndBillingManager loggedInUser;
+    private CustomerSupportOfficer loggedInUser;
     @Override
     public void setLoggedInUser(User user){
-        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
-            this.loggedInUser = FinanceAndBillingManager;
+        if (user instanceof CustomerSupportOfficer CustomerSupportOfficer){
+            this.loggedInUser = CustomerSupportOfficer;
         }
         AlertGenerator.showAlert("error", "error Authentication failed");
     }

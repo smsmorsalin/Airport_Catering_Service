@@ -30,6 +30,8 @@ public class dashboardViewController implements UserReceiver
     @javafx.fxml.FXML
     private TableColumn<Airline,String> issueTypeTableView;
 
+
+
     private CustomerSupportOfficer loggedInUser;
     @Override
     public void setLoggedInUser(User user){
