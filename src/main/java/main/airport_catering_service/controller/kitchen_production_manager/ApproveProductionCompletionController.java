@@ -4,15 +4,21 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import user.FoodQualityControlOfficer;
 import user.KitchenProductionManager;
 
 import javafx.scene.control.TextArea;
+import utility.SceneSwitchingHelper;
+
 import java.io.IOException;
+
 
 public class ApproveProductionCompletionController
 {
     @javafx.fxml.FXML
     private TextField productionOrderIDTextField;
+
+    private KitchenProductionManager loggedInUser;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -52,32 +58,46 @@ public class ApproveProductionCompletionController
     }
     @javafx.fxml.FXML
     public void sideBarReceiveOrdersOnA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent);
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/kitchen_production_manager/ReceiveApprovedCateringOrders.fxml",
+                loggedInUser);
     }
     @javafx.fxml.FXML
     public void sideBarProductionReportsOnA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewGenerateProductionReports(actionEvent);
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/kitchen_production_manager/GenerateProductionReports.fxml",
+                loggedInUser);
     }
     @javafx.fxml.FXML
     public void sideBarCalculateIngredientOnA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/kitchen_production_manager/CalculateIngredientRequirements.fxml",
+                loggedInUser);
     }
     @javafx.fxml.FXML
     public void sideBarMenuListOnA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewCreateMenuList(actionEvent);
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/kitchen_production_manager/CreateMenuList.fxml",
+                loggedInUser);
     }
     @javafx.fxml.FXML
     public void sideBarProductionPlanOnA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewCreateProductionPlan(actionEvent);
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/kitchen_production_manager/CreateProductionPlan.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarMonitorProductionOnAction(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewMonitorProductionActivities(actionEvent);
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/kitchen_production_manager/MonitorProductionActivities.fxml",
+                loggedInUser);
     }
     @javafx.fxml.FXML
     public void sideBarProductionScheduleOnA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.ViewCreateProductionSchedule(actionEvent);
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/kitchen_production_manager/CreateProductionSchedule.fxml",
+                loggedInUser);
 
     }
 }

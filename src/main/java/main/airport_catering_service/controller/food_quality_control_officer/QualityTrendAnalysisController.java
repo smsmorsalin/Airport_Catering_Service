@@ -4,12 +4,14 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import user.FoodQualityControlOfficer;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class QualityTrendAnalysisController
+public class QualityTrendAnalysisController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label fxidDisplayCommonDefectLabel;
@@ -25,6 +27,17 @@ public class QualityTrendAnalysisController
     private Label fxidDisplayRejectedBatchesLabel;
     @javafx.fxml.FXML
     private Label fxidDisplayPassedBatchesLabel;
+
+    private FoodQualityControlOfficer loggedInUser;
+
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FoodQualityControlOfficer foodQualityControlOfficer){
+            loggedInUser = foodQualityControlOfficer;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "You are not a valid user for this page");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {

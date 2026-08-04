@@ -1,14 +1,19 @@
 package nonuser;
 
+import utility.AlertGenerator;
+import utility.BinaryFileUtility;
+import utility.databaseAccessor;
+
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Meal implements Serializable {
     private int mealId;
     private String mealName;
     private float mealPrice;
 
-    public Meal(int mealId, String mealName, float mealPrice) {
-        this.mealId = mealId;
+    public Meal(String mealName, float mealPrice) {
+        this.mealId = generateMealId();
         this.mealName = mealName;
         this.mealPrice = mealPrice;
     }
@@ -35,6 +40,28 @@ public class Meal implements Serializable {
 
     public void setMealPrice(float mealPrice) {
         this.mealPrice = mealPrice;
+    }
+
+    private static int generateMealId(){
+        return databaseAccessor.generateNewUniqueId("Meal.bin", "mealId");
+    }
+
+    public static Meal searchMealExistent(int mealId){
+        ArrayList<Object> mealArrayList;
+        mealArrayList = BinaryFileUtility.readObjects("Meal.bin");
+        if (mealArrayList == null || mealArrayList.isEmpty()){
+            AlertGenerator.showAlert("Error", "No data in Meal file");
+            return null;
+        }
+        for (Object obj : mealArrayList){
+            if (obj instanceof Meal meal){
+                if (meal.getMealId() == mealId){
+                    return meal;
+                }
+            }
+        }
+        AlertGenerator.showAlert("Error", "Meal Not Exist in database");
+        return null;
     }
 
     @Override

@@ -9,12 +9,13 @@ import nonuser.DashBoard;
 import user.FoodQualityControlOfficer;
 import user.KitchenProductionManager;
 import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
 
 
-public class dashboardController {
+public class dashboardController implements UserReceiver {
     @javafx.fxml.FXML
     private TableColumn<String,DashBoard> descriptionTableView;
     @javafx.fxml.FXML
@@ -37,9 +38,11 @@ public class dashboardController {
     private AnchorPane reg_anchorPane;
 
     private FoodQualityControlOfficer loggedInUser;
+    @Override
     public void setLoggedInUser(User user){
         if (user instanceof FoodQualityControlOfficer foodQualityControlOfficer){
-            this.loggedInUser = foodQualityControlOfficer;
+            loggedInUser = foodQualityControlOfficer;
+            return;
         }
         AlertGenerator.showAlert("error", "error Authentication failed");
     }
@@ -50,6 +53,9 @@ public class dashboardController {
     }
     @javafx.fxml.FXML
     public void updateOnAction(ActionEvent actionEvent) {
+//        String name = loggedInUser.getFullName();
+//        AlertGenerator.showAlert(name, "Your name is "+name);
+
         mainTableView.getItems().clear();
 
         if(statusComboBox.getValue() == null){
