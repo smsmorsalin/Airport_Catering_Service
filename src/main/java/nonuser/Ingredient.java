@@ -13,7 +13,7 @@ public class Ingredient {
         this.ingredientName = ingredientName;
         this.quantity = quantity;
         this.estimatedCost = estimatedCost;
-        PricePerUnit = pricePerUnit;
+        this.PricePerUnit = pricePerUnit;
     }
 
     public int getIngredientId() {

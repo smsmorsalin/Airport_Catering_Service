@@ -3,10 +3,13 @@ package main.airport_catering_service.controller.dispatch_coordinator;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import user.DispatchCoordinator;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class monitorDeliveryController
+public class monitorDeliveryController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label driverNameLabel;
@@ -18,6 +21,16 @@ public class monitorDeliveryController
     private Label truckIdLabel;
     @javafx.fxml.FXML
     private Label estimatedArrivalTimeLabel;
+
+    private DispatchCoordinator loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof DispatchCoordinator dispatchCoordinator){
+            loggedInUser = dispatchCoordinator;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -57,7 +70,7 @@ public class monitorDeliveryController
 
     @javafx.fxml.FXML
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
-//        DispatchCoordinator.renderDashboard(actionEvent,);
+        DispatchCoordinator.renderDashboard(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML

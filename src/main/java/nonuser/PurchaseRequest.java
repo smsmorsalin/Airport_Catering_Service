@@ -49,4 +49,20 @@ public class PurchaseRequest {
     public void setDeliveryDate(LocalDate deliveryDate) {
         DeliveryDate = deliveryDate;
     }
+
+    public String getPurchaseHistory() {
+        return PurchaseHistory;
+    }
+
+    public void setPurchaseHistory(String purchaseHistory) {
+        PurchaseHistory = purchaseHistory;
+    }
+
+    public LocalDate getReceivingDate() {
+        return ReceivingDate;
+    }
+
+    public void setReceivingDate(LocalDate receivingDate) {
+        ReceivingDate = receivingDate;
+    }
 }
