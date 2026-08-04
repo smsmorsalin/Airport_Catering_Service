@@ -99,8 +99,7 @@ public class packageOrderController implements UserReceiver
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
 
-        if (orderIdTextfield.getText() == null
-                || orderIdTextfield.getText().trim().isEmpty()) {
+        if (orderIdTextfield.getText().trim().isEmpty()) {
 
             AlertGenerator.showAlert("Invalid Input", "Order ID must be filled.");
             return;

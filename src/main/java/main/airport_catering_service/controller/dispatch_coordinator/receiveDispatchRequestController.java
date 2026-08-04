@@ -56,9 +56,7 @@ public class receiveDispatchRequestController implements UserReceiver
 
         tableView.getItems().clear();
 
-        if (orderIdTextfield.getText() == null
-                || orderIdTextfield.getText().trim().isEmpty() || dispatchNoteTextArea.getText() == null
-                || dispatchNoteTextArea.getText().trim().isEmpty()) {
+        if (orderIdTextfield.getText().trim().isEmpty() || dispatchNoteTextArea.getText().trim().isEmpty()) {
 
             AlertGenerator.showAlert("Invalid Input", "Order ID and Dispatch Note must be filled.");
             return;
