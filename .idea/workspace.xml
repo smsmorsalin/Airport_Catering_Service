@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="file read and write on kitchen production manager" />
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="changed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -215,7 +215,23 @@
       <option name="project" value="LOCAL" />
       <updated>1785861195660</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="file read and write on kitchen production manager">
+      <option name="closed" value="true" />
+      <created>1785861304909</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1785861304909</updated>
+    </task>
+    <task id="LOCAL-00009" summary="changed">
+      <option name="closed" value="true" />
+      <created>1785861638719</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1785861638719</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +242,7 @@
     <MESSAGE value="delete DeliveryConfirmation.java file" />
     <MESSAGE value="pull" />
     <MESSAGE value="file read and write on kitchen production manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="file read and write on kitchen production manager" />
+    <MESSAGE value="changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed" />
   </component>
 </project>
