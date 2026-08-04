@@ -81,8 +81,87 @@ public class AirlineRepresentative extends User implements Serializable {
         return true;
     }
 
-    public final void modifyCateringOrder(String orderId, ArrayList<String> orderItemIds){
-        // find out the orderId and modify catering order where cateringOrder.orderID == orderId the whole CateringOrder.bin
+    public final boolean modifyCateringOrder(CateringOrder selectedCateringOrder, ArrayList<OrderItem> orderItemList) {
+
+        if (selectedCateringOrder == null) {
+            AlertGenerator.showAlert("Error", "Selected catering order is invalid.");
+            return false;
+        }
+
+        if (orderItemList == null || orderItemList.isEmpty()) {
+            AlertGenerator.showAlert("Error", "Order item list cannot be empty.");
+            return false;
+        }
+
+
+        ArrayList<Object> cateringOrderList =
+                BinaryFileUtility.readObjects("CateringOrder.bin");
+
+        if (cateringOrderList == null || cateringOrderList.isEmpty()) {
+            AlertGenerator.showAlert("Error", "No catering orders found.");
+            return false;
+        }
+
+        boolean orderFound = false;
+
+        for (int i = 0; i < cateringOrderList.size(); i++) {
+
+            Object object = cateringOrderList.get(i);
+
+            if (object instanceof CateringOrder cateringOrder && cateringOrder.getOrderId() == selectedCateringOrder.getOrderId()) {
+                cateringOrderList.set(i, selectedCateringOrder);
+                orderFound = true;
+                break;
+            }
+        }
+
+        if (!orderFound) {
+            AlertGenerator.showAlert("Error", "Order not found.");
+            return false;
+        }
+
+        ArrayList<Object> storedOrderItemList =
+                BinaryFileUtility.readObjects("OrderItem.bin");
+
+        if (storedOrderItemList == null) {
+            storedOrderItemList = new ArrayList<>();
+        }
+
+        for (OrderItem modifiedOrderItem : orderItemList) {
+
+            boolean itemFound = false;
+
+            for (int i = 0; i < storedOrderItemList.size(); i++) {
+
+                Object object = storedOrderItemList.get(i);
+
+                if (object instanceof OrderItem storedOrderItem && storedOrderItem.getItemId().equals(modifiedOrderItem.getItemId())) {
+
+                    storedOrderItemList.set(i, modifiedOrderItem);
+                    itemFound = true;
+                    break;
+                }
+            }
+
+            if (!itemFound) {
+                storedOrderItemList.add(modifiedOrderItem);
+            }
+        }
+
+
+        boolean orderItemsSaved = BinaryFileUtility.overwriteObjects("OrderItem.bin", storedOrderItemList);
+        if (!orderItemsSaved) {AlertGenerator.showAlert("Error", "Order items could not be modified.");
+            return false;
+        }
+        boolean cateringOrderSaved = BinaryFileUtility.overwriteObjects("CateringOrder.bin", cateringOrderList);
+
+        if (!cateringOrderSaved) {AlertGenerator.showAlert("Error", "Catering order could not be modified.");
+            return false;
+        }
+
+        AlertGenerator.showAlert("Success", "Order modified successfully."
+        );
+        return true;
     }
 
     public boolean cancelCateringOrder(int orderId){
@@ -169,6 +248,18 @@ public class AirlineRepresentative extends User implements Serializable {
         String orderStatus = cateringOrder.getStatus();
 
         ArrayList<String> statusList = new ArrayList<String>();
+        if(orderStatus.equals("Pending")){
+            AlertGenerator.showAlert("error", "Order is pending for approval");
+            return null;
+        }
+        if(orderStatus.equals("Cancelled")){
+            AlertGenerator.showAlert("error", "Order is cancelled");
+            return null;
+        }
+        if(orderStatus.equals("Rejected")){
+            AlertGenerator.showAlert("error", "Order is rejected");
+            return null;
+        }
 
         if (orderStatus.equals("Approved")){
             statusList.add("Approved");
