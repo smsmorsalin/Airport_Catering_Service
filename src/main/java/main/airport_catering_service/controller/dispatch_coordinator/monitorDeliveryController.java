@@ -3,15 +3,16 @@ package main.airport_catering_service.controller.dispatch_coordinator;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import user.DispatchCoordinator;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class monitorDeliveryController
+public class monitorDeliveryController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label driverNameLabel;
-    @javafx.fxml.FXML
-    private Label currentStatusLabel;
     @javafx.fxml.FXML
     private Label departureTimeLabel;
     @javafx.fxml.FXML
@@ -21,44 +22,66 @@ public class monitorDeliveryController
     @javafx.fxml.FXML
     private Label estimatedArrivalTimeLabel;
 
+    private DispatchCoordinator loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof DispatchCoordinator dispatchCoordinator){
+            loggedInUser = dispatchCoordinator;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
+
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
     public void monitorDeliveryButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderMonitorDelivery(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void scheduleDeliveryButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderScheduleDelivery(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void assignTruckButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderAssignTruck(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void packageOrderButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderPackageOrder(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void receiveDispatchRequestButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderReceiveDispatchRequest(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void manageDeliveryDelayButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderManageDeliveryDelay(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void generateDispatchReportButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderGenerateDispatchReport(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void emergencyDeliveryButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderEmergencyDelivery(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
-        DispatchCoordinator.renderDashboard(actionEvent);
+        DispatchCoordinator.renderDashboard(actionEvent,loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
     }
 }

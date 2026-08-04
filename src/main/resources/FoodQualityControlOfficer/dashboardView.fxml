@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.food_quality_control_officer.dashboardController">
+<AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.food_quality_control_officer.dashboardController">
     <children>
         <VBox layoutY="49.0" prefHeight="337.0" prefWidth="175.0" style="-fx-background-radius: 9;">
             <children>
@@ -25,9 +17,9 @@
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarFoodSafetyCheckOnAction" prefHeight="42.0" prefWidth="174.0" text="Food Safety Check" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarApproveBatchOnAction" prefHeight="42.0" prefWidth="174.0" text="Approve Batch" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarRejectBatchOnAction" prefHeight="42.0" prefWidth="174.0" text="Reject Batch" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarQualityIssueOnAction" prefHeight="42.0" prefWidth="174.0" text="Quality Issue" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" onAction="#sideBarTrendAnalysisOnAction" prefHeight="42.0" prefWidth="174.0" text="Trend Analysis" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" onAction="#sideBarQAReportOnAction" prefHeight="42.0" prefWidth="174.0" text="QA Report" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarQualityIssueOnAction" prefHeight="42.0" prefWidth="174.0" text=" Manage Quality Issue" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarTrendAnalysisOnAction" prefHeight="42.0" prefWidth="174.0" text=" Quality Trend Analysis" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarQAReportOnAction" prefHeight="42.0" prefWidth="174.0" text="Generate QA Report" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" onAction="#sideBarAirportCateringServiceOnAction" prefHeight="35.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">

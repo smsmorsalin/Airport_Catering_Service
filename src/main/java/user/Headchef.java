@@ -14,6 +14,7 @@ public class Headchef extends Employee implements Serializable {
 
     @Override
     public void viewDashboard(javafx.event.ActionEvent event, User user){
+        SceneSwitchingHelper.switchSceneWithData(event,"/Headchef/DashboardView.Fxml", user);
 
     }
 
@@ -22,34 +23,34 @@ public class Headchef extends Employee implements Serializable {
         return true;
     }
 
-    public static void renderDashboardView(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DashboardView.fxml");
+    public static void renderDashboardView(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Headchef/DashboardView.fxml", user);
     }
 
-    public static void renderDisplayCookingProgress(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayCookingProgressView.fxml");
+    public static void renderDisplayCookingProgress(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Headchef/DisplayCookingProgressView.fxml", user);
     }
 
-    public static void renderDisplayPreparationProgress(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayPreparationProgressView.fxml");
+    public static void renderDisplayPreparationProgress(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Headchef/DisplayPreparationProgressView.fxml", user);
     }
-    public static void renderProductionTaskInformation(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayProductionTaskInformationView.fxml");
+    public static void renderProductionTaskInformation(javafx.event.ActionEvent event, User user)  {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Headchef/DisplayProductionTaskInformationView.fxml", user);
     }
-    public static void renderDisplayUpdateConfirmation(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/DisplayUpdateConfirmationView.fxml");
+    public static void renderDisplayUpdateConfirmation(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Headchef/DisplayUpdateConfirmationView.fxml", user);
     }
-    public static void renderHandleRejectedFoodBatches(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/HandleRejectedFoodBatchesView.fxml");
+    public static void renderHandleRejectedFoodBatches(javafx.event.ActionEvent event, User user)  {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Headchef/HandleRejectedFoodBatchesView.fxml", user);
     }
-    public static void renderManageMealPreparation(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/ManageMealPreparationView.fxml");
+    public static void renderManageMealPreparation(javafx.event.ActionEvent event, User user)  {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Headchef/ManageMealPreparationView.fxml", user);
     }
-    public static void renderProductionTask(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/ProductionTaskView.fxml");
+    public static void renderProductionTask(javafx.event.ActionEvent event, User user)  {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Headchef/ProductionTaskView.fxml", user);
     }
-    public static void renderViewKitchenPerformanceReport(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Headchef/ViewKitchenPerformanceReportView.fxml");
+    public static void renderViewKitchenPerformanceReport(javafx.event.ActionEvent event, User user)  {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Headchef/ViewKitchenPerformanceReportView.fxml", user);
     }
 
 }
