@@ -5,11 +5,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import user.CustomerSupportOfficer;
+import user.FinanceAndBillingManager;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class TrackComplaintViewController
+public class TrackComplaintViewController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label complaintIdLabel;
@@ -27,6 +30,16 @@ public class TrackComplaintViewController
     private Label departmentLabel;
     @javafx.fxml.FXML
     private TextField complaintIdTextField;
+
+
+    private FinanceAndBillingManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
+            this.loggedInUser = FinanceAndBillingManager;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {

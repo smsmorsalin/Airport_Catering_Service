@@ -6,6 +6,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import nonuser.Meal;
+import utility.AlertGenerator;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 
 
@@ -18,6 +21,21 @@ public class KitchenProductionManager extends  Employee implements Serializable 
     public KitchenProductionManager(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, LocalDate joinDate, String department, String designation, float salary) {
         super(password, fullName, role, dateOfBirth, gender, email, phone, address, status, joinDate, department, designation, salary);
     }
+
+    public Meal createNewMenu(String mealName, float mealPrice){
+        Meal newMeal = new Meal(mealName, mealPrice);
+        boolean isSave = BinaryFileUtility.writeObjects("Meal.bin", newMeal);
+        if (isSave){
+            return newMeal;
+        }
+        return null;
+    }
+
+
+
+
+
+
     @Override
     public String toString() {
         return "KitchenProductionManager{" +

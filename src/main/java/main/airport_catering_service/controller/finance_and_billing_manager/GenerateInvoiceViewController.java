@@ -8,6 +8,8 @@ import javafx.scene.control.TextField;
 import nonuser.CateringOrder;
 import nonuser.Invoice;
 import user.FinanceAndBillingManager;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 
@@ -15,7 +17,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class GenerateInvoiceViewController
+public class GenerateInvoiceViewController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label packagingCostLabel;
@@ -56,12 +58,20 @@ public class GenerateInvoiceViewController
 
     private int selectedCateringOrderId;
     private ArrayList<Object> selectedObjectedList;
-    private ArrayList<Object> selectedInvoiceList;
     @javafx.fxml.FXML
     private Label OrderIdLabel;
     @javafx.fxml.FXML
     private Label orderStatusLabel;
     private CateringOrder selectedCateringOrder;
+
+    private FinanceAndBillingManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
+            this.loggedInUser = FinanceAndBillingManager;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -134,7 +144,7 @@ public class GenerateInvoiceViewController
                         AlertGenerator.showAlert("error", "Order Already Rejected");
                         return;
                     }
-                    selectedInvoiceList = BinaryFileUtility.readObjects("Invoice.bin");
+                    ArrayList<Object> selectedInvoiceList = BinaryFileUtility.readObjects("Invoice.bin");
 
                     for (Object obj2 : selectedInvoiceList){
                         if (obj2 instanceof Invoice invoice){

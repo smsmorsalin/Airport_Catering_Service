@@ -2,12 +2,16 @@ package main.airport_catering_service.controller.food_quality_control_officer;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.AirlineRepresentative;
 import user.FoodQualityControlOfficer;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
+import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 
-public class FoodSafetyCheckController
+public class FoodSafetyCheckController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label fxidDisplayBatchNumberLabel;
@@ -25,6 +29,17 @@ public class FoodSafetyCheckController
     private Label fxidDisplaySafetyStatusLabel;
     @javafx.fxml.FXML
     private Label fxidDisplayViolationsFoundLabel;
+
+    private FoodQualityControlOfficer loggedInUser;
+
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FoodQualityControlOfficer foodQualityControlOfficer){
+            loggedInUser = foodQualityControlOfficer;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "You are not a valid user for this page");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -65,39 +80,50 @@ public class FoodSafetyCheckController
         }
     }
 
-
     @javafx.fxml.FXML
-    public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
+    public void sideBarRejectBatchOnAction(ActionEvent actionEvent) throws IOException{
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/RejectBatchView.fxml",
+                loggedInUser);
     }
-
-
-
     @javafx.fxml.FXML
-    public void sideBarQualityTrendAnalysisOnAction(ActionEvent actionEvent) {
+    public void sideBarQualityTrendAnalysisOnAction(ActionEvent actionEvent) throws IOException{
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/QualityTrendAnalysisView.fxml",
+                loggedInUser);
     }
-
     @javafx.fxml.FXML
-    public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent) {
+    public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent)throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/ReceiveInspectionRequestView.fxml",
+                loggedInUser);
     }
-
     @javafx.fxml.FXML
-    public void slideBarPerformInspectionOnAction(ActionEvent actionEvent) {
+    public void slideBarPerformInspectionOnAction(ActionEvent actionEvent) throws IOException{
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/PerformInspectionView.fxml",
+                loggedInUser);
     }
-
     @javafx.fxml.FXML
     public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws IOException {
         FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
     }
-
     @javafx.fxml.FXML
-    public void sideBarGenerateQAReportOnAction(ActionEvent actionEvent) {
+    public void sideBarGenerateQAReportOnAction(ActionEvent actionEvent) throws IOException{
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/GenerateQAReportView.fxml",
+                loggedInUser);
     }
-
     @javafx.fxml.FXML
-    public void sideBarApproveBatchOnAction(ActionEvent actionEvent) {
+    public void sideBarApproveBatchOnAction(ActionEvent actionEvent)throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/ApproveBatchView.fxml",
+                loggedInUser);
     }
-
     @javafx.fxml.FXML
-    public void sideBarManageQualityIssueOnAction(ActionEvent actionEvent) {
+    public void sideBarManageQualityIssueOnAction(ActionEvent actionEvent) throws IOException{
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/food_quality_control_officer/QualityTrendAnalysisView.fxml",
+                loggedInUser);
     }
 }

@@ -3,12 +3,15 @@ package main.airport_catering_service.controller.customer_support_officer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.CustomerSupportOfficer;
+import user.FinanceAndBillingManager;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class EmergencyModificationViewController
+public class EmergencyModificationViewController implements UserReceiver
 {
 
     @javafx.fxml.FXML
@@ -19,6 +22,15 @@ public class EmergencyModificationViewController
     private TextArea reasonTextField;
     @javafx.fxml.FXML
     private TextField orderIdTextField;
+
+    private FinanceAndBillingManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
+            this.loggedInUser = FinanceAndBillingManager;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
