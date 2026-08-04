@@ -111,5 +111,34 @@ public class assignTruckController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
+
+        tableView.getItems().clear();
+
+        if (orderIdTextfield.getText() == null || orderIdTextfield.getText().trim().isEmpty()
+                || driverSelectionTextfield.getText() == null || driverSelectionTextfield.getText().trim().isEmpty()
+                || truckSelectionTextfield.getText() == null || truckSelectionTextfield.getText().trim().isEmpty()) {
+
+            AlertGenerator.showAlert("Invalid Input", "All text fields must be filled.");
+            return;
+        }
+
+        int orderId, driverId, truckId;
+
+        try {
+            orderId = Integer.parseInt(orderIdTextfield.getText().trim());
+            driverId = Integer.parseInt(driverSelectionTextfield.getText().trim());
+            truckId = Integer.parseInt(truckSelectionTextfield.getText().trim());
+        } catch (NumberFormatException e) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID, Driver ID, and Truck ID must be integers.");
+            return;
+        }
+
+        if (orderId <= 0 || driverId <= 0 || truckId <= 0) {
+            AlertGenerator.showAlert("Invalid Input", "IDs must be greater than 0.");
+            return;
+        }
+
+
+
     }
 }

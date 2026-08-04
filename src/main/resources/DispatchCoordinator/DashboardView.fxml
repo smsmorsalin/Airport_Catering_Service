@@ -16,6 +16,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="589.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.dispatch_coordinator.dashboardController">
     <children>
@@ -67,8 +68,8 @@
                      <columns>
                         <TableColumn fx:id="ticketIdTableviewColumn" prefWidth="83.0" text="Ticket ID" />
                         <TableColumn fx:id="issueTypeTableviewColumn" prefWidth="84.0" text="Issue Type" />
-                        <TableColumn fx:id="descriptionTableviewColumn" prefWidth="330.0" text="Description" />
-                        <TableColumn fx:id="statusTableviewColumn" prefWidth="91.0" text="Status" />
+                        <TableColumn fx:id="descriptionTableviewColumn" prefWidth="249.60000610351562" text="Description" />
+                        <TableColumn fx:id="statusTableviewColumn" prefWidth="172.0" text="Status" />
                      </columns>
                   </TableView>
                   <Label fx:id="enterTicketIdText" layoutX="13.0" layoutY="378.0" prefHeight="17.0" prefWidth="88.0" text="Enter Ticket ID" />
@@ -82,6 +83,8 @@
                      </cursor>
                   </Button>
                   <Line endX="100.0" layoutX="252.0" layoutY="327.0" startX="-100.0" />
+                  <Text fx:id="reasonText" layoutX="244.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reason" />
+                  <TextField fx:id="reasonTextfield" layoutX="290.0" layoutY="434.0" />
                </children>
             </AnchorPane>
          </children></VBox>

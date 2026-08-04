@@ -93,5 +93,34 @@ public class emergencyDeliveryController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
+
+        if (emergencyRequestIdTextfield.getText() == null
+                || emergencyRequestIdTextfield.getText().trim().isEmpty()
+                || orderIdTextfield.getText() == null
+                || orderIdTextfield.getText().trim().isEmpty()
+                || emergencyNotetextfield.getText() == null
+                || emergencyNotetextfield.getText().trim().isEmpty()) {
+
+            AlertGenerator.showAlert("Invalid Input", "All fields must be filled.");
+            return;
+        }
+
+        int emergencyRequestId, orderId;
+
+        try {
+            emergencyRequestId = Integer.parseInt(emergencyRequestIdTextfield.getText().trim());
+            orderId = Integer.parseInt(orderIdTextfield.getText().trim());
+        } catch (Exception e) {
+            AlertGenerator.showAlert("Invalid Input", "Emergency Request ID and Order ID must be integers.");
+            return;
+        }
+
+        if (emergencyRequestId <= 0 || orderId <= 0) {
+            AlertGenerator.showAlert("Invalid Input", "IDs must be greater than 0.");
+            return;
+        }
+
+        String emergencyNote = emergencyNotetextfield.getText().trim();
+
     }
 }

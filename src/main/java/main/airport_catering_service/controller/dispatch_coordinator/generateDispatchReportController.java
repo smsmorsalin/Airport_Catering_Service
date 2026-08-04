@@ -10,6 +10,7 @@ import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class generateDispatchReportController implements UserReceiver
 {
@@ -42,6 +43,22 @@ public class generateDispatchReportController implements UserReceiver
 
     @javafx.fxml.FXML
     public void downloadDispatchReportButtonOnAction(ActionEvent actionEvent) {
+
+        if (reportTypeTextfield.getText() == null
+                || reportTypeTextfield.getText().trim().isEmpty() || startDateDatepicker.getValue() == null
+                || endDateDatepicker.getValue() == null) {
+
+            AlertGenerator.showAlert("Invalid Input", "Report Type, Start Date and End Date must be filled.");
+            return;
+        }
+
+        String reportType = reportTypeTextfield.getText().trim();
+
+        if (endDateDatepicker.getValue().isBefore(startDateDatepicker.getValue())) {
+            AlertGenerator.showAlert("Invalid Input", "End Date cannot be before Start Date.");
+            return;
+        }
+
     }
 
     @javafx.fxml.FXML
