@@ -30,8 +30,6 @@ public class assignTruckController
     @javafx.fxml.FXML
     private TableView tableView;
     @javafx.fxml.FXML
-    private TableColumn capacityTableviewColumn;
-    @javafx.fxml.FXML
     private Text truckSelectionText;
     @javafx.fxml.FXML
     private Label driverNameLabel;
@@ -84,12 +82,16 @@ public class assignTruckController
     public void emergencyDeliveryButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void searchButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
         DispatchCoordinator.renderDashboard(actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
     }
 }

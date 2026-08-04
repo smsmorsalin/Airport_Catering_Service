@@ -4,10 +4,12 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.DispatchCoordinator;
 import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class dashboardController
+public class dashboardController implements UserReceiver
 {
     @javafx.fxml.FXML
     private TextField enterTicketIdTextfield;
@@ -32,6 +34,16 @@ public class dashboardController
     @javafx.fxml.FXML
     private TableColumn descriptionTableviewColumn;
 
+    //for all DispatchCoordinator just copy past
+    private DispatchCoordinator loggedInUser;
+    public void setLoggedInUser(User user){
+        if (user instanceof DispatchCoordinator dispatchCoordinator){
+            loggedInUser = dispatchCoordinator;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
+
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -51,8 +63,8 @@ public class dashboardController
     }
 
     @javafx.fxml.FXML
-    public void assignTruckButtonOnAction(ActionEvent actionEvent) throws IOException {
-        DispatchCoordinator.renderAssignTruck(actionEvent);
+    public void assignTruckButtonOnAction(ActionEvent actionEvent) {
+        DispatchCoordinator.renderAssignTruck(actionEvent, loggedInUser);
     }
 
     @javafx.fxml.FXML

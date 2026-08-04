@@ -61,6 +61,7 @@
                         <TableColumn fx:id="shortageQuantityTableviewColumn" prefWidth="172.0" text="Shortage Quantity" />
                     </columns>
                   </TableView>
+                  <Button layoutX="14.0" layoutY="87.0" mnemonicParsing="false" onAction="#searchAndShowButtonOnAction" prefHeight="26.0" prefWidth="125.0" text="Search And Show" />
                </children>
             </AnchorPane>
          </children></VBox>
