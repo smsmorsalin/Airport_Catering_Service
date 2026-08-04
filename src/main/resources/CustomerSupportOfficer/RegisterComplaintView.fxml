@@ -94,7 +94,7 @@
                             </font>
                         </Label>
                         <Label layoutX="56" layoutY="70" text="Register a new customer complaint" />
-                        <AnchorPane layoutX="38" layoutY="97" prefHeight="584" prefWidth="634" style="-fx-background-color:#F8FAFC;             -fx-background-radius:25;">
+                        <AnchorPane layoutX="38" layoutY="97" prefHeight="584" prefWidth="634" style="-fx-background-color: yellow; -fx-background-radius: 25;">
                             <children>
 
                                 <Label layoutX="28" layoutY="29" text="Complaint Information">

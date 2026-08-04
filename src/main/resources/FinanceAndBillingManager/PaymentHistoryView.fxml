@@ -106,12 +106,12 @@
                                 <Label layoutX="25" layoutY="70" text="Invoice ID" />
                                 <TextField fx:id="invoiceIdTextField" layoutX="120" layoutY="65" prefWidth="150" />
                                 <Label layoutX="300" layoutY="70" text="Airline Name" />
-                                <TextField fx:id="airlineTextField" layoutX="400" layoutY="65" prefWidth="160" />
                                 <Label layoutX="25" layoutY="125" text="Payment Status" />
                                 <ComboBox fx:id="paymentStatusComboBox" layoutX="120" layoutY="120" prefWidth="150" />
                                 <Label layoutX="300" layoutY="125" text="Payment Method" />
                                 <ComboBox fx:id="paymentMethodComboBox" layoutX="400" layoutY="120" prefWidth="160" />
                                 <Button fx:id="searchPaymentBtn" layoutX="590" layoutY="120" onAction="#SearchOnAction" prefHeight="30" prefWidth="90" style="-fx-background-color:#0F6BFF;         -fx-text-fill:white;         -fx-background-radius:10;" text="Search" />
+                        <ComboBox fx:id="airlinenameComboBox" layoutX="399.0" layoutY="66.0" prefWidth="160" />
                             </children>
                         </AnchorPane>
                         <AnchorPane layoutX="6" layoutY="330" prefHeight="270" prefWidth="712" style="-fx-background-color:white;             -fx-background-radius:25;">
@@ -134,13 +134,7 @@
                                 </TableView>
                             </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="6" layoutY="625" prefHeight="80" prefWidth="712" style="-fx-background-color:#EAF2FF;             -fx-background-radius:20;">
-
-
-                            <children>
-                                <Button fx:id="receiptBtn" layoutX="32.0" layoutY="22.0" onAction="#viewpaymentButtonOnAction" prefHeight="35" prefWidth="150" style="-fx-background-color:green;         -fx-text-fill:white;         -fx-background-radius:10;" text="View Payement" />
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane layoutX="6" layoutY="625" prefHeight="80" prefWidth="712" style="-fx-background-color:#EAF2FF;             -fx-background-radius:20;" />
                     </children>
                 </AnchorPane>
             </children>

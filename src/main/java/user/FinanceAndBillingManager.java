@@ -142,6 +142,8 @@ public class FinanceAndBillingManager extends Employee implements Serializable {
 
     //Button to Dashboard
 
+
+
     public static void viewdashboard(javafx.event.ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(
                 CustomerSupportOfficer.class.getResource("/FinanceAndBillingManager/dashboardView.fxml"));
@@ -154,5 +156,4 @@ public class FinanceAndBillingManager extends Employee implements Serializable {
         stage.setScene(scene);
         stage.show();
     }
-
 }

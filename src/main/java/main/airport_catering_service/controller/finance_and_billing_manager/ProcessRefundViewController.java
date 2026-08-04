@@ -3,6 +3,7 @@ package main.airport_catering_service.controller.finance_and_billing_manager;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.FinanceAndBillingManager;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
@@ -15,13 +16,7 @@ public class ProcessRefundViewController
     @javafx.fxml.FXML
     private Label refundStatusLabel;
     @javafx.fxml.FXML
-    private Button viewRefundButton;
-    @javafx.fxml.FXML
-    private Button verifyRequestButton;
-    @javafx.fxml.FXML
     private ComboBox<String> refundReasonComboBox;
-    @javafx.fxml.FXML
-    private TextField refundAmounTextField;
     @javafx.fxml.FXML
     private Label refundAmountLabel;
     @javafx.fxml.FXML
@@ -38,6 +33,8 @@ public class ProcessRefundViewController
     private Button processRefundButton;
     @javafx.fxml.FXML
     private Label transactionMethodLabel;
+    @javafx.fxml.FXML
+    private TextField refundAmountTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -45,6 +42,30 @@ public class ProcessRefundViewController
 
     @Deprecated
     public void sidebarProcessRefundOnAction(ActionEvent actionEvent) {
+        if(refundRequestIdField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Refund Request Id should be filled");
+            return;
+        }
+        if(orderidTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Order Id should be filled");
+            return;
+        }
+        if(refundAmountTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Refund Amount should be filled");
+            return;
+        }
+
+        if(additionalNotesTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Additional Notes should be filled");
+            return;
+        }
+        if(refundReasonComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Refund Reason ComboBox Should be selected");
+            return;
+        }
+        if(refundMethodComboBox.getValue()==null){
+            AlertGenerator.showAlert("Wrong Input","Refund Method ComboBox Should be selected");
+        }
     }
 
 
@@ -53,13 +74,6 @@ public class ProcessRefundViewController
     public void processRefundOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void verifyrequestOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void ViewRefundDetailsOnAction(ActionEvent actionEvent) {
-    }
 
     @Deprecated
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {

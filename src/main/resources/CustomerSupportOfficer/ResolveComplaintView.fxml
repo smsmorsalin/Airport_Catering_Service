@@ -56,14 +56,12 @@
                         <Label layoutX="56.0" layoutY="59.0" text="Review complaint details and provide resolution" />
                         <AnchorPane layoutX="38.0" layoutY="84.0" prefHeight="110" prefWidth="634" style="-fx-background-color:#F8FAFC;             -fx-background-radius:20;">
                             <children>
-                                <Label layoutX="25" layoutY="20" text="Search Complaint">
+                                <Label layoutX="25" layoutY="20" text="Complaint ID ">
                                     <font>
                                         <Font size="20" />
                                     </font>
                                 </Label>
                                 <TextField fx:id="complaintidTextField" layoutX="25" layoutY="60" prefHeight="35" prefWidth="350" promptText="Enter Complaint ID" />
-
-                                <Button fx:id="searchComplaintButton" layoutX="400" layoutY="60" onAction="#searchComplaintOnAction" prefHeight="35" prefWidth="150" style="-fx-background-color:#0F6BFF;         -fx-text-fill:white;         -fx-background-radius:10;" text="Search Complaint" />
 
                             </children>
 
@@ -95,7 +93,7 @@
                                     </font>
                                 </Label>
                                 <Label layoutX="35" layoutY="65" text="Resolution Status" />
-                                <ComboBox fx:id="resolutionStatusComboBox" layoutX="220" layoutY="55" prefWidth="250" />
+                                <ComboBox fx:id="resolutionStatusComboBox" layoutX="220.0" layoutY="61.0" prefWidth="250" />
                                 <Label layoutX="35" layoutY="105" text="Resolution Notes" />
                                 <TextArea fx:id="resolutionNotesTextField" layoutX="220" layoutY="95" prefHeight="65" prefWidth="350" promptText="Enter resolution details" />
                             </children>
