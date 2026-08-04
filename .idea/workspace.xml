@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="fix error in romy's finance_and_billing_manager\dashboardViewController.java file." />
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="fix error in romy's finance_and_billing_manager\dashboardViewController.java file.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CateringOrder.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderItem.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/modifyOrderViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/modifyOrderViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/airline_representative/modifyOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/modifyOrderView.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,61 +59,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.2839724740242182" />
-      <entry key="MS500" value="2.2324569826748286" />
-      <entry key="S2" value="4.499965267100866" />
-      <entry key="S5" value="8.03492083905693" />
-      <entry key="S10" value="15.514791332978568" />
-      <entry key="S30" value="33.302611769523956" />
-      <entry key="S60" value="42.52795951796936" />
-      <entry key="M2" value="48.57540495010133" />
-      <entry key="M5" value="52.865805889496706" />
-      <entry key="M10" value="54.70633951327361" />
-      <entry key="M15" value="56.03793193338583" />
-      <entry key="M30" value="62.89613702694401" />
-      <entry key="H1" value="82.41254827697345" />
-      <entry key="H2" value="112.66514845838934" />
-      <entry key="H4" value="145.7137520112296" />
-      <entry key="D1" value="201.48759588023674" />
-      <entry key="W1" value="216.30871147926405" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="6.003080132146732E-88" />
+      <entry key="S2" value="1.671481703789937E-22" />
+      <entry key="S5" value="2.542327650766701E-9" />
+      <entry key="S10" value="6.900080595929192E-5" />
+      <entry key="S30" value="0.06784715175326049" />
+      <entry key="S60" value="0.41709582297460696" />
+      <entry key="M2" value="1.1611129076002495" />
+      <entry key="M5" value="3.208047023284175" />
+      <entry key="M10" value="6.4999135738011145" />
+      <entry key="M15" value="10.380492711210781" />
+      <entry key="M30" value="26.354628590293075" />
+      <entry key="H1" value="62.90834457083277" />
+      <entry key="H2" value="122.66233786967177" />
+      <entry key="H4" value="193.6290149914679" />
+      <entry key="D1" value="320.4934758124846" />
+      <entry key="W1" value="355.56685442841115" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="6.604624953266733E-140" />
-      <entry key="S10" value="2.665494987709133E-70" />
-      <entry key="S30" value="1.2344775919515973E-23" />
-      <entry key="S60" value="7.966792205107122E-12" />
-      <entry key="M2" value="6.799668541318036E-6" />
-      <entry key="M5" value="0.025432339867269445" />
-      <entry key="M10" value="0.4858783440086825" />
-      <entry key="M15" value="1.6591721841001066" />
-      <entry key="M30" value="8.429426727412647" />
-      <entry key="H1" value="24.344408100991295" />
-      <entry key="H2" value="44.61806477000929" />
-      <entry key="H4" value="61.56481091973302" />
-      <entry key="D1" value="81.27201788216759" />
-      <entry key="W1" value="85.30637334522167" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000010218315" />
+      <entry key="S10" value="1.000032043216744" />
+      <entry key="S30" value="1.0384635527334127" />
+      <entry key="S60" value="1.2944632706279458" />
+      <entry key="M2" value="1.9503304093763658" />
+      <entry key="M5" value="4.044316762117739" />
+      <entry key="M10" value="8.361402467020628" />
+      <entry key="M15" value="13.492354826164581" />
+      <entry key="M30" value="31.251990451486716" />
+      <entry key="H1" value="62.63385988654534" />
+      <entry key="H2" value="104.44333729883158" />
+      <entry key="H4" value="147.1947991242898" />
+      <entry key="D1" value="209.65895578207576" />
+      <entry key="W1" value="224.39517395231" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.1433195152225513" />
-      <entry key="MS500" value="2.1709049162376557" />
-      <entry key="S2" value="4.45972826306218" />
-      <entry key="S5" value="8.009412811580544" />
-      <entry key="S10" value="15.493722644793738" />
-      <entry key="S30" value="33.28650450258752" />
-      <entry key="S60" value="42.513913973098994" />
-      <entry key="M2" value="48.56470914334756" />
-      <entry key="M5" value="52.8853128818373" />
-      <entry key="M10" value="55.187427236482264" />
-      <entry key="M15" value="57.69039648346232" />
-      <entry key="M30" value="71.30969384636006" />
-      <entry key="H1" value="106.73238712317635" />
-      <entry key="H2" value="157.25965153882638" />
-      <entry key="H4" value="207.26190609047643" />
-      <entry key="D1" value="282.7558671691192" />
-      <entry key="W1" value="301.6145207270384" />
+      <entry key="MS100" value="6.93308123264461E-7" />
+      <entry key="MS500" value="0.05863882478129193" />
+      <entry key="S2" value="0.4920920110169001" />
+      <entry key="S5" value="0.7530408351043176" />
+      <entry key="S10" value="0.8678678777683568" />
+      <entry key="S30" value="1.0561106046469748" />
+      <entry key="S60" value="1.6755518136392702" />
+      <entry key="M2" value="3.081274142641984" />
+      <entry key="M5" value="7.221765990431654" />
+      <entry key="M10" value="14.82578804209958" />
+      <entry key="M15" value="23.830325102311036" />
+      <entry key="M30" value="57.543139818657274" />
+      <entry key="H1" value="125.46586194192024" />
+      <entry key="H2" value="227.03689288436175" />
+      <entry key="H4" value="340.77423355140826" />
+      <entry key="D1" value="530.1405826442738" />
+      <entry key="W1" value="579.9602166203083" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -119,28 +127,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ACS.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "morsalin",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ACS.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;morsalin&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ACS" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.airport_catering_service.HelloApplication" />
@@ -206,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785760534863</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix error in romy's finance_and_billing_manager\dashboardViewController.java file.">
+      <option name="closed" value="true" />
+      <created>1785872051763</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1785872051763</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
