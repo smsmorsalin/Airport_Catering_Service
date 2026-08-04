@@ -3,11 +3,13 @@ package main.airport_catering_service.controller.headchef;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.Headchef;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class UpdateProductionStatusController
-{
+public class UpdateProductionStatusController implements UserReceiver {
     @javafx.fxml.FXML
     private TableColumn mealCategoryColumn;
     @javafx.fxml.FXML
@@ -47,13 +49,25 @@ public class UpdateProductionStatusController
     @javafx.fxml.FXML
     private Button resetButton;
 
+    private Headchef loggedInUser;
+
+    @Override
+    public void setLoggedInUser(User user) {
+        if (user instanceof Headchef headchef) {
+            loggedInUser = headchef;
+        } else {
+            AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+        }
+    }
+
+
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
-        Headchef.renderDashboardView(actionEvent);
+        Headchef.renderDashboardView(actionEvent, loggedInUser);
     }
 
     @javafx.fxml.FXML
@@ -62,7 +76,7 @@ public class UpdateProductionStatusController
 
     @javafx.fxml.FXML
     public void refreshTable(ActionEvent actionEvent) throws IOException {
-        Headchef.renderDisplayCookingProgress(actionEvent);
+        Headchef.renderDisplayCookingProgress(actionEvent, loggedInUser);
     }
 
     @javafx.fxml.FXML
@@ -73,5 +87,21 @@ public class UpdateProductionStatusController
 
     @javafx.fxml.FXML
     public void loadTask(ActionEvent actionEvent) {
+        if(taskIdField.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a task ID");
+            return;
+        }
+        int taskId;
+        try {
+            taskId = Integer.parseInt(taskIdField.getText());
+        }catch (NumberFormatException e){
+            AlertGenerator.showAlert("Error", "Please enter a valid task ID");
+            return;
+        }
+        if(taskId <= 0) {
+            AlertGenerator.showAlert("Error", "Please enter a valid task ID");
+            return;
+        }
+
     }
 }

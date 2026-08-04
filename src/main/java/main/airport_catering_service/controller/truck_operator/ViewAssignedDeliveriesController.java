@@ -2,11 +2,15 @@ package main.airport_catering_service.controller.truck_operator;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import user.Headchef;
 import user.Truckoperator;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class ViewAssignedDeliveriesController
+public class ViewAssignedDeliveriesController implements UserReceiver
 {
     @javafx.fxml.FXML
     private DatePicker deliveryDatePicker;
@@ -35,13 +39,22 @@ public class ViewAssignedDeliveriesController
     @javafx.fxml.FXML
     private TableColumn deliveryTimeColumn;
 
+    private Headchef loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof Headchef headchef){
+            loggedInUser = headchef;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
+
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderDashboardView(actionEvent);
+        Truckoperator.renderDashboardView(actionEvent, loggedInUser);
     }
 
     @Deprecated
@@ -52,10 +65,29 @@ public class ViewAssignedDeliveriesController
 
     @javafx.fxml.FXML
     public void refreshTable(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderAssignmentDeliveryTasksView(actionEvent);
+        Truckoperator.renderAssignmentDeliveryTasksView(actionEvent, loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void searchDeliveries(ActionEvent actionEvent) {
+        if(assignmentIdField.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a assignment ID");
+            return;
+        }
+        int assignmentId;
+        try {
+            assignmentId = Integer.parseInt(assignmentIdField.getText());
+        }catch (NumberFormatException e){
+            AlertGenerator.showAlert("Error", "Please enter a valid assignment ID");
+            return;
+        }
+        if(assignmentId <= 0) {
+            AlertGenerator.showAlert("Error", "Please enter a valid assignment ID");
+            return;
+        }
+        if (deliveryDatePicker.getValue() == null) {
+            AlertGenerator.showAlert("Error", "Please enter a delivery date in DD-MM-YYYY");
+            return;
+        }
     }
 }

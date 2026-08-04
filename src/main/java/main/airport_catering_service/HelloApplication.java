@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import nonuser.Meal;
+import utility.BinaryFileUtility;
 import utility.DummyDataGenerator;
 
 import java.io.IOException;
@@ -16,6 +18,8 @@ public class HelloApplication extends Application {
         stage.setTitle("Airport Catering Service");
         stage.setScene(scene);
         stage.show();
+
+
 
 
 //        DummyDataGenerator.DeleteAllUser();
