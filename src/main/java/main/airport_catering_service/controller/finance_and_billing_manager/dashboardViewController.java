@@ -4,12 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import nonuser.Airline;
 import user.FinanceAndBillingManager;
-import user.KitchenProductionManager;
 import user.User;
 import user.UserReceiver;
 import utility.AlertGenerator;
-
-import javax.imageio.IIOException;
 import java.io.IOException;
 
 public class dashboardViewController implements UserReceiver
@@ -32,14 +29,13 @@ public class dashboardViewController implements UserReceiver
     @javafx.fxml.FXML
     private TableColumn <Airline,String> issueTypeTableView;
 
-//    private FinanceAndBillingManager loggedInUser;
-//    public void setLoggedInUser(User user){
-//        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
-//            this.loggedInUser = FinanceAndBillingManager;
-//        }
-//        AlertGenerator.showAlert("error", "error Authentication failed");
-//    }
-
+    private FinanceAndBillingManager loggedInUser;
+    public void setLoggedInUser(User user){
+        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
+            this.loggedInUser = FinanceAndBillingManager;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
 
 
 
@@ -117,5 +113,4 @@ public class dashboardViewController implements UserReceiver
     public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) throws IOException{
         FinanceAndBillingManager.viewOutstandingPayments(actionEvent);
     }
-
 }
