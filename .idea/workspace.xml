@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/dashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/dashboardViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/dashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/dashboardViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/dashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/dashboardViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CustomerSupportOfficer.java" afterDir="false" />
->>>>>>> f82d5b9173af5fc5ed5a83068e71f706a69bcf2c
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/FinanceAndBillingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/FinanceAndBillingManager.java" afterDir="false" />
-    </list>
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,61 +51,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000000000000022" />
-      <entry key="S60" value="1.000000047077041" />
-      <entry key="M2" value="1.0002193471135978" />
-      <entry key="M5" value="1.0414107118592957" />
-      <entry key="M10" value="1.37776977138826" />
-      <entry key="M15" value="2.245325405145531" />
-      <entry key="M30" value="8.832760016942203" />
-      <entry key="H1" value="28.376000405424758" />
-      <entry key="H2" value="58.53102488943316" />
-      <entry key="H4" value="91.35632408838036" />
-      <entry key="D1" value="146.65362361138995" />
-      <entry key="W1" value="161.33466619167325" />
+      <entry key="MS100" value="1.2839724740242182" />
+      <entry key="MS500" value="2.2324569826748286" />
+      <entry key="S2" value="4.499965267100866" />
+      <entry key="S5" value="8.03492083905693" />
+      <entry key="S10" value="15.514791332978568" />
+      <entry key="S30" value="33.302611769523956" />
+      <entry key="S60" value="42.52795951796936" />
+      <entry key="M2" value="48.57540495010133" />
+      <entry key="M5" value="52.865805889496706" />
+      <entry key="M10" value="54.70633951327361" />
+      <entry key="M15" value="56.03793193338583" />
+      <entry key="M30" value="62.89613702694401" />
+      <entry key="H1" value="82.41254827697345" />
+      <entry key="H2" value="112.66514845838934" />
+      <entry key="H4" value="145.7137520112296" />
+      <entry key="D1" value="201.48759588023674" />
+      <entry key="W1" value="216.30871147926405" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="6.113725934071088E-132" />
-      <entry key="S10" value="2.564524029972463E-66" />
-      <entry key="S30" value="2.62558558067188E-22" />
-      <entry key="S60" value="3.674133848155035E-11" />
-      <entry key="M2" value="1.4602374583102419E-5" />
-      <entry key="M5" value="0.03452714076923576" />
-      <entry key="M10" value="0.566128072899904" />
-      <entry key="M15" value="1.8371708972381604" />
-      <entry key="M30" value="8.87007086201021" />
-      <entry key="H1" value="24.97259905757042" />
-      <entry key="H2" value="45.190067700741096" />
-      <entry key="H4" value="61.95818415791148" />
-      <entry key="D1" value="81.35833735611268" />
-      <entry key="W1" value="85.31931094107229" />
+      <entry key="S5" value="6.604624953266733E-140" />
+      <entry key="S10" value="2.665494987709133E-70" />
+      <entry key="S30" value="1.2344775919515973E-23" />
+      <entry key="S60" value="7.966792205107122E-12" />
+      <entry key="M2" value="6.799668541318036E-6" />
+      <entry key="M5" value="0.025432339867269445" />
+      <entry key="M10" value="0.4858783440086825" />
+      <entry key="M15" value="1.6591721841001066" />
+      <entry key="M30" value="8.429426727412647" />
+      <entry key="H1" value="24.344408100991295" />
+      <entry key="H2" value="44.61806477000929" />
+      <entry key="H4" value="61.56481091973302" />
+      <entry key="D1" value="81.27201788216759" />
+      <entry key="W1" value="85.30637334522167" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.279547257756575E-7" />
-      <entry key="MS500" value="0.050485048600600504" />
-      <entry key="S2" value="0.4740134825643227" />
-      <entry key="S5" value="0.7418503020814631" />
-      <entry key="S10" value="0.8613073215069422" />
-      <entry key="S30" value="0.9514501661897093" />
-      <entry key="S60" value="0.9754231174100907" />
-      <entry key="M2" value="0.9878687308182134" />
-      <entry key="M5" value="1.0707996996279072" />
-      <entry key="M10" value="1.939597104119618" />
-      <entry key="M15" value="4.075888079286891" />
-      <entry key="M30" value="17.686524088125886" />
-      <entry key="H1" value="53.32358850206884" />
-      <entry key="H2" value="103.69732398274544" />
-      <entry key="H4" value="153.2977922987314" />
-      <entry key="D1" value="228.00821824782315" />
-      <entry key="W1" value="246.65341407074945" />
+      <entry key="MS100" value="1.1433195152225513" />
+      <entry key="MS500" value="2.1709049162376557" />
+      <entry key="S2" value="4.45972826306218" />
+      <entry key="S5" value="8.009412811580544" />
+      <entry key="S10" value="15.493722644793738" />
+      <entry key="S30" value="33.28650450258752" />
+      <entry key="S60" value="42.513913973098994" />
+      <entry key="M2" value="48.56470914334756" />
+      <entry key="M5" value="52.8853128818373" />
+      <entry key="M10" value="55.187427236482264" />
+      <entry key="M15" value="57.69039648346232" />
+      <entry key="M30" value="71.30969384636006" />
+      <entry key="H1" value="106.73238712317635" />
+      <entry key="H2" value="157.25965153882638" />
+      <entry key="H4" value="207.26190609047643" />
+      <entry key="D1" value="282.7558671691192" />
+      <entry key="W1" value="301.6145207270384" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -132,28 +119,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ACS.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "aronno",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ACS.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#175 on morsalin&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ACS" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.airport_catering_service.HelloApplication" />
