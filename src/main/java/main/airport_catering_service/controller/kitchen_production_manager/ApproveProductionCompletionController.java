@@ -46,41 +46,38 @@ public class ApproveProductionCompletionController
         }
     }
 
-
-    @Deprecated
-    public void sideBarApproveProductionOnA(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void sidebarAirportCateringServiceButtonOnA(ActionEvent actionEvent)throws IOException {
         KitchenProductionManager.reverseDashboard(actionEvent);
     }
-
     @javafx.fxml.FXML
-    public void sideBarProductionScheduleOnA(ActionEvent actionEvent) {
+    public void sideBarReceiveOrdersOnA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent);
     }
-
-
-
     @javafx.fxml.FXML
-    public void sideBarReceiveOrdersOnA(ActionEvent actionEvent) {
+    public void sideBarProductionReportsOnA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewGenerateProductionReports(actionEvent);
     }
-
-
-
     @javafx.fxml.FXML
-    public void sideBarProductionReportsOnA(ActionEvent actionEvent) {
+    public void sideBarCalculateIngredientOnA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
     }
-
     @javafx.fxml.FXML
-    public void sideBarCalculateIngredientOnA(ActionEvent actionEvent) {
+    public void sideBarMenuListOnA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewCreateMenuList(actionEvent);
     }
-
     @javafx.fxml.FXML
-    public void sideBarMenuListOnA(ActionEvent actionEvent) {
+    public void sideBarProductionPlanOnA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewCreateProductionPlan(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionPlanOnA(ActionEvent actionEvent) {
+    public void sideBarMonitorProductionOnAction(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewMonitorProductionActivities(actionEvent);
+    }
+    @javafx.fxml.FXML
+    public void sideBarProductionScheduleOnA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.ViewCreateProductionSchedule(actionEvent);
+
     }
 }

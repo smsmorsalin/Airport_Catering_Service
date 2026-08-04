@@ -9,24 +9,14 @@ import user.KitchenProductionManager;
 //=======
 //>>>>>>> f82d5b9173af5fc5ed5a83068e71f706a69bcf2c
 import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
 import javax.imageio.IIOException;
 import java.io.IOException;
 
-public class dashboardViewController
+public class dashboardViewController implements UserReceiver
 {
-
-
-
-
-    private FinanceAndBillingManager loggedInUser;
-    public void setLoggedInUser(User user){
-        if (user instanceof FinanceAndBillingManager financeAndBillingManager){
-            this.loggedInUser = financeAndBillingManager;
-        }
-        AlertGenerator.showAlert("error", "error Authentication failed");
-    }
 
     @javafx.fxml.FXML
     private TableColumn<Airline,String> descriptionTableView;
