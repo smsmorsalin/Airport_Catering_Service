@@ -70,5 +70,24 @@ public class ViewAssignedDeliveriesController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchDeliveries(ActionEvent actionEvent) {
+        if(assignmentIdField.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a assignment ID");
+            return;
+        }
+        int assignmentId;
+        try {
+            assignmentId = Integer.parseInt(assignmentIdField.getText());
+        }catch (NumberFormatException e){
+            AlertGenerator.showAlert("Error", "Please enter a valid assignment ID");
+            return;
+        }
+        if(assignmentId <= 0) {
+            AlertGenerator.showAlert("Error", "Please enter a valid assignment ID");
+            return;
+        }
+        if (deliveryDatePicker.getValue() == null) {
+            AlertGenerator.showAlert("Error", "Please enter a delivery date in DD-MM-YYYY");
+            return;
+        }
     }
 }
