@@ -1,5 +1,6 @@
 package user;
 
+import javafx.event.ActionEvent;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
@@ -14,6 +15,7 @@ public class Truckoperator extends Employee implements Serializable {
 
     @Override
     public void viewDashboard(javafx.event.ActionEvent event, User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/DashboardView.fxml", user);
 
     }
 
@@ -22,37 +24,37 @@ public class Truckoperator extends Employee implements Serializable {
         return true;
     }
 
-    public static void renderDashboardView(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/DashboardView.fxml");
+    public static void renderDashboardView(javafx.event.ActionEvent event, User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/DashboardView.fxml", user);
     }
 
-    public static void renderAcceptDeliveryAssignmentView(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/AcceptDeliveryAssignmentView.fxml");
+    public static void renderAcceptDeliveryAssignmentView(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/AcceptDeliveryAssignmentView.fxml", user);
     }
 
-    public static void renderCollectPackagedCateringOrdersView(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/CollectPackagedCateringOrdersView.fxml");
+    public static void renderCollectPackagedCateringOrdersView(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/CollectPackagedCateringOrdersView.fxml", user);
     }
 
-    public static void renderConfirmAircraftDeliveryView(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/ConfirmAircraftDeliveryView.fxml");
+    public static void renderConfirmAircraftDeliveryView(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/ConfirmAircraftDeliveryView.fxml",  user);
     }
 
-    public static void renderDisplayDepartureConfirmationView(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/DisplayDepartureConfirmationView.fxml");
+    public static void renderDisplayDepartureConfirmationView(javafx.event.ActionEvent event, User user)  {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/DisplayDepartureConfirmationView.fxml",  user);
     }
 
-    public static void renderReportDeliveryProblemsView(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/ReportDeliveryProblemsView.fxml");
+    public static void renderReportDeliveryProblemsView(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/ReportDeliveryProblemsView.fxml",  user);
     }
 
-    public static void renderStartDeliveryView(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/StartDeliveryTripView.fxml");
+    public static void renderStartDeliveryView(javafx.event.ActionEvent event, User user)  {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/StartDeliveryTripView.fxml",  user);
     }
-    public static void renderAssignmentDeliveryTasksView(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/AssignedDeliveryTasksView.fxml");
+    public static void renderAssignmentDeliveryTasksView(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/AssignedDeliveryTasksView.fxml",  user);
     }
-    public static void renderDeliveryHistoryView(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/Truckoperator/DeliveryHistoryView.fxml");
+    public static void renderDeliveryHistoryView(javafx.event.ActionEvent event, User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/DeliveryHistoryView.fxml",  user);
     }
 }

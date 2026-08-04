@@ -11,11 +11,13 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.airport_catering_service.HelloApplication;
 import user.FoodQualityControlOfficer;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class PerformInspectionController
+public class PerformInspectionController implements UserReceiver
 {
     @javafx.fxml.FXML
     private ComboBox<String> tasteRatingComboBox;
@@ -33,6 +35,17 @@ public class PerformInspectionController
     private Label fxidDisplayOverallScoreLabel;
     @javafx.fxml.FXML
     private Label fxidDisplayInspectioStatusLabel;
+
+    private FoodQualityControlOfficer loggedInUser;
+
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FoodQualityControlOfficer foodQualityControlOfficer){
+            loggedInUser = foodQualityControlOfficer;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "You are not a valid user for this page");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {

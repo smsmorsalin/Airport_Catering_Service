@@ -6,12 +6,14 @@ import javafx.scene.control.*;
 import nonuser.DashBoard;
 import user.User;
 import user.KitchenProductionManager;
+import user.UserReceiver;
 import utility.AlertGenerator;
+import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 
 
-public class dashboardController {
+public class dashboardController implements UserReceiver {
     @javafx.fxml.FXML
     private TableColumn<String,DashBoard>descriptionTableView;
     @javafx.fxml.FXML
@@ -32,11 +34,13 @@ public class dashboardController {
     private TableColumn<Boolean,DashBoard> issueTypeTableView;
 
     private KitchenProductionManager loggedInUser;
+    @Override
     public void setLoggedInUser(User user){
         if (user instanceof KitchenProductionManager kitchenProductionManager){
-            this.loggedInUser = kitchenProductionManager;
-        }
+            loggedInUser = kitchenProductionManager;
+        }else{
         AlertGenerator.showAlert("error", "error Authentication failed");
+        }
     }
 
     @javafx.fxml.FXML
@@ -69,10 +73,17 @@ public class dashboardController {
             return;
         }
     }
+    @javafx.fxml.FXML
+    public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent)throws  IOException {
+        KitchenProductionManager.reverseDashboard(actionEvent);
+    }
+
+
 
     @javafx.fxml.FXML
     public void sideBarMonitorProductionOnAction(ActionEvent actionEvent) throws IOException {
         KitchenProductionManager.viewMonitorProductionActivities(actionEvent);
+
 
     }
 
@@ -84,7 +95,7 @@ public class dashboardController {
 
     @javafx.fxml.FXML
     public void sideBarMenuListOnAction(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewCreateMenuList(actionEvent);
+        SceneSwitchingHelper.switchSceneWithData(actionEvent,"/KitchenProductionManager/CreateMenuList.fxml", loggedInUser);
 
 
     }
@@ -104,13 +115,6 @@ public class dashboardController {
     public void sideBarCalculateIngredientOnAction(ActionEvent actionEvent) throws IOException{
         KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
     }
-
-    @javafx.fxml.FXML
-    public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent)throws  IOException {
-        KitchenProductionManager.reverseDashboard(actionEvent);
-    }
-
-
 
     @javafx.fxml.FXML
     public void sideBarProductionReportsOnAction(ActionEvent actionEvent)throws  IOException {

@@ -3,11 +3,14 @@ package main.airport_catering_service.controller.customer_support_officer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.CustomerSupportOfficer;
+import user.FinanceAndBillingManager;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class RegisterComplaintViewController
+public class RegisterComplaintViewController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Button submitButton;
@@ -27,6 +30,15 @@ public class RegisterComplaintViewController
     private TextArea descriptionAreaTextField;
     @javafx.fxml.FXML
     private CheckBox lowCheckBox;
+
+    private FinanceAndBillingManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
+            this.loggedInUser = FinanceAndBillingManager;
+        }
+        AlertGenerator.showAlert("error", "error Authentication failed");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {

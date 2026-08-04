@@ -70,6 +70,7 @@
                   <Label fx:id="flightNumberLabel" layoutX="23.0" layoutY="423.0" text="Flight Number" />
                   <Label fx:id="deliveryDateAndTimeLabel" layoutX="23.0" layoutY="449.0" text="Delivery Date " />
                   <Label fx:id="assignedTruckLabel" layoutX="23.0" layoutY="476.0" text="Assigned Truck" />
+                  <Button layoutX="11.0" layoutY="242.0" mnemonicParsing="false" onAction="#searchAndShowButtonOnAction" prefHeight="26.0" prefWidth="150.0" text="Search and Show" />
                </children>
             </AnchorPane>
          </children></VBox>
