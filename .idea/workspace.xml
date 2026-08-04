@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Meal.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ApproveBatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ApproveBatchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/FoodSafetyCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/FoodSafetyCheckController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/GenerateQAReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/GenerateQAReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ManageQualityIssueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ManageQualityIssueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/PerformInspectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/PerformInspectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/QualityTrendAnalysisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/QualityTrendAnalysisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ReceiveInspectionRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ReceiveInspectionRequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/RejectBatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/RejectBatchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/dashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/ApproveProductionCompletionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/ApproveProductionCompletionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateMenuListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateMenuListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/dashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Meal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" afterDir="false" />
-    </list>
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="file read and write on kitchen production manager" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -219,7 +199,23 @@
       <option name="project" value="LOCAL" />
       <updated>1785760534863</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="file read and write on kitchen production manager">
+      <option name="closed" value="true" />
+      <created>1785861189001</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1785861189001</updated>
+    </task>
+    <task id="LOCAL-00007" summary="file read and write on kitchen production manager">
+      <option name="closed" value="true" />
+      <created>1785861195660</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1785861195660</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +225,7 @@
     <MESSAGE value="fix error AirlineRepresentative" />
     <MESSAGE value="delete DeliveryConfirmation.java file" />
     <MESSAGE value="pull" />
-    <option name="LAST_COMMIT_MESSAGE" value="pull" />
+    <MESSAGE value="file read and write on kitchen production manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="file read and write on kitchen production manager" />
   </component>
 </project>
