@@ -2,40 +2,46 @@ package main.airport_catering_service.controller.finance_and_billing_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import nonuser.Airline;
+import nonuser.DeliveryStatus;
+import nonuser.Invoice;
+import nonuser.Payment;
 import user.FinanceAndBillingManager;
+import utility.AlertGenerator;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class PaymentHistoryViewController
 {
     @javafx.fxml.FXML
     private TextField invoiceIdTextField;
     @javafx.fxml.FXML
-    private TableColumn amountColumn;
+    private TableColumn <Invoice,Double> amountColumn;
     @javafx.fxml.FXML
-    private Button receiptBtn;
-    @javafx.fxml.FXML
-    private TableColumn methodColumn;
+    private TableColumn <Invoice,String> methodColumn;
     @javafx.fxml.FXML
     private TextField airlineTextField;
     @javafx.fxml.FXML
-    private TableView paymentTable;
+    private TableView <Payment> paymentTable;
     @javafx.fxml.FXML
-    private TableColumn airlineColumn;
+    private TableColumn <Airline,String> airlineColumn;
     @javafx.fxml.FXML
-    private TableColumn statusColumn;
+    private TableColumn <DeliveryStatus,String> statusColumn;
     @javafx.fxml.FXML
     private ComboBox<String> paymentStatusComboBox;
     @javafx.fxml.FXML
     private Button searchPaymentBtn;
     @javafx.fxml.FXML
-    private TableColumn invoiceColumn;
+    private TableColumn<Invoice,Integer> invoiceColumn;
+    @javafx.fxml.FXML
+    private ComboBox <String> airlinenameComboBox;
     @javafx.fxml.FXML
     private ComboBox<String> paymentMethodComboBox;
     @javafx.fxml.FXML
-    private TableColumn paymentIdColumn;
+    private TableColumn <Payment,Integer> paymentIdColumn;
     @javafx.fxml.FXML
-    private TableColumn dateColumn;
+    private TableColumn <Invoice, LocalDate> dateColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -45,12 +51,38 @@ public class PaymentHistoryViewController
     public void sidebarPaymentHistoryOnAction(ActionEvent actionEvent) {
     }
 
-    @Deprecated
-    public void ViewPaymentOnAction(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void SearchOnAction(ActionEvent actionEvent) {
+        if(invoiceIdTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        int invoiceId;
+        try{
+            invoiceId = Integer.parseInt(invoiceIdTextField.getText());
+        }
+        catch (NumberFormatException e){
+            AlertGenerator.showAlert("Wrong Input","Invoice Id should be an integer");
+            return;
+        }
+        if(invoiceId <= 0){
+            AlertGenerator.showAlert("Invalid Input","InvoiceId Text field should be grater than 0");
+            return;
+        }
+
+        if(airlinenameComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","airline name ComboBox Should be selected");
+            return;
+        }
+        if(paymentStatusComboBox.getValue()==null){
+            AlertGenerator.showAlert("Wrong Input","payment status ComboBox Should be selected");
+        }
+
+        if(paymentMethodComboBox.getValue()==null){
+            AlertGenerator.showAlert("Wrong Input", "payment method ComboBox should be selected");
+
+        }
+
     }
 
     @Deprecated
@@ -66,7 +98,7 @@ public class PaymentHistoryViewController
     public void sidebarHomePageButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void viewpaymentButtonOnAction(ActionEvent actionEvent) {
     }
 
@@ -116,3 +148,4 @@ public class PaymentHistoryViewController
     }
 
 }
+

@@ -2,36 +2,42 @@ package main.airport_catering_service.controller.finance_and_billing_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import nonuser.Airline;
+import nonuser.DeliveryStatus;
+import nonuser.Invoice;
 import user.FinanceAndBillingManager;
+import utility.AlertGenerator;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Locale;
 
 public class OutstandingPaymentsViewController
 {
     @javafx.fxml.FXML
     private DatePicker endDatePicker;
     @javafx.fxml.FXML
-    private TableColumn dueDateColumn;
+    private TableColumn <Invoice, LocalDate> dueDateColumn;
     @javafx.fxml.FXML
     private ComboBox<String> invoiceStatusComboBox;
     @javafx.fxml.FXML
-    private TableColumn airlineColumn;
+    private TableColumn <Airline,String > airlineColumn;
     @javafx.fxml.FXML
-    private TableColumn statusColumn;
+    private TableColumn <DeliveryStatus,String> statusColumn;
     @javafx.fxml.FXML
     private DatePicker startDatePicker;
     @javafx.fxml.FXML
-    private TableColumn amountColumn;
+    private TableColumn <Invoice,Double> amountColumn;
     @javafx.fxml.FXML
-    private TableColumn overdueColumn;
+    private TableColumn <Invoice,Integer> overdueColumn;
     @javafx.fxml.FXML
     private Button generateReportButton;
     @javafx.fxml.FXML
     private Label totalDueLabel;
     @javafx.fxml.FXML
-    private TableView outstandingInvoiceTable;
+    private TableView <Invoice> outstandingInvoiceTable;
     @javafx.fxml.FXML
-    private TableColumn invoiceIdColumn;
+    private TableColumn <Invoice,Integer> invoiceIdColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -43,6 +49,25 @@ public class OutstandingPaymentsViewController
 
     @javafx.fxml.FXML
     public void GenerateReportOnAction(ActionEvent actionEvent) {
+
+        if(invoiceStatusComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Combo Box should be selected");
+            return;
+        }
+        if(startDatePicker.getValue() == null || endDatePicker.getValue() ==null){
+            AlertGenerator.showAlert("Invalid Input","Date must in selected");
+            return;
+        }
+        if(startDatePicker.getValue().isAfter(endDatePicker.getValue())){
+            AlertGenerator.showAlert("Invalid Input","Start Date should be before end date");
+            return;
+        }
+        if(endDatePicker.getValue().isAfter(LocalDate.now())){
+            AlertGenerator.showAlert("Invalid Input","End date can not be present date");
+            return;
+        }
+
+
     }
 
     @Deprecated

@@ -16,39 +16,17 @@
 
 
     <children>
-
         <VBox layoutY="49" prefHeight="706" prefWidth="175" spacing="5">
 
-
             <children>
-
-
                 <Button onAction="#sidebardashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Dashboard" />
-
-
                 <Button onAction="#sideBarCalculateCostButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Calculate Cost" />
-
-
                 <Button onAction="#sideBarGenerateInvoiceButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Generate Invoice" />
-
-
                 <Button onAction="#sideBarRecordPaymentButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Record Payment" />
-
-
                 <Button onAction="#sideBarProcessRefundButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Process Refund" />
-
-
                 <Button onAction="#sideBarOutstandingPaymentsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Outstanding Payments" />
-
-
                 <Button onAction="#sideBarFinancialReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Financial Reports" />
-
-
-
                 <Button onAction="#sideBarRevenueSummaryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-color:#16A085;                -fx-background-radius:50;" text="Revenue Summary" textFill="WHITE" />
-
-
-
                 <Button onAction="#sideBarPaymentHistoryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50;" text="Payment History" />
 
 
@@ -56,389 +34,128 @@
 
         </VBox>
 
-
-
-
-
-
-
-        <!-- HEADER -->
-
-
         <Button layoutY="3" onAction="#sidebarHomePageButtonOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
-
-
             <font>
                 <Font name="Arial Bold" size="13" />
             </font>
-
-
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
 
-
         </Button>
-
-
-
-
-
-
-
-
-        <!-- MAIN AREA -->
-
 
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:#B5B5B5;">
 
 
             <children>
-
-
                 <Label alignment="CENTER" prefWidth="726" text="welcome Username">
-
-
                     <font>
                         <Font name="Gabriola" size="18" />
                     </font>
-
-
                 </Label>
-
-
-
-
-
-
-
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
 
-
                     <children>
-
-
-
-
-
-                        <!-- FILTER CARD -->
-
-
                         <AnchorPane layoutX="15" layoutY="20" prefHeight="120" prefWidth="680" style="-fx-background-color:#F8FAFC;                    -fx-background-radius:25;">
 
-
                             <children>
-
-
                                 <Label layoutX="25" layoutY="25" text="Revenue Summary">
-
-
                                     <font>
                                         <Font size="24" />
                                     </font>
-
-
                                 </Label>
 
-
-
-
                                 <Label layoutX="30" layoutY="75" text="From Date" />
-
-
                                 <DatePicker fx:id="fromDatePicker" layoutX="90" layoutY="70" prefWidth="120" />
-
-
-
-
-
                                 <Label layoutX="240" layoutY="75" text="To Date" />
-
-
                                 <DatePicker fx:id="toDatePicker" layoutX="290" layoutY="70" prefWidth="120" />
-
-
-
-
-
-
                                 <Label layoutX="440" layoutY="75" text="Airline" />
-
-
                                 <ComboBox fx:id="airlineComboBox" layoutX="490" layoutY="70" prefWidth="150" />
-
-
-
                             </children>
-
-
                         </AnchorPane>
-
-
-
-
-
-
-
-
-
-                        <!-- SUMMARY CARDS -->
-
-
                         <HBox layoutX="20" layoutY="170" spacing="15">
 
-
                             <children>
-
-
-
                                 <AnchorPane prefHeight="110" prefWidth="150" style="-fx-background-color:#E8F8EF;                    -fx-background-radius:20;">
-
-
                                     <children>
-
-
                                         <Label layoutX="20" layoutY="20" text="Total Revenue" />
-
-
                                         <Label fx:id="totalRevenueLabel" layoutX="20" layoutY="60" text="0.00">
-
-
                                             <font>
                                                 <Font size="20" />
                                             </font>
-
-
                                         </Label>
-
-
                                     </children>
-
-
                                 </AnchorPane>
-
-
-
-
-
-
                                 <AnchorPane prefHeight="110" prefWidth="150" style="-fx-background-color:#EAF2FF;                    -fx-background-radius:20;">
-
-
                                     <children>
-
-
                                         <Label layoutX="20" layoutY="20" text="Paid Amount" />
-
-
                                         <Label fx:id="paidAmountLabel" layoutX="20" layoutY="60" text="0.00">
-
-
                                             <font>
                                                 <Font size="20" />
                                             </font>
-
-
                                         </Label>
-
-
                                     </children>
-
-
                                 </AnchorPane>
-
-
-
-
-
-
                                 <AnchorPane prefHeight="110" prefWidth="150" style="-fx-background-color:#FFF3CD;                    -fx-background-radius:20;">
-
-
                                     <children>
-
-
                                         <Label layoutX="20" layoutY="20" text="Pending" />
-
-
                                         <Label fx:id="pendingAmountLabel" layoutX="20" layoutY="60" text="0.00">
-
-
                                             <font>
                                                 <Font size="20" />
                                             </font>
-
-
                                         </Label>
-
-
                                     </children>
-
-
                                 </AnchorPane>
-
-
-
-
-
-
                                 <AnchorPane prefHeight="110" prefWidth="150" style="-fx-background-color:#FDECEC;                    -fx-background-radius:20;">
-
-
                                     <children>
-
-
                                         <Label layoutX="20" layoutY="20" text="Refund" />
-
-
                                         <Label fx:id="refundAmountLabel" layoutX="20" layoutY="60" text="0.00">
-
-
                                             <font>
                                                 <Font size="20" />
                                             </font>
-
-
                                         </Label>
-
-
                                     </children>
-
-
                                 </AnchorPane>
-
-
-
                             </children>
-
-
                         </HBox>
-
-
-
-
-
-
-
-
-
-                        <!-- REVENUE TABLE -->
-
-
                         <AnchorPane layoutX="15" layoutY="310" prefHeight="280" prefWidth="680" style="-fx-background-color:#FFFFFF;                    -fx-background-radius:25;">
 
-
                             <children>
-
-
                                 <Label layoutX="25" layoutY="25" text="Revenue Details">
-
-
                                     <font>
                                         <Font size="20" />
                                     </font>
-
-
                                 </Label>
-
-
-
-
-
                                 <TableView fx:id="revenueTable" layoutX="20" layoutY="65" prefHeight="170" prefWidth="640">
-
-
                                     <columns>
 
-
                                         <TableColumn fx:id="dateColumn" prefWidth="100" text="Date" />
-
-
                                         <TableColumn fx:id="orderColumn" prefWidth="100" text="Orders" />
-
-
                                         <TableColumn fx:id="revenueColumn" prefWidth="120" text="Revenue" />
-
-
-                                        <TableColumn fx:id="paymentColumn" prefWidth="120" text="Received" />
-
-
+                                        <TableColumn fx:id="paymentreceiveColumn" prefWidth="120" text="Received" />
                                         <TableColumn fx:id="netRevenueColumn" prefWidth="120" text="Net Revenue" />
 
-
                                     </columns>
-
-
                                 </TableView>
-
-
-
                             </children>
-
-
                         </AnchorPane>
-
-
-
-
-
-
-
-
-
-                        <!-- NET REVENUE SUMMARY -->
-
 
                         <AnchorPane layoutX="470" layoutY="620" prefHeight="80" prefWidth="220" style="-fx-background-color:#D1FAE5;                    -fx-background-radius:20;">
 
-
                             <children>
 
-
                                 <Label layoutX="20" layoutY="20" text="Net Revenue" />
-
-
                                 <Label fx:id="netRevenueLabel" layoutX="120" layoutY="20" text="0.00">
-
-
                                     <font>
                                         <Font size="20" />
                                     </font>
-
-
                                 </Label>
-
-
-
                             </children>
-
-
                         </AnchorPane>
-
-
-
-
-
-
-
                         <Button fx:id="generateSummaryButton" layoutX="46.0" layoutY="650.0" onAction="#GenerateSummaryOnAction" prefHeight="40" prefWidth="180" style="-fx-background-color:#16A085;                -fx-background-radius:10;" text="Generate Summary" textFill="WHITE" />
-
-
-
                     </children>
-
-
                 </AnchorPane>
-
-
             </children>
-
-
         </VBox>
-      <ProgressIndicator progress="0.0" />
-
-
     </children>
-
-
 </AnchorPane>

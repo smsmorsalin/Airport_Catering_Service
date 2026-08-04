@@ -3,6 +3,7 @@ package main.airport_catering_service.controller.customer_support_officer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.CustomerSupportOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
@@ -37,6 +38,40 @@ public class RegisterComplaintViewController
 
     @javafx.fxml.FXML
     public void SubmitComplaintOnAction(ActionEvent actionEvent) {
+        if(orderIdTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        int orderId;
+        try{
+            orderId = Integer.parseInt(orderIdTextField.getText());
+        }
+        catch (NumberFormatException e){
+            AlertGenerator.showAlert("Wrong Input","textField should be an integer");
+            return;
+        }
+        if(orderId <= 0){
+            AlertGenerator.showAlert("Invalid Input","Text field should be grater than 0");
+            return;
+        }
+        if(lowCheckBox==null || highCheckBox==null || mediumCheckBox==null || criticalCheckBox==null){
+            AlertGenerator.showAlert("Wrong Input","Check box should be selected ");
+            return;
+        }
+        if(descriptionAreaTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+
+        if(airlineComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
+        if(categoryComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
+
     }
 
     @javafx.fxml.FXML

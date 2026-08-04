@@ -32,21 +32,14 @@
         </VBox>
 
         <Button layoutY="3" onAction="#sidebarHomePageButtonOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
-
-
             <font>
                 <Font name="Arial Bold" size="13" />
             </font>
-
-
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
-
         </Button>
-
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:#B5B5B5;">
-
             <children>
                 <Label alignment="CENTER" prefWidth="726" text="welcome Username">
                     <font>
@@ -54,16 +47,10 @@
                     </font>
                 </Label>
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
-
                     <children>
-
                         <AnchorPane layoutX="15" layoutY="20" prefHeight="120" prefWidth="680" style="-fx-background-color:#F8FAFC;                    -fx-background-radius:25;">
-
-
                             <children>
                                 <Label layoutX="25" layoutY="25" text="Outstanding Payments">
-
-
                                     <font>
                                         <Font size="22" />
                                     </font>
@@ -78,8 +65,6 @@
                         </AnchorPane>
 
                         <AnchorPane layoutX="15" layoutY="165" prefHeight="350" prefWidth="680" style="-fx-background-color:#FFFFFF;                    -fx-background-radius:25;">
-
-
                             <children>
                                 <Label layoutX="25" layoutY="25" text="Outstanding Invoice Records">
                                     <font>
@@ -88,19 +73,13 @@
                                 </Label>
 
                                 <TableView fx:id="outstandingInvoiceTable" layoutX="20" layoutY="70" prefHeight="336.0" prefWidth="640">
-
-
                                     <columns>
-
-
                                         <TableColumn fx:id="invoiceIdColumn" prefWidth="100" text="Invoice ID" />
                                         <TableColumn fx:id="airlineColumn" prefWidth="120" text="Airline Name" />
                                         <TableColumn fx:id="amountColumn" prefWidth="110" text="Invoice Amount" />
                                         <TableColumn fx:id="dueDateColumn" prefWidth="100" text="Due Date" />
                                         <TableColumn fx:id="overdueColumn" prefWidth="100" text="Days Overdue" />
                                         <TableColumn fx:id="statusColumn" prefWidth="100" text="Status" />
-
-
                                     </columns>
 
 
@@ -117,7 +96,6 @@
                                     <font>
                                         <Font size="18" />
                                     </font>
-
                                 </Label>
                                 <Label layoutX="20" layoutY="60" text="Total Due:" />
                                 <Label fx:id="totalDueLabel" layoutX="110" layoutY="60" text="0.00" />

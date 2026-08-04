@@ -25,38 +25,23 @@
             </children>
         </VBox>
         <Button layoutY="3" onAction="#sidebarHomePageButtonOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:#C0007F;                -fx-background-radius:5;" text="Airport Catering Service">
-
-
             <font>
                 <Font name="Arial Bold" size="13" />
             </font>
-
-
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
-
-
         </Button>
-
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:#BDBDBD;">
-
 
             <children>
                 <Label alignment="CENTER" prefWidth="726" text="welcome Username">
-
-
                     <font>
                         <Font name="Gabriola" size="18" />
                     </font>
                 </Label>
 
-
-
-
-
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
-
 
                     <children>
 
@@ -66,7 +51,6 @@
                                     <font>
                                         <Font size="22" />
                                     </font>
-
                                 </Label>
                                 <Label layoutX="20" layoutY="60" text="Order ID" />
                                 <TextField fx:id="orderidTextField" layoutX="20" layoutY="75" prefWidth="200" />
@@ -75,7 +59,6 @@
                                 <DatePicker fx:id="dueDatePicker" layoutX="400" layoutY="75" prefWidth="200" />
                             </children>
                         </AnchorPane>
-
                         <AnchorPane layoutX="15" layoutY="160" prefHeight="500" prefWidth="410" style="             -fx-background-color:#F8FAFC;             -fx-background-radius:25;">
                             <children>
                                 <Label layoutX="20" layoutY="25" text="Order &amp; Billing Information">
@@ -117,7 +100,6 @@
                                     <font>
                                         <Font size="22" />
                                     </font>
-
                                 </Label>
                                 <Label layoutX="25" layoutY="80" text="Invoice ID :" />
                                 <Label fx:id="invoiceIdLabel" layoutX="120" layoutY="80" text="INV-000" />

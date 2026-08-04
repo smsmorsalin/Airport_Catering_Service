@@ -12,6 +12,7 @@ import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class GenerateInvoiceViewController
@@ -68,6 +69,39 @@ public class GenerateInvoiceViewController
 
     @javafx.fxml.FXML
     public void generateinvoiceOnAction(ActionEvent actionEvent) {
+
+        if(orderidTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        if(billingAddressTextField.getText().trim().matches("//d+")){
+            AlertGenerator.showAlert("Invalid Input","Billing Address  Should be String");
+            return;
+        }
+        int ingredientId;
+        try{
+            ingredientId = Integer.parseInt(orderidTextField.getText());
+        }
+        catch (NumberFormatException e){
+            AlertGenerator.showAlert("Wrong Input","textField should be an integer");
+            return;
+        }
+        if(ingredientId <= 0){
+            AlertGenerator.showAlert("Invalid Input","Text field should be grater than 0");
+            return;
+        }
+
+        if(orderidTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+
+        if(dueDatePicker.getValue().isBefore(LocalDate.now()) || dueDatePicker.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
+
+
     }
 
     @Deprecated

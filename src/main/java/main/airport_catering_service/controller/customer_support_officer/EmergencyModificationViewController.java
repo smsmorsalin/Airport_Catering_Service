@@ -3,43 +3,59 @@ package main.airport_catering_service.controller.customer_support_officer;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.CustomerSupportOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class EmergencyModificationViewController
 {
-    @javafx.fxml.FXML
-    private TextField orderIdField;
-    @javafx.fxml.FXML
-    private Button verifyOrderBtn;
-    @javafx.fxml.FXML
-    private Button submitModificationBtn;
+
     @javafx.fxml.FXML
     private ComboBox<String> priorityComboBox;
     @javafx.fxml.FXML
-    private Label summaryOrderidLabel;
-    @javafx.fxml.FXML
     private TextArea modificationRequestTextField;
-    @javafx.fxml.FXML
-    private Label summaryPriorityLabel;
     @javafx.fxml.FXML
     private TextArea reasonTextField;
     @javafx.fxml.FXML
-    private Label summaryStatusLabel;
+    private TextField orderIdTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @Deprecated
-    public void EmergencyModifyOnAction(ActionEvent actionEvent) {
-    }
-    @javafx.fxml.FXML
-    public void CheckOrderOnAction(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void SubmitButtonOnAction(ActionEvent actionEvent) {
+        if(orderIdTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        int orderId;
+        try{
+            orderId = Integer.parseInt(orderIdTextField.getText());
+        }
+        catch (NumberFormatException e){
+            AlertGenerator.showAlert("Wrong Input","textField should be an integer");
+            return;
+        }
+        if(orderId <= 0){
+            AlertGenerator.showAlert("Invalid Input","Text field should be grater than 0");
+            return;
+        }
+        if(modificationRequestTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        if(reasonTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+
+        if(priorityComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
     }
 
     @javafx.fxml.FXML

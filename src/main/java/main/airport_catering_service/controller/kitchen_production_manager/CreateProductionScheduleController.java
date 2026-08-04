@@ -7,8 +7,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import nonuser.ProductionPlan;
 import user.KitchenProductionManager;
+import utility.BinaryFileUtility;
 
 import java.io.IOException;
+import java.time.LocalTime;
+import java.util.ArrayList;
 
 public class CreateProductionScheduleController {
     @javafx.fxml.FXML
@@ -39,6 +42,75 @@ public class CreateProductionScheduleController {
                 "41", "42", "43", "44", "45", "46", "47", "48", "49", "50",
                 "51", "52", "53", "54", "55", "56", "57", "58", "59");
         workShiftComboBox1.getItems().addAll("Day", "Night");
+
+
+        // get value
+
+        int startHour = Integer.parseInt(startHoursTimeComboBox.getValue());
+        int startMinute = Integer.parseInt(startMinitueTimeComboBox.getValue());
+
+        int endHour = Integer.parseInt(endsHoursTimeComboBox.getValue());
+        int endMinute = Integer.parseInt(endsMinutiesTimeComboBox.getValue());
+
+        LocalTime startTime = LocalTime.of(startHour, startMinute);
+        LocalTime endTime = LocalTime.of(endHour, endMinute);
+
+        String workShift = workShiftComboBox1.getValue();
+
+        if (!endTime.isAfter(startTime)) {showAlert("End Time must be after Start Time");
+            return;
+        }
+
+
+// file read
+
+        ArrayList<Object> productionPlanObjectList = BinaryFileUtility.readObjects("ProductionPlan.bin");
+
+        ProductionPlan selectedProductionPlan = null;
+
+        int productionId=0;
+        for (Object object : productionPlanObjectList) {
+            if (object instanceof ProductionPlan productionPlan) {
+                if (productionPlan.getProductionId() == productionId) {
+                    selectedProductionPlan = productionPlan;
+                    break;
+                }
+            }
+        }
+
+        if (selectedProductionPlan == null) {
+            showAlert("Production Plan not found");
+            return;
+        }
+
+
+// Set Schedule data
+
+        selectedProductionPlan.setStartTime(startTime);
+        selectedProductionPlan.setEndTime(endTime);
+        selectedProductionPlan.setWorkShift(workShift);
+        selectedProductionPlan.setStatus("Scheduled");
+
+
+// file write
+        boolean saved = BinaryFileUtility.writeObjects("ProductionSchedule.bin", selectedProductionPlan);
+
+        if (!saved) {
+            showAlert("Production Schedule could not be saved");
+            return;
+        }
+
+
+//Show
+
+        showAlert(
+                "Production Schedule created successfully.\n" +
+                        "Production Plan ID: " + productionId + "\n" +
+                        "Start Time: " + startTime + "\n" +
+                        "End Time: " + endTime + "\n" +
+                        "Work Shift: " + workShift
+        );
+
     }
     public void showAlert(String s) {
         Alert a = new Alert(Alert.AlertType.INFORMATION);

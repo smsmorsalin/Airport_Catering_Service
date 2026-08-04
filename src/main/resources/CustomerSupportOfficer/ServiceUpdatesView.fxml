@@ -17,66 +17,42 @@
 
         <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5">
 
-
             <children>
-
-
                 <Button onAction="#sidebardashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Dashboard">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
                 <Button onAction="#sidebarRegisterComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Register Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
                 <Button onAction="#sidebarTrackComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Track Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
                 <Button onAction="#sidebarResolveComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Resolve Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
                 <Button onAction="#sidebarEmergencyModificationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Emergency Modification">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
                 <Button onAction="#sidebarFlightDelayRequestButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Delay Request">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
                 <Button onAction="#sidebarFlightCancellationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Cancellation">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
                 <Button onAction="#sidebarServiceUpdatesButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;         -fx-background-color:#0F6BFF;" text="Service Updates" textFill="white">
 
                     <font>
@@ -84,291 +60,76 @@
                     </font>
 
                 </Button>
-
-
-
-
                 <Button onAction="#sidebarGenerateReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Generate Reports">
-
                     <font>
                         <Font size="15" />
                     </font>
-
                 </Button>
-
-
-
             </children>
-
         </VBox>
 
-
         <Button layoutY="3" onAction="#sidebarHomePageOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:pink;         -fx-background-radius:5;" text="Airport Catering Service">
-
-
             <font>
                 <Font name="Arial Bold" size="13" />
             </font>
-
-
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
-
-
         </Button>
-
-
-
-
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:silver;">
-
-
             <children>
-
-
-
                 <Label alignment="CENTER" prefWidth="609" text="welcome Username">
-
                     <font>
                         <Font name="Gabriola" size="18" />
                     </font>
-
                 </Label>
-
-
-
-
-
-
-
-
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
-
-
                     <children>
-
-
-
-
                         <Label layoutX="56" layoutY="25" text="Service Updates">
-
-
                             <font>
                                 <Font size="24" />
                             </font>
-
                         </Label>
-
-
-
                         <Label layoutX="56" layoutY="65" text="Create and manage catering service announcements" />
-
-
-
-                        <AnchorPane layoutX="6" layoutY="105" prefHeight="430" prefWidth="420" style="-fx-background-color:white;             -fx-background-radius:25;">
-
-
-                            <children>
-
-
-
-                                <Label layoutX="25" layoutY="25" text="Create Service Update">
-
-
-                                    <font>
-                                        <Font size="20" />
-                                    </font>
-
-                                </Label>
-
-
-
-
-
-                                <Label layoutX="25" layoutY="80" text="Update Category" />
-
-
-
-                                <ComboBox fx:id="updateCategoryComboBox" layoutX="170" layoutY="75" prefWidth="210" />
-
-
-
-
-
-
-
-                                <Label layoutX="25" layoutY="130" text="Update Title" />
-
-
-
-                                <TextField fx:id="updateTitleTextField" layoutX="170" layoutY="125" prefWidth="210" />
-
-
-
-
-
-
-
-
-                                <Label layoutX="25" layoutY="180" text="Message" />
-
-
-
-                                <TextArea fx:id="updateMessageTextField" layoutX="25" layoutY="205" prefHeight="90" prefWidth="350" promptText="Enter service update details" />
-
-
-
-
-
-
-
-
-                                <Label layoutX="25" layoutY="330" text="Priority" />
-
-
-
-
-                                <ComboBox fx:id="priorityComboBox" layoutX="170" layoutY="325" prefWidth="210" />
-
-
-
-
-
-
-
-                                <Button fx:id="publishUpdateBtn" layoutX="110" layoutY="380" onAction="#PublishUpdateOnAction" prefHeight="40" prefWidth="170" style="-fx-background-color:#0F6BFF;         -fx-text-fill:white;         -fx-background-radius:10;" text="Publish Update">
-
-
-                                    <font>
-                                        <Font size="14" />
-                                    </font>
-
-
-                                </Button>
-
-
-
-                            </children>
-
-
+                        <AnchorPane layoutX="54.0" layoutY="97.0" prefHeight="491.0" prefWidth="618.0" style="-fx-background-color:#EAF2FF;             -fx-background-radius:25;">
+                     <children>
+                              <AnchorPane layoutX="28.0" layoutY="24.0" prefHeight="430" prefWidth="569.0" style="-fx-background-color:white;             -fx-background-radius:25;">
+                                  <children>
+                                      <Label layoutX="25" layoutY="25" text="Create Service Update">
+                                          <font>
+                                              <Font size="20" />
+                                          </font>
+                                      </Label>
+                                      <Label layoutX="25" layoutY="80" text="Update Category" />
+                                      <ComboBox fx:id="updateCategoryComboBox" layoutX="170" layoutY="75" prefWidth="210" />
+                                      <Label layoutX="25" layoutY="130" text="Update Title" />
+                                      <TextField fx:id="updateTitleTextField" layoutX="170" layoutY="125" prefWidth="210" />
+                                      <Label layoutX="25" layoutY="180" text="Message" />
+                                      <TextArea fx:id="updateMessageTextField" layoutX="25" layoutY="205" prefHeight="90" prefWidth="350" promptText="Enter service update details" />
+                                      <Label layoutX="25" layoutY="330" text="Priority" />
+                                      <ComboBox fx:id="priorityComboBox" layoutX="170" layoutY="325" prefWidth="210" />
+                                      <Button fx:id="publishUpdateBtn" layoutX="189.0" layoutY="380.0" onAction="#PublishUpdateOnAction" prefHeight="40" prefWidth="170" style="-fx-background-color:#0F6BFF;         -fx-text-fill:white;         -fx-background-radius:10;" text="Publish Update">
+                                          <font>
+                                              <Font size="14" />
+                                          </font>
+                                      </Button>
+                                  </children>
+                              </AnchorPane>
+                     </children>
                         </AnchorPane>
-
-
-                        <AnchorPane layoutX="438.0" layoutY="105.0" prefHeight="430" prefWidth="273" style="-fx-background-color:#EAF2FF;             -fx-background-radius:25;">
-
-
+                        <AnchorPane layoutX="5.0" layoutY="606.0" prefHeight="100" prefWidth="712" style="-fx-background-color:#F8FAFC;             -fx-background-radius:20;">
                             <children>
-
-
-
-
-                                <Label layoutX="20" layoutY="25" text="Update Summary">
-
-
-                                    <font>
-                                        <Font size="20" />
-                                    </font>
-
-
-                                </Label>
-
-
-
-
-
-
-
-                                <Label layoutX="25" layoutY="90" text="Category" />
-
-
-                                <Label fx:id="summaryCategoryLabel" layoutX="130" layoutY="90" text="-" />
-
-
-
-
-
-
-                                <Label layoutX="25" layoutY="140" text="Priority" />
-
-
-                                <Label fx:id="summaryPriorityLabel" layoutX="130" layoutY="140" text="-" />
-
-
-
-
-
-
-                                <Label layoutX="25" layoutY="190" text="Status" />
-
-
-                                <Label fx:id="updateStatusLabel" layoutX="130" layoutY="190" text="Draft" />
-
-
-
-
-
-
-
-                                <Button fx:id="viewUpdatesBtn" layoutX="55" layoutY="300" onAction="#ViewUpdatesLabel" prefHeight="40" prefWidth="160" style="-fx-background-radius:10;" text="View Updates" />
-
-
-
-
-
-                            </children>
-
-
-                        </AnchorPane>
-
-                        <AnchorPane layoutX="6" layoutY="570" prefHeight="100" prefWidth="712" style="-fx-background-color:#F8FAFC;             -fx-background-radius:20;">
-
-
-                            <children>
-
-
-
                                 <Label layoutX="25" layoutY="20" text="Recent Service Updates">
-
-
                                     <font>
                                         <Font size="18" />
                                     </font>
-
-
                                 </Label>
-
-
-
-
                                 <Label fx:id="recentUpdatesLabel" layoutX="25" layoutY="55" text="No recent updates available" />
-
-
-
                             </children>
-
-
                         </AnchorPane>
-
-
-
-
-
                     </children>
-
-
                 </AnchorPane>
-
-
-
             </children>
-
-
         </VBox>
-
-
-
     </children>
-
-
 </AnchorPane>

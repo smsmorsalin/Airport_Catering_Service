@@ -18,89 +18,50 @@
 
     <children>
 
-
-        <!-- ================= SIDEBAR ================= -->
-
-
         <VBox layoutY="49.0" prefHeight="706.0" prefWidth="175.0" spacing="5">
 
-
             <children>
-
 
                 <Button onAction="#sidebarDashboardButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px; -fx-background-color: #0F6BFF;" text="Dashboard" textFill="WHITE">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
                 <Button onAction="#sideBarRegisterComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Register Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
                 <Button onAction="#sideBarTrackComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Track Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
                 <Button onAction="#sideBarResolveComplaintButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Resolve Complaint">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
                 <Button onAction="#sideBarEmergencyModificationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Emergency Modification">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
-
                 <Button onAction="#sideBarFlightDelayRequestButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Delay Request">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
-
                 <Button onAction="#sideBarFlightCancellationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Cancellation">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
-
                 <Button onAction="#sideBarServiceUpdatesButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Service Updates">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-
-
-
-
-
                 <Button onAction="#sideBarGenerateReportsButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius: 50px;" text="Generate Reports">
 
                     <font>
@@ -116,89 +77,45 @@
                   <Insets top="195.0" />
                </VBox.margin>
             </Button>
-
-
-
             </children>
-
         </VBox>
-
-
-
-
-
-
-        <!-- TOP HEADER -->
-
-
         <Button layoutY="3" onAction="#sidebarHomePageOnAction" prefHeight="29" prefWidth="175" style="-fx-background-color:pink;         -fx-background-radius:5;" text="Airport Catering Service">
-
-
             <font>
                 <Font name="Arial Bold" size="13" />
             </font>
-
-
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
 
 
         </Button>
-
-
-
-
-
-
-
-
-        <!-- MAIN AREA -->
-
-
         <VBox layoutX="175" prefHeight="758" prefWidth="726" style="-fx-background-color:silver;">
 
-
             <children>
-
-
-
                 <Label alignment="CENTER" prefWidth="609" text="welcome Username">
-
-
                     <font>
                         <Font name="Gabriola" size="18" />
                     </font>
-
-
                 </Label>
-
-
-
-
-
-
-
-
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
                <children>
                   <AnchorPane layoutX="6.0" layoutY="7.0" prefHeight="720.0" prefWidth="712.0">
                      <children>
-                        <Label layoutX="7.0" layoutY="2.0" prefHeight="17.0" prefWidth="95.0" text="Emargency Issue" textFill="#fa0702" />
-                        <TableView layoutX="2.0" layoutY="25.0" prefHeight="358.0" prefWidth="702.0">
+                        <Label fx:id="emargencyIssueLabel" layoutX="7.0" layoutY="2.0" prefHeight="17.0" prefWidth="95.0" text="Emargency Issue" textFill="#fa0702" />
+                        <TableView fx:id="mainTableView" layoutX="2.0" layoutY="25.0" prefHeight="358.0" prefWidth="702.0">
                            <columns>
-                              <TableColumn prefWidth="83.0" text="Ticket ID" />
-                              <TableColumn prefWidth="84.0" text="Issue Type" />
-                              <TableColumn prefWidth="330.0" text="Description" />
-                              <TableColumn prefWidth="91.0" text="Status" />
+                              <TableColumn fx:id="ticketIDTableColumn" prefWidth="83.0" text="Ticket ID" />
+                              <TableColumn fx:id="issueTypeTableView" prefWidth="84.0" text="Issue Type" />
+                              <TableColumn fx:id="descriptionTableView" prefWidth="330.0" text="Description" />
+                              <TableColumn fx:id="statusTableView" prefWidth="91.0" text="Status" />
                            </columns>
                         </TableView>
                         <Label layoutX="4.0" layoutY="428.0" prefHeight="17.0" prefWidth="88.0" text="Enter Ticket ID" />
-                        <TextField layoutX="85.0" layoutY="424.0" prefHeight="25.0" prefWidth="128.0" />
+                        <TextField fx:id="enterticketIDTextField" layoutX="85.0" layoutY="424.0" prefHeight="25.0" prefWidth="128.0" />
                         <Label layoutX="222.0" layoutY="395.0" prefHeight="17.0" prefWidth="165.0" text="Update Issue's Current Status" textFill="#47a432" />
-                        <ComboBox layoutX="286.0" layoutY="424.0" prefWidth="150.0" />
+                        <ComboBox fx:id="statusComboBox" layoutX="286.0" layoutY="424.0" prefWidth="150.0" />
                         <Label layoutX="246.0" layoutY="428.0" prefHeight="17.0" prefWidth="35.0" text="Status" />
-                        <Button layoutX="468.0" layoutY="424.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Update">
+                        <Button layoutX="468.0" layoutY="424.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="25.0" prefWidth="95.0" text="Update">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -210,12 +127,6 @@
 
 
             </children>
-
-
         </VBox>
-
-
     </children>
-
-
 </AnchorPane>

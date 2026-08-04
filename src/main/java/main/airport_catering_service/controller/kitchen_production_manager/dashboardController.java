@@ -11,8 +11,7 @@ import utility.AlertGenerator;
 import java.io.IOException;
 
 
-public class dashboardController
-{
+public class dashboardController {
     @javafx.fxml.FXML
     private TableColumn<String,DashBoard>descriptionTableView;
     @javafx.fxml.FXML
