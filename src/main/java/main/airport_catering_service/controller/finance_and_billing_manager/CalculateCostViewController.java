@@ -101,9 +101,6 @@ public class CalculateCostViewController
             AlertGenerator.showAlert("Wrong Input","Date should not be past date");
             return;
         }
-
-
-
     }
 
     @Deprecated

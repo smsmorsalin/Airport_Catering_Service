@@ -89,59 +89,34 @@
                             </font>
                         </Label>
                         <Label layoutX="56" layoutY="65" text="Submit and manage flight delay requests" />
-                        <AnchorPane layoutX="6" layoutY="105" prefHeight="110" prefWidth="712" style="-fx-background-color:white;             -fx-background-radius:25;">
-                            <children>
-                                <Label layoutX="20" layoutY="15" text="Order Verification">
-                                    <font>
-                                        <Font size="18" />
-                                    </font>
-                                </Label>
-                                <Label layoutX="20" layoutY="50" text="Order ID" />
-                                <TextField fx:id="orderidTextField" layoutX="20" layoutY="72" prefHeight="30" prefWidth="180" />
-                                <Button fx:id="verifyOrderBtn" layoutX="220" layoutY="72" onAction="#verifyOrderOnAction" prefHeight="30" prefWidth="130" style="-fx-background-radius:10;" text="Verify Order" />
-                                <Label fx:id="verificationStatusLabel" layoutX="430" layoutY="50" prefHeight="40.0" prefWidth="142.0" text="Status:">
-                           <font>
-                              <Font size="14.0" />
-                           </font></Label>
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="6" layoutY="235" prefHeight="330" prefWidth="420" style="-fx-background-color:white;             -fx-background-radius:25;">
-                            <children>
-                                <Label layoutX="25" layoutY="25" text="Delay Information">
-                                    <font>
-                                        <Font size="20" />
-                                    </font>
-                                </Label>
-
-                                <Label layoutX="25" layoutY="80" text="Previous Departure Time" />
-                                <TextField fx:id="previousTimeTextField" layoutX="220" layoutY="75" prefWidth="160" />
-                                <Label layoutX="25" layoutY="130" text="New Departure Time" />
-                                <TextField fx:id="newTimeTextField" layoutX="220" layoutY="125" prefWidth="160" />
-                                <Label layoutX="25" layoutY="180" text="Delay Reason" />
-                                <TextArea fx:id="delayReasonTextField" layoutX="25" layoutY="205" prefHeight="80" prefWidth="350" promptText="Enter delay reason" />
-                            </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="445" layoutY="235" prefHeight="330" prefWidth="273" style="-fx-background-color:#EAF2FF;             -fx-background-radius:25;">
-                            <children>
-                                <Label layoutX="20" layoutY="25" text="Updated Schedule">
-                                    <font>
-                                        <Font size="20" />
-                                    </font>
-                                </Label>
-
-                                <Label layoutX="25" layoutY="90" text="Order ID" />
-                                <Label fx:id="summaryOrderidLabel" layoutX="130" layoutY="90" text="-" />
-                                <Label layoutX="25" layoutY="135" text="Old Time" />
-                                <Label fx:id="oldTimeLabel" layoutX="130" layoutY="135" text="-" />
-                                <Label layoutX="25" layoutY="180" text="New Time" />
-                                <Label fx:id="newTimeLabel" layoutX="130" layoutY="180" text="-" />
-
-                                <Button fx:id="updateScheduleBtn" layoutX="45" layoutY="250" onAction="#UpdateScheduleOnAction" prefHeight="40" prefWidth="180" style="-fx-background-color:#0F6BFF;         -fx-text-fill:white;         -fx-background-radius:10;" text="Update Schedule">
+                        <AnchorPane layoutX="6" layoutY="105" prefHeight="110" prefWidth="712" style="-fx-background-color:white;             -fx-background-radius:25;" />
+                        <AnchorPane layoutX="91.0" layoutY="105.0" prefHeight="590.0" prefWidth="542.0" style="-fx-background-color: #F39C12; -fx-background-radius: 25;">
+                     <children>
+                              <AnchorPane layoutX="47.0" layoutY="31.0" prefHeight="485.0" prefWidth="456.0" style="-fx-background-color:white;             -fx-background-radius:25;">
+                                  <children>
+                                      <Label layoutX="25.0" layoutY="104.0" text="Delay Information">
+                                          <font>
+                                              <Font size="20" />
+                                          </font>
+                                      </Label>
+      
+                                      <Label layoutX="25.0" layoutY="159.0" text="Previous Departure Time" />
+                                      <TextField fx:id="previousTimeTextField" layoutX="220.0" layoutY="154.0" prefWidth="160" />
+                                      <Label layoutX="25.0" layoutY="209.0" text="New Departure Time" />
+                                      <TextField fx:id="newTimeTextField" layoutX="220.0" layoutY="204.0" prefWidth="160" />
+                                      <Label layoutX="25.0" layoutY="259.0" text="Delay Reason" />
+                                      <TextArea fx:id="delayReasonTextField" layoutX="25.0" layoutY="284.0" prefHeight="189.0" prefWidth="410.0" promptText="Enter delay reason" />
+                                      <Label layoutX="24.0" layoutY="27.0" text="Order ID" />
+                                      <TextField fx:id="orderidTextField" layoutX="24.0" layoutY="49.0" prefHeight="30" prefWidth="180" />
+                                  </children>
+                              </AnchorPane>
+      
+                                <Button fx:id="updateScheduleBtn" layoutX="183.0" layoutY="532.0" onAction="#UpdateScheduleOnAction" prefHeight="40" prefWidth="180" style="-fx-background-color:#0F6BFF;         -fx-text-fill:white;         -fx-background-radius:10;" text="Update Schedule">
                                     <font>
                                         <Font size="14" />
                                     </font>
                                 </Button>
-                            </children>
+                     </children>
                         </AnchorPane>
                     </children>
                 </AnchorPane>

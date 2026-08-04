@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import user.CustomerSupportOfficer;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
@@ -14,12 +15,6 @@ public class FlightDelayRequestViewController
     @javafx.fxml.FXML
     private Button updateScheduleBtn;
     @javafx.fxml.FXML
-    private Label newTimeLabel;
-    @javafx.fxml.FXML
-    private Button verifyOrderBtn;
-    @javafx.fxml.FXML
-    private Label oldTimeLabel;
-    @javafx.fxml.FXML
     private TextField newTimeTextField;
     @javafx.fxml.FXML
     private TextField orderidTextField;
@@ -27,26 +22,32 @@ public class FlightDelayRequestViewController
     private TextArea delayReasonTextField;
     @javafx.fxml.FXML
     private TextField previousTimeTextField;
-    @javafx.fxml.FXML
-    private Label summaryOrderidLabel;
-    @javafx.fxml.FXML
-    private Label verificationStatusLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @Deprecated
-    public void FlightDelayRequestOnAction(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void UpdateScheduleOnAction(ActionEvent actionEvent) {
+        if(orderidTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        if(newTimeTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        if(delayReasonTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
+        if(previousTimeTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+            return;
+        }
     }
 
-    @javafx.fxml.FXML
-    public void verifyOrderOnAction(ActionEvent actionEvent) {
-    }
+
 
     @javafx.fxml.FXML
     public void sidebarHomePageOnAction(ActionEvent actionEvent) {

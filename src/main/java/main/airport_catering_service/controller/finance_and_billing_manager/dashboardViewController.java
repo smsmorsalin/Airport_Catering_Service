@@ -2,6 +2,7 @@ package main.airport_catering_service.controller.finance_and_billing_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import nonuser.Airline;
 import user.FinanceAndBillingManager;
 import user.User;
 import utility.AlertGenerator;
@@ -12,21 +13,21 @@ import java.io.IOException;
 public class dashboardViewController
 {
     @javafx.fxml.FXML
-    private TableColumn descriptionTableView;
+    private TableColumn<Airline,String> descriptionTableView;
     @javafx.fxml.FXML
-    private TextField enterTicketIDtextField;
+    private TextField  enterTicketIDtextField;
     @javafx.fxml.FXML
     private Label emargencyIssueLabel;
     @javafx.fxml.FXML
-    private TableColumn ticketIDTableColumn;
+    private TableColumn <Airline,Integer> ticketIDTableColumn;
     @javafx.fxml.FXML
-    private TableColumn statusTableView;
+    private TableColumn <Airline,String> statusTableView;
     @javafx.fxml.FXML
-    private ComboBox statusComboBox;
+    private ComboBox <String> statusComboBox;
     @javafx.fxml.FXML
-    private TableView mainTableView;
+    private TableView <Airline> mainTableView;
     @javafx.fxml.FXML
-    private TableColumn issueTypeTableView;
+    private TableColumn <Airline,String> issueTypeTableView;
 
     private FinanceAndBillingManager loggedInUser;
     public void setLoggedInUser(User user){
@@ -37,8 +38,24 @@ public class dashboardViewController
     }
 
 
+
+
     @javafx.fxml.FXML
     public void initialize() {
+    }
+
+
+    @javafx.fxml.FXML
+    public void updateOnAction(ActionEvent actionEvent) {
+        if(enterTicketIDtextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Ticket ID should be filled");
+            return;
+        }
+
+        if(statusComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Status Combo Box should be selected");
+            return;
+        }
     }
 
     @javafx.fxml.FXML
@@ -98,7 +115,4 @@ public class dashboardViewController
         FinanceAndBillingManager.viewOutstandingPayments(actionEvent);
     }
 
-    @javafx.fxml.FXML
-    public void updateOnAction(ActionEvent actionEvent) {
-    }
 }

@@ -66,15 +66,14 @@
                                 </Label>
                                 <Label layoutX="30" layoutY="85" text="Refund Request ID" />
                                 <TextField fx:id="refundRequestIdField" layoutX="30" layoutY="105" prefWidth="260" />
-                                <Button fx:id="verifyRequestButton" layoutX="293.0" layoutY="105.0" onAction="#verifyrequestOnAction" prefWidth="140" text="Verify Request" />
                                 <Label layoutX="30" layoutY="160" text="Order ID" />
-                                <TextField fx:id="orderidTextField" layoutX="30" layoutY="180" prefWidth="410" />
+                                <TextField fx:id="orderidTextField" layoutX="30" layoutY="180" prefHeight="26.0" prefWidth="389.0" />
                                 <Label layoutX="30" layoutY="250" text="Refund Reason" />
                                 <ComboBox fx:id="refundReasonComboBox" layoutX="30" layoutY="270" prefWidth="410" />
                                 <Label layoutX="30" layoutY="335" text="Refund Method" />
                                 <ComboBox fx:id="refundMethodComboBox" layoutX="30" layoutY="355" prefWidth="410" />
                                 <Label layoutX="30" layoutY="420" text="Refund Amount" />
-                                <TextField fx:id="refundAmounTextField" layoutX="30" layoutY="440" prefWidth="410" />
+                                <TextField fx:id="refundAmountTextField" layoutX="30" layoutY="440" prefWidth="410" />
                                 <Label layoutX="30" layoutY="500" text="Additional Notes" />
                                 <TextArea fx:id="additionalNotesTextField" layoutX="30" layoutY="520" prefHeight="80" prefWidth="410" />
                                 <Button fx:id="processRefundButton" layoutX="130" layoutY="610" onAction="#processRefundOnAction" prefHeight="45" prefWidth="200" style="-fx-background-color:#FF0000;                -fx-background-radius:10;" text="Process Refund" textFill="WHITE" />
@@ -100,7 +99,6 @@
                                 <Label fx:id="paymentMethodLabel" layoutX="150" layoutY="270" text="-" />
                                 <Label layoutX="25" layoutY="315" text="Transaction Method :" />
                                 <Label fx:id="transactionMethodLabel" layoutX="160" layoutY="315" text="-" />
-                                <Button fx:id="viewRefundButton" layoutX="45" layoutY="415" onAction="#ViewRefundDetailsOnAction" prefHeight="40" prefWidth="160" text="View Refund Details" />
 
                             </children>
 

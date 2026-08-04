@@ -3,8 +3,10 @@ package main.airport_catering_service.controller.finance_and_billing_manager;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import user.FinanceAndBillingManager;
+import utility.AlertGenerator;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class RecordPaymentViewController
 {
@@ -43,10 +45,38 @@ public class RecordPaymentViewController
 
     @javafx.fxml.FXML
     public void recordpaymentOnAction(ActionEvent actionEvent) {
+
+        if(transactionReferenceTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Reference should be filled");
+            return;
+        }
+
+        if(amountPaidTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Amount Paid should be filled");
+            return;
+        }
+
+        if(paymentMethodComboBox.getValue() == null){
+            AlertGenerator.showAlert("Wrong Input","Combo Box should be selected");
+            return;
+        }
+        if(paymentDatePicker.getValue().isBefore(LocalDate.now())){
+            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+            return;
+        }
     }
 
     @javafx.fxml.FXML
     public void verifyInvoiceOnAction(ActionEvent actionEvent) {
+        if(invoiceidTextField.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Invoice Id should be filled");
+            return;
+        }
+
+        if(airlinenameLabel.getText().trim().isEmpty()){
+            AlertGenerator.showAlert("Invalid Input","Invoice Id should be filled");
+            return;
+        }
     }
 
     @Deprecated
