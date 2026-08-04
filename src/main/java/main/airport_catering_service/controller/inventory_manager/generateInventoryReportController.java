@@ -6,10 +6,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import user.InventoryManager;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class generateInventoryReportController
+public class generateInventoryReportController implements UserReceiver
 {
     @javafx.fxml.FXML
     private DatePicker startDateDatepicker;
@@ -29,6 +32,16 @@ public class generateInventoryReportController
     private Text endDateText;
     @javafx.fxml.FXML
     private Label currentStockSummaryLabel;
+
+    private InventoryManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof InventoryManager inventoryManager){
+            loggedInUser = inventoryManager;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -72,6 +85,6 @@ public class generateInventoryReportController
 
     @javafx.fxml.FXML
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) throws IOException {
-        InventoryManager.renderDashboard(actionEvent);
+        InventoryManager.renderDashboard(actionEvent,loggedInUser);
     }
 }

@@ -5,10 +5,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import user.InventoryManager;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class manageSupplierController
+public class manageSupplierController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label contactInformationLabel;
@@ -38,6 +41,16 @@ public class manageSupplierController
     private Text contactPersonText;
     @javafx.fxml.FXML
     private TextField supplierNameTextfield;
+
+    private InventoryManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof InventoryManager inventoryManager){
+            loggedInUser = inventoryManager;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -76,8 +89,8 @@ public class manageSupplierController
     }
 
     @javafx.fxml.FXML
-    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) throws IOException {
-        InventoryManager.renderDashboard(actionEvent);
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent) {
+        InventoryManager.renderDashboard(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML

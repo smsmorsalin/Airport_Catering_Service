@@ -5,10 +5,13 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import user.DispatchCoordinator;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class generateDispatchReportController
+public class generateDispatchReportController implements UserReceiver
 {
     @javafx.fxml.FXML
     private DatePicker startDateDatepicker;
@@ -22,6 +25,16 @@ public class generateDispatchReportController
     private TextField reportTypeTextfield;
     @javafx.fxml.FXML
     private Text endDateText;
+
+    private DispatchCoordinator loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof DispatchCoordinator dispatchCoordinator){
+            loggedInUser = dispatchCoordinator;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -65,6 +78,6 @@ public class generateDispatchReportController
 
     @javafx.fxml.FXML
     public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
-        DispatchCoordinator.renderDashboard(actionEvent);
+        DispatchCoordinator.renderDashboard(actionEvent,loggedInUser);
     }
 }
