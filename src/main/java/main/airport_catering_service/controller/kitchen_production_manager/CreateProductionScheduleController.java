@@ -126,35 +126,39 @@ public class CreateProductionScheduleController {
     }
 
     @javafx.fxml.FXML
-    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) {
+    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionReportsOA(ActionEvent actionEvent) {
+    public void sideBarProductionReportsOA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewGenerateProductionReports(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarApproveProductionOA(ActionEvent actionEvent) {
+    public void sideBarApproveProductionOA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
+
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionPlanOA(ActionEvent actionEvent) {
+    public void sideBarProductionPlanOA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewCreateProductionPlan(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarMonitorProductionOA(ActionEvent actionEvent) {
+    public void sideBarMonitorProductionOA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewMonitorProductionActivities(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarCalculateIngredientOA(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void sideBarProductionScheduleOA(ActionEvent actionEvent) {
+    public void sideBarCalculateIngredientOA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void sideBarMenuListOA(ActionEvent actionEvent) {
+    public void sideBarMenuListOA(ActionEvent actionEvent) throws IOException {
+        KitchenProductionManager.viewCreateMenuList(actionEvent);
     }
 
     @javafx.fxml.FXML
