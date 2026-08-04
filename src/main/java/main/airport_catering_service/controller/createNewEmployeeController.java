@@ -50,7 +50,7 @@ public class createNewEmployeeController
         genderComboBox.getItems().addAll("Male", "Female", "Other");
         roleComboBox.getItems().addAll("Catering Operations Manager",
                 "Customer Support Officer", "Dispatch Coordinator",
-                "Finance And Billing Manager", "Food Quality Control Officer", "Head Chef",
+                "Finance and Billing Manager", "Food Quality Control Officer", "Head Chef",
                 "Inventory Manager", "Kitchen Production Manager", "Truck Operator");
 
         s = new SuperAdmin("admin", "123");

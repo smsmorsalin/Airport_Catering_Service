@@ -5,11 +5,12 @@ import javafx.scene.control.*;
 import nonuser.Airline;
 import user.CustomerSupportOfficer;
 import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class dashboardViewController
+public class dashboardViewController implements UserReceiver
 {
     @javafx.fxml.FXML
     private TableColumn<Airline,String> descriptionTableView;
@@ -29,6 +30,7 @@ public class dashboardViewController
     private TableColumn<Airline,String> issueTypeTableView;
 
     private CustomerSupportOfficer loggedInUser;
+    @Override
     public void setLoggedInUser(User user){
         if (user instanceof CustomerSupportOfficer CustomerSupportOfficer){
             this.loggedInUser = CustomerSupportOfficer;
@@ -59,7 +61,8 @@ public class dashboardViewController
     }
 
     @javafx.fxml.FXML
-    public void sidebarLogOutButtonOnAction(ActionEvent actionEvent) {
+    public void sidebarLogOutButtonOnAction(ActionEvent actionEvent) throws IOException{
+        User.logout(actionEvent);
     }
 
     @javafx.fxml.FXML
