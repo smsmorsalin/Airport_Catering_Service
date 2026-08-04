@@ -83,6 +83,14 @@ public class DeliveryPerformanceReportController implements UserReceiver
 
     @javafx.fxml.FXML
     public void generateReport(ActionEvent actionEvent) {
+        if (toDatePicker.getValue() == null) {
+            AlertGenerator.showAlert("Error", "Please enter a delivery date from the delivery date field");
+            return;
+        }
+        if (fromDatePicker.getValue() == null) {
+            AlertGenerator.showAlert("Error", "Please enter a delivery date from the delivery date field");
+            return;
+        }
     }
 
     @javafx.fxml.FXML
