@@ -43,7 +43,7 @@
             </Label>
             <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
                <children>
-                  <AnchorPane layoutX="15" layoutY="20" prefHeight="100" prefWidth="680" style="-fx-background-color:#F8FAFC;                    -fx-background-radius:25;">
+                  <AnchorPane layoutX="15" layoutY="20" prefHeight="115.0" prefWidth="680" style="-fx-background-color:#F8FAFC;                    -fx-background-radius:25;">
                      <children>
                         <Label layoutX="20" layoutY="18" text="Search Order">
                            <font>
@@ -53,13 +53,12 @@
                         <Label layoutX="20" layoutY="55" text="Order ID" />
                         <TextField fx:id="orderidTextField" layoutX="20" layoutY="70" prefWidth="170" />
                         <Button fx:id="searchOrderButton" layoutX="193.0" layoutY="69.0" onAction="#searchorderOnAction" prefHeight="26.0" prefWidth="92.0" text="Search Order" />
-                        <Label layoutX="297.0" layoutY="55.0" text="Airline Name:" />
-                        <Label layoutX="450.0" layoutY="55.0" text="Catering Date:" />
-                        <Label layoutX="586.0" layoutY="55.0" text="Order Time:" />
-                        <TextField fx:id="orderTimeField" layoutX="586.0" layoutY="70.0" prefHeight="27.0" prefWidth="36.0" />
+                        <Label layoutX="292.0" layoutY="55.0" text="Airline Name:" />
+                        <Label layoutX="441.0" layoutY="54.0" text="Catering Date:" />
+                        <Label layoutX="587.0" layoutY="54.0" text="Order Time:" />
+                        <TextField fx:id="orderTimeField" layoutX="586.0" layoutY="70.0" prefHeight="27.0" prefWidth="76.0" />
                         <DatePicker fx:id="cateringdatepicker" layoutX="439.0" layoutY="70.0" prefHeight="26.0" prefWidth="142.0" />
                         <ComboBox fx:id="airlineNameCombobox" layoutX="291.0" layoutY="71.0" prefHeight="26.0" prefWidth="140.0" />
-                        <TextField fx:id="orderTimeField1" layoutX="631.0" layoutY="70.0" prefHeight="27.0" prefWidth="36.0" />
                      </children>
                   </AnchorPane>
                   <AnchorPane layoutX="15" layoutY="145" prefHeight="520" prefWidth="380" style="-fx-background-color:#FFFFFF;                    -fx-background-radius:25;">
@@ -117,7 +116,6 @@
                         <Button fx:id="saveCostButton" layoutX="60" layoutY="370" onAction="#saveCostRecordOnAction" prefHeight="35" prefWidth="140" style="-fx-background-color:#00853F;                -fx-background-radius:10;" text="Save Cost Record" textFill="WHITE" />
                      </children>
                   </AnchorPane>
-                  <Label layoutX="639.0" layoutY="96.0" text=":" />
                </children>
             </AnchorPane>
          </children>
