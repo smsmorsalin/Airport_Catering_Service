@@ -83,8 +83,8 @@ public class MonitorProductionActivitiesController implements UserReceiver
 
     }
     @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException{
-        KitchenProductionManager.reverseDashboard(actionEvent);
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent){
+        KitchenProductionManager.reverseDashboard(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML

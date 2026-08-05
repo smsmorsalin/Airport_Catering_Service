@@ -123,8 +123,6 @@ public class RejectBatchController implements UserReceiver
        FoodQualityControlOfficer.viewPerformInspection(actionEvent,loggedInUser);
     }
 
-
-
     @javafx.fxml.FXML
     public void sideBarGenerateQAReportOnAction(ActionEvent actionEvent) {
         FoodQualityControlOfficer.viewGenerateQAReport(actionEvent,loggedInUser);

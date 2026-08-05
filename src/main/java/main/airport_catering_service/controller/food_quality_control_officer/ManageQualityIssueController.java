@@ -103,4 +103,7 @@ public class ManageQualityIssueController implements UserReceiver
     }
 
 
+    @javafx.fxml.FXML
+    public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent) {
+    }
 }

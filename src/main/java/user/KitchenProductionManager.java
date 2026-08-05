@@ -55,14 +55,8 @@ public class KitchenProductionManager extends  Employee implements Serializable 
                 ", createDate=" + createDate +
                 '}';
     }
-    public static void reverseDashboard(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader
-                (KitchenProductionManager.class.getResource("/KitchenProductionManager/dashboardView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public static void reverseDashboard(javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event,"/KitchenProductionManager/dashboardView.fxml",user);
     }
 
     @Override
@@ -93,7 +87,9 @@ public class KitchenProductionManager extends  Employee implements Serializable 
         SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/ReceiveApprovedCateringOrders.fxml",user);
 
     }public static void  viewCreateMenuList (javafx.event.ActionEvent event, User user) {
-                SceneSwitchingHelper.switchSceneWithData(event, " /KitchenProductionManager/CreateMenuList.fxml ",user);
+        SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/CreateMenuList.fxml",user);
+//         SceneSwitchingHelper.switchSceneWithData(event, " /KitchenProductionManager/CreateMenuList.fxml ",user);
+
 
     }public static void  ViewCreateProductionSchedule(javafx.event.ActionEvent event, User user ) {
         SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/CreateProductionSchedule.fxml",user);

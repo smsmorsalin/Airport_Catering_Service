@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e294d533-d73b-4f5d-8179-c5b2b2679b1c" name="Changes" comment=" &quot; Switching done in food quality control officer &quot;">
+    <list default="true" id="e294d533-d73b-4f5d-8179-c5b2b2679b1c" name="Changes" comment="&quot;switching to all button on kitchen production manager&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/FoodSafetyCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/FoodSafetyCheckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/GenerateQAReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/GenerateQAReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ManageQualityIssueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ManageQualityIssueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/PerformInspectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/PerformInspectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/QualityTrendAnalysisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/QualityTrendAnalysisController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/RejectBatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/RejectBatchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/ApproveProductionCompletionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/ApproveProductionCompletionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CalculateIngredientRequirementsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CalculateIngredientRequirementsController.java" afterDir="false" />
@@ -18,9 +23,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/ReceiveApprovedCateringOrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/ReceiveApprovedCateringOrdersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/dashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/RejectBatchView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/RejectBatchView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/QualityTrendAnalysisView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/QualityTrendAnalysisView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +39,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ACS.executor": "Run",
     "Application.HelloApplication.executor": "Run",
     "git-widget-placeholder": "saif"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="ACS" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="main.airport_catering_service.HelloApplication" />
+      <module name="Airport_Catering_Service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary=" &quot; Switching done in food quality control officer &quot;">
       <option name="closed" value="true" />
@@ -48,11 +62,36 @@
       <option name="project" value="LOCAL" />
       <updated>1785916534763</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;switching to all button on kitchen production manager&quot;">
+      <option name="closed" value="true" />
+      <created>1785920503211</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1785920503211</updated>
+    </task>
+    <task id="LOCAL-00003" summary="&quot;switching to all button on kitchen production manager&quot;">
+      <option name="closed" value="true" />
+      <created>1785920511942</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1785920511942</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;switching to all button on kitchen production manager&quot;">
+      <option name="closed" value="true" />
+      <created>1785920808570</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1785920808570</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" &quot; Switching done in food quality control officer &quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value=" &quot; Switching done in food quality control officer &quot;" />
+    <MESSAGE value="&quot;switching to all button on kitchen production manager&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;switching to all button on kitchen production manager&quot;" />
   </component>
 </project>

@@ -64,8 +64,6 @@ public class QualityTrendAnalysisController implements UserReceiver
         FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
     }
 
-
-
     @javafx.fxml.FXML
     public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
         FoodQualityControlOfficer.viewRejectBatch(actionEvent,loggedInUser);
@@ -80,8 +78,6 @@ public class QualityTrendAnalysisController implements UserReceiver
     public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent) {
         FoodQualityControlOfficer.viewReceiveInspectionRequest(actionEvent,loggedInUser);
     }
-
-
 
     @javafx.fxml.FXML
     public void sideBarPerformInspectionOnAction(ActionEvent actionEvent) {

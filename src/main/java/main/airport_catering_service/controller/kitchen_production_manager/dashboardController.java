@@ -74,8 +74,8 @@ public class dashboardController implements UserReceiver {
         }
     }
     @javafx.fxml.FXML
-    public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent)throws  IOException {
-        KitchenProductionManager.reverseDashboard(actionEvent);
+    public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent) {
+        KitchenProductionManager.reverseDashboard(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
     public void logoutButtonOnAction(ActionEvent actionEvent)throws  IOException {

@@ -68,7 +68,7 @@
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Button>
-                  <Label layoutX="150.0" layoutY="5.0" text="Monitor Food Qualitu Trends" textFill="WHITE">
+                  <Label layoutX="150.0" layoutY="5.0" text="Monitor Food Quality Trend" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
