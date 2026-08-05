@@ -61,12 +61,13 @@ public class createPurchaseRequestController implements UserReceiver
     @javafx.fxml.FXML
     public void initialize() {
         tableView.getItems().clear();
-        ingredientNameTableviewColumn.setCellValueFactory(new PropertyValueFactory<PurchaseRequest, String>("IngredientName"));
-        purchaseRequestIdTableviewColumn.setCellValueFactory(new PropertyValueFactory<PurchaseRequest, Integer>("ingredientId"));
-        quantityTableviewColumn.setCellValueFactory(new PropertyValueFactory<PurchaseRequest, Integer>("Quantity"));
-        supplierTableviewColumn.setCellValueFactory(new PropertyValueFactory<PurchaseRequest, String>("Supplier"));
 
-        purchaseRequestList = BinaryFileUtility.readObjects("PurchaseReuqest.bin");
+        ingredientNameTableviewColumn.setCellValueFactory(new PropertyValueFactory<PurchaseRequest, String>("ingredientName"));
+        purchaseRequestIdTableviewColumn.setCellValueFactory(new PropertyValueFactory<PurchaseRequest, Integer>("ingredientId"));
+        quantityTableviewColumn.setCellValueFactory(new PropertyValueFactory<PurchaseRequest, Integer>("quantity"));
+        supplierTableviewColumn.setCellValueFactory(new PropertyValueFactory<PurchaseRequest, String>("supplier"));
+
+        purchaseRequestList = BinaryFileUtility.readObjects("PurchaseRequest.bin");
 
         for (Object obj : purchaseRequestList){
             if (obj instanceof PurchaseRequest purchaseRequest){
@@ -76,12 +77,12 @@ public class createPurchaseRequestController implements UserReceiver
             }
         }
 
+
     }
 
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
 
-        tableView.getItems().clear();
 
         if (supplierTextfield.getText().trim().isEmpty() || ingredientNameTextfield.getText().trim().isEmpty()
                 || requiredQuantityTextfield.getText().trim().isEmpty() || expectedDeliveryDateDatepicker.getValue() == null) {
@@ -108,8 +109,10 @@ public class createPurchaseRequestController implements UserReceiver
         String ingredientName = ingredientNameTextfield.getText().trim();
         LocalDate expectedDeliveryDate = expectedDeliveryDateDatepicker.getValue();
 
-        loggedInUser.purchaseRequest(ingredientName, requiredQuantity, supplier, expectedDeliveryDate);
-
+        PurchaseRequest newRequest = loggedInUser.purchaseRequest(ingredientName, requiredQuantity, supplier, expectedDeliveryDate);
+        if (newRequest != null){
+            tableView.getItems().add(newRequest);
+        }
 
     }
 

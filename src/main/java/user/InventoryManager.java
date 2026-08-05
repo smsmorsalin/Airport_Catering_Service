@@ -29,16 +29,16 @@ public class InventoryManager extends Employee implements Serializable {
     public boolean updateProfile(){return false;}
 
 
-    public boolean purchaseRequest(String productName, int quantity, String supplierName, LocalDate expectedDeliveryDate){
+    public PurchaseRequest purchaseRequest(String productName, int quantity, String supplierName, LocalDate expectedDeliveryDate){
         //validation
         PurchaseRequest newRequest = new PurchaseRequest(productName, quantity, supplierName, expectedDeliveryDate);
 
         boolean b = BinaryFileUtility.writeObjects("PurchaseRequest.bin", newRequest);
         if(b){
             AlertGenerator.showAlert("Success", "purchase Request Created");
-            return true;
+            return newRequest;
         }
-        return false;
+        return null;
 
     }
 
