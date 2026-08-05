@@ -7,13 +7,16 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import nonuser.ProductionPlan;
 import user.KitchenProductionManager;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 
 import java.io.IOException;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class CreateProductionScheduleController {
+public class CreateProductionScheduleController implements UserReceiver {
     @javafx.fxml.FXML
     private ComboBox<String> workShiftComboBox1;
     @javafx.fxml.FXML
@@ -26,6 +29,16 @@ public class CreateProductionScheduleController {
     private ComboBox<String> endsHoursTimeComboBox;
     @javafx.fxml.FXML
     private ComboBox<String> startMinitueTimeComboBox;
+
+    private KitchenProductionManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof KitchenProductionManager kitchenProductionManager){
+            loggedInUser = kitchenProductionManager;
+        }else{
+            AlertGenerator.showAlert("error", "error Authentication failed");
+        }
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -127,38 +140,43 @@ public class CreateProductionScheduleController {
 
     @javafx.fxml.FXML
     public void sideBarReceiveOrdersOA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent);
+//        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent);
+        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarProductionReportsOA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewGenerateProductionReports(actionEvent);
+//        KitchenProductionManager.viewGenerateProductionReports(actionEvent);
+        KitchenProductionManager.viewGenerateProductionReports(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarApproveProductionOA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
+//        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
+        KitchenProductionManager.viewApproveProductionCompletion(actionEvent,loggedInUser);
 
     }
 
     @javafx.fxml.FXML
     public void sideBarProductionPlanOA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewCreateProductionPlan(actionEvent);
+//        KitchenProductionManager.viewCreateProductionPlan(actionEvent);
+        KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarMonitorProductionOA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewMonitorProductionActivities(actionEvent);
+//        KitchenProductionManager.viewMonitorProductionActivities(actionEvent);
+        KitchenProductionManager.viewMonitorProductionActivities(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarCalculateIngredientOA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
+//        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
+        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent,loggedInUser);
     }
-
     @javafx.fxml.FXML
     public void sideBarMenuListOA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewCreateMenuList(actionEvent);
+        KitchenProductionManager.viewCreateMenuList(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML

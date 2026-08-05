@@ -55,6 +55,15 @@ public class KitchenProductionManager extends  Employee implements Serializable 
                 ", createDate=" + createDate +
                 '}';
     }
+    public static void reverseDashboard(javafx.event.ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader
+                (KitchenProductionManager.class.getResource("/KitchenProductionManager/dashboardView.fxml"));
+        Parent root = loader.load();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @Override
     public void viewDashboard(javafx.event.ActionEvent event, User user){
@@ -66,73 +75,33 @@ public class KitchenProductionManager extends  Employee implements Serializable 
         return false;
     }
 
-    public static void viewMonitorProductionActivities(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/KitchenProductionManager/MonitorProductionActivities.fxml");
+    public static void viewMonitorProductionActivities(javafx.event.ActionEvent event,User user) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/MonitorProductionActivities.fxml",user);
     }
 
-    public static void  viewGenerateProductionReports (javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/KitchenProductionManager/GenerateProductionReports.fxml");
+    public static void  viewGenerateProductionReports (javafx.event.ActionEvent event,User user) {
+    SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/GenerateProductionReports.fxml",user);
     }
 
-    public static void  viewCreateProductionPlan(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(
-                KitchenProductionManager.class.getResource("/KitchenProductionManager/CreateProductionPlan.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public static void  viewCreateProductionPlan(javafx.event.ActionEvent event,User user) {
+    SceneSwitchingHelper.switchSceneWithData(event,  "/KitchenProductionManager/CreateProductionPlan.fxml" ,user);
     }
-    public static void  viewCalculateIngredientRequirements (javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(
-                KitchenProductionManager.class.getResource("/KitchenProductionManager/CalculateIngredientRequirements.fxml"));
+    public static void  viewCalculateIngredientRequirements (javafx.event.ActionEvent event,User user){
+        SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/CalculateIngredientRequirements.fxml",user);
 
-        Parent root = loader.load();
+    }public static void  viewReceiveApprovedCateringOrders(javafx.event.ActionEvent event,User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/ReceiveApprovedCateringOrders.fxml",user);
 
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
+    }public static void  viewCreateMenuList (javafx.event.ActionEvent event, User user) {
+                SceneSwitchingHelper.switchSceneWithData(event, " /KitchenProductionManager/CreateMenuList.fxml ",user);
 
-        stage.setScene(scene);
-        stage.show();
-
-    }public static void  viewReceiveApprovedCateringOrders(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/KitchenProductionManager/ReceiveApprovedCateringOrders.fxml");
-
-    }public static void  viewCreateMenuList (javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(
-                KitchenProductionManager.class.getResource("/KitchenProductionManager/CreateMenuList.fxml"));
-
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
-    }public static void  ViewCreateProductionSchedule(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(
-                KitchenProductionManager.class.getResource("/KitchenProductionManager/CreateProductionSchedule.fxml"));
-
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+    }public static void  ViewCreateProductionSchedule(javafx.event.ActionEvent event, User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/CreateProductionSchedule.fxml",user);
     }
-    public static void  viewApproveProductionCompletion(javafx.event.ActionEvent event) throws IOException{
-        SceneSwitchingHelper.fullSceneReplacement(event, "/KitchenProductionManager/ApproveProductionCompletion.fxml");
+    public static void  viewApproveProductionCompletion(javafx.event.ActionEvent event,User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/ApproveProductionCompletion.fxml",user);
     }
 
-    public static void reverseDashboard(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader
-                (KitchenProductionManager.class.getResource("/KitchenProductionManager/dashboardView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+
 }
 
