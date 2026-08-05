@@ -96,5 +96,30 @@ public class updateInventoryController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
+
+        if (ingredientIdTextfield.getText().trim().isEmpty() || newQuantityTextfield.getText().trim().isEmpty()
+                || ingredientNameTextfield.getText().trim().isEmpty()) {
+
+            AlertGenerator.showAlert("Invalid Input", "All fields must be filled.");
+            return;
+        }
+
+        int ingredientId;
+        int newQuantity;
+
+        try {
+            ingredientId = Integer.parseInt(ingredientIdTextfield.getText().trim());
+            newQuantity = Integer.parseInt(newQuantityTextfield.getText().trim());
+        } catch (Exception e) {
+            AlertGenerator.showAlert("Invalid Input", "Ingredient ID and New Quantity must be integers.");
+            return;
+        }
+
+        if (ingredientId <= 0 || newQuantity <= 0) {
+            AlertGenerator.showAlert("Invalid Input", "Ingredient ID and New Quantity must be greater than 0.");
+            return;
+        }
+
+        String ingredientName = ingredientNameTextfield.getText().trim();
     }
 }

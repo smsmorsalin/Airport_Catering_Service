@@ -85,6 +85,25 @@ public class reserveIngredientController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchButtonOnAction(ActionEvent actionEvent) {
+
+        if (orderIdTextfield.getText().trim().isEmpty()) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID must be filled.");
+            return;
+        }
+
+        int orderId;
+
+        try {
+            orderId = Integer.parseInt(orderIdTextfield.getText().trim());
+        } catch (Exception e) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID must be an integer.");
+            return;
+        }
+
+        if (orderId <= 0) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID must be greater than 0.");
+            return;
+        }
     }
 
     @javafx.fxml.FXML

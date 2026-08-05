@@ -3,6 +3,7 @@ package main.airport_catering_service.controller.dispatch_coordinator;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import user.DispatchCoordinator;
@@ -31,9 +32,10 @@ public class receiveDispatchRequestController implements UserReceiver
     @javafx.fxml.FXML
     private TableColumn dispatchRequestIdTableviewColumn;
     @javafx.fxml.FXML
-    private TextField dispatchNoteTextfield;
-    @javafx.fxml.FXML
     private TableColumn deliveryLocationTableviewColumn;
+    @javafx.fxml.FXML
+    private TextArea dispatchNoteTextArea;
+
 
     private DispatchCoordinator loggedInUser;
     @Override
@@ -51,6 +53,31 @@ public class receiveDispatchRequestController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchButtonOnACtion(ActionEvent actionEvent) {
+
+        tableView.getItems().clear();
+
+        if (orderIdTextfield.getText().trim().isEmpty() || dispatchNoteTextArea.getText().trim().isEmpty()) {
+
+            AlertGenerator.showAlert("Invalid Input", "Order ID and Dispatch Note must be filled.");
+            return;
+        }
+
+        int orderId;
+
+        try {
+            orderId = Integer.parseInt(orderIdTextfield.getText().trim());
+        } catch (Exception e) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID must be an integer.");
+            return;
+        }
+
+        if (orderId <= 0) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID must be greater than 0.");
+            return;
+        }
+
+        String dispatchNote = dispatchNoteTextArea.getText().trim();
+
     }
 
     @javafx.fxml.FXML

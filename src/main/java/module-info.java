@@ -3,10 +3,7 @@ module main.airport_catering_service {
     requires javafx.fxml;
     requires java.desktop;
     requires javafx.graphics;
-
-
-    //requires main.airport_catering_service;
-    //requires main.airport_catering_service;
+//    requires main.airport_catering_service;
 
     opens main.airport_catering_service to javafx.fxml;
     exports main.airport_catering_service;

@@ -23,7 +23,7 @@
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarFoodSafetyCheckOnAction" prefHeight="42.0" prefWidth="174.0" text="Food Safety Check" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarApproveBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Approve Batch" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarRejectBatchOnAction" prefHeight="42.0" prefWidth="174.0" text=" Reject Batch" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" text=" Manage Quality Issue" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarManageQualityIssueOnAction" prefHeight="42.0" prefWidth="174.0" text=" Manage Quality Issue" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarQualityTrendAnalysisOnAction" prefHeight="42.0" prefWidth="174.0" text=" Quality Trend Analysis" textOverrun="CENTER_ELLIPSIS" />
                 <Button disable="true" mnemonicParsing="false" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: royalBlue;" text="Generate QA Report" textOverrun="CENTER_ELLIPSIS" />
             </children>
@@ -92,7 +92,7 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="141.0" layoutY="189.0" mnemonicParsing="false" onAction="#generateReportOnAction" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: royalBlue;" text="Generate Report " textFill="WHITE">
+                  <Button layoutX="141.0" layoutY="189.0" mnemonicParsing="false" onAction="#generateReportOA" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: royalBlue;" text="Generate Report " textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Button>
@@ -101,7 +101,7 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="315.0" layoutY="189.0" mnemonicParsing="false" onAction="#exportPDFOnAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: limeGreen;" text="Export PDF" textFill="WHITE">
+                  <Button layoutX="315.0" layoutY="189.0" mnemonicParsing="false" onAction="#exportPDFOA" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: limeGreen;" text="Export PDF" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>

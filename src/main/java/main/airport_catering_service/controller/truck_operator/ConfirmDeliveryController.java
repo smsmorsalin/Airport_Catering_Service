@@ -56,6 +56,116 @@ public class ConfirmDeliveryController implements UserReceiver
 
     @javafx.fxml.FXML
     public void loadAssignment(ActionEvent actionEvent) {
+        if(assignmentIdField.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a task ID");
+            return;
+        }
+        int assignmentId;
+        try {
+            assignmentId = Integer.parseInt(assignmentIdField.getText());
+        }catch (NumberFormatException e){
+            AlertGenerator.showAlert("Error", "Please enter a valid assigned ID");
+            return;
+        }
+        if(assignmentId <= 0) {
+            AlertGenerator.showAlert("Error", "Please enter a valid assigned ID");
+            return;
+        }
+        if(orderIdField.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a order ID");
+            return;
+        }
+        int orderId;
+        try {
+            orderId = Integer.parseInt(orderIdField.getText());
+        }catch (NumberFormatException e){
+            AlertGenerator.showAlert("Error", "Please enter a valid order ID");
+            return;
+        }
+        if(orderId <= 0) {
+            AlertGenerator.showAlert("Error", "Please enter a valid order ID");
+            return;
+        }
+        if(receiverIdField.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a receiver ID");
+            return;
+        }
+        int receiverId;
+        try {
+            receiverId = Integer.parseInt(receiverIdField.getText());
+        }catch (NumberFormatException e){
+            AlertGenerator.showAlert("Error", "Please enter a valid receiver ID");
+            return;
+        }
+        if(receiverId <= 0) {
+            AlertGenerator.showAlert("Error", "Please enter a valid receiver ID");
+            return;
+        }
+        if(receiverNameField.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a task ID");
+            return;
+        }
+        int receiverNameId;
+        try {
+            receiverNameId = Integer.parseInt(receiverNameField.getText());
+        }catch (NumberFormatException e){
+            AlertGenerator.showAlert("Error", "Please enter a valid receiver ID");
+            return;
+        }
+        if(receiverNameId <= 0) {
+            AlertGenerator.showAlert("Error", "Please enter a valid receiver ID");
+            return;
+        }
+        if(flightNumberField.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a flight ID");
+            return;
+        }
+        int flightNumber;
+        try {
+            flightNumber = Integer.parseInt(flightNumberField.getText());
+        }catch (NumberFormatException e){
+            AlertGenerator.showAlert("Error", "Please enter a valid flight ID");
+            return;
+        }
+        if(flightNumber <= 0) {
+            AlertGenerator.showAlert("Error", "Please enter a valid flight ID");
+            return;
+        }
+        if(airlineField.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a airline ID");
+            return;
+        }
+        int airlineId;
+        try {
+            airlineId = Integer.parseInt(airlineField.getText());
+        }catch (NumberFormatException e){
+            AlertGenerator.showAlert("Error", "Please enter a valid airline ID");
+            return;
+        }
+        if(airlineId <= 0) {
+            AlertGenerator.showAlert("Error", "Please enter a valid airline ID");
+            return;
+        }
+
+        if(locationField.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a location ID");
+            return;
+        }
+        int locationId;
+        try {
+            locationId = Integer.parseInt(locationField.getText());
+        }catch (NumberFormatException e){
+            AlertGenerator.showAlert("Error", "Please enter a valid location ID");
+            return;
+        }
+        if(locationId <= 0) {
+            AlertGenerator.showAlert("Error", "Please enter a valid location ID");
+            return;
+        }
+        if ( deliveryDatePicker.getValue() == null) {
+            AlertGenerator.showAlert("Error", "Please enter a delivery date from the delivery date field");
+            return;
+        }
     }
 
     @javafx.fxml.FXML

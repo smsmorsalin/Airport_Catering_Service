@@ -84,6 +84,20 @@ public class generateInventoryReportController implements UserReceiver
 
     @javafx.fxml.FXML
     public void downloadInventoryReportButtonOnAction(ActionEvent actionEvent) {
+
+        if ( reportTypeTextfield.getText().trim().isEmpty()
+                || startDateDatepicker.getValue() == null || endDateDatepicker.getValue() == null) {
+
+            AlertGenerator.showAlert("Invalid Input", "Report Type, Start Date and End Date must be filled.");
+            return;
+        }
+
+        String reportType = reportTypeTextfield.getText().trim();
+
+        if (endDateDatepicker.getValue().isBefore(startDateDatepicker.getValue())) {
+            AlertGenerator.showAlert("Invalid Input", "End Date cannot be before Start Date.");
+            return;
+        }
     }
 
     @javafx.fxml.FXML
