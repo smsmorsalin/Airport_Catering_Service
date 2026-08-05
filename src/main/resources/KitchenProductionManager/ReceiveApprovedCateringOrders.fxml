@@ -24,12 +24,12 @@
                   <Font name="System Bold" size="12.0" />
                </font></Button>
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarCalculateIngredientOA" prefHeight="42.0" prefWidth="174.0" text="Calculate Ingredient" textOverrun="CENTER_ELLIPSIS" />
-                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionPlanOA" prefHeight="42.0" prefWidth="174.0" text="Production Plan" textOverrun="CENTER_ELLIPSIS" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionPlanOA" prefHeight="49.0" prefWidth="174.0" text="Production Plan" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarProductionScheduleOA" prefHeight="42.0" prefWidth="174.0" text="Production Schedule" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMenuListOA" prefHeight="42.0" prefWidth="174.0" text="Menu List" textOverrun="CENTER_ELLIPSIS" />
                 <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#sideBarMonitorProductionOA" prefHeight="42.0" prefWidth="174.0" text="Monitor Production" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" onAction="#sideBarApproveProductionOA" prefHeight="42.0" prefWidth="174.0" text="Approve Production" textOverrun="CENTER_ELLIPSIS" />
-                <Button mnemonicParsing="false" onAction="#sideBarProductionReportsOA" prefHeight="42.0" prefWidth="174.0" text="Production Reports" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarApproveProductionOA" prefHeight="43.0" prefWidth="174.0" text="Approve Production" textOverrun="CENTER_ELLIPSIS" />
+                <Button mnemonicParsing="false" onAction="#sideBarProductionReportsOA" prefHeight="49.0" prefWidth="174.0" text="Production Reports" textOverrun="CENTER_ELLIPSIS" />
             </children>
         </VBox>
         <Button layoutY="3.0" mnemonicParsing="false" onAction="#sidebarAirportCateringServiceButtonOnClick" prefHeight="42.0" prefWidth="175.0" style="-fx-background-color: pink; -fx-background-radius: 5;" text="Airport Catering Service">

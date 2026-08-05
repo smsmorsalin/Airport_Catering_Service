@@ -4,15 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e294d533-d73b-4f5d-8179-c5b2b2679b1c" name="Changes" comment="m &quot;fix some error in kitchen production manager&quot;" />
+    <list default="true" id="e294d533-d73b-4f5d-8179-c5b2b2679b1c" name="Changes" comment="m &quot;fix some error in kitchen production manager&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ApproveBatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ApproveBatchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/FoodSafetyCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/FoodSafetyCheckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/GenerateQAReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/GenerateQAReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ManageQualityIssueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ManageQualityIssueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/PerformInspectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/PerformInspectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/QualityTrendAnalysisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/QualityTrendAnalysisController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ReceiveInspectionRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ReceiveInspectionRequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/RejectBatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/RejectBatchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/dashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/ApproveBatchView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/ApproveBatchView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/FoodSafetyCheckView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/FoodSafetyCheckView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/GenerateQAReportView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/GenerateQAReportView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/ManageQualityIssueView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/ManageQualityIssueView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/PerformInspectionView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/PerformInspectionView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/QualityTrendAnalysisView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/QualityTrendAnalysisView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/ReceiveInspectionRequestView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/ReceiveInspectionRequestView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/RejectBatchView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/RejectBatchView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/ReceiveApprovedCateringOrders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/KitchenProductionManager/ReceiveApprovedCateringOrders.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="saif" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
+    "accountId": "09b4b316-9114-4bc1-8e76-96925cab0536"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -23,7 +56,8 @@
   "keyToString": {
     "Application.ACS.executor": "Run",
     "Application.HelloApplication.executor": "Run",
-    "git-widget-placeholder": "saif"
+    "git-widget-placeholder": "saif",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RunManager">
@@ -92,7 +126,39 @@
       <option name="project" value="LOCAL" />
       <updated>1785932425901</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="m &quot;fix some error in kitchen production manager&quot;">
+      <option name="closed" value="true" />
+      <created>1785932562694</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1785932562694</updated>
+    </task>
+    <task id="LOCAL-00009" summary="m &quot;fix some error in kitchen production manager&quot;">
+      <option name="closed" value="true" />
+      <created>1785932602931</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1785932602931</updated>
+    </task>
+    <task id="LOCAL-00010" summary="m &quot;fix some error in kitchen production manager&quot;">
+      <option name="closed" value="true" />
+      <created>1785932691831</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1785932691831</updated>
+    </task>
+    <task id="LOCAL-00011" summary="m &quot;fix some error in kitchen production manager&quot;">
+      <option name="closed" value="true" />
+      <created>1785933010181</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1785933010181</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
