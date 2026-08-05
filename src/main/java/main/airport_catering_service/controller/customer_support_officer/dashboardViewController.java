@@ -163,57 +163,79 @@ public class dashboardViewController implements UserReceiver {
         User.logout(actionEvent);
     }
 
-    @javafx.fxml.FXML
-    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) throws IOException {
-        switchTo(actionEvent, "/customer_support_officer/dashboardView.fxml");
+    private void switchTo(ActionEvent actionEvent, String view) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(actionEvent, view, loggedInUser);
     }
+
 
     @javafx.fxml.FXML
     public void sidebarHomePageOnAction(ActionEvent actionEvent) throws IOException {
-        switchTo(actionEvent, "/customer_support_officer/dashboardView.fxml");
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/dashboardView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarRegisterComplaintButtonOnAction(ActionEvent actionEvent) throws IOException {
-        switchTo(actionEvent, "/customer_support_officer/RegisterComplaintView.fxml");
+    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/dashboardView.fxml",
+                loggedInUser);
+    }
+
+
+    @javafx.fxml.FXML
+    public void sidebarRegisterComplaintButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/RegisterComplaintView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarTrackComplaintButtonOnAction(ActionEvent actionEvent) throws IOException {
-        switchTo(actionEvent, "/customer_support_officer/TrackComplaintView.fxml");
+    public void sidebarTrackComplaintButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/TrackComplaintView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarGenerateReportsButtonOnAction(ActionEvent actionEvent) throws IOException {
-        switchTo(actionEvent, "/customer_support_officer/GenerateReportsView.fxml");
+    public void sidebarResolveComplaintButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/ResolveComplaintView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarServiceUpdatesButtonOnAction(ActionEvent actionEvent) throws IOException {
-        switchTo(actionEvent, "/customer_support_officer/ServiceUpdatesView.fxml");
+    public void sidebarNewAirlineRequestButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/NewAirlineRequestView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarFlightCancellationButtonOnAction(ActionEvent actionEvent) throws IOException {
-        switchTo(actionEvent, "/customer_support_officer/FlightCancellationView.fxml");
+    public void sidebarNewFlightEntryButtonOnAction(ActionEvent actionEvent)throws IOException{
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/NewFlightEntryView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarResolveComplaintButtonOnAction(ActionEvent actionEvent) throws IOException {
-        switchTo(actionEvent, "/customer_support_officer/ResolveComplaintView.fxml");
+    public void sidebarCancellationAndDelayButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/CancellationAndDelayView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarEmergencyModificationButtonOnAction(ActionEvent actionEvent) throws IOException {
-        switchTo(actionEvent, "/customer_support_officer/EmergencyModificationView.fxml");
+    public void sidebarServiceUpdatesButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/ServiceUpdatesView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarFlightDelayRequestButtonOnAction(ActionEvent actionEvent) throws IOException {
-        switchTo(actionEvent, "/customer_support_officer/FlightDelayRequestView.fxml");
-    }
-
-    private void switchTo(ActionEvent actionEvent, String view) throws IOException {
-        SceneSwitchingHelper.switchSceneWithData(actionEvent, view, loggedInUser);
+    public void sidebarGenerateReportsButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/GenerateReportsView.fxml",
+                loggedInUser);
     }
 }

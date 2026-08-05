@@ -62,7 +62,7 @@ public class RecordPaymentViewController implements UserReceiver
 
     @javafx.fxml.FXML
     public void initialize() {
-        paymentMethodComboBox.getItems().setAll("Bank Transfer", "Credit Card", "Cash", "Mobile Banking");
+        paymentMethodComboBox.getItems().setAll("Bank", "Card", "Bkash", "Nagad");
         paymentDatePicker.setValue(LocalDate.now());
     }
 
@@ -95,15 +95,15 @@ public class RecordPaymentViewController implements UserReceiver
         double due = selectedInvoice.getTotalAmount();
         for (Object object : BinaryFileUtility.readObjects(PAYMENT_FILE)) {
             if (object instanceof Payment payment && payment.getInvoiceId().equals(selectedInvoice.getInvoiceId())) {
-                due -= payment.getAmount();
+                due -= payment.getPaymentAmount();
             }
         }
         if (amount <= 0 || amount > due) {
             AlertGenerator.showAlert("Invalid Amount", "Amount must be greater than 0 and no more than the amount due");
             return;
         }
-        Payment payment = new Payment(selectedInvoice.getInvoiceId(), amount,
-                paymentMethodComboBox.getValue(), transactionReferenceTextField.getText().trim(),
+        Payment payment = new Payment(selectedInvoice.getOrderId(),selectedInvoice.getInvoiceId(),paymentMethodComboBox.getValue(), amount,
+                 transactionReferenceTextField.getText().trim(),
                 paymentDatePicker.getValue());
         if (!BinaryFileUtility.writeObjects(PAYMENT_FILE, payment)) {
             AlertGenerator.showAlert("Error", "Payment could not be saved");
@@ -121,8 +121,8 @@ public class RecordPaymentViewController implements UserReceiver
         }
         paymentIdLabel.setText(payment.getPaymentId());
         summaryInvoiceLabel.setText(payment.getInvoiceId());
-        summaryAmountLabel.setText(String.format("%.2f", payment.getAmount()));
-        paymentStatusLabel.setText(payment.getStatus());
+        summaryAmountLabel.setText(String.format("%.2f", payment.getPaymentAmount()));
+        paymentStatusLabel.setText("Paid");
         AlertGenerator.showAlert("Success", "Payment recorded successfully");
     }
 

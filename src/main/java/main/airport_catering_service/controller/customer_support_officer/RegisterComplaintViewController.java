@@ -15,8 +15,7 @@ import utility.SceneSwitchingHelper;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class RegisterComplaintViewController implements UserReceiver
-{
+public class RegisterComplaintViewController implements UserReceiver {
     private static final String AIRLINE_FILE = "Airline.bin";
     private static final String CATERING_ORDER_FILE = "CateringOrder.bin";
     private static final String COMPLAINT_FILE = "Complaint.bin";
@@ -41,9 +40,10 @@ public class RegisterComplaintViewController implements UserReceiver
     private CheckBox lowCheckBox;
 
     private CustomerSupportOfficer loggedInUser;
+
     @Override
-    public void setLoggedInUser(User user){
-        if (user instanceof CustomerSupportOfficer customerSupportOfficer){
+    public void setLoggedInUser(User user) {
+        if (user instanceof CustomerSupportOfficer customerSupportOfficer) {
             this.loggedInUser = customerSupportOfficer;
         } else {
             AlertGenerator.showAlert("Error", "Authentication failed");
@@ -181,73 +181,79 @@ public class RegisterComplaintViewController implements UserReceiver
 
     }
 
-    @javafx.fxml.FXML
-    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) throws IOException {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/customer_support_officer/dashboardView.fxml",
-                loggedInUser);
+    private void switchTo(ActionEvent actionEvent, String view) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(actionEvent, view, loggedInUser);
     }
+
 
     @javafx.fxml.FXML
     public void sidebarHomePageOnAction(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/customer_support_officer/dashboardView.fxml",
+                actionEvent, "/CustomerSupportOfficer/dashboardView.fxml",
                 loggedInUser);
     }
 
     @javafx.fxml.FXML
+    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/dashboardView.fxml",
+                loggedInUser);
+    }
+
+
+    @javafx.fxml.FXML
     public void sidebarRegisterComplaintButtonOnAction(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/customer_support_officer/RegisterComplaintView.fxml",
+                actionEvent, "/CustomerSupportOfficer/RegisterComplaintView.fxml",
                 loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sidebarTrackComplaintButtonOnAction(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/customer_support_officer/TrackComplaintView.fxml",
-                loggedInUser);
-    }
-
-    @javafx.fxml.FXML
-    public void sidebarGenerateReportsButtonOnAction(ActionEvent actionEvent) throws  IOException{
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/customer_support_officer/GenerateReportsView.fxml",
-                loggedInUser);
-    }
-
-    @javafx.fxml.FXML
-    public void sidebarServiceUpdatesButtonOnAction(ActionEvent actionEvent) throws IOException{
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/customer_support_officer/ServiceUpdatesView.fxml",
-                loggedInUser);
-    }
-
-    @javafx.fxml.FXML
-    public void sidebarFlightCancellationButtonOnAction(ActionEvent actionEvent) throws  IOException {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/customer_support_officer/FlightCancellationView.fxml",
+                actionEvent, "/CustomerSupportOfficer/TrackComplaintView.fxml",
                 loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sidebarResolveComplaintButtonOnAction(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/customer_support_officer/ResolveComplaintView.fxml",
+                actionEvent, "/CustomerSupportOfficer/ResolveComplaintView.fxml",
                 loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sidebarEmergencyModificationButtonOnAction(ActionEvent actionEvent) throws  IOException {
+    public void sidebarNewAirlineRequestButtonOnAction(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/customer_support_officer/EmergencyModificationView.fxml",
+                actionEvent, "/CustomerSupportOfficer/NewAirlineRequestView.fxml",
                 loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sidebarFlightDelayRequestButtonOnAction(ActionEvent actionEvent) throws IOException {
+    public void sidebarNewFlightEntryButtonOnAction(ActionEvent actionEvent)throws IOException{
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/customer_support_officer/FlightDelayRequestView.fxml",
+                actionEvent, "/CustomerSupportOfficer/NewFlightEntryView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarCancellationAndDelayButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/CancellationAndDelayView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarServiceUpdatesButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/ServiceUpdatesView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sidebarGenerateReportsButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/CustomerSupportOfficer/GenerateReportsView.fxml",
                 loggedInUser);
     }
 }

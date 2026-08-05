@@ -111,7 +111,7 @@ public class RevenueSummaryViewController implements UserReceiver
         Map<String, Double> paidByInvoice = new HashMap<>();
         for (Object object : BinaryFileUtility.readObjects(PAYMENT_FILE)) {
             if (object instanceof Payment payment) {
-                paidByInvoice.merge(payment.getInvoiceId(), payment.getAmount(), Double::sum);
+                paidByInvoice.merge(payment.getInvoiceId(), payment.getPaymentAmount(), Double::sum);
             }
         }
         double total = 0, paid = 0, pending = 0;

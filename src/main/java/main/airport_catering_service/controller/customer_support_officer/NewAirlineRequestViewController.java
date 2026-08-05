@@ -1,39 +1,48 @@
 package main.airport_catering_service.controller.customer_support_officer;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.*;
-import nonuser.Complaint;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import nonuser.AirlineRequest;
 import user.CustomerSupportOfficer;
 import user.User;
 import user.UserReceiver;
 import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
-
+import utility.databaseAccessor;
 import java.io.IOException;
-import java.util.ArrayList;
 
-public class ResolveComplaintViewController implements UserReceiver
+public class NewAirlineRequestViewController implements UserReceiver
 {
-    private static final String COMPLAINT_FILE = "Complaint.bin";
+    private static final String REQUEST_FILE = "AirlineRequest.bin";
 
     @javafx.fxml.FXML
-    private Label complaintIdLabel;
+    private TableColumn<AirlineRequest, String> airlineNameColumn;
     @javafx.fxml.FXML
-    private Label currentStatusLabel;
+    private TableColumn<AirlineRequest, String> airlineIdColumn;
     @javafx.fxml.FXML
-    private Label orderIdLabel;
+    private TableView<AirlineRequest> airlineRequestTable;
     @javafx.fxml.FXML
-    private Label airlineLabel;
+    private TextField newAirlineNameTextField;
     @javafx.fxml.FXML
-    private TextField complaintidTextField;
+    private Label summaryPriorityLabel;
     @javafx.fxml.FXML
-    private TextArea resolutionNotesTextField;
+    private TableColumn<AirlineRequest, String> requestStatusColumn;
     @javafx.fxml.FXML
-    private ComboBox<String> resolutionStatusComboBox;
-
+    private TextField newAirlineIdTextField;
+    @javafx.fxml.FXML
+    private TextField requestIdTextField;
+    @javafx.fxml.FXML
+    private Button addAirlineButton;
+    @javafx.fxml.FXML
+    private TableColumn<AirlineRequest, Integer> requestIdColumn;
 
     private CustomerSupportOfficer loggedInUser;
+
     @Override
     public void setLoggedInUser(User user){
         if (user instanceof CustomerSupportOfficer customerSupportOfficer){
@@ -45,92 +54,49 @@ public class ResolveComplaintViewController implements UserReceiver
 
     @javafx.fxml.FXML
     public void initialize() {
-        resolutionStatusComboBox.getItems().setAll("In Progress", "Resolved", "Rejected");
-        clearComplaintDetails();
+        requestIdColumn.setCellValueFactory(cell -> new javafx.beans.property.SimpleObjectProperty<>(cell.getValue().getRequestId()));
+        airlineIdColumn.setCellValueFactory(cell -> new javafx.beans.property.SimpleStringProperty(cell.getValue().getNewAirlineId()));
+        airlineNameColumn.setCellValueFactory(cell -> new javafx.beans.property.SimpleStringProperty(cell.getValue().getNewAirlineName()));
+        requestStatusColumn.setCellValueFactory(cell -> new javafx.beans.property.SimpleStringProperty(cell.getValue().getStatus()));
+        airlineRequestTable.getItems().setAll(BinaryFileUtility.readObjects(REQUEST_FILE).stream()
+                .filter(AirlineRequest.class::isInstance)
+                .map(AirlineRequest.class::cast)
+                .toList());
+        summaryPriorityLabel.setText("-");
     }
 
     @javafx.fxml.FXML
-    public void ResolveComplaintOnAction(ActionEvent actionEvent) {
+    public void addAirlineOnAction(ActionEvent actionEvent) {
+        String airlineId = newAirlineIdTextField.getText().trim();
+        String airlineName = newAirlineNameTextField.getText().trim();
+        if (airlineId.isEmpty() || airlineName.isEmpty()) {
+            AlertGenerator.showAlert("Invalid Input", "Airline ID and name should be filled");
+            return;
+        }
         if (loggedInUser == null) {
             AlertGenerator.showAlert("Error", "Please log in again");
             return;
         }
-
-        String complaintIdText = complaintidTextField.getText().trim();
-        if (complaintIdText.isEmpty()) {
-            AlertGenerator.showAlert("Invalid Input", "Complaint ID should be filled");
-            return;
-        }
-
-        int complaintId;
-        try {
-            complaintId = Integer.parseInt(complaintIdText);
-        } catch (NumberFormatException e) {
-            AlertGenerator.showAlert("Wrong Input", "Complaint ID should be an integer");
-            return;
-        }
-        if (complaintId <= 0) {
-            AlertGenerator.showAlert("Invalid Input", "Complaint ID should be greater than 0");
-            return;
-        }
-        if (resolutionStatusComboBox.getValue() == null) {
-            AlertGenerator.showAlert("Invalid Input", "Resolution status should be selected");
-            return;
-        }
-        String notes = resolutionNotesTextField.getText().trim();
-        if (notes.isEmpty()) {
-            AlertGenerator.showAlert("Invalid Input", "Resolution notes should be filled");
-            return;
-        }
-
-        ArrayList<Object> complaints = BinaryFileUtility.readObjects(COMPLAINT_FILE);
-        Complaint selectedComplaint = null;
-        for (Object object : complaints) {
-            if (object instanceof Complaint complaint
-                    && complaint.getComplaintId() == complaintId) {
-                selectedComplaint = complaint;
-                break;
+        for (Object object : BinaryFileUtility.readObjects(REQUEST_FILE)) {
+            if (object instanceof AirlineRequest request
+                    && request.getNewAirlineId().equalsIgnoreCase(airlineId)
+                    && "Pending".equalsIgnoreCase(request.getStatus())) {
+                AlertGenerator.showAlert("Duplicate Request", "A pending request already exists for this airline ID");
+                return;
             }
         }
-        if (selectedComplaint == null) {
-            AlertGenerator.showAlert("Complaint Not Found", "No complaint was found with ID " + complaintId);
-            clearComplaintDetails();
-            return;
+        AirlineRequest request = new AirlineRequest(
+                databaseAccessor.generateNewUniqueId(REQUEST_FILE, "requestId"),
+                airlineId, airlineName, loggedInUser.getEmployeeId());
+        if (BinaryFileUtility.writeObjects(REQUEST_FILE, request)) {
+            initialize();
+            newAirlineIdTextField.clear();
+            newAirlineNameTextField.clear();
+            AlertGenerator.showAlert("Success", "Airline request submitted successfully");
+        } else {
+            AlertGenerator.showAlert("Error", "Airline request could not be saved");
         }
-        if ("Resolved".equalsIgnoreCase(selectedComplaint.getStatus())) {
-            AlertGenerator.showAlert("Already Resolved", "This complaint has already been resolved");
-            return;
-        }
-
-        selectedComplaint.setStatus(resolutionStatusComboBox.getValue());
-        selectedComplaint.resolve(notes, loggedInUser.getEmployeeId());
-        if (!BinaryFileUtility.overwriteObjects(COMPLAINT_FILE, complaints)) {
-            AlertGenerator.showAlert("Error", "Complaint resolution could not be saved");
-            return;
-        }
-
-        showComplaintDetails(selectedComplaint);
-        AlertGenerator.showAlert("Success", "Complaint status updated successfully");
-        complaintidTextField.clear();
-        resolutionNotesTextField.clear();
-        resolutionStatusComboBox.getSelectionModel().clearSelection();
     }
-
-    private void showComplaintDetails(Complaint complaint) {
-        complaintIdLabel.setText(String.valueOf(complaint.getComplaintId()));
-        airlineLabel.setText(complaint.getAirlineId());
-        orderIdLabel.setText(String.valueOf(complaint.getOrderId()));
-        currentStatusLabel.setText(complaint.getStatus());
-    }
-
-    private void clearComplaintDetails() {
-        complaintIdLabel.setText("-");
-        airlineLabel.setText("-");
-        orderIdLabel.setText("-");
-        currentStatusLabel.setText("-");
-
-    }
-
 
     private void switchTo(ActionEvent actionEvent, String view) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(actionEvent, view, loggedInUser);

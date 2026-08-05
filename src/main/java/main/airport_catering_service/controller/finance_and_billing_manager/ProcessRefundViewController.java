@@ -130,7 +130,7 @@ public class ProcessRefundViewController implements UserReceiver
             AlertGenerator.showAlert("Payment Not Found", "No payment was found with ID " + paymentId);
             return;
         }
-        if (amount <= 0 || amount > payment.getAmount()) {
+        if (amount <= 0 || amount > payment.getPaymentAmount()) {
             AlertGenerator.showAlert("Invalid Amount", "Refund cannot exceed the payment amount");
             return;
         }
@@ -145,7 +145,7 @@ public class ProcessRefundViewController implements UserReceiver
         refundAmountLabel.setText(String.format("%.2f", refund.getAmount()));
         refundStatusLabel.setText(refund.getStatus());
         refundDateLabel.setText(refund.getRefundDate().toString());
-        paymentMethodLabel.setText(payment.getMethod());
+        paymentMethodLabel.setText(payment.getPaymentType());
         transactionMethodLabel.setText(refund.getMethod());
         AlertGenerator.showAlert("Success", "Refund processed successfully");
     }

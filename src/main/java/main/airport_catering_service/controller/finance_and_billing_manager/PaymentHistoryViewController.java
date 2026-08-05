@@ -49,10 +49,10 @@ public class PaymentHistoryViewController implements UserReceiver {
         paymentIdColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().getPaymentId()));
         invoiceColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().getInvoiceId()));
         airlineColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(findAirline(data.getValue().getInvoiceId())));
-        amountColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleObjectProperty<>(data.getValue().getAmount()));
-        methodColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().getMethod()));
+        amountColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleObjectProperty<>(data.getValue().getPaymentAmount()));
+        methodColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().getPaymentType()));
         dateColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleObjectProperty<>(data.getValue().getPaymentDate()));
-        statusColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().getStatus()));
+//        statusColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().));
         loadPayments(BinaryFileUtility.readObjects(PAYMENT_FILE));
     }
 
@@ -67,8 +67,8 @@ public class PaymentHistoryViewController implements UserReceiver {
         for (Object object : BinaryFileUtility.readObjects(PAYMENT_FILE)) {
             if (object instanceof Payment payment
                     && (invoiceFilter.isEmpty() || payment.getInvoiceId().equalsIgnoreCase(invoiceFilter))
-                    && ("All".equals(paymentStatusComboBox.getValue()) || payment.getStatus().equalsIgnoreCase(paymentStatusComboBox.getValue()))
-                    && ("All".equals(paymentMethodComboBox.getValue()) || payment.getMethod().equalsIgnoreCase(paymentMethodComboBox.getValue()))
+//                    && ("All".equals(paymentStatusComboBox.getValue()) || payment.getStatus().equalsIgnoreCase(paymentStatusComboBox.getValue()))
+//                    && ("All".equals(paymentMethodComboBox.getValue()) || payment.getMethod().equalsIgnoreCase(paymentMethodComboBox.getValue()))
                     && ("All Airlines".equals(airlinenameComboBox.getValue()) || airlinenameComboBox.getValue().equals(findAirline(payment.getInvoiceId())))) {
                 filtered.add(payment);
             }
