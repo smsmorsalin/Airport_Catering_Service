@@ -293,7 +293,7 @@ public class AirlineRepresentative extends User implements Serializable {
 
     }
 
-    public final Boolean payCateringBill(String invoiceId,String method,String transactionReference){
+    public final Boolean payCateringBill(String invoiceId, String method, String transactionReference){
         // add Payment
         return true;
     }
@@ -333,43 +333,6 @@ public class AirlineRepresentative extends User implements Serializable {
                 ", status='" + status + '\'' +
                 ", createDate=" + createDate +
                 '}';
-    }
-
-    // Bellow are the code for fxml sideBar rendering button on action
-    public static void renderFxmlDashboard(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/dashboardView.fxml");
-    }
-
-    public static void renderFxmlCreateCateringOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/createCateringOrderView.fxml");
-    }
-
-    public static void renderFxmlModifyOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/modifyOrderView.fxml");
-    }
-
-    public static void renderFxmlCancelOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/cancelOrderView.fxml");
-    }
-
-    public static void renderFxmlFlightDelay(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/flightDelayView.fxml");
-    }
-
-    public static void renderFxmlTruckOrder(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/truckOrderView.fxml");
-    }
-
-    public static void renderFxmlConfirmDelivery(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/confirmDeliveryView.fxml");
-    }
-
-    public static void renderFxmlPayBill(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/payBillView.fxml");
-    }
-
-    public static void renderFxmlOrderHistory(javafx.event.ActionEvent event) throws IOException {
-        SceneSwitchingHelper.fullSceneReplacement(event, "/airline_representative/orderHistoryView.fxml");
     }
 
 }

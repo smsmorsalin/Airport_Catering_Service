@@ -36,6 +36,7 @@ public class PerformInspectionController implements UserReceiver
     @javafx.fxml.FXML
     private Label fxidDisplayInspectioStatusLabel;
 
+
     private FoodQualityControlOfficer loggedInUser;
 
     @Override
@@ -81,45 +82,46 @@ public class PerformInspectionController implements UserReceiver
         }
     }
 
+    @javafx.fxml.FXML
+    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws  IOException{
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent,loggedInUser);
+    }
+
 
     @javafx.fxml.FXML
     public void sideBarRejectBatchOnAction(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ApproveBatchView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
+        FoodQualityControlOfficer.viewRejectBatch(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarQualityTrendAnalysisOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewQualityTrendAnalysis(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarFoodSafetyCheckOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewFoodSafetyCheck(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent) {
-    }
-
-
-
-    @javafx.fxml.FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws  IOException{
-        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
+        FoodQualityControlOfficer.viewReceiveInspectionRequest(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarGenerateQAReportOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewGenerateQAReport(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarApproveBatchOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewApproveBatch(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarManageQualityIssueOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewManageQualityIssue(actionEvent,loggedInUser);
     }
+
 
 }
