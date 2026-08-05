@@ -112,7 +112,7 @@ public class CreateProductionPlanController  implements UserReceiver {
     }
     @FXML
     public void sideBarApproveProductionOA(ActionEvent actionEvent)throws IOException {
-        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent,loggedInUser);
+        KitchenProductionManager.viewApproveProductionCompletion(actionEvent,loggedInUser);
     }
     @FXML
     public void sideBarMonitorProductionOA(ActionEvent actionEvent) throws IOException {
@@ -125,7 +125,7 @@ public class CreateProductionPlanController  implements UserReceiver {
     }
     @FXML
     public void sideBarProductionScheduleOA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
+        KitchenProductionManager.ViewCreateProductionSchedule(actionEvent,loggedInUser);
     }
     @FXML
     public void sideBarMenuListOA(ActionEvent actionEvent) throws IOException {

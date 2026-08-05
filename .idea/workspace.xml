@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e294d533-d73b-4f5d-8179-c5b2b2679b1c" name="Changes" comment="&quot;switching to all button on kitchen production manager&quot;" />
+    <list default="true" id="e294d533-d73b-4f5d-8179-c5b2b2679b1c" name="Changes" comment="m &quot;fix some error in kitchen production manager&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,15 +13,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ACS.executor": "Run",
     "Application.HelloApplication.executor": "Run",
     "git-widget-placeholder": "saif"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="ACS" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="main.airport_catering_service.HelloApplication" />
+      <module name="Airport_Catering_Service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary=" &quot; Switching done in food quality control officer &quot;">
       <option name="closed" value="true" />
@@ -47,12 +60,47 @@
       <option name="project" value="LOCAL" />
       <updated>1785920511942</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/saif' into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785930506961</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1785930506961</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/saif' into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785930645761</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1785930645761</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Merge remote-tracking branch 'origin/saif' into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1785932331546</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1785932331546</updated>
+    </task>
+    <task id="LOCAL-00007" summary="m &quot;fix some error in kitchen production manager&quot;">
+      <option name="closed" value="true" />
+      <created>1785932425901</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1785932425901</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" &quot; Switching done in food quality control officer &quot;" />
     <MESSAGE value="&quot;switching to all button on kitchen production manager&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;switching to all button on kitchen production manager&quot;" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/saif' into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/saif' into saif" />
+    <MESSAGE value="m &quot;fix some error in kitchen production manager&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="m &quot;fix some error in kitchen production manager&quot;" />
   </component>
 </project>
