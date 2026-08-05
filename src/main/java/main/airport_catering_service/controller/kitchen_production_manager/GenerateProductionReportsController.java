@@ -55,32 +55,32 @@ public class GenerateProductionReportsController implements UserReceiver
     }
 
     @FXML
-    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarReceiveOrdersOA(ActionEvent actionEvent)  {
         KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent,loggedInUser);
     }
 
     @FXML
-    public void sideBarApproveProductionOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarApproveProductionOA(ActionEvent actionEvent)  {
         KitchenProductionManager.viewApproveProductionCompletion(actionEvent,loggedInUser);
     }
 
     @FXML
-    public void sideBarProductionPlanOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarProductionPlanOA(ActionEvent actionEvent)  {
         KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
     }
 
     @FXML
-    public void sideBarMonitorProductionOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarMonitorProductionOA(ActionEvent actionEvent)  {
         KitchenProductionManager.viewMonitorProductionActivities(actionEvent,loggedInUser);
     }
 
     @FXML
-    public void sideBarProductionScheduleOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarProductionScheduleOA(ActionEvent actionEvent)  {
         KitchenProductionManager.ViewCreateProductionSchedule(actionEvent,loggedInUser);
     }
 
     @FXML
-    public void sideBarCalculateIngredientIOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarCalculateIngredientIOA(ActionEvent actionEvent)  {
         KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent,loggedInUser);
     }
     @FXML
@@ -89,7 +89,7 @@ public class GenerateProductionReportsController implements UserReceiver
 
 
     @FXML
-    public void sideBarMenuListOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarMenuListOA(ActionEvent actionEvent)  {
         KitchenProductionManager.viewCreateMenuList(actionEvent,loggedInUser);
     }
 

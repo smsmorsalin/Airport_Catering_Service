@@ -156,40 +156,40 @@ public class ReceiveApprovedCateringOrdersController implements UserReceiver
         KitchenProductionManager.reverseDashboard(actionEvent,loggedInUser);
     }
     @FXML
-    public void sideBarProductionReportsOA(ActionEvent actionEvent) throws  IOException {
+    public void sideBarProductionReportsOA(ActionEvent actionEvent)    {
 //        KitchenProductionManager.viewGenerateProductionReports(actionEvent);
         KitchenProductionManager.viewGenerateProductionReports(actionEvent,loggedInUser);
     }
     @FXML
-    public void sideBarApproveProductionOA(ActionEvent actionEvent)throws IOException  {
+    public void sideBarApproveProductionOA(ActionEvent actionEvent)   {
         KitchenProductionManager.viewApproveProductionCompletion(actionEvent,loggedInUser);
 //        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
     }
     @FXML
-    public void sideBarProductionPlanOA(ActionEvent actionEvent) throws IOException {
+    public void sideBarProductionPlanOA(ActionEvent actionEvent)   {
         KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
 
 //        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
     }
     @FXML
-    public void sideBarMonitorProductionOA(ActionEvent actionEvent)throws IOException  {
+    public void sideBarMonitorProductionOA(ActionEvent actionEvent)   {
 //        KitchenProductionManager.viewMonitorProductionActivities(actionEvent);
         KitchenProductionManager.viewMonitorProductionActivities(actionEvent,loggedInUser);
     }
 
     @FXML
-    public void sideBarCalculateIngredientOA(ActionEvent actionEvent) throws IOException {
+    public void sideBarCalculateIngredientOA(ActionEvent actionEvent)   {
 //        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
         KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent,loggedInUser);
     }
 
     @FXML
-    public void sideBarProductionScheduleOA(ActionEvent actionEvent) throws IOException {
+    public void sideBarProductionScheduleOA(ActionEvent actionEvent)  {
 //        KitchenProductionManager.ViewCreateProductionSchedule(actionEvent);
         KitchenProductionManager.ViewCreateProductionSchedule(actionEvent,loggedInUser);
     }
     @FXML
-    public void sideBarMenuListOA(ActionEvent actionEvent)throws IOException {
+    public void sideBarMenuListOA(ActionEvent actionEvent)  {
 //        KitchenProductionManager.viewCreateMenuList(actionEvent);
         KitchenProductionManager.viewCreateMenuList(actionEvent,loggedInUser);
     }

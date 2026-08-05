@@ -73,32 +73,32 @@ public class ApproveProductionCompletionController implements UserReceiver
 
     }
     @javafx.fxml.FXML
-    public void sideBarReceiveOrdersOnA(ActionEvent actionEvent) throws IOException {
+    public void sideBarReceiveOrdersOnA(ActionEvent actionEvent)  {
         KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void sideBarProductionReportsOnA(ActionEvent actionEvent) throws IOException {
+    public void sideBarProductionReportsOnA(ActionEvent actionEvent)  {
         KitchenProductionManager.viewGenerateProductionReports(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void sideBarCalculateIngredientOnA(ActionEvent actionEvent) throws IOException {
+    public void sideBarCalculateIngredientOnA(ActionEvent actionEvent) {
         KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void sideBarMenuListOnA(ActionEvent actionEvent) throws IOException {
+    public void sideBarMenuListOnA(ActionEvent actionEvent)  {
         KitchenProductionManager.viewCreateMenuList(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void sideBarProductionPlanOnA(ActionEvent actionEvent) throws IOException {
+    public void sideBarProductionPlanOnA(ActionEvent actionEvent)  {
         KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarMonitorProductionOnAction(ActionEvent actionEvent) throws IOException {
+    public void sideBarMonitorProductionOnAction(ActionEvent actionEvent)  {
         KitchenProductionManager.viewMonitorProductionActivities(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void sideBarProductionScheduleOnA(ActionEvent actionEvent) throws IOException {
+    public void sideBarProductionScheduleOnA(ActionEvent actionEvent){
         KitchenProductionManager.ViewCreateProductionSchedule(actionEvent,loggedInUser);
 
     }

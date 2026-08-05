@@ -88,46 +88,46 @@ public class MonitorProductionActivitiesController implements UserReceiver
     }
 
     @javafx.fxml.FXML
-    public void SideBarProductionPlanOA(ActionEvent actionEvent)throws IOException{
+    public void SideBarProductionPlanOA(ActionEvent actionEvent) {
 
         KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
     }
 
 
     @javafx.fxml.FXML
-    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarReceiveOrdersOA(ActionEvent actionEvent)  {
 
         KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent,loggedInUser);
     }
 
 
     @javafx.fxml.FXML
-    public void sideBarProductionReportsOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarProductionReportsOA(ActionEvent actionEvent)  {
 
         KitchenProductionManager.viewGenerateProductionReports(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarApproveProductionOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarApproveProductionOA(ActionEvent actionEvent)  {
 
         KitchenProductionManager.viewApproveProductionCompletion(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarCalculateIngredientOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarCalculateIngredientOA(ActionEvent actionEvent)  {
 
         KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent,loggedInUser);
 
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionScheduleOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarProductionScheduleOA(ActionEvent actionEvent)  {
 
         KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarMenuListOA(ActionEvent actionEvent) throws IOException{
+    public void sideBarMenuListOA(ActionEvent actionEvent)  {
         KitchenProductionManager.viewCreateMenuList(actionEvent,loggedInUser);
     }
 }
