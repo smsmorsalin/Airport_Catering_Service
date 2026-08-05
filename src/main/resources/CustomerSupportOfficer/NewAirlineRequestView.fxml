@@ -2,15 +2,15 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="758.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.customer_support_officer.EmergencyModificationViewController">
+<AnchorPane prefHeight="758.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.customer_support_officer.NewAirlineRequestViewController">
 
 
     <children>
@@ -37,21 +37,21 @@
                         <Font size="15" />
                     </font>
                 </Button>
-                <Button onAction="#sidebarEmergencyModificationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;         -fx-background-color:#0F6BFF;" text="Emergency Modify" textFill="white">
+                <Button onAction="#sidebarNewAirlineRequestButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;         -fx-background-color:#0F6BFF;" text="New Airline Request" textFill="white">
 
                     <font>
                         <Font size="15" />
                     </font>
 
                 </Button>
-                <Button onAction="#sidebarFlightDelayRequestButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Delay Request">
+                <Button onAction="#sidebarNewFlightEntryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="New Flight Entry">
 
                     <font>
                         <Font size="15" />
                     </font>
 
                 </Button>
-                <Button onAction="#sidebarFlightCancellationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Cancellation">
+                <Button onAction="#sidebarCancellationAndDelayButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Cancellation &amp; Delay">
 
                     <font>
                         <Font size="15" />
@@ -94,38 +94,39 @@
                 </Label>
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
                     <children>
-                        <Label layoutX="56" layoutY="25" text="Emergency Modification">
+                        <Label layoutX="56" layoutY="25" text="Airline Modification">
                             <font>
                                 <Font size="24" />
                             </font>
                         </Label>
                         <Label layoutX="56" layoutY="65" text="Submit emergency order modification request" />
                         <AnchorPane layoutX="6" layoutY="105" prefHeight="110" prefWidth="712" style="-fx-background-color:white;             -fx-background-radius:25;" />
-                        <AnchorPane layoutX="6" layoutY="230" prefHeight="390" prefWidth="420" style="-fx-background-color:white;             -fx-background-radius:25;" />
-                        <AnchorPane layoutX="25.0" layoutY="105.0" prefHeight="566.0" prefWidth="610.0" style="-fx-background-color:#EAF2FF;             -fx-background-radius:25;">
-                            <children>
-                                <Label fx:id="summaryPriorityLabel" layoutX="130" layoutY="175" text="-" />
-                        <Label layoutX="42.0" layoutY="66.0" text="Order ID" />
-                        <TextField fx:id="orderIdTextField" layoutX="99.0" layoutY="59.0" prefHeight="30" prefWidth="180" />
-                        <Label layoutX="30.0" layoutY="20.0" text="Modification Details">
-                           <font>
-                              <Font size="18" />
-                           </font>
-                        </Label>
-                        <Label layoutX="42.0" layoutY="103.0" text="Modification Request" />
-                        <TextArea fx:id="modificationRequestTextField" layoutX="41.0" layoutY="140.0" prefHeight="70" prefWidth="350" promptText="Enter requested modification" />
-                        <Label layoutX="45.0" layoutY="227.0" text="Reason" />
-                        <TextArea fx:id="reasonTextField" layoutX="45.0" layoutY="259.0" prefHeight="65" prefWidth="350" promptText="Enter reason" />
-                        <Label layoutX="42.0" layoutY="348.0" text="Priority Level" />
-                        <ComboBox fx:id="priorityComboBox" layoutX="45.0" layoutY="378.0" prefWidth="220" />
-                        <Button fx:id="submitModificationBtn" layoutX="220.0" layoutY="506.0" onAction="#SubmitButtonOnAction" prefHeight="40" prefWidth="170" style="-fx-background-color:#0F6BFF;         -fx-text-fill:white;         -fx-background-radius:10;" text="Submit Request">
-                           <font>
-                              <Font size="14" />
-                           </font>
-                        </Button>
-
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane layoutX="6" layoutY="230" prefHeight="390" prefWidth="420" style="-fx-background-color:white;             -fx-background-radius:25;">
+                     <children>
+                              <AnchorPane layoutX="-1.0" layoutY="-143.0" prefHeight="624.0" prefWidth="704.0" style="-fx-background-color:#EAF2FF;             -fx-background-radius:25;">
+                                  <children>
+                                      <Label fx:id="summaryPriorityLabel" layoutX="130" layoutY="175" text="-" />
+                              <Label layoutX="30.0" layoutY="20.0" prefHeight="27.0" prefWidth="264.0" text="New Airline Entry Input Request">
+                                 <font>
+                                    <Font size="18" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="airlineRequestTable" layoutX="11.0" layoutY="144.0" prefHeight="398.0" prefWidth="682.0">
+                                <columns>
+                                  <TableColumn fx:id="requestIdColumn" prefWidth="120.79995727539062" text="Request Id" />
+                                    <TableColumn fx:id="airlineIdColumn" prefWidth="189.60003662109375" text="new Airline ID" />
+                                    <TableColumn fx:id="airlineNameColumn" prefWidth="196.79995727539062" text="new Airline Name" />
+                                    <TableColumn fx:id="requestStatusColumn" prefWidth="176.0" text="status" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="requestIdTextField" layoutX="30.0" layoutY="70.0" prefWidth="100.0" promptText="Request ID" />
+                              <TextField fx:id="newAirlineIdTextField" layoutX="140.0" layoutY="70.0" prefWidth="110.0" promptText="Airline ID" />
+                              <TextField fx:id="newAirlineNameTextField" layoutX="260.0" layoutY="70.0" prefWidth="170.0" promptText="Airline Name" />
+                              <Button fx:id="addAirlineButton" layoutX="440.0" layoutY="70.0" mnemonicParsing="false" onAction="#addAirlineOnAction" prefHeight="26.0" prefWidth="236.0" text="add new Airline to the Airline database" />
+      
+                                  </children>
+                              </AnchorPane>
+                     </children></AnchorPane>
                     </children>
                 </AnchorPane>
             </children>

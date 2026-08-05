@@ -5,7 +5,7 @@ import utility.databaseAccessor;
 import java.io.*;
 import java.time.LocalDate;
 
-public class Invoice {
+public class Invoice implements java.io.Serializable {
     private final String invoiceId;
     private final int orderId;
     private double totalAmount;
@@ -54,7 +54,7 @@ public class Invoice {
 
     private static String generateInvoiceId(){
         String id;
-        id = databaseAccessor.generateNewUniqueStringId("Invoice.bin", "InvoiceId");
+        id = databaseAccessor.generateNewUniqueStringId("Invoice.bin", "invoiceId");
         return id;
     }
 

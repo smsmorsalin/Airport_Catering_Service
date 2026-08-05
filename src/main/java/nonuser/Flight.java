@@ -8,12 +8,14 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class Flight implements Serializable {
+    private static final long serialVersionUID = -1482122973020244470L;
 
     private final String flightId;
     private String flightName;
     private LocalDate flightDate;
     private LocalTime departureTime;
     private String destination;
+    private String airlineId;
 
     public Flight(String flightId, String flightName, LocalDate flightDate, LocalTime departureTime, String destination) {
         this.flightId = flightId;
@@ -21,6 +23,17 @@ public class Flight implements Serializable {
         this.flightDate = flightDate;
         this.departureTime = departureTime;
         this.destination = destination;
+        this.airlineId = "";
+    }
+
+    public Flight(String flightId, String flightName, LocalDate flightDate,
+                  LocalTime departureTime, String destination, String airlineId) {
+        this(flightId, flightName, flightDate, departureTime, destination);
+        this.airlineId = airlineId;
+    }
+
+    public String getAirlineId() {
+        return airlineId;
     }
 
     public String getFlightId() {
@@ -67,6 +80,7 @@ public class Flight implements Serializable {
                 ", flightDate=" + flightDate +
                 ", departureTime=" + departureTime +
                 ", destination='" + destination + '\'' +
+                ", airlineId='" + airlineId + '\'' +
                 '}';
     }
 

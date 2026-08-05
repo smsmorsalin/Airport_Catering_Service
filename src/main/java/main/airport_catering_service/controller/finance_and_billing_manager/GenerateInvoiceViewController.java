@@ -6,6 +6,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import nonuser.CateringOrder;
+import nonuser.CostRecord;
 import nonuser.Invoice;
 import user.FinanceAndBillingManager;
 import user.User;
@@ -20,6 +21,9 @@ import java.util.ArrayList;
 
 public class GenerateInvoiceViewController implements UserReceiver
 {
+    private static final String ORDER_FILE = "CateringOrder.bin";
+    private static final String COST_FILE = "CostRecord.bin";
+    private static final String INVOICE_FILE = "Invoice.bin";
     @javafx.fxml.FXML
     private Label packagingCostLabel;
     @javafx.fxml.FXML
@@ -68,51 +72,65 @@ public class GenerateInvoiceViewController implements UserReceiver
     private FinanceAndBillingManager loggedInUser;
     @Override
     public void setLoggedInUser(User user){
-        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
-            this.loggedInUser = FinanceAndBillingManager;
+        if (user instanceof FinanceAndBillingManager financeAndBillingManager){
+            this.loggedInUser = financeAndBillingManager;
+        } else {
+            AlertGenerator.showAlert("Error", "Authentication failed");
         }
-        AlertGenerator.showAlert("error", "error Authentication failed");
     }
 
     @javafx.fxml.FXML
     public void initialize() {
+        clearSummary();
     }
 
     @javafx.fxml.FXML
     public void generateinvoiceOnAction(ActionEvent actionEvent) {
+        if (loggedInUser == null || selectedCateringOrder == null) {
+            AlertGenerator.showAlert("Invalid Input", "Verify an order first");
+            return;
+        }
+        if (billingAddressTextField.getText().trim().isEmpty()) {
+            AlertGenerator.showAlert("Invalid Input", "Billing address should be filled");
+            return;
+        }
+        if (dueDatePicker.getValue() == null
+                || dueDatePicker.getValue().isBefore(LocalDate.now())) {
+            AlertGenerator.showAlert("Invalid Input", "Select a valid future due date");
+            return;
+        }
+        for (Object object : BinaryFileUtility.readObjects(INVOICE_FILE)) {
+            if (object instanceof Invoice invoice
+                    && invoice.getOrderId() == selectedCateringOrder.getOrderId()) {
+                AlertGenerator.showAlert("Already Exists", "An invoice already exists for this order");
+                return;
+            }
+        }
+        CostRecord cost = findCostRecord(selectedCateringOrder.getOrderId());
+        if (cost == null) {
+            AlertGenerator.showAlert("Missing Cost", "Save a cost record before generating an invoice");
+            return;
+        }
+        Invoice invoice = new Invoice(selectedCateringOrder.getOrderId(), cost.getTotal(), dueDatePicker.getValue(), false);
+        if (!BinaryFileUtility.writeObjects(INVOICE_FILE, invoice)) {
+            AlertGenerator.showAlert("Error", "Invoice could not be saved");
+            return;
+        }
+        invoiceIdLabel.setText(invoice.getInvoiceId());
+        summaryDateLabel.setText(invoice.getDueDate().toString());
+        summaryTotalAmountLabel.setText(String.format("%.2f", invoice.getTotalAmount()));
+        AlertGenerator.showAlert("Success", "Invoice generated successfully");
+    }
 
-        if(orderidTextField.getText().trim().isEmpty()){
-            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
-            return;
+    private CostRecord findCostRecord(int orderId) {
+        CostRecord latest = null;
+        for (Object object : BinaryFileUtility.readObjects(COST_FILE)) {
+            if (object instanceof CostRecord cost && cost.getOrderId() == orderId
+                    && (latest == null || cost.getRecordDate().isAfter(latest.getRecordDate()))) {
+                latest = cost;
+            }
         }
-        if(billingAddressTextField.getText().trim().matches("//d+")){
-            AlertGenerator.showAlert("Invalid Input","Billing Address  Should be String");
-            return;
-        }
-        int ingredientId;
-        try{
-            ingredientId = Integer.parseInt(orderidTextField.getText());
-        }
-        catch (NumberFormatException e){
-            AlertGenerator.showAlert("Wrong Input","textField should be an integer");
-            return;
-        }
-        if(ingredientId <= 0){
-            AlertGenerator.showAlert("Invalid Input","Text field should be grater than 0");
-            return;
-        }
-
-        if(orderidTextField.getText().trim().isEmpty()){
-            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
-            return;
-        }
-
-        if(dueDatePicker.getValue().isBefore(LocalDate.now()) || dueDatePicker.getValue() == null){
-            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
-            return;
-        }
-
-
+        return latest;
     }
 
     @Deprecated
@@ -123,6 +141,10 @@ public class GenerateInvoiceViewController implements UserReceiver
 
     @javafx.fxml.FXML
     public void VerifyOrderOnAction(ActionEvent actionEvent) {
+        if (loggedInUser == null) {
+            AlertGenerator.showAlert("Error", "Please log in again");
+            return;
+        }
         try{
             selectedCateringOrderId = Integer.parseInt(orderidTextField.getText());
         } catch (NumberFormatException e) {
@@ -133,16 +155,18 @@ public class GenerateInvoiceViewController implements UserReceiver
         for(Object obj : selectedObjectedList){
             if (obj instanceof CateringOrder cateringOrder){
                 if(cateringOrder.getOrderId() == selectedCateringOrderId){
-                    if(cateringOrder.getStatus().equals("Canceled")){
-                        AlertGenerator.showAlert("error", "Order Already canceled");
+                    if ("Cancelled".equalsIgnoreCase(cateringOrder.getStatus())
+                            || "Canceled".equalsIgnoreCase(cateringOrder.getStatus())) {
+                        AlertGenerator.showAlert("Error", "Order already cancelled");
                         return;
                     }
-                    if(cateringOrder.getStatus().equals("Delivery")){
-                        AlertGenerator.showAlert("error", "Order Already Delivered");
+                    if ("Delivery".equalsIgnoreCase(cateringOrder.getStatus())
+                            || "Delivered".equalsIgnoreCase(cateringOrder.getStatus())) {
+                        AlertGenerator.showAlert("Error", "Order already delivered");
                         return;
                     }
-                    if(cateringOrder.getStatus().equals("Rejected")){
-                        AlertGenerator.showAlert("error", "Order Already Rejected");
+                    if ("Rejected".equalsIgnoreCase(cateringOrder.getStatus())) {
+                        AlertGenerator.showAlert("Error", "Order already rejected");
                         return;
                     }
                     ArrayList<Object> selectedInvoiceList = BinaryFileUtility.readObjects("Invoice.bin");
@@ -153,16 +177,44 @@ public class GenerateInvoiceViewController implements UserReceiver
                                 AlertGenerator.showAlert("error", "Already Invoice Generated");
                                 return;
                             }
-                            selectedCateringOrder = cateringOrder;
                         }
                     }
+                    selectedCateringOrder = cateringOrder;
                     OrderIdLabel.setText("Order Id: " +cateringOrder.getOrderId());
                     orderStatusLabel.setText("Order Status: "+ cateringOrder.getStatus());
+                    summaryOrderLabel.setText(String.valueOf(cateringOrder.getOrderId()));
+                    summaryAirlineNameLabel.setText(cateringOrder.getAirlineId());
+                    airlineNameLabel.setText(cateringOrder.getAirlineId());
+                    CostRecord cost = findCostRecord(cateringOrder.getOrderId());
+                    if (cost != null) {
+                        setCostLabels(cost);
+                    }
+                    AlertGenerator.showAlert("Success", "Order verified");
                     return;
                 }
             }
         }
 
+        AlertGenerator.showAlert("Order Not Found", "No catering order was found with that ID");
+    }
+
+    private void setCostLabels(CostRecord cost) {
+        rawMaterialCostLabel.setText(String.format("%.2f", cost.getRawMaterialCost()));
+        ingredientCostLabel.setText(String.format("%.2f", cost.getIngredientCost()));
+        productionCostLabel.setText(String.format("%.2f", cost.getProductionCost()));
+        operationCostLabel.setText(String.format("%.2f", cost.getOperationalCost()));
+        packagingCostLabel.setText(String.format("%.2f", cost.getPackagingCost()));
+        transportCostLabel.setText(String.format("%.2f", cost.getTransportationCost()));
+        totalAmountLabel.setText(String.format("%.2f", cost.getTotal()));
+        summaryTotalAmountLabel.setText(String.format("%.2f", cost.getTotal()));
+    }
+
+    private void clearSummary() {
+        invoiceIdLabel.setText("-");
+        summaryOrderLabel.setText("-");
+        summaryAirlineNameLabel.setText("-");
+        summaryDateLabel.setText("-");
+        summaryTotalAmountLabel.setText("0.00");
     }
 
     @Deprecated

@@ -2,16 +2,21 @@ package main.airport_catering_service.controller.finance_and_billing_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import nonuser.Payment;
+import nonuser.RefundRecord;
 import user.FinanceAndBillingManager;
 import user.User;
 import user.UserReceiver;
 import utility.AlertGenerator;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 
 public class ProcessRefundViewController implements UserReceiver
 {
+    private static final String PAYMENT_FILE = "Payment.bin";
+    private static final String REFUND_FILE = "RefundRecord.bin";
     @javafx.fxml.FXML
     private Label paymentMethodLabel;
     @javafx.fxml.FXML
@@ -42,14 +47,18 @@ public class ProcessRefundViewController implements UserReceiver
     private FinanceAndBillingManager loggedInUser;
     @Override
     public void setLoggedInUser(User user){
-        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
-            this.loggedInUser = FinanceAndBillingManager;
+        if (user instanceof FinanceAndBillingManager financeAndBillingManager){
+            this.loggedInUser = financeAndBillingManager;
+        } else {
+            AlertGenerator.showAlert("Error", "Authentication failed");
         }
-        AlertGenerator.showAlert("error", "error Authentication failed");
     }
 
     @javafx.fxml.FXML
     public void initialize() {
+        refundReasonComboBox.getItems().setAll("Order Cancelled", "Duplicate Payment", "Service Issue", "Other");
+        refundMethodComboBox.getItems().setAll("Original Payment Method", "Bank Transfer", "Cash", "Mobile Banking");
+        clearSummary();
     }
 
     @Deprecated
@@ -84,6 +93,70 @@ public class ProcessRefundViewController implements UserReceiver
 
     @javafx.fxml.FXML
     public void processRefundOnAction(ActionEvent actionEvent) {
+        if (loggedInUser == null) {
+            AlertGenerator.showAlert("Error", "Please log in again");
+            return;
+        }
+        String paymentId = refundRequestIdField.getText().trim();
+        String orderText = orderidTextField.getText().trim();
+        String amountText = refundAmountTextField.getText().trim();
+        if (paymentId.isEmpty() || orderText.isEmpty() || amountText.isEmpty()
+                || additionalNotesTextField.getText().trim().isEmpty()) {
+            AlertGenerator.showAlert("Invalid Input", "All refund fields should be filled");
+            return;
+        }
+        if (refundReasonComboBox.getValue() == null || refundMethodComboBox.getValue() == null) {
+            AlertGenerator.showAlert("Invalid Input", "Refund reason and method should be selected");
+            return;
+        }
+        int orderId;
+        double amount;
+        try {
+            orderId = Integer.parseInt(orderText);
+            amount = Double.parseDouble(amountText);
+        } catch (NumberFormatException e) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID and refund amount must be numeric");
+            return;
+        }
+        Payment payment = null;
+        for (Object object : BinaryFileUtility.readObjects(PAYMENT_FILE)) {
+            if (object instanceof Payment candidate
+                    && candidate.getPaymentId().equals(paymentId)) {
+                payment = candidate;
+                break;
+            }
+        }
+        if (payment == null) {
+            AlertGenerator.showAlert("Payment Not Found", "No payment was found with ID " + paymentId);
+            return;
+        }
+        if (amount <= 0 || amount > payment.getPaymentAmount()) {
+            AlertGenerator.showAlert("Invalid Amount", "Refund cannot exceed the payment amount");
+            return;
+        }
+        RefundRecord refund = new RefundRecord(paymentId, orderId, amount,
+                refundReasonComboBox.getValue(), refundMethodComboBox.getValue(),
+                additionalNotesTextField.getText().trim(), loggedInUser.getEmployeeId());
+        if (!BinaryFileUtility.writeObjects(REFUND_FILE, refund)) {
+            AlertGenerator.showAlert("Error", "Refund could not be saved");
+            return;
+        }
+        refundIdLabel.setText(refund.getRefundId());
+        refundAmountLabel.setText(String.format("%.2f", refund.getAmount()));
+        refundStatusLabel.setText(refund.getStatus());
+        refundDateLabel.setText(refund.getRefundDate().toString());
+        paymentMethodLabel.setText(payment.getPaymentType());
+        transactionMethodLabel.setText(refund.getMethod());
+        AlertGenerator.showAlert("Success", "Refund processed successfully");
+    }
+
+    private void clearSummary() {
+        refundIdLabel.setText("-");
+        refundAmountLabel.setText("0.00");
+        refundStatusLabel.setText("-");
+        refundDateLabel.setText("-");
+        paymentMethodLabel.setText("-");
+        transactionMethodLabel.setText("-");
     }
 
 
