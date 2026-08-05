@@ -66,6 +66,52 @@ public class ReportDeliveryIssueController implements UserReceiver
 
     @javafx.fxml.FXML
     public void loadAssignment(ActionEvent actionEvent) {
+        if(assignmentIdField.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a assignment ID");
+            return;
+        }
+        int assignmentId;
+        try {
+            assignmentId = Integer.parseInt(assignmentIdField.getText());
+        }catch (NumberFormatException e){
+            AlertGenerator.showAlert("Error", "Please enter a valid assignment ID");
+            return;
+        }
+        if(assignmentId <= 0) {
+            AlertGenerator.showAlert("Error", "Please enter a valid assignment ID");
+            return;
+        }
+        if(descriptionTextArea.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a description");
+            return;
+        }
+        if(locationField.getText().isEmpty()){
+            AlertGenerator.showAlert("Error", "Please enter a location ID");
+            return;
+        }
+        int locationId;
+        try {
+            locationId = Integer.parseInt(locationField.getText());
+        }catch (NumberFormatException e){
+            AlertGenerator.showAlert("Error", "Please enter a valid location ID");
+            return;
+        }
+        if(locationId <= 0) {
+            AlertGenerator.showAlert("Error", "Please enter a valid location ID");
+            return;
+        }
+        if (issueTypeComboBox.getSelectionModel().getSelectedIndex() == 0){
+            AlertGenerator.showAlert("Error", "Please select a type of issue");
+            return;
+        }
+        if (issueDatePicker.getValue() == null) {
+            AlertGenerator.showAlert("Error", "Please enter a delivery date from the delivery date field");
+            return;
+        }
+        if (severityComboBox.getSelectionModel().getSelectedIndex() == 0){
+            AlertGenerator.showAlert("Error", "Please select a severity");
+            return;
+        }
     }
 
     @javafx.fxml.FXML

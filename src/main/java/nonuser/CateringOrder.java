@@ -142,11 +142,9 @@ public class CateringOrder implements Serializable {
 
         } catch (IOException e) {
             System.out.println("Error reading CateringOrder.bin");
-            e.printStackTrace();
 
         } catch (ClassNotFoundException e) {
             System.out.println("CateringOrder class not found");
-            e.printStackTrace();
         }
 
         return null;

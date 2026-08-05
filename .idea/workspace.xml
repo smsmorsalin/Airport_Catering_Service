@@ -4,22 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22ad7f92-dc34-4ca5-a7c7-dda07d99f945" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into sihab&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+    <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="fix error in romy's finance_and_billing_manager\dashboardViewController.java file.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ApproveBatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ApproveBatchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/FoodSafetyCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/FoodSafetyCheckController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/GenerateQAReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/GenerateQAReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ManageQualityIssueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ManageQualityIssueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/PerformInspectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/PerformInspectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/QualityTrendAnalysisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/QualityTrendAnalysisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ReceiveInspectionRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/ReceiveInspectionRequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/RejectBatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/RejectBatchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/food_quality_control_officer/dashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/GenerateQAReportView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/GenerateQAReportView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/dashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FoodQualityControlOfficer/dashboardView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/assignTruckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/assignTruckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/dashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/emergencyDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/emergencyDeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/generateDispatchReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/generateDispatchReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/manageDeliveryDelayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/manageDeliveryDelayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/monitorDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/monitorDeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/packageOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/packageOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/receiveDispatchRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/receiveDispatchRequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/scheduleDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/scheduleDeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/checkIngredientAvailabilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/checkIngredientAvailabilityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/createPurchaseRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/createPurchaseRequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/dashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/dashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/generateInventoryReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/generateInventoryReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/lowStockAlertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/lowStockAlertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/manageSupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/manageSupplierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/receiveIngredientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/receiveIngredientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/reserveIngredientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/reserveIngredientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/updateInventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/updateInventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/InventoryManager/LowStockAlertView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InventoryManager/LowStockAlertView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CateringOrder.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderItem.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/modifyOrderViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/modifyOrderViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/payBillViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/payBillViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/truckOrderViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/truckOrderViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/CateringOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/CateringOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +50,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -47,22 +58,22 @@
     &quot;assignee&quot;: &quot;Saif-kaif&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
-    "accountId": "09b4b316-9114-4bc1-8e76-96925cab0536"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
+    &quot;accountId&quot;: &quot;ef1e225f-e8df-4381-ba31-5fa2f4c0db29&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "smsmorsalin",
-    "repository": "Airport_Catering_Service"
+    &quot;owner&quot;: &quot;smsmorsalin&quot;,
+    &quot;repository&quot;: &quot;Airport_Catering_Service&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -72,61 +83,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.2839724740242182" />
-      <entry key="MS500" value="2.2324569826748286" />
-      <entry key="S2" value="4.499965267100866" />
-      <entry key="S5" value="8.03492083905693" />
-      <entry key="S10" value="15.514791332978568" />
-      <entry key="S30" value="33.302611769523956" />
-      <entry key="S60" value="42.52795951796936" />
-      <entry key="M2" value="48.57540495010133" />
-      <entry key="M5" value="52.865805889496706" />
-      <entry key="M10" value="54.70633951327361" />
-      <entry key="M15" value="56.03793193338583" />
-      <entry key="M30" value="62.89613702694401" />
-      <entry key="H1" value="82.41254827697345" />
-      <entry key="H2" value="112.66514845838934" />
-      <entry key="H4" value="145.7137520112296" />
-      <entry key="D1" value="201.48759588023674" />
-      <entry key="W1" value="216.30871147926405" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.000001536948277" />
+      <entry key="S5" value="1.0047326969913384" />
+      <entry key="S10" value="1.0713156583485846" />
+      <entry key="S30" value="1.669416981526194" />
+      <entry key="S60" value="2.7199019572859098" />
+      <entry key="M2" value="4.431316458851651" />
+      <entry key="M5" value="10.494517060784501" />
+      <entry key="M10" value="22.13226334825469" />
+      <entry key="M15" value="31.50883198575086" />
+      <entry key="M30" value="52.047460986897676" />
+      <entry key="H1" value="87.75776434304717" />
+      <entry key="H2" value="149.68541156282856" />
+      <entry key="H4" value="229.362266961289" />
+      <entry key="D1" value="380.83794445240306" />
+      <entry key="W1" value="424.0290458133558" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="6.604624953266733E-140" />
-      <entry key="S10" value="2.665494987709133E-70" />
-      <entry key="S30" value="1.2344775919515973E-23" />
-      <entry key="S60" value="7.966792205107122E-12" />
-      <entry key="M2" value="6.799668541318036E-6" />
-      <entry key="M5" value="0.025432339867269445" />
-      <entry key="M10" value="0.4858783440086825" />
-      <entry key="M15" value="1.6591721841001066" />
-      <entry key="M30" value="8.429426727412647" />
-      <entry key="H1" value="24.344408100991295" />
-      <entry key="H2" value="44.61806477000929" />
-      <entry key="H4" value="61.56481091973302" />
-      <entry key="D1" value="81.27201788216759" />
-      <entry key="W1" value="85.30637334522167" />
+      <entry key="MS100" value="2.607343083360014E-131" />
+      <entry key="MS500" value="7.642573712548034E-27" />
+      <entry key="S2" value="2.9570512582247094E-7" />
+      <entry key="S5" value="0.002536717212951542" />
+      <entry key="S10" value="0.06514454576929865" />
+      <entry key="S30" value="1.0333637793001214" />
+      <entry key="S60" value="2.7747259572428713" />
+      <entry key="M2" value="5.288110679296448" />
+      <entry key="M5" value="10.673134251997178" />
+      <entry key="M10" value="20.269477733440578" />
+      <entry key="M15" value="28.98027121308084" />
+      <entry key="M30" value="50.46217424966815" />
+      <entry key="H1" value="85.58339587604787" />
+      <entry key="H2" value="135.51538897420923" />
+      <entry key="H4" value="189.54631803362832" />
+      <entry key="D1" value="272.9919713985768" />
+      <entry key="W1" value="293.37199376720446" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.1433195152225513" />
-      <entry key="MS500" value="2.1709049162376557" />
-      <entry key="S2" value="4.45972826306218" />
-      <entry key="S5" value="8.009412811580544" />
-      <entry key="S10" value="15.493722644793738" />
-      <entry key="S30" value="33.28650450258752" />
-      <entry key="S60" value="42.513913973098994" />
-      <entry key="M2" value="48.56470914334756" />
-      <entry key="M5" value="52.8853128818373" />
-      <entry key="M10" value="55.187427236482264" />
-      <entry key="M15" value="57.69039648346232" />
-      <entry key="M30" value="71.30969384636006" />
-      <entry key="H1" value="106.73238712317635" />
-      <entry key="H2" value="157.25965153882638" />
-      <entry key="H4" value="207.26190609047643" />
-      <entry key="D1" value="282.7558671691192" />
-      <entry key="W1" value="301.6145207270384" />
+      <entry key="MS100" value="0.00146996752676862" />
+      <entry key="MS500" value="0.2713073429704518" />
+      <entry key="S2" value="0.7217150370342319" />
+      <entry key="S5" value="0.882522959118122" />
+      <entry key="S10" value="1.0480384090501143" />
+      <entry key="S30" value="2.571500676931508" />
+      <entry key="S60" value="5.350677852144222" />
+      <entry key="M2" value="9.597748466957912" />
+      <entry key="M5" value="21.077588637099197" />
+      <entry key="M10" value="42.320336259571675" />
+      <entry key="M15" value="60.41303595474974" />
+      <entry key="M30" value="102.43972095444657" />
+      <entry key="H1" value="173.26907203364254" />
+      <entry key="H2" value="285.133037916803" />
+      <entry key="H4" value="418.8567501976591" />
+      <entry key="D1" value="653.8166371748171" />
+      <entry key="W1" value="717.3989811566977" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -143,14 +154,30 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ACS.executor": "Run",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "saif",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
+    "git-widget-placeholder": "sihab",
     "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ACS.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;morsalin&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ACS" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.airport_catering_service.HelloApplication" />
@@ -160,14 +187,21 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="22ad7f92-dc34-4ca5-a7c7-dda07d99f945" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into sihab&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+      <changelist id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="" />
       <created>1784673028203</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1784673028203</updated>
-      <workItem from="1785847567609" duration="638000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
       <option name="closed" value="true" />
@@ -209,31 +243,23 @@
       <option name="project" value="LOCAL" />
       <updated>1785760534863</updated>
     </task>
-    <task id="LOCAL-00006">
+    <task id="LOCAL-00006" summary="fix error in romy's finance_and_billing_manager\dashboardViewController.java file.">
       <option name="closed" value="true" />
-      <created>1785838907894</created>
+      <created>1785872051763</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1785838907894</updated>
+      <updated>1785872051763</updated>
     </task>
-    <task id="LOCAL-00007">
+    <task id="LOCAL-00007" summary="fix error in romy's finance_and_billing_manager\dashboardViewController.java file.">
       <option name="closed" value="true" />
-      <created>1785851801274</created>
+      <created>1785884531118</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1785851801274</updated>
+      <updated>1785884531118</updated>
     </task>
-    <task id="LOCAL-00008" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into aronno&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/main/airport_catering_service/controller/dispatch_coordinator/monitorDeliveryController.java&#10;#&#9;src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/dashboardViewController.java">
-      <option name="closed" value="true" />
-      <created>1785854370843</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1785854370843</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +269,6 @@
     <MESSAGE value="fix error AirlineRepresentative" />
     <MESSAGE value="delete DeliveryConfirmation.java file" />
     <MESSAGE value="pull" />
-    <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into aronno&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;User.bin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into aronno&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;User.bin" />
+    <option name="LAST_COMMIT_MESSAGE" value="pull" />
   </component>
 </project>

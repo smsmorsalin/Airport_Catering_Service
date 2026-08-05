@@ -2,6 +2,7 @@ package nonuser;
 
 import utility.databaseAccessor;
 
+import java.io.*;
 import java.time.LocalDate;
 
 public class Invoice {
@@ -55,5 +56,40 @@ public class Invoice {
         String id;
         id = databaseAccessor.generateNewUniqueStringId("Invoice.bin", "InvoiceId");
         return id;
+    }
+
+    public static Invoice searchInvoiceByOrderId(int orderId){
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Invoice.bin"))) {
+
+            while (true) {
+
+                Object object = ois.readObject();
+
+                if (object instanceof Invoice invoice) {
+
+                    if (invoice.getOrderId() == orderId) {
+                        return invoice;
+                    }
+                }
+            }
+
+        } catch (EOFException e) {
+            // End of file reached normally
+            System.out.println("Invoice not found for Order ID: " + orderId);
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Invoice.bin file not found");
+
+        } catch (InvalidClassException e) {
+            System.out.println("Invoice class version does not match the file");
+
+        } catch (IOException e) {
+            System.out.println("Error reading Invoice.bin");
+
+        } catch (ClassNotFoundException e) {
+            System.out.println("Invoice class not found");
+        }
+
+        return null;
     }
 }

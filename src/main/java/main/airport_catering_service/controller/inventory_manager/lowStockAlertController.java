@@ -3,6 +3,8 @@ package main.airport_catering_service.controller.inventory_manager;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import user.InventoryManager;
 import user.User;
 import user.UserReceiver;
@@ -24,6 +26,11 @@ public class lowStockAlertController implements UserReceiver
     private TableColumn currentQuantityTableviewColumn;
 
     private InventoryManager loggedInUser;
+    @javafx.fxml.FXML
+    private TextField ingredientIdTextfield;
+    @javafx.fxml.FXML
+    private Text ingredientIdText;
+
     @Override
     public void setLoggedInUser(User user){
         if (user instanceof InventoryManager inventoryManager){
@@ -84,5 +91,28 @@ public class lowStockAlertController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
+
+        tableView.getItems().clear();
+
+        if (ingredientIdTextfield.getText() == null || ingredientIdTextfield.getText().trim().isEmpty()) {
+
+            AlertGenerator.showAlert("Invalid Input", "Ingredient ID must be filled.");
+            return;
+        }
+
+        int ingredientId;
+
+        try {
+            ingredientId = Integer.parseInt(ingredientIdTextfield.getText().trim());
+        } catch (Exception e) {
+            AlertGenerator.showAlert("Invalid Input", "Ingredient ID must be an integer.");
+            return;
+        }
+
+        if (ingredientId <= 0) {
+            AlertGenerator.showAlert("Invalid Input", "Ingredient ID must be greater than 0.");
+            return;
+        }
+
     }
 }

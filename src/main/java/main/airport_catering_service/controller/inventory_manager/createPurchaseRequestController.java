@@ -102,5 +102,32 @@ public class createPurchaseRequestController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
+
+        tableView.getItems().clear();
+
+        if (supplierTextfield.getText().trim().isEmpty() || ingredientNameTextfield.getText().trim().isEmpty()
+                || requiredQuantityTextfield.getText().trim().isEmpty() || expectedDeliveryDateDatepicker.getValue() == null) {
+
+            AlertGenerator.showAlert("Invalid Input", "All fields must be filled.");
+            return;
+        }
+
+        int requiredQuantity;
+
+        try {
+            requiredQuantity = Integer.parseInt(requiredQuantityTextfield.getText().trim());
+        } catch (Exception e) {
+            AlertGenerator.showAlert("Invalid Input", "Required Quantity must be an integer.");
+            return;
+        }
+
+        if (requiredQuantity <= 0) {
+            AlertGenerator.showAlert("Invalid Input", "Required Quantity must be greater than 0.");
+            return;
+        }
+
+        String supplier = supplierTextfield.getText().trim();
+        String ingredientName = ingredientNameTextfield.getText().trim();
+        var expectedDeliveryDate = expectedDeliveryDateDatepicker.getValue();
     }
 }

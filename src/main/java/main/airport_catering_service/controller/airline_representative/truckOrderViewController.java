@@ -101,7 +101,7 @@ public class truckOrderViewController implements UserReceiver
     public void sideBarPayInvoiceButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
                 actionEvent,
-                "/airline_representative/payInvoiceView.fxml",
+                "/airline_representative/payBillView.fxml",
                 loggedInUser
         );
     }

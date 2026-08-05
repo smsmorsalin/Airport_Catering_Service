@@ -31,9 +31,10 @@ public class packageOrderController implements UserReceiver
     @javafx.fxml.FXML
     private Text packagingNoteText;
     @javafx.fxml.FXML
-    private ComboBox packagingTypeComboBox;
+    private ComboBox <String> packagingTypeComboBox;
     @javafx.fxml.FXML
     private TextArea packagingNoteTextArea;
+
 
     private DispatchCoordinator loggedInUser;
     @Override
@@ -47,6 +48,7 @@ public class packageOrderController implements UserReceiver
 
     @javafx.fxml.FXML
     public void initialize() {
+        packagingTypeComboBox.getItems().addAll("Pending", "Complete");
     }
 
     @javafx.fxml.FXML
@@ -96,5 +98,40 @@ public class packageOrderController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
+
+        if (orderIdTextfield.getText().trim().isEmpty()) {
+
+            AlertGenerator.showAlert("Invalid Input", "Order ID must be filled.");
+            return;
+        }
+
+        int orderId;
+
+        try {
+            orderId = Integer.parseInt(orderIdTextfield.getText().trim());
+        } catch (Exception e) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID must be an integer.");
+            return;
+        }
+
+        if (orderId <= 0) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID must be greater than 0.");
+            return;
+        }
+
+        if (packagingTypeComboBox.getValue() == null) {
+            AlertGenerator.showAlert("Invalid Input", "Please select a packaging status.");
+            return;
+        }
+
+        if (packagingNoteTextArea.getText() == null
+                || packagingNoteTextArea.getText().trim().isEmpty()) {
+
+            AlertGenerator.showAlert("Invalid Input", "Packaging Note must be filled.");
+            return;
+        }
+
+        String packagingNote = packagingNoteTextArea.getText().trim();
+
     }
 }
