@@ -90,7 +90,6 @@ public class PerformInspectionController implements UserReceiver
 
     @javafx.fxml.FXML
     public void sideBarRejectBatchOnAction(ActionEvent actionEvent) throws IOException {
-
         FoodQualityControlOfficer.viewRejectBatch(actionEvent,loggedInUser);
     }
 

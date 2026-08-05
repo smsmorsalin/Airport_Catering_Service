@@ -61,7 +61,7 @@ public class GenerateQAReportController implements UserReceiver
             return;
         }
         if(endDatePicker.getValue().isAfter(LocalDate.now())){
-            AlertGenerator.showAlert("Invaid Input","End date can not be present date");
+            AlertGenerator.showAlert("Invalid Input","End date can not be present date");
             return;
         }
         if(reportTypeComboBox.getItems()==null){

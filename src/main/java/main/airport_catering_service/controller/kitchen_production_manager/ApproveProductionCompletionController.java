@@ -28,6 +28,7 @@ public class ApproveProductionCompletionController implements UserReceiver
     public void setLoggedInUser(User user){
         if (user instanceof KitchenProductionManager kitchenProductionManager){
             loggedInUser = kitchenProductionManager;
+            System.out.println(kitchenProductionManager);
         }else{
             AlertGenerator.showAlert("error", "error Authentication failed");
         }
@@ -66,8 +67,8 @@ public class ApproveProductionCompletionController implements UserReceiver
     }
 
     @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnA(ActionEvent actionEvent)throws IOException {
-        KitchenProductionManager.reverseDashboard(actionEvent);
+    public void sidebarAirportCateringServiceButtonOnA(ActionEvent actionEvent){
+        KitchenProductionManager.reverseDashboard(actionEvent,loggedInUser);
 
 
     }

@@ -85,29 +85,29 @@ public class FoodSafetyCheckController implements UserReceiver
     }
 
     @javafx.fxml.FXML
-    public void sideBarRejectBatchOnAction(ActionEvent actionEvent) throws IOException{
+    public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
         FoodQualityControlOfficer.viewRejectBatch(actionEvent,loggedInUser);
 
     }
     @javafx.fxml.FXML
-    public void sideBarQualityTrendAnalysisOnAction(ActionEvent actionEvent) throws IOException{
+    public void sideBarQualityTrendAnalysisOnAction(ActionEvent actionEvent) {
         FoodQualityControlOfficer.viewQualityTrendAnalysis(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent)throws IOException {
+    public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent){
         FoodQualityControlOfficer.viewReceiveInspectionRequest(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void slideBarPerformInspectionOnAction(ActionEvent actionEvent) throws IOException{
+    public void slideBarPerformInspectionOnAction(ActionEvent actionEvent) {
         FoodQualityControlOfficer.viewPerformInspection(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarGenerateQAReportOnAction(ActionEvent actionEvent) throws IOException{
+    public void sideBarGenerateQAReportOnAction(ActionEvent actionEvent) {
         FoodQualityControlOfficer.viewGenerateQAReport(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void sideBarApproveBatchOnAction(ActionEvent actionEvent)throws IOException {
+    public void sideBarApproveBatchOnAction(ActionEvent actionEvent) {
         FoodQualityControlOfficer.viewApproveBatch(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML

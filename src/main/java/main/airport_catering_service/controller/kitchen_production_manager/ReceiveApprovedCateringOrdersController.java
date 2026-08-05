@@ -152,8 +152,8 @@ public class ReceiveApprovedCateringOrdersController implements UserReceiver
 
 
     @FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent)throws IOException {
-        KitchenProductionManager.reverseDashboard(actionEvent);
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent){
+        KitchenProductionManager.reverseDashboard(actionEvent,loggedInUser);
     }
     @FXML
     public void sideBarProductionReportsOA(ActionEvent actionEvent) throws  IOException {
@@ -167,7 +167,7 @@ public class ReceiveApprovedCateringOrdersController implements UserReceiver
     }
     @FXML
     public void sideBarProductionPlanOA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewMonitorProductionActivities(actionEvent,loggedInUser);
+        KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
 
 //        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
     }
