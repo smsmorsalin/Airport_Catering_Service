@@ -2,17 +2,25 @@ package main.airport_catering_service.controller.customer_support_officer;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import nonuser.Airline;
+import nonuser.CateringOrder;
+import nonuser.Complaint;
 import user.CustomerSupportOfficer;
-import user.FinanceAndBillingManager;
 import user.User;
 import user.UserReceiver;
 import utility.AlertGenerator;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class RegisterComplaintViewController implements UserReceiver
 {
+    private static final String AIRLINE_FILE = "Airline.bin";
+    private static final String CATERING_ORDER_FILE = "CateringOrder.bin";
+    private static final String COMPLAINT_FILE = "Complaint.bin";
+
     @javafx.fxml.FXML
     private Button submitButton;
     @javafx.fxml.FXML
@@ -35,14 +43,36 @@ public class RegisterComplaintViewController implements UserReceiver
     private CustomerSupportOfficer loggedInUser;
     @Override
     public void setLoggedInUser(User user){
-        if (user instanceof CustomerSupportOfficer CustomerSupportOfficer){
-            this.loggedInUser = CustomerSupportOfficer;
+        if (user instanceof CustomerSupportOfficer customerSupportOfficer){
+            this.loggedInUser = customerSupportOfficer;
+        } else {
+            AlertGenerator.showAlert("Error", "Authentication failed");
         }
-        AlertGenerator.showAlert("error", "error Authentication failed");
     }
 
     @javafx.fxml.FXML
     public void initialize() {
+        categoryComboBox.getItems().setAll(
+                "Order Issue", "Delivery Issue", "Food Quality", "Billing Issue", "Other");
+        for (Object object : BinaryFileUtility.readObjects(AIRLINE_FILE)) {
+            if (object instanceof Airline airline) {
+                airlineComboBox.getItems().add(
+                        airline.getAirlineId() + " - " + airline.getAirlineName());
+            }
+        }
+
+        CheckBox[] priorities = {lowCheckBox, mediumCheckBox, highCheckBox, criticalCheckBox};
+        for (CheckBox priority : priorities) {
+            priority.setOnAction(event -> {
+                if (priority.isSelected()) {
+                    for (CheckBox other : priorities) {
+                        if (other != priority) {
+                            other.setSelected(false);
+                        }
+                    }
+                }
+            });
+        }
     }
 
     @Deprecated
@@ -51,39 +81,103 @@ public class RegisterComplaintViewController implements UserReceiver
 
     @javafx.fxml.FXML
     public void SubmitComplaintOnAction(ActionEvent actionEvent) {
-        if(orderIdTextField.getText().trim().isEmpty()){
-            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
-            return;
-        }
-        int orderId;
-        try{
-            orderId = Integer.parseInt(orderIdTextField.getText());
-        }
-        catch (NumberFormatException e){
-            AlertGenerator.showAlert("Wrong Input","textField should be an integer");
-            return;
-        }
-        if(orderId <= 0){
-            AlertGenerator.showAlert("Invalid Input","Text field should be grater than 0");
-            return;
-        }
-        if(lowCheckBox==null || highCheckBox==null || mediumCheckBox==null || criticalCheckBox==null){
-            AlertGenerator.showAlert("Wrong Input","Check box should be selected ");
-            return;
-        }
-        if(descriptionAreaTextField.getText().trim().isEmpty()){
-            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+        if (loggedInUser == null) {
+            AlertGenerator.showAlert("Error", "Please log in again");
             return;
         }
 
-        if(airlineComboBox.getValue() == null){
-            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+        String orderIdText = orderIdTextField.getText().trim();
+        if (orderIdText.isEmpty()) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID should be filled");
             return;
         }
-        if(categoryComboBox.getValue() == null){
-            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+
+        int orderId;
+        try {
+            orderId = Integer.parseInt(orderIdText);
+        } catch (NumberFormatException e) {
+            AlertGenerator.showAlert("Wrong Input", "Order ID should be an integer");
             return;
         }
+        if (orderId <= 0) {
+            AlertGenerator.showAlert("Invalid Input", "Order ID should be greater than 0");
+            return;
+        }
+
+        if (descriptionAreaTextField.getText().trim().isEmpty()) {
+            AlertGenerator.showAlert("Invalid Input", "Complaint description should be filled");
+            return;
+        }
+        if (airlineComboBox.getValue() == null || categoryComboBox.getValue() == null) {
+            AlertGenerator.showAlert("Invalid Input", "Airline and category should be selected");
+            return;
+        }
+
+        String priority = getSelectedPriority();
+        if (priority == null) {
+            AlertGenerator.showAlert("Invalid Input", "One priority level should be selected");
+            return;
+        }
+
+        CateringOrder order = null;
+        for (Object object : BinaryFileUtility.readObjects(CATERING_ORDER_FILE)) {
+            if (object instanceof CateringOrder cateringOrder
+                    && cateringOrder.getOrderId() == orderId) {
+                order = cateringOrder;
+                break;
+            }
+        }
+        if (order == null) {
+            AlertGenerator.showAlert("Order Not Found", "No catering order was found with ID " + orderId);
+            return;
+        }
+        String airlineId = airlineComboBox.getValue().split(" - ", 2)[0];
+        if (!airlineId.equals(order.getAirlineId())) {
+            AlertGenerator.showAlert("Invalid Airline", "The selected airline does not own this order");
+            return;
+        }
+
+        for (Object object : BinaryFileUtility.readObjects(COMPLAINT_FILE)) {
+            if (object instanceof Complaint complaint
+                    && complaint.getOrderId() == orderId
+                    && !"Resolved".equalsIgnoreCase(complaint.getStatus())) {
+                AlertGenerator.showAlert("Complaint Exists", "An active complaint already exists for this order");
+                return;
+            }
+        }
+
+        Complaint complaint = new Complaint(
+                orderId, airlineId, categoryComboBox.getValue(),
+                descriptionAreaTextField.getText().trim(), priority,
+                loggedInUser.getEmployeeId());
+        if (!BinaryFileUtility.writeObjects(COMPLAINT_FILE, complaint)) {
+            AlertGenerator.showAlert("Error", "Complaint could not be saved");
+            return;
+        }
+
+        AlertGenerator.showAlert(
+                "Success", "Complaint registered successfully. Complaint ID: "
+                        + complaint.getComplaintId());
+        clearForm();
+    }
+
+    private String getSelectedPriority() {
+        if (criticalCheckBox.isSelected()) return "CRITICAL";
+        if (highCheckBox.isSelected()) return "HIGH";
+        if (mediumCheckBox.isSelected()) return "MEDIUM";
+        if (lowCheckBox.isSelected()) return "LOW";
+        return null;
+    }
+
+    private void clearForm() {
+        orderIdTextField.clear();
+        descriptionAreaTextField.clear();
+        airlineComboBox.getSelectionModel().clearSelection();
+        categoryComboBox.getSelectionModel().clearSelection();
+        lowCheckBox.setSelected(false);
+        mediumCheckBox.setSelected(false);
+        highCheckBox.setSelected(false);
+        criticalCheckBox.setSelected(false);
 
     }
 

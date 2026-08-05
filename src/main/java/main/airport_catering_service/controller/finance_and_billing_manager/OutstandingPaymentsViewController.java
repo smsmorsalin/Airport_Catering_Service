@@ -2,21 +2,21 @@ package main.airport_catering_service.controller.finance_and_billing_manager;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
-import nonuser.Airline;
-import nonuser.DeliveryStatus;
 import nonuser.Invoice;
 import user.FinanceAndBillingManager;
 import user.User;
 import user.UserReceiver;
 import utility.AlertGenerator;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Locale;
+import java.time.temporal.ChronoUnit;
 
 public class OutstandingPaymentsViewController implements UserReceiver
 {
+    private static final String INVOICE_FILE = "Invoice.bin";
     @javafx.fxml.FXML
     private DatePicker endDatePicker;
     @javafx.fxml.FXML
@@ -24,9 +24,9 @@ public class OutstandingPaymentsViewController implements UserReceiver
     @javafx.fxml.FXML
     private ComboBox<String> invoiceStatusComboBox;
     @javafx.fxml.FXML
-    private TableColumn <Airline,String > airlineColumn;
+    private TableColumn <Invoice,String > airlineColumn;
     @javafx.fxml.FXML
-    private TableColumn <DeliveryStatus,String> statusColumn;
+    private TableColumn <Invoice,String> statusColumn;
     @javafx.fxml.FXML
     private DatePicker startDatePicker;
     @javafx.fxml.FXML
@@ -40,19 +40,28 @@ public class OutstandingPaymentsViewController implements UserReceiver
     @javafx.fxml.FXML
     private TableView <Invoice> outstandingInvoiceTable;
     @javafx.fxml.FXML
-    private TableColumn <Invoice,Integer> invoiceIdColumn;
+    private TableColumn <Invoice,String> invoiceIdColumn;
 
     private FinanceAndBillingManager loggedInUser;
     @Override
     public void setLoggedInUser(User user){
-        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
-            this.loggedInUser = FinanceAndBillingManager;
+        if (user instanceof FinanceAndBillingManager financeAndBillingManager){
+            this.loggedInUser = financeAndBillingManager;
+        } else {
+            AlertGenerator.showAlert("Error", "Authentication failed");
         }
-        AlertGenerator.showAlert("error", "error Authentication failed");
     }
 
     @javafx.fxml.FXML
     public void initialize() {
+        invoiceStatusComboBox.getItems().setAll("All", "Unpaid", "Paid", "Overdue");
+        invoiceIdColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().getInvoiceId()));
+        airlineColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(findAirline(data.getValue().getOrderId())));
+        amountColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleObjectProperty<>(data.getValue().getTotalAmount()));
+        dueDateColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleObjectProperty<>(data.getValue().getDueDate()));
+        overdueColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleObjectProperty<>(daysOverdue(data.getValue())));
+        statusColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(status(data.getValue())));
+        totalDueLabel.setText("0.00");
     }
 
     @Deprecated
@@ -79,7 +88,50 @@ public class OutstandingPaymentsViewController implements UserReceiver
             return;
         }
 
+        if (loggedInUser == null) {
+            AlertGenerator.showAlert("Error", "Please log in again");
+            return;
+        }
+        java.util.ArrayList<Invoice> rows = new java.util.ArrayList<>();
+        for (Object object : BinaryFileUtility.readObjects(INVOICE_FILE)) {
+            if (object instanceof Invoice invoice
+                    && !invoice.getDueDate().isBefore(startDatePicker.getValue())
+                    && !invoice.getDueDate().isAfter(endDatePicker.getValue())
+                    && matchesStatus(invoice, invoiceStatusComboBox.getValue())) {
+                rows.add(invoice);
+            }
+        }
+        outstandingInvoiceTable.getItems().setAll(rows);
+        double totalDue = rows.stream().filter(invoice -> !invoice.isPaid())
+                .mapToDouble(Invoice::getTotalAmount).sum();
+        totalDueLabel.setText(String.format("%.2f", totalDue));
+        AlertGenerator.showAlert("Success", "Outstanding payment report generated");
+    }
 
+    private boolean matchesStatus(Invoice invoice, String selected) {
+        return "All".equals(selected)
+                || ("Paid".equals(selected) && invoice.isPaid())
+                || ("Unpaid".equals(selected) && !invoice.isPaid())
+                || ("Overdue".equals(selected) && !invoice.isPaid() && daysOverdue(invoice) > 0);
+    }
+
+    private String status(Invoice invoice) {
+        if (invoice.isPaid()) return "Paid";
+        return daysOverdue(invoice) > 0 ? "Overdue" : "Unpaid";
+    }
+
+    private int daysOverdue(Invoice invoice) {
+        if (invoice.isPaid() || !invoice.getDueDate().isBefore(LocalDate.now())) return 0;
+        return (int) ChronoUnit.DAYS.between(invoice.getDueDate(), LocalDate.now());
+    }
+
+    private String findAirline(int orderId) {
+        for (Object object : BinaryFileUtility.readObjects("CateringOrder.bin")) {
+            if (object instanceof nonuser.CateringOrder order && order.getOrderId() == orderId) {
+                return order.getAirlineId();
+            }
+        }
+        return "Unknown";
     }
 
     @Deprecated

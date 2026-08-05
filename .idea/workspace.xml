@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="22ad7f92-dc34-4ca5-a7c7-dda07d99f945" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into aronno&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/main/airport_catering_service/controller/dispatch_coordinator/monitorDeliveryController.java&#10;#&#9;src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/dashboardViewController.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/EmergencyModificationViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/EmergencyModificationViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/FlightCancellationViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/FlightCancellationViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/FlightDelayRequestViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/FlightDelayRequestViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/GenerateReportsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/GenerateReportsViewController.java" afterDir="false" />
@@ -15,12 +16,27 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/ServiceUpdatesViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/ServiceUpdatesViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/TrackComplaintViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/TrackComplaintViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/dashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/customer_support_officer/dashboardViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/CalculateCostViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/CalculateCostViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/FinanceReportsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/FinanceReportsViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/GenerateInvoiceViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/GenerateInvoiceViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/OutstandingPaymentsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/OutstandingPaymentsViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/PaymentHistoryViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/PaymentHistoryViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/ProcessRefundViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/ProcessRefundViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/RecordPaymentViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/RecordPaymentViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/RevenueSummaryViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/RevenueSummaryViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/dashboardViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/dashboardViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/FinancialReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/FinancialReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Payment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="257" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -61,63 +77,67 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.2839724740242182" />
-      <entry key="MS500" value="2.2324569826748286" />
-      <entry key="S2" value="4.499965267100866" />
-      <entry key="S5" value="8.03492083905693" />
-      <entry key="S10" value="15.514791332978568" />
-      <entry key="S30" value="33.302611769523956" />
-      <entry key="S60" value="42.52795951796936" />
-      <entry key="M2" value="48.57540495010133" />
-      <entry key="M5" value="52.865805889496706" />
-      <entry key="M10" value="54.70633951327361" />
-      <entry key="M15" value="56.03793193338583" />
-      <entry key="M30" value="62.89613702694401" />
-      <entry key="H1" value="82.41254827697345" />
-      <entry key="H2" value="112.66514845838934" />
-      <entry key="H4" value="145.7137520112296" />
-      <entry key="D1" value="201.48759588023674" />
-      <entry key="W1" value="216.30871147926405" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000019525803" />
+      <entry key="S2" value="1.0387595555457414" />
+      <entry key="S5" value="2.5763214560452736" />
+      <entry key="S10" value="8.191664593452302" />
+      <entry key="S30" value="29.448615116049716" />
+      <entry key="S60" value="44.78777326295702" />
+      <entry key="M2" value="59.59500270983959" />
+      <entry key="M5" value="94.49725915237316" />
+      <entry key="M10" value="133.7627386051964" />
+      <entry key="M15" value="155.93650683137605" />
+      <entry key="M30" value="189.4095476541382" />
+      <entry key="H1" value="224.42746462065213" />
+      <entry key="H2" value="263.9475278197411" />
+      <entry key="H4" value="302.94280970261565" />
+      <entry key="D1" value="365.6378526687256" />
+      <entry key="W1" value="382.02984799893943" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="6.604624953266733E-140" />
-      <entry key="S10" value="2.665494987709133E-70" />
-      <entry key="S30" value="1.2344775919515973E-23" />
-      <entry key="S60" value="7.966792205107122E-12" />
-      <entry key="M2" value="6.799668541318036E-6" />
-      <entry key="M5" value="0.025432339867269445" />
-      <entry key="M10" value="0.4858783440086825" />
-      <entry key="M15" value="1.6591721841001066" />
-      <entry key="M30" value="8.429426727412647" />
-      <entry key="H1" value="24.344408100991295" />
-      <entry key="H2" value="44.61806477000929" />
-      <entry key="H4" value="61.56481091973302" />
-      <entry key="D1" value="81.27201788216759" />
-      <entry key="W1" value="85.30637334522167" />
+      <entry key="S5" value="3.2166373416849824E-189" />
+      <entry key="S10" value="5.8824038789701004E-95" />
+      <entry key="S30" value="7.460057944968557E-32" />
+      <entry key="S60" value="6.19316976111983E-16" />
+      <entry key="M2" value="5.995183636939925E-8" />
+      <entry key="M5" value="0.0038327652265101424" />
+      <entry key="M10" value="0.18862119506360076" />
+      <entry key="M15" value="0.8829445384249472" />
+      <entry key="M30" value="6.1492057283214425" />
+      <entry key="H1" value="20.792643687199366" />
+      <entry key="H2" value="41.23499776772248" />
+      <entry key="H4" value="59.18479843554803" />
+      <entry key="D1" value="80.73973382865321" />
+      <entry key="W1" value="85.2263331547892" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.1433195152225513" />
-      <entry key="MS500" value="2.1709049162376557" />
-      <entry key="S2" value="4.45972826306218" />
-      <entry key="S5" value="8.009412811580544" />
-      <entry key="S10" value="15.493722644793738" />
-      <entry key="S30" value="33.28650450258752" />
-      <entry key="S60" value="42.513913973098994" />
-      <entry key="M2" value="48.56470914334756" />
-      <entry key="M5" value="52.8853128818373" />
-      <entry key="M10" value="55.187427236482264" />
-      <entry key="M15" value="57.69039648346232" />
-      <entry key="M30" value="71.30969384636006" />
-      <entry key="H1" value="106.73238712317635" />
-      <entry key="H2" value="157.25965153882638" />
-      <entry key="H4" value="207.26190609047643" />
-      <entry key="D1" value="282.7558671691192" />
-      <entry key="W1" value="301.6145207270384" />
+      <entry key="MS100" value="0.9460576467255959" />
+      <entry key="MS500" value="0.988970918300962" />
+      <entry key="S2" value="1.035854003116891" />
+      <entry key="S5" value="2.573066039633673" />
+      <entry key="S10" value="8.186217718796495" />
+      <entry key="S30" value="29.441877289724022" />
+      <entry key="S60" value="44.78261111238308" />
+      <entry key="M2" value="59.59151827537588" />
+      <entry key="M5" value="94.4982396477642" />
+      <entry key="M10" value="133.948220390785" />
+      <entry key="M15" value="156.81492155930005" />
+      <entry key="M30" value="195.54662666293598" />
+      <entry key="H1" value="245.19882753728416" />
+      <entry key="H2" value="305.1605965006493" />
+      <entry key="H4" value="362.11151672935097" />
+      <entry key="D1" value="446.3738511375989" />
+      <entry key="W1" value="467.2556156794046" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -131,21 +151,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ACS.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "aronno",
-    "kotlin-language-version-configured": "true",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ACS.executor&quot;: &quot;Run&quot;,
+    &quot;CidrDebugProfileConversion&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;aronno&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ACS" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="main.airport_catering_service.HelloApplication" />
@@ -239,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785876484942</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into aronno&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/main/airport_catering_service/controller/dispatch_coordinator/monitorDeliveryController.java&#10;#&#9;src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/dashboardViewController.java">
+      <option name="closed" value="true" />
+      <created>1785879851057</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1785879851057</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,5 +298,9 @@
     <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into aronno&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;User.bin" />
     <MESSAGE value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into aronno&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/main/airport_catering_service/controller/dispatch_coordinator/monitorDeliveryController.java&#10;#&#9;src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/dashboardViewController.java" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into aronno&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/main/airport_catering_service/controller/dispatch_coordinator/monitorDeliveryController.java&#10;#&#9;src/main/java/main/airport_catering_service/controller/finance_and_billing_manager/dashboardViewController.java" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

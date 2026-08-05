@@ -2,17 +2,21 @@ package main.airport_catering_service.controller.customer_support_officer;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import nonuser.ServiceUpdate;
 import user.CustomerSupportOfficer;
-import user.FinanceAndBillingManager;
 import user.User;
 import user.UserReceiver;
 import utility.AlertGenerator;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ServiceUpdatesViewController implements UserReceiver
 {
+    private static final String SERVICE_UPDATE_FILE = "ServiceUpdate.bin";
+
     @javafx.fxml.FXML
     private Label recentUpdatesLabel;
     @javafx.fxml.FXML
@@ -30,34 +34,76 @@ public class ServiceUpdatesViewController implements UserReceiver
     private CustomerSupportOfficer loggedInUser;
     @Override
     public void setLoggedInUser(User user){
-        if (user instanceof CustomerSupportOfficer CustomerSupportOfficer){
-            this.loggedInUser = CustomerSupportOfficer;
+        if (user instanceof CustomerSupportOfficer customerSupportOfficer){
+            this.loggedInUser = customerSupportOfficer;
+        } else {
+            AlertGenerator.showAlert("Error", "Authentication failed");
         }
-        AlertGenerator.showAlert("error", "error Authentication failed");
     }
 
     @javafx.fxml.FXML
     public void initialize() {
+        updateCategoryComboBox.getItems().setAll(
+                "Service Disruption", "Flight Schedule", "Catering Service",
+                "Facility Update", "General Announcement");
+        priorityComboBox.getItems().setAll("Low", "Medium", "High", "Critical");
+        loadRecentUpdate();
     }
 
     @javafx.fxml.FXML
     public void PublishUpdateOnAction(ActionEvent actionEvent) {
-        if(updateTitleTextField.getText().trim().isEmpty()){
-            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+        if (loggedInUser == null) {
+            AlertGenerator.showAlert("Error", "Please log in again");
             return;
         }
-        if(updateMessageTextField.getText().trim().isEmpty()){
-            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+
+        String title = updateTitleTextField.getText().trim();
+        String message = updateMessageTextField.getText().trim();
+        if (title.isEmpty() || message.isEmpty()) {
+            AlertGenerator.showAlert("Invalid Input", "Title and message should be filled");
             return;
         }
-        if(updateCategoryComboBox.getValue() == null){
-            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+        if (title.length() > 100) {
+            AlertGenerator.showAlert("Invalid Input", "Title cannot exceed 100 characters");
             return;
         }
-        if(priorityComboBox.getValue() == null){
-            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
+        if (updateCategoryComboBox.getValue() == null || priorityComboBox.getValue() == null) {
+            AlertGenerator.showAlert("Invalid Input", "Category and priority should be selected");
             return;
         }
+
+        ServiceUpdate update = new ServiceUpdate(
+                updateCategoryComboBox.getValue(), title, message,
+                priorityComboBox.getValue(), loggedInUser.getEmployeeId());
+        if (!BinaryFileUtility.writeObjects(SERVICE_UPDATE_FILE, update)) {
+            AlertGenerator.showAlert("Error", "Service update could not be published");
+            return;
+        }
+
+        AlertGenerator.showAlert("Success", "Service update published successfully");
+        updateTitleTextField.clear();
+        updateMessageTextField.clear();
+        updateCategoryComboBox.getSelectionModel().clearSelection();
+        priorityComboBox.getSelectionModel().clearSelection();
+        loadRecentUpdate();
+    }
+
+    private void loadRecentUpdate() {
+        ArrayList<Object> updates = BinaryFileUtility.readObjects(SERVICE_UPDATE_FILE);
+        ServiceUpdate latest = null;
+        for (Object object : updates) {
+            if (object instanceof ServiceUpdate update
+                    && (latest == null || update.getPublishedAt().isAfter(latest.getPublishedAt()))) {
+                latest = update;
+            }
+        }
+        if (latest == null) {
+            recentUpdatesLabel.setText("No recent updates available");
+            return;
+        }
+        recentUpdatesLabel.setText(
+                latest.getTitle() + " (" + latest.getPriority() + "): "
+                        + latest.getMessage());
     }
 
     @javafx.fxml.FXML
