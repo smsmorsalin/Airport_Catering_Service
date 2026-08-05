@@ -1,21 +1,29 @@
 package nonuser;
 
+import utility.databaseAccessor;
+
 import java.time.LocalDate;
 
 public class PurchaseRequest {
+    private int ingredientId;
     private String IngredientName;
-    private String Quantity;
+    private int Quantity;
     private String Supplier;
-    private LocalDate DeliveryDate;
+    private LocalDate expectedDeliveryDate;
     private String PurchaseHistory;
     private LocalDate ReceivingDate;
+    private String Status;
 
 
-    public PurchaseRequest(String ingredientName, String quantity, String supplier, LocalDate deliveryDate) {
+    public PurchaseRequest(String ingredientName, int quantity, String supplier, LocalDate expectedDeliveryDate) {
+        this.ingredientId = generateNewIngredientId();
         IngredientName = ingredientName;
         Quantity = quantity;
         Supplier = supplier;
-        DeliveryDate = deliveryDate;
+        this.expectedDeliveryDate = expectedDeliveryDate;
+        PurchaseHistory = null;
+        ReceivingDate = null;
+        Status = "Pending";
     }
 
     public String getIngredientName() {
@@ -26,13 +34,6 @@ public class PurchaseRequest {
         IngredientName = ingredientName;
     }
 
-    public String getQuantity() {
-        return Quantity;
-    }
-
-    public void setQuantity(String quantity) {
-        Quantity = quantity;
-    }
 
     public String getSupplier() {
         return Supplier;
@@ -42,12 +43,36 @@ public class PurchaseRequest {
         Supplier = supplier;
     }
 
-    public LocalDate getDeliveryDate() {
-        return DeliveryDate;
+    public int getIngredientId() {
+        return ingredientId;
     }
 
-    public void setDeliveryDate(LocalDate deliveryDate) {
-        DeliveryDate = deliveryDate;
+    public void setIngredientId(int ingredientId) {
+        this.ingredientId = ingredientId;
+    }
+
+    public int getQuantity() {
+        return Quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        Quantity = quantity;
+    }
+
+    public LocalDate getExpectedDeliveryDate() {
+        return expectedDeliveryDate;
+    }
+
+    public void setExpectedDeliveryDate(LocalDate expectedDeliveryDate) {
+        this.expectedDeliveryDate = expectedDeliveryDate;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
     }
 
     public String getPurchaseHistory() {
@@ -64,5 +89,9 @@ public class PurchaseRequest {
 
     public void setReceivingDate(LocalDate receivingDate) {
         ReceivingDate = receivingDate;
+    }
+
+    private int generateNewIngredientId(){
+        return databaseAccessor.generateNewUniqueId("PurchaseRequest.bin", "ingredientId");
     }
 }
