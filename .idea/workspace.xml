@@ -8,10 +8,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CateringOrder.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderItem.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/modifyOrderViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/modifyOrderViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/payBillViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/payBillViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/truckOrderViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/truckOrderViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/CateringOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/CateringOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airline_representative/modifyOrderView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/modifyOrderView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,61 +64,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="6.003080132146732E-88" />
-      <entry key="S2" value="1.671481703789937E-22" />
-      <entry key="S5" value="2.542327650766701E-9" />
-      <entry key="S10" value="6.900080595929192E-5" />
-      <entry key="S30" value="0.06784715175326049" />
-      <entry key="S60" value="0.41709582297460696" />
-      <entry key="M2" value="1.1611129076002495" />
-      <entry key="M5" value="3.208047023284175" />
-      <entry key="M10" value="6.4999135738011145" />
-      <entry key="M15" value="10.380492711210781" />
-      <entry key="M30" value="26.354628590293075" />
-      <entry key="H1" value="62.90834457083277" />
-      <entry key="H2" value="122.66233786967177" />
-      <entry key="H4" value="193.6290149914679" />
-      <entry key="D1" value="320.4934758124846" />
-      <entry key="W1" value="355.56685442841115" />
-    </decayedCancelled>
-    <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000010218315" />
-      <entry key="S10" value="1.000032043216744" />
-      <entry key="S30" value="1.0384635527334127" />
-      <entry key="S60" value="1.2944632706279458" />
-      <entry key="M2" value="1.9503304093763658" />
-      <entry key="M5" value="4.044316762117739" />
-      <entry key="M10" value="8.361402467020628" />
-      <entry key="M15" value="13.492354826164581" />
-      <entry key="M30" value="31.251990451486716" />
-      <entry key="H1" value="62.63385988654534" />
-      <entry key="H2" value="104.44333729883158" />
-      <entry key="H4" value="147.1947991242898" />
-      <entry key="D1" value="209.65895578207576" />
-      <entry key="W1" value="224.39517395231" />
+      <entry key="S2" value="1.000001536948277" />
+      <entry key="S5" value="1.0047326969913384" />
+      <entry key="S10" value="1.0713156583485846" />
+      <entry key="S30" value="1.669416981526194" />
+      <entry key="S60" value="2.7199019572859098" />
+      <entry key="M2" value="4.431316458851651" />
+      <entry key="M5" value="10.494517060784501" />
+      <entry key="M10" value="22.13226334825469" />
+      <entry key="M15" value="31.50883198575086" />
+      <entry key="M30" value="52.047460986897676" />
+      <entry key="H1" value="87.75776434304717" />
+      <entry key="H2" value="149.68541156282856" />
+      <entry key="H4" value="229.362266961289" />
+      <entry key="D1" value="380.83794445240306" />
+      <entry key="W1" value="424.0290458133558" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="2.607343083360014E-131" />
+      <entry key="MS500" value="7.642573712548034E-27" />
+      <entry key="S2" value="2.9570512582247094E-7" />
+      <entry key="S5" value="0.002536717212951542" />
+      <entry key="S10" value="0.06514454576929865" />
+      <entry key="S30" value="1.0333637793001214" />
+      <entry key="S60" value="2.7747259572428713" />
+      <entry key="M2" value="5.288110679296448" />
+      <entry key="M5" value="10.673134251997178" />
+      <entry key="M10" value="20.269477733440578" />
+      <entry key="M15" value="28.98027121308084" />
+      <entry key="M30" value="50.46217424966815" />
+      <entry key="H1" value="85.58339587604787" />
+      <entry key="H2" value="135.51538897420923" />
+      <entry key="H4" value="189.54631803362832" />
+      <entry key="D1" value="272.9919713985768" />
+      <entry key="W1" value="293.37199376720446" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="6.93308123264461E-7" />
-      <entry key="MS500" value="0.05863882478129193" />
-      <entry key="S2" value="0.4920920110169001" />
-      <entry key="S5" value="0.7530408351043176" />
-      <entry key="S10" value="0.8678678777683568" />
-      <entry key="S30" value="1.0561106046469748" />
-      <entry key="S60" value="1.6755518136392702" />
-      <entry key="M2" value="3.081274142641984" />
-      <entry key="M5" value="7.221765990431654" />
-      <entry key="M10" value="14.82578804209958" />
-      <entry key="M15" value="23.830325102311036" />
-      <entry key="M30" value="57.543139818657274" />
-      <entry key="H1" value="125.46586194192024" />
-      <entry key="H2" value="227.03689288436175" />
-      <entry key="H4" value="340.77423355140826" />
-      <entry key="D1" value="530.1405826442738" />
-      <entry key="W1" value="579.9602166203083" />
+      <entry key="MS100" value="0.00146996752676862" />
+      <entry key="MS500" value="0.2713073429704518" />
+      <entry key="S2" value="0.7217150370342319" />
+      <entry key="S5" value="0.882522959118122" />
+      <entry key="S10" value="1.0480384090501143" />
+      <entry key="S30" value="2.571500676931508" />
+      <entry key="S60" value="5.350677852144222" />
+      <entry key="M2" value="9.597748466957912" />
+      <entry key="M5" value="21.077588637099197" />
+      <entry key="M10" value="42.320336259571675" />
+      <entry key="M15" value="60.41303595474974" />
+      <entry key="M30" value="102.43972095444657" />
+      <entry key="H1" value="173.26907203364254" />
+      <entry key="H2" value="285.133037916803" />
+      <entry key="H4" value="418.8567501976591" />
+      <entry key="D1" value="653.8166371748171" />
+      <entry key="W1" value="717.3989811566977" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -222,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785872051763</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix error in romy's finance_and_billing_manager\dashboardViewController.java file.">
+      <option name="closed" value="true" />
+      <created>1785884531118</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1785884531118</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -231,36 +231,65 @@ public class modifyOrderViewController implements UserReceiver
     @javafx.fxml.FXML
     public void sideBarTrackOrderButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/airline_representative/truckOrderView.fxml",
+                actionEvent,
+                "/airline_representative/truckOrderView.fxml",
                 loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarCreateCateringOrderButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/airline_representative/createCateringOrderView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void homeButtonAirportCateringService(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/airline_representative/dashboardView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarPayInvoiceButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/airline_representative/payBillView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarConfirmDeliveryButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/airline_representative/confirmDeliveryView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarFlightDelayButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/airline_representative/flightDelayView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarCancelOrderButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/airline_representative/cancelOrderView.fxml",
+                loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarOrderHistoryButton(ActionEvent actionEvent) {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent,
+                "/airline_representative/orderHistoryView.fxml",
+                loggedInUser);
     }
 
 }
