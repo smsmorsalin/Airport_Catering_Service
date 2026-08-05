@@ -5,6 +5,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import nonuser.PurchaseRequest;
+import utility.AlertGenerator;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
@@ -26,6 +29,24 @@ public class InventoryManager extends Employee implements Serializable {
     public boolean updateProfile(){return false;}
 
 
+    public PurchaseRequest purchaseRequest(String productName, int quantity, String supplierName, LocalDate expectedDeliveryDate){
+        //validation
+        PurchaseRequest newRequest = new PurchaseRequest(productName, quantity, supplierName, expectedDeliveryDate);
+
+        boolean b = BinaryFileUtility.writeObjects("PurchaseRequest.bin", newRequest);
+        if(b){
+            AlertGenerator.showAlert("Success", "purchase Request Created");
+            return newRequest;
+        }
+        return null;
+
+    }
+
+
+
+
+
+    //habijabi
     public static void renderCheckIngredientAvailability(javafx.event.ActionEvent event, User user) {
         SceneSwitchingHelper.switchSceneWithData(event, "/InventoryManager/CheckIngredientAvailabilityView.fxml",user);
     }
