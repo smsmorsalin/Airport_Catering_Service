@@ -65,7 +65,7 @@ public class ManageQualityIssueController implements UserReceiver
     }
     @javafx.fxml.FXML
     public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws IOException {
-        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent,loggedInUser);
     }
 
     @Deprecated
@@ -103,4 +103,8 @@ public class ManageQualityIssueController implements UserReceiver
     }
 
 
+    @javafx.fxml.FXML
+    public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewReceiveInspectionRequest(actionEvent,loggedInUser);
+    }
 }

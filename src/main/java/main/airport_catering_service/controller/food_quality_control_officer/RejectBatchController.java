@@ -99,7 +99,7 @@ public class RejectBatchController implements UserReceiver
 
     @javafx.fxml.FXML
     public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws IOException {
-        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent,loggedInUser);
     }
 
 
@@ -122,8 +122,6 @@ public class RejectBatchController implements UserReceiver
     public void sideBarPerformInspectionOnAction(ActionEvent actionEvent) {
        FoodQualityControlOfficer.viewPerformInspection(actionEvent,loggedInUser);
     }
-
-
 
     @javafx.fxml.FXML
     public void sideBarGenerateQAReportOnAction(ActionEvent actionEvent) {

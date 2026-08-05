@@ -73,14 +73,9 @@ public class FoodQualityControlOfficer extends Employee implements Serializable 
 
 
     }
-    public static void reverseFQCDashboard(javafx.event.ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader
-                (FoodQualityControlOfficer.class.getResource("/FoodQualityControlOfficer/dashboardView.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public static void reverseFQCDashboard(javafx.event.ActionEvent event,User user) {
+        SceneSwitchingHelper.switchSceneWithData(event,"/FoodQualityControlOfficer/dashboardView.fxml",user );
+
     }
 
 

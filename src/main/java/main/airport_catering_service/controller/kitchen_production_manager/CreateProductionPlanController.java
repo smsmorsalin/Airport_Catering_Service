@@ -92,58 +92,10 @@ public class CreateProductionPlanController  implements UserReceiver {
                         "Target Time:" + targetTime
         );
 
-        // file read
-
-        ArrayList<Object> receivedOrderObjects = BinaryFileUtility.readObjects("ReceivedApprovedCateringOrder.bin");
-
-        CateringOrder selectedOrder = null;
-
-        int productionOrderId=0;
-        for (Object object : receivedOrderObjects) {
-            if (object instanceof CateringOrder cateringOrder) {
-                if (cateringOrder.getOrderId() == productionOrderId) {
-                    selectedOrder = cateringOrder;
-                    break;
-                }
-            }
-        }
-        if (selectedOrder == null) {
-            showAlert("Approved production order not found.");
-            return;
-        }
-//        ????????????????????????
-        LocalDate productionDate = LocalDate.now();
-        ProductionPlan newProductionPlan = new ProductionPlan(
-                productionOrderId,
-                productionDate,
-                targetTime,
-                LocalTime.now(),
-                targetTime,
-                "Preparation",
-                "Pending"
-        );
-
-
-        //file write
-
-        boolean saved = BinaryFileUtility.writeObjects("ProductionPlan.bin", newProductionPlan);
-
-        if (!saved) {
-            showAlert("Production plan could not be saved.");
-            return;
-        }
-
-        loadProductionPlans();
-        showAlert(
-                "Production Plan created successfully.\n" +
-                        "Production Order ID: " + productionOrderId + "\n" +
-                        "Production Date: " + productionDate + "\n" +
-                        "Target Time: " + targetTime
-        );
     }
     @FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent)throws IOException {
-        KitchenProductionManager.reverseDashboard(actionEvent);
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent)  {
+        KitchenProductionManager.reverseDashboard(actionEvent,loggedInUser);
     }
 
     private void loadProductionPlans() {
@@ -151,32 +103,32 @@ public class CreateProductionPlanController  implements UserReceiver {
 
 
     @FXML
-    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) throws IOException {
+    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) {
         KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent,loggedInUser);
     }
     @FXML
-    public void sideBarProductionReportsOA(ActionEvent actionEvent)throws IOException {
+    public void sideBarProductionReportsOA(ActionEvent actionEvent)  {
         KitchenProductionManager.viewGenerateProductionReports(actionEvent,loggedInUser);
     }
     @FXML
-    public void sideBarApproveProductionOA(ActionEvent actionEvent)throws IOException {
-        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent,loggedInUser);
+    public void sideBarApproveProductionOA(ActionEvent actionEvent)  {
+        KitchenProductionManager.viewApproveProductionCompletion(actionEvent,loggedInUser);
     }
     @FXML
-    public void sideBarMonitorProductionOA(ActionEvent actionEvent) throws IOException {
+    public void sideBarMonitorProductionOA(ActionEvent actionEvent)   {
         KitchenProductionManager.viewMonitorProductionActivities(actionEvent,loggedInUser);
     }
     @FXML
-    public void sideBarCalculateIngredientOA(ActionEvent actionEvent) throws IOException {
+    public void sideBarCalculateIngredientOA(ActionEvent actionEvent)   {
 
         KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent,loggedInUser);
     }
     @FXML
-    public void sideBarProductionScheduleOA(ActionEvent actionEvent) throws IOException {
-        KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
+    public void sideBarProductionScheduleOA(ActionEvent actionEvent)   {
+        KitchenProductionManager.ViewCreateProductionSchedule(actionEvent,loggedInUser);
     }
     @FXML
-    public void sideBarMenuListOA(ActionEvent actionEvent) throws IOException {
+    public void sideBarMenuListOA(ActionEvent actionEvent)   {
         KitchenProductionManager.viewCreateMenuList(actionEvent,loggedInUser);
     }
 }
