@@ -94,11 +94,8 @@ public class emergencyDeliveryController implements UserReceiver
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
 
-        if (emergencyRequestIdTextfield.getText() == null
-                || emergencyRequestIdTextfield.getText().trim().isEmpty()
-                || orderIdTextfield.getText() == null
+        if ( emergencyRequestIdTextfield.getText().trim().isEmpty()
                 || orderIdTextfield.getText().trim().isEmpty()
-                || emergencyNotetextfield.getText() == null
                 || emergencyNotetextfield.getText().trim().isEmpty()) {
 
             AlertGenerator.showAlert("Invalid Input", "All fields must be filled.");

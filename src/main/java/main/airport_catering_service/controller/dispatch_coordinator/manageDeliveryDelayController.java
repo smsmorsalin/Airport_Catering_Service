@@ -94,9 +94,8 @@ public class manageDeliveryDelayController implements UserReceiver
     @javafx.fxml.FXML
     public void searchAndShowButtonOnAction(ActionEvent actionEvent) {
 
-        if (deliveryIdTextfield.getText() == null || deliveryIdTextfield.getText().trim().isEmpty() || delayReasonTextfield.getText() == null
-                || delayReasonTextfield.getText().trim().isEmpty() || revisedDeliveryTimeTextfield.getText() == null
-                || revisedDeliveryTimeTextfield.getText().trim().isEmpty()) {
+        if ( deliveryIdTextfield.getText().trim().isEmpty()
+                || delayReasonTextfield.getText().trim().isEmpty() || revisedDeliveryTimeTextfield.getText().trim().isEmpty()) {
 
             AlertGenerator.showAlert("Invalid Input", "All fields must be filled.");
             return;
