@@ -85,49 +85,49 @@ public class dashboardController implements UserReceiver {
 
 
     @javafx.fxml.FXML
-    public void sideBarMonitorProductionOnAction(ActionEvent actionEvent) throws IOException {
+    public void sideBarMonitorProductionOnAction(ActionEvent actionEvent)   {
         KitchenProductionManager.viewMonitorProductionActivities(actionEvent,loggedInUser);
 
 
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionScheduleOnAction(ActionEvent actionEvent) throws IOException {
+    public void sideBarProductionScheduleOnAction(ActionEvent actionEvent)   {
         KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
 
     }
 
     @javafx.fxml.FXML
-    public void sideBarMenuListOnAction(ActionEvent actionEvent) throws IOException {
+    public void sideBarMenuListOnAction(ActionEvent actionEvent)   {
         SceneSwitchingHelper.switchSceneWithData(actionEvent,"/KitchenProductionManager/CreateMenuList.fxml", loggedInUser);
 
 
     }
 
     @javafx.fxml.FXML
-    public void sideBarReceiveOrdersOnAction(ActionEvent actionEvent) throws IOException{
+    public void sideBarReceiveOrdersOnAction(ActionEvent actionEvent)  {
         KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarApproveProductionOnAction(ActionEvent actionEvent) throws IOException {
+    public void sideBarApproveProductionOnAction(ActionEvent actionEvent)   {
 
         KitchenProductionManager.viewApproveProductionCompletion(actionEvent,loggedInUser);
 
     }
 
     @javafx.fxml.FXML
-    public void sideBarCalculateIngredientOnAction(ActionEvent actionEvent) throws IOException{
+    public void sideBarCalculateIngredientOnAction(ActionEvent actionEvent)  {
         KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionReportsOnAction(ActionEvent actionEvent)throws  IOException {
+    public void sideBarProductionReportsOnAction(ActionEvent actionEvent)   {
         KitchenProductionManager.viewGenerateProductionReports(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionPlanOnAction(ActionEvent actionEvent) throws  IOException{
+    public void sideBarProductionPlanOnAction(ActionEvent actionEvent)   {
         KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
     }
 
