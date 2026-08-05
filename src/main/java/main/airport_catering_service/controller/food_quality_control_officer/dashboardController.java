@@ -77,7 +77,7 @@ public class dashboardController implements UserReceiver {
     }
     @javafx.fxml.FXML
     public void sideBarAirportCateringServiceOnAction(ActionEvent actionEvent) throws IOException{
-        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent );
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent,loggedInUser );
     }
 
 
@@ -89,7 +89,6 @@ public class dashboardController implements UserReceiver {
     @javafx.fxml.FXML
     public void sideBarQualityIssueOnAction(ActionEvent actionEvent) {
         FoodQualityControlOfficer.viewManageQualityIssue(actionEvent,loggedInUser );
-
 
     }
 

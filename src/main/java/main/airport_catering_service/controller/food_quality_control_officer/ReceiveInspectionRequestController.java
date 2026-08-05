@@ -71,12 +71,12 @@ public class ReceiveInspectionRequestController implements UserReceiver
     }
     @javafx.fxml.FXML
     public void sideBarManageQualityIssueOnAction(ActionEvent actionEvent){
-        FoodQualityControlOfficer.viewQualityTrendAnalysis(actionEvent,loggedInUser);
+        FoodQualityControlOfficer.viewManageQualityIssue(actionEvent,loggedInUser);
 
     }
     @javafx.fxml.FXML
     public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent)throws IOException {
-        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
@@ -103,6 +103,6 @@ public class ReceiveInspectionRequestController implements UserReceiver
 
     @javafx.fxml.FXML
     public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
-       FoodQualityControlOfficer.viewReceiveInspectionRequest(actionEvent,loggedInUser);
+       FoodQualityControlOfficer.viewRejectBatch(actionEvent,loggedInUser);
     }
 }

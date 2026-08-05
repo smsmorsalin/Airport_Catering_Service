@@ -73,8 +73,8 @@ public class ApproveBatchController implements UserReceiver
         }
     }
     @javafx.fxml.FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws IOException {
-        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
+    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
