@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e294d533-d73b-4f5d-8179-c5b2b2679b1c" name="Changes" comment=" &quot;switching all button on food quality control officer&quot;">
+    <list default="true" id="e294d533-d73b-4f5d-8179-c5b2b2679b1c" name="Changes" comment="m &quot;fix some error in kitchen production manager&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/createPurchaseRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/createPurchaseRequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/PurchaseRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/PurchaseRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/InventoryManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -20,12 +31,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
-    "accountId": "09b4b316-9114-4bc1-8e76-96925cab0536"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
+    &quot;accountId&quot;: &quot;09b4b316-9114-4bc1-8e76-96925cab0536&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -36,7 +47,8 @@
   "keyToString": {
     "Application.ACS.executor": "Run",
     "Application.HelloApplication.executor": "Run",
-    "git-widget-placeholder": "saif",
+    "git-widget-placeholder": "sihab",
+    "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
@@ -138,21 +150,21 @@
       <option name="project" value="LOCAL" />
       <updated>1785933010181</updated>
     </task>
-    <task id="LOCAL-00012" summary=" &quot;switching all button on food quality control officer&quot;">
+    <task id="LOCAL-00012" summary="m &quot;fix some error in kitchen production manager&quot;">
       <option name="closed" value="true" />
-      <created>1785934328398</created>
+      <created>1785935808070</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1785934328398</updated>
+      <updated>1785935808070</updated>
     </task>
-    <task id="LOCAL-00013" summary=" &quot;switching all button on food quality control officer&quot;">
+    <task id="LOCAL-00013" summary="m &quot;fix some error in kitchen production manager&quot;">
       <option name="closed" value="true" />
-      <created>1785935200016</created>
+      <created>1785940765785</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1785935200016</updated>
+      <updated>1785940765785</updated>
     </task>
     <option name="localTasksCounter" value="14" />
     <servers />
@@ -163,7 +175,6 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/saif' into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="Merge remote-tracking branch 'origin/saif' into saif" />
     <MESSAGE value="m &quot;fix some error in kitchen production manager&quot;" />
-    <MESSAGE value=" &quot;switching all button on food quality control officer&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value=" &quot;switching all button on food quality control officer&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="m &quot;fix some error in kitchen production manager&quot;" />
   </component>
 </project>
