@@ -133,11 +133,11 @@ public class RejectBatchController implements UserReceiver
 
     @javafx.fxml.FXML
     public void sideBarApproveBatchOnAction(ActionEvent actionEvent) {
-        FoodQualityControlOfficer.viewApproveBatch(actionEvent,loggedInUser);
+        FoodQualityControlOfficer.viewApproveBatch(actionEvent, loggedInUser);
 
     }
     @javafx.fxml.FXML
-    public void sideBarManageQualityIssueOnAction(ActionEvent actionEvent) {
+    public void sideBarManageQualityIssueOnActions(ActionEvent actionEvent) {
         FoodQualityControlOfficer.viewManageQualityIssue(actionEvent,loggedInUser);
     }
 }

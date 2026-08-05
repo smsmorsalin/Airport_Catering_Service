@@ -50,29 +50,27 @@ public class FoodQualityControlOfficer extends Employee implements Serializable 
 
     public static void viewRejectBatch(javafx.event.ActionEvent event,User user) {
         SceneSwitchingHelper.switchSceneWithData(event, "/FoodQualityControlOfficer/RejectBatchView.fxml",user);
-//
 
 
     }
     public static void viewReceiveInspectionRequest(javafx.event.ActionEvent event,User user) {
         SceneSwitchingHelper.switchSceneWithData(event, "/FoodQualityControlOfficer/ReceiveInspectionRequestView.fxml",user);
-//
+
 
     }
     public static void  viewFoodSafetyCheck (javafx.event.ActionEvent event,User user) {
         SceneSwitchingHelper.switchSceneWithData(event, "/FoodQualityControlOfficer/FoodSafetyCheckView.fxml",user);
-//
 
     }
     public static void  viewGenerateQAReport (javafx.event.ActionEvent event,User user) {
         SceneSwitchingHelper.switchSceneWithData(event, "/FoodQualityControlOfficer/GenerateQAReportView.fxml",user);
-//
+
 
 
     }
     public static void  viewManageQualityIssue (javafx.event.ActionEvent event,User user){
         SceneSwitchingHelper.switchSceneWithData(event, "/FoodQualityControlOfficer/ManageQualityIssueView.fxml",user);
-//
+
 
     }
     public static void reverseFQCDashboard(javafx.event.ActionEvent event) throws IOException {
