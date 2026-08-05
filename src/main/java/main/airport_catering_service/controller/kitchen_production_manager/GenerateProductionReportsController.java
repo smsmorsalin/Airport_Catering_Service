@@ -45,8 +45,8 @@ public class GenerateProductionReportsController implements UserReceiver
 
     @javafx.fxml.FXML
     public void initialize() {
-        reportTypeComboBox.getItems().addAll( "Daily", "Weekly", "Monthly", "Inspection", "Approval", "Rejection", "Compliance", "Quality Trend");
-
+        reportTypeComboBox.getItems().addAll("Daily", "Weekly", "Monthly", "Inspection", "Approval", "Rejection", "Compliance", "Quality Trend");
+//njnndn
     }
 
     @FXML
