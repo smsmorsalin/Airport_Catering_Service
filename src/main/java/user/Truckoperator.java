@@ -22,6 +22,7 @@ public class Truckoperator extends Employee implements Serializable {
     @Override
     public boolean updateProfile(){
         return true;
+
     }
 
     public static void renderDashboardView(javafx.event.ActionEvent event, User user){
