@@ -58,7 +58,7 @@ public class CustomerSupportOfficer extends Employee implements Serializable  {
     @Override
     public boolean updateProfile(){return false;}
 
-        public static void  viewRegisterComplaint(javafx.event.ActionEvent event,User user ) {
+       public static void  viewRegisterComplaint(javafx.event.ActionEvent event,User user ) {
         SceneSwitchingHelper.switchSceneWithData(event, "/CustomerSupportOfficer/RegisterComplaintView.fxml",user);
        }
 
@@ -70,24 +70,24 @@ public class CustomerSupportOfficer extends Employee implements Serializable  {
         SceneSwitchingHelper.switchSceneWithData(event, "/CustomerSupportOfficer/ResolveComplaintView.fxml",user);
        }
 
-    public static void  viewNewAirlineRequest(javafx.event.ActionEvent event,User user ) {
+       public static void  viewNewAirlineRequest(javafx.event.ActionEvent event,User user ) {
         SceneSwitchingHelper.switchSceneWithData(event, "/CustomerSupportOfficer/NewAirlineRequestView.fxml",user);
-    }
+       }
 
-    public static void  viewNewFlightEntry(javafx.event.ActionEvent event,User user ) {
+       public static void  viewNewFlightEntry(javafx.event.ActionEvent event,User user ) {
         SceneSwitchingHelper.switchSceneWithData(event, "/CustomerSupportOfficer/NewFlightEntryView.fxml",user);
-    }
+       }
 
-    public static void  viewCancellationAndDelay(javafx.event.ActionEvent event,User user ) {
+       public static void  viewCancellationAndDelay(javafx.event.ActionEvent event,User user ) {
         SceneSwitchingHelper.switchSceneWithData(event, "/CustomerSupportOfficer/CancellationAndDelayView.fxml",user);
-    }
+       }
 
-    public static void  viewServiceUpdates(javafx.event.ActionEvent event,User user ) {
+       public static void  viewServiceUpdates(javafx.event.ActionEvent event,User user ) {
         SceneSwitchingHelper.switchSceneWithData(event, "/CustomerSupportOfficer/ServiceUpdatesView.fxml",user);
-    }
+       }
 
-    public static void  viewGenerateReports(javafx.event.ActionEvent event,User user ) {
+       public static void  viewGenerateReports(javafx.event.ActionEvent event,User user ) {
         SceneSwitchingHelper.switchSceneWithData(event, "/CustomerSupportOfficer/GenerateReportsView.fxml",user);
-    }
+       }
 
     }

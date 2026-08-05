@@ -20,7 +20,6 @@ public class PaymentHistoryViewController implements UserReceiver {
     @javafx.fxml.FXML private TextField invoiceIdTextField;
     @javafx.fxml.FXML private TableColumn<Payment, Double> amountColumn;
     @javafx.fxml.FXML private TableColumn<Payment, String> methodColumn;
-    @javafx.fxml.FXML private TextField airlineTextField;
     @javafx.fxml.FXML private TableView<Payment> paymentTable;
     @javafx.fxml.FXML private TableColumn<Payment, String> airlineColumn;
     @javafx.fxml.FXML private TableColumn<Payment, String> statusColumn;
@@ -94,15 +93,79 @@ public class PaymentHistoryViewController implements UserReceiver {
         return "Unknown";
     }
 
-    private void switchTo(ActionEvent event, String view) throws IOException { SceneSwitchingHelper.switchSceneWithData(event, view, loggedInUser); }
-    @javafx.fxml.FXML public void sidebarHomePageButtonOnAction(ActionEvent e) throws IOException { switchTo(e, "/finance_and_billing_manager/dashboardView.fxml"); }
-    @javafx.fxml.FXML public void sidebardashboardButtonOnAction(ActionEvent e) throws IOException { switchTo(e, "/finance_and_billing_manager/dashboardView.fxml"); }
-    @javafx.fxml.FXML public void sideBarRevenueSummaryButtonOnAction(ActionEvent e) throws IOException { switchTo(e, "/finance_and_billing_manager/RevenueSummaryView.fxml"); }
-    @javafx.fxml.FXML public void sideBarRecordPaymentButtonOnAction(ActionEvent e) throws IOException { switchTo(e, "/finance_and_billing_manager/RecordPaymentView.fxml"); }
-    @javafx.fxml.FXML public void sideBarProcessRefundButtonOnAction(ActionEvent e) throws IOException { switchTo(e, "/finance_and_billing_manager/ProcessRefundView.fxml"); }
-    @javafx.fxml.FXML public void sideBarGenerateInvoiceButtonOnAction(ActionEvent e) throws IOException { switchTo(e, "/finance_and_billing_manager/GenerateInvoiceView.fxml"); }
-    @javafx.fxml.FXML public void sideBarPaymentHistoryButtonOnAction(ActionEvent e) throws IOException { switchTo(e, "/finance_and_billing_manager/PaymentHistoryView.fxml"); }
-    @javafx.fxml.FXML public void sideBarCalculateCostButtonOnAction(ActionEvent e) throws IOException { switchTo(e, "/finance_and_billing_manager/CalculateCostView.fxml"); }
-    @javafx.fxml.FXML public void sideBarFinancialReportsButtonOnAction(ActionEvent e) throws IOException { switchTo(e, "/finance_and_billing_manager/FinancialReportsView.fxml"); }
-    @javafx.fxml.FXML public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent e) throws IOException { switchTo(e, "/finance_and_billing_manager/OutstandingPaymentsView.fxml"); }
+    private void switchTo (ActionEvent event, String view) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(event, view, loggedInUser);
+    }
+
+
+    @javafx.fxml.FXML
+    public void sidebarHomePageButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/dashboardView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/dashboardView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarCalculateCostButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/CalculateCostView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarGenerateInvoiceButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/GenerateInvoiceView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarRecordPaymentButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/RecordPaymentView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarProcessRefundButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/ProcessRefundView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/OutstandingPaymentsView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarFinancialReportsButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/FinancialReportsView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarRevenueSummaryButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/RevenueSummaryView.fxml",
+                loggedInUser);
+    }
+
+
+    @javafx.fxml.FXML
+    public void sideBarPaymentHistoryButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/PaymentHistoryView.fxml",
+                loggedInUser);
+    }
 }
