@@ -72,60 +72,40 @@ public class ApproveBatchController implements UserReceiver
             return;
         }
     }
-
+    @javafx.fxml.FXML
+    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent,loggedInUser);
+    }
 
     @javafx.fxml.FXML
     public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/RejectBatchView.fxml",
-                loggedInUser);
-    }
+        FoodQualityControlOfficer.viewRejectBatch(actionEvent,loggedInUser);
 
+    }
     @javafx.fxml.FXML
     public void sideBarQualityTrendAnalysisOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/QualityTrendAnalysisView.fxml",
-                loggedInUser);
-    }
+        FoodQualityControlOfficer.viewQualityTrendAnalysis(actionEvent, loggedInUser);
 
+    }
     @javafx.fxml.FXML
     public void sideBarFoodSafetyCheckOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/FoodSafetyCheckView.fxml",
-                loggedInUser);
+        FoodQualityControlOfficer.viewFoodSafetyCheck(actionEvent,loggedInUser);
     }
-
     @javafx.fxml.FXML
     public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/ReceiveInspectionRequestView.fxml",
-                loggedInUser);
+        FoodQualityControlOfficer.viewReceiveInspectionRequest(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarPerformInspectionOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/PerformInspectionView.fxml",
-                loggedInUser);
+        FoodQualityControlOfficer.viewPerformInspection(actionEvent,loggedInUser);
     }
-
-    @javafx.fxml.FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent) throws IOException {
-        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
-    }
-
     @javafx.fxml.FXML
     public void sideBarGenerateQAReportOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/GenerateQAReportView.fxml",
-                loggedInUser);
+        FoodQualityControlOfficer.viewGenerateQAReport(actionEvent,loggedInUser);
     }
-
     @javafx.fxml.FXML
     public void sideBarManageQualityIssueOnAction(ActionEvent actionEvent) {
-            SceneSwitchingHelper.switchSceneWithData(
-                    actionEvent, "/food_quality_control_officer/QualityTrendAnalysisView.fxml",
-                    loggedInUser);
-
+        FoodQualityControlOfficer.viewManageQualityIssue(actionEvent,loggedInUser);
     }
 }

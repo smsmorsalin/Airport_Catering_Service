@@ -1,53 +1,67 @@
 package nonuser;
 
+import utility.databaseAccessor;
+
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class PurchaseRequest {
-    private String IngredientName;
-    private String Quantity;
-    private String Supplier;
-    private LocalDate DeliveryDate;
+public class PurchaseRequest implements Serializable {
+    private int ingredientId;
+    private String ingredientName;
+    private int quantity;
+    private String supplier;
+    private LocalDate expectedDeliveryDate;
     private String PurchaseHistory;
-    private LocalDate ReceivingDate;
+    private LocalDate receivingDate;
+    private String status;
 
+    public PurchaseRequest(String ingredientName, int quantity, String supplier, LocalDate expectedDeliveryDate) {
+        this.ingredientId = generateNewIngredientId();
+        this.ingredientName = ingredientName;
+        this.quantity = quantity;
+        this.supplier = supplier;
+        this.expectedDeliveryDate = expectedDeliveryDate;
+        this.status = "Pending";
+    }
 
-    public PurchaseRequest(String ingredientName, String quantity, String supplier, LocalDate deliveryDate) {
-        IngredientName = ingredientName;
-        Quantity = quantity;
-        Supplier = supplier;
-        DeliveryDate = deliveryDate;
+    public int getIngredientId() {
+        return ingredientId;
+    }
+
+    public void setIngredientId(int ingredientId) {
+        this.ingredientId = ingredientId;
     }
 
     public String getIngredientName() {
-        return IngredientName;
+        return ingredientName;
     }
 
     public void setIngredientName(String ingredientName) {
-        IngredientName = ingredientName;
+        this.ingredientName = ingredientName;
     }
 
-    public String getQuantity() {
-        return Quantity;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setQuantity(String quantity) {
-        Quantity = quantity;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public String getSupplier() {
-        return Supplier;
+        return supplier;
     }
 
     public void setSupplier(String supplier) {
-        Supplier = supplier;
+        this.supplier = supplier;
     }
 
-    public LocalDate getDeliveryDate() {
-        return DeliveryDate;
+    public LocalDate getExpectedDeliveryDate() {
+        return expectedDeliveryDate;
     }
 
-    public void setDeliveryDate(LocalDate deliveryDate) {
-        DeliveryDate = deliveryDate;
+    public void setExpectedDeliveryDate(LocalDate expectedDeliveryDate) {
+        this.expectedDeliveryDate = expectedDeliveryDate;
     }
 
     public String getPurchaseHistory() {
@@ -59,10 +73,22 @@ public class PurchaseRequest {
     }
 
     public LocalDate getReceivingDate() {
-        return ReceivingDate;
+        return receivingDate;
     }
 
     public void setReceivingDate(LocalDate receivingDate) {
-        ReceivingDate = receivingDate;
+        this.receivingDate = receivingDate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    private int generateNewIngredientId(){
+        return databaseAccessor.generateNewUniqueId("PurchaseRequest.bin", "ingredientId");
     }
 }

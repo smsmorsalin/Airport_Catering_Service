@@ -14,9 +14,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import nonuser.ProductionActivities;
 import user.KitchenProductionManager;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 
-public class MonitorProductionActivitiesController
+public class MonitorProductionActivitiesController implements UserReceiver
 {
     @javafx.fxml.FXML
     private Label fxidDisplayCompletedQuantityLabel;
@@ -42,6 +44,16 @@ public class MonitorProductionActivitiesController
     private TableView<ProductionActivities> mainTableView;
     @javafx.fxml.FXML
     private TableColumn<ProductionActivities,Integer> productionOrderIDTableView;
+
+    private KitchenProductionManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof KitchenProductionManager kitchenProductionManager){
+            loggedInUser = kitchenProductionManager;
+        }else{
+            AlertGenerator.showAlert("error", "error Authentication failed");
+        }
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -71,43 +83,51 @@ public class MonitorProductionActivitiesController
 
     }
     @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent) throws IOException{
-        KitchenProductionManager.reverseDashboard(actionEvent);
+    public void sidebarAirportCateringServiceButtonOnClick(ActionEvent actionEvent){
+        KitchenProductionManager.reverseDashboard(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void SideBarProductionPlanOA(ActionEvent actionEvent)throws IOException{
-        KitchenProductionManager.viewCreateProductionPlan(actionEvent);
+    public void SideBarProductionPlanOA(ActionEvent actionEvent) {
+
+        KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
+    }
+
+
+    @javafx.fxml.FXML
+    public void sideBarReceiveOrdersOA(ActionEvent actionEvent)  {
+
+        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent,loggedInUser);
+    }
+
+
+    @javafx.fxml.FXML
+    public void sideBarProductionReportsOA(ActionEvent actionEvent)  {
+
+        KitchenProductionManager.viewGenerateProductionReports(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarReceiveOrdersOA(ActionEvent actionEvent) throws IOException{
-        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent);
+    public void sideBarApproveProductionOA(ActionEvent actionEvent)  {
+
+        KitchenProductionManager.viewApproveProductionCompletion(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionReportsOA(ActionEvent actionEvent) throws IOException{
-        KitchenProductionManager.viewGenerateProductionReports(actionEvent);
-    }
+    public void sideBarCalculateIngredientOA(ActionEvent actionEvent)  {
 
-    @javafx.fxml.FXML
-    public void sideBarApproveProductionOA(ActionEvent actionEvent) throws IOException{
-        KitchenProductionManager.viewApproveProductionCompletion(actionEvent);
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarCalculateIngredientOA(ActionEvent actionEvent) throws IOException{
-        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent);
+        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent,loggedInUser);
 
     }
 
     @javafx.fxml.FXML
-    public void sideBarProductionScheduleOA(ActionEvent actionEvent) throws IOException{
-        KitchenProductionManager.ViewCreateProductionSchedule(actionEvent);
+    public void sideBarProductionScheduleOA(ActionEvent actionEvent)  {
+
+        KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarMenuListOA(ActionEvent actionEvent) throws IOException{
-        KitchenProductionManager.viewCreateMenuList(actionEvent);
+    public void sideBarMenuListOA(ActionEvent actionEvent)  {
+        KitchenProductionManager.viewCreateMenuList(actionEvent,loggedInUser);
     }
 }

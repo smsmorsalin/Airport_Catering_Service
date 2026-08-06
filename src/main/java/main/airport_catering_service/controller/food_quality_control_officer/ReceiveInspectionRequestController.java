@@ -8,12 +8,14 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import nonuser.Inspection;
 import user.FoodQualityControlOfficer;
 import user.KitchenProductionManager;
+import user.User;
+import user.UserReceiver;
 import utility.AlertGenerator;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 
-public class ReceiveInspectionRequestController
+public class ReceiveInspectionRequestController implements UserReceiver
 {
     @javafx.fxml.FXML
     private TableColumn<Inspection,String> inspectionStatusTableView;
@@ -28,7 +30,17 @@ public class ReceiveInspectionRequestController
     @javafx.fxml.FXML
     private TextField inspectionRequestIDTextField;
 
-    private KitchenProductionManager loggedInUser;
+
+    private FoodQualityControlOfficer loggedInUser;
+
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof FoodQualityControlOfficer foodQualityControlOfficer){
+            loggedInUser = foodQualityControlOfficer;
+            return;
+        }
+        AlertGenerator.showAlert("Error", "You are not a valid user for this page");
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -57,60 +69,40 @@ public class ReceiveInspectionRequestController
             return;
         }
     }
+    @javafx.fxml.FXML
+    public void sideBarManageQualityIssueOnAction(ActionEvent actionEvent){
+        FoodQualityControlOfficer.viewManageQualityIssue(actionEvent,loggedInUser);
 
+    }
     @javafx.fxml.FXML
     public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent)throws IOException {
-        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent,loggedInUser);
     }
-
 
     @javafx.fxml.FXML
     public void sideBarQualityTrendAnalysisOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/QualityTrendAnalysisView.fxml",
-                loggedInUser);
+    FoodQualityControlOfficer.viewQualityTrendAnalysis(actionEvent,loggedInUser);
     }
-
     @javafx.fxml.FXML
     public void sideBarFoodSafetyCheckOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/FoodSafetyCheckView.fxml",
-                loggedInUser);
+        FoodQualityControlOfficer.viewFoodSafetyCheck(actionEvent,loggedInUser);
     }
-
     @javafx.fxml.FXML
     public void sideBarPerformInspectionOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/PerformInspectionView.fxml",
-                loggedInUser);
+        FoodQualityControlOfficer.viewPerformInspection(actionEvent,loggedInUser);
     }
-
 
     @javafx.fxml.FXML
     public void sideBarGenerateQAReportOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/GenerateQAReportView.fxml",
-                loggedInUser);
+        FoodQualityControlOfficer.viewGenerateQAReport(actionEvent,loggedInUser);
     }
-
     @javafx.fxml.FXML
     public void sideBarApproveBatchOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/ApproveBatchView.fxml",
-                loggedInUser);
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarManageQualityIssueOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/QualityTrendAnalysisView.fxml",
-                loggedInUser);
+        FoodQualityControlOfficer.viewApproveBatch(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/food_quality_control_officer/RejectBatchView.fxml",
-                loggedInUser);
+       FoodQualityControlOfficer.viewRejectBatch(actionEvent,loggedInUser);
     }
 }

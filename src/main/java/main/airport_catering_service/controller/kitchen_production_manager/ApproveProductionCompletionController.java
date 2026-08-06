@@ -8,17 +8,31 @@ import user.FoodQualityControlOfficer;
 import user.KitchenProductionManager;
 
 import javafx.scene.control.TextArea;
+import user.User;
+import user.UserReceiver;
+import utility.AlertGenerator;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
 
 
-public class ApproveProductionCompletionController
+public class ApproveProductionCompletionController implements UserReceiver
 {
     @javafx.fxml.FXML
     private TextField productionOrderIDTextField;
 
+
+
     private KitchenProductionManager loggedInUser;
+    @Override
+    public void setLoggedInUser(User user){
+        if (user instanceof KitchenProductionManager kitchenProductionManager){
+            loggedInUser = kitchenProductionManager;
+            System.out.println(kitchenProductionManager);
+        }else{
+            AlertGenerator.showAlert("error", "error Authentication failed");
+        }
+    }
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -53,51 +67,39 @@ public class ApproveProductionCompletionController
     }
 
     @javafx.fxml.FXML
-    public void sidebarAirportCateringServiceButtonOnA(ActionEvent actionEvent)throws IOException {
-        KitchenProductionManager.reverseDashboard(actionEvent);
+    public void sidebarAirportCateringServiceButtonOnA(ActionEvent actionEvent){
+        KitchenProductionManager.reverseDashboard(actionEvent,loggedInUser);
+
+
     }
     @javafx.fxml.FXML
-    public void sideBarReceiveOrdersOnA(ActionEvent actionEvent) throws IOException {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/kitchen_production_manager/ReceiveApprovedCateringOrders.fxml",
-                loggedInUser);
+    public void sideBarReceiveOrdersOnA(ActionEvent actionEvent)  {
+        KitchenProductionManager.viewReceiveApprovedCateringOrders(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void sideBarProductionReportsOnA(ActionEvent actionEvent) throws IOException {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/kitchen_production_manager/GenerateProductionReports.fxml",
-                loggedInUser);
+    public void sideBarProductionReportsOnA(ActionEvent actionEvent)  {
+        KitchenProductionManager.viewGenerateProductionReports(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void sideBarCalculateIngredientOnA(ActionEvent actionEvent) throws IOException {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/kitchen_production_manager/CalculateIngredientRequirements.fxml",
-                loggedInUser);
+    public void sideBarCalculateIngredientOnA(ActionEvent actionEvent) {
+        KitchenProductionManager.viewCalculateIngredientRequirements(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void sideBarMenuListOnA(ActionEvent actionEvent) throws IOException {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/kitchen_production_manager/CreateMenuList.fxml",
-                loggedInUser);
+    public void sideBarMenuListOnA(ActionEvent actionEvent)  {
+        KitchenProductionManager.viewCreateMenuList(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void sideBarProductionPlanOnA(ActionEvent actionEvent) throws IOException {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/kitchen_production_manager/CreateProductionPlan.fxml",
-                loggedInUser);
+    public void sideBarProductionPlanOnA(ActionEvent actionEvent)  {
+        KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sideBarMonitorProductionOnAction(ActionEvent actionEvent) throws IOException {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/kitchen_production_manager/MonitorProductionActivities.fxml",
-                loggedInUser);
+    public void sideBarMonitorProductionOnAction(ActionEvent actionEvent)  {
+        KitchenProductionManager.viewMonitorProductionActivities(actionEvent,loggedInUser);
     }
     @javafx.fxml.FXML
-    public void sideBarProductionScheduleOnA(ActionEvent actionEvent) throws IOException {
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/kitchen_production_manager/CreateProductionSchedule.fxml",
-                loggedInUser);
+    public void sideBarProductionScheduleOnA(ActionEvent actionEvent){
+        KitchenProductionManager.ViewCreateProductionSchedule(actionEvent,loggedInUser);
 
     }
 }

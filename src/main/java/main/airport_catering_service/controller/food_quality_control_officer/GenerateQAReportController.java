@@ -51,18 +51,6 @@ public class GenerateQAReportController implements UserReceiver
     }
 
     @Deprecated
-    public void clearOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarQualityTrendAnalysisOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void generateReportOnAction(ActionEvent actionEvent) {
         if(startDatePicker.getValue() == null || endDatePicker.getValue() ==null){
             AlertGenerator.showAlert("Invalid Input","Date must in selected");
@@ -73,36 +61,56 @@ public class GenerateQAReportController implements UserReceiver
             return;
         }
         if(endDatePicker.getValue().isAfter(LocalDate.now())){
-            AlertGenerator.showAlert("Invaid Input","End date can not be present date");
+            AlertGenerator.showAlert("Invalid Input","End date can not be present date");
             return;
         }
         if(reportTypeComboBox.getItems()==null){
             AlertGenerator.showAlert("Wrong Input","Combo Box must be selected ");
         }
     }
+    @javafx.fxml.FXML
+    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent)throws IOException {
+        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent,loggedInUser);
+    }
 
+    @javafx.fxml.FXML
+    public void sideBarRejectBatchOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewRejectBatch(actionEvent,loggedInUser);
+
+    }
+    @javafx.fxml.FXML
+    public void sideBarQualityTrendAnalysisOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewQualityTrendAnalysis(actionEvent, loggedInUser);
+
+    }
     @javafx.fxml.FXML
     public void sideBarFoodSafetyCheckOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewFoodSafetyCheck(actionEvent,loggedInUser);
     }
-
     @javafx.fxml.FXML
     public void sideBarReceiveInspectionRequestOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void exportPDFOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewReceiveInspectionRequest(actionEvent,loggedInUser);
     }
 
     @javafx.fxml.FXML
     public void sideBarPerformInspectionOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewPerformInspection(actionEvent,loggedInUser);
     }
-
-    @javafx.fxml.FXML
-    public void homeButtonAirportCateringServiceOnAction(ActionEvent actionEvent)throws IOException {
-        FoodQualityControlOfficer.reverseFQCDashboard(actionEvent);
-    }
-
     @javafx.fxml.FXML
     public void sideBarApproveBatchOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewRejectBatch(actionEvent,loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarManageQualityIssueOnAction(ActionEvent actionEvent) {
+        FoodQualityControlOfficer.viewManageQualityIssue(actionEvent,loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void exportPDFOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void generateReportOA(ActionEvent actionEvent) {
     }
 }
