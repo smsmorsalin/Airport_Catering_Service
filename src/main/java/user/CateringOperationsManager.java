@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import main.airport_catering_service.controller.catering_operations_manager.approveOrRejectOrderViewController;
 import nonuser.CateringOrder;
+import nonuser.InventoryStock;
 import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
@@ -53,12 +54,12 @@ public class CateringOperationsManager extends Employee implements Serializable 
         return false;
     }
 
-    public void approveOrRejectOrder(ArrayList<Object> cateringOrder){
+    public final void approveOrRejectOrder(ArrayList<Object> cateringOrder){
         boolean b = BinaryFileUtility.overwriteObjects("CateringOrder.bin", cateringOrder);
 
     }
 
-    public void reviewCateringOrder(ActionEvent event, int orderId, User user){
+    public final void reviewCateringOrder(ActionEvent event, int orderId, User user){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/catering_operations_manager/approveOrRejectOrderView.fxml"));
             Parent root = loader.load();
@@ -80,6 +81,12 @@ public class CateringOperationsManager extends Employee implements Serializable 
         } catch (Exception e) {
             AlertGenerator.showAlert("error", e.getMessage());
         }
+    }
+
+    public final ArrayList<Object> inventoryStatus(){
+        ArrayList<Object> inventoryStatusList;
+        inventoryStatusList = BinaryFileUtility.readObjects("InventoryStock.bin");
+        return inventoryStatusList;
     }
 
 
