@@ -1,6 +1,5 @@
 package nonuser;
 
-import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 import utility.databaseAccessor;
 
@@ -100,7 +99,7 @@ public class ProductionActivities implements Serializable {
         return databaseAccessor.generateNewUniqueId("ProductionActivities.bin", "productionOrderId");
     }
 
-    public static boolean updateProductionStatus(int productionOrderId) {
+    public static boolean updateProductionStatus(int productionOrderId, String completed) {
 
         ArrayList<Object> productionActivitiesList = BinaryFileUtility.readObjects("ProductionActivities.bin");
         if (productionActivitiesList == null || productionActivitiesList.isEmpty()) {
