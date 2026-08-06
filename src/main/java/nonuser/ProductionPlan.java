@@ -1,9 +1,10 @@
 package nonuser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class ProductionPlan {
+public class ProductionPlan implements Serializable {
     private final int productionId;
     private LocalDate productionDate;
     private LocalTime targetTime, StartTime, endTime;
@@ -70,4 +71,6 @@ public class ProductionPlan {
     public void setStatus(String status) {
         this.status = status;
     }
+
+
 }
