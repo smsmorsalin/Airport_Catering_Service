@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import main.airport_catering_service.controller.catering_operations_manager.approveOrRejectOrderViewController;
 import nonuser.CateringOrder;
+import nonuser.DeliveryStatus;
 import nonuser.InventoryStock;
 import utility.AlertGenerator;
 import utility.BinaryFileUtility;
@@ -87,6 +88,26 @@ public class CateringOperationsManager extends Employee implements Serializable 
         ArrayList<Object> inventoryStatusList;
         inventoryStatusList = BinaryFileUtility.readObjects("InventoryStock.bin");
         return inventoryStatusList;
+    }
+
+    public ArrayList<DeliveryStatus> monitorDeliveryStatus(LocalDate fromDate, LocalDate toDate){
+        ArrayList<Object> readDeliveryStatusList;
+        ArrayList<DeliveryStatus> returnDeliveryStatusList = new ArrayList<>();
+
+        readDeliveryStatusList = BinaryFileUtility.readObjects("DeliveryStatus.bin");
+        if(readDeliveryStatusList.isEmpty()){
+            AlertGenerator.showAlert("error", "DeliveryStatus is empty");
+            return null;
+        }
+        for(Object o : readDeliveryStatusList){
+            if(o instanceof DeliveryStatus d){
+                if(d.getDeliveryDate().isAfter(fromDate) && d.getDeliveryDate().isBefore(toDate)){
+                    returnDeliveryStatusList.add(d);
+                }
+            }
+        }
+        return returnDeliveryStatusList;
+
     }
 
 
