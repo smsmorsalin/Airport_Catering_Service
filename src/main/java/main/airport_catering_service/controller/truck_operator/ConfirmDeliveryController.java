@@ -19,13 +19,9 @@ public class ConfirmDeliveryController implements UserReceiver
     @javafx.fxml.FXML
     private DatePicker deliveryDatePicker;
     @javafx.fxml.FXML
-    private TextField airlineField;
-    @javafx.fxml.FXML
     private Button loadButton;
     @javafx.fxml.FXML
     private TextField flightNumberField;
-    @javafx.fxml.FXML
-    private TextField assignmentIdField;
     @javafx.fxml.FXML
     private TextField receiverIdField;
     @javafx.fxml.FXML
@@ -36,8 +32,6 @@ public class ConfirmDeliveryController implements UserReceiver
     private Button backButton;
     @javafx.fxml.FXML
     private TextField orderIdField;
-    @javafx.fxml.FXML
-    private TextArea remarksTextArea;
     @javafx.fxml.FXML
     private Button resetButton;
 
@@ -56,21 +50,6 @@ public class ConfirmDeliveryController implements UserReceiver
 
     @javafx.fxml.FXML
     public void loadAssignment(ActionEvent actionEvent) {
-        if(assignmentIdField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a task ID");
-            return;
-        }
-        int assignmentId;
-        try {
-            assignmentId = Integer.parseInt(assignmentIdField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid assigned ID");
-            return;
-        }
-        if(assignmentId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid assigned ID");
-            return;
-        }
         if(orderIdField.getText().isEmpty()){
             AlertGenerator.showAlert("Error", "Please enter a order ID");
             return;
@@ -116,37 +95,6 @@ public class ConfirmDeliveryController implements UserReceiver
             AlertGenerator.showAlert("Error", "Please enter a valid receiver ID");
             return;
         }
-        if(flightNumberField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a flight ID");
-            return;
-        }
-        int flightNumber;
-        try {
-            flightNumber = Integer.parseInt(flightNumberField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid flight ID");
-            return;
-        }
-        if(flightNumber <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid flight ID");
-            return;
-        }
-        if(airlineField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a airline ID");
-            return;
-        }
-        int airlineId;
-        try {
-            airlineId = Integer.parseInt(airlineField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid airline ID");
-            return;
-        }
-        if(airlineId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid airline ID");
-            return;
-        }
-
         if(locationField.getText().isEmpty()){
             AlertGenerator.showAlert("Error", "Please enter a location ID");
             return;
@@ -178,13 +126,10 @@ public class ConfirmDeliveryController implements UserReceiver
         orderIdField.clear();
         receiverIdField.clear();
         flightNumberField.clear();
-        assignmentIdField.clear();
         receiverNameField.clear();
         orderIdField.clear();
         flightNumberField.clear();
         locationField.clear();
-        remarksTextArea.clear();
-        airlineField.clear();
     }
 
     @javafx.fxml.FXML
