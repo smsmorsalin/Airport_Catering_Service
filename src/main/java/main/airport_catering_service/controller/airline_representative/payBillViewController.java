@@ -99,7 +99,12 @@ public class payBillViewController implements UserReceiver
             return;
         }
 
-        // call the method AirlineRepresentative.payCateringBill
+        boolean check = loggedInUser.payCateringBill(selectedInvoice.getOrderId(),selectedInvoice.getInvoiceId(), fxidPaymentMethodComboBox.getValue(), fxidTransactionIdTextField.getText());
+        if (check){
+            AlertGenerator.showAlert("message", "Payment successful.");
+            fxidHiddenMainAnchorPane.setVisible(false);
+            fxidHiddenSubAnchorPane.setVisible(false);
+        }
     }
 
 

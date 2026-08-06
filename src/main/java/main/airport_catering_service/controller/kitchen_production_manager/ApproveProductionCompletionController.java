@@ -70,7 +70,8 @@ public class ApproveProductionCompletionController implements UserReceiver
             return;
         }
 
-        boolean updated = ProductionActivities.updateProductionStatus(productionId, "Completed");
+        boolean updated = false;
+//        updated= ProductionActivities.updateProductionStatus(productionId, "Completed");
 
         if (updated) {
             showAlert("Production completion approved successfully");
