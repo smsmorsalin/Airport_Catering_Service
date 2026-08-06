@@ -1,18 +1,11 @@
 package user;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import nonuser.Meal;
-import utility.AlertGenerator;
+import nonuser.ProductionActivities;
+
 import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
-
-
-import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -21,20 +14,23 @@ public class KitchenProductionManager extends  Employee implements Serializable 
     public KitchenProductionManager(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, LocalDate joinDate, String department, String designation, float salary) {
         super(password, fullName, role, dateOfBirth, gender, email, phone, address, status, joinDate, department, designation, salary);
     }
-
     public Meal createNewMenu(String mealName, float mealPrice){
         Meal newMeal = new Meal(mealName, mealPrice);
         boolean isSave = BinaryFileUtility.writeObjects("Meal.bin", newMeal);
         if (isSave){
             return newMeal;
+
+        }return null;
+    }
+
+    public ProductionActivities createProductionOrderID (int productionOrderId){
+        ProductionActivities newProductionId = new ProductionActivities(productionOrderId);
+        boolean isSave = BinaryFileUtility.writeObjects("ProductionActivities.bin",newProductionId);
+        if(isSave){
+            return newProductionId;
         }
         return null;
     }
-
-
-
-
-
 
     @Override
     public String toString() {
@@ -55,12 +51,12 @@ public class KitchenProductionManager extends  Employee implements Serializable 
                 ", createDate=" + createDate +
                 '}';
     }
-    public static void reverseDashboard(javafx.event.ActionEvent event,User user){
+    public static void reverseDashboard(ActionEvent event, User user){
         SceneSwitchingHelper.switchSceneWithData(event,"/KitchenProductionManager/dashboardView.fxml",user);
     }
 
     @Override
-    public void viewDashboard(javafx.event.ActionEvent event, User user){
+    public void viewDashboard(ActionEvent event, User user){
         SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/dashboardView.fxml", user);
 
     }
@@ -69,35 +65,36 @@ public class KitchenProductionManager extends  Employee implements Serializable 
         return false;
     }
 
-    public static void viewMonitorProductionActivities(javafx.event.ActionEvent event,User user) {
+    public static void viewMonitorProductionActivities(ActionEvent event, User user) {
         SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/MonitorProductionActivities.fxml",user);
     }
 
-    public static void  viewGenerateProductionReports (javafx.event.ActionEvent event,User user) {
+    public static void  viewGenerateProductionReports (ActionEvent event, User user) {
     SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/GenerateProductionReports.fxml",user);
     }
 
-    public static void  viewCreateProductionPlan(javafx.event.ActionEvent event,User user) {
+    public static void  viewCreateProductionPlan(ActionEvent event, User user) {
     SceneSwitchingHelper.switchSceneWithData(event,  "/KitchenProductionManager/CreateProductionPlan.fxml" ,user);
     }
-    public static void  viewCalculateIngredientRequirements (javafx.event.ActionEvent event,User user){
+    public static void  viewCalculateIngredientRequirements (ActionEvent event, User user){
         SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/CalculateIngredientRequirements.fxml",user);
 
-    }public static void  viewReceiveApprovedCateringOrders(javafx.event.ActionEvent event,User user ) {
+    }public static void  viewReceiveApprovedCateringOrders(ActionEvent event, User user ) {
         SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/ReceiveApprovedCateringOrders.fxml",user);
 
-    }public static void  viewCreateMenuList (javafx.event.ActionEvent event, User user) {
+    }public static void  viewCreateMenuList (ActionEvent event, User user) {
         SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/CreateMenuList.fxml",user);
 //         SceneSwitchingHelper.switchSceneWithData(event, " /KitchenProductionManager/CreateMenuList.fxml ",user);
 
 
-    }public static void  ViewCreateProductionSchedule(javafx.event.ActionEvent event, User user ) {
+    }public static void  ViewCreateProductionSchedule(ActionEvent event, User user ) {
         SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/CreateProductionSchedule.fxml",user);
     }
-    public static void  viewApproveProductionCompletion(javafx.event.ActionEvent event,User user ) {
-        SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/ApproveProductionCompletion.fxml",user);
+    public static void  viewApproveProductionCompletion(ActionEvent event, User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/KitchenProductionManager/ApproveProductionCompletion.fxml", user);
     }
-
-
 }
+
+
+
 

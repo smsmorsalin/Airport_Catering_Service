@@ -42,11 +42,14 @@ public class CreateMenuListController implements UserReceiver
 
     @javafx.fxml.FXML
     public void initialize() {
+        mainTableView.getItems().clear();
+
         mealPriceTV.setCellValueFactory(new PropertyValueFactory<>("mealPrice"));
         mealIDTV.setCellValueFactory(new PropertyValueFactory<>("mealId"));
         mealNameTV.setCellValueFactory(new PropertyValueFactory<>("mealName"));
 
         mealArrayList = BinaryFileUtility.readObjects("Meal.bin");
+
         for (Object obj : mealArrayList){
             if (obj instanceof Meal meal){
                 mainTableView.getItems().add(meal);
@@ -91,9 +94,7 @@ public class CreateMenuListController implements UserReceiver
             mainTableView.getItems().add(savedMeal);
             mealArrayList.add(savedMeal);
             return;
-            //k
         }
-
     }
 
     @javafx.fxml.FXML
@@ -128,5 +129,4 @@ public class CreateMenuListController implements UserReceiver
     public void sideBarProductionScheduleOA(ActionEvent actionEvent) throws IOException{
         KitchenProductionManager.ViewCreateProductionSchedule(actionEvent,loggedInUser);
     }
-
 }
