@@ -1,6 +1,13 @@
 package nonuser;
 
-public class ProductionActivities {
+import utility.AlertGenerator;
+import utility.BinaryFileUtility;
+import utility.databaseAccessor;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class ProductionActivities implements Serializable {
     private final int productionOrderId;
     private String productionStatus;
     private double completionPercentage;
@@ -12,8 +19,8 @@ public class ProductionActivities {
     private int completedQuantity;
     private int remainingQuantity;
 
-    public ProductionActivities(int productionOrderId, String airlineName, String assignedChef, int totalQuantity, String productionStatus, double completionPercentage, String delayAlert, int completedQuantity, int remainingQuantity) {
-        this.productionOrderId = productionOrderId;
+    public ProductionActivities(String airlineName, String assignedChef, int totalQuantity, String productionStatus, double completionPercentage, String delayAlert, int completedQuantity, int remainingQuantity) {
+        this.productionOrderId = generateProductionOrderId();
         this.airlineName = airlineName;
         this.assignedChef = assignedChef;
         this.totalQuantity = totalQuantity;
@@ -24,12 +31,21 @@ public class ProductionActivities {
         this.remainingQuantity = remainingQuantity;
     }
 
-    public int getProductionOrderId() {
-        return productionOrderId;
+    public ProductionActivities(int productionOrderId){
+        this.productionOrderId = productionOrderId;
+        this.airlineName = "";
+        this.assignedChef = "";
+        this.totalQuantity = 0;
+        this.productionStatus = "";
+        this.completionPercentage = 0;
+        this.delayAlert = "";
+        this.completedQuantity = 0;
+        this.remainingQuantity = 0;
     }
 
-    public String getProductionStatus() {
-        return productionStatus;
+
+    public int getProductionOrderId() {
+        return productionOrderId;
     }
 
     public void setProductionStatus(String productionStatus) {
@@ -78,6 +94,29 @@ public class ProductionActivities {
 
     public void setRemainingQuantity(int remainingQuantity) {
         this.remainingQuantity = remainingQuantity;
+    }
+
+    private static int generateProductionOrderId() {
+        return databaseAccessor.generateNewUniqueId("ProductionActivities.bin", "productionOrderId");
+    }
+
+    public static boolean updateProductionStatus(int productionOrderId) {
+
+        ArrayList<Object> productionActivitiesList = BinaryFileUtility.readObjects("ProductionActivities.bin");
+        if (productionActivitiesList == null || productionActivitiesList.isEmpty()) {
+            return false;
+        }
+        boolean found = false;
+        for (Object obj : productionActivitiesList) {
+            if (obj instanceof ProductionActivities productionActivities) {
+                if (productionActivities.getProductionOrderId() == productionOrderId) {
+//                    productionActivities.setProductionStatus(newStatus);
+                    found = true;
+                }
+            }
+        }if (!found) {
+            return false;
+        }return BinaryFileUtility.overwriteObjects("ProductionActivities.bin", productionActivitiesList);
     }
 
     @Override

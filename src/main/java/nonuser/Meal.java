@@ -42,7 +42,9 @@ public class Meal implements Serializable {
         this.mealPrice = mealPrice;
     }
 
+
     private static int generateMealId(){
+
         return databaseAccessor.generateNewUniqueId("Meal.bin", "mealId");
     }
 
