@@ -6,6 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="payBillViewController half complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/AcceptAssignmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/AcceptAssignmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/CollectShipmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/CollectShipmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/ConfirmDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/ConfirmDeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/UpdateTransitStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/UpdateTransitStatusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryAssignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryAssignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/CollectPackagedCateringOrdersView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/CollectPackagedCateringOrdersView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/ConfirmAircraftDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/ConfirmAircraftDeliveryView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/DisplayDepartureConfirmationView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/DisplayDepartureConfirmationView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +30,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "morsalin",
+    "Application.HelloApplication.executor": "Run",
+    "git-widget-placeholder": "Mahir",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="payBillViewController half complete">
       <option name="closed" value="true" />

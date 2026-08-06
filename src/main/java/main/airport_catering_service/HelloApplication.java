@@ -26,8 +26,7 @@ public class HelloApplication extends Application {
 
 
 
-
-//       DummyDataGenerator.DeleteAllUser();
+//        DummyDataGenerator.DeleteAllUser();
 //        DummyDataGenerator.morsalin();
         DummyDataGenerator.totalUser();
 
