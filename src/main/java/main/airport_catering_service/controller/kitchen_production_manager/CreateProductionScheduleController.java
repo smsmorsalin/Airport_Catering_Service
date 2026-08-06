@@ -30,6 +30,8 @@ public class CreateProductionScheduleController implements UserReceiver {
     @javafx.fxml.FXML
     private ComboBox<String> startMinitueTimeComboBox;
 
+
+
     private KitchenProductionManager loggedInUser;
     @Override
     public void setLoggedInUser(User user){
