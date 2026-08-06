@@ -1,97 +1,85 @@
 package nonuser;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class DeliveryAssignment implements Serializable {
-    private final String assignmentId;
-    private String packageId;
-    private String dispatchCoordinatorId;
-    private String assignedStaffId;
-    private String destination;
-    private LocalDateTime assignedTime;
-    private String assignmentStatus;
 
-    public DeliveryAssignment(String assignmentId, String packageId, String dispatchCoordinatorId,
-                              String assignedStaffId, String destination, LocalDateTime assignedTime) {
+    private int assignmentId;
+    private int orderId;
+    private String flightNumber;
+    private String airline;
+    private String location;
+    private LocalDate deliveryDate;
+    private String status;
+
+    public DeliveryAssignment(int assignmentId, int orderId,
+                              String flightNumber, String airline,
+                              String location, LocalDate deliveryDate,
+                              String status) {
+
         this.assignmentId = assignmentId;
-        this.packageId = packageId;
-        this.dispatchCoordinatorId = dispatchCoordinatorId;
-        this.assignedStaffId = assignedStaffId;
-        this.destination = destination;
-        this.assignedTime = assignedTime;
-        this.assignmentStatus = "ASSIGNED";
+        this.orderId = orderId;
+        this.flightNumber = flightNumber;
+        this.airline = airline;
+        this.location = location;
+        this.deliveryDate = deliveryDate;
+        this.status = status;
     }
 
-    public String getAssignmentId() {
+    public int getAssignmentId() {
         return assignmentId;
     }
 
-    public String getPackageId() {
-        return packageId;
+    public int getOrderId() {
+        return orderId;
     }
 
-    public void setPackageId(String packageId) {
-        this.packageId = packageId;
+    public String getFlightNumber() {
+        return flightNumber;
     }
 
-    public String getDispatchCoordinatorId() {
-        return dispatchCoordinatorId;
+    public String getAirline() {
+        return airline;
     }
 
-    public void setDispatchCoordinatorId(String dispatchCoordinatorId) {
-        this.dispatchCoordinatorId = dispatchCoordinatorId;
+    public String getLocation() {
+        return location;
     }
 
-    public String getAssignedStaffId() {
-        return assignedStaffId;
+    public LocalDate getDeliveryDate() {
+        return deliveryDate;
     }
 
-    public void setAssignedStaffId(String assignedStaffId) {
-        this.assignedStaffId = assignedStaffId;
+    public String getStatus() {
+        return status;
     }
 
-    public String getDestination() {
-        return destination;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public void setDestination(String destination) {
-        this.destination = destination;
+    public void setAssignmentId(int assignmentId) {
+        this.assignmentId = assignmentId;
     }
 
-    public LocalDateTime getAssignedTime() {
-        return assignedTime;
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
 
-    public void setAssignedTime(LocalDateTime assignedTime) {
-        this.assignedTime = assignedTime;
+    public void setFlightNumber(String flightNumber) {
+        this.flightNumber = flightNumber;
     }
 
-    public String getAssignmentStatus() {
-        return assignmentStatus;
+    public void setAirline(String airline) {
+        this.airline = airline;
     }
 
-    public void setAssignmentStatus(String assignmentStatus) {
-        this.assignmentStatus = assignmentStatus;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    // Called by dispatch coordinator to hand off the task
-    public void receiveTaskFromDispatch(String dispatchCoordinatorId, String assignedStaffId) {
-        this.dispatchCoordinatorId = dispatchCoordinatorId;
-        this.assignedStaffId = assignedStaffId;
-        this.assignmentStatus = "ASSIGNED";
-    }
-
-    @Override
-    public String toString() {
-        return "DeliveryAssignment{" +
-                "assignmentId='" + assignmentId + '\'' +
-                ", packageId='" + packageId + '\'' +
-                ", dispatchCoordinatorId='" + dispatchCoordinatorId + '\'' +
-                ", assignedStaffId='" + assignedStaffId + '\'' +
-                ", destination='" + destination + '\'' +
-                ", assignedTime=" + assignedTime +
-                ", assignmentStatus='" + assignmentStatus + '\'' +
-                '}';
+    public void setDeliveryDate(LocalDate deliveryDate) {
+        this.deliveryDate = deliveryDate;
     }
 }

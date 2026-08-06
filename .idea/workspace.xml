@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="payBillViewController half complete" />
+    <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="payBillViewController half complete">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/AcceptAssignmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/AcceptAssignmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/CollectShipmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/CollectShipmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/ConfirmDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/ConfirmDeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/UpdateTransitStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/UpdateTransitStatusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryAssignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryAssignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/CollectPackagedCateringOrdersView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/CollectPackagedCateringOrdersView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/ConfirmAircraftDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/ConfirmAircraftDeliveryView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/DisplayDepartureConfirmationView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/DisplayDepartureConfirmationView.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,41 +25,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Saif-kaif&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
-    &quot;accountId&quot;: &quot;09b4b316-9114-4bc1-8e76-96925cab0536&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
-  <component name="ProjectId" id="3HXwgONgGQQhaLDNnKduqpvDDAP" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;saif&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "git-widget-placeholder": "Mahir",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="payBillViewController half complete">
       <option name="closed" value="true" />
@@ -57,34 +52,7 @@
       <option name="project" value="LOCAL" />
       <updated>1785888742666</updated>
     </task>
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="payBillViewController half complete" />
-      <created>1786027834430</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1786027834430</updated>
-    </task>
-    <task id="LOCAL-00002" summary="payBillViewController half complete">
-      <option name="closed" value="true" />
-      <created>1786027968976</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1786027968976</updated>
-    </task>
-    <task id="LOCAL-00003" summary="payBillViewController half complete">
-      <option name="closed" value="true" />
-      <created>1786028421905</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1786028421905</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="payBillViewController half complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="payBillViewController half complete" />
   </component>
 </project>
