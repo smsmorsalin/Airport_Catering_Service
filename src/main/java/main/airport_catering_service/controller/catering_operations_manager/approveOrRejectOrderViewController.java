@@ -59,6 +59,11 @@ public class approveOrRejectOrderViewController implements UserReceiver
 
     }
 
+    public void setOrderId(int orderId) {
+        this.selectedId = orderId;
+        viewDetailsButton(new ActionEvent());
+    }
+
     @javafx.fxml.FXML
     public void initialize() {
         fxidHiddenAnchorPane.setVisible(false);

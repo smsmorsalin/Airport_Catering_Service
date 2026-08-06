@@ -1,11 +1,14 @@
 package user;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import main.airport_catering_service.controller.catering_operations_manager.approveOrRejectOrderViewController;
 import nonuser.CateringOrder;
+import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 
@@ -53,6 +56,30 @@ public class CateringOperationsManager extends Employee implements Serializable 
     public void approveOrRejectOrder(ArrayList<Object> cateringOrder){
         boolean b = BinaryFileUtility.overwriteObjects("CateringOrder.bin", cateringOrder);
 
+    }
+
+    public void reviewCateringOrder(ActionEvent event, int orderId, User user){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/catering_operations_manager/approveOrRejectOrderView.fxml"));
+            Parent root = loader.load();
+
+            Object controller = loader.getController();
+            if(controller instanceof approveOrRejectOrderViewController a){
+                a.setOrderId(orderId);
+            }
+
+            if (controller instanceof UserReceiver receiver) {
+                receiver.setLoggedInUser(user);
+            }
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (IOException e){
+            AlertGenerator.showAlert("error", "Scene Switch failed");
+        } catch (Exception e) {
+            AlertGenerator.showAlert("error", e.getMessage());
+        }
     }
 
 
