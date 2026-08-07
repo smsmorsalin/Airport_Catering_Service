@@ -1,6 +1,7 @@
 package main.airport_catering_service.controller.headchef;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import user.Headchef;
 import user.User;
@@ -9,97 +10,210 @@ import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class KitchenPerformanceReportController implements UserReceiver
-{
-    @javafx.fxml.FXML
+public class KitchenPerformanceReportController implements UserReceiver {
+
+    @FXML
     private TableColumn mealCategoryColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private DatePicker fromDatePicker;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn remarksColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn productionTimeColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private DatePicker toDatePicker;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label totalTasksLabel;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label mealsPreparedLabel;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button exportPdfButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private ProgressBar efficiencyProgressBar;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableView reportTable;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button printButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn taskIdColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn completionColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button refreshButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn statusColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn teamColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button backButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label completedTasksLabel;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button generateReportButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label pendingTasksLabel;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn preparedMealsColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label rejectedBatchLabel;
 
+
     private Headchef loggedInUser;
+
+
     @Override
-    public void setLoggedInUser(User user){
-        if (user instanceof Headchef headchef){
+    public void setLoggedInUser(User user) {
+
+        if (user instanceof Headchef headchef) {
             loggedInUser = headchef;
         }
-        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+        else {
+            AlertGenerator.showAlert(
+                    "Error",
+                    "This is not a valid user for this page"
+            );
+        }
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void initialize() {
+
+        efficiencyProgressBar.setProgress(0);
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
-        Headchef.renderDashboardView(actionEvent, loggedInUser);
+
+        Headchef.renderDashboardView(
+                actionEvent,
+                loggedInUser
+        );
     }
 
-    @Deprecated
+
+    @FXML
     public void resetFilter(ActionEvent actionEvent) {
+
+        fromDatePicker.setValue(null);
+        toDatePicker.setValue(null);
+
+        reportTable.getItems().clear();
+
+        totalTasksLabel.setText("0");
+        completedTasksLabel.setText("0");
+        pendingTasksLabel.setText("0");
+        mealsPreparedLabel.setText("0");
+        rejectedBatchLabel.setText("0");
+
+        efficiencyProgressBar.setProgress(0);
     }
 
-    @javafx.fxml.FXML
-    public void exportPDF(ActionEvent actionEvent) {
-    }
 
-    @javafx.fxml.FXML
+    @FXML
     public void generateReport(ActionEvent actionEvent) {
-        if(fromDatePicker.getValue() == null || toDatePicker.getValue() == null) {
-            AlertGenerator.showAlert("Error", "Please enter a date and time");
+
+        if (fromDatePicker.getValue() == null ||
+                toDatePicker.getValue() == null) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select both start and end dates"
+            );
+
             return;
         }
-        if (toDatePicker.getValue().isBefore(fromDatePicker.getValue())) {
-            AlertGenerator.showAlert("Error", "Please enter a date and time");
+
+
+        if (toDatePicker.getValue()
+                .isBefore(fromDatePicker.getValue())) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "End date cannot be before start date"
+            );
+
             return;
         }
+
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Kitchen performance report generated"
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
+    public void exportPDF(ActionEvent actionEvent) {
+
+        if(reportTable.getItems().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Generate a report before exporting"
+            );
+
+            return;
+        }
+
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Report exported as PDF"
+        );
+    }
+
+
+    @FXML
     public void printReport(ActionEvent actionEvent) {
+
+        if(reportTable.getItems().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Generate a report before printing"
+            );
+
+            return;
+        }
+
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Report sent to printer"
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void refreshReport(ActionEvent actionEvent) throws IOException {
-        Headchef.renderViewKitchenPerformanceReport(actionEvent, loggedInUser);
+
+        Headchef.renderViewKitchenPerformanceReport(
+                actionEvent,
+                loggedInUser
+        );
     }
 }

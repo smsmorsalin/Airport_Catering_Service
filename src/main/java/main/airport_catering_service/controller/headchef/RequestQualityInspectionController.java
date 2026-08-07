@@ -1,6 +1,7 @@
 package main.airport_catering_service.controller.headchef;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import user.Headchef;
 import user.User;
@@ -10,104 +11,251 @@ import utility.AlertGenerator;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class RequestQualityInspectionController implements UserReceiver
-{
-    @javafx.fxml.FXML
+public class RequestQualityInspectionController implements UserReceiver {
+
+    @FXML
     private TableColumn mealCategoryColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button submitButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn remarksColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn requestDateColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button loadTaskButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableView inspectionTable;
-    @javafx.fxml.FXML
-    private ComboBox priorityComboBox;
-    @javafx.fxml.FXML
+
+    @FXML
+    private ComboBox<String> priorityComboBox;
+
+    @FXML
     private TableColumn taskIdColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn priorityColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn inspectionStatusColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button refreshButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private DatePicker inspectionDatePicker;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button backButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField mealCategoryField;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextArea remarksTextArea;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField taskIdField;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button resetButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn requestIdColumn;
 
+
     private Headchef loggedInUser;
+
+
     @Override
-    public void setLoggedInUser(User user){
-        if (user instanceof Headchef headchef){
+    public void setLoggedInUser(User user) {
+
+        if (user instanceof Headchef headchef) {
             loggedInUser = headchef;
         }
-        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+        else {
+            AlertGenerator.showAlert(
+                    "Error",
+                    "This is not a valid user for this page"
+            );
+        }
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void initialize() {
+
+        priorityComboBox.getItems().addAll(
+                "Low",
+                "Medium",
+                "High",
+                "Urgent"
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
-        Headchef.renderDashboardView(actionEvent, loggedInUser);
+
+        Headchef.renderDashboardView(
+                actionEvent,
+                loggedInUser
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void refreshTable(ActionEvent actionEvent) throws IOException {
-        Headchef.renderDisplayUpdateConfirmation(actionEvent, loggedInUser);
+
+        Headchef.renderDisplayUpdateConfirmation(
+                actionEvent,
+                loggedInUser
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void resetForm(ActionEvent actionEvent) {
+
         taskIdField.clear();
         mealCategoryField.clear();
         remarksTextArea.clear();
 
+        priorityComboBox.getSelectionModel()
+                .clearSelection();
+
+        inspectionDatePicker.setValue(null);
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void submitInspectionRequest(ActionEvent actionEvent) {
+
+        if(taskIdField.getText().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a task ID"
+            );
+
+            return;
+        }
+
+
+        if(priorityComboBox.getValue() == null) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select inspection priority"
+            );
+
+            return;
+        }
+
+
+        if(inspectionDatePicker.getValue() == null) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select inspection date"
+            );
+
+            return;
+        }
+
+
+        if(remarksTextArea.getText().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter remarks"
+            );
+
+            return;
+        }
+
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Quality inspection request submitted"
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void loadTask(ActionEvent actionEvent) {
 
-        if(taskIdField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a task ID");
+        if(taskIdField.getText().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a task ID"
+            );
+
             return;
         }
+
+
         int taskId;
+
         try {
-            taskId = Integer.parseInt(taskIdField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid task ID");
+
+            taskId = Integer.parseInt(
+                    taskIdField.getText()
+            );
+
+        } catch (NumberFormatException e) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a valid task ID"
+            );
+
             return;
         }
-        if(taskId <= 0){
-            AlertGenerator.showAlert("Error", "Please enter a valid task ID");
+
+
+        if(taskId <= 0) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Task ID must be greater than zero"
+            );
+
             return;
         }
-        if(inspectionDatePicker.getValue() == null){
-            AlertGenerator.showAlert("Error", "Please enter a inspection date");
-            return;
-        }if(inspectionDatePicker.getValue().isBefore(LocalDate.now())){
-            AlertGenerator.showAlert("Error", "Please enter a inspection date");
+
+
+        if(inspectionDatePicker.getValue() == null) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select an inspection date"
+            );
+
             return;
         }
+
+
+        if(inspectionDatePicker.getValue()
+                .isBefore(LocalDate.now())) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Inspection date cannot be in the past"
+            );
+
+            return;
+        }
+
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Task loaded successfully"
+        );
     }
 }

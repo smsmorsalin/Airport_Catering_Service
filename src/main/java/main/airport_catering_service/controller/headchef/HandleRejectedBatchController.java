@@ -1,6 +1,7 @@
 package main.airport_catering_service.controller.headchef;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import user.Headchef;
 import user.User;
@@ -9,122 +10,192 @@ import utility.AlertGenerator;
 
 import java.io.IOException;
 
-public class HandleRejectedBatchController implements UserReceiver
-{
-    @javafx.fxml.FXML
+public class HandleRejectedBatchController implements UserReceiver {
+
+    @FXML
     private TableColumn reasonColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn actionColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button submitButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn assignedTeamColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextArea rejectionReasonTextArea;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableView rejectedBatchTable;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn mealTypeColumn;
-    @javafx.fxml.FXML
-    private ComboBox actionComboBox;
-    @javafx.fxml.FXML
-    private ComboBox teamComboBox;
-    @javafx.fxml.FXML
+
+    @FXML
+    private ComboBox<String> actionComboBox;
+
+    @FXML
+    private ComboBox<String> teamComboBox;
+
+    @FXML
     private TableColumn taskIdColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button loadBatchButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button clearButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextArea chefRemarksTextArea;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button refreshButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn statusColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button backButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField taskIdField;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField batchIdField;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField rejectedByField;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn batchIdColumn;
 
+
     private Headchef loggedInUser;
+
+
     @Override
-    public void setLoggedInUser(User user){
-        if (user instanceof Headchef headchef){
+    public void setLoggedInUser(User user) {
+        if (user instanceof Headchef headchef) {
             loggedInUser = headchef;
+        } else {
+            AlertGenerator.showAlert(
+                    "Error",
+                    "This is not a valid user for this page"
+            );
         }
-        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void initialize() {
+
+        actionComboBox.getItems().addAll(
+                "Redo Batch",
+                "Modify Recipe",
+                "Discard Batch"
+        );
+
+        teamComboBox.getItems().addAll(
+                "Team A",
+                "Team B",
+                "Team C"
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
         Headchef.renderDashboardView(actionEvent, loggedInUser);
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void loadRejectedBatch(ActionEvent actionEvent) {
-        if(taskIdField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a task ID");
-            return;
-        }
-        int taskId;
-        try {
-            taskId = Integer.parseInt(taskIdField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid task ID");
-            return;
-        }
-        if(taskId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid task ID");
-            return;
-        }
-        if(rejectedBatchTable.getSelectionModel().getSelectedIndex() == -1){
-            AlertGenerator.showAlert("Error", "Please select a rejected batch");
-            return;
-        }
-        if(batchIdField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a task ID");
-            return;
-        }
-        int batchId;
-        try {
-            batchId = Integer.parseInt(batchIdField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid batch ID");
-            return;
-        }
-        if(batchId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid batch ID");
+
+        if (rejectedBatchTable.getSelectionModel().getSelectedIndex() == -1) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select a rejected batch"
+            );
+
             return;
         }
 
+        AlertGenerator.showAlert(
+                "Success",
+                "Rejected batch loaded"
+        );
     }
-    @javafx.fxml.FXML
+
+
+    @FXML
     public void submitCorrectiveAction(ActionEvent actionEvent) {
+
+        if (actionComboBox.getValue() == null) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select a corrective action"
+            );
+
+            return;
+        }
+
+
+        if (teamComboBox.getValue() == null) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please assign a team"
+            );
+
+            return;
+        }
+
+
+        if (chefRemarksTextArea.getText().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter chef remarks"
+            );
+
+            return;
+        }
+
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Corrective action submitted successfully"
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void refreshTable(ActionEvent actionEvent) throws IOException {
-        Headchef.renderHandleRejectedFoodBatches(actionEvent, loggedInUser);
+
+        Headchef.renderHandleRejectedFoodBatches(
+                actionEvent,
+                loggedInUser
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void clearForm(ActionEvent actionEvent) {
+
         taskIdField.clear();
         batchIdField.clear();
         rejectedByField.clear();
+
         rejectionReasonTextArea.clear();
         chefRemarksTextArea.clear();
-        chefRemarksTextArea.clear();
 
+        actionComboBox.getSelectionModel().clearSelection();
+        teamComboBox.getSelectionModel().clearSelection();
     }
 }
