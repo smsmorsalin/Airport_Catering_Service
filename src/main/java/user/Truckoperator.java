@@ -1,9 +1,7 @@
 package user;
 
-import javafx.event.ActionEvent;
 import utility.SceneSwitchingHelper;
 
-import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -42,7 +40,7 @@ public class Truckoperator extends Employee implements Serializable {
     }
 
     public static void renderDisplayDepartureConfirmationView(javafx.event.ActionEvent event, User user)  {
-        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/DisplayDepartureConfirmationView.fxml",  user);
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/UpdateTransitStatus.fxml",  user);
     }
 
     public static void renderReportDeliveryProblemsView(javafx.event.ActionEvent event, User user) {
@@ -50,12 +48,12 @@ public class Truckoperator extends Employee implements Serializable {
     }
 
     public static void renderStartDeliveryView(javafx.event.ActionEvent event, User user)  {
-        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/StartDeliveryTripView.fxml",  user);
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/UpdateDepartureStatus.fxml",  user);
     }
     public static void renderAssignmentDeliveryTasksView(javafx.event.ActionEvent event, User user) {
         SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/AssignedDeliveryTasksView.fxml",  user);
     }
     public static void renderDeliveryHistoryView(javafx.event.ActionEvent event, User user) {
-        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/DeliveryHistoryView.fxml",  user);
+        SceneSwitchingHelper.switchSceneWithData(event, "/Truckoperator/DeliveryPerformanceReport.fxml",  user);
     }
 }

@@ -35,10 +35,11 @@ public class AcceptAssignmentController implements UserReceiver
     private TextField assignmentIdField;
     @javafx.fxml.FXML
     private Button acceptButton;
-    @javafx.fxml.FXML
-    private DatePicker deliverytimeDatePicker;
 
     private Truckoperator loggedInUser;
+    @FXML
+    private TextField deliveryTimeField;
+
     @Override
     public void setLoggedInUser(User user) {
         if (user instanceof Truckoperator truckoperator) {
@@ -96,7 +97,6 @@ public class AcceptAssignmentController implements UserReceiver
                         flightNumberField.setText(assignment.getFlightNumber());
                         airlineField.setText(assignment.getAirline());
                         locationField.setText(assignment.getLocation());
-                        deliverytimeDatePicker.setValue(assignment.getDeliveryDate());
 
                         found = true;
                         break;
@@ -141,7 +141,6 @@ public class AcceptAssignmentController implements UserReceiver
         orderIdField.clear();
         airlineField.clear();
         locationField.clear();
-        deliverytimeDatePicker.setValue(null);
 
     }
     @FXML
@@ -184,10 +183,6 @@ public class AcceptAssignmentController implements UserReceiver
         }
         if (locationField.getText().isEmpty()) {
             AlertGenerator.showAlert("Error", "Location cannot be empty.");
-            return;
-        }
-        if (deliverytimeDatePicker.getValue() == null) {
-            AlertGenerator.showAlert("Error", "Please enter a deliverytime date");
             return;
         }
 

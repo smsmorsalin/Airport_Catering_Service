@@ -1,68 +1,112 @@
 package main.airport_catering_service.controller.truck_operator;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import user.Headchef;
+import javafx.scene.control.cell.PropertyValueFactory;
 import user.Truckoperator;
 import user.User;
 import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
+import nonuser.DeliveryIssue;
+import java.time.LocalDate;
+import java.io.*;
+import java.util.ArrayList;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class ReportDeliveryIssueController implements UserReceiver
 {
-    @javafx.fxml.FXML
-    private TableColumn severityColumn;
-    @javafx.fxml.FXML
-    private ComboBox issueTypeComboBox;
-    @javafx.fxml.FXML
-    private TextField locationField;
-    @javafx.fxml.FXML
-    private Button submitButton;
-    @javafx.fxml.FXML
-    private TableColumn locationColumn;
-    @javafx.fxml.FXML
-    private TableColumn assignmentIdColumn;
-    @javafx.fxml.FXML
-    private Button loadButton;
-    @javafx.fxml.FXML
-    private TextArea descriptionTextArea;
-    @javafx.fxml.FXML
-    private TableColumn issueIdColumn;
-    @javafx.fxml.FXML
+    @FXML
     private TextField assignmentIdField;
-    @javafx.fxml.FXML
-    private TableView issueTable;
-    @javafx.fxml.FXML
-    private Button clearButton;
-    @javafx.fxml.FXML
-    private TableColumn reportedTimeColumn;
-    @javafx.fxml.FXML
-    private Button refreshButton;
-    @javafx.fxml.FXML
-    private TableColumn statusColumn;
-    @javafx.fxml.FXML
-    private Button backButton;
-    @javafx.fxml.FXML
+    @FXML
+    private TextField locationField;
+    @FXML
+    private TextArea descriptionTextArea;
+    @FXML
+    private ComboBox<String> issueTypeComboBox;
+    @FXML
     private DatePicker issueDatePicker;
-    @javafx.fxml.FXML
-    private TableColumn issueTypeColumn;
-    @javafx.fxml.FXML
-    private ComboBox severityComboBox;
+    @FXML
+    private TableColumn<DeliveryIssue, Integer> issueIdColumn;
+    @FXML
+    private TableColumn<DeliveryIssue, Integer> assignmentIdColumn;
+    @FXML
+    private TableColumn<DeliveryIssue, String> issueTypeColumn;
+    @FXML
+    private TableColumn<DeliveryIssue, String> severityColumn;
+    @FXML
+    private TableColumn<DeliveryIssue, String> locationColumn;
+    @FXML
+    private TableColumn<DeliveryIssue, LocalDate> reportedTimeColumn;
+    @FXML
+    private TableColumn<DeliveryIssue, String> statusColumn;
+    @FXML
+    private TableView<DeliveryIssue> issueTable;;
+    @FXML
+    private ComboBox<String> severityComboBox;
 
-    private Headchef loggedInUser;
+    private Truckoperator loggedInUser;
+    @FXML
+    private Button submitButton;
+    @FXML
+    private Button loadButton;
+    @FXML
+    private Button clearButton;
+    @FXML
+    private Button refreshButton;
+    @FXML
+    private Button backButton;
+
     @Override
-    public void setLoggedInUser(User user){
-        if (user instanceof Headchef headchef){
-            loggedInUser = headchef;
+    public void setLoggedInUser(User user) {
+        if (user instanceof Truckoperator truckoperator) {
+            loggedInUser = truckoperator;
+        } else {
+            AlertGenerator.showAlert("Error",
+                    "This is not a valid user for this page");
         }
-        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
     }
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
+
+            issueTypeComboBox.getItems().addAll(
+                    "Vehicle Problem",
+                    "Delay",
+                    "Food Damage",
+                    "Other"
+            );
+
+            severityComboBox.getItems().addAll(
+                    "Low",
+                    "Medium",
+                    "High"
+            );
+
+            issueIdColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("issueId"));
+
+            assignmentIdColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("assignmentId"));
+
+            issueTypeColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("issueType"));
+
+            severityColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("severity"));
+
+            locationColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("location"));
+
+            reportedTimeColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("issueDate"));
+
+            statusColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("status"));
+        }
 
     @javafx.fxml.FXML
     public void loadAssignment(ActionEvent actionEvent) {
@@ -121,11 +165,141 @@ public class ReportDeliveryIssueController implements UserReceiver
 
     @javafx.fxml.FXML
     public void submitIssueReport(ActionEvent actionEvent) {
+        int assignmentId;
+
+        try {
+            assignmentId = Integer.parseInt(assignmentIdField.getText());
+        } catch (NumberFormatException e) {
+            AlertGenerator.showAlert("Error", "Invalid Assignment ID");
+            return;
+        }
+
+        File file = new File("DeliveryIssue.bin");
+
+        ArrayList<DeliveryIssue> issueList = new ArrayList<>();
+
+        try {
+
+            if (file.exists()) {
+
+                ObjectInputStream ois =
+                        new ObjectInputStream(
+                                new FileInputStream(file));
+
+                while (true) {
+
+                    try {
+
+                        DeliveryIssue issue =
+                                (DeliveryIssue) ois.readObject();
+
+                        issueList.add(issue);
+
+                    } catch (EOFException e) {
+
+                        break;
+
+                    }
+                }
+
+                ois.close();
+            }
+
+            int issueId = issueList.size() + 1;
+
+            DeliveryIssue issue = new DeliveryIssue(
+                    issueId,
+                    assignmentId,
+                    issueTypeComboBox.getValue().toString(),
+                    severityComboBox.getValue().toString(),
+                    locationField.getText(),
+                    issueDatePicker.getValue(),
+                    descriptionTextArea.getText(),
+                    "Reported"
+            );
+
+            issueList.add(issue);
+
+            ObjectOutputStream oos =
+                    new ObjectOutputStream(
+                            new FileOutputStream(file));
+
+            for (DeliveryIssue i : issueList) {
+
+                oos.writeObject(i);
+
+            }
+
+            oos.close();
+
+            AlertGenerator.showAlert(
+                    "Success",
+                    "Issue reported successfully."
+            );
+
+            clearForm(null);
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Unable to save issue report."
+            );
+
+        }
     }
 
     @javafx.fxml.FXML
-    public void refreshTable(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderReportDeliveryProblemsView(actionEvent, loggedInUser);
+    public void refreshTable(ActionEvent actionEvent) {
+
+        ObservableList<DeliveryIssue> issueList =
+                FXCollections.observableArrayList();
+
+        File file = new File("DeliveryIssue.bin");
+
+        try {
+
+            if (!file.exists()) {
+
+                issueTable.setItems(issueList);
+                return;
+            }
+
+            ObjectInputStream ois =
+                    new ObjectInputStream(
+                            new FileInputStream(file));
+
+            while (true) {
+
+                try {
+
+                    DeliveryIssue issue =
+                            (DeliveryIssue) ois.readObject();
+
+                    issueList.add(issue);
+
+                } catch (EOFException e) {
+
+                    break;
+
+                }
+            }
+
+            ois.close();
+
+            issueTable.setItems(issueList);
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Unable to load issue reports."
+            );
+        }
     }
 
     @javafx.fxml.FXML

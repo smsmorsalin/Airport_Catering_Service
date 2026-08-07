@@ -7,8 +7,8 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
-            prefWidth="1200"
-            prefHeight="800"
+            prefWidth="1280"
+            prefHeight="820"
             fx:controller="main.airport_catering_service.controller.truck_operator.TruckOperatorDashboardController">
 
     <!-- ================= HEADER ================= -->
