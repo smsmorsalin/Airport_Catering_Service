@@ -90,15 +90,16 @@
                         <AnchorPane fx:id="fxidHiddenAnchorPane" layoutX="4.0" layoutY="60.0" prefHeight="291.0" prefWidth="588.0" style="-fx-background-color: BEIGE; -fx-background-radius: 10;">
                             <children>
                                 <Label fx:id="fxidShowOrderIdLabel" layoutX="173.0" layoutY="11.0" prefHeight="17.0" prefWidth="228.0" style="-fx-background-color: aqua;" text="Order ID:" />
-                                <Label fx:id="fxidPreparationstatusLabel" layoutX="25.0" layoutY="37.0" prefHeight="17.0" prefWidth="448.0" text="Preparation Status: " />
-                        <Label fx:id="fxidCookingStatusLabel" layoutX="41.0" layoutY="54.0" prefHeight="17.0" prefWidth="448.0" text="Cooking Status:" />
-                        <Label fx:id="fxidPackagingStatusLabel" layoutX="31.0" layoutY="73.0" prefHeight="17.0" prefWidth="448.0" text="Packaging Status:" />
-                        <Label fx:id="fxidCompletionPercentLabel" alignment="CENTER" layoutX="138.0" layoutY="125.0" prefHeight="110.0" prefWidth="238.0" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="0" textFill="#03f3ff">
+                                <Label fx:id="fxidProductionStatusLabel" layoutX="25.0" layoutY="37.0" prefHeight="17.0" prefWidth="448.0" text="Production Status: " />
+                        <Label fx:id="fxidAssignedChefLabel" layoutX="46.0" layoutY="54.0" prefHeight="17.0" prefWidth="448.0" text="assigned Chef:" />
+                        <Label fx:id="fxidCompletionPercentLabel" alignment="CENTER" layoutX="138.0" layoutY="158.0" prefHeight="110.0" prefWidth="238.0" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="0" textFill="#03f3ff">
                            <font>
                               <Font size="45.0" />
                            </font>
                         </Label>
-                        <Label fx:id="fxidShowAirlineNamelabel112" layoutX="223.0" layoutY="126.0" prefHeight="17.0" prefWidth="112.0" text="Completion %" />
+                        <Label fx:id="fxidShowAirlineNamelabel112" layoutX="219.0" layoutY="163.0" prefHeight="17.0" prefWidth="112.0" text="Completion %" />
+                        <Label fx:id="fxidTotalQuantityLabel" layoutX="47.0" layoutY="72.0" prefHeight="17.0" prefWidth="448.0" text="Total quantity:" />
+                        <Label fx:id="fxidRemainingQuantityLabel" layoutX="18.0" layoutY="89.0" prefHeight="17.0" prefWidth="448.0" text="Remaining quantity:" />
                             </children>
                         </AnchorPane>
                     </children>

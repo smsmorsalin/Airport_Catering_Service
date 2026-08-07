@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="InventoryStatusViewController implimentation complete">
+    <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="DeliveryStatus modification complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/InventoryStatusViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/InventoryStatusViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/deliveryMonitoringViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/deliveryMonitoringViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/generateReportViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/generateReportViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/monitorProductionViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/monitorProductionViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/operationalReportViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/operationalReportViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/CateringOperationsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/deliveryMonitoringView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/deliveryMonitoringView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/monitorProductionView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/monitorProductionView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,61 +42,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.2454324603796124E-14" />
-      <entry key="MS500" value="0.0018633269477690527" />
-      <entry key="S2" value="0.24634800624799494" />
-      <entry key="S5" value="1.056161875762993" />
-      <entry key="S10" value="2.052362842028499" />
-      <entry key="S30" value="4.406435159658205" />
-      <entry key="S60" value="7.470251942438075" />
-      <entry key="M2" value="12.877481109218131" />
-      <entry key="M5" value="26.87467803770409" />
-      <entry key="M10" value="41.602910600463076" />
-      <entry key="M15" value="52.02850032118885" />
-      <entry key="M30" value="79.6265402470587" />
-      <entry key="H1" value="126.3549152868477" />
-      <entry key="H2" value="181.9662688791399" />
-      <entry key="H4" value="228.53448627320566" />
-      <entry key="D1" value="283.60806418845476" />
-      <entry key="W1" value="295.0307512015327" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="2.595520210957584E-250" />
+      <entry key="S2" value="4.01386582687231E-63" />
+      <entry key="S5" value="1.1168358750988234E-25" />
+      <entry key="S10" value="3.872798402699861E-13" />
+      <entry key="S30" value="1.310443885853683E-4" />
+      <entry key="S60" value="0.022968476173275614" />
+      <entry key="M2" value="0.4728856790523596" />
+      <entry key="M5" value="4.731318382308898" />
+      <entry key="M10" value="13.223613704394914" />
+      <entry key="M15" value="22.226735837727492" />
+      <entry key="M30" value="50.80838026492228" />
+      <entry key="H1" value="103.47103590057424" />
+      <entry key="H2" value="173.40307968706014" />
+      <entry key="H4" value="237.60521249194346" />
+      <entry key="D1" value="319.28709624616425" />
+      <entry key="W1" value="336.9344853506111" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0005347096781572" />
-      <entry key="S2" value="1.2163628433876812" />
-      <entry key="S5" value="1.916665317397034" />
-      <entry key="S10" value="2.7936305071457292" />
-      <entry key="S30" value="5.520025689163977" />
-      <entry key="S60" value="8.715435408428263" />
-      <entry key="M2" value="13.6920257322494" />
-      <entry key="M5" value="22.47360731356705" />
-      <entry key="M10" value="29.505181937457134" />
-      <entry key="M15" value="34.34576016702271" />
-      <entry key="M30" value="49.22210901381193" />
-      <entry key="H1" value="79.19223057972765" />
-      <entry key="H2" value="117.8567745078406" />
-      <entry key="H4" value="151.22870864466316" />
-      <entry key="D1" value="191.2246746925252" />
-      <entry key="W1" value="199.5616874003029" />
+      <entry key="MS100" value="1.000000000008358" />
+      <entry key="MS500" value="1.0060872232785976" />
+      <entry key="S2" value="1.2793226911557138" />
+      <entry key="S5" value="1.6058267071973011" />
+      <entry key="S10" value="1.877704812073138" />
+      <entry key="S30" value="2.6604368837459065" />
+      <entry key="S60" value="3.2307737945464337" />
+      <entry key="M2" value="4.406307579976353" />
+      <entry key="M5" value="9.604990708954187" />
+      <entry key="M10" value="16.689833075931254" />
+      <entry key="M15" value="22.82080369961096" />
+      <entry key="M30" value="40.27248765736181" />
+      <entry key="H1" value="72.99395348218849" />
+      <entry key="H2" value="119.21583759770347" />
+      <entry key="H4" value="163.22396981135594" />
+      <entry key="D1" value="220.37389405413703" />
+      <entry key="W1" value="232.8326455693335" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.2438618509066477E-4" />
-      <entry key="MS500" value="0.20219443727163838" />
-      <entry key="S2" value="1.0279235493302514" />
-      <entry key="S5" value="2.552196073322407" />
-      <entry key="S10" value="4.443723780477488" />
-      <entry key="S30" value="9.585038968924154" />
-      <entry key="S60" value="15.88195860649441" />
-      <entry key="M2" value="26.299604885518455" />
-      <entry key="M5" value="49.13403498144444" />
-      <entry key="M10" value="70.95196636330637" />
-      <entry key="M15" value="86.2469995644233" />
-      <entry key="M30" value="128.75082508593775" />
-      <entry key="H1" value="205.46648009097265" />
-      <entry key="H2" value="299.76342883176886" />
-      <entry key="H4" value="379.72535284778564" />
-      <entry key="D1" value="474.8248637101274" />
-      <entry key="W1" value="494.59126743635625" />
+      <entry key="MS100" value="1.0093995558387356E-7" />
+      <entry key="MS500" value="0.042058418792672025" />
+      <entry key="S2" value="0.6628026165760442" />
+      <entry key="S5" value="1.2700304630211023" />
+      <entry key="S10" value="1.6743978574579874" />
+      <entry key="S30" value="2.5546494527386634" />
+      <entry key="S60" value="3.1854863267911777" />
+      <entry key="M2" value="4.821523243806316" />
+      <entry key="M5" value="14.261865508192622" />
+      <entry key="M10" value="29.838531786915855" />
+      <entry key="M15" value="44.974956562519594" />
+      <entry key="M30" value="91.01028469686342" />
+      <entry key="H1" value="176.39638228372098" />
+      <entry key="H2" value="292.56150312717216" />
+      <entry key="H4" value="400.78972822979745" />
+      <entry key="D1" value="539.6521331022918" />
+      <entry key="W1" value="569.7657953041206" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -202,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786056057464</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="DeliveryStatus modification complete">
+      <option name="closed" value="true" />
+      <created>1786059435236</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1786059435238</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +223,7 @@
     <MESSAGE value="payBill complete" />
     <MESSAGE value="impliment reviewOrderController" />
     <MESSAGE value="InventoryStatusViewController implimentation complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="InventoryStatusViewController implimentation complete" />
+    <MESSAGE value="DeliveryStatus modification complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="DeliveryStatus modification complete" />
   </component>
 </project>

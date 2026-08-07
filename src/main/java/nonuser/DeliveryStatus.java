@@ -1,8 +1,9 @@
 package nonuser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class DeliveryStatus {
+public class DeliveryStatus implements Serializable {
     private final int deliveryId;
     private final String receiverName;
     private final LocalDate deliveryDate;
