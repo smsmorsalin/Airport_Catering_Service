@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="Complete confirmDeliveryViewController all work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateProductionScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateProductionScheduleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Meal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/orderHistoryViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/orderHistoryViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/airline_representative/orderHistoryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/orderHistoryView.fxml" afterDir="false" />
+>>>>>>> a2a137bcc23b4c2a56d2757bc3a639d7a797754b
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
