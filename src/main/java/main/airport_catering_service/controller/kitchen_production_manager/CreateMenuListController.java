@@ -48,7 +48,6 @@ public class CreateMenuListController implements UserReceiver
         mealIDTV.setCellValueFactory(new PropertyValueFactory<>("mealId"));
         mealNameTV.setCellValueFactory(new PropertyValueFactory<>("mealName"));
 
-
         mealArrayList = BinaryFileUtility.readObjects("Meal.bin");
 
         for (Object obj : mealArrayList){
@@ -89,8 +88,7 @@ public class CreateMenuListController implements UserReceiver
                 }
             }
         }
-
-        Meal savedMeal = loggedInUser.createNewMenu(mealNameTF.getText(), mealPrice);
+        Meal savedMeal = loggedInUser.createNewMenu(mealNameTF.getText(), mealPrice );
         if(savedMeal != null){
             mainTableView.getItems().add(savedMeal);
             mealArrayList.add(savedMeal);
