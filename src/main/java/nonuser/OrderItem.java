@@ -4,7 +4,7 @@ import utility.databaseAccessor;
 
 import java.io.Serializable;
 
-public class OrderItem implements Serializable {
+public final class OrderItem implements Serializable {
     private final String itemId;
     private Meal meal; //FF
     private int quantity;

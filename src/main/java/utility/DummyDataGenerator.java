@@ -99,12 +99,12 @@ public class DummyDataGenerator {
         // Dummy Catering Operations Manager
         CateringOperationsManager manager = new CateringOperationsManager(
                 "1234",                      // password
-                "John Smith",                         // fullName
+                "S. M. S. Morsalin",                  // fullName
                 "Catering Operations Manager",        // role
-                LocalDate.of(1988, 5, 15),            // dateOfBirth
+                LocalDate.of(2005, 11, 20),            // dateOfBirth
                 "Male",                               // gender
-                "john.smith@airport.com",             // email
-                "01711111111",                        // phone
+                "smsmorsalin1@gmail.com",             // email
+                "01755400336",                        // phone
                 "Dhaka, Bangladesh",                  // address
                 "Active",                             // status
                 LocalDate.of(2022, 1, 10),            // joinDate
