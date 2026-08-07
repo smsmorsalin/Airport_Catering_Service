@@ -88,8 +88,7 @@ public class CreateMenuListController implements UserReceiver
                 }
             }
         }
-
-        Meal savedMeal = loggedInUser.createNewMenu(mealNameTF.getText(), mealPrice);
+        Meal savedMeal = loggedInUser.createNewMenu(mealNameTF.getText(), mealPrice );
         if(savedMeal != null){
             mainTableView.getItems().add(savedMeal);
             mealArrayList.add(savedMeal);

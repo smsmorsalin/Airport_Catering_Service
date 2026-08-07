@@ -150,6 +150,7 @@ public class CreateProductionScheduleController implements UserReceiver {
             AlertGenerator.showAlert("Error","End time must be after the start time");
             return;
         }
+
         ProductionPlan savedSchedule =loggedInUser.createProductionSchedule(productionId, startTime, endTime, workShift);
         if (savedSchedule != null) {
             AlertGenerator.showAlert("Error","Production Schedule created successfully");
