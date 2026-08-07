@@ -119,7 +119,7 @@ public class packageOrderController implements UserReceiver
             return;
         }
 
-        if (packagingTypeComboBox.getValue() == null) {
+        if (packagingTypeComboBox.getValue().isEmpty()) {
             AlertGenerator.showAlert("Invalid Input", "Please select a packaging status.");
             return;
         }
