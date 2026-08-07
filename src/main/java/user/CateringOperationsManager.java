@@ -8,7 +8,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import main.airport_catering_service.controller.catering_operations_manager.approveOrRejectOrderViewController;
 import nonuser.CateringOrder;
+import nonuser.DeliveryStatus;
 import nonuser.InventoryStock;
+import nonuser.ProductionActivities;
 import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
@@ -87,6 +89,42 @@ public class CateringOperationsManager extends Employee implements Serializable 
         ArrayList<Object> inventoryStatusList;
         inventoryStatusList = BinaryFileUtility.readObjects("InventoryStock.bin");
         return inventoryStatusList;
+    }
+
+    public final ArrayList<DeliveryStatus> monitorDeliveryStatus(LocalDate fromDate, LocalDate toDate){
+        ArrayList<Object> readDeliveryStatusList;
+        ArrayList<DeliveryStatus> returnDeliveryStatusList = new ArrayList<>();
+
+        readDeliveryStatusList = BinaryFileUtility.readObjects("DeliveryStatus.bin");
+        if(readDeliveryStatusList.isEmpty()){
+            AlertGenerator.showAlert("error", "DeliveryStatus is empty");
+            return null;
+        }
+        for(Object o : readDeliveryStatusList){
+            if(o instanceof DeliveryStatus d){
+                if(d.getDeliveryDate().isAfter(fromDate) && d.getDeliveryDate().isBefore(toDate)){
+                    returnDeliveryStatusList.add(d);
+                }
+            }
+        }
+        return returnDeliveryStatusList;
+
+    }
+    public final ProductionActivities monitorProductionProgress(int productionOrderId){
+        ArrayList<Object> readProductionActivitiesList = BinaryFileUtility.readObjects("ProductionActivities.bin");
+        if(readProductionActivitiesList.isEmpty()){
+            AlertGenerator.showAlert("error", "ProductionActivities is empty");
+            return null;
+        }
+        for(Object o : readProductionActivitiesList){
+            if(o instanceof ProductionActivities p){
+                if(p.getProductionOrderId() == productionOrderId){
+                    return p;
+                }
+            }
+        }
+        AlertGenerator.showAlert("error", "please check productionOrderId \n production orderId does not exist");
+        return null;
     }
 
 
