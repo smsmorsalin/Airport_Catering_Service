@@ -48,6 +48,7 @@ public class CreateMenuListController implements UserReceiver
         mealIDTV.setCellValueFactory(new PropertyValueFactory<>("mealId"));
         mealNameTV.setCellValueFactory(new PropertyValueFactory<>("mealName"));
 
+
         mealArrayList = BinaryFileUtility.readObjects("Meal.bin");
 
         for (Object obj : mealArrayList){
