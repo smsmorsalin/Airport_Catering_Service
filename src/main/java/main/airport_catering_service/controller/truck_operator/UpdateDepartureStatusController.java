@@ -48,8 +48,11 @@ public class UpdateDepartureStatusController implements UserReceiver {
 
         } else {
 
-            AlertGenerator.showAlert("Error",
-                    "This is not a valid user for this page");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "This is not a valid user for this page"
+            );
+
         }
     }
 
@@ -71,21 +74,112 @@ public class UpdateDepartureStatusController implements UserReceiver {
 
         if (assignmentIdField.getText().isEmpty()) {
 
-            AlertGenerator.showAlert("Error",
-                    "Please enter assignment ID");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter assignment ID"
+            );
 
             return;
         }
 
+
+        int assignmentId;
+
         try {
 
-            Integer.parseInt(assignmentIdField.getText());
+            assignmentId =
+                    Integer.parseInt(
+                            assignmentIdField.getText()
+                    );
 
         } catch (NumberFormatException e) {
 
-            AlertGenerator.showAlert("Error",
-                    "Invalid assignment ID");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Invalid assignment ID"
+            );
+
             return;
+        }
+
+
+        if (assignmentId <= 0) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a valid assignment ID"
+            );
+
+            return;
+        }
+
+
+        File file =
+                new File("DeliveryAssignment.bin");
+
+
+        if (!file.exists()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "No assignment data found"
+            );
+
+            return;
+        }
+
+
+        try {
+
+            ObjectInputStream ois =
+                    new ObjectInputStream(
+                            new FileInputStream(file)
+                    );
+
+
+            while (true) {
+
+                try {
+
+                    DeliveryAssignment assignment =
+                            (DeliveryAssignment)
+                                    ois.readObject();
+
+
+                    if (assignment.getAssignmentId()
+                            == assignmentId) {
+
+                        AlertGenerator.showAlert(
+                                "Success",
+                                "Assignment loaded successfully"
+                        );
+
+                        ois.close();
+
+                        return;
+                    }
+
+                } catch (EOFException e) {
+
+                    break;
+                }
+            }
+
+
+            ois.close();
+
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Assignment not found"
+            );
+
+        } catch (Exception e) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Unable to load assignment"
+            );
 
         }
 
@@ -95,11 +189,12 @@ public class UpdateDepartureStatusController implements UserReceiver {
     @FXML
     public void updateDepartureStatus(ActionEvent actionEvent) {
 
-
         if (assignmentIdField.getText().isEmpty()) {
 
-            AlertGenerator.showAlert("Error",
-                    "Please enter assignment ID");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter assignment ID"
+            );
 
             return;
         }
@@ -111,12 +206,27 @@ public class UpdateDepartureStatusController implements UserReceiver {
         try {
 
             assignmentId =
-                    Integer.parseInt(assignmentIdField.getText());
+                    Integer.parseInt(
+                            assignmentIdField.getText()
+                    );
 
         } catch (NumberFormatException e) {
 
-            AlertGenerator.showAlert("Error",
-                    "Invalid assignment ID");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Invalid assignment ID"
+            );
+
+            return;
+        }
+
+
+        if (assignmentId <= 0) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a valid assignment ID"
+            );
 
             return;
         }
@@ -124,8 +234,10 @@ public class UpdateDepartureStatusController implements UserReceiver {
 
         if (departureDatePicker.getValue() == null) {
 
-            AlertGenerator.showAlert("Error",
-                    "Please select departure date");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select departure date"
+            );
 
             return;
         }
@@ -133,15 +245,18 @@ public class UpdateDepartureStatusController implements UserReceiver {
 
         if (statusComboBox.getValue() == null) {
 
-            AlertGenerator.showAlert("Error",
-                    "Please select status");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select status"
+            );
 
             return;
         }
 
 
+        File file =
+                new File("DeliveryAssignment.bin");
 
-        File file = new File("DeliveryAssignment.bin");
 
         ArrayList<DeliveryAssignment> assignmentList =
                 new ArrayList<>();
@@ -149,22 +264,21 @@ public class UpdateDepartureStatusController implements UserReceiver {
 
         try {
 
-
             if (!file.exists()) {
 
-                AlertGenerator.showAlert("Error",
-                        "No assignment file found");
+                AlertGenerator.showAlert(
+                        "Error",
+                        "No assignment file found"
+                );
 
                 return;
-
             }
-
 
 
             ObjectInputStream ois =
                     new ObjectInputStream(
-                            new FileInputStream(file));
-
+                            new FileInputStream(file)
+                    );
 
 
             while (true) {
@@ -172,32 +286,29 @@ public class UpdateDepartureStatusController implements UserReceiver {
                 try {
 
                     DeliveryAssignment assignment =
-                            (DeliveryAssignment) ois.readObject();
+                            (DeliveryAssignment)
+                                    ois.readObject();
 
                     assignmentList.add(assignment);
-
 
                 } catch (EOFException e) {
 
                     break;
-
                 }
-
             }
 
 
             ois.close();
 
 
-
             boolean updated = false;
 
 
+            for (DeliveryAssignment assignment :
+                    assignmentList) {
 
-            for (DeliveryAssignment assignment : assignmentList) {
-
-
-                if (assignment.getAssignmentId() == assignmentId) {
+                if (assignment.getAssignmentId()
+                        == assignmentId) {
 
                     assignment.setStatus(
                             statusComboBox.getValue()
@@ -214,14 +325,25 @@ public class UpdateDepartureStatusController implements UserReceiver {
             }
 
 
+            if (!updated) {
+
+                AlertGenerator.showAlert(
+                        "Error",
+                        "Assignment not found."
+                );
+
+                return;
+            }
+
 
             ObjectOutputStream oos =
                     new ObjectOutputStream(
-                            new FileOutputStream(file));
+                            new FileOutputStream(file)
+                    );
 
 
-
-            for (DeliveryAssignment assignment : assignmentList) {
+            for (DeliveryAssignment assignment :
+                    assignmentList) {
 
                 oos.writeObject(assignment);
 
@@ -231,35 +353,16 @@ public class UpdateDepartureStatusController implements UserReceiver {
             oos.close();
 
 
-
-            if (updated) {
-
-
-                AlertGenerator.showAlert(
-                        "Success",
-                        "Departure status updated successfully."
-                );
+            AlertGenerator.showAlert(
+                    "Success",
+                    "Departure status updated successfully."
+            );
 
 
-                resetForm(null);
-
-
-            } else {
-
-
-                AlertGenerator.showAlert(
-                        "Error",
-                        "Assignment not found."
-                );
-
-            }
+            resetForm(null);
 
 
         } catch (Exception e) {
-
-
-            e.printStackTrace();
-
 
             AlertGenerator.showAlert(
                     "Error",
@@ -271,9 +374,9 @@ public class UpdateDepartureStatusController implements UserReceiver {
     }
 
 
-
     @FXML
-    public void goBack(ActionEvent actionEvent) throws IOException {
+    public void goBack(ActionEvent actionEvent)
+            throws IOException {
 
         Truckoperator.renderDashboardView(
                 actionEvent,
@@ -283,13 +386,16 @@ public class UpdateDepartureStatusController implements UserReceiver {
     }
 
 
-
     @FXML
     public void resetForm(ActionEvent actionEvent) {
 
         assignmentIdField.clear();
+
         departureDatePicker.setValue(null);
-        statusComboBox.setValue(null);
+
+        statusComboBox
+                .getSelectionModel()
+                .clearSelection();
 
     }
 

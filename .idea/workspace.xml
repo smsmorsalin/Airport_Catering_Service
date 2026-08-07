@@ -5,36 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f54e7855-b3a3-42c8-8fdd-78cf34275391" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryIssue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/KitchenAssignment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/ProductionTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/RejectedBatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/headchef/AssignKitchenStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/headchef/AssignKitchenStaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/headchef/HandleRejectedBatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/headchef/HandleRejectedBatchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/headchef/UpdateProductionStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/headchef/UpdateProductionStatusController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/headchef/ViewProductionTasksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/headchef/ViewProductionTasksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/AcceptAssignmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/AcceptAssignmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/ConfirmDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/ConfirmDeliveryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/DeliveryPerformanceReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/DeliveryPerformanceReportController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/ReportDeliveryIssueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/ReportDeliveryIssueController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/UpdateDepartureStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/UpdateDepartureStatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/ViewAssignedDeliveriesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/ViewAssignedDeliveriesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/Headchef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Headchef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/Truckoperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Headchef/DisplayCookingProgressView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Headchef/UpdateProductionStatus.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Headchef/DisplayPreparationProgressView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Headchef/MonitorCookingProgress.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Headchef/DisplayProductionTaskInformationView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Headchef/DisplayProductionTaskInformationView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Headchef/HandleRejectedFoodBatchesView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Headchef/HandleRejectedFoodBatchesView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/AcceptDeliveryAssignmentView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/AcceptDeliveryAssignmentView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/AssignedDeliveryTasksView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/AssignedDeliveryTasksView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/ConfirmAircraftDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/ConfirmAircraftDeliveryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/DashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/DashboardView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/DeliveryHistoryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/DeliveryPerformanceReport.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/DisplayDepartureConfirmationView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/UpdateTransitStatus.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/StartDeliveryTripView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/UpdateDepartureStatus.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/UpdateTransitStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/UpdateTransitStatusController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,23 +116,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Mahir&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "#239 on Mahir",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -187,16 +162,5 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/DeliveryPerformanceReportController.java</url>
-          <line>117</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

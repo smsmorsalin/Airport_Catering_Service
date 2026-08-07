@@ -50,8 +50,9 @@ public class ViewProductionTasksController implements UserReceiver {
     public void setLoggedInUser(User user) {
         if (user instanceof Headchef headchef) {
             loggedInUser = headchef;
+        } else {
+            AlertGenerator.showAlert("Error", "This is not a valid user for this page");
         }
-        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
     }
 
     @javafx.fxml.FXML
@@ -72,40 +73,52 @@ public class ViewProductionTasksController implements UserReceiver {
     public void clearFields(ActionEvent actionEvent) {
         productionTaskIdField.clear();
         orderIdField.clear();
-
     }
 
     @javafx.fxml.FXML
     public void searchTask(ActionEvent actionEvent) {
+
         if (productionTaskIdField.getText().isEmpty()) {
             AlertGenerator.showAlert("Error", "Please enter a task ID");
             return;
         }
+
         int taskId;
+
         try {
             taskId = Integer.parseInt(productionTaskIdField.getText());
         } catch (NumberFormatException e) {
             AlertGenerator.showAlert("Error", "Please enter a valid task ID");
             return;
         }
+
         if (taskId <= 0) {
             AlertGenerator.showAlert("Error", "Please enter a valid task ID");
             return;
         }
+
         if (orderIdField.getText().isEmpty()) {
-            AlertGenerator.showAlert("Error", "Please enter a order ID");
+            AlertGenerator.showAlert("Error", "Please enter an order ID");
             return;
         }
+
         int orderId;
+
         try {
             orderId = Integer.parseInt(orderIdField.getText());
         } catch (NumberFormatException e) {
             AlertGenerator.showAlert("Error", "Please enter a valid order ID");
             return;
         }
+
         if (orderId <= 0) {
             AlertGenerator.showAlert("Error", "Please enter a valid order ID");
             return;
         }
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Production task information loaded successfully"
+        );
     }
 }
