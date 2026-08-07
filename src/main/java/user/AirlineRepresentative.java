@@ -307,13 +307,27 @@ public class AirlineRepresentative extends User implements Serializable {
     public final Boolean payCateringBill(int orderId, String invoiceId, String method, String transactionReference){
         Invoice checkInvoice = Invoice.searchInvoiceByOrderId(orderId);
         Payment newPayment = new Payment(orderId, invoiceId, method, checkInvoice.getTotalAmount(), transactionReference, LocalDate.now() );
+        BinaryFileUtility.writeObjects("CateringOrder.bin", newPayment);
         return true;
     }
 
-    //most dificult one
-    public final void viewOrderPaymentHistory(LocalDate startDate, LocalDate endDate, String flightNumber, String status){
+    public final ArrayList<CateringOrder> viewOrderHistory(LocalDate startDate, LocalDate endDate){
+        ArrayList<Object> readOrderList;
+        ArrayList<CateringOrder> returnCateringOrderList = new ArrayList<>();
 
-
+        readOrderList = BinaryFileUtility.readObjects("CateringOrder.bin");
+        if(readOrderList.isEmpty()){
+            AlertGenerator.showAlert("error", "DeliveryStatus is empty");
+            return null;
+        }
+        for(Object o : readOrderList){
+            if(o instanceof CateringOrder c){
+                if(c.getOrderDate().isAfter(startDate) && c.getOrderDate().isBefore(endDate)){
+                    returnCateringOrderList.add(c);
+                }
+            }
+        }
+        return returnCateringOrderList;
     }
 
     public static AirlineRepresentative createNewAirlineRepresentative(String password, String fullName, LocalDate dateOfBirth, String gender, String email, String phone, String address, String airlineId, String officeContact) {
