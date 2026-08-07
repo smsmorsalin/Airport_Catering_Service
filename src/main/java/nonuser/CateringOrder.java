@@ -21,10 +21,10 @@ public class CateringOrder implements Serializable {
     private boolean isDelay;
     private String orderAcceptOrRejectBy;
 
-    public CateringOrder(String flightId, String airlineId, int airlineRepresentativeId, LocalDate orderDate, String deliveryLocation, ArrayList<String> orderItemIds, LocalDate deliveryDate, LocalTime deliveryTime) {
+    public CateringOrder(String flightId, String airlineId, int airlineRepresentativeId, String deliveryLocation, ArrayList<String> orderItemIds, LocalDate deliveryDate, LocalTime deliveryTime) {
         this.orderId = generateOrderId();
         FlightId = flightId;
-        this.orderDate = orderDate;
+        this.orderDate = LocalDate.now();
         this.airlineRepresentativeId = airlineRepresentativeId;
         this.deliveryLocation = deliveryLocation;
         this.orderItemIds = orderItemIds;

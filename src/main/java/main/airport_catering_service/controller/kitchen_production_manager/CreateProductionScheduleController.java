@@ -30,6 +30,8 @@ public class CreateProductionScheduleController implements UserReceiver {
     @javafx.fxml.FXML
     private ComboBox<String> startMinitueTimeComboBox;
 
+
+
     private KitchenProductionManager loggedInUser;
     @Override
     public void setLoggedInUser(User user){
@@ -83,13 +85,11 @@ public class CreateProductionScheduleController implements UserReceiver {
     public void sideBarProductionReportsOA(ActionEvent actionEvent) {
         KitchenProductionManager.viewGenerateProductionReports(actionEvent,loggedInUser);
     }
-
     @javafx.fxml.FXML
     public void sideBarApproveProductionOA(ActionEvent actionEvent){
         KitchenProductionManager.viewApproveProductionCompletion(actionEvent,loggedInUser);
 
     }
-
     @javafx.fxml.FXML
     public void sideBarProductionPlanOA(ActionEvent actionEvent){
         KitchenProductionManager.viewCreateProductionPlan(actionEvent,loggedInUser);
@@ -128,15 +128,36 @@ public class CreateProductionScheduleController implements UserReceiver {
             showAlert("Production Plan ID must be greater than 0");
             return;
         }
-
         if (workShiftComboBox1.getValue() == null) {
             showAlert("Please select a Work Shift");
             return;
         }
-
         if (startHoursTimeComboBox.getValue() == null || startMinitueTimeComboBox.getValue() == null || endsHoursTimeComboBox.getValue() == null || endsMinutiesTimeComboBox.getValue() == null) {
             showAlert("Please select Start Time and End Time");
             return;
+        }
+
+        int startHour = Integer.parseInt(startHoursTimeComboBox.getValue());
+        int startMinute = Integer.parseInt(startMinitueTimeComboBox.getValue());
+        int endHour = Integer.parseInt(endsHoursTimeComboBox.getValue());
+        int endMinute = Integer.parseInt(endsMinutiesTimeComboBox.getValue());
+        String workShift = workShiftComboBox1.getValue();
+
+        LocalTime startTime = LocalTime.of(startHour,startMinute);
+        LocalTime endTime = LocalTime.of(endHour,endMinute);
+
+        if(!endTime.isAfter(startTime)){
+            AlertGenerator.showAlert("Error","End time must be after the start time");
+            return;
+        }
+        ProductionPlan savedSchedule =loggedInUser.createProductionSchedule(productionId, startTime, endTime, workShift);
+        if (savedSchedule != null) {
+            AlertGenerator.showAlert("Error","Production Schedule created successfully");
+            return;
+        }
+        else{
+        AlertGenerator.showAlert("Error","Failed to create Production Schedule");
+        return;
         }
     }
 }
