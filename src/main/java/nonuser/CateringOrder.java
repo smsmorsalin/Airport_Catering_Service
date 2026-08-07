@@ -36,7 +36,7 @@ public class CateringOrder implements Serializable {
         this.orderAcceptOrRejectBy = "N/A";
     }
 
-    public CateringOrder(int orderId, String airlineId,ArrayList<String> orderItemIds) {
+    public CateringOrder(int orderId, String airlineId, ArrayList<String> orderItemIds) {
         this.orderId = orderId;
         this.FlightId = "";
         this.airlineId = airlineId;

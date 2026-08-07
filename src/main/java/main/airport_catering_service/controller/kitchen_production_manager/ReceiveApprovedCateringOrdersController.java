@@ -8,6 +8,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import nonuser.Airline;
 import nonuser.CateringOrder;
 import user.KitchenProductionManager;
 import user.User;
@@ -55,23 +56,26 @@ public class ReceiveApprovedCateringOrdersController implements UserReceiver
         airlineIdTableView.setCellValueFactory(new PropertyValueFactory<>("airlineId"));
         mealTypesTableView.setCellValueFactory(new PropertyValueFactory<>("orderItemIds"));
 
-        ArrayList<String> itemList1 = new ArrayList<>();
-        itemList1.add("Chicken Meal");
-        itemList1.add("Rice");
-        CateringOrder order1 = new CateringOrder(101, "Biman", itemList1);
-
-        ArrayList<String> itemList2 = new ArrayList<>();
-        itemList2.add("Beef Meal");
-        CateringOrder order2 = new CateringOrder(102, "US-Bangla", itemList2);
+//        ArrayList<String> itemList1 = new ArrayList<>();
+//        itemList1.add("Chicken Meal");
+//        itemList1.add("Rice");
+//
+//        ArrayList<String> itemList2 = new ArrayList<>();
+//        itemList2.add("Beef Meal");
+//        itemList2.add("Polaw");
+//
+//        CateringOrder new1 = new CateringOrder(101,"Biman",itemList1);
+//        CateringOrder new2 = new CateringOrder(102,"US-Bangla",itemList2);
+//
+//        BinaryFileUtility.writeObjects("CateringOrder.bin",new1);
+//        BinaryFileUtility.writeObjects("CateringOrder.bin",new2);
 
         cateringOrderList = BinaryFileUtility.readObjects("CateringOrder.bin");
-
         for (Object obj : cateringOrderList) {
             if (obj instanceof CateringOrder cateringOrder) {
                 mainTableView.getItems().add(cateringOrder);
             }
         }
-        mainTableView.getItems().addAll(order1, order2);
     }
 
     @FXML
