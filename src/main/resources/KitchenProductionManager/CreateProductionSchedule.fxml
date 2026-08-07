@@ -54,7 +54,7 @@
             <children>
                 <AnchorPane prefHeight="591.0" prefWidth="596.0" style="-fx-background-color: darkBlue;">
                <children>
-                  <Label layoutX="27.0" layoutY="90.0" prefHeight="17.0" prefWidth="127.0" text=" Production Plan ID" textFill="WHITE">
+                  <Label layoutX="27.0" layoutY="90.0" prefHeight="17.0" prefWidth="127.0" text=" Production  ID" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Label>

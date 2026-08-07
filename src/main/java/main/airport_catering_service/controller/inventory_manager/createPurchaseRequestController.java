@@ -119,7 +119,9 @@ public class createPurchaseRequestController implements UserReceiver
 
 
 
-    //buttons for side bar
+
+
+    //button0
     @javafx.fxml.FXML
     public void manageSupplierButtonOnAction(ActionEvent actionEvent) {
         InventoryManager.renderManageSupplier(actionEvent,loggedInUser);
