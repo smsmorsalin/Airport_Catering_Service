@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="payBillViewController half complete">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/AcceptAssignmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/AcceptAssignmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/CollectShipmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/CollectShipmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/ConfirmDeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/ConfirmDeliveryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/UpdateTransitStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/truck_operator/UpdateTransitStatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryAssignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/DeliveryAssignment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/CollectPackagedCateringOrdersView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/CollectPackagedCateringOrdersView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/ConfirmAircraftDeliveryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/ConfirmAircraftDeliveryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Truckoperator/DisplayDepartureConfirmationView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Truckoperator/DisplayDepartureConfirmationView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="payBillViewController half complete" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +40,19 @@
       <option name="project" value="LOCAL" />
       <updated>1785888742666</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="payBillViewController half complete">
+      <option name="closed" value="true" />
+      <created>1786035414240</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1786035414241</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="payBillViewController half complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="payBillViewController half complete" />
   </component>
 </project>
