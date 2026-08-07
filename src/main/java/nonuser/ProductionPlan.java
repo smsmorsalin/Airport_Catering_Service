@@ -14,10 +14,20 @@ public class ProductionPlan implements Serializable {
         this.productionId = productionId;
         this.productionDate = productionDate;
         this.targetTime = targetTime;
-        StartTime = startTime;
+        this.StartTime = startTime;
         this.endTime = endTime;
         this.workShift = workShift;
         this.status = status;
+    }
+
+    public ProductionPlan(int productionId, LocalTime startTime,LocalTime endTime, String workShift) {
+        this.productionId = productionId;
+        this.productionDate = null;
+        this.targetTime = null;
+        this.StartTime = startTime;
+        this.endTime = endTime;
+        this.workShift = workShift;
+        this.status = "";
     }
 
     public int getProductionId() {
@@ -72,5 +82,16 @@ public class ProductionPlan implements Serializable {
         this.status = status;
     }
 
-
+    @Override
+    public String toString() {
+        return "ProductionPlan{" +
+                "productionId=" + productionId +
+                ", productionDate=" + productionDate +
+                ", targetTime=" + targetTime +
+                ", StartTime=" + StartTime +
+                ", endTime=" + endTime +
+                ", workShift='" + workShift + '\'' +
+                ", status='" + status + '\'' +
+                '}';
+    }
 }

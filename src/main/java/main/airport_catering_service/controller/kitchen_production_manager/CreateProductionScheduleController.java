@@ -140,5 +140,21 @@ public class CreateProductionScheduleController implements UserReceiver {
             showAlert("Please select Start Time and End Time");
             return;
         }
+
+        int startHour = Integer.parseInt(startHoursTimeComboBox.getValue());
+        int startMinute = Integer.parseInt(startMinitueTimeComboBox.getValue());
+        int endHour = Integer.parseInt(endsHoursTimeComboBox.getValue());
+        int endMinute = Integer.parseInt(endsMinutiesTimeComboBox.getValue());
+//        String workShift = workShiftComboBox1.getValue().toString();
+
+        LocalTime startTime = LocalTime.of(startHour,startMinute);
+        LocalTime endTime = LocalTime.of(endHour,endMinute);
+
+
+        if(!endTime.isAfter(startTime)){
+            AlertGenerator.showAlert("Error","End time must be after the start time");
+            return;
+        }
+
     }
 }
