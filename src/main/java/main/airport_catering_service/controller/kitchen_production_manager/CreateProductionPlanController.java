@@ -20,8 +20,6 @@ public class CreateProductionPlanController  implements UserReceiver {
     @javafx.fxml.FXML
     private ComboBox<String> miniutesTargetTimrCOmboBox;
     @javafx.fxml.FXML
-    private TableColumn<ProductionPlan, String> statusTableView;
-    @javafx.fxml.FXML
     private TextField productionOrderIDTextField;
     @javafx.fxml.FXML
     private DatePicker dateOfProductionDatePicker;

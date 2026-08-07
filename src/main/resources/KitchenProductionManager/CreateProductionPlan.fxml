@@ -74,7 +74,7 @@
                   <Label layoutX="238.0" layoutY="146.0" text=":" textFill="WHITE" />
                   <ComboBox fx:id="miniutesTargetTimrCOmboBox" layoutX="263.0" layoutY="142.0" prefHeight="25.0" prefWidth="3.0" />
                   <ComboBox fx:id="hourTargetTimrCOmboBox" layoutX="174.0" layoutY="142.0" prefHeight="25.0" prefWidth="3.0" />
-                  <Button layoutX="411.0" layoutY="64.0" mnemonicParsing="false" onAction="#createPlanOnAction" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: LimeGreen;" text="Create Plan" textFill="WHITE">
+                  <Button layoutX="422.0" layoutY="124.0" mnemonicParsing="false" onAction="#createPlanOnAction" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: LimeGreen;" text="Create Plan" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -89,12 +89,11 @@
                         <Font name="Arial Bold" size="17.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="mainTableView" layoutX="44.0" layoutY="295.0" prefHeight="200.0" prefWidth="508.0">
+                  <TableView fx:id="mainTableView" layoutX="59.0" layoutY="238.0" prefHeight="200.0" prefWidth="508.0">
                     <columns>
                       <TableColumn fx:id="stageNameTableView" prefWidth="142.0" text="Stage Name" />
-                      <TableColumn fx:id="startTimeTableView" prefWidth="105.33334350585938" text="Start Time" />
-                        <TableColumn fx:id="endTimeTableView" prefWidth="116.0" text="End Time" />
-                        <TableColumn fx:id="statusTableView" prefWidth="144.66668701171875" text="Status" />
+                      <TableColumn fx:id="startTimeTableView" prefWidth="182.66665649414062" text="Start Time" />
+                        <TableColumn fx:id="endTimeTableView" prefWidth="182.0" text="End Time" />
                     </columns>
                   </TableView>
                </children></AnchorPane>

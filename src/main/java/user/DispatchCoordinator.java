@@ -5,6 +5,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import nonuser.AssignDriverDetails;
+import nonuser.DriverDetails;
+import nonuser.PurchaseRequest;
+import utility.AlertGenerator;
+import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
@@ -66,5 +71,12 @@ public class DispatchCoordinator extends Employee implements Serializable {
 
     }
 
-
+    public boolean AssignDriverDetails (int truckID, int driverID, int truckNumber,int orderID) {
+        AssignDriverDetails newAssignDriver = new AssignDriverDetails(orderID, truckID, truckNumber, driverID);
+        boolean b = BinaryFileUtility.writeObjects("AssignDriverDetails.bin", newAssignDriver);
+        if(b){
+            return true;
+        }
+        return false;
+    }
 }
