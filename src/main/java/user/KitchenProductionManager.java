@@ -4,16 +4,20 @@ import javafx.event.ActionEvent;
 import nonuser.Meal;
 import nonuser.ProductionActivities;
 
+import nonuser.ProductionPlan;
 import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class KitchenProductionManager extends  Employee implements Serializable {
 
     public KitchenProductionManager(String password, String fullName, String role, LocalDate dateOfBirth, String gender, String email, String phone, String address, String status, LocalDate joinDate, String department, String designation, float salary) {
         super(password, fullName, role, dateOfBirth, gender, email, phone, address, status, joinDate, department, designation, salary);
     }
+
+
     public Meal createNewMenu(String mealName, float mealPrice){
         Meal newMeal = new Meal(mealName, mealPrice);
         boolean isSave = BinaryFileUtility.writeObjects("Meal.bin", newMeal);
@@ -23,6 +27,15 @@ public class KitchenProductionManager extends  Employee implements Serializable 
         }return null;
     }
 
+    public ProductionPlan createProductionSchedule(int productionId, LocalTime startTime,LocalTime endTime, String workShift){
+        ProductionPlan newSchedule = new ProductionPlan(productionId,startTime,endTime,workShift);
+        boolean isSave = BinaryFileUtility.writeObjects("ProductionSchedule.bin",newSchedule);
+        if(isSave){
+            return newSchedule;
+        }return null;
+    }
+
+
     public ProductionActivities createProductionOrderID (int productionOrderId){
         ProductionActivities newProductionId = new ProductionActivities(productionOrderId);
         boolean isSave = BinaryFileUtility.writeObjects("ProductionActivities.bin",newProductionId);
@@ -31,6 +44,7 @@ public class KitchenProductionManager extends  Employee implements Serializable 
         }
         return null;
     }
+
 
     @Override
     public String toString() {
