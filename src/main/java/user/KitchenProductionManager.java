@@ -35,7 +35,6 @@ public class KitchenProductionManager extends  Employee implements Serializable 
         }return null;
     }
 
-
     public ProductionActivities createProductionOrderID (int productionOrderId){
         ProductionActivities newProductionId = new ProductionActivities(productionOrderId);
         boolean isSave = BinaryFileUtility.writeObjects("ProductionActivities.bin",newProductionId);
