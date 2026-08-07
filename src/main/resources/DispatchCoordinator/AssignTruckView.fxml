@@ -2,7 +2,6 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -58,26 +57,20 @@
                <children>
                   <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="582.0" prefWidth="590.0">
                      <children>
-                        <Text fx:id="orderIdText" layoutX="36.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID" />
-                        <TextField fx:id="orderIdTextfield" layoutX="95.0" layoutY="43.0" />
-                        <Button layoutX="43.0" layoutY="84.0" mnemonicParsing="false" onAction="#searchAndShowButtonOnAction" prefHeight="26.0" prefWidth="176.0" text="Search And Show" />
-                        <TableView fx:id="tableView" layoutY="137.0" prefHeight="200.0" prefWidth="591.0">
+                        <Text fx:id="orderIdText" layoutX="326.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID" />
+                        <TextField fx:id="orderIdTextfield" layoutX="384.0" layoutY="419.0" />
+                        <Button layoutX="25.0" layoutY="415.0" mnemonicParsing="false" onAction="#searchAndShowButtonOnAction" prefHeight="26.0" prefWidth="176.0" text="Search And Show" />
+                        <TableView fx:id="tableView" layoutY="37.0" prefHeight="200.0" prefWidth="591.0">
                           <columns>
-                            <TableColumn fx:id="truckIdTableviewColumn" prefWidth="75.0" text="Truck ID" />
-                            <TableColumn fx:id="truckNumberTableviewColumn" prefWidth="174.4000244140625" text="Truck Number" />
-                              <TableColumn fx:id="driverIdTableviewColumn" prefWidth="152.79998779296875" text="Driver ID" />
-                              <TableColumn fx:id="driverNameTableviewColumn" prefWidth="188.79998779296875" text="Driver Name" />
+                            <TableColumn fx:id="truckIdTableviewColumn" prefWidth="185.6000518798828" text="Truck ID" />
+                            <TableColumn fx:id="truckNumberTableviewColumn" prefWidth="189.5999755859375" text="Truck Number" />
+                              <TableColumn fx:id="driverIdTableviewColumn" prefWidth="216.0" text="Driver ID" />
                           </columns>
                         </TableView>
                         <Text fx:id="truckSelectionText" layoutX="14.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Truck Selection" />
                         <TextField fx:id="truckSelectionTextfield" layoutX="106.0" layoutY="348.0" />
-                        <Text fx:id="driverSelectionText" layoutX="268.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Selection" />
-                        <TextField fx:id="driverSelectionTextfield" layoutX="359.0" layoutY="347.0" />
-                        <Label fx:id="assignmentIdLabel" layoutX="28.0" layoutY="410.0" text="Assignment ID" />
-                        <Label fx:id="truckIdLabel" layoutX="29.0" layoutY="444.0" text="Truck ID" />
-                        <Label fx:id="driverNameLabel" layoutX="29.0" layoutY="477.0" text="Driver Name" />
-                        <Label fx:id="flightNumberLabel" layoutX="29.0" layoutY="511.0" text="Flight Number" />
-                        <Label fx:id="deliveryscheduleLabel" layoutX="29.0" layoutY="538.0" text="Delivery Schedule" />
+                        <Text fx:id="driverSelectionText" layoutX="268.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver ID Selection" />
+                        <TextField fx:id="driverSelectionTextfield" layoutX="379.0" layoutY="348.0" />
                      </children>
                   </AnchorPane>
                </children>

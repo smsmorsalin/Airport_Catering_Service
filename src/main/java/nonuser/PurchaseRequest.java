@@ -88,7 +88,7 @@ public class PurchaseRequest implements Serializable {
         this.status = status;
     }
 
-    private int generateNewIngredientId(){
+    private static int generateNewIngredientId(){
         return databaseAccessor.generateNewUniqueId("PurchaseRequest.bin", "ingredientId");
     }
 }

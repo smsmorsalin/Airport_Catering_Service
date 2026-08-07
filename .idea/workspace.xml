@@ -5,21 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="Complete confirmDeliveryViewController all work">
+      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/AssignDriverDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/DriverDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateProductionScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/kitchen_production_manager/CreateProductionScheduleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/Meal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/orderHistoryViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/airline_representative/orderHistoryViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/AirlineRepresentative.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/airline_representative/orderHistoryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/airline_representative/orderHistoryView.fxml" afterDir="false" />
->>>>>>> a2a137bcc23b4c2a56d2757bc3a639d7a797754b
+      <change beforePath="$PROJECT_DIR$/User.bin" beforeDir="false" afterPath="$PROJECT_DIR$/User.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/assignTruckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/dispatch_coordinator/assignTruckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/createPurchaseRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/inventory_manager/createPurchaseRequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/PurchaseRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/PurchaseRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/DispatchCoordinator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/DispatchCoordinator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruckView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DispatchCoordinator/AssignTruckView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -117,7 +123,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ACS.executor": "Run",
-    "git-widget-placeholder": "saif",
+    "git-widget-placeholder": "sihab",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
