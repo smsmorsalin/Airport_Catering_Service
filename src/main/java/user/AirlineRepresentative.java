@@ -62,7 +62,7 @@ public class AirlineRepresentative extends User implements Serializable {
         }
 
         CateringOrder cateringOrder = new CateringOrder(
-                flightId,this.airlineId, this.getUserId(), LocalDate.now(), deliveryLocation,
+                flightId,this.airlineId, this.getUserId(), deliveryLocation,
                 orderItemIds, deliveryDate, deliveryTime
         );
 
@@ -286,11 +286,22 @@ public class AirlineRepresentative extends User implements Serializable {
 
     }
 
-    public final void confirmCateringDelivery(int orderId, String receiverName){
-        // find out the order from CateringOrder
-        // if the delivery already done give an alert
-        //else: create a ConfirmCateringDelivery
-
+    public final CateringOrder confirmCateringDelivery(CateringOrder cateringOrder){
+        ArrayList<Object> orderList = BinaryFileUtility.readObjects("CateringOrder.bin");
+        if (orderList == null || orderList.isEmpty()) {
+            AlertGenerator.showAlert("error", "No order exists in the database.");
+            return null;
+        }
+        for (Object obj : orderList) {
+            if(obj instanceof CateringOrder c) {
+                if (c.getOrderId() == cateringOrder.getOrderId()) {
+                    c.setStatus("Delivered");
+                    break;
+                }
+            }
+        }
+        BinaryFileUtility.overwriteObjects("CateringOrder.bin", orderList);
+        return cateringOrder;
     }
 
     public final Boolean payCateringBill(int orderId, String invoiceId, String method, String transactionReference){
