@@ -23,9 +23,18 @@ public class KitchenProductionManager extends  Employee implements Serializable 
         boolean isSave = BinaryFileUtility.writeObjects("Meal.bin", newMeal);
         if (isSave){
             return newMeal;
-
         }return null;
     }
+
+    public ProductionPlan createProductionPlan(int productionId, LocalDate productionDate, LocalTime targetTime, LocalTime startTime, LocalTime endTime, String stage) {
+        ProductionPlan newProductionPlan = new ProductionPlan(productionId, productionDate, targetTime, startTime, endTime, "", stage);
+        boolean isSaved = BinaryFileUtility.writeObjects("Production.bin", newProductionPlan);
+        if (isSaved) {
+            return newProductionPlan;
+        }return null;
+    }
+
+
 
     public ProductionPlan createProductionSchedule(int productionId, LocalTime startTime,LocalTime endTime, String workShift){
         ProductionPlan newSchedule = new ProductionPlan(productionId,startTime,endTime,workShift);
@@ -33,6 +42,12 @@ public class KitchenProductionManager extends  Employee implements Serializable 
         if(isSave){
             return newSchedule;
         }return null;
+    }
+
+
+    public boolean cateringOrder(int order) {
+        boolean b = BinaryFileUtility.writeObjects("CateringOrder.bin", order);
+        return false;
     }
 
     public ProductionActivities createProductionOrderID (int productionOrderId){

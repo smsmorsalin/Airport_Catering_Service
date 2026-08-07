@@ -50,7 +50,9 @@ public class Meal implements Serializable {
 
     public static Meal searchMealExistent(int mealId){
         ArrayList<Object> mealArrayList;
+
         mealArrayList = BinaryFileUtility.readObjects("Meal.bin");
+
         if (mealArrayList == null || mealArrayList.isEmpty()){
             AlertGenerator.showAlert("Error", "No data in Meal file");
             return null;
@@ -65,11 +67,11 @@ public class Meal implements Serializable {
         AlertGenerator.showAlert("Error", "Meal Not Exist in database");
         return null;
     }
-    public static ProductionPlan searchProductionPlanExistent(int productionId) {
 
+
+    public static ProductionPlan searchProductionPlanExistent(int productionId) {
         ArrayList<Object> productionPlanArrayList =
                 BinaryFileUtility.readObjects("ProductionPlan.bin");
-
         if (productionPlanArrayList == null || productionPlanArrayList.isEmpty()) {
             AlertGenerator.showAlert(
                     "Error",

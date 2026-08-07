@@ -8,16 +8,16 @@ public class ProductionPlan implements Serializable {
     private final int productionId;
     private LocalDate productionDate;
     private LocalTime targetTime, StartTime, endTime;
-    private String workShift, status;
+    private String workShift, stage;
 
-    public ProductionPlan(int productionId, LocalDate productionDate, LocalTime targetTime, LocalTime startTime, LocalTime endTime, String workShift, String status) {
+    public ProductionPlan(int productionId, LocalDate productionDate, LocalTime targetTime, LocalTime startTime, LocalTime endTime, String workShift, String stage) {
         this.productionId = productionId;
         this.productionDate = productionDate;
         this.targetTime = targetTime;
         this.StartTime = startTime;
         this.endTime = endTime;
         this.workShift = workShift;
-        this.status = status;
+        this.stage = stage;
     }
 
     public ProductionPlan(int productionId, LocalTime startTime,LocalTime endTime, String workShift) {
@@ -27,7 +27,7 @@ public class ProductionPlan implements Serializable {
         this.StartTime = startTime;
         this.endTime = endTime;
         this.workShift = workShift;
-        this.status = "";
+        this.stage = "";
     }
 
     public int getProductionId() {
@@ -74,12 +74,12 @@ public class ProductionPlan implements Serializable {
         this.workShift = workShift;
     }
 
-    public String getStatus() {
-        return status;
+    public String getStage() {
+        return stage;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setStage(String stage) {
+        this.stage = stage;
     }
 
     @Override
@@ -91,7 +91,7 @@ public class ProductionPlan implements Serializable {
                 ", StartTime=" + StartTime +
                 ", endTime=" + endTime +
                 ", workShift='" + workShift + '\'' +
-                ", status='" + status + '\'' +
+                ", stage='" + stage + '\'' +
                 '}';
     }
 }
