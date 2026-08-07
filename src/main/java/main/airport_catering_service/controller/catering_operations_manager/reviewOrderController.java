@@ -70,6 +70,7 @@ public class reviewOrderController implements UserReceiver
         tableColDeliveryDate.setCellValueFactory(new PropertyValueFactory<CateringOrder, LocalDate>("deliveryDate"));
         tableColFlighId.setCellValueFactory(new PropertyValueFactory<CateringOrder, String>("FlightId"));
         tableColOrderId.setCellValueFactory(new PropertyValueFactory<CateringOrder, Integer>("orderId"));
+        tableColOrderStatus.setCellValueFactory(new PropertyValueFactory<CateringOrder, String>("Status"));
 
         ArrayList<Object> cateringOrderList = BinaryFileUtility.readObjects("CateringOrder.bin");
         for (Object cateringOrder : cateringOrderList) {
