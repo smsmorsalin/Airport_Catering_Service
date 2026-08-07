@@ -3,13 +3,14 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="758.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.customer_support_officer.FlightDelayRequestViewController">
+<AnchorPane prefHeight="758.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.customer_support_officer.NewFlightEntryViewController">
 
     <children>
 
@@ -36,19 +37,19 @@
                         <Font size="15" />
                     </font>
                 </Button>
-                <Button onAction="#sidebarEmergencyModificationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Emergency Modification">
+                <Button onAction="#sidebarNewAirlineRequestButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="New Airline Request">
                     <font>
                         <Font size="15" />
                     </font>
                 </Button>
-                <Button onAction="#sidebarFlightDelayRequestButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;         -fx-background-color:#0F6BFF;" text="Flight Delay Request" textFill="white">
+                <Button onAction="#sidebarNewFlightEntryButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;         -fx-background-color:#0F6BFF;" text="New Flight Entery" textFill="white">
 
                     <font>
                         <Font size="15" />
                     </font>
 
                 </Button>
-                <Button onAction="#sidebarFlightCancellationButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Flight Cancellation">
+                <Button onAction="#sidebarCancellationAndDelayButtonOnAction" prefHeight="46" prefWidth="174" style="-fx-background-radius:50px;" text="Cancellation &amp; Delay">
                     <font>
                         <Font size="15" />
                     </font>
@@ -83,39 +84,28 @@
                 </Label>
                 <AnchorPane prefHeight="734" prefWidth="726" style="-fx-background-color:white;">
                     <children>
-                        <Label layoutX="56" layoutY="25" text="Flight Delay Request">
+                        <Label layoutX="56" layoutY="25" text="New Flight Entry">
                             <font>
                                 <Font size="24" />
                             </font>
                         </Label>
                         <Label layoutX="56" layoutY="65" text="Submit and manage flight delay requests" />
                         <AnchorPane layoutX="6" layoutY="105" prefHeight="110" prefWidth="712" style="-fx-background-color:white;             -fx-background-radius:25;" />
-                        <AnchorPane layoutX="91.0" layoutY="105.0" prefHeight="590.0" prefWidth="542.0" style="-fx-background-color: #F39C12; -fx-background-radius: 25;">
+                        <AnchorPane layoutX="23.0" layoutY="105.0" prefHeight="590.0" prefWidth="690.0" style="-fx-background-color: #F39C12; -fx-background-radius: 25;">
                      <children>
-                              <AnchorPane layoutX="47.0" layoutY="31.0" prefHeight="485.0" prefWidth="456.0" style="-fx-background-color:white;             -fx-background-radius:25;">
-                                  <children>
-                                      <Label layoutX="25.0" layoutY="104.0" text="Delay Information">
-                                          <font>
-                                              <Font size="20" />
-                                          </font>
-                                      </Label>
-      
-                                      <Label layoutX="25.0" layoutY="159.0" text="Previous Departure Time" />
-                                      <TextField fx:id="previousTimeTextField" layoutX="220.0" layoutY="154.0" prefWidth="160" />
-                                      <Label layoutX="25.0" layoutY="209.0" text="New Departure Time" />
-                                      <TextField fx:id="newTimeTextField" layoutX="220.0" layoutY="204.0" prefWidth="160" />
-                                      <Label layoutX="25.0" layoutY="259.0" text="Delay Reason" />
-                                      <TextArea fx:id="delayReasonTextField" layoutX="25.0" layoutY="284.0" prefHeight="189.0" prefWidth="410.0" promptText="Enter delay reason" />
-                                      <Label layoutX="24.0" layoutY="27.0" text="Order ID" />
-                                      <TextField fx:id="orderidTextField" layoutX="24.0" layoutY="49.0" prefHeight="30" prefWidth="180" />
-                                  </children>
-                              </AnchorPane>
-      
-                                <Button fx:id="updateScheduleBtn" layoutX="183.0" layoutY="532.0" onAction="#UpdateScheduleOnAction" prefHeight="40" prefWidth="180" style="-fx-background-color:#0F6BFF;         -fx-text-fill:white;         -fx-background-radius:10;" text="Update Schedule">
-                                    <font>
-                                        <Font size="14" />
-                                    </font>
-                                </Button>
+                        <TableView fx:id="flightTable" layoutX="14.0" layoutY="105.0" prefHeight="398.0" prefWidth="670.0">
+                          <columns>
+                            <TableColumn fx:id="flightIdColumn" prefWidth="128.79998779296875" text="Flight ID" />
+                            <TableColumn fx:id="flightNameColumn" prefWidth="176.00003051757812" text="Flight Name" />
+                              <TableColumn fx:id="airlineIdColumn" prefWidth="163.20001220703125" text="Airline ID" />
+                              <TableColumn fx:id="flightStatusColumn" prefWidth="199.99997558593748" text="Status" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="flightIdTextField" layoutX="25.0" layoutY="54.0" prefHeight="26.0" prefWidth="120.0" promptText="Flight ID" />
+                        <TextField fx:id="flightNameTextField" layoutX="155.0" layoutY="54.0" prefHeight="26.0" prefWidth="145.0" promptText="Flight Name" />
+                        <TextField fx:id="airlineIdTextField" layoutX="310.0" layoutY="54.0" prefHeight="26.0" prefWidth="110.0" promptText="Airline ID" />
+                        <TextField fx:id="destinationTextField" layoutX="430.0" layoutY="54.0" prefHeight="26.0" prefWidth="100.0" promptText="Destination" />
+                        <Button fx:id="addFlightButton" layoutX="540.0" layoutY="55.0" mnemonicParsing="false" onAction="#addFlightOnAction" prefHeight="26.0" prefWidth="125.0" text="Add Flight" />
                      </children>
                         </AnchorPane>
                     </children>

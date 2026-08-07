@@ -6,6 +6,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import nonuser.CateringOrder;
+import nonuser.CostRecord;
 import nonuser.Invoice;
 import user.FinanceAndBillingManager;
 import user.User;
@@ -20,6 +21,9 @@ import java.util.ArrayList;
 
 public class GenerateInvoiceViewController implements UserReceiver
 {
+    private static final String ORDER_FILE = "CateringOrder.bin";
+    private static final String COST_FILE = "CostRecord.bin";
+    private static final String INVOICE_FILE = "Invoice.bin";
     @javafx.fxml.FXML
     private Label packagingCostLabel;
     @javafx.fxml.FXML
@@ -68,61 +72,74 @@ public class GenerateInvoiceViewController implements UserReceiver
     private FinanceAndBillingManager loggedInUser;
     @Override
     public void setLoggedInUser(User user){
-        if (user instanceof FinanceAndBillingManager FinanceAndBillingManager){
-            this.loggedInUser = FinanceAndBillingManager;
+        if (user instanceof FinanceAndBillingManager financeAndBillingManager){
+            this.loggedInUser = financeAndBillingManager;
+        } else {
+            AlertGenerator.showAlert("Error", "Authentication failed");
         }
-        AlertGenerator.showAlert("error", "error Authentication failed");
     }
 
     @javafx.fxml.FXML
     public void initialize() {
+        clearSummary();
     }
 
     @javafx.fxml.FXML
     public void generateinvoiceOnAction(ActionEvent actionEvent) {
-
-        if(orderidTextField.getText().trim().isEmpty()){
-            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+        if (loggedInUser == null || selectedCateringOrder == null) {
+            AlertGenerator.showAlert("Invalid Input", "Verify an order first");
             return;
         }
-        if(billingAddressTextField.getText().trim().matches("//d+")){
-            AlertGenerator.showAlert("Invalid Input","Billing Address  Should be String");
+        if (billingAddressTextField.getText().trim().isEmpty()) {
+            AlertGenerator.showAlert("Invalid Input", "Billing address should be filled");
             return;
         }
-        int ingredientId;
-        try{
-            ingredientId = Integer.parseInt(orderidTextField.getText());
-        }
-        catch (NumberFormatException e){
-            AlertGenerator.showAlert("Wrong Input","textField should be an integer");
+        if (dueDatePicker.getValue() == null
+                || dueDatePicker.getValue().isBefore(LocalDate.now())) {
+            AlertGenerator.showAlert("Invalid Input", "Select a valid future due date");
             return;
         }
-        if(ingredientId <= 0){
-            AlertGenerator.showAlert("Invalid Input","Text field should be grater than 0");
+        for (Object object : BinaryFileUtility.readObjects(INVOICE_FILE)) {
+            if (object instanceof Invoice invoice
+                    && invoice.getOrderId() == selectedCateringOrder.getOrderId()) {
+                AlertGenerator.showAlert("Already Exists", "An invoice already exists for this order");
+                return;
+            }
+        }
+        CostRecord cost = findCostRecord(selectedCateringOrder.getOrderId());
+        if (cost == null) {
+            AlertGenerator.showAlert("Missing Cost", "Save a cost record before generating an invoice");
             return;
         }
-
-        if(orderidTextField.getText().trim().isEmpty()){
-            AlertGenerator.showAlert("Invalid Input","Text field should be filled");
+        Invoice invoice = new Invoice(selectedCateringOrder.getOrderId(), cost.getTotal(), dueDatePicker.getValue(), false);
+        if (!BinaryFileUtility.writeObjects(INVOICE_FILE, invoice)) {
+            AlertGenerator.showAlert("Error", "Invoice could not be saved");
             return;
         }
-
-        if(dueDatePicker.getValue().isBefore(LocalDate.now()) || dueDatePicker.getValue() == null){
-            AlertGenerator.showAlert("Wrong Input","Date should not be past date");
-            return;
-        }
-
-
+        invoiceIdLabel.setText(invoice.getInvoiceId());
+        summaryDateLabel.setText(invoice.getDueDate().toString());
+        summaryTotalAmountLabel.setText(String.format("%.2f", invoice.getTotalAmount()));
+        AlertGenerator.showAlert("Success", "Invoice generated successfully");
     }
 
-    @Deprecated
-    public void sidebarGenerateInvoiceOnAction(ActionEvent actionEvent) {
-
-
+    private CostRecord findCostRecord(int orderId) {
+        CostRecord latest = null;
+        for (Object object : BinaryFileUtility.readObjects(COST_FILE)) {
+            if (object instanceof CostRecord cost && cost.getOrderId() == orderId
+                    && (latest == null || cost.getRecordDate().isAfter(latest.getRecordDate()))) {
+                latest = cost;
+            }
+        }
+        return latest;
     }
+
 
     @javafx.fxml.FXML
     public void VerifyOrderOnAction(ActionEvent actionEvent) {
+        if (loggedInUser == null) {
+            AlertGenerator.showAlert("Error", "Please log in again");
+            return;
+        }
         try{
             selectedCateringOrderId = Integer.parseInt(orderidTextField.getText());
         } catch (NumberFormatException e) {
@@ -133,16 +150,18 @@ public class GenerateInvoiceViewController implements UserReceiver
         for(Object obj : selectedObjectedList){
             if (obj instanceof CateringOrder cateringOrder){
                 if(cateringOrder.getOrderId() == selectedCateringOrderId){
-                    if(cateringOrder.getStatus().equals("Canceled")){
-                        AlertGenerator.showAlert("error", "Order Already canceled");
+                    if ("Cancelled".equalsIgnoreCase(cateringOrder.getStatus())
+                            || "Canceled".equalsIgnoreCase(cateringOrder.getStatus())) {
+                        AlertGenerator.showAlert("Error", "Order already cancelled");
                         return;
                     }
-                    if(cateringOrder.getStatus().equals("Delivery")){
-                        AlertGenerator.showAlert("error", "Order Already Delivered");
+                    if ("Delivery".equalsIgnoreCase(cateringOrder.getStatus())
+                            || "Delivered".equalsIgnoreCase(cateringOrder.getStatus())) {
+                        AlertGenerator.showAlert("Error", "Order already delivered");
                         return;
                     }
-                    if(cateringOrder.getStatus().equals("Rejected")){
-                        AlertGenerator.showAlert("error", "Order Already Rejected");
+                    if ("Rejected".equalsIgnoreCase(cateringOrder.getStatus())) {
+                        AlertGenerator.showAlert("Error", "Order already rejected");
                         return;
                     }
                     ArrayList<Object> selectedInvoiceList = BinaryFileUtility.readObjects("Invoice.bin");
@@ -153,88 +172,119 @@ public class GenerateInvoiceViewController implements UserReceiver
                                 AlertGenerator.showAlert("error", "Already Invoice Generated");
                                 return;
                             }
-                            selectedCateringOrder = cateringOrder;
                         }
                     }
+                    selectedCateringOrder = cateringOrder;
                     OrderIdLabel.setText("Order Id: " +cateringOrder.getOrderId());
                     orderStatusLabel.setText("Order Status: "+ cateringOrder.getStatus());
+                    summaryOrderLabel.setText(String.valueOf(cateringOrder.getOrderId()));
+                    summaryAirlineNameLabel.setText(cateringOrder.getAirlineId());
+                    airlineNameLabel.setText(cateringOrder.getAirlineId());
+                    CostRecord cost = findCostRecord(cateringOrder.getOrderId());
+                    if (cost != null) {
+                        setCostLabels(cost);
+                    }
+                    AlertGenerator.showAlert("Success", "Order verified");
                     return;
                 }
             }
         }
 
+        AlertGenerator.showAlert("Order Not Found", "No catering order was found with that ID");
     }
 
-    @Deprecated
-    public void sidebarHomePageOnAction(ActionEvent actionEvent) {
+    private void setCostLabels(CostRecord cost) {
+        rawMaterialCostLabel.setText(String.format("%.2f", cost.getRawMaterialCost()));
+        ingredientCostLabel.setText(String.format("%.2f", cost.getIngredientCost()));
+        productionCostLabel.setText(String.format("%.2f", cost.getProductionCost()));
+        operationCostLabel.setText(String.format("%.2f", cost.getOperationalCost()));
+        packagingCostLabel.setText(String.format("%.2f", cost.getPackagingCost()));
+        transportCostLabel.setText(String.format("%.2f", cost.getTransportationCost()));
+        totalAmountLabel.setText(String.format("%.2f", cost.getTotal()));
+        summaryTotalAmountLabel.setText(String.format("%.2f", cost.getTotal()));
     }
 
-    @Deprecated
-    public void sideBarHomePageButtonOnAction(ActionEvent actionEvent) throws IOException {
+    private void clearSummary() {
+        invoiceIdLabel.setText("-");
+        summaryOrderLabel.setText("-");
+        summaryAirlineNameLabel.setText("-");
+        summaryDateLabel.setText("-");
+        summaryTotalAmountLabel.setText("0.00");
     }
+
+    private void switchTo (ActionEvent event, String view) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(event, view, loggedInUser);
+    }
+
 
     @javafx.fxml.FXML
     public void sidebarHomePageButtonOnAction(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/finance_and_billing_manager/dashboardView.fxml",
+                actionEvent, "/FinanceAndBillingManager/dashboardView.fxml",
                 loggedInUser);
     }
 
     @javafx.fxml.FXML
-    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) throws IOException{
+    public void sidebardashboardButtonOnAction(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/finance_and_billing_manager/dashboardView.fxml",
-                loggedInUser);    }
+                actionEvent, "/FinanceAndBillingManager/dashboardView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarCalculateCostButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/CalculateCostView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarGenerateInvoiceButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/GenerateInvoiceView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarRecordPaymentButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/RecordPaymentView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarProcessRefundButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/ProcessRefundView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/OutstandingPaymentsView.fxml",
+                loggedInUser);
+    }
+
+    @javafx.fxml.FXML
+    public void sideBarFinancialReportsButtonOnAction(ActionEvent actionEvent) throws IOException {
+        SceneSwitchingHelper.switchSceneWithData(
+                actionEvent, "/FinanceAndBillingManager/FinancialReportsView.fxml",
+                loggedInUser);
+    }
 
     @javafx.fxml.FXML
     public void sideBarRevenueSummaryButtonOnAction(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/finance_and_billing_manager/RevenueSummaryView.fxml",
+                actionEvent, "/FinanceAndBillingManager/RevenueSummaryView.fxml",
                 loggedInUser);
     }
 
-    @javafx.fxml.FXML
-    public void sideBarRecordPaymentButtonOnAction(ActionEvent actionEvent) throws IOException{
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/finance_and_billing_manager/RecordPaymentView.fxml",
-                loggedInUser);
-    }
 
     @javafx.fxml.FXML
-    public void sideBarProcessRefundButtonOnAction(ActionEvent actionEvent) throws IOException{
+    public void sideBarPaymentHistoryButtonOnAction(ActionEvent actionEvent) throws IOException {
         SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/finance_and_billing_manager/ProcessRefundView.fxml",
-                loggedInUser);
-    }
-
-    @javafx.fxml.FXML
-    public void sideBarGenerateInvoiceButtonOnAction(ActionEvent actionEvent) throws IOException{
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/finance_and_billing_manager/GenerateInvoiceView.fxml",
-                loggedInUser);    }
-
-    @javafx.fxml.FXML
-    public void sideBarPaymentHistoryButtonOnAction(ActionEvent actionEvent) throws IOException{
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/finance_and_billing_manager/PaymentHistoryView.fxml",
-                loggedInUser);    }
-
-    @javafx.fxml.FXML
-    public void sideBarCalculateCostButtonOnAction(ActionEvent actionEvent) throws IOException{
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/finance_and_billing_manager/CalculateCostView.fxml",
-                loggedInUser);    }
-
-    @javafx.fxml.FXML
-    public void sideBarFinancialReportsButtonOnAction(ActionEvent actionEvent) throws IOException{
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/finance_and_billing_manager/FinancialReportsView.fxml",
-                loggedInUser);    }
-
-    @javafx.fxml.FXML
-    public void sideBarOutstandingPaymentsButtonOnAction(ActionEvent actionEvent) throws IOException{
-        SceneSwitchingHelper.switchSceneWithData(
-                actionEvent, "/finance_and_billing_manager/OutstandingPaymentsView.fxml",
+                actionEvent, "/FinanceAndBillingManager/PaymentHistoryView.fxml",
                 loggedInUser);
     }
 

@@ -3,6 +3,7 @@ package nonuser;
 import utility.databaseAccessor;
 
 import java.io.*;
+import java.time.LocalDate;
 
 public class Payment implements Serializable {
     private final String paymentId;
@@ -10,13 +11,25 @@ public class Payment implements Serializable {
     private double paymentAmount;
     private final int orderId;
     private final String invoiceId;
+    private final String transactionReference;
+    private final LocalDate paymentDate;
 
-    public Payment(int orderId, String invoiceId, String paymentType, double paymentAmount) {
+    public Payment(int orderId, String invoiceId, String paymentType, double paymentAmount, String transactionReference, LocalDate paymentDate) {
         this.paymentId = generatePaymentId();
         this.orderId = orderId;
         this.invoiceId = invoiceId;
         this.paymentType = paymentType;
         this.paymentAmount = paymentAmount;
+        this.transactionReference = transactionReference;
+        this.paymentDate = paymentDate;
+    }
+
+    public String getTransactionReference() {
+        return transactionReference;
+    }
+
+    public LocalDate getPaymentDate() {
+        return paymentDate;
     }
 
     public String getPaymentId() {

@@ -12,26 +12,16 @@ import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
+import nonuser.DeliveryAssignment;
+
+import java.io.*;
+import java.util.ArrayList;
 
 public class CollectShipmentController implements UserReceiver {
-    @javafx.fxml.FXML
-    private TextArea notesTextArea;
-    @javafx.fxml.FXML
-    private TextField locationField;
-    @javafx.fxml.FXML
-    private TextField airlineField;
-    @javafx.fxml.FXML
-    private DatePicker collectionDatePicker;
     @javafx.fxml.FXML
     private Button backButton;
     @javafx.fxml.FXML
     private Button loadShipmentButton;
-    @javafx.fxml.FXML
-    private TextField orderIdField;
-    @javafx.fxml.FXML
-    private TextField flightNumberField;
-    @javafx.fxml.FXML
-    private TextField mealQuantityField;
     @javafx.fxml.FXML
     private Button confirmCollectionButton;
     @javafx.fxml.FXML
@@ -45,10 +35,11 @@ public class CollectShipmentController implements UserReceiver {
     public void setLoggedInUser(User user) {
         if (user instanceof Truckoperator truckoperator) {
             loggedInUser = truckoperator;
+        } else {
+            AlertGenerator.showAlert("Error",
+                    "This is not a valid user for this page");
         }
-        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
     }
-
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -61,16 +52,166 @@ public class CollectShipmentController implements UserReceiver {
     @javafx.fxml.FXML
     public void resetForm(ActionEvent actionEvent) {
         assignmentIdField.clear();
-        flightNumberField.clear();
-        mealQuantityField.clear();
-        orderIdField.clear();
-        airlineField.clear();
-        locationField.clear();
 
     }
-
     @javafx.fxml.FXML
     public void confirmCollection(ActionEvent actionEvent) {
+
+        if (assignmentIdField.getText().isEmpty()) {
+
+            AlertGenerator.showAlert("Error",
+                    "Please enter an assignment ID");
+
+            return;
+        }
+
+
+        int assignmentId;
+
+        try {
+
+            assignmentId = Integer.parseInt(
+                    assignmentIdField.getText()
+            );
+
+        } catch (NumberFormatException e) {
+
+            AlertGenerator.showAlert("Error",
+                    "Please enter a valid assignment ID");
+
+            return;
+        }
+
+
+
+        File file = new File("DeliveryAssignment.bin");
+
+        ArrayList<DeliveryAssignment> assignmentList = new ArrayList<>();
+
+
+        try {
+
+
+            if (!file.exists()) {
+
+                AlertGenerator.showAlert("Error",
+                        "No assignment file found.");
+
+                return;
+            }
+
+
+
+            // READ OBJECTS FROM FILE
+
+            ObjectInputStream ois =
+                    new ObjectInputStream(
+                            new FileInputStream(file));
+
+
+            while (true) {
+
+                try {
+
+                    DeliveryAssignment assignment =
+                            (DeliveryAssignment) ois.readObject();
+
+
+                    assignmentList.add(assignment);
+
+
+                } catch (EOFException e) {
+
+                    break;
+                }
+            }
+
+
+            ois.close();
+
+
+
+            boolean found = false;
+
+
+
+            // UPDATE OBJECT
+
+            for (DeliveryAssignment assignment : assignmentList) {
+
+
+                if (assignment.getAssignmentId() == assignmentId) {
+
+
+                    if (assignment.getStatus().equals("Accepted")) {
+
+
+                        assignment.setStatus("Collected");
+
+                        found = true;
+
+                        break;
+
+
+                    } else {
+
+
+                        AlertGenerator.showAlert("Error",
+                                "Cannot collect shipment. Current status: "
+                                        + assignment.getStatus());
+
+                        return;
+                    }
+                }
+            }
+
+
+
+
+            // WRITE OBJECTS BACK TO FILE
+
+            ObjectOutputStream oos =
+                    new ObjectOutputStream(
+                            new FileOutputStream(file));
+
+
+            for (DeliveryAssignment assignment : assignmentList) {
+
+                oos.writeObject(assignment);
+
+            }
+
+
+            oos.close();
+
+
+
+
+            if (found) {
+
+                AlertGenerator.showAlert("Success",
+                        "Shipment collected successfully.");
+
+                assignmentIdField.clear();
+
+            } else {
+
+                AlertGenerator.showAlert("Error",
+                        "Assignment not found.");
+
+            }
+
+
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+            AlertGenerator.showAlert("Error",
+                    "Unable to update shipment.");
+
+        }
+
     }
 
     @javafx.fxml.FXML
@@ -79,94 +220,16 @@ public class CollectShipmentController implements UserReceiver {
             AlertGenerator.showAlert("Error", "Please enter a assignment ID");
             return;
         }
-        int assignmentId = Integer.parseInt(assignmentIdField.getText());
+        int assignmentId;
+
         try {
             assignmentId = Integer.parseInt(assignmentIdField.getText());
+
         } catch (NumberFormatException e) {
-            AlertGenerator.showAlert("Error", "Please enter a valid assignment ID");
-            return;
-        }
-        if (assignmentId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid assignment ID");
-            return;
-        }
-        if (mealQuantityField.getText().isEmpty()) {
-            AlertGenerator.showAlert("Error", "Please enter a mealQ ID");
-            return;
-        }
-        int mealQuantity = Integer.parseInt(mealQuantityField.getText());
-        try {
-            mealQuantity = Integer.parseInt(mealQuantityField.getText());
-        } catch (NumberFormatException e) {
-            AlertGenerator.showAlert("Error", "Please enter a valid mealQ ID");
-            return;
-        }
-        if (mealQuantity <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid mealQ ID");
-            return;
-        }
-        if (flightNumberField.getText().isEmpty()) {
-            AlertGenerator.showAlert("Error", "Please enter a flight ID");
-            return;
-        }
-        int flightNumber = Integer.parseInt(flightNumberField.getText());
-        try {
-            flightNumber = Integer.parseInt(flightNumberField.getText());
-        } catch (NumberFormatException e) {
-            AlertGenerator.showAlert("Error", "Please enter a valid flight ID");
-            return;
-        }
-        if (flightNumber <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid flight ID");
-            return;
-        }
-        if (orderIdField.getText().isEmpty()) {
-            AlertGenerator.showAlert("Error", "Please enter a order ID");
-            return;
-        }
-        int orderId;
-        try {
-            orderId = Integer.parseInt(orderIdField.getText());
-        } catch (NumberFormatException e) {
-            AlertGenerator.showAlert("Error", "Please enter a valid order ID");
-            return;
-        }
-        if (orderId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid order ID");
-            return;
-        }
-        if (airlineField.getText().isEmpty()) {
-            AlertGenerator.showAlert("Error", "Please enter a airline ID");
-            return;
-        }
-        int airlineId;
-        try {
-            airlineId = Integer.parseInt(airlineField.getText());
-        } catch (NumberFormatException e) {
-            AlertGenerator.showAlert("Error", "Please enter a valid airline ID");
-            return;
-        }
-        if (airlineId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid airline ID");
-            return;
-        }
-        if (locationField.getText().isEmpty()) {
-            AlertGenerator.showAlert("Error", "Please enter a location ID");
-            return;
-        }
-        int locationId;
-        try {
-            locationId = Integer.parseInt(locationField.getText());
-        } catch (NumberFormatException e) {
-            AlertGenerator.showAlert("Error", "Please enter a valid location ID");
-            return;
-        }
-        if (locationId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid location ID");
-            return;
-        }
-        if (collectionDatePicker.getValue() == null) {
-            AlertGenerator.showAlert("Error", "Please enter a collection date");
+
+            AlertGenerator.showAlert("Error",
+                    "Please enter a valid assignment ID");
+
             return;
         }
     }

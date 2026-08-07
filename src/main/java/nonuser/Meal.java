@@ -42,7 +42,9 @@ public class Meal implements Serializable {
         this.mealPrice = mealPrice;
     }
 
+
     private static int generateMealId(){
+
         return databaseAccessor.generateNewUniqueId("Meal.bin", "mealId");
     }
 
@@ -61,6 +63,36 @@ public class Meal implements Serializable {
             }
         }
         AlertGenerator.showAlert("Error", "Meal Not Exist in database");
+        return null;
+    }
+    public static ProductionPlan searchProductionPlanExistent(int productionId) {
+
+        ArrayList<Object> productionPlanArrayList =
+                BinaryFileUtility.readObjects("ProductionPlan.bin");
+
+        if (productionPlanArrayList == null || productionPlanArrayList.isEmpty()) {
+            AlertGenerator.showAlert(
+                    "Error",
+                    "No data in Production Plan file"
+            );
+            return null;
+        }
+
+        for (Object obj : productionPlanArrayList) {
+
+            if (obj instanceof ProductionPlan productionPlan) {
+
+                if (productionPlan.getProductionId() == productionId) {
+                    return productionPlan;
+                }
+            }
+        }
+
+        AlertGenerator.showAlert(
+                "Error",
+                "Production Plan does not exist"
+        );
+
         return null;
     }
 

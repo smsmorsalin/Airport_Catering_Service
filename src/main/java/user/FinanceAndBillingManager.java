@@ -53,107 +53,39 @@ public class FinanceAndBillingManager extends Employee implements Serializable {
 
 
 
-    public static void viewCalculateCost(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/CalculateCostView.fxml"));
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
-    }
-    public static void viewGenerateInvoice(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/GenerateInvoiceView.fxml"));
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+    public static void  viewdashboard(javafx.event.ActionEvent event,User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/FinanceAndBillingManager/dashboardView.fxml",user);
     }
 
-    public static void viewRecordPayment(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/RecordPaymentView.fxml"));
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+    public static void  viewCalculateCost(javafx.event.ActionEvent event,User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/FinanceAndBillingManager/CalculateCostView.fxml",user);
     }
 
-    public static void viewProcessRefund(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/ProcessRefundView.fxml"));
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+    public static void  viewGenerateInvoice(javafx.event.ActionEvent event,User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/FinanceAndBillingManager/GenerateInvoiceView.fxml",user);
     }
 
-    public static void viewOutstandingPayments(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/OutstandingPaymentsView.fxml"));
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+    public static void  viewRecordPayment(javafx.event.ActionEvent event,User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/FinanceAndBillingManager/RecordPaymentView.fxml",user);
     }
 
-    public static void viewFinancialReports(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/FinancialReportsView.fxml"));
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+    public static void  viewProcessRefund(javafx.event.ActionEvent event,User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/FinanceAndBillingManager/ProcessRefundView.fxml",user);
     }
 
-    public static void viewRevenueSummary(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/RevenueSummaryView.fxml"));
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+    public static void  viewOutstandingPayments(javafx.event.ActionEvent event,User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/FinanceAndBillingManager/OutstandingPaymentsView.fxml",user);
     }
 
-    public static void viewPaymentHistory(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(FinanceAndBillingManager.class.getResource("/FinanceAndBillingManager/PaymentHistoryView.fxml"));
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+    public static void  viewFinancialReports(javafx.event.ActionEvent event,User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/FinanceAndBillingManager/FinancialReportsView.fxml",user);
     }
 
-    //Button to Dashboard
+    public static void  viewRevenueSummary(javafx.event.ActionEvent event,User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/FinanceAndBillingManager/RevenueSummaryView.fxml",user);
+    }
 
-
-
-    public static void viewdashboard(javafx.event.ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(
-                CustomerSupportOfficer.class.getResource("/FinanceAndBillingManager/dashboardView.fxml"));
-
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-        stage.show();
+    public static void  viewPaymentHistory(javafx.event.ActionEvent event,User user ) {
+        SceneSwitchingHelper.switchSceneWithData(event, "/FinanceAndBillingManager/PaymentHistoryView.fxml",user);
     }
 }
