@@ -9,6 +9,7 @@ import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class scheduleDeliveryController implements UserReceiver
 {
@@ -132,7 +133,7 @@ public class scheduleDeliveryController implements UserReceiver
         String deliveryTime = deliveryTimeTextfield.getText().trim();
 
 
-        var deliveryDate = deliveryDateDatepicker.getValue();
+        LocalDate deliveryDate = deliveryDateDatepicker.getValue();
 
     }
 }

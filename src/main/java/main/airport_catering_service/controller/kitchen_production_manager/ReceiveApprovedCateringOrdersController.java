@@ -2,13 +2,13 @@ package main.airport_catering_service.controller.kitchen_production_manager;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
+
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.AnchorPane;
+
+import nonuser.Airline;
 import nonuser.CateringOrder;
 import user.KitchenProductionManager;
 import user.User;
@@ -16,21 +16,15 @@ import user.UserReceiver;
 import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 
-import java.io.IOException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 
 public class ReceiveApprovedCateringOrdersController implements UserReceiver
 {
     @javafx.fxml.FXML
-    private TableColumn<CateringOrder,Integer> productionOrderIDTableColumn;
-    @javafx.fxml.FXML
     private TableColumn<CateringOrder, String> mealTypesTableView;
     @javafx.fxml.FXML
-    private TableColumn<CateringOrder,String> airlineNameTableView;
-    @javafx.fxml.FXML
-    private TableColumn<CateringOrder, LocalDate> deliveryDeadlineTableView;
+    private TableColumn<CateringOrder,String> airlineIdTableView;
     @javafx.fxml.FXML
     private TableView<CateringOrder> mainTableView;
     @FXML
@@ -41,6 +35,11 @@ public class ReceiveApprovedCateringOrdersController implements UserReceiver
     private TextField orderIDTextField1;
 
     private KitchenProductionManager loggedInUser;
+    @FXML
+    private TableColumn<CateringOrder,Integer> OrderIDTableColumn;
+
+    ArrayList<Object> cateringOrderList;
+
     @Override
     public void setLoggedInUser(User user){
         if (user instanceof KitchenProductionManager kitchenProductionManager){
@@ -50,18 +49,37 @@ public class ReceiveApprovedCateringOrdersController implements UserReceiver
         }
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
-        productionOrderIDTableColumn.setCellValueFactory(new PropertyValueFactory<>(""));
-        airlineNameTableView.setCellValueFactory(new PropertyValueFactory<>(""));
-        mealTypesTableView.setCellValueFactory(new PropertyValueFactory<>(""));
-        mealQuantityTableView.setCellValueFactory(new PropertyValueFactory<>(""));
-        deliveryDeadlineTableView.setCellValueFactory(new PropertyValueFactory<>(""));
+        mainTableView.getItems().clear();
+        OrderIDTableColumn.setCellValueFactory(new PropertyValueFactory<>("orderId"));
+        airlineIdTableView.setCellValueFactory(new PropertyValueFactory<>("airlineId"));
+        mealTypesTableView.setCellValueFactory(new PropertyValueFactory<>("orderItemIds"));
+
+//        ArrayList<String> itemList1 = new ArrayList<>();
+//        itemList1.add("Chicken Meal");
+//        itemList1.add("Rice");
+//
+//        ArrayList<String> itemList2 = new ArrayList<>();
+//        itemList2.add("Beef Meal");
+//        itemList2.add("Polaw");
+//
+//        CateringOrder new1 = new CateringOrder(101,"Biman",itemList1);
+//        CateringOrder new2 = new CateringOrder(102,"US-Bangla",itemList2);
+//
+//        BinaryFileUtility.writeObjects("CateringOrder.bin",new1);
+//        BinaryFileUtility.writeObjects("CateringOrder.bin",new2);
+
+        cateringOrderList = BinaryFileUtility.readObjects("CateringOrder.bin");
+        for (Object obj : cateringOrderList) {
+            if (obj instanceof CateringOrder cateringOrder) {
+                mainTableView.getItems().add(cateringOrder);
+            }
+        }
     }
 
     @FXML
     public void confirmOnAction(ActionEvent actionEvent) {
-        mainTableView.getItems().clear();
         if( productionTaskIDTextField.getText()  == null || productionTaskIDTextField.getText().trim().isEmpty() ||orderIDTextField1.getText() == null ||orderIDTextField1.getText().trim().isEmpty()){
             AlertGenerator.showAlert("Invalid Input","ID TextField should be filled");
             return;
@@ -79,74 +97,13 @@ public class ReceiveApprovedCateringOrdersController implements UserReceiver
             return;
         }
 
-        // file read
-        ArrayList<Object> cateringOrderObjects = BinaryFileUtility.readObjects("CateringOrder.bin");
-
-        CateringOrder selectedOrder = null;
-        int orderId = 0;
-        for (Object object : cateringOrderObjects) {
-            if (object instanceof CateringOrder cateringOrder) {
-                if (cateringOrder.getOrderId() == orderId) {
-                    selectedOrder = cateringOrder;
-                    break;
-                }
+        for (CateringOrder order : mainTableView.getItems()) {
+            if (order.getOrderId() == orderID) {
+                AlertGenerator.showAlert("Success", "Successfully Ordered");
+                return;
             }
         }
-        if (selectedOrder == null) {AlertGenerator.showAlert("Not Found", "Catering order not found");
-            return;
-        }
-
-        if (!selectedOrder.getStatus().equalsIgnoreCase("Approved")) {
-            AlertGenerator.showAlert("Not Approved", "This catering order is not approved");
-            return;
-        }
-
-        // Prevent duplicate receiving
-        ArrayList<Object> receivedOrderObjects = BinaryFileUtility.readObjects("ReceivedApprovedCateringOrder.bin");
-
-        for (Object object : receivedOrderObjects) {
-            if (object instanceof CateringOrder cateringOrder) {
-                if (cateringOrder.getOrderId() == orderId) {
-                    AlertGenerator.showAlert("Already Received",
-                           "This catering order has already been received"
-                    );
-                    return;
-                }
-            }
-        }
-
-
-        // file write
-        boolean saved = BinaryFileUtility.writeObjects("ReceivedApprovedCateringOrder.bin", selectedOrder);
-
-        if (!saved) {
-            AlertGenerator.showAlert("Error", "Approved catering order could not be saved");
-            return;
-        }
-
-
-        // show
-        loadReceivedOrders();
-        int productionTaskId=0;
-        AlertGenerator.showAlert("Successful",
-                "Approved catering order received successfully.\n" +
-                        "Production Task ID: " + productionTaskId + "\n" +
-                        "Order ID: " + orderId
-        );
-        productionTaskIDTextField.clear();
-        orderIDTextField1.clear();
-    }
-    private void loadReceivedOrders() {
-
-        mainTableView.getItems().clear();
-
-        ArrayList<Object> receivedOrderObjects = BinaryFileUtility.readObjects("ReceivedApprovedCateringOrder.bin");
-
-        for (Object object : receivedOrderObjects) {
-            if (object instanceof CateringOrder cateringOrder) {
-                mainTableView.getItems().add(cateringOrder);
-            }
-        }
+        AlertGenerator.showAlert("Error", "Order ID not found");
     }
 
 

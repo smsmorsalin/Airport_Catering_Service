@@ -44,7 +44,7 @@ public class generateDispatchReportController implements UserReceiver
     @javafx.fxml.FXML
     public void downloadDispatchReportButtonOnAction(ActionEvent actionEvent) {
 
-        if (reportTypeTextfield.getText() == null || reportTypeTextfield.getText().trim().isEmpty()
+        if (reportTypeTextfield.getText().trim().isEmpty()
                 || startDateDatepicker.getValue() == null || endDateDatepicker.getValue() == null) {
 
             AlertGenerator.showAlert("Invalid Input", "Report Type, Start Date and End Date must be filled.");
@@ -101,7 +101,7 @@ public class generateDispatchReportController implements UserReceiver
     }
 
     @javafx.fxml.FXML
-    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent)throws IOException {
+    public void airportCateringServiceButtonOnAction(ActionEvent actionEvent){
         DispatchCoordinator.renderDashboard(actionEvent,loggedInUser);
     }
 }

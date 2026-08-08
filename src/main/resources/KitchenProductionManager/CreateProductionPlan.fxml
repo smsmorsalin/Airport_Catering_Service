@@ -65,7 +65,7 @@
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Label>
-                  <Label layoutX="17.0" layoutY="145.0" text=" Target Completion Time" textFill="WHITE">
+                  <Label layoutX="28.0" layoutY="146.0" text=" Target Completion Time" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Label>

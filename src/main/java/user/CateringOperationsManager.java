@@ -1,16 +1,17 @@
 package user;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.PieChart;
 import javafx.stage.Stage;
 import main.airport_catering_service.controller.catering_operations_manager.approveOrRejectOrderViewController;
-import nonuser.CateringOrder;
-import nonuser.DeliveryStatus;
-import nonuser.InventoryStock;
-import nonuser.ProductionActivities;
+import nonuser.*;
 import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
@@ -19,6 +20,7 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class CateringOperationsManager extends Employee implements Serializable {
 
@@ -125,6 +127,52 @@ public class CateringOperationsManager extends Employee implements Serializable 
         }
         AlertGenerator.showAlert("error", "please check productionOrderId \n production orderId does not exist");
         return null;
+    }
+
+    public final ObservableList<PieChart.Data> businessDashboardView(){
+        int pending = 0;
+        int approved = 0;
+        int delivered = 0;
+        int rejected = 0;
+        int cancelled = 0;
+
+        ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
+
+        data.clear();
+        ArrayList<Object> orderList = BinaryFileUtility.readObjects("CateringOrder.bin");
+        for (Object obj : orderList) {
+            if(obj instanceof CateringOrder c){
+                switch(c.getStatus()){
+                    case "Pending":
+                        pending++;
+                        break;
+
+                    case "Approved":
+                        approved++;
+                        break;
+
+                    case "Rejected":
+                        rejected++;
+                        break;
+
+                    case "Cancelled":
+                        cancelled++;
+                        break;
+
+                    case "Delivered":
+                        delivered++;
+                        break;
+                }
+            }
+        }
+
+        data.add(new PieChart.Data("Pending", pending));
+        data.add(new PieChart.Data("Approved", approved));
+        data.add(new PieChart.Data("Rejected", rejected));
+        data.add(new PieChart.Data("Cancelled", cancelled));
+        data.add(new PieChart.Data("Delivered", delivered));
+
+        return data;
     }
 
 

@@ -94,7 +94,7 @@ public class lowStockAlertController implements UserReceiver
 
         tableView.getItems().clear();
 
-        if (ingredientIdTextfield.getText() == null || ingredientIdTextfield.getText().trim().isEmpty()) {
+        if (ingredientIdTextfield.getText().trim().isEmpty()) {
 
             AlertGenerator.showAlert("Invalid Input", "Ingredient ID must be filled.");
             return;
