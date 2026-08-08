@@ -1,5 +1,6 @@
 package user;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
+import javafx.scene.chart.PieChart;
 import javafx.stage.Stage;
 import main.airport_catering_service.controller.catering_operations_manager.approveOrRejectOrderViewController;
 import nonuser.*;
@@ -127,28 +129,50 @@ public class CateringOperationsManager extends Employee implements Serializable 
         return null;
     }
 
-    public final List<Integer> businessDashboardView(){
-        List<Integer> businessDashboardViewList =  new ArrayList<>();
-        int totalOrder = 0;
-        int totalRevinue = 0;
+    public final ObservableList<PieChart.Data> businessDashboardView(){
+        int pending = 0;
+        int approved = 0;
+        int delivered = 0;
+        int rejected = 0;
+        int cancelled = 0;
 
+        ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
+
+        data.clear();
         ArrayList<Object> orderList = BinaryFileUtility.readObjects("CateringOrder.bin");
-        ArrayList<Object> paymentList =  BinaryFileUtility.readObjects("Payment.bin");
-        if (orderList.isEmpty() || paymentList.isEmpty()){
-            return null;
-        }
+        for (Object obj : orderList) {
+            if(obj instanceof CateringOrder c){
+                switch(c.getStatus()){
+                    case "Pending":
+                        pending++;
+                        break;
 
-        totalOrder = orderList.size();
-        for (Object obj : paymentList) {
-            if(obj instanceof Payment p){
-                if (p.getPaymentDate().equals(LocalDate.now())) {
-                    totalRevinue++;
+                    case "Approved":
+                        approved++;
+                        break;
+
+                    case "Rejected":
+                        rejected++;
+                        break;
+
+                    case "Cancelled":
+                        cancelled++;
+                        break;
+
+                    case "Delivered":
+                        delivered++;
+                        break;
                 }
             }
         }
-        businessDashboardViewList.add(totalOrder);
-        businessDashboardViewList.add(totalRevinue);
-        return businessDashboardViewList;
+
+        data.add(new PieChart.Data("Pending", pending));
+        data.add(new PieChart.Data("Approved", approved));
+        data.add(new PieChart.Data("Rejected", rejected));
+        data.add(new PieChart.Data("Cancelled", cancelled));
+        data.add(new PieChart.Data("Delivered", delivered));
+
+        return data;
     }
 
 

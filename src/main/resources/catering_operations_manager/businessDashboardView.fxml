@@ -90,7 +90,10 @@
                      </font>
                   </Label>
                   <PieChart fx:id="fxidPiChart" layoutX="15.0" layoutY="287.0" prefHeight="237.0" prefWidth="564.0" style="-fx-border-color: green;" />
-                  <Label layoutX="190.0" layoutY="524.0" prefHeight="17.0" prefWidth="217.0" text="Catering Order Status" textFill="#2cab50" />
+                  <Label layoutX="190.0" layoutY="524.0" prefHeight="20.0" prefWidth="141.0" text="Catering Order Status" textFill="#2cab50">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                   <BorderPane layoutX="52.0" layoutY="36.0" prefHeight="211.0" prefWidth="174.0" style="-fx-background-color: pink; -fx-background-radius: 10;">
                      <top>
                         <Label text="total orders" textFill="#010d02" BorderPane.alignment="CENTER">
