@@ -33,7 +33,7 @@
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#sideBarMonitorProductionButton" prefHeight="42.0" prefWidth="174.0" text="Monitor Production" textOverrun="CENTER_ELLIPSIS">
+                <Button mnemonicParsing="false" onAction="#sideBarMonitorProductionButtonOA" prefHeight="42.0" prefWidth="174.0" text="Monitor Production" textOverrun="CENTER_ELLIPSIS">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin></Button>
@@ -79,7 +79,7 @@
         </Button>
         <VBox fillWidth="false" layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
             <children>
-                <AnchorPane onDragDetected="#MonitorProductionDetailsButton" prefHeight="592.0" prefWidth="596.0">
+                <AnchorPane prefHeight="592.0" prefWidth="596.0">
                     <children>
                         <Label alignment="CENTER" layoutX="194.0" prefHeight="17.0" prefWidth="203.0" text="Emergency Operation">
                             <font>

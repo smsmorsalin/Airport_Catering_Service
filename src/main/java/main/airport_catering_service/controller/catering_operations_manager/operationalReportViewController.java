@@ -2,10 +2,7 @@ package main.airport_catering_service.controller.catering_operations_manager;
 
 import javafx.event.ActionEvent;
 import javafx.event.Event;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import user.CateringOperationsManager;
 import user.User;
 import user.UserReceiver;
@@ -15,25 +12,13 @@ import utility.SceneSwitchingHelper;
 public class operationalReportViewController implements UserReceiver
 {
     @javafx.fxml.FXML
-    private TextField fxidDescritionTextField;
-    @javafx.fxml.FXML
     private ComboBox fxidIssueTypeComboBox;
-    @javafx.fxml.FXML
-    private TableView issueTableView;
-    @javafx.fxml.FXML
-    private TableColumn tableCol_assignedUserId;
-    @javafx.fxml.FXML
-    private TableColumn tableCol_issueType;
-    @javafx.fxml.FXML
-    private TextField fxidAssignUserIdTextField;
-    @javafx.fxml.FXML
-    private TableColumn tableCol_description;
-    @javafx.fxml.FXML
-    private TableColumn tableCol_TicketId;
-    @javafx.fxml.FXML
-    private TableColumn tableCol_staus;
 
     private CateringOperationsManager loggedInUser;
+    @javafx.fxml.FXML
+    private DatePicker fxidStartDateDatePicker;
+    @javafx.fxml.FXML
+    private DatePicker endDateDatePicker;
 
     @Override
     public void setLoggedInUser(User user) {
@@ -49,7 +34,7 @@ public class operationalReportViewController implements UserReceiver
     }
 
     @javafx.fxml.FXML
-    public void assignIssueButton(ActionEvent actionEvent) {
+    public void downloadTextReportButtonOnAction(ActionEvent actionEvent) {
     }
 
 
@@ -102,4 +87,5 @@ public class operationalReportViewController implements UserReceiver
     public void sideBarApproveRejectOrderButton(ActionEvent actionEvent) {
         SceneSwitchingHelper.switchSceneWithData(actionEvent, "/catering_operations_manager/approveOrRejectOrderView.fxml", loggedInUser);
     }
+
 }
