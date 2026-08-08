@@ -1,6 +1,7 @@
 package main.airport_catering_service.controller.headchef;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import user.Headchef;
 import user.User;
@@ -10,98 +11,237 @@ import utility.AlertGenerator;
 import java.io.IOException;
 
 public class UpdateProductionStatusController implements UserReceiver {
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn mealCategoryColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableView productionTable;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn remarksColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label completionLabel;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField currentStatusField;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button loadButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn taskIdColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn completionColumn;
-    @javafx.fxml.FXML
-    private ComboBox statusComboBox;
-    @javafx.fxml.FXML
+
+    @FXML
+    private ComboBox<String> statusComboBox;
+
+    @FXML
     private Button refreshButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn statusColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn lastUpdatedColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn teamColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button backButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private Slider completionSlider;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button updateButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextArea remarksTextArea;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField taskIdField;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button resetButton;
+
 
     private Headchef loggedInUser;
 
+
     @Override
     public void setLoggedInUser(User user) {
+
         if (user instanceof Headchef headchef) {
             loggedInUser = headchef;
-        } else {
-            AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+        }
+        else {
+            AlertGenerator.showAlert(
+                    "Error",
+                    "This is not a valid user for this page"
+            );
         }
     }
 
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+
+        statusComboBox.getItems().addAll(
+                "Pending",
+                "In Progress",
+                "Completed",
+                "Delayed"
+        );
+
+
+        completionSlider.setMin(0);
+        completionSlider.setMax(100);
+        completionSlider.setValue(0);
+
+
+        completionSlider.valueProperty()
+                .addListener((observable, oldValue, newValue) -> {
+
+                    completionLabel.setText(
+                            String.format("%.0f%%", newValue.doubleValue())
+                    );
+                });
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
-        Headchef.renderDashboardView(actionEvent, loggedInUser);
+
+        Headchef.renderDashboardView(
+                actionEvent,
+                loggedInUser
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void updateStatus(ActionEvent actionEvent) {
+
+        if(taskIdField.getText().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please load a task first"
+            );
+
+            return;
+        }
+
+
+        if(statusComboBox.getValue() == null) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select a status"
+            );
+
+            return;
+        }
+
+
+        if(remarksTextArea.getText().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter remarks"
+            );
+
+            return;
+        }
+
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Production status updated successfully"
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void refreshTable(ActionEvent actionEvent) throws IOException {
-        Headchef.renderDisplayCookingProgress(actionEvent, loggedInUser);
+
+        Headchef.renderDisplayCookingProgress(
+                actionEvent,
+                loggedInUser
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void resetForm(ActionEvent actionEvent) {
+
         taskIdField.clear();
+
         remarksTextArea.clear();
+
+        currentStatusField.clear();
+
+        statusComboBox.getSelectionModel()
+                .clearSelection();
+
+        completionSlider.setValue(0);
+
+        completionLabel.setText("0%");
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void loadTask(ActionEvent actionEvent) {
-        if(taskIdField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a task ID");
-            return;
-        }
-        int taskId;
-        try {
-            taskId = Integer.parseInt(taskIdField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid task ID");
-            return;
-        }
-        if(taskId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid task ID");
+
+        if(taskIdField.getText().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a task ID"
+            );
+
             return;
         }
 
+
+        int taskId;
+
+        try {
+
+            taskId = Integer.parseInt(
+                    taskIdField.getText()
+            );
+
+        } catch (NumberFormatException e) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a valid task ID"
+            );
+
+            return;
+        }
+
+
+        if(taskId <= 0) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Task ID must be greater than zero"
+            );
+
+            return;
+        }
+
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Task loaded successfully"
+        );
     }
 }

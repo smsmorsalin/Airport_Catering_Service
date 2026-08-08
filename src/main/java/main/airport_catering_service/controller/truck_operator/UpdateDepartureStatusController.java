@@ -1,180 +1,402 @@
 package main.airport_catering_service.controller.truck_operator;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import nonuser.DeliveryAssignment;
 import user.Truckoperator;
 import user.User;
 import user.UserReceiver;
 import utility.AlertGenerator;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
 
-public class UpdateDepartureStatusController implements UserReceiver
-{
-    @javafx.fxml.FXML
-    private TextField locationField;
-    @javafx.fxml.FXML
-    private TextField airlineField;
-    @javafx.fxml.FXML
+public class UpdateDepartureStatusController implements UserReceiver {
+
+    @FXML
     private Button loadButton;
-    @javafx.fxml.FXML
-    private TextField flightNumberField;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField assignmentIdField;
-    @javafx.fxml.FXML
-    private TextField departureTimeField;
-    @javafx.fxml.FXML
-    private ComboBox statusComboBox;
-    @javafx.fxml.FXML
+
+    @FXML
+    private ComboBox<String> statusComboBox;
+
+    @FXML
     private DatePicker departureDatePicker;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button backButton;
-    @javafx.fxml.FXML
-    private TextField orderIdField;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button updateButton;
-    @javafx.fxml.FXML
-    private TextArea remarksTextArea;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button resetButton;
 
+
     private Truckoperator loggedInUser;
+
+
     @Override
-    public void setLoggedInUser(User user){
-        if (user instanceof Truckoperator truckoperator){
+    public void setLoggedInUser(User user) {
+
+        if (user instanceof Truckoperator truckoperator) {
+
             loggedInUser = truckoperator;
+
+        } else {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "This is not a valid user for this page"
+            );
+
         }
-        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void initialize() {
+
+        statusComboBox.getItems().addAll(
+                "Departed",
+                "Delayed",
+                "Cancelled"
+        );
+
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void loadAssignment(ActionEvent actionEvent) {
-        if(assignmentIdField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a assignment ID");
+
+        if (assignmentIdField.getText().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter assignment ID"
+            );
+
             return;
         }
+
+
         int assignmentId;
+
         try {
-            assignmentId = Integer.parseInt(assignmentIdField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid assignment ID");
+
+            assignmentId =
+                    Integer.parseInt(
+                            assignmentIdField.getText()
+                    );
+
+        } catch (NumberFormatException e) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Invalid assignment ID"
+            );
+
             return;
         }
-        if(assignmentId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid assignment ID");
+
+
+        if (assignmentId <= 0) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a valid assignment ID"
+            );
+
             return;
         }
-        if(orderIdField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a order ID");
+
+
+        File file =
+                new File("DeliveryAssignment.bin");
+
+
+        if (!file.exists()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "No assignment data found"
+            );
+
             return;
         }
-        int orderId;
+
+
         try {
-            orderId = Integer.parseInt(orderIdField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid order ID");
-            return;
+
+            ObjectInputStream ois =
+                    new ObjectInputStream(
+                            new FileInputStream(file)
+                    );
+
+
+            while (true) {
+
+                try {
+
+                    DeliveryAssignment assignment =
+                            (DeliveryAssignment)
+                                    ois.readObject();
+
+
+                    if (assignment.getAssignmentId()
+                            == assignmentId) {
+
+                        AlertGenerator.showAlert(
+                                "Success",
+                                "Assignment loaded successfully"
+                        );
+
+                        ois.close();
+
+                        return;
+                    }
+
+                } catch (EOFException e) {
+
+                    break;
+                }
+            }
+
+
+            ois.close();
+
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Assignment not found"
+            );
+
+        } catch (Exception e) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Unable to load assignment"
+            );
+
         }
-        if(orderId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid order ID");
-            return;
-        }
-        if(flightNumberField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a flight ID");
-            return;
-        }
-        int flightNumber;
-        try {
-            flightNumber = Integer.parseInt(flightNumberField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid flight ID");
-            return;
-        }
-        if(flightNumber <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid flight ID");
-            return;
-        }
-        if(airlineField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a airline ID");
-            return;
-        }
-        int airlineId;
-        try {
-            airlineId = Integer.parseInt(airlineField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid airline ID");
-            return;
-        }
-        if(airlineId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid airline ID");
-            return;
-        }
-        if(locationField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a location ID");
-            return;
-        }
-        int locationId;
-        try {
-            locationId = Integer.parseInt(locationField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid location ID");
-            return;
-        }
-        if(locationId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid location ID");
-            return;
-        }
-        if(departureTimeField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a departure ID");
-            return;
-        }
-        int departureTime;
-        try {
-            departureTime = Integer.parseInt(departureTimeField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid departure time");
-            return;
-        }
-        if(departureTime <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid departure ID");
-            return;
-        }
-        if (remarksTextArea.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a remarks");
-            return;
-        }
-        if (statusComboBox.getSelectionModel().getSelectedIndex() == 0){
-            AlertGenerator.showAlert("Error", "Please select a status");
-            return;
-        }
-        if (departureDatePicker.getValue() == null){
-            AlertGenerator.showAlert("Error", "Please enter a departure date");
-            return;
-        }
+
     }
 
-    @javafx.fxml.FXML
-    public void goBack(ActionEvent actionEvent) throws IOException {
-        Truckoperator.renderDashboardView(actionEvent, loggedInUser);
-    }
 
-    @javafx.fxml.FXML
+    @FXML
     public void updateDepartureStatus(ActionEvent actionEvent) {
+
+        if (assignmentIdField.getText().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter assignment ID"
+            );
+
+            return;
+        }
+
+
+        int assignmentId;
+
+
+        try {
+
+            assignmentId =
+                    Integer.parseInt(
+                            assignmentIdField.getText()
+                    );
+
+        } catch (NumberFormatException e) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Invalid assignment ID"
+            );
+
+            return;
+        }
+
+
+        if (assignmentId <= 0) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a valid assignment ID"
+            );
+
+            return;
+        }
+
+
+        if (departureDatePicker.getValue() == null) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select departure date"
+            );
+
+            return;
+        }
+
+
+        if (statusComboBox.getValue() == null) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select status"
+            );
+
+            return;
+        }
+
+
+        File file =
+                new File("DeliveryAssignment.bin");
+
+
+        ArrayList<DeliveryAssignment> assignmentList =
+                new ArrayList<>();
+
+
+        try {
+
+            if (!file.exists()) {
+
+                AlertGenerator.showAlert(
+                        "Error",
+                        "No assignment file found"
+                );
+
+                return;
+            }
+
+
+            ObjectInputStream ois =
+                    new ObjectInputStream(
+                            new FileInputStream(file)
+                    );
+
+
+            while (true) {
+
+                try {
+
+                    DeliveryAssignment assignment =
+                            (DeliveryAssignment)
+                                    ois.readObject();
+
+                    assignmentList.add(assignment);
+
+                } catch (EOFException e) {
+
+                    break;
+                }
+            }
+
+
+            ois.close();
+
+
+            boolean updated = false;
+
+
+            for (DeliveryAssignment assignment :
+                    assignmentList) {
+
+                if (assignment.getAssignmentId()
+                        == assignmentId) {
+
+                    assignment.setStatus(
+                            statusComboBox.getValue()
+                    );
+
+                    assignment.setDeliveryDate(
+                            departureDatePicker.getValue()
+                    );
+
+                    updated = true;
+
+                    break;
+                }
+            }
+
+
+            if (!updated) {
+
+                AlertGenerator.showAlert(
+                        "Error",
+                        "Assignment not found."
+                );
+
+                return;
+            }
+
+
+            ObjectOutputStream oos =
+                    new ObjectOutputStream(
+                            new FileOutputStream(file)
+                    );
+
+
+            for (DeliveryAssignment assignment :
+                    assignmentList) {
+
+                oos.writeObject(assignment);
+
+            }
+
+
+            oos.close();
+
+
+            AlertGenerator.showAlert(
+                    "Success",
+                    "Departure status updated successfully."
+            );
+
+
+            resetForm(null);
+
+
+        } catch (Exception e) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Unable to update departure status."
+            );
+
+        }
+
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
+    public void goBack(ActionEvent actionEvent)
+            throws IOException {
+
+        Truckoperator.renderDashboardView(
+                actionEvent,
+                loggedInUser
+        );
+
+    }
+
+
+    @FXML
     public void resetForm(ActionEvent actionEvent) {
+
         assignmentIdField.clear();
-        departureTimeField.clear();
-        orderIdField.clear();
-        flightNumberField.clear();
-        remarksTextArea.clear();
-        airlineField.clear();
-        locationField.clear();
+
+        departureDatePicker.setValue(null);
+
+        statusComboBox
+                .getSelectionModel()
+                .clearSelection();
 
     }
+
 }

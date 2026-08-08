@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
@@ -14,9 +13,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="820" prefWidth="1280" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.truck_operator.AcceptAssignmentController">
+<BorderPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.airport_catering_service.controller.truck_operator.AcceptAssignmentController">
 
-    <!-- ================= HEADER ================= -->
+
+    <!-- HEADER -->
 
     <top>
 
@@ -25,6 +25,7 @@
             <padding>
                 <Insets bottom="18" left="25" right="25" top="18" />
             </padding>
+
 
             <Label text="✅ Accept Delivery Assignment">
 
@@ -39,61 +40,83 @@
 
             </Label>
 
-            <Label text="Review delivery details before accepting the assignment.">
 
-                <style>
-                    -fx-text-fill:white;
-                    -fx-font-size:15;
-                </style>
+            <Label style="-fx-text-fill:white;                           -fx-font-size:15;" text="Review delivery details before accepting the assignment." />
 
-            </Label>
 
         </VBox>
 
     </top>
 
-    <!-- ================= CENTER ================= -->
+
+
+    <!-- CENTER -->
 
     <center>
 
-        <VBox spacing="20">
+        <VBox prefHeight="820" prefWidth="1280" spacing="20">
 
             <padding>
                 <Insets bottom="20" left="20" right="20" top="20" />
             </padding>
 
-            <!-- Assignment Search -->
+
 
             <TitledPane collapsible="false" expanded="true" text="Assignment Information">
 
+
                 <content>
 
-                    <GridPane hgap="20" vgap="18">
+                    <GridPane hgap="20" vgap="15">
+
 
                         <padding>
                             <Insets bottom="20" left="20" right="20" top="20" />
                         </padding>
 
+
+                        <!-- SEARCH -->
+
                         <Label text="Assignment ID" />
 
-                        <TextField fx:id="assignmentIdField" prefWidth="220" promptText="Enter Assignment ID" GridPane.columnIndex="1" />
 
-                        <Button fx:id="loadButton" onAction="#loadAssignment" prefWidth="150" style="-fx-background-color:#3498DB;                                        -fx-text-fill:white;                                        -fx-font-weight:bold;" text="Load Assignment" GridPane.columnIndex="2" />
+                        <TextField fx:id="assignmentIdField" promptText="Enter Assignment ID" GridPane.columnIndex="1" />
+
+
+                        <Button fx:id="loadButton" onAction="#loadAssignment" style="-fx-background-color:#3498DB;                                        -fx-text-fill:white;                                        -fx-font-weight:bold;" text="Load Assignment" GridPane.columnIndex="2" />
+
+
+
+                        <!-- DETAILS -->
+
 
                         <Label text="Order ID" GridPane.rowIndex="1" />
 
+                        <TextField fx:id="orderIdField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+
+
                         <Label text="Flight Number" GridPane.rowIndex="2" />
+
+                        <TextField fx:id="flightNumberField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+
 
                         <Label text="Airline" GridPane.rowIndex="3" />
 
+                        <TextField fx:id="airlineField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+
+
                         <Label text="Delivery Location" GridPane.rowIndex="4" />
 
+                        <TextField fx:id="locationField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+
+
                         <Label text="Delivery Time" GridPane.rowIndex="5" />
-                  <DatePicker fx:id="deliverytimeDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <TextField fx:id="orderIdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="flightNumberField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="airlineField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField fx:id="locationField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                        <TextField fx:id="deliveryTimeField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <columnConstraints>
                      <ColumnConstraints />
                      <ColumnConstraints />
@@ -108,58 +131,81 @@
                      <RowConstraints />
                   </rowConstraints>
 
+
                     </GridPane>
+
 
                 </content>
 
+
             </TitledPane>
 
-            <!-- Assignment Confirmation -->
+
 
             <TitledPane collapsible="false" expanded="true" text="Assignment Decision">
 
+
                 <content>
 
-                    <VBox spacing="18">
+
+                    <VBox spacing="15">
 
                         <padding>
                             <Insets bottom="20" left="20" right="20" top="20" />
                         </padding>
 
-                        <Label style="-fx-font-size:16; -fx-font-weight:bold;" text="Do you want to accept this delivery assignment?" />
 
-                        <HBox alignment="CENTER_LEFT" spacing="20">
+                        <Label style="-fx-font-size:16;                                       -fx-font-weight:bold;" text="Accept this delivery assignment?" />
 
-                            <Button fx:id="acceptButton" onAction="#acceptAssignment" prefHeight="40" prefWidth="180" style="-fx-background-color:#27AE60;                                            -fx-text-fill:white;                                            -fx-font-weight:bold;" text="Accept Assignment" />
 
-                            <Button fx:id="clearButton" onAction="#clearForm" prefHeight="40" prefWidth="120" style="-fx-background-color:#F39C12;                                            -fx-text-fill:white;                                            -fx-font-weight:bold;" text="Clear" />
+                        <HBox spacing="20">
+
+
+                            <Button fx:id="acceptButton" onAction="#acceptAssignment" prefWidth="180" style="-fx-background-color:#27AE60;                                            -fx-text-fill:white;                                            -fx-font-weight:bold;" text="Accept Assignment" />
+
+
+                            <Button fx:id="clearButton" onAction="#clearForm" prefWidth="120" style="-fx-background-color:#F39C12;                                            -fx-text-fill:white;                                            -fx-font-weight:bold;" text="Clear" />
+
 
                         </HBox>
 
+
                     </VBox>
+
 
                 </content>
 
+
             </TitledPane>
+
 
         </VBox>
 
+
     </center>
 
-    <!-- ================= FOOTER ================= -->
+
+
+
+    <!-- FOOTER -->
+
 
     <bottom>
 
-        <HBox alignment="CENTER_RIGHT" spacing="15" style="-fx-background-color:#ECF0F1;">
+        <HBox alignment="CENTER_RIGHT" style="-fx-background-color:#ECF0F1;">
 
             <padding>
                 <Insets bottom="15" left="20" right="20" top="15" />
             </padding>
 
+
             <Button fx:id="backButton" onAction="#goBack" prefWidth="120" style="-fx-background-color:#566573;                            -fx-text-fill:white;                            -fx-font-weight:bold;" text="Back" />
+
 
         </HBox>
 
+
     </bottom>
+
 
 </BorderPane>

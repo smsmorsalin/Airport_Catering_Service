@@ -65,7 +65,7 @@ public class HeadChefDashboardController implements UserReceiver
 
     @javafx.fxml.FXML
     public void viewProductionTasks(ActionEvent actionEvent) throws IOException {
-        Headchef.renderDisplayPreparationProgress(actionEvent, loggedInUser);
+        Headchef.renderProductionTask(actionEvent, loggedInUser);
     }
 
     @javafx.fxml.FXML
@@ -80,7 +80,7 @@ public class HeadChefDashboardController implements UserReceiver
 
     @javafx.fxml.FXML
     public void monitorCookingProgress(ActionEvent actionEvent) {
-        Headchef.renderDisplayCookingProgress(actionEvent,  loggedInUser);
+        Headchef.renderDisplayPreparationProgress(actionEvent,  loggedInUser);
     }
 
     @javafx.fxml.FXML

@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="Workspaces changes">
+    <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="checked and fixed all issued">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/emergencyIssueViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/emergencyIssueViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/generateReportViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/operationalReportViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/operationalReportViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/EmergencyOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/EmergencyIssue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/emergencyIssueView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/emergencyIssueView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/generateReportView.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/operationalReportView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/operationalReportView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,61 +50,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000004314762" />
-      <entry key="S2" value="1.0045576346754908" />
-      <entry key="S5" value="1.1163409514047702" />
-      <entry key="S10" value="1.3763051668359163" />
-      <entry key="S30" value="2.5809158726560852" />
-      <entry key="S60" value="4.86223425794571" />
-      <entry key="M2" value="9.599943623265304" />
-      <entry key="M5" value="19.78788627274776" />
-      <entry key="M10" value="30.473431846102688" />
-      <entry key="M15" value="40.38180617525414" />
-      <entry key="M30" value="70.37319055687567" />
-      <entry key="H1" value="127.30786068228211" />
-      <entry key="H2" value="214.3364804430611" />
-      <entry key="H4" value="306.66354127273405" />
-      <entry key="D1" value="439.7216487208009" />
-      <entry key="W1" value="470.56936019726953" />
+      <entry key="MS100" value="1.0000000000015616" />
+      <entry key="MS500" value="1.0043641915991735" />
+      <entry key="S2" value="1.3174518923675933" />
+      <entry key="S5" value="1.9846344186245244" />
+      <entry key="S10" value="2.6420908508473513" />
+      <entry key="S30" value="3.701323705635927" />
+      <entry key="S60" value="4.290011367940393" />
+      <entry key="M2" value="5.448444057745413" />
+      <entry key="M5" value="10.30942795392315" />
+      <entry key="M10" value="18.22522754233001" />
+      <entry key="M15" value="26.117603606051116" />
+      <entry key="M30" value="50.767490617088335" />
+      <entry key="H1" value="93.4731308890969" />
+      <entry key="H2" value="160.70199284761125" />
+      <entry key="H4" value="275.97539579147514" />
+      <entry key="D1" value="607.7506420643534" />
+      <entry key="W1" value="722.9767145839207" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="5.779118763939161E-16" />
-      <entry key="MS500" value="9.05672765007853E-4" />
-      <entry key="S2" value="0.25530543603814804" />
-      <entry key="S5" value="1.185044602541387" />
-      <entry key="S10" value="2.3923826259408596" />
-      <entry key="S30" value="5.6253663895392645" />
-      <entry key="S60" value="9.873574676517068" />
-      <entry key="M2" value="16.42320350805749" />
-      <entry key="M5" value="26.85923047071628" />
-      <entry key="M10" value="37.025957963636614" />
-      <entry key="M15" value="46.615136316717006" />
-      <entry key="M30" value="73.96220249820728" />
-      <entry key="H1" value="119.04569026190815" />
-      <entry key="H2" value="182.44606381405805" />
-      <entry key="H4" value="248.3624083943314" />
-      <entry key="D1" value="343.135461866768" />
-      <entry key="W1" value="365.12725228385307" />
+      <entry key="MS100" value="8.948829779611282E-32" />
+      <entry key="MS500" value="6.17096931941708E-7" />
+      <entry key="S2" value="0.028694986824153498" />
+      <entry key="S5" value="0.3019218486390077" />
+      <entry key="S10" value="0.8798229595992635" />
+      <entry key="S30" value="2.52091850926579" />
+      <entry key="S60" value="3.5472673231398324" />
+      <entry key="M2" value="5.1514650757745" />
+      <entry key="M5" value="13.05285503133942" />
+      <entry key="M10" value="24.21747129823735" />
+      <entry key="M15" value="32.61718618932973" />
+      <entry key="M30" value="52.47005379345509" />
+      <entry key="H1" value="79.72034377185764" />
+      <entry key="H2" value="120.27587728788035" />
+      <entry key="H4" value="196.64162899173888" />
+      <entry key="D1" value="429.95254828568807" />
+      <entry key="W1" value="512.2398940201335" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.9995016538366953E-5" />
-      <entry key="MS500" value="0.11510762965590711" />
-      <entry key="S2" value="0.7512195164372872" />
-      <entry key="S5" value="1.8300747676532876" />
-      <entry key="S10" value="3.3094419887097444" />
-      <entry key="S30" value="7.826971389381824" />
-      <entry key="S60" value="14.395670474136036" />
-      <entry key="M2" value="25.727051113404443" />
-      <entry key="M5" value="46.43957590144919" />
-      <entry key="M10" value="67.3519856726192" />
-      <entry key="M15" value="86.8709175154499" />
-      <entry key="M30" value="144.23063350601785" />
-      <entry key="H1" value="246.263006077825" />
-      <entry key="H2" value="396.708322275208" />
-      <entry key="H4" value="554.9734347272536" />
-      <entry key="D1" value="782.844654547122" />
-      <entry key="W1" value="835.6947104609246" />
+      <entry key="MS100" value="7.299068596850295E-4" />
+      <entry key="MS500" value="0.23613567699731516" />
+      <entry key="S2" value="0.8800095563613513" />
+      <entry key="S5" value="1.843095226887152" />
+      <entry key="S10" value="3.081817189884756" />
+      <entry key="S30" value="5.895980485084614" />
+      <entry key="S60" value="7.621164229815565" />
+      <entry key="M2" value="10.455012448586276" />
+      <entry key="M5" value="23.246317225616178" />
+      <entry key="M10" value="42.34402973489406" />
+      <entry key="M15" value="58.64578085320983" />
+      <entry key="M30" value="103.16069440206314" />
+      <entry key="H1" value="173.1294268493446" />
+      <entry key="H2" value="280.9259080857155" />
+      <entry key="H4" value="472.57312986856726" />
+      <entry key="D1" value="1037.6869704299495" />
+      <entry key="W1" value="1235.213844676612" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -115,11 +122,20 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ACS.executor": "Run",
-    "git-widget-placeholder": "saif",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "morsalin",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -228,70 +244,90 @@
       <option name="project" value="LOCAL" />
       <updated>1786065733731</updated>
     </task>
-    <task id="LOCAL-00012" summary="Complete confirmDeliveryViewController all work">
+    <task id="LOCAL-00012" summary="All work done for Airline Representative">
       <option name="closed" value="true" />
-      <created>1786124879527</created>
+      <created>1786067723515</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1786124879527</updated>
+      <updated>1786067723515</updated>
     </task>
-    <task id="LOCAL-00013" summary="Complete confirmDeliveryViewController all work">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="All work done for Airline Representative" />
+      <created>1786105815962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1786105815962</updated>
+    </task>
+    <task id="LOCAL-00013" summary="workflow change">
       <option name="closed" value="true" />
-      <created>1786130544528</created>
+      <created>1786105883327</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1786130544528</updated>
+      <updated>1786105883327</updated>
     </task>
-    <task id="LOCAL-00014" summary="Workspaces changes">
+    <task id="LOCAL-00014" summary="workflow change">
       <option name="closed" value="true" />
-      <created>1786132160384</created>
+      <created>1786106219599</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1786132160384</updated>
+      <updated>1786106219599</updated>
     </task>
-    <task id="LOCAL-00015" summary="Workspaces changes">
+    <task id="LOCAL-00015" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
-      <created>1786132171726</created>
+      <created>1786114938888</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1786132171726</updated>
+      <updated>1786114938888</updated>
     </task>
-    <task id="LOCAL-00016" summary="Workspaces changes">
+    <task id="LOCAL-00016" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
-      <created>1786132426292</created>
+      <created>1786139832697</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1786132426292</updated>
+      <updated>1786139832697</updated>
     </task>
-    <task id="LOCAL-00017" summary="Workspaces changes">
+    <task id="LOCAL-00017" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into morsalin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
-      <created>1786142725914</created>
+      <created>1786147453790</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1786142725914</updated>
+      <updated>1786147453790</updated>
     </task>
-    <task id="LOCAL-00018" summary="Workspaces changes">
+    <task id="LOCAL-00018" summary="Updated Catering bin file">
       <option name="closed" value="true" />
-      <created>1786142961544</created>
+      <created>1786148170577</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1786142961544</updated>
+      <updated>1786148170577</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="complete work for both dashboard">
+      <option name="closed" value="true" />
+      <created>1786152810606</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1786152810606</updated>
+    </task>
+    <task id="LOCAL-00020" summary="checked and fixed all issued">
+      <option name="closed" value="true" />
+      <created>1786154801005</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1786154801005</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.bin" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="payBillViewController half complete" />
@@ -302,7 +338,11 @@
     <MESSAGE value="DeliveryStatus modification complete" />
     <MESSAGE value="monitorProductionViewController implimentation complete" />
     <MESSAGE value="Complete confirmDeliveryViewController all work" />
-    <MESSAGE value="Workspaces changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workspaces changes" />
+    <MESSAGE value="All work done for Airline Representative" />
+    <MESSAGE value="workflow change" />
+    <MESSAGE value="Updated Catering bin file" />
+    <MESSAGE value="complete work for both dashboard" />
+    <MESSAGE value="checked and fixed all issued" />
+    <option name="LAST_COMMIT_MESSAGE" value="checked and fixed all issued" />
   </component>
 </project>

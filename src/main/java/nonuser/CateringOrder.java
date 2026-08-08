@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class CateringOrder implements Serializable {
+public final class CateringOrder implements Serializable {
     private final int orderId;
     private final String FlightId; //FF
     private final String airlineId;
@@ -33,21 +33,6 @@ public class CateringOrder implements Serializable {
         Status = "Pending";
         this.isDelay = false;
         this.airlineId = airlineId;
-        this.orderAcceptOrRejectBy = "N/A";
-    }
-
-    public CateringOrder(int orderId, String airlineId, ArrayList<String> orderItemIds) {
-        this.orderId = orderId;
-        this.FlightId = "";
-        this.airlineId = airlineId;
-        this.airlineRepresentativeId = 0;
-        this.orderDate = LocalDate.now();
-        this.deliveryLocation = "";
-        this.orderItemIds = orderItemIds;
-        this.deliveryDate = LocalDate.now();
-        this.deliveryTime = LocalTime.now();
-        this.Status = "Approved";
-        this.isDelay = false;
         this.orderAcceptOrRejectBy = "N/A";
     }
 
