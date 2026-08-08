@@ -36,6 +36,21 @@ public final class CateringOrder implements Serializable {
         this.orderAcceptOrRejectBy = "N/A";
     }
 
+    public CateringOrder(int orderId, String airlineId, ArrayList<String> orderItemIds) {
+        this.orderId = orderId;
+        this.FlightId = "";
+        this.airlineId = airlineId;
+        this.airlineRepresentativeId = 0;
+        this.orderDate = LocalDate.now();
+        this.deliveryLocation = "";
+        this.orderItemIds = orderItemIds;
+        this.deliveryDate = LocalDate.now();
+        this.deliveryTime = LocalTime.now();
+        this.Status = "Approved";
+        this.isDelay = false;
+        this.orderAcceptOrRejectBy = "N/A";
+    }
+
     public int getOrderId() {
         return orderId;
     }
