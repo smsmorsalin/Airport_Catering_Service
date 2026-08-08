@@ -2,19 +2,19 @@ package nonuser;
 
 import utility.databaseAccessor;
 
-public class EmergencyOperation {
+public class EmergencyIssue {
     private final int ticketId;
     private String issueType;
     private String description;
     private int assignedUserId;
-    private String status;
+    private String status; //Pending/Solve/Failed
 
-    public EmergencyOperation(String issueType, String description, int assignedUserId) {
+    public EmergencyIssue(String issueType, String description, int assignedUserId) {
         this.ticketId = generateNewTicketId();
         this.issueType = issueType;
         this.description = description;
         this.assignedUserId = assignedUserId;
-        this.status = "Assigned";   //Assigned, Solved, Unsolved
+        this.status = "Pending";   //Pending/Solve/Failed
     }
 
     public int getTicketId() {
