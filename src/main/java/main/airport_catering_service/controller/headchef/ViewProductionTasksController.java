@@ -1,8 +1,13 @@
 package main.airport_catering_service.controller.headchef;
 
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import nonuser.ProductionTask;
 import user.Headchef;
 import user.User;
 import user.UserReceiver;
@@ -16,31 +21,31 @@ public class ViewProductionTasksController implements UserReceiver {
     private Button searchButton;
 
     @FXML
-    private TableColumn orderIdColumn;
+    private TableColumn<ProductionTask, Integer> orderIdColumn;
 
     @FXML
-    private TableView productionTaskTable;
+    private TableView<ProductionTask> productionTaskTable;
 
     @FXML
-    private TableColumn mealTypeColumn;
+    private TableColumn<ProductionTask, String> mealTypeColumn;
 
     @FXML
-    private TableColumn taskIdColumn;
+    private TableColumn<ProductionTask, Integer> taskIdColumn;
 
     @FXML
-    private TableColumn priorityColumn;
+    private TableColumn<ProductionTask, String> priorityColumn;
 
     @FXML
     private Button clearButton;
 
     @FXML
-    private TableColumn completionTimeColumn;
+    private TableColumn<ProductionTask, String> completionTimeColumn;
 
     @FXML
-    private TableColumn airlineColumn;
+    private TableColumn<ProductionTask, String> airlineColumn;
 
     @FXML
-    private TableColumn mealQuantityColumn;
+    private TableColumn<ProductionTask, Integer> mealQuantityColumn;
 
     @FXML
     private Button refreshButton;
@@ -52,7 +57,7 @@ public class ViewProductionTasksController implements UserReceiver {
     private TextField orderIdField;
 
     @FXML
-    private TableColumn flightColumn;
+    private TableColumn<ProductionTask, String> flightColumn;
 
     @FXML
     private TextField productionTaskIdField;
@@ -60,14 +65,16 @@ public class ViewProductionTasksController implements UserReceiver {
 
     private Headchef loggedInUser;
 
+    private final ObservableList<ProductionTask> productionTasks =
+            FXCollections.observableArrayList();
+
 
     @Override
     public void setLoggedInUser(User user) {
 
         if (user instanceof Headchef headchef) {
             loggedInUser = headchef;
-        }
-        else {
+        } else {
             AlertGenerator.showAlert(
                     "Error",
                     "This is not a valid user for this page"
@@ -79,6 +86,55 @@ public class ViewProductionTasksController implements UserReceiver {
     @FXML
     public void initialize() {
 
+        taskIdColumn.setCellValueFactory(
+                cellData -> new SimpleIntegerProperty(
+                        cellData.getValue().getTaskId()
+                ).asObject()
+        );
+
+        orderIdColumn.setCellValueFactory(
+                cellData -> new SimpleIntegerProperty(
+                        cellData.getValue().getOrderId()
+                ).asObject()
+        );
+
+        mealTypeColumn.setCellValueFactory(
+                cellData -> new SimpleStringProperty(
+                        cellData.getValue().getMealType()
+                )
+        );
+
+        mealQuantityColumn.setCellValueFactory(
+                cellData -> new SimpleIntegerProperty(
+                        cellData.getValue().getMealQuantity()
+                ).asObject()
+        );
+
+        priorityColumn.setCellValueFactory(
+                cellData -> new SimpleStringProperty(
+                        cellData.getValue().getPriority()
+                )
+        );
+
+        airlineColumn.setCellValueFactory(
+                cellData -> new SimpleStringProperty(
+                        cellData.getValue().getAirline()
+                )
+        );
+
+        flightColumn.setCellValueFactory(
+                cellData -> new SimpleStringProperty(
+                        cellData.getValue().getFlight()
+                )
+        );
+
+        completionTimeColumn.setCellValueFactory(
+                cellData -> new SimpleStringProperty(
+                        cellData.getValue().getCompletionTime()
+                )
+        );
+
+        productionTaskTable.setItems(productionTasks);
     }
 
 
@@ -93,11 +149,14 @@ public class ViewProductionTasksController implements UserReceiver {
 
 
     @FXML
-    public void refreshTable(ActionEvent actionEvent) throws IOException {
+    public void refreshTable(ActionEvent actionEvent) {
 
-        Headchef.renderProductionTask(
-                actionEvent,
-                loggedInUser
+        productionTasks.clear();
+        productionTaskTable.refresh();
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Production task table cleared"
         );
     }
 
@@ -112,7 +171,6 @@ public class ViewProductionTasksController implements UserReceiver {
 
     @FXML
     public void searchTask(ActionEvent actionEvent) {
-
 
         if (productionTaskIdField.getText().isEmpty()) {
 
@@ -155,9 +213,9 @@ public class ViewProductionTasksController implements UserReceiver {
         }
 
 
-        if (!orderIdField.getText().isEmpty()) {
+        int orderId = taskId * 10;
 
-            int orderId;
+        if (!orderIdField.getText().isEmpty()) {
 
             try {
 
@@ -186,6 +244,26 @@ public class ViewProductionTasksController implements UserReceiver {
                 return;
             }
         }
+
+
+        ProductionTask task =
+                new ProductionTask(
+                        taskId,
+                        orderId,
+                        "Chicken Meal",
+                        100,
+                        "High",
+                        "Biman Bangladesh Airlines",
+                        "BG-305",
+                        "18:00",
+                        "Pending"
+                );
+
+
+        productionTasks.clear();
+        productionTasks.add(task);
+
+        productionTaskTable.refresh();
 
 
         AlertGenerator.showAlert(

@@ -1,8 +1,12 @@
 package main.airport_catering_service.controller.headchef;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import nonuser.QualityInspectionRequest;
 import user.Headchef;
 import user.User;
 import user.UserReceiver;
@@ -10,47 +14,54 @@ import utility.AlertGenerator;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import javafx.beans.property.SimpleObjectProperty;
 
 public class RequestQualityInspectionController implements UserReceiver {
 
     @FXML
-    private TableColumn mealCategoryColumn;
+    private TableColumn<QualityInspectionRequest, Integer> requestIdColumn;
+
+    @FXML
+    private TableColumn<QualityInspectionRequest, Integer> taskIdColumn;
+
+    @FXML
+    private TableColumn<QualityInspectionRequest, String> mealCategoryColumn;
+
+    @FXML
+    private TableColumn<QualityInspectionRequest, LocalDate> requestDateColumn;
+
+    @FXML
+    private TableColumn<QualityInspectionRequest, String> priorityColumn;
+
+    @FXML
+    private TableColumn<QualityInspectionRequest, String> remarksColumn;
+
+    @FXML
+    private TableColumn<QualityInspectionRequest, String> inspectionStatusColumn;
+
+    @FXML
+    private TableView<QualityInspectionRequest> inspectionTable;
 
     @FXML
     private Button submitButton;
 
     @FXML
-    private TableColumn remarksColumn;
-
-    @FXML
-    private TableColumn requestDateColumn;
-
-    @FXML
     private Button loadTaskButton;
-
-    @FXML
-    private TableView inspectionTable;
-
-    @FXML
-    private ComboBox<String> priorityComboBox;
-
-    @FXML
-    private TableColumn taskIdColumn;
-
-    @FXML
-    private TableColumn priorityColumn;
-
-    @FXML
-    private TableColumn inspectionStatusColumn;
 
     @FXML
     private Button refreshButton;
 
     @FXML
-    private DatePicker inspectionDatePicker;
+    private Button backButton;
 
     @FXML
-    private Button backButton;
+    private Button resetButton;
+
+    @FXML
+    private ComboBox<String> priorityComboBox;
+
+    @FXML
+    private DatePicker inspectionDatePicker;
 
     @FXML
     private TextField mealCategoryField;
@@ -61,14 +72,14 @@ public class RequestQualityInspectionController implements UserReceiver {
     @FXML
     private TextField taskIdField;
 
-    @FXML
-    private Button resetButton;
-
-    @FXML
-    private TableColumn requestIdColumn;
 
 
     private Headchef loggedInUser;
+
+    private final ObservableList<QualityInspectionRequest> inspectionRequests =
+            FXCollections.observableArrayList();
+
+    private int nextRequestId = 1;
 
 
     @Override
@@ -76,8 +87,7 @@ public class RequestQualityInspectionController implements UserReceiver {
 
         if (user instanceof Headchef headchef) {
             loggedInUser = headchef;
-        }
-        else {
+        } else {
             AlertGenerator.showAlert(
                     "Error",
                     "This is not a valid user for this page"
@@ -95,6 +105,50 @@ public class RequestQualityInspectionController implements UserReceiver {
                 "High",
                 "Urgent"
         );
+
+        requestIdColumn.setCellValueFactory(
+                cellData -> new javafx.beans.property.SimpleIntegerProperty(
+                        cellData.getValue().getRequestId()
+                ).asObject()
+        );
+
+        taskIdColumn.setCellValueFactory(
+                cellData -> new SimpleObjectProperty<>(
+                        cellData.getValue().getTaskId()
+                )
+        );
+
+        mealCategoryColumn.setCellValueFactory(
+                cellData -> new SimpleStringProperty(
+                        cellData.getValue().getMealCategory()
+                )
+        );
+
+        requestIdColumn.setCellValueFactory(
+                cellData -> new SimpleObjectProperty<>(
+                        cellData.getValue().getRequestId()
+                )
+        );
+
+        priorityColumn.setCellValueFactory(
+                cellData -> new SimpleStringProperty(
+                        cellData.getValue().getPriority()
+                )
+        );
+
+        remarksColumn.setCellValueFactory(
+                cellData -> new SimpleStringProperty(
+                        cellData.getValue().getRemarks()
+                )
+        );
+
+        inspectionStatusColumn.setCellValueFactory(
+                cellData -> new SimpleStringProperty(
+                        cellData.getValue().getInspectionStatus()
+                )
+        );
+
+        inspectionTable.setItems(inspectionRequests);
     }
 
 
@@ -135,61 +189,7 @@ public class RequestQualityInspectionController implements UserReceiver {
     @FXML
     public void submitInspectionRequest(ActionEvent actionEvent) {
 
-        if(taskIdField.getText().isEmpty()) {
-
-            AlertGenerator.showAlert(
-                    "Error",
-                    "Please enter a task ID"
-            );
-
-            return;
-        }
-
-
-        if(priorityComboBox.getValue() == null) {
-
-            AlertGenerator.showAlert(
-                    "Error",
-                    "Please select inspection priority"
-            );
-
-            return;
-        }
-
-
-        if(inspectionDatePicker.getValue() == null) {
-
-            AlertGenerator.showAlert(
-                    "Error",
-                    "Please select inspection date"
-            );
-
-            return;
-        }
-
-
-        if(remarksTextArea.getText().isEmpty()) {
-
-            AlertGenerator.showAlert(
-                    "Error",
-                    "Please enter remarks"
-            );
-
-            return;
-        }
-
-
-        AlertGenerator.showAlert(
-                "Success",
-                "Quality inspection request submitted"
-        );
-    }
-
-
-    @FXML
-    public void loadTask(ActionEvent actionEvent) {
-
-        if(taskIdField.getText().isEmpty()) {
+        if (taskIdField.getText().isEmpty()) {
 
             AlertGenerator.showAlert(
                     "Error",
@@ -219,7 +219,100 @@ public class RequestQualityInspectionController implements UserReceiver {
         }
 
 
-        if(taskId <= 0) {
+        if (priorityComboBox.getValue() == null) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select inspection priority"
+            );
+
+            return;
+        }
+
+
+        if (inspectionDatePicker.getValue() == null) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select inspection date"
+            );
+
+            return;
+        }
+
+
+        if (remarksTextArea.getText().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter remarks"
+            );
+
+            return;
+        }
+
+
+        QualityInspectionRequest request =
+                new QualityInspectionRequest(
+                        nextRequestId++,
+                        taskId,
+                        mealCategoryField.getText(),
+                        inspectionDatePicker.getValue(),
+                        priorityComboBox.getValue(),
+                        remarksTextArea.getText(),
+                        "Pending"
+                );
+
+
+        inspectionRequests.add(request);
+
+        inspectionTable.refresh();
+
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Quality inspection request submitted"
+        );
+
+
+        resetForm(actionEvent);
+    }
+
+
+    @FXML
+    public void loadTask(ActionEvent actionEvent) {
+
+        if (taskIdField.getText().isEmpty()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a task ID"
+            );
+
+            return;
+        }
+
+
+        int taskId;
+
+        try {
+
+            taskId = Integer.parseInt(
+                    taskIdField.getText()
+            );
+
+        } catch (NumberFormatException e) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a valid task ID"
+            );
+
+            return;
+        }
+
+
+        if (taskId <= 0) {
 
             AlertGenerator.showAlert(
                     "Error",
@@ -230,7 +323,7 @@ public class RequestQualityInspectionController implements UserReceiver {
         }
 
 
-        if(inspectionDatePicker.getValue() == null) {
+        if (inspectionDatePicker.getValue() == null) {
 
             AlertGenerator.showAlert(
                     "Error",
@@ -241,7 +334,7 @@ public class RequestQualityInspectionController implements UserReceiver {
         }
 
 
-        if(inspectionDatePicker.getValue()
+        if (inspectionDatePicker.getValue()
                 .isBefore(LocalDate.now())) {
 
             AlertGenerator.showAlert(
