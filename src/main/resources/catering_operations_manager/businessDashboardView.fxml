@@ -2,9 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.chart.BarChart?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -12,6 +9,7 @@
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
@@ -84,24 +82,62 @@
         </Button>
         <VBox fillWidth="false" layoutX="175.0" prefHeight="589.0" prefWidth="596.0" style="-fx-background-color: silver;">
          <children>
-            <AnchorPane prefHeight="588.0" prefWidth="608.0">
+            <AnchorPane prefHeight="588.0" prefWidth="608.0" style="-fx-background-color: cayan;">
                <children>
                   <Label fx:id="welcomeMessageFxid" alignment="CENTER" layoutX="184.0" layoutY="3.0" prefHeight="23.0" prefWidth="202.0" text="welcome Username">
                      <font>
                         <Font name="Gabriola" size="18.0" />
                      </font>
                   </Label>
-                  <PieChart fx:id="fxidPiChart" layoutX="15.0" layoutY="38.0" prefHeight="237.0" prefWidth="564.0" style="-fx-border-color: green;" />
-                  <BarChart fx:id="fxidBarChart" layoutX="14.0" layoutY="312.0" prefHeight="237.0" prefWidth="564.0" style="-fx-border-color: blue;">
-                    <xAxis>
-                      <CategoryAxis side="BOTTOM" />
-                    </xAxis>
-                    <yAxis>
-                      <NumberAxis side="LEFT" />
-                    </yAxis>
-                  </BarChart>
-                  <Label layoutX="190.0" layoutY="275.0" prefHeight="17.0" prefWidth="217.0" text="Catering Order Status" textFill="#2cab50" />
-                  <Label layoutX="230.0" layoutY="549.0" prefHeight="17.0" prefWidth="162.0" text="Last 3 month revinue" textFill="#1e33d7" />
+                  <PieChart fx:id="fxidPiChart" layoutX="15.0" layoutY="287.0" prefHeight="237.0" prefWidth="564.0" style="-fx-border-color: green;" />
+                  <Label layoutX="190.0" layoutY="524.0" prefHeight="17.0" prefWidth="217.0" text="Catering Order Status" textFill="#2cab50" />
+                  <BorderPane layoutX="52.0" layoutY="36.0" prefHeight="211.0" prefWidth="174.0" style="-fx-background-color: pink; -fx-background-radius: 10;">
+                     <top>
+                        <Label text="total orders" textFill="#010d02" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                           <font>
+                              <Font name="Comic Sans MS" size="15.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <center>
+                        <Label fx:id="totalOrdersCountLabelFxid" alignment="CENTER" prefHeight="110.0" prefWidth="139.0" text="0" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Arial Black" size="26.0" />
+                           </font>
+                        </Label>
+                     </center>
+                     <bottom>
+                        <Button mnemonicParsing="false" onAction="#seeTotalOrderHistory" prefHeight="25.0" prefWidth="105.0" text="see order history" BorderPane.alignment="CENTER" />
+                     </bottom>
+                  </BorderPane>
+                  <BorderPane layoutX="285.0" layoutY="36.0" prefHeight="211.0" prefWidth="174.0" style="-fx-background-color: pink; -fx-background-radius: 10;">
+                     <top>
+                        <Label text="today's revinue" textFill="#010d02" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                           <font>
+                              <Font name="Comic Sans MS" size="15.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <center>
+                        <Label fx:id="totalRevinueCountLabelFxid" alignment="CENTER" prefHeight="110.0" prefWidth="166.0" text="0" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Arial Black" size="26.0" />
+                           </font>
+                        </Label>
+                     </center>
+                  </BorderPane>
                </children>
             </AnchorPane>
          </children></VBox>

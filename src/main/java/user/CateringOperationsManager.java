@@ -1,16 +1,15 @@
 package user;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
 import javafx.stage.Stage;
 import main.airport_catering_service.controller.catering_operations_manager.approveOrRejectOrderViewController;
-import nonuser.CateringOrder;
-import nonuser.DeliveryStatus;
-import nonuser.InventoryStock;
-import nonuser.ProductionActivities;
+import nonuser.*;
 import utility.AlertGenerator;
 import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
@@ -19,6 +18,7 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class CateringOperationsManager extends Employee implements Serializable {
 
@@ -125,6 +125,30 @@ public class CateringOperationsManager extends Employee implements Serializable 
         }
         AlertGenerator.showAlert("error", "please check productionOrderId \n production orderId does not exist");
         return null;
+    }
+
+    public final List<Integer> businessDashboardView(){
+        List<Integer> businessDashboardViewList =  new ArrayList<>();
+        int totalOrder = 0;
+        int totalRevinue = 0;
+
+        ArrayList<Object> orderList = BinaryFileUtility.readObjects("CateringOrder.bin");
+        ArrayList<Object> paymentList =  BinaryFileUtility.readObjects("Payment.bin");
+        if (orderList.isEmpty() || paymentList.isEmpty()){
+            return null;
+        }
+
+        totalOrder = orderList.size();
+        for (Object obj : paymentList) {
+            if(obj instanceof Payment p){
+                if (p.getPaymentDate().equals(LocalDate.now())) {
+                    totalRevinue++;
+                }
+            }
+        }
+        businessDashboardViewList.add(totalOrder);
+        businessDashboardViewList.add(totalRevinue);
+        return businessDashboardViewList;
     }
 
 
