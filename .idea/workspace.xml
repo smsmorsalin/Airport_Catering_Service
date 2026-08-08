@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="checked and fixed all issued">
+    <list default="true" id="145a0e78-8f28-4f61-abf5-2006fb38fe4e" name="Changes" comment="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/nonuser/ApproveClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/emergencyIssueViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/emergencyIssueViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/generateReportViewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/operationalReportViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/airport_catering_service/controller/catering_operations_manager/operationalReportViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nonuser/EmergencyOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nonuser/EmergencyIssue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/emergencyIssueView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/emergencyIssueView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/generateReportView.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/operationalReportView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/catering_operations_manager/operationalReportView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/FoodQualityControlOfficer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/KitchenProductionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +31,12 @@
     &quot;assignee&quot;: &quot;smsmorsalin&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/smsmorsalin/Airport_Catering_Service.git&quot;,
-    &quot;accountId&quot;: &quot;ef1e225f-e8df-4381-ba31-5fa2f4c0db29&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/smsmorsalin/Airport_Catering_Service.git",
+    "accountId": "09b4b316-9114-4bc1-8e76-96925cab0536"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -123,11 +119,12 @@
   "keyToString": {
     "Application.ACS.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "morsalin",
+    "git-widget-placeholder": "saif",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -146,14 +143,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="payBillViewController half complete">
@@ -323,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786154801005</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Merge branch 'main' of https://github.com/smsmorsalin/Airport_Catering_Service into saif&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1786172679160</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1786172679160</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
