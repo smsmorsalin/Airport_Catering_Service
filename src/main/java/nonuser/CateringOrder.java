@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class CateringOrder implements Serializable {
+public final class CateringOrder implements Serializable {
     private final int orderId;
     private final String FlightId; //FF
     private final String airlineId;
