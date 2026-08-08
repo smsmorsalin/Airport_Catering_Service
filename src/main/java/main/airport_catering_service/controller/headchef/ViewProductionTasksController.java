@@ -1,10 +1,8 @@
 package main.airport_catering_service.controller.headchef;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
 import user.Headchef;
 import user.User;
 import user.UserReceiver;
@@ -13,99 +11,186 @@ import utility.AlertGenerator;
 import java.io.IOException;
 
 public class ViewProductionTasksController implements UserReceiver {
-    @javafx.fxml.FXML
+
+    @FXML
     private Button searchButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn orderIdColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableView productionTaskTable;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn mealTypeColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn taskIdColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn priorityColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button clearButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn completionTimeColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn airlineColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn mealQuantityColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button refreshButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button backButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField orderIdField;
-    @javafx.fxml.FXML
+
+    @FXML
     private TableColumn flightColumn;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField productionTaskIdField;
+
 
     private Headchef loggedInUser;
 
+
     @Override
     public void setLoggedInUser(User user) {
+
         if (user instanceof Headchef headchef) {
             loggedInUser = headchef;
         }
-        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
+        else {
+            AlertGenerator.showAlert(
+                    "Error",
+                    "This is not a valid user for this page"
+            );
+        }
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void initialize() {
+
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
-        Headchef.renderDashboardView(actionEvent, loggedInUser);
+
+        Headchef.renderDashboardView(
+                actionEvent,
+                loggedInUser
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void refreshTable(ActionEvent actionEvent) throws IOException {
-        Headchef.renderProductionTask(actionEvent, loggedInUser);
+
+        Headchef.renderProductionTask(
+                actionEvent,
+                loggedInUser
+        );
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void clearFields(ActionEvent actionEvent) {
+
         productionTaskIdField.clear();
         orderIdField.clear();
-
     }
 
-    @javafx.fxml.FXML
+
+    @FXML
     public void searchTask(ActionEvent actionEvent) {
+
+
         if (productionTaskIdField.getText().isEmpty()) {
-            AlertGenerator.showAlert("Error", "Please enter a task ID");
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a production task ID"
+            );
+
             return;
         }
+
+
         int taskId;
+
         try {
-            taskId = Integer.parseInt(productionTaskIdField.getText());
+
+            taskId = Integer.parseInt(
+                    productionTaskIdField.getText()
+            );
+
         } catch (NumberFormatException e) {
-            AlertGenerator.showAlert("Error", "Please enter a valid task ID");
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a valid production task ID"
+            );
+
             return;
         }
+
+
         if (taskId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid task ID");
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Production task ID must be greater than zero"
+            );
+
             return;
         }
-        if (orderIdField.getText().isEmpty()) {
-            AlertGenerator.showAlert("Error", "Please enter a order ID");
-            return;
+
+
+        if (!orderIdField.getText().isEmpty()) {
+
+            int orderId;
+
+            try {
+
+                orderId = Integer.parseInt(
+                        orderIdField.getText()
+                );
+
+            } catch (NumberFormatException e) {
+
+                AlertGenerator.showAlert(
+                        "Error",
+                        "Please enter a valid order ID"
+                );
+
+                return;
+            }
+
+
+            if (orderId <= 0) {
+
+                AlertGenerator.showAlert(
+                        "Error",
+                        "Order ID must be greater than zero"
+                );
+
+                return;
+            }
         }
-        int orderId;
-        try {
-            orderId = Integer.parseInt(orderIdField.getText());
-        } catch (NumberFormatException e) {
-            AlertGenerator.showAlert("Error", "Please enter a valid order ID");
-            return;
-        }
-        if (orderId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid order ID");
-            return;
-        }
+
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Production task information loaded successfully"
+        );
     }
 }

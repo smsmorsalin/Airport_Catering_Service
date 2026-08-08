@@ -1,56 +1,96 @@
 package main.airport_catering_service.controller.truck_operator;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import user.Headchef;
 import user.Truckoperator;
 import user.User;
 import user.UserReceiver;
 import utility.AlertGenerator;
 
 import java.io.IOException;
+import nonuser.DeliveryAssignment;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.cell.PropertyValueFactory;
+import java.io.*;
+import java.time.LocalDate;
 
 public class ViewAssignedDeliveriesController implements UserReceiver
 {
-    @javafx.fxml.FXML
-    private DatePicker deliveryDatePicker;
-    @javafx.fxml.FXML
-    private Button searchButton;
-    @javafx.fxml.FXML
-    private TableColumn orderIdColumn;
-    @javafx.fxml.FXML
-    private TableColumn locationColumn;
-    @javafx.fxml.FXML
-    private TableColumn assignmentIdColumn;
-    @javafx.fxml.FXML
-    private TextField assignmentIdField;
-    @javafx.fxml.FXML
-    private TableColumn flightNumberColumn;
-    @javafx.fxml.FXML
-    private TableView deliveryTable;
-    @javafx.fxml.FXML
-    private TableColumn airlineColumn;
-    @javafx.fxml.FXML
-    private Button refreshButton;
-    @javafx.fxml.FXML
-    private TableColumn statusColumn;
-    @javafx.fxml.FXML
-    private Button backButton;
-    @javafx.fxml.FXML
-    private TableColumn deliveryTimeColumn;
+    @FXML
+    private TableColumn<DeliveryAssignment, Integer> assignmentIdColumn;
 
-    private Headchef loggedInUser;
+    @FXML
+    private TableColumn<DeliveryAssignment, Integer> orderIdColumn;
+
+    @FXML
+    private TableColumn<DeliveryAssignment, String> flightNumberColumn;
+
+    @FXML
+    private TableColumn<DeliveryAssignment, String> airlineColumn;
+
+    @FXML
+    private TableColumn<DeliveryAssignment, String> locationColumn;
+
+    @FXML
+    private TableColumn<DeliveryAssignment, String> statusColumn;
+
+    @FXML
+    private TableColumn<DeliveryAssignment, LocalDate> deliveryTimeColumn;
+
+    @FXML
+    private TableView<DeliveryAssignment> deliveryTable;
+
+    @FXML
+    private TextField assignmentIdField;
+
+    private Truckoperator loggedInUser;
+    @FXML
+    private Button searchButton;
+    @FXML
+    private Button refreshButton;
+    @FXML
+    private Button backButton;
+
     @Override
-    public void setLoggedInUser(User user){
-        if (user instanceof Headchef headchef){
-            loggedInUser = headchef;
+    public void setLoggedInUser(User user) {
+        if (user instanceof Truckoperator truckoperator) {
+
+            loggedInUser = truckoperator;
+
+        } else {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "This is not a valid user for this page");
         }
-        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
     }
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
+
+            assignmentIdColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("assignmentId"));
+
+            orderIdColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("orderId"));
+
+            flightNumberColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("flightNumber"));
+
+            airlineColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("airline"));
+
+            locationColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("location"));
+
+            deliveryTimeColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("deliveryDate"));
+
+            statusColumn.setCellValueFactory(
+                    new PropertyValueFactory<>("status"));
+        }
 
     @javafx.fxml.FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
@@ -60,7 +100,6 @@ public class ViewAssignedDeliveriesController implements UserReceiver
     @Deprecated
     public void clearSearch(ActionEvent actionEvent) {
         assignmentIdField.clear();
-
     }
 
     @javafx.fxml.FXML
@@ -70,24 +109,92 @@ public class ViewAssignedDeliveriesController implements UserReceiver
 
     @javafx.fxml.FXML
     public void searchDeliveries(ActionEvent actionEvent) {
-        if(assignmentIdField.getText().isEmpty()){
-            AlertGenerator.showAlert("Error", "Please enter a assignment ID");
+        if (assignmentIdField.getText().isEmpty()) {
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter assignment ID");
             return;
         }
-        int assignmentId;
-        try {
-            assignmentId = Integer.parseInt(assignmentIdField.getText());
-        }catch (NumberFormatException e){
-            AlertGenerator.showAlert("Error", "Please enter a valid assignment ID");
+            int assignmentId;
+
+            try {
+
+                assignmentId = Integer.parseInt(
+                        assignmentIdField.getText());
+
+            } catch (NumberFormatException e) {
+
+                AlertGenerator.showAlert(
+                        "Error",
+                        "Invalid assignment ID");
+
+                return;
+            }
+
+
+            ObservableList<DeliveryAssignment> list =
+                    FXCollections.observableArrayList();
+
+
+            File file = new File("DeliveryAssignment.bin");
+        if(!file.exists()){
+            AlertGenerator.showAlert(
+                    "Error",
+                    "No delivery assignments found.");
             return;
         }
-        if(assignmentId <= 0) {
-            AlertGenerator.showAlert("Error", "Please enter a valid assignment ID");
-            return;
+
+
+            try {
+
+                ObjectInputStream ois =
+                        new ObjectInputStream(
+                                new FileInputStream(file));
+
+
+                while(true){
+
+                    try {
+
+                        DeliveryAssignment assignment =
+                                (DeliveryAssignment) ois.readObject();
+
+
+                        if(assignment.getAssignmentId()==assignmentId){
+
+                            list.add(assignment);
+
+                        }
+
+
+                    }catch(EOFException e){
+
+                        break;
+                    }
+                }
+
+
+                ois.close();
+
+
+                deliveryTable.setItems(list);
+
+
+                if(list.isEmpty()){
+
+                    AlertGenerator.showAlert(
+                            "Error",
+                            "Assignment not found");
+
+                }
+
+
+            }catch(Exception e){
+
+                AlertGenerator.showAlert(
+                        "Error",
+                        "Unable to load deliveries");
+
+            }
         }
-        if (deliveryDatePicker.getValue() == null) {
-            AlertGenerator.showAlert("Error", "Please enter a delivery date in DD-MM-YYYY");
-            return;
-        }
-    }
 }

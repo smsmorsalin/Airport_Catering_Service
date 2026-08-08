@@ -45,29 +45,48 @@ public class AssignKitchenStaffController implements UserReceiver
     private TextField taskIdField;
 
     private Headchef loggedInUser;
+
     @Override
     public void setLoggedInUser(User user){
         if (user instanceof Headchef headchef){
             loggedInUser = headchef;
+        } else {
+            AlertGenerator.showAlert("Error", "This is not a valid user for this page");
         }
-        AlertGenerator.showAlert("Error", "This is not a valid user for this page");
     }
 
     @javafx.fxml.FXML
     public void initialize() {
+        staffComboBox.getItems().addAll(
+                "Kitchen Staff 1",
+                "Kitchen Staff 2",
+                "Kitchen Staff 3"
+        );
+
+        shiftComboBox.getItems().addAll(
+                "Morning",
+                "Afternoon",
+                "Night"
+        );
+
+        workStationComboBox.getItems().addAll(
+                "Preparation",
+                "Cooking",
+                "Packaging"
+        );
     }
 
     @javafx.fxml.FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
         Headchef.renderDashboardView(actionEvent, loggedInUser);
-
     }
 
     @javafx.fxml.FXML
     public void clearForm(ActionEvent actionEvent) {
         taskIdField.clear();
-
-
+        staffComboBox.getSelectionModel().clearSelection();
+        shiftComboBox.getSelectionModel().clearSelection();
+        workStationComboBox.getSelectionModel().clearSelection();
     }
 
     @javafx.fxml.FXML
@@ -76,29 +95,40 @@ public class AssignKitchenStaffController implements UserReceiver
             AlertGenerator.showAlert("Error", "Please enter a task ID");
             return;
         }
+
         int taskId;
+
         try {
             taskId = Integer.parseInt(taskIdField.getText());
         }catch (NumberFormatException e){
             AlertGenerator.showAlert("Error", "Please enter a valid task ID");
             return;
         }
+
         if(taskId <= 0) {
             AlertGenerator.showAlert("Error", "Please enter a valid task ID");
             return;
         }
+
         if (staffComboBox.getSelectionModel().getSelectedItem() == null) {
             AlertGenerator.showAlert("Error", "Please select a Staff");
             return;
         }
+
         if (shiftComboBox.getSelectionModel().getSelectedItem() == null) {
             AlertGenerator.showAlert("Error", "Please select a Shift");
             return;
         }
-        if ( workStationComboBox.getSelectionModel().getSelectedItem() == null) {
+
+        if (workStationComboBox.getSelectionModel().getSelectedItem() == null) {
             AlertGenerator.showAlert("Error", "Please select a Work Station");
             return;
         }
+
+        AlertGenerator.showAlert(
+                "Success",
+                "Kitchen staff assigned successfully"
+        );
     }
 
     @javafx.fxml.FXML

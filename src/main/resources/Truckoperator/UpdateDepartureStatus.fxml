@@ -5,7 +5,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -81,18 +80,6 @@
                         <TextField fx:id="assignmentIdField" prefWidth="220" promptText="Enter Assignment ID" GridPane.columnIndex="1" />
 
                         <Button fx:id="loadButton" onAction="#loadAssignment" prefWidth="150" style="-fx-background-color:#3498DB;                                        -fx-text-fill:white;                                        -fx-font-weight:bold;" text="Load Assignment" GridPane.columnIndex="2" />
-
-                        <Label text="Order ID" GridPane.rowIndex="1" />
-
-                        <Label text="Flight Number" GridPane.rowIndex="2" />
-
-                        <Label text="Airline" GridPane.rowIndex="3" />
-
-                        <Label text="Delivery Location" GridPane.rowIndex="4" />
-                  <TextField fx:id="orderIdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="flightNumberField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="airlineField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField fx:id="locationField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <columnConstraints>
                      <ColumnConstraints />
                      <ColumnConstraints />
@@ -128,15 +115,9 @@
 
                         <DatePicker fx:id="departureDatePicker" GridPane.columnIndex="1" />
 
-                        <Label text="Departure Time" GridPane.rowIndex="1" />
-
                         <Label text="Departure Status" GridPane.rowIndex="2" />
 
                         <ComboBox fx:id="statusComboBox" prefWidth="220" promptText="Select Status" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-
-                        <Label text="Remarks" GridPane.rowIndex="3" />
-
-                        <TextArea fx:id="remarksTextArea" prefHeight="90" promptText="Optional remarks..." wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
 
                         <HBox spacing="15" GridPane.columnIndex="1" GridPane.rowIndex="4">
 
@@ -145,7 +126,6 @@
                             <Button fx:id="resetButton" onAction="#resetForm" prefHeight="40" prefWidth="120" style="-fx-background-color:#F39C12;                                            -fx-text-fill:white;                                            -fx-font-weight:bold;" text="Reset" />
 
                         </HBox>
-                  <TextField fx:id="departureTimeField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <columnConstraints>
                      <ColumnConstraints />
                      <ColumnConstraints />

@@ -78,11 +78,8 @@
 
                         <Label text="Order ID" GridPane.rowIndex="1" />
 
-                        <Label text="Flight Number" GridPane.rowIndex="2" />
-
                         <Label text="Delivery Location" GridPane.rowIndex="4" />
                   <TextField fx:id="orderIdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="flightNumberField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <TextField fx:id="locationField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <columnConstraints>
                      <ColumnConstraints />

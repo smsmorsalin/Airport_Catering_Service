@@ -55,14 +55,23 @@ public class UpdateTransitStatusController implements UserReceiver {
 
         } else {
 
-            AlertGenerator.showAlert("Error",
-                    "This is not a valid user for this page");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "This is not a valid user for this page"
+            );
+
         }
+
     }
 
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        transitStatusComboBox.getItems().addAll(
+                "In Transit",
+                "Delivered"
+        );
 
     }
 
@@ -70,7 +79,10 @@ public class UpdateTransitStatusController implements UserReceiver {
     @javafx.fxml.FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
 
-        Truckoperator.renderDashboardView(actionEvent, loggedInUser);
+        Truckoperator.renderDashboardView(
+                actionEvent,
+                loggedInUser
+        );
 
     }
 
@@ -83,6 +95,10 @@ public class UpdateTransitStatusController implements UserReceiver {
         destinationField.clear();
         updateTimeField.clear();
 
+        transitStatusComboBox
+                .getSelectionModel()
+                .clearSelection();
+
     }
 
 
@@ -91,8 +107,10 @@ public class UpdateTransitStatusController implements UserReceiver {
 
         if (assignmentIdField.getText().isEmpty()) {
 
-            AlertGenerator.showAlert("Error",
-                    "Please enter an assignment ID");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter an assignment ID"
+            );
 
             return;
         }
@@ -108,8 +126,10 @@ public class UpdateTransitStatusController implements UserReceiver {
 
         } catch (NumberFormatException e) {
 
-            AlertGenerator.showAlert("Error",
-                    "Please enter a valid assignment ID");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a valid assignment ID"
+            );
 
             return;
         }
@@ -117,10 +137,90 @@ public class UpdateTransitStatusController implements UserReceiver {
 
         if (assignmentId <= 0) {
 
-            AlertGenerator.showAlert("Error",
-                    "Please enter a valid assignment ID");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a valid assignment ID"
+            );
 
             return;
+        }
+
+
+        File file =
+                new File("DeliveryAssignment.bin");
+
+
+        if (!file.exists()) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "No assignment file found."
+            );
+
+            return;
+        }
+
+
+        try {
+
+            ObjectInputStream ois =
+                    new ObjectInputStream(
+                            new FileInputStream(file)
+                    );
+
+
+            while (true) {
+
+                try {
+
+                    DeliveryAssignment assignment =
+                            (DeliveryAssignment)
+                                    ois.readObject();
+
+
+                    if (assignment.getAssignmentId()
+                            == assignmentId) {
+
+                        currentLocationField.setText(
+                                assignment.getLocation()
+                        );
+
+                        destinationField.setText(
+                                assignment.getLocation()
+                        );
+
+                        AlertGenerator.showAlert(
+                                "Success",
+                                "Assignment loaded successfully."
+                        );
+
+                        ois.close();
+
+                        return;
+                    }
+
+                } catch (EOFException e) {
+
+                    break;
+                }
+            }
+
+
+            ois.close();
+
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Assignment not found."
+            );
+
+        } catch (Exception e) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Unable to load assignment."
+            );
+
         }
 
     }
@@ -129,11 +229,12 @@ public class UpdateTransitStatusController implements UserReceiver {
     @javafx.fxml.FXML
     public void updateTransitStatus(ActionEvent actionEvent) {
 
-
         if (assignmentIdField.getText().isEmpty()) {
 
-            AlertGenerator.showAlert("Error",
-                    "Please enter an assignment ID");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter an assignment ID"
+            );
 
             return;
         }
@@ -148,19 +249,31 @@ public class UpdateTransitStatusController implements UserReceiver {
                     assignmentIdField.getText()
             );
 
-
         } catch (NumberFormatException e) {
 
-
-            AlertGenerator.showAlert("Error",
-                    "Please enter a valid assignment ID");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please enter a valid assignment ID"
+            );
 
             return;
-
         }
 
 
-        File file = new File("DeliveryAssignment.bin");
+        if (transitStatusComboBox.getValue() == null) {
+
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Please select a transit status"
+            );
+
+            return;
+        }
+
+
+        File file =
+                new File("DeliveryAssignment.bin");
+
 
         ArrayList<DeliveryAssignment> assignmentList =
                 new ArrayList<>();
@@ -168,20 +281,21 @@ public class UpdateTransitStatusController implements UserReceiver {
 
         try {
 
-
             if (!file.exists()) {
 
-                AlertGenerator.showAlert("Error",
-                        "No assignment file found.");
+                AlertGenerator.showAlert(
+                        "Error",
+                        "No assignment file found."
+                );
 
                 return;
-
             }
 
 
             ObjectInputStream ois =
                     new ObjectInputStream(
-                            new FileInputStream(file));
+                            new FileInputStream(file)
+                    );
 
 
             while (true) {
@@ -189,18 +303,15 @@ public class UpdateTransitStatusController implements UserReceiver {
                 try {
 
                     DeliveryAssignment assignment =
-                            (DeliveryAssignment) ois.readObject();
-
+                            (DeliveryAssignment)
+                                    ois.readObject();
 
                     assignmentList.add(assignment);
-
 
                 } catch (EOFException e) {
 
                     break;
-
                 }
-
             }
 
 
@@ -210,80 +321,83 @@ public class UpdateTransitStatusController implements UserReceiver {
             boolean found = false;
 
 
-            for (DeliveryAssignment assignment : assignmentList) {
+            for (DeliveryAssignment assignment :
+                    assignmentList) {
 
+                if (assignment.getAssignmentId()
+                        == assignmentId) {
 
-                if (assignment.getAssignmentId() == assignmentId) {
+                    if (assignment.getStatus()
+                            .equals("Collected")
+                            || assignment.getStatus()
+                            .equals("In Transit")) {
 
-
-                    if (assignment.getStatus().equals("Collected")) {
-
-
-                        assignment.setStatus("In Transit");
+                        assignment.setStatus(
+                                transitStatusComboBox
+                                        .getValue()
+                                        .toString()
+                        );
 
                         found = true;
 
                         break;
 
-
                     } else {
 
-
-                        AlertGenerator.showAlert("Error",
+                        AlertGenerator.showAlert(
+                                "Error",
                                 "Cannot update transit status. Current status: "
-                                        + assignment.getStatus());
+                                        + assignment.getStatus()
+                        );
 
                         return;
-
                     }
-
                 }
+            }
 
+
+            if (!found) {
+
+                AlertGenerator.showAlert(
+                        "Error",
+                        "Assignment not found."
+                );
+
+                return;
             }
 
 
             ObjectOutputStream oos =
                     new ObjectOutputStream(
-                            new FileOutputStream(file));
+                            new FileOutputStream(file)
+                    );
 
 
-            for (DeliveryAssignment assignment : assignmentList) {
+            for (DeliveryAssignment assignment :
+                    assignmentList) {
 
                 oos.writeObject(assignment);
-
             }
 
 
             oos.close();
 
 
-            if (found) {
+            AlertGenerator.showAlert(
+                    "Success",
+                    "Transit status updated successfully."
+            );
 
 
-                AlertGenerator.showAlert("Success",
-                        "Transit status updated successfully.");
-
-
-                assignmentIdField.clear();
-
-
-            } else {
-
-
-                AlertGenerator.showAlert("Error",
-                        "Assignment not found.");
-
-            }
+            resetForm(null);
 
 
         } catch (Exception e) {
 
-
-            e.printStackTrace();
-
-
-            AlertGenerator.showAlert("Error",
-                    "Unable to update transit status.");
+            AlertGenerator.showAlert(
+                    "Error",
+                    "Unable to update transit status."
+            );
 
         }
 
