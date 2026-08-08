@@ -8,6 +8,7 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import nonuser.CateringOrder;
+import nonuser.Payment;
 import user.CateringOperationsManager;
 import user.User;
 import user.UserReceiver;
@@ -16,6 +17,7 @@ import utility.BinaryFileUtility;
 import utility.SceneSwitchingHelper;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,70 +39,45 @@ public class businessDashboardViewController implements UserReceiver
         if (user instanceof CateringOperationsManager cateringOperationsManager) {
             this.loggedInUser = cateringOperationsManager;
             welcomeMessageFxid.setText("Welcome "+ loggedInUser.getFullName());
+            piChartView();
             businessDashboardViewList();
         } else {
             AlertGenerator.showAlert("Error", "Invalid user for this page.");
         }
     }
 
-    int pending = 0;
-    int approved = 0;
-    int delivered = 0;
-    int rejected = 0;
-    int cancelled = 0;
     ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
 
     private void piChartView(){
-        data.clear();
-        ArrayList<Object> orderList = BinaryFileUtility.readObjects("CateringOrder.bin");
-        for (Object obj : orderList) {
-            if(obj instanceof CateringOrder c){
-                switch(c.getStatus()){
-                    case "Pending":
-                        pending++;
-                        break;
-
-                    case "Approved":
-                        approved++;
-                        break;
-
-                    case "Rejected":
-                        rejected++;
-                        break;
-
-                    case "Cancelled":
-                        cancelled++;
-                        break;
-
-                    case "Delivered":
-                        delivered++;
-                        break;
-                }
-            }
-        }
-
-        data.add(new PieChart.Data("Pending", pending));
-        data.add(new PieChart.Data("Approved", approved));
-        data.add(new PieChart.Data("Rejected", rejected));
-        data.add(new PieChart.Data("Cancelled", cancelled));
-        data.add(new PieChart.Data("Delivered", delivered));
-
+        data = loggedInUser.businessDashboardView();
         fxidPiChart.setData(data);
-
     }
 
     private void businessDashboardViewList(){
-        List<Integer> businessList = loggedInUser.businessDashboardView();
-        if(businessList.isEmpty()){
+        int totalOrder = 0;
+        float totalRevinue = 0;
+
+        ArrayList<Object> orderList = BinaryFileUtility.readObjects("CateringOrder.bin");
+        ArrayList<Object> paymentList =  BinaryFileUtility.readObjects("Payment.bin");
+        if (orderList.isEmpty() || paymentList.isEmpty()){
             return;
         }
-        totalOrdersCountLabelFxid.setText(Integer.toString(businessList.indexOf(0)));
-        totalRevinueCountLabelFxid.setText(Integer.toString(businessList.indexOf(1)));
+
+        totalOrder = orderList.size();
+        for (Object obj : paymentList) {
+            if(obj instanceof Payment p){
+                if (p.getPaymentDate().equals(LocalDate.now())) {
+                    totalRevinue++;
+                }
+            }
+        }
+        totalOrdersCountLabelFxid.setText(Integer.toString(totalOrder));
+        totalRevinueCountLabelFxid.setText(Float.toString(totalRevinue));
     }
 
     @javafx.fxml.FXML
     public void initialize() {
-        piChartView();
+
     }
 
     @javafx.fxml.FXML

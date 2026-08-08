@@ -307,7 +307,7 @@ public class AirlineRepresentative extends User implements Serializable {
     public final Boolean payCateringBill(int orderId, String invoiceId, String method, String transactionReference){
         Invoice checkInvoice = Invoice.searchInvoiceByOrderId(orderId);
         Payment newPayment = new Payment(orderId, invoiceId, method, checkInvoice.getTotalAmount(), transactionReference, LocalDate.now() );
-        BinaryFileUtility.writeObjects("CateringOrder.bin", newPayment);
+        BinaryFileUtility.writeObjects("Payment.bin", newPayment);
         return true;
     }
 
